@@ -1,0 +1,129 @@
+{
+	"id": "ALAS-2021-1523",
+	"advisories": [
+		{
+			"id": "ALAS-2021-1523",
+			"title": "Amazon Linux AMI 2014.03 - ALAS-2021-1523: medium priority package update for containerd",
+			"description": "Package updates are available for Amazon Linux AMI that fix the following vulnerabilities:\nCVE-2021-32760:\n\tA flaw was found in containerd where pulling and extracting a specially-crafted container image can result in Unix file permission changes for existing files in the host's filesystem. Changes to file permissions can deny access to the expected owner of the file, widen access to others, or set extended bits like setuid, setgid, and sticky. This bug does not directly allow files to be read, modified, or executed without an additional cooperating process.\n\nCVE-2021-21334:\n\tA flaw was found in containerd CRI plugin. Containers launched through containerd CRI implementation that share the same image may receive incorrect environment variables, including values that are defined for other containers. The highest threat from this vulnerability is to data confidentiality.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "medium"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/ALAS-2021-1523.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-21334"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-32760"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2021-21334",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-21334"
+				}
+			]
+		},
+		{
+			"id": "CVE-2021-32760",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-32760"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "containerd-stress",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.4.6-2.7.amzn1"
+					}
+				],
+				"fixed": [
+					"0:1.4.6-2.7.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "containerd-debuginfo",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.4.6-2.7.amzn1"
+					}
+				],
+				"fixed": [
+					"0:1.4.6-2.7.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "containerd",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.4.6-2.7.amzn1"
+					}
+				],
+				"fixed": [
+					"0:1.4.6-2.7.amzn1"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

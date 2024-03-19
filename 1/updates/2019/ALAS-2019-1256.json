@@ -1,0 +1,166 @@
+{
+	"id": "ALAS-2019-1256",
+	"advisories": [
+		{
+			"id": "ALAS-2019-1256",
+			"title": "Amazon Linux AMI 2014.03 - ALAS-2019-1256: medium priority package update for glib2",
+			"description": "Package updates are available for Amazon Linux AMI that fix the following vulnerabilities:\nCVE-2019-12450:\n\tfile_copy_fallback in gio/gfile.c in GNOME GLib 2.15.0 through 2.61.1 does not properly restrict file permissions while a copy operation is in progress. Instead, default permissions are used.\n1719141: \nCVE-2019-12450 glib2: file_copy_fallback in gio/gfile.c in GNOME GLib does not properly restrict file permissions while a copy operation is in progress\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "medium"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/ALAS-2019-1256.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-12450"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2019-12450",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-12450"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "glib2-debuginfo",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.36.3-5.21.amzn1"
+					}
+				],
+				"fixed": [
+					"0:2.36.3-5.21.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "glib2",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.36.3-5.21.amzn1"
+					}
+				],
+				"fixed": [
+					"0:2.36.3-5.21.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "glib2-fam",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.36.3-5.21.amzn1"
+					}
+				],
+				"fixed": [
+					"0:2.36.3-5.21.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "glib2-doc",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.36.3-5.21.amzn1"
+					}
+				],
+				"fixed": [
+					"0:2.36.3-5.21.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "glib2-devel",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.36.3-5.21.amzn1"
+					}
+				],
+				"fixed": [
+					"0:2.36.3-5.21.amzn1"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

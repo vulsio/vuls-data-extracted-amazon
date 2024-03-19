@@ -1,0 +1,209 @@
+{
+	"id": "ALAS2023-2023-093",
+	"advisories": [
+		{
+			"id": "ALAS2023-2023-093",
+			"title": "Amazon Linux 2023 - ALAS2023-2023-093: Medium priority package update for libdwarf",
+			"description": "Package updates are available for Amazon Linux 2023 that fix the following vulnerabilities:\nCVE-2022-39170:\n\tA double-free vulnerability was found in libdwarf's dwarf_expand_frame_instructions() function of the dwarf_frame.c file. A carefully crafted object file could cause the 'dwarfdump' utility to do a double free in handling an error condition. This issue could cause a segmentation violation or other major error, terminating the calling application and resulting in a denial of service.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "Medium"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2023/ALAS-2023-093.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-39170"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2022-39170",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-39170"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2023",
+			"vulnerable": true,
+			"package": {
+				"name": "libdwarf-tools-debuginfo",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:0.5.0-1.amzn2023.0.2"
+					}
+				],
+				"fixed": [
+					"1:0.5.0-1.amzn2023.0.2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2023",
+			"vulnerable": true,
+			"package": {
+				"name": "libdwarf-static",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:0.5.0-1.amzn2023.0.2"
+					}
+				],
+				"fixed": [
+					"1:0.5.0-1.amzn2023.0.2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2023",
+			"vulnerable": true,
+			"package": {
+				"name": "libdwarf-debugsource",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:0.5.0-1.amzn2023.0.2"
+					}
+				],
+				"fixed": [
+					"1:0.5.0-1.amzn2023.0.2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2023",
+			"vulnerable": true,
+			"package": {
+				"name": "libdwarf-devel",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:0.5.0-1.amzn2023.0.2"
+					}
+				],
+				"fixed": [
+					"1:0.5.0-1.amzn2023.0.2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2023",
+			"vulnerable": true,
+			"package": {
+				"name": "libdwarf",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:0.5.0-1.amzn2023.0.2"
+					}
+				],
+				"fixed": [
+					"1:0.5.0-1.amzn2023.0.2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2023",
+			"vulnerable": true,
+			"package": {
+				"name": "libdwarf-debuginfo",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:0.5.0-1.amzn2023.0.2"
+					}
+				],
+				"fixed": [
+					"1:0.5.0-1.amzn2023.0.2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2023",
+			"vulnerable": true,
+			"package": {
+				"name": "libdwarf-tools",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:0.5.0-1.amzn2023.0.2"
+					}
+				],
+				"fixed": [
+					"1:0.5.0-1.amzn2023.0.2"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

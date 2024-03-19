@@ -1,0 +1,241 @@
+{
+	"id": "ALAS-2018-1018",
+	"advisories": [
+		{
+			"id": "ALAS-2018-1018",
+			"title": "Amazon Linux AMI 2014.03 - ALAS-2018-1018: low priority package update for openssh",
+			"description": "Package updates are available for Amazon Linux AMI that fix the following vulnerabilities:\nCVE-2017-15906:\n\tThe process_open function in sftp-server.c in OpenSSH before 7.6 does not properly prevent write operations in readonly mode, which allows attackers to create zero-length files.\n1506630: \nCVE-2017-15906 openssh: Improper write operations in readonly mode allow for zero-length file creation\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "low"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/ALAS-2018-1018.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-15906"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2017-15906",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-15906"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "openssh-server",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:7.4p1-16.69.amzn1"
+					}
+				],
+				"fixed": [
+					"0:7.4p1-16.69.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "openssh-cavs",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:7.4p1-16.69.amzn1"
+					}
+				],
+				"fixed": [
+					"0:7.4p1-16.69.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "openssh",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:7.4p1-16.69.amzn1"
+					}
+				],
+				"fixed": [
+					"0:7.4p1-16.69.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "pam_ssh_agent_auth",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:0.10.3-2.16.69.amzn1"
+					}
+				],
+				"fixed": [
+					"0:0.10.3-2.16.69.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "openssh-keycat",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:7.4p1-16.69.amzn1"
+					}
+				],
+				"fixed": [
+					"0:7.4p1-16.69.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "openssh-ldap",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:7.4p1-16.69.amzn1"
+					}
+				],
+				"fixed": [
+					"0:7.4p1-16.69.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "openssh-clients",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:7.4p1-16.69.amzn1"
+					}
+				],
+				"fixed": [
+					"0:7.4p1-16.69.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "openssh-debuginfo",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:7.4p1-16.69.amzn1"
+					}
+				],
+				"fixed": [
+					"0:7.4p1-16.69.amzn1"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

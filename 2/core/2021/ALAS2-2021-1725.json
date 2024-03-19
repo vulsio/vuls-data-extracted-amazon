@@ -1,0 +1,137 @@
+{
+	"id": "ALAS2-2021-1725",
+	"advisories": [
+		{
+			"id": "ALAS2-2021-1725",
+			"title": "Amazon Linux 2 2017.12 - ALAS2-2021-1725: important priority package update for cyrus-imapd",
+			"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2021-33582:\n\tA flaw was found in cyrus-imapd. A bad string hashing algorithm used in internal hash tables allows user inputs to be stored in predictable buckets.  A user may cause a CPU denial of service by maliciously directing many inputs to a single bucket. The highest threat from this vulnerability is to system availability.\n1993232: CVE-2021-33582 cyrus-imapd: Denial of service via string hashing algorithm collisions\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "important"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALAS-2021-1725.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-33582"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2021-33582",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-33582"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "cyrus-imapd",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.4.22-1.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"0:2.4.22-1.amzn2.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "cyrus-imapd-devel",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.4.22-1.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"0:2.4.22-1.amzn2.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "cyrus-imapd-utils",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.4.22-1.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"0:2.4.22-1.amzn2.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "cyrus-imapd-debuginfo",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.4.22-1.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"0:2.4.22-1.amzn2.0.1"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

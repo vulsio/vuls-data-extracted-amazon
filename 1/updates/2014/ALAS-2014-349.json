@@ -1,0 +1,248 @@
+{
+	"id": "ALAS-2014-349",
+	"advisories": [
+		{
+			"id": "ALAS-2014-349",
+			"title": "Amazon Linux AMI 2012.09 - ALAS-2014-349: important priority package update for openssl",
+			"description": "Package updates are available for Amazon Linux AMI that fix the following vulnerabilities:\nCVE-2015-0292:\n\tAn integer underflow flaw, leading to a heap-based buffer overflow, was found in the way OpenSSL decoded certain base64 strings. A remote attacker could provide a specially crafted base64 string via certain PEM processing routines that, when parsed by the OpenSSL library, would cause the OpenSSL server to crash.\n1202395: \nCVE-2015-0292 openssl: integer underflow leading to buffer overflow in base64 decoding\n\nCVE-2014-3470:\n\t\n\nCVE-2014-0224:\n\t\n\nCVE-2014-0221:\n\t\n\nCVE-2014-0198:\n\tMultiple flaws were found in the way OpenSSL handled read and write buffers when the SSL_MODE_RELEASE_BUFFERS mode was enabled. A TLS/SSL client or server using OpenSSL could crash or unexpectedly drop connections when processing certain SSL traffic.\n\nCVE-2014-0195:\n\t\n\nCVE-2010-5298:\n\tMultiple flaws were found in the way OpenSSL handled read and write buffers when the SSL_MODE_RELEASE_BUFFERS mode was enabled. A TLS/SSL client or server using OpenSSL could crash or unexpectedly drop connections when processing certain SSL traffic.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "important"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/ALAS-2014-349.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-5298"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0195"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0198"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0221"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0224"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-3470"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-0292"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://rhn.redhat.com/errata/RHSA-2014:0625.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2010-5298",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-5298"
+				}
+			]
+		},
+		{
+			"id": "CVE-2014-0195",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0195"
+				}
+			]
+		},
+		{
+			"id": "CVE-2014-0198",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0198"
+				}
+			]
+		},
+		{
+			"id": "CVE-2014-0221",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0221"
+				}
+			]
+		},
+		{
+			"id": "CVE-2014-0224",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0224"
+				}
+			]
+		},
+		{
+			"id": "CVE-2014-3470",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-3470"
+				}
+			]
+		},
+		{
+			"id": "CVE-2015-0292",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-0292"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "openssl",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:1.0.1h-1.72.amzn1"
+					}
+				],
+				"fixed": [
+					"1:1.0.1h-1.72.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "openssl-debuginfo",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:1.0.1h-1.72.amzn1"
+					}
+				],
+				"fixed": [
+					"1:1.0.1h-1.72.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "openssl-static",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:1.0.1h-1.72.amzn1"
+					}
+				],
+				"fixed": [
+					"1:1.0.1h-1.72.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "openssl-devel",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:1.0.1h-1.72.amzn1"
+					}
+				],
+				"fixed": [
+					"1:1.0.1h-1.72.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "openssl-perl",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:1.0.1h-1.72.amzn1"
+					}
+				],
+				"fixed": [
+					"1:1.0.1h-1.72.amzn1"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

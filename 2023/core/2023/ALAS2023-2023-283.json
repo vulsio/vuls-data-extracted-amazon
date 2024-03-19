@@ -1,0 +1,209 @@
+{
+	"id": "ALAS2023-2023-283",
+	"advisories": [
+		{
+			"id": "ALAS2023-2023-283",
+			"title": "Amazon Linux 2023 - ALAS2023-2023-283: Important priority package update for golang",
+			"description": "Package updates are available for Amazon Linux 2023 that fix the following vulnerabilities:\nCVE-2023-29406:\n\tThe HTTP/1 client does not fully validate the contents of the Host header. A maliciously crafted Host header can inject additional headers or entire requests. With fix, the HTTP/1 client now refuses to send requests containing an invalid Request.Host or Request.URL.Host value.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "Important"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2023/ALAS-2023-283.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-29406"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2023-29406",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-29406"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2023",
+			"vulnerable": true,
+			"package": {
+				"name": "golang-misc",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.20.6-1.amzn2023.0.1"
+					}
+				],
+				"fixed": [
+					"0:1.20.6-1.amzn2023.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2023",
+			"vulnerable": true,
+			"package": {
+				"name": "golang",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.20.6-1.amzn2023.0.1"
+					}
+				],
+				"fixed": [
+					"0:1.20.6-1.amzn2023.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2023",
+			"vulnerable": true,
+			"package": {
+				"name": "golang-src",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.20.6-1.amzn2023.0.1"
+					}
+				],
+				"fixed": [
+					"0:1.20.6-1.amzn2023.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2023",
+			"vulnerable": true,
+			"package": {
+				"name": "golang-tests",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.20.6-1.amzn2023.0.1"
+					}
+				],
+				"fixed": [
+					"0:1.20.6-1.amzn2023.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2023",
+			"vulnerable": true,
+			"package": {
+				"name": "golang-shared",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.20.6-1.amzn2023.0.1"
+					}
+				],
+				"fixed": [
+					"0:1.20.6-1.amzn2023.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2023",
+			"vulnerable": true,
+			"package": {
+				"name": "golang-bin",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.20.6-1.amzn2023.0.1"
+					}
+				],
+				"fixed": [
+					"0:1.20.6-1.amzn2023.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2023",
+			"vulnerable": true,
+			"package": {
+				"name": "golang-docs",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.20.6-1.amzn2023.0.1"
+					}
+				],
+				"fixed": [
+					"0:1.20.6-1.amzn2023.0.1"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

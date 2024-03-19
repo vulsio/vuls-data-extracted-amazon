@@ -1,0 +1,192 @@
+{
+	"id": "ALAS-2017-809",
+	"advisories": [
+		{
+			"id": "ALAS-2017-809",
+			"title": "Amazon Linux AMI 2014.03 - ALAS-2017-809: low priority package update for vim",
+			"description": "Package updates are available for Amazon Linux AMI that fix the following vulnerabilities:\nCVE-2017-6350:\n\tAn integer overflow flaw was found in the way vim handled tree length values when reading an undo file. This bug could result in vim crashing when trying to process corrupted undo files.\n1427945: \nCVE-2017-6350 vim: Integer overflow at an unserialize_uep memory allocation site\n\nCVE-2017-6349:\n\tAn integer overflow flaw was found in the way vim handled undo files. This bug could result in vim crashing when trying to process corrupted undo files.\n1427944: \nCVE-2017-6349 vim: Integer overflow at a u_read_undo memory allocation site\n\nCVE-2017-5953:\n\tvim before patch 8.0.0322 does not properly validate values for tree length when handling a spell file, which may result in an integer overflow at a memory allocation site and a resultant buffer overflow.\n1421613: \nCVE-2017-5953 vim: Tree length values not validated properly when handling a spell file\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "low"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/ALAS-2017-809.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5953"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-6349"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-6350"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2017-5953",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5953"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-6349",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-6349"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-6350",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-6350"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "vim-debuginfo",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "2:8.0.0503-1.45.amzn1"
+					}
+				],
+				"fixed": [
+					"2:8.0.0503-1.45.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "vim-common",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "2:8.0.0503-1.45.amzn1"
+					}
+				],
+				"fixed": [
+					"2:8.0.0503-1.45.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "vim-minimal",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "2:8.0.0503-1.45.amzn1"
+					}
+				],
+				"fixed": [
+					"2:8.0.0503-1.45.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "vim-enhanced",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "2:8.0.0503-1.45.amzn1"
+					}
+				],
+				"fixed": [
+					"2:8.0.0503-1.45.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "vim-filesystem",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "2:8.0.0503-1.45.amzn1"
+					}
+				],
+				"fixed": [
+					"2:8.0.0503-1.45.amzn1"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

@@ -1,0 +1,464 @@
+{
+	"id": "ALAS2022-2022-127",
+	"advisories": [
+		{
+			"id": "ALAS2022-2022-127",
+			"title": "Amazon Linux 2022 - ALAS2022-2022-127: Medium priority package update for kernel",
+			"description": "Package updates are available for Amazon Linux 2022 that fix the following vulnerabilities:\nCVE-2022-28693:\n\tA flaw was found in hw. The unprotected alternative channel of return branch target prediction in some Intel(R) Processors may allow an authorized user to enable information disclosure via local access.\n\nCVE-2022-26373:\n\tA flaw was found in hw. In certain processors with Intel's Enhanced Indirect Branch Restricted Speculation (eIBRS) capabilities, soon after VM exit or IBPB command event, the linear address following the most recent near CALL instruction prior to a VM exit may be used as the Return Stack Buffer (RSB) prediction.\n\nCVE-2022-23825:\n\tA flaw was found in hw. Aliases in the branch predictor may cause some AMD processors to predict the wrong branch type, potentially leading to information disclosure.\n\nCVE-2022-23816:\n\tA flaw was found in hw. Mis-trained branch predictions for return instructions may allow arbitrary speculative code execution under certain microarchitecture-dependent conditions.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "Medium"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2022/ALAS-2022-127.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-23816"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-23825"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-26373"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-28693"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2022-23816",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-23816"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-23825",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-23825"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-26373",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-26373"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-28693",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-28693"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2022",
+			"vulnerable": true,
+			"package": {
+				"name": "bpftool-debuginfo",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:5.15.57-29.131.amzn2022"
+					}
+				],
+				"fixed": [
+					"0:5.15.57-29.131.amzn2022"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2022",
+			"vulnerable": true,
+			"package": {
+				"name": "kernel-tools-devel",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:5.15.57-29.131.amzn2022"
+					}
+				],
+				"fixed": [
+					"0:5.15.57-29.131.amzn2022"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2022",
+			"vulnerable": true,
+			"package": {
+				"name": "kernel-debuginfo",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:5.15.57-29.131.amzn2022"
+					}
+				],
+				"fixed": [
+					"0:5.15.57-29.131.amzn2022"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2022",
+			"vulnerable": true,
+			"package": {
+				"name": "kernel-devel",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:5.15.57-29.131.amzn2022"
+					}
+				],
+				"fixed": [
+					"0:5.15.57-29.131.amzn2022"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2022",
+			"vulnerable": true,
+			"package": {
+				"name": "bpftool",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:5.15.57-29.131.amzn2022"
+					}
+				],
+				"fixed": [
+					"0:5.15.57-29.131.amzn2022"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2022",
+			"vulnerable": true,
+			"package": {
+				"name": "kernel-tools",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:5.15.57-29.131.amzn2022"
+					}
+				],
+				"fixed": [
+					"0:5.15.57-29.131.amzn2022"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2022",
+			"vulnerable": true,
+			"package": {
+				"name": "kernel-headers",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:5.15.57-29.131.amzn2022"
+					}
+				],
+				"fixed": [
+					"0:5.15.57-29.131.amzn2022"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2022",
+			"vulnerable": true,
+			"package": {
+				"name": "perf",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:5.15.57-29.131.amzn2022"
+					}
+				],
+				"fixed": [
+					"0:5.15.57-29.131.amzn2022"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2022",
+			"vulnerable": true,
+			"package": {
+				"name": "python3-perf",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:5.15.57-29.131.amzn2022"
+					}
+				],
+				"fixed": [
+					"0:5.15.57-29.131.amzn2022"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2022",
+			"vulnerable": true,
+			"package": {
+				"name": "kernel",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:5.15.57-29.131.amzn2022"
+					}
+				],
+				"fixed": [
+					"0:5.15.57-29.131.amzn2022"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2022",
+			"vulnerable": true,
+			"package": {
+				"name": "kernel-tools-debuginfo",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:5.15.57-29.131.amzn2022"
+					}
+				],
+				"fixed": [
+					"0:5.15.57-29.131.amzn2022"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2022",
+			"vulnerable": true,
+			"package": {
+				"name": "kernel-livepatch-5.15.57-29.131",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.0-0.amzn2022"
+					}
+				],
+				"fixed": [
+					"0:1.0-0.amzn2022"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2022",
+			"vulnerable": true,
+			"package": {
+				"name": "python3-perf-debuginfo",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:5.15.57-29.131.amzn2022"
+					}
+				],
+				"fixed": [
+					"0:5.15.57-29.131.amzn2022"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2022",
+			"vulnerable": true,
+			"package": {
+				"name": "kernel-debuginfo-common-x86_64",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:5.15.57-29.131.amzn2022"
+					}
+				],
+				"fixed": [
+					"0:5.15.57-29.131.amzn2022"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2022",
+			"vulnerable": true,
+			"package": {
+				"name": "kernel-debuginfo-common-aarch64",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:5.15.57-29.131.amzn2022"
+					}
+				],
+				"fixed": [
+					"0:5.15.57-29.131.amzn2022"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2022",
+			"vulnerable": true,
+			"package": {
+				"name": "perf-debuginfo",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:5.15.57-29.131.amzn2022"
+					}
+				],
+				"fixed": [
+					"0:5.15.57-29.131.amzn2022"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

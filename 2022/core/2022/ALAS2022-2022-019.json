@@ -1,0 +1,320 @@
+{
+	"id": "ALAS2022-2022-019",
+	"advisories": [
+		{
+			"id": "ALAS2022-2022-019",
+			"title": "Amazon Linux 2022 - ALAS2022-2022-019: Medium priority package update for nodejs",
+			"description": "Package updates are available for Amazon Linux 2022 that fix the following vulnerabilities:\nCVE-2022-21824:\n\tPrototype pollution via console.table properties\n\nCVE-2021-44533:\n\tA flaw was found in node.js, where it did not properly handle multi-value Relative Distinguished Names. This flaw allows a specially crafted x509 certificate to produce a false multi-value Relative Distinguished Name and to inject arbitrary data in node.js libraries.\n\nCVE-2021-44532:\n\tIt was found that node.js did not safely read the x509 certificate generalName format properly, resulting in data injection. A certificate could use a specially crafted extension in order to be successfully validated, permitting an attacker to impersonate a trusted host.\n\nCVE-2021-44531:\n\tA flaw was found in node.js where it accepted a certificate's Subject Alternative Names (SAN) entry, as opposed to what is specified by the HTTPS protocol. This flaw allows an active person-in-the-middle to forge a certificate and impersonate a trusted host.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "Medium"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2022/ALAS-2022-019.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-44531"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-44532"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-44533"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-21824"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2021-44531",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-44531"
+				}
+			]
+		},
+		{
+			"id": "CVE-2021-44532",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-44532"
+				}
+			]
+		},
+		{
+			"id": "CVE-2021-44533",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-44533"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-21824",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-21824"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2022",
+			"vulnerable": true,
+			"package": {
+				"name": "v8-devel",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "2:9.4.146.24-1.16.13.2.3.amzn2022"
+					}
+				],
+				"fixed": [
+					"2:9.4.146.24-1.16.13.2.3.amzn2022"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2022",
+			"vulnerable": true,
+			"package": {
+				"name": "nodejs",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:16.13.2-3.amzn2022"
+					}
+				],
+				"fixed": [
+					"1:16.13.2-3.amzn2022"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2022",
+			"vulnerable": true,
+			"package": {
+				"name": "nodejs-libs",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:16.13.2-3.amzn2022"
+					}
+				],
+				"fixed": [
+					"1:16.13.2-3.amzn2022"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2022",
+			"vulnerable": true,
+			"package": {
+				"name": "nodejs-docs",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:16.13.2-3.amzn2022"
+					}
+				],
+				"fixed": [
+					"1:16.13.2-3.amzn2022"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2022",
+			"vulnerable": true,
+			"package": {
+				"name": "nodejs-libs-debuginfo",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:16.13.2-3.amzn2022"
+					}
+				],
+				"fixed": [
+					"1:16.13.2-3.amzn2022"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2022",
+			"vulnerable": true,
+			"package": {
+				"name": "nodejs-debuginfo",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:16.13.2-3.amzn2022"
+					}
+				],
+				"fixed": [
+					"1:16.13.2-3.amzn2022"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2022",
+			"vulnerable": true,
+			"package": {
+				"name": "npm",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:8.1.2-1.16.13.2.3.amzn2022"
+					}
+				],
+				"fixed": [
+					"1:8.1.2-1.16.13.2.3.amzn2022"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2022",
+			"vulnerable": true,
+			"package": {
+				"name": "nodejs-debugsource",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:16.13.2-3.amzn2022"
+					}
+				],
+				"fixed": [
+					"1:16.13.2-3.amzn2022"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2022",
+			"vulnerable": true,
+			"package": {
+				"name": "nodejs-full-i18n",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:16.13.2-3.amzn2022"
+					}
+				],
+				"fixed": [
+					"1:16.13.2-3.amzn2022"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2022",
+			"vulnerable": true,
+			"package": {
+				"name": "nodejs-devel",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:16.13.2-3.amzn2022"
+					}
+				],
+				"fixed": [
+					"1:16.13.2-3.amzn2022"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

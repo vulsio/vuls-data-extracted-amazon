@@ -1,0 +1,113 @@
+{
+	"id": "ALAS2REDIS6-2023-004",
+	"advisories": [
+		{
+			"id": "ALAS2REDIS6-2023-004",
+			"title": "Amazon Linux 2 - Redis6 2.0 - ALAS2REDIS6-2023-004: important priority package update for hiredis",
+			"description": "Package updates are available for Amazon Linux 2 - Redis6 that fix the following vulnerabilities:\nCVE-2021-32765:\n\tHiredis is a minimalistic C client library for the Redis database. In affected versions Hiredis is vulnurable to integer overflow if provided maliciously crafted or corrupted `RESP` `mult-bulk` protocol data. When parsing `multi-bulk` (array-like) replies, hiredis fails to check if `count * sizeof(redisReply*)` can be represented in `SIZE_MAX`. If it can not, and the `calloc()` call doesn't itself make this check, it would result in a short allocation and subsequent buffer overflow. Users of hiredis who are unable to update may set the [maxelements](https://github.com/redis/hiredis#reader-max-array-elements) context option to a value small enough that no overflow is possible.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "important"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALASREDIS6-2023-004.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-32765"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2021-32765",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-32765"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "hiredis",
+				"repositories": [
+					"amzn2extra-redis6"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:0.13.3-17.amzn2"
+					}
+				],
+				"fixed": [
+					"0:0.13.3-17.amzn2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "hiredis-devel",
+				"repositories": [
+					"amzn2extra-redis6"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:0.13.3-17.amzn2"
+					}
+				],
+				"fixed": [
+					"0:0.13.3-17.amzn2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "hiredis-debuginfo",
+				"repositories": [
+					"amzn2extra-redis6"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:0.13.3-17.amzn2"
+					}
+				],
+				"fixed": [
+					"0:0.13.3-17.amzn2"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

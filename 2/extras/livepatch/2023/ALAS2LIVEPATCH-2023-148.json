@@ -1,0 +1,102 @@
+{
+	"id": "ALAS2LIVEPATCH-2023-148",
+	"advisories": [
+		{
+			"id": "ALAS2LIVEPATCH-2023-148",
+			"title": "Amazon Linux 2 - Livepatch 2.0 - ALAS2LIVEPATCH-2023-148: important priority package update for kernel-livepatch-4.14.318-240.529",
+			"description": "Package updates are available for Amazon Linux 2 - Livepatch that fix the following vulnerabilities:\nCVE-2023-3776:\n\tA use-after-free vulnerability in the Linux kernel's net/sched: cls_fw component can be exploited to achieve local privilege escalation.\n\nIf tcf_change_indev() fails, fw_set_parms() will immediately return an error after incrementing or decrementing the reference counter in tcf_bind_filter(). If an attacker can control the reference counter and set it to zero, they can cause the reference to be freed, leading to a use-after-free vulnerability.\n\nWe recommend upgrading past commit 0323bce598eea038714f941ce2b22541c46d488f.\n\nCVE-2023-3609:\n\tA use-after-free vulnerability in the Linux kernel's net/sched: cls_u32 component can be exploited to achieve local privilege escalation.\n\nIf tcf_change_indev() fails, u32_set_parms() will immediately return an error after incrementing or decrementing the reference counter in tcf_bind_filter(). If an attacker can control the reference counter and set it to zero, they can cause the reference to be freed, leading to a use-after-free vulnerability.\n\nWe recommend upgrading past commit 04c55383fa5689357bcdd2c8036725a55ed632bc.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "important"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALASLIVEPATCH-2023-148.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-3609"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-3776"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2023-3609",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-3609"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-3776",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-3776"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "kernel-livepatch-4.14.318-240.529",
+				"repositories": [
+					"amzn2extra-livepatch"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.0-1.amzn2"
+					}
+				],
+				"fixed": [
+					"0:1.0-1.amzn2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "kernel-livepatch-4.14.318-240.529-debuginfo",
+				"repositories": [
+					"amzn2extra-livepatch"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.0-1.amzn2"
+					}
+				],
+				"fixed": [
+					"0:1.0-1.amzn2"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

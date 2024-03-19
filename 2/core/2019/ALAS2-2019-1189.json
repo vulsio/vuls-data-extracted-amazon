@@ -1,0 +1,370 @@
+{
+	"id": "ALAS2-2019-1189",
+	"advisories": [
+		{
+			"id": "ALAS2-2019-1189",
+			"title": "Amazon Linux 2 2017.12 - ALAS2-2019-1189: important priority package update for httpd",
+			"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2019-0220:\n\t1695036: \nCVE-2019-0220 httpd: URL normalization inconsistency\n\nCVE-2019-0217:\n\tA race condition was found in mod_auth_digest when the web server was running in a threaded MPM configuration. It could allow a user with valid credentials to authenticate using another username, bypassing configured access control restrictions.\n1695020: \nCVE-2019-0217 httpd: mod_auth_digest: access control bypass due to race condition\n\nCVE-2019-0215:\n\tIn Apache HTTP Server 2.4 releases 2.4.37 and 2.4.38, a bug in mod_ssl when using per-location client certificate verification with TLSv1.3 allowed a client to bypass configured access control restrictions.\n1695025: \nCVE-2019-0215 httpd: mod_ssl: access control bypass when using per-location client certification authentication\n\nCVE-2019-0211:\n\t1694980: \nCVE-2019-0211 httpd: privilege escalation from modules scripts\n\nCVE-2019-0197:\n\t1695042: \nCVE-2019-0197 httpd: mod_http2: possible crash on late upgrade\n\nCVE-2019-0196:\n\t1695030: \nCVE-2019-0196 httpd: mod_http2: read-after-free on a string compare\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "important"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALAS-2019-1189.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-0196"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-0197"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-0211"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-0215"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-0217"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-0220"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2019-0196",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-0196"
+				}
+			]
+		},
+		{
+			"id": "CVE-2019-0197",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-0197"
+				}
+			]
+		},
+		{
+			"id": "CVE-2019-0211",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-0211"
+				}
+			]
+		},
+		{
+			"id": "CVE-2019-0215",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-0215"
+				}
+			]
+		},
+		{
+			"id": "CVE-2019-0217",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-0217"
+				}
+			]
+		},
+		{
+			"id": "CVE-2019-0220",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-0220"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "httpd",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.4.39-1.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"0:2.4.39-1.amzn2.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "httpd-devel",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.4.39-1.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"0:2.4.39-1.amzn2.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "mod_ssl",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:2.4.39-1.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"1:2.4.39-1.amzn2.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "mod_proxy_html",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:2.4.39-1.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"1:2.4.39-1.amzn2.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "mod_ldap",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.4.39-1.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"0:2.4.39-1.amzn2.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "httpd-debuginfo",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.4.39-1.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"0:2.4.39-1.amzn2.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "httpd-manual",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.4.39-1.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"0:2.4.39-1.amzn2.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "httpd-filesystem",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.4.39-1.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"0:2.4.39-1.amzn2.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "httpd-tools",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.4.39-1.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"0:2.4.39-1.amzn2.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "mod_md",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.4.39-1.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"0:2.4.39-1.amzn2.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "mod_session",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.4.39-1.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"0:2.4.39-1.amzn2.0.1"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

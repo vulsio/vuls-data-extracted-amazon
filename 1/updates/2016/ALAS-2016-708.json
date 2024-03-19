@@ -1,0 +1,205 @@
+{
+	"id": "ALAS-2016-708",
+	"advisories": [
+		{
+			"id": "ALAS-2016-708",
+			"title": "Amazon Linux AMI 2014.03 - ALAS-2016-708: medium priority package update for ntp",
+			"description": "Package updates are available for Amazon Linux AMI that fix the following vulnerabilities:\nCVE-2016-2518:\n\tAn out-of-bounds access flaw was found in the way ntpd processed certain packets. An authenticated attacker could use a crafted packet to create a peer association with hmode of 7 and larger, which could potentially (although highly unlikely) cause ntpd to crash.\n1331468: \nCVE-2016-2518 ntp: out-of-bounds references on crafted packet\n\nCVE-2016-2516:\n\t1331466: \nCVE-2016-2516 ntp: assertion failure in ntpd on duplicate IPs on unconfig directives\n\nCVE-2016-1550:\n\tA flaw was found in the way NTP&#039;s libntp performed message authentication. An attacker able to observe the timing of the comparison function used in packet authentication could potentially use this flaw to recover the message digest.\n1331464: \nCVE-2016-1550 ntp: libntp message digest disclosure\n\nCVE-2016-1548:\n\tIt was found that an ntpd client could be forced to change from basic client/server mode to the interleaved symmetric mode. A remote attacker could use a spoofed packet that, when processed by an ntpd client, would cause that client to reject all future legitimate server responses, effectively disabling time synchronization on that client.\n1331462: \nCVE-2016-1548 ntp: ntpd switching to interleaved mode with spoofed packets\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "medium"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/ALAS-2016-708.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-1548"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-1550"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-2516"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-2518"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2016-1548",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-1548"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-1550",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-1550"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-2516",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-2516"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-2518",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-2518"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "ntp-debuginfo",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.2.6p5-40.30.amzn1"
+					}
+				],
+				"fixed": [
+					"0:4.2.6p5-40.30.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "ntp",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.2.6p5-40.30.amzn1"
+					}
+				],
+				"fixed": [
+					"0:4.2.6p5-40.30.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "ntpdate",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.2.6p5-40.30.amzn1"
+					}
+				],
+				"fixed": [
+					"0:4.2.6p5-40.30.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "ntp-perl",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.2.6p5-40.30.amzn1"
+					}
+				],
+				"fixed": [
+					"0:4.2.6p5-40.30.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "ntp-doc",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.2.6p5-40.30.amzn1"
+					}
+				],
+				"fixed": [
+					"0:4.2.6p5-40.30.amzn1"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

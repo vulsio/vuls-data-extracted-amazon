@@ -1,0 +1,104 @@
+{
+	"id": "ALAS-2020-1395",
+	"advisories": [
+		{
+			"id": "ALAS-2020-1395",
+			"title": "Amazon Linux AMI 2014.03 - ALAS-2020-1395: medium priority package update for mailman",
+			"description": "Package updates are available for Amazon Linux AMI that fix the following vulnerabilities:\nCVE-2018-13796:\n\tAn issue was discovered in GNU Mailman before 2.1.28. A crafted URL can cause arbitrary text to be displayed on a web page from a trusted site.\n1609090: CVE-2018-13796 mailman: Mishandled URLs in Utils.py:GetPathPieces() allows attackers to display arbitrary text on trusted sites\n\nCVE-2018-0618:\n\tCross-site scripting vulnerability in Mailman 2.1.26 and earlier allows remote authenticated attackers to inject arbitrary web script or HTML via unspecified vectors.\n1596458: CVE-2018-0618 mailman: Cross-site scripting vulnerability allows malicious listowners to inject scripts into listinfo pages\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "medium"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/ALAS-2020-1395.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-0618"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-13796"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2018-0618",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-0618"
+				}
+			]
+		},
+		{
+			"id": "CVE-2018-13796",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-13796"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "mailman",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "4:2.1.15-30.25.amzn1"
+					}
+				],
+				"fixed": [
+					"4:2.1.15-30.25.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "mailman-debuginfo",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "4:2.1.15-30.25.amzn1"
+					}
+				],
+				"fixed": [
+					"4:2.1.15-30.25.amzn1"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

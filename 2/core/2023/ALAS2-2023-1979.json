@@ -1,0 +1,65 @@
+{
+	"id": "ALAS2-2023-1979",
+	"advisories": [
+		{
+			"id": "ALAS2-2023-1979",
+			"title": "Amazon Linux 2 2017.12 - ALAS2-2023-1979: medium priority package update for python2-setuptools",
+			"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2022-40897:\n\tPython Packaging Authority (PyPA) setuptools before 65.5.1 allows remote attackers to cause a denial of service via HTML in a crafted package or custom PackageIndex page. There is a Regular Expression Denial of Service (ReDoS) in package_index.py.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "medium"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALAS-2023-1979.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-40897"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2022-40897",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-40897"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "python2-setuptools",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:41.2.0-4.amzn2.0.3"
+					}
+				],
+				"fixed": [
+					"0:41.2.0-4.amzn2.0.3"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

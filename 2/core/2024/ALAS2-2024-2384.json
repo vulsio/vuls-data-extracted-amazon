@@ -1,0 +1,233 @@
+{
+	"id": "ALAS2-2024-2384",
+	"advisories": [
+		{
+			"id": "ALAS2-2024-2384",
+			"title": "Amazon Linux 2 2017.12 - ALAS2-2024-2384: low priority package update for vim",
+			"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2023-48706:\n\tVim is a UNIX editor that, prior to version 9.0.2121, has a heap-use-after-free vulnerability. When executing a `:s` command for the very first time and using a sub-replace-special atom inside the substitution part, it is possible that the recursive `:s` call causes free-ing of memory which may later then be accessed by the initial `:s` command. The user must intentionally execute the payload and the whole process is a bit tricky to do since it seems to work only reliably for the very first :s command. It may also cause a crash of Vim. Version 9.0.2121 contains a fix for this issue.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "low"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALAS-2024-2384.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-48706"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2023-48706",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-48706"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "xxd",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "2:9.0.2153-1.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"2:9.0.2153-1.amzn2.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "vim-debuginfo",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "2:9.0.2153-1.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"2:9.0.2153-1.amzn2.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "vim-common",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "2:9.0.2153-1.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"2:9.0.2153-1.amzn2.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "vim-minimal",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "2:9.0.2153-1.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"2:9.0.2153-1.amzn2.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "vim-enhanced",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "2:9.0.2153-1.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"2:9.0.2153-1.amzn2.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "vim-filesystem",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "2:9.0.2153-1.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"2:9.0.2153-1.amzn2.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "vim-X11",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "2:9.0.2153-1.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"2:9.0.2153-1.amzn2.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "vim-data",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "2:9.0.2153-1.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"2:9.0.2153-1.amzn2.0.1"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

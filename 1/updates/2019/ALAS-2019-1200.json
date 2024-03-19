@@ -1,0 +1,129 @@
+{
+	"id": "ALAS-2019-1200",
+	"advisories": [
+		{
+			"id": "ALAS-2019-1200",
+			"title": "Amazon Linux AMI 2014.03 - ALAS-2019-1200: important priority package update for mod24_auth_mellon",
+			"description": "Package updates are available for Amazon Linux AMI that fix the following vulnerabilities:\nCVE-2019-3878:\n\tA vulnerability was found in mod_auth_mellon. If Apache is configured as a reverse proxy and mod_auth_mellon is configured to only let through authenticated users (with the require valid-user directive), adding special HTTP headers that are normally used to start the special SAML ECP (non-browser based) can be used to bypass authentication.\n1691126: \nCVE-2019-3878 mod_auth_mellon: authentication bypass in ECP flow\n\nCVE-2019-3877:\n\tA vulnerability was found in mod_auth_mellon before v0.14.2. An open redirect in the logout URL allows requests with backslashes to pass through by assuming that it is a relative URL, while the browsers silently convert backslash characters into forward slashes treating them as an absolute URL. This mismatch allows an attacker to bypass the redirect URL validation logic in apr_uri_parse function.\n1691125: \nCVE-2019-3877 mod_auth_mellon: open redirect in logout url when using URLs with backslashes\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "important"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/ALAS-2019-1200.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-3877"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-3878"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2019-3877",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-3877"
+				}
+			]
+		},
+		{
+			"id": "CVE-2019-3878",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-3878"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "mod24_auth_mellon-diagnostics",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:0.14.0-2.8.amzn1"
+					}
+				],
+				"fixed": [
+					"0:0.14.0-2.8.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "mod24_auth_mellon-debuginfo",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:0.14.0-2.8.amzn1"
+					}
+				],
+				"fixed": [
+					"0:0.14.0-2.8.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "mod24_auth_mellon",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:0.14.0-2.8.amzn1"
+					}
+				],
+				"fixed": [
+					"0:0.14.0-2.8.amzn1"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

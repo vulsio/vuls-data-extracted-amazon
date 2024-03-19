@@ -1,0 +1,91 @@
+{
+	"id": "ALAS-2018-1040",
+	"advisories": [
+		{
+			"id": "ALAS-2018-1040",
+			"title": "Amazon Linux AMI 2014.03 - ALAS-2018-1040: medium priority package update for wget",
+			"description": "Package updates are available for Amazon Linux AMI that fix the following vulnerabilities:\nCVE-2018-0494:\n\tA cookie injection flaw was found in wget. An attacker can create a malicious website which, when accessed, overrides cookies belonging to arbitrary domains.\n1575634: \nCVE-2018-0494 wget: Cookie injection allows malicious website to write arbitrary cookie entries into cookie jar\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "medium"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/ALAS-2018-1040.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-0494"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2018-0494",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-0494"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "wget-debuginfo",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.18-4.29.amzn1"
+					}
+				],
+				"fixed": [
+					"0:1.18-4.29.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "wget",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.18-4.29.amzn1"
+					}
+				],
+				"fixed": [
+					"0:1.18-4.29.amzn1"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

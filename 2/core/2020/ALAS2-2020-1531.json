@@ -1,0 +1,137 @@
+{
+	"id": "ALAS2-2020-1531",
+	"advisories": [
+		{
+			"id": "ALAS2-2020-1531",
+			"title": "Amazon Linux 2 2017.12 - ALAS2-2020-1531: medium priority package update for libssh2",
+			"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2019-17498:\n\tIn libssh2 v1.9.0 and earlier versions, the SSH_MSG_DISCONNECT logic in packet.c has an integer overflow in a bounds check, enabling an attacker to specify an arbitrary (out-of-bounds) offset for a subsequent memory read. A crafted SSH server may be able to disclose sensitive information or cause a denial of service condition on the client system when a user connects to the server.\n1766898: CVE-2019-17498 libssh2: integer overflow in SSH_MSG_DISCONNECT logic in packet.c\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "medium"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALAS-2020-1531.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-17498"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2019-17498",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-17498"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "libssh2",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.4.3-12.amzn2.2.3"
+					}
+				],
+				"fixed": [
+					"0:1.4.3-12.amzn2.2.3"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "libssh2-devel",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.4.3-12.amzn2.2.3"
+					}
+				],
+				"fixed": [
+					"0:1.4.3-12.amzn2.2.3"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "libssh2-docs",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.4.3-12.amzn2.2.3"
+					}
+				],
+				"fixed": [
+					"0:1.4.3-12.amzn2.2.3"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "libssh2-debuginfo",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.4.3-12.amzn2.2.3"
+					}
+				],
+				"fixed": [
+					"0:1.4.3-12.amzn2.2.3"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

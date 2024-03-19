@@ -1,0 +1,209 @@
+{
+	"id": "ALAS2022-2022-256",
+	"advisories": [
+		{
+			"id": "ALAS2022-2022-256",
+			"title": "Amazon Linux 2022 - ALAS2022-2022-256: Important priority package update for libtiff",
+			"description": "Package updates are available for Amazon Linux 2022 that fix the following vulnerabilities:\nCVE-2022-3970:\n\tA vulnerability was found in LibTIFF. It has been classified as critical. This affects the function TIFFReadRGBATileExt of the file libtiff/tif_getimage.c. The manipulation leads to integer overflow. It is possible to initiate the attack remotely. The exploit has been disclosed to the public and may be used. The name of the patch is 227500897dfb07fb7d27f7aa570050e62617e3be. It is recommended to apply a patch to fix this issue. The identifier VDB-213549 was assigned to this vulnerability.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "Important"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2022/ALAS-2022-256.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3970"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2022-3970",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3970"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2022",
+			"vulnerable": true,
+			"package": {
+				"name": "libtiff-tools",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.4.0-4.amzn2022.0.2"
+					}
+				],
+				"fixed": [
+					"0:4.4.0-4.amzn2022.0.2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2022",
+			"vulnerable": true,
+			"package": {
+				"name": "libtiff-devel",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.4.0-4.amzn2022.0.2"
+					}
+				],
+				"fixed": [
+					"0:4.4.0-4.amzn2022.0.2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2022",
+			"vulnerable": true,
+			"package": {
+				"name": "libtiff-debugsource",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.4.0-4.amzn2022.0.2"
+					}
+				],
+				"fixed": [
+					"0:4.4.0-4.amzn2022.0.2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2022",
+			"vulnerable": true,
+			"package": {
+				"name": "libtiff-tools-debuginfo",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.4.0-4.amzn2022.0.2"
+					}
+				],
+				"fixed": [
+					"0:4.4.0-4.amzn2022.0.2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2022",
+			"vulnerable": true,
+			"package": {
+				"name": "libtiff-static",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.4.0-4.amzn2022.0.2"
+					}
+				],
+				"fixed": [
+					"0:4.4.0-4.amzn2022.0.2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2022",
+			"vulnerable": true,
+			"package": {
+				"name": "libtiff-debuginfo",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.4.0-4.amzn2022.0.2"
+					}
+				],
+				"fixed": [
+					"0:4.4.0-4.amzn2022.0.2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2022",
+			"vulnerable": true,
+			"package": {
+				"name": "libtiff",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.4.0-4.amzn2022.0.2"
+					}
+				],
+				"fixed": [
+					"0:4.4.0-4.amzn2022.0.2"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

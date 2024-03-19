@@ -1,0 +1,161 @@
+{
+	"id": "ALAS2-2024-2419",
+	"advisories": [
+		{
+			"id": "ALAS2-2024-2419",
+			"title": "Amazon Linux 2 2017.12 - ALAS2-2024-2419: medium priority package update for nss-softokn",
+			"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2023-5388:\n\tIt was discovered that the numerical library used in NSS for RSA cryptography leaks information whether high order bits of the RSA decryption result are zero. This information can be used to mount a Bleichenbacher or Manger like attack against all RSA decryption operations. As the leak happens before any padding operations, it affects all padding modes: PKCS#1 v1.5, OAEP, and RSASVP. Both API level calls and TLS server operation are affected.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "medium"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALAS-2024-2419.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-5388"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2023-5388",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-5388"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "nss-softokn-devel",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:3.90.0-6.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"0:3.90.0-6.amzn2.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "nss-softokn-debuginfo",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:3.90.0-6.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"0:3.90.0-6.amzn2.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "nss-softokn",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:3.90.0-6.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"0:3.90.0-6.amzn2.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "nss-softokn-freebl",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:3.90.0-6.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"0:3.90.0-6.amzn2.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "nss-softokn-freebl-devel",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:3.90.0-6.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"0:3.90.0-6.amzn2.0.1"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

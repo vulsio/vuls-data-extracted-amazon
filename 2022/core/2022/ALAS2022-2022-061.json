@@ -1,0 +1,198 @@
+{
+	"id": "ALAS2022-2022-061",
+	"advisories": [
+		{
+			"id": "ALAS2022-2022-061",
+			"title": "Amazon Linux 2022 - ALAS2022-2022-061: Medium priority package update for openexr",
+			"description": "Package updates are available for Amazon Linux 2022 that fix the following vulnerabilities:\nCVE-2021-3941:\n\tIn ImfChromaticities.cpp routine RGBtoXYZ(), there are some division operations such as `float Z = (1 - chroma.white.x - chroma.white.y) * Y / chroma.white.y;` and `chroma.green.y * (X + Z))) / d;` but the divisor is not checked for a 0 value. A specially crafted file could trigger a divide-by-zero condition which could affect the availability of programs linked with OpenEXR.\n\nCVE-2021-3933:\n\tAn integer overflow could occur when OpenEXR processes a crafted file on systems where size_t is less than 64 bits. This issue could cause an invalid bytesPerLine and maxBytesPerLine value, which leads to problems with application stability or other attack paths.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "Medium"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2022/ALAS-2022-061.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3933"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3941"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2021-3933",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3933"
+				}
+			]
+		},
+		{
+			"id": "CVE-2021-3941",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3941"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2022",
+			"vulnerable": true,
+			"package": {
+				"name": "openexr",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:3.1.4-1.amzn2022"
+					}
+				],
+				"fixed": [
+					"0:3.1.4-1.amzn2022"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2022",
+			"vulnerable": true,
+			"package": {
+				"name": "openexr-libs",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:3.1.4-1.amzn2022"
+					}
+				],
+				"fixed": [
+					"0:3.1.4-1.amzn2022"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2022",
+			"vulnerable": true,
+			"package": {
+				"name": "openexr-debuginfo",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:3.1.4-1.amzn2022"
+					}
+				],
+				"fixed": [
+					"0:3.1.4-1.amzn2022"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2022",
+			"vulnerable": true,
+			"package": {
+				"name": "openexr-devel",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:3.1.4-1.amzn2022"
+					}
+				],
+				"fixed": [
+					"0:3.1.4-1.amzn2022"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2022",
+			"vulnerable": true,
+			"package": {
+				"name": "openexr-debugsource",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:3.1.4-1.amzn2022"
+					}
+				],
+				"fixed": [
+					"0:3.1.4-1.amzn2022"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2022",
+			"vulnerable": true,
+			"package": {
+				"name": "openexr-libs-debuginfo",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:3.1.4-1.amzn2022"
+					}
+				],
+				"fixed": [
+					"0:3.1.4-1.amzn2022"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

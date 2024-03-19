@@ -1,0 +1,89 @@
+{
+	"id": "ALAS2-2019-1355",
+	"advisories": [
+		{
+			"id": "ALAS2-2019-1355",
+			"title": "Amazon Linux 2 2017.12 - ALAS2-2019-1355: low priority package update for unzip",
+			"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2018-18384:\n\tInfo-ZIP UnZip 6.0 has a buffer overflow in list.c, when a ZIP archive has a crafted relationship between the compressed-size value and the uncompressed-size value, because a buffer size is 10 and is supposed to be 12.\n99999: \nCVE-2018-18384 unzip: Buffer overflow in list.c resulting in a denial of service\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "low"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALAS-2019-1355.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-18384"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2018-18384",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-18384"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "unzip-debuginfo",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:6.0-20.amzn2"
+					}
+				],
+				"fixed": [
+					"0:6.0-20.amzn2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "unzip",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:6.0-20.amzn2"
+					}
+				],
+				"fixed": [
+					"0:6.0-20.amzn2"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

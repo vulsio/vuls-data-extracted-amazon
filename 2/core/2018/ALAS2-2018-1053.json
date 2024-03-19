@@ -1,0 +1,257 @@
+{
+	"id": "ALAS2-2018-1053",
+	"advisories": [
+		{
+			"id": "ALAS2-2018-1053",
+			"title": "Amazon Linux 2 2017.12 - ALAS2-2018-1053: low priority package update for ncurses",
+			"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2018-10754:\n\tA NULL pointer dereference was found in the way the _nc_parse_entry function parses terminfo data for compilation. An attacker able to provide specially crafted terminfo data could use this flaw to crash the application parsing it.\n1576119: \nCVE-2018-10754 ncurses: NULL Pointer Dereference in _nc_parse_entry function in tinfo/parse_entry.c.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "low"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALAS-2018-1053.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-10754"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2018-10754",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-10754"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "ncurses-devel",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:6.0-8.20170212.amzn2.1.1"
+					}
+				],
+				"fixed": [
+					"0:6.0-8.20170212.amzn2.1.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "ncurses-debuginfo",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:6.0-8.20170212.amzn2.1.1"
+					}
+				],
+				"fixed": [
+					"0:6.0-8.20170212.amzn2.1.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "ncurses",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:6.0-8.20170212.amzn2.1.1"
+					}
+				],
+				"fixed": [
+					"0:6.0-8.20170212.amzn2.1.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "ncurses-compat-libs",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:6.0-8.20170212.amzn2.1.1"
+					}
+				],
+				"fixed": [
+					"0:6.0-8.20170212.amzn2.1.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "ncurses-c++-libs",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:6.0-8.20170212.amzn2.1.1"
+					}
+				],
+				"fixed": [
+					"0:6.0-8.20170212.amzn2.1.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "ncurses-static",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:6.0-8.20170212.amzn2.1.1"
+					}
+				],
+				"fixed": [
+					"0:6.0-8.20170212.amzn2.1.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "ncurses-libs",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:6.0-8.20170212.amzn2.1.1"
+					}
+				],
+				"fixed": [
+					"0:6.0-8.20170212.amzn2.1.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "ncurses-base",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:6.0-8.20170212.amzn2.1.1"
+					}
+				],
+				"fixed": [
+					"0:6.0-8.20170212.amzn2.1.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "ncurses-term",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:6.0-8.20170212.amzn2.1.1"
+					}
+				],
+				"fixed": [
+					"0:6.0-8.20170212.amzn2.1.1"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

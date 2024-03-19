@@ -1,0 +1,330 @@
+{
+	"id": "ALAS-2022-1584",
+	"advisories": [
+		{
+			"id": "ALAS-2022-1584",
+			"title": "Amazon Linux AMI 2014.03 - ALAS-2022-1584: important priority package update for httpd24",
+			"description": "Package updates are available for Amazon Linux AMI that fix the following vulnerabilities:\nCVE-2022-23943:\n\tAn out-of-bounds read/write vulnerability was found in the mod_sed module of httpd. This flaw allows an attacker to overwrite the memory of an httpd instance that is using mod_sed with data provided by the attacker.\n\nCVE-2022-22721:\n\tA flaw was found in httpd, where it incorrectly limits the value of the LimitXMLRequestBody option. This issue can lead to an integer overflow and later causes an out-of-bounds write.\n\nCVE-2022-22720:\n\tA flaw was found in httpd. The inbound connection is not closed when it fails to discard the request body, which may expose the server to HTTP request smuggling.\n\nCVE-2022-22719:\n\tA flaw was found in the mod_lua module of httpd. A crafted request body can cause a read to a random memory area due to an uninitialized value in functions called by the parsebody function. The highest treat of this vulnerability is availability.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "important"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/ALAS-2022-1584.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-22719"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-22720"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-22721"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-23943"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2022-22719",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-22719"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-22720",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-22720"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-22721",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-22721"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-23943",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-23943"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "mod24_ldap",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.4.53-1.96.amzn1"
+					}
+				],
+				"fixed": [
+					"0:2.4.53-1.96.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "mod24_session",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.4.53-1.96.amzn1"
+					}
+				],
+				"fixed": [
+					"0:2.4.53-1.96.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "httpd24",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.4.53-1.96.amzn1"
+					}
+				],
+				"fixed": [
+					"0:2.4.53-1.96.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "httpd24-manual",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.4.53-1.96.amzn1"
+					}
+				],
+				"fixed": [
+					"0:2.4.53-1.96.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "httpd24-tools",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.4.53-1.96.amzn1"
+					}
+				],
+				"fixed": [
+					"0:2.4.53-1.96.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "mod24_proxy_html",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:2.4.53-1.96.amzn1"
+					}
+				],
+				"fixed": [
+					"1:2.4.53-1.96.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "mod24_md",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.4.53-1.96.amzn1"
+					}
+				],
+				"fixed": [
+					"0:2.4.53-1.96.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "mod24_ssl",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:2.4.53-1.96.amzn1"
+					}
+				],
+				"fixed": [
+					"1:2.4.53-1.96.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "httpd24-debuginfo",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.4.53-1.96.amzn1"
+					}
+				],
+				"fixed": [
+					"0:2.4.53-1.96.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "httpd24-devel",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.4.53-1.96.amzn1"
+					}
+				],
+				"fixed": [
+					"0:2.4.53-1.96.amzn1"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

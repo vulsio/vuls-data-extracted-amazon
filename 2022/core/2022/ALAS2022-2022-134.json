@@ -1,0 +1,113 @@
+{
+	"id": "ALAS2022-2022-134",
+	"advisories": [
+		{
+			"id": "ALAS2022-2022-134",
+			"title": "Amazon Linux 2022 - ALAS2022-2022-134: Medium priority package update for wget",
+			"description": "Package updates are available for Amazon Linux 2022 that fix the following vulnerabilities:\nCVE-2021-31879:\n\tA flaw was found in wget. If wget sends an Authorization header as part of a query and receives an HTTP REDIRECT to a third party in return, the Authorization header will be forwarded as part of the redirected request. This issue creates a password leak, as the second server receives the password. The highest threat from this vulnerability is confidentiality.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "Medium"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2022/ALAS-2022-134.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-31879"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2021-31879",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-31879"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2022",
+			"vulnerable": true,
+			"package": {
+				"name": "wget-debuginfo",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.21.3-1.amzn2022"
+					}
+				],
+				"fixed": [
+					"0:1.21.3-1.amzn2022"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2022",
+			"vulnerable": true,
+			"package": {
+				"name": "wget",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.21.3-1.amzn2022"
+					}
+				],
+				"fixed": [
+					"0:1.21.3-1.amzn2022"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2022",
+			"vulnerable": true,
+			"package": {
+				"name": "wget-debugsource",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.21.3-1.amzn2022"
+					}
+				],
+				"fixed": [
+					"0:1.21.3-1.amzn2022"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

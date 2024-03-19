@@ -1,0 +1,161 @@
+{
+	"id": "ALAS2023-2023-291",
+	"advisories": [
+		{
+			"id": "ALAS2023-2023-291",
+			"title": "Amazon Linux 2023 - ALAS2023-2023-291: Important priority package update for redis6",
+			"description": "Package updates are available for Amazon Linux 2023 that fix the following vulnerabilities:\nCVE-2022-24834:\n\tA heap-based buffer overflow flaw was found in Redis. This flaw allows an attacker to trick an authenticated user into executing a specially crafted Lua script in Redis. This attack triggers a heap overflow in the cjson and cmsgpack libraries, resulting in heap corruption and potential remote code execution.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "Important"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2023/ALAS-2023-291.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-24834"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2022-24834",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-24834"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2023",
+			"vulnerable": true,
+			"package": {
+				"name": "redis6-doc",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:6.2.13-1.amzn2023.0.1"
+					}
+				],
+				"fixed": [
+					"0:6.2.13-1.amzn2023.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2023",
+			"vulnerable": true,
+			"package": {
+				"name": "redis6-debuginfo",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:6.2.13-1.amzn2023.0.1"
+					}
+				],
+				"fixed": [
+					"0:6.2.13-1.amzn2023.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2023",
+			"vulnerable": true,
+			"package": {
+				"name": "redis6-devel",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:6.2.13-1.amzn2023.0.1"
+					}
+				],
+				"fixed": [
+					"0:6.2.13-1.amzn2023.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2023",
+			"vulnerable": true,
+			"package": {
+				"name": "redis6",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:6.2.13-1.amzn2023.0.1"
+					}
+				],
+				"fixed": [
+					"0:6.2.13-1.amzn2023.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2023",
+			"vulnerable": true,
+			"package": {
+				"name": "redis6-debugsource",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:6.2.13-1.amzn2023.0.1"
+					}
+				],
+				"fixed": [
+					"0:6.2.13-1.amzn2023.0.1"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

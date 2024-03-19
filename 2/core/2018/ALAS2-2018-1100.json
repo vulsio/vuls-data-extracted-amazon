@@ -1,0 +1,342 @@
+{
+	"id": "ALAS2-2018-1100",
+	"advisories": [
+		{
+			"id": "ALAS2-2018-1100",
+			"title": "Amazon Linux 2 2017.12 - ALAS2-2018-1100: medium priority package update for kernel",
+			"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2018-18021:\n\tA vulnerability was discovered in the Linux kernel that allows an attacker to escalate privileges with using a 64-bit ARM architecture. A local attacker with permission to create KVM-based virtual machines can both panic the hypervisor by triggering an illegal exception return (resulting in a DoS) and to redirect execution elsewhere within the hypervisor with full register control, instead of causing a return to the guest.\n1635475: \nCVE-2018-18021 kernel: Privilege escalation on arm64 via KVM hypervisor\n\nCVE-2018-17972:\n\tAn issue was discovered in the proc_pid_stack function in fs/proc/base.c in the Linux kernel. An attacker with a local account can trick the stack unwinder code to leak stack contents to userspace. The fix allows only root to inspect the kernel stack of an arbitrary task.\n1636349: \nCVE-2018-17972 kernel: Unprivileged users able to inspect kernel stacks of arbitrary tasks\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "medium"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALAS-2018-1100.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-17972"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-18021"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2018-17972",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-17972"
+				}
+			]
+		},
+		{
+			"id": "CVE-2018-18021",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-18021"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "kernel",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.14.77-80.57.amzn2"
+					}
+				],
+				"fixed": [
+					"0:4.14.77-80.57.amzn2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "kernel-headers",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.14.77-80.57.amzn2"
+					}
+				],
+				"fixed": [
+					"0:4.14.77-80.57.amzn2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "kernel-debuginfo-common-x86_64",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.14.77-80.57.amzn2"
+					}
+				],
+				"fixed": [
+					"0:4.14.77-80.57.amzn2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "perf",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.14.77-80.57.amzn2"
+					}
+				],
+				"fixed": [
+					"0:4.14.77-80.57.amzn2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "python-perf",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.14.77-80.57.amzn2"
+					}
+				],
+				"fixed": [
+					"0:4.14.77-80.57.amzn2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "python-perf-debuginfo",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.14.77-80.57.amzn2"
+					}
+				],
+				"fixed": [
+					"0:4.14.77-80.57.amzn2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "kernel-tools-devel",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.14.77-80.57.amzn2"
+					}
+				],
+				"fixed": [
+					"0:4.14.77-80.57.amzn2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "kernel-tools-debuginfo",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.14.77-80.57.amzn2"
+					}
+				],
+				"fixed": [
+					"0:4.14.77-80.57.amzn2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "perf-debuginfo",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.14.77-80.57.amzn2"
+					}
+				],
+				"fixed": [
+					"0:4.14.77-80.57.amzn2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "kernel-tools",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.14.77-80.57.amzn2"
+					}
+				],
+				"fixed": [
+					"0:4.14.77-80.57.amzn2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "kernel-devel",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.14.77-80.57.amzn2"
+					}
+				],
+				"fixed": [
+					"0:4.14.77-80.57.amzn2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "kernel-debuginfo",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.14.77-80.57.amzn2"
+					}
+				],
+				"fixed": [
+					"0:4.14.77-80.57.amzn2"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

@@ -1,0 +1,451 @@
+{
+	"id": "ALAS2POSTGRESQL13-2023-003",
+	"advisories": [
+		{
+			"id": "ALAS2POSTGRESQL13-2023-003",
+			"title": "Amazon Linux 2 - Postgresql13 2.0 - ALAS2POSTGRESQL13-2023-003: important priority package update for postgresql",
+			"description": "Package updates are available for Amazon Linux 2 - Postgresql13 that fix the following vulnerabilities:\nCVE-2021-32029:\n\tA flaw was found in postgresql. Using an UPDATE ... RETURNING command on a purpose-crafted table, an authenticated database user could read arbitrary bytes of server memory. The highest threat from this vulnerability is to data confidentiality.\n\nCVE-2021-32028:\n\tA flaw was found in postgresql. Using an INSERT ... ON CONFLICT ... DO UPDATE command on a purpose-crafted table, an authenticated database user could read arbitrary bytes of server memory. The highest threat from this vulnerability is to data confidentiality.\n\nCVE-2021-32027:\n\tA flaw was found in postgresql. While modifying certain SQL array values, missing bounds checks let authenticated database users write arbitrary bytes to a wide area of server memory. The highest threat from this vulnerability is to data confidentiality and integrity as well as system availability.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "important"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALASPOSTGRESQL13-2023-003.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-32027"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-32028"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-32029"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2021-32027",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-32027"
+				}
+			]
+		},
+		{
+			"id": "CVE-2021-32028",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-32028"
+				}
+			]
+		},
+		{
+			"id": "CVE-2021-32029",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-32029"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "postgresql-server",
+				"repositories": [
+					"amzn2extra-postgresql13"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:13.3-2.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"0:13.3-2.amzn2.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "postgresql-plpython3",
+				"repositories": [
+					"amzn2extra-postgresql13"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:13.3-2.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"0:13.3-2.amzn2.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "postgresql-test",
+				"repositories": [
+					"amzn2extra-postgresql13"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:13.3-2.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"0:13.3-2.amzn2.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "postgresql-docs",
+				"repositories": [
+					"amzn2extra-postgresql13"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:13.3-2.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"0:13.3-2.amzn2.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "postgresql-contrib",
+				"repositories": [
+					"amzn2extra-postgresql13"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:13.3-2.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"0:13.3-2.amzn2.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "postgresql-server-devel",
+				"repositories": [
+					"amzn2extra-postgresql13"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:13.3-2.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"0:13.3-2.amzn2.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "postgresql-upgrade",
+				"repositories": [
+					"amzn2extra-postgresql13"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:13.3-2.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"0:13.3-2.amzn2.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "postgresql-upgrade-devel",
+				"repositories": [
+					"amzn2extra-postgresql13"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:13.3-2.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"0:13.3-2.amzn2.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "postgresql-plpython2",
+				"repositories": [
+					"amzn2extra-postgresql13"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:13.3-2.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"0:13.3-2.amzn2.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "postgresql-debuginfo",
+				"repositories": [
+					"amzn2extra-postgresql13"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:13.3-2.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"0:13.3-2.amzn2.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "postgresql",
+				"repositories": [
+					"amzn2extra-postgresql13"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:13.3-2.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"0:13.3-2.amzn2.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "postgresql-test-rpm-macros",
+				"repositories": [
+					"amzn2extra-postgresql13"
+				],
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:13.3-2.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"0:13.3-2.amzn2.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "postgresql-static",
+				"repositories": [
+					"amzn2extra-postgresql13"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:13.3-2.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"0:13.3-2.amzn2.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "postgresql-plperl",
+				"repositories": [
+					"amzn2extra-postgresql13"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:13.3-2.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"0:13.3-2.amzn2.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "postgresql-pltcl",
+				"repositories": [
+					"amzn2extra-postgresql13"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:13.3-2.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"0:13.3-2.amzn2.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "postgresql-llvmjit",
+				"repositories": [
+					"amzn2extra-postgresql13"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:13.3-2.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"0:13.3-2.amzn2.0.1"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

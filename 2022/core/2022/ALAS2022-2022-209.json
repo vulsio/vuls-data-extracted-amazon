@@ -1,0 +1,440 @@
+{
+	"id": "ALAS2022-2022-209",
+	"advisories": [
+		{
+			"id": "ALAS2022-2022-209",
+			"title": "Amazon Linux 2022 - ALAS2022-2022-209: Important priority package update for xorg-x11-server",
+			"description": "Package updates are available for Amazon Linux 2022 that fix the following vulnerabilities:\nCVE-2021-4011:\n\tA flaw was found in xorg-x11-server where an out-of-bounds access can occur in the SwapCreateRegister function.\n\nCVE-2021-4010:\n\tA flaw was found in xorg-x11-server where an out-of-bounds access can occur in the SProcScreenSaverSuspend function.\n\nCVE-2021-4009:\n\tA flaw was found in xorg-x11-server. An out-of-bounds access can occur in the SProcXFixesCreatePointerBarrier function.\n\nCVE-2021-4008:\n\tA flaw was found in the Xorg-x11-server. An out-of-bounds access issue can occur in the SProcRenderCompositeGlyphs function due to improper validation of the request length.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "Important"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2022/ALAS-2022-209.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-4008"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-4009"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-4010"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-4011"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2021-4008",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-4008"
+				}
+			]
+		},
+		{
+			"id": "CVE-2021-4009",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-4009"
+				}
+			]
+		},
+		{
+			"id": "CVE-2021-4010",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-4010"
+				}
+			]
+		},
+		{
+			"id": "CVE-2021-4011",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-4011"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2022",
+			"vulnerable": true,
+			"package": {
+				"name": "xorg-x11-server-Xephyr-debuginfo",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.20.14-3.amzn2022"
+					}
+				],
+				"fixed": [
+					"0:1.20.14-3.amzn2022"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2022",
+			"vulnerable": true,
+			"package": {
+				"name": "xorg-x11-server-Xvfb-debuginfo",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.20.14-3.amzn2022"
+					}
+				],
+				"fixed": [
+					"0:1.20.14-3.amzn2022"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2022",
+			"vulnerable": true,
+			"package": {
+				"name": "xorg-x11-server-Xorg",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.20.14-3.amzn2022"
+					}
+				],
+				"fixed": [
+					"0:1.20.14-3.amzn2022"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2022",
+			"vulnerable": true,
+			"package": {
+				"name": "xorg-x11-server-Xnest-debuginfo",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.20.14-3.amzn2022"
+					}
+				],
+				"fixed": [
+					"0:1.20.14-3.amzn2022"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2022",
+			"vulnerable": true,
+			"package": {
+				"name": "xorg-x11-server-Xorg-debuginfo",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.20.14-3.amzn2022"
+					}
+				],
+				"fixed": [
+					"0:1.20.14-3.amzn2022"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2022",
+			"vulnerable": true,
+			"package": {
+				"name": "xorg-x11-server-debuginfo",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.20.14-3.amzn2022"
+					}
+				],
+				"fixed": [
+					"0:1.20.14-3.amzn2022"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2022",
+			"vulnerable": true,
+			"package": {
+				"name": "xorg-x11-server-devel",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.20.14-3.amzn2022"
+					}
+				],
+				"fixed": [
+					"0:1.20.14-3.amzn2022"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2022",
+			"vulnerable": true,
+			"package": {
+				"name": "xorg-x11-server-Xvfb",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.20.14-3.amzn2022"
+					}
+				],
+				"fixed": [
+					"0:1.20.14-3.amzn2022"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2022",
+			"vulnerable": true,
+			"package": {
+				"name": "xorg-x11-server-Xnest",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.20.14-3.amzn2022"
+					}
+				],
+				"fixed": [
+					"0:1.20.14-3.amzn2022"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2022",
+			"vulnerable": true,
+			"package": {
+				"name": "xorg-x11-server-Xdmx",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.20.14-3.amzn2022"
+					}
+				],
+				"fixed": [
+					"0:1.20.14-3.amzn2022"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2022",
+			"vulnerable": true,
+			"package": {
+				"name": "xorg-x11-server-debugsource",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.20.14-3.amzn2022"
+					}
+				],
+				"fixed": [
+					"0:1.20.14-3.amzn2022"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2022",
+			"vulnerable": true,
+			"package": {
+				"name": "xorg-x11-server-source",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.20.14-3.amzn2022"
+					}
+				],
+				"fixed": [
+					"0:1.20.14-3.amzn2022"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2022",
+			"vulnerable": true,
+			"package": {
+				"name": "xorg-x11-server-Xdmx-debuginfo",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.20.14-3.amzn2022"
+					}
+				],
+				"fixed": [
+					"0:1.20.14-3.amzn2022"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2022",
+			"vulnerable": true,
+			"package": {
+				"name": "xorg-x11-server-common",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.20.14-3.amzn2022"
+					}
+				],
+				"fixed": [
+					"0:1.20.14-3.amzn2022"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2022",
+			"vulnerable": true,
+			"package": {
+				"name": "xorg-x11-server-Xephyr",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.20.14-3.amzn2022"
+					}
+				],
+				"fixed": [
+					"0:1.20.14-3.amzn2022"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

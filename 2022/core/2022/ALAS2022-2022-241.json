@@ -1,0 +1,89 @@
+{
+	"id": "ALAS2022-2022-241",
+	"advisories": [
+		{
+			"id": "ALAS2022-2022-241",
+			"title": "Amazon Linux 2022 - ALAS2022-2022-241: Medium priority package update for python-jwt",
+			"description": "Package updates are available for Amazon Linux 2022 that fix the following vulnerabilities:\nCVE-2022-29217:\n\tA vulnerability was found in python-jwt. This issue happens when PyJWT supports multiple different JWT signing algorithms. This flaw allows an attacker submitting the JWT token to choose the used signing algorithm, leading to key confusion through non-blocklisted public key formats.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "Medium"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2022/ALAS-2022-241.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-29217"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2022-29217",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-29217"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2022",
+			"vulnerable": true,
+			"package": {
+				"name": "python3-jwt+crypto",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.4.0-1.amzn2022"
+					}
+				],
+				"fixed": [
+					"0:2.4.0-1.amzn2022"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2022",
+			"vulnerable": true,
+			"package": {
+				"name": "python3-jwt",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.4.0-1.amzn2022"
+					}
+				],
+				"fixed": [
+					"0:2.4.0-1.amzn2022"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

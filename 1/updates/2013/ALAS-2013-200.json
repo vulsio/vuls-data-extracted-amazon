@@ -1,0 +1,383 @@
+{
+	"id": "ALAS-2013-200",
+	"advisories": [
+		{
+			"id": "ALAS-2013-200",
+			"title": "Amazon Linux AMI 2012.09 - ALAS-2013-200: medium priority package update for kernel",
+			"description": "Package updates are available for Amazon Linux AMI that fix the following vulnerabilities:\nCVE-2013-3235:\n\t* Information leaks in the Linux kernel could allow a local, unprivileged user to leak kernel memory to user-space.\n\nCVE-2013-3231:\n\t* Information leaks in the Linux kernel could allow a local, unprivileged user to leak kernel memory to user-space.\n\nCVE-2013-3224:\n\t* Information leaks in the Linux kernel could allow a local, unprivileged user to leak kernel memory to user-space.\n* Information leak flaws in the Linux kernel could allow a local, unprivileged user to leak kernel memory to user-space.\n\nCVE-2013-3222:\n\t* Information leaks in the Linux kernel could allow a local, unprivileged user to leak kernel memory to user-space.\n* Information leak flaws in the Linux kernel could allow a local, unprivileged user to leak kernel memory to user-space.\n\nCVE-2013-1929:\n\t* A heap-based buffer overflow in the way the tg3 Ethernet driver parsed the vital product data (VPD) of devices could allow an attacker with physical access to a system to cause a denial of service or, potentially, escalate their privileges.\n\nCVE-2013-1773:\n\tBuffer overflow in the VFAT filesystem implementation in the Linux kernel before 3.3 allows local users to gain privileges or cause a denial of service (system crash) via a VFAT write operation on a filesystem with the utf8 mount option, which is not properly handled during UTF-8 to UTF-16 conversion.\n916115: \nCVE-2013-1773 kernel: VFAT slab-based buffer overflow\n* A buffer overflow flaw was found in the way UTF-8 characters were converted to UTF-16 in the utf8s_to_utf16s() function of the Linux kernel's FAT file system implementation. A local user able to mount a FAT file system with the \"utf8=1\" option could use this flaw to crash the system or, potentially, to escalate their privileges.\n\nCVE-2013-1767:\n\tUse-after-free vulnerability in the shmem_remount_fs function in mm/shmem.c in the Linux kernel before 3.7.10 allows local users to gain privileges or cause a denial of service (system crash) by remounting a tmpfs filesystem without specifying a required mpol (aka mempolicy) mount option.\n915592: \nCVE-2013-1767 Kernel: tmpfs: fix use-after-free of mempolicy object\n* A use-after-free flaw was found in the tmpfs implementation. A local user able to mount and unmount a tmpfs file system could use this flaw to cause a denial of service or, potentially, escalate their privileges.\n\nCVE-2013-0914:\n\t* An information leak was found in the Linux kernel's POSIX signals implementation. A local, unprivileged user could use this flaw to bypass the Address Space Layout Randomization (ASLR) security feature.\n\nCVE-2012-6545:\n\t* Information leaks in the Linux kernel could allow a local, unprivileged user to leak kernel memory to user-space.\n\nCVE-2012-6544:\n\t* Information leaks in the Linux kernel could allow a local, unprivileged user to leak kernel memory to user-space.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "medium"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/ALAS-2013-200.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-6544"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-6545"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-0914"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-1767"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-1773"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-1929"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-3222"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-3224"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-3231"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-3235"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2012-6544",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-6544"
+				}
+			]
+		},
+		{
+			"id": "CVE-2012-6545",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-6545"
+				}
+			]
+		},
+		{
+			"id": "CVE-2013-0914",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-0914"
+				}
+			]
+		},
+		{
+			"id": "CVE-2013-1767",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-1767"
+				}
+			]
+		},
+		{
+			"id": "CVE-2013-1773",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-1773"
+				}
+			]
+		},
+		{
+			"id": "CVE-2013-1929",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-1929"
+				}
+			]
+		},
+		{
+			"id": "CVE-2013-3222",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-3222"
+				}
+			]
+		},
+		{
+			"id": "CVE-2013-3224",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-3224"
+				}
+			]
+		},
+		{
+			"id": "CVE-2013-3231",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-3231"
+				}
+			]
+		},
+		{
+			"id": "CVE-2013-3235",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-3235"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "kernel-debuginfo-common-i686",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:3.4.48-45.46.amzn1"
+					}
+				],
+				"fixed": [
+					"0:3.4.48-45.46.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "kernel-debuginfo",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:3.4.48-45.46.amzn1"
+					}
+				],
+				"fixed": [
+					"0:3.4.48-45.46.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "kernel-headers",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:3.4.48-45.46.amzn1"
+					}
+				],
+				"fixed": [
+					"0:3.4.48-45.46.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "kernel",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:3.4.48-45.46.amzn1"
+					}
+				],
+				"fixed": [
+					"0:3.4.48-45.46.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "kernel-debuginfo-common-x86_64",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:3.4.48-45.46.amzn1"
+					}
+				],
+				"fixed": [
+					"0:3.4.48-45.46.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "kernel-devel",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:3.4.48-45.46.amzn1"
+					}
+				],
+				"fixed": [
+					"0:3.4.48-45.46.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "kernel-doc",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:3.4.48-45.46.amzn1"
+					}
+				],
+				"fixed": [
+					"0:3.4.48-45.46.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "kernel-tools",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:3.4.48-45.46.amzn1"
+					}
+				],
+				"fixed": [
+					"0:3.4.48-45.46.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "kernel-tools-debuginfo",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:3.4.48-45.46.amzn1"
+					}
+				],
+				"fixed": [
+					"0:3.4.48-45.46.amzn1"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

@@ -1,0 +1,113 @@
+{
+	"id": "ALAS2023-2024-504",
+	"advisories": [
+		{
+			"id": "ALAS2023-2024-504",
+			"title": "Amazon Linux 2023 - ALAS2023-2024-504: Low priority package update for indent",
+			"description": "Package updates are available for Amazon Linux 2023 that fix the following vulnerabilities:\nCVE-2024-0911:\n\tA flaw was found in Indent. This issue may allow a local user to use a specially-crafted file to trigger a heap-based buffer overflow, which can lead to an application crash.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "Low"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2023/ALAS-2024-504.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-0911"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2024-0911",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-0911"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2023",
+			"vulnerable": true,
+			"package": {
+				"name": "indent-debuginfo",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.2.12-7.amzn2023.0.6"
+					}
+				],
+				"fixed": [
+					"0:2.2.12-7.amzn2023.0.6"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2023",
+			"vulnerable": true,
+			"package": {
+				"name": "indent-debugsource",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.2.12-7.amzn2023.0.6"
+					}
+				],
+				"fixed": [
+					"0:2.2.12-7.amzn2023.0.6"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2023",
+			"vulnerable": true,
+			"package": {
+				"name": "indent",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.2.12-7.amzn2023.0.6"
+					}
+				],
+				"fixed": [
+					"0:2.2.12-7.amzn2023.0.6"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

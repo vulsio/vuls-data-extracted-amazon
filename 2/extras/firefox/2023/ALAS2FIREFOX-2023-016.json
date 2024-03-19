@@ -1,0 +1,89 @@
+{
+	"id": "ALAS2FIREFOX-2023-016",
+	"advisories": [
+		{
+			"id": "ALAS2FIREFOX-2023-016",
+			"title": "Amazon Linux 2 - Firefox 2.0 - ALAS2FIREFOX-2023-016: medium priority package update for firefox",
+			"description": "Package updates are available for Amazon Linux 2 - Firefox that fix the following vulnerabilities:\nCVE-2023-44488:\n\tVP9 in libvpx before 1.13.1 mishandles widths, leading to a crash related to encoding.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "medium"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALASFIREFOX-2023-016.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-44488"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2023-44488",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-44488"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "firefox",
+				"repositories": [
+					"amzn2extra-firefox"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:102.15.1-1.amzn2.0.2"
+					}
+				],
+				"fixed": [
+					"0:102.15.1-1.amzn2.0.2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "firefox-debuginfo",
+				"repositories": [
+					"amzn2extra-firefox"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:102.15.1-1.amzn2.0.2"
+					}
+				],
+				"fixed": [
+					"0:102.15.1-1.amzn2.0.2"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

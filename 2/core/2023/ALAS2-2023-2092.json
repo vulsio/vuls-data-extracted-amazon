@@ -1,0 +1,161 @@
+{
+	"id": "ALAS2-2023-2092",
+	"advisories": [
+		{
+			"id": "ALAS2-2023-2092",
+			"title": "Amazon Linux 2 2017.12 - ALAS2-2023-2092: medium priority package update for qt5-qtsvg",
+			"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2023-32573:\n\tIn Qt before 5.15.14, 6.0.x through 6.2.x before 6.2.9, and 6.3.x through 6.5.x before 6.5.1, QtSvg QSvgFont m_unitsPerEm initialization is mishandled.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "medium"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALAS-2023-2092.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-32573"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2023-32573",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-32573"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "qt5-qtsvg",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:5.9.2-1.amzn2.0.3"
+					}
+				],
+				"fixed": [
+					"0:5.9.2-1.amzn2.0.3"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "qt5-qtsvg-devel",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:5.9.2-1.amzn2.0.3"
+					}
+				],
+				"fixed": [
+					"0:5.9.2-1.amzn2.0.3"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "qt5-qtsvg-doc",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:5.9.2-1.amzn2.0.3"
+					}
+				],
+				"fixed": [
+					"0:5.9.2-1.amzn2.0.3"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "qt5-qtsvg-examples",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:5.9.2-1.amzn2.0.3"
+					}
+				],
+				"fixed": [
+					"0:5.9.2-1.amzn2.0.3"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "qt5-qtsvg-debuginfo",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:5.9.2-1.amzn2.0.3"
+					}
+				],
+				"fixed": [
+					"0:5.9.2-1.amzn2.0.3"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

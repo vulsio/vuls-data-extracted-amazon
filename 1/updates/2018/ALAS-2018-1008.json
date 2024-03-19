@@ -1,0 +1,91 @@
+{
+	"id": "ALAS-2018-1008",
+	"advisories": [
+		{
+			"id": "ALAS-2018-1008",
+			"title": "Amazon Linux AMI 2014.03 - ALAS-2018-1008: important priority package update for patch",
+			"description": "Package updates are available for Amazon Linux AMI that fix the following vulnerabilities:\nCVE-2018-1000156:\n\tGNU Patch version 2.7.6 contains an input validation vulnerability when processing patch files, specifically the EDITOR_PROGRAM invocation (using ed) can result in code execution. This attack appear to be exploitable via a patch file processed via the patch utility. This is similar to FreeBSD&#039;s CVE-2015-1418 however although they share a common ancestry the code bases have diverged over time.\n1564326: \nCVE-2018-1000156 patch: Malicious patch files cause ed to execute arbitrary commands\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "important"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/ALAS-2018-1008.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-1000156"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2018-1000156",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-1000156"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "patch",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.7.1-10.10.amzn1"
+					}
+				],
+				"fixed": [
+					"0:2.7.1-10.10.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "patch-debuginfo",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.7.1-10.10.amzn1"
+					}
+				],
+				"fixed": [
+					"0:2.7.1-10.10.amzn1"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

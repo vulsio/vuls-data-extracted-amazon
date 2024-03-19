@@ -1,0 +1,170 @@
+{
+	"id": "ALAS-2012-31",
+	"advisories": [
+		{
+			"id": "ALAS-2012-31",
+			"title": "Amazon Linux - ALAS-2012-31: medium priority package update for dhcp",
+			"description": "Package updates are available for Amazon Linux that fix the following vulnerabilities:\nCVE-2011-4539:\n\tdhcpd in ISC DHCP 4.x before 4.2.3-P1 and 4.1-ESV before 4.1-ESV-R4 does not properly handle regular expressions in dhcpd.conf, which allows remote attackers to cause a denial of service (daemon crash) via a crafted request packet.\nA denial of service flaw was found in the way the dhcpd daemon handled DHCP request packets when regular expression matching was used in \"/etc/dhcp/dhcpd.conf\". A remote attacker could use this flaw to crash dhcpd.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "medium"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/ALAS-2012-31.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-4539"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://rhn.redhat.com/errata/RHSA-2011:1819.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2011-4539",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-4539"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "dhcp-devel",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "12:4.1.1-25.P1.14.amzn1"
+					}
+				],
+				"fixed": [
+					"12:4.1.1-25.P1.14.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "dhclient",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "12:4.1.1-25.P1.14.amzn1"
+					}
+				],
+				"fixed": [
+					"12:4.1.1-25.P1.14.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "dhcp",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "12:4.1.1-25.P1.14.amzn1"
+					}
+				],
+				"fixed": [
+					"12:4.1.1-25.P1.14.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "dhcp-debuginfo",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "12:4.1.1-25.P1.14.amzn1"
+					}
+				],
+				"fixed": [
+					"12:4.1.1-25.P1.14.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "dhcp-common",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "12:4.1.1-25.P1.14.amzn1"
+					}
+				],
+				"fixed": [
+					"12:4.1.1-25.P1.14.amzn1"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

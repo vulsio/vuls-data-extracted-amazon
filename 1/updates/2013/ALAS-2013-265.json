@@ -1,0 +1,260 @@
+{
+	"id": "ALAS-2013-265",
+	"advisories": [
+		{
+			"id": "ALAS-2013-265",
+			"title": "Amazon Linux AMI 2012.09 - ALAS-2013-265: important priority package update for nss",
+			"description": "Package updates are available for Amazon Linux AMI that fix the following vulnerabilities:\nCVE-2013-5607:\n\tAn integer overflow flaw was discovered in both NSS and NSPR's implementation of certification parsing on 64-bit systems. A remote attacker could use these flaws to cause an application using NSS or NSPR to crash.\n\nCVE-2013-5606:\n\tIt was discovered that NSS did not reject certificates with incompatible key usage constraints when validating them while the verifyLog feature was enabled. An application using the NSS certificate validation API could accept an invalid certificate.\n\nCVE-2013-5605:\n\tA flaw was found in the way NSS handled invalid handshake packets. A remote attacker could use this flaw to cause a TLS/SSL client using NSS to crash or, possibly, execute arbitrary code with the privileges of the user running the application.\n\nCVE-2013-1741:\n\tAn integer overflow flaw was discovered in both NSS and NSPR's implementation of certification parsing on 64-bit systems. A remote attacker could use these flaws to cause an application using NSS or NSPR to crash.\n\nCVE-2013-1739:\n\tIt was found that the fix for CVE-2013-1620 released via RHSA-2013:1135 introduced a regression causing NSS to read uninitialized data when a decryption failure occurred. A remote attacker could use this flaw to cause a TLS/SSL server using NSS to crash.\n\nCVE-2013-1620:\n\tIt was found that the fix for CVE-2013-1620 released via RHSA-2013:1135 introduced a regression causing NSS to read uninitialized data when a decryption failure occurred. A remote attacker could use this flaw to cause a TLS/SSL server using NSS to crash.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "important"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/ALAS-2013-265.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-1620"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-1739"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-1741"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-5605"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-5606"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-5607"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://rhn.redhat.com/errata/RHSA-2013:1829.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2013-1620",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-1620"
+				}
+			]
+		},
+		{
+			"id": "CVE-2013-1739",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-1739"
+				}
+			]
+		},
+		{
+			"id": "CVE-2013-1741",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-1741"
+				}
+			]
+		},
+		{
+			"id": "CVE-2013-5605",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-5605"
+				}
+			]
+		},
+		{
+			"id": "CVE-2013-5606",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-5606"
+				}
+			]
+		},
+		{
+			"id": "CVE-2013-5607",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-5607"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "nss-debuginfo",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:3.15.3-2.31.amzn1"
+					}
+				],
+				"fixed": [
+					"0:3.15.3-2.31.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "nss-devel",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:3.15.3-2.31.amzn1"
+					}
+				],
+				"fixed": [
+					"0:3.15.3-2.31.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "nss-tools",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:3.15.3-2.31.amzn1"
+					}
+				],
+				"fixed": [
+					"0:3.15.3-2.31.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "nss-pkcs11-devel",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:3.15.3-2.31.amzn1"
+					}
+				],
+				"fixed": [
+					"0:3.15.3-2.31.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "nss-sysinit",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:3.15.3-2.31.amzn1"
+					}
+				],
+				"fixed": [
+					"0:3.15.3-2.31.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "nss",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:3.15.3-2.31.amzn1"
+					}
+				],
+				"fixed": [
+					"0:3.15.3-2.31.amzn1"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

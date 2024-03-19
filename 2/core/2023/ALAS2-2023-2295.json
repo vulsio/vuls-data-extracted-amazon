@@ -1,0 +1,139 @@
+{
+	"id": "ALAS2-2023-2295",
+	"advisories": [
+		{
+			"id": "ALAS2-2023-2295",
+			"title": "Amazon Linux 2 2017.12 - ALAS2-2023-2295: medium priority package update for libXpm",
+			"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2023-43789:\n\tlibXpm: out of bounds read on XPM with corrupted colormap\n\nCVE-2023-43788:\n\tlibXpm: out of bounds read in XpmCreateXpmImageFromBuffer()\n\nNOTE: https://www.openwall.com/lists/oss-security/2023/10/03/1\nNOTE: Fixed by: https://gitlab.freedesktop.org/xorg/lib/libxpm/-/commit/2fa554b01ef6079a9b35df9332bdc4f139ed67e0\n\nCVE-2023-43787:\n\tlibX11: integer overflow in XCreateImage() leading to a heap overflow.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "medium"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALAS-2023-2295.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-43787"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-43788"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-43789"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2023-43787",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-43787"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-43788",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-43788"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-43789",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-43789"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "libXpm",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:3.5.12-9.amzn2.0.2"
+					}
+				],
+				"fixed": [
+					"0:3.5.12-9.amzn2.0.2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "libXpm-devel",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:3.5.12-9.amzn2.0.2"
+					}
+				],
+				"fixed": [
+					"0:3.5.12-9.amzn2.0.2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "libXpm-debuginfo",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:3.5.12-9.amzn2.0.2"
+					}
+				],
+				"fixed": [
+					"0:3.5.12-9.amzn2.0.2"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

@@ -1,0 +1,102 @@
+{
+	"id": "ALAS2-2020-1538",
+	"advisories": [
+		{
+			"id": "ALAS2-2020-1538",
+			"title": "Amazon Linux 2 2017.12 - ALAS2-2020-1538: low priority package update for mod_auth_openidc",
+			"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2019-20479:\n\tAn open redirect flaw was discovered in mod_auth_openidc where it handles logout redirection. The module does not correctly validate the URL, allowing a URL with slash and backslash at the beginning to bypass the protection checks. A victim user may be tricked into visiting a trusted vulnerable web site, which would redirect him to another, possibly malicious, URL.\n1805102: CVE-2019-20479 mod_auth_openidc: Open redirect issue exists in URLs with slash and backslash\n\nCVE-2019-14857:\n\tAn open redirect flaw was discovered in mod_auth_openidc, where it handles logout redirection. The module does not correctly validate the URL, allowing a URL with leading slashes to bypass the protection checks. A victim user may be tricked into visiting a trusted vulnerable web site, which would redirect them to another possibly malicious URL.\n1760613: CVE-2019-14857 mod_auth_openidc: Open redirect in logout url when using URLs with leading slashes\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "low"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALAS-2020-1538.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-14857"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-20479"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2019-14857",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-14857"
+				}
+			]
+		},
+		{
+			"id": "CVE-2019-20479",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-20479"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "mod_auth_openidc",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.8.8-7.amzn2"
+					}
+				],
+				"fixed": [
+					"0:1.8.8-7.amzn2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "mod_auth_openidc-debuginfo",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.8.8-7.amzn2"
+					}
+				],
+				"fixed": [
+					"0:1.8.8-7.amzn2"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

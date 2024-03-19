@@ -1,0 +1,128 @@
+{
+	"id": "ALAS2-2020-1524",
+	"advisories": [
+		{
+			"id": "ALAS2-2020-1524",
+			"title": "Amazon Linux 2 2017.12 - ALAS2-2020-1524: medium priority package update for geronimo-jaxrpc",
+			"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2018-12085:\n\tLiblouis 3.6.0 has a stack-based Buffer Overflow in the function parseChars in compileTranslationTable.c, a different vulnerability than CVE-2018-11440.\n1589940: CVE-2018-12085 liblouis: Stack-based buffer overflow in compileTranslationTable.c\n\nCVE-2018-11685:\n\tLiblouis 3.5.0 has a stack-based Buffer Overflow in the function compileHyphenation in compileTranslationTable.c.\n1588636: CVE-2018-11685 liblouis: Stack-based buffer overflow in function compileHyphenation in compileTranslationTable.c\n\nCVE-2018-11684:\n\tLiblouis 3.5.0 has a stack-based Buffer Overflow in the function includeFile in compileTranslationTable.c.\n1588631: CVE-2018-11684 liblouis: Stack-based buffer overflow in function includeFile in compileTranslationTable.c\n\nCVE-2018-11577:\n\tLiblouis 3.5.0 has a Segmentation fault in lou_logPrint in logging.c.\n1585905: CVE-2018-11577 liblouis: Segmentation fault in logging.c:lou_logPrint()\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "medium"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALAS-2020-1524.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11577"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11684"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11685"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-12085"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2018-11577",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11577"
+				}
+			]
+		},
+		{
+			"id": "CVE-2018-11684",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11684"
+				}
+			]
+		},
+		{
+			"id": "CVE-2018-11685",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11685"
+				}
+			]
+		},
+		{
+			"id": "CVE-2018-12085",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-12085"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "geronimo-jaxrpc",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.1-14.amzn2"
+					}
+				],
+				"fixed": [
+					"0:2.1-14.amzn2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "geronimo-jaxrpc-javadoc",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.1-14.amzn2"
+					}
+				],
+				"fixed": [
+					"0:2.1-14.amzn2"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

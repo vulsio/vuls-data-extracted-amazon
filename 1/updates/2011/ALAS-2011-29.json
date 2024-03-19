@@ -1,0 +1,170 @@
+{
+	"id": "ALAS-2011-29",
+	"advisories": [
+		{
+			"id": "ALAS-2011-29",
+			"title": "Amazon Linux - ALAS-2011-29: important priority package update for jasper",
+			"description": "Package updates are available for Amazon Linux that fix the following vulnerabilities:\nCVE-2011-4516:\n\tTwo heap-based buffer overflow flaws were found in the way JasPer decoded JPEG 2000 compressed image files. An attacker could create a malicious JPEG 2000 compressed image file that, when opened, would cause applications that use JasPer (such as Nautilus) to crash or, potentially, execute arbitrary code.\nTwo heap-based buffer overflow flaws were found in the embedded JasPer library, which is used to provide support for Part 1 of the JPEG 2000 image compression standard in the jpeg2ktopam and pamtojpeg2k tools. An attacker could create a malicious JPEG 2000 compressed image file that could cause jpeg2ktopam to crash or, potentially, execute arbitrary code with the privileges of the user running jpeg2ktopam. These flaws do not affect pamtojpeg2k.\nHeap-based buffer overflow in the jpc_cox_getcompparms function in libjasper/jpc/jpc_cs.c in JasPer 1.900.1 allows remote attackers to execute arbitrary code or cause a denial of service (memory corruption) via a crafted numrlvls value in a JPEG2000 file.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "important"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/ALAS-2011-29.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-4516"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://rhn.redhat.com/errata/RHSA-2011:1807.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2011-4516",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-4516"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "jasper",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.900.1-15.5.amzn1"
+					}
+				],
+				"fixed": [
+					"0:1.900.1-15.5.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "jasper-utils",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.900.1-15.5.amzn1"
+					}
+				],
+				"fixed": [
+					"0:1.900.1-15.5.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "jasper-debuginfo",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.900.1-15.5.amzn1"
+					}
+				],
+				"fixed": [
+					"0:1.900.1-15.5.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "jasper-devel",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.900.1-15.5.amzn1"
+					}
+				],
+				"fixed": [
+					"0:1.900.1-15.5.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "jasper-libs",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.900.1-15.5.amzn1"
+					}
+				],
+				"fixed": [
+					"0:1.900.1-15.5.amzn1"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

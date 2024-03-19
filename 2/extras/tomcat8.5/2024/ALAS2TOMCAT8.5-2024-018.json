@@ -1,0 +1,281 @@
+{
+	"id": "ALAS2TOMCAT8.5-2024-018",
+	"advisories": [
+		{
+			"id": "ALAS2TOMCAT8.5-2024-018",
+			"title": "Amazon Linux 2 - Tomcat8.5 2.0 - ALAS2TOMCAT8.5-2024-018: medium priority package update for tomcat",
+			"description": "Package updates are available for Amazon Linux 2 - Tomcat8.5 that fix the following vulnerabilities:\nCVE-2023-46589:\n\tImproper Input Validation vulnerability in Apache Tomcat.Tomcat from 11.0.0-M1 through 11.0.0-M10, from 10.1.0-M1 through 10.1.15, from 9.0.0-M1 through 9.0.82 and from 8.5.0 through 8.5.95 did not correctly parse HTTP trailer headers. A trailer header that exceeded the header size limit could cause Tomcat to treat a single \nrequest as multiple requests leading to the possibility of request \nsmuggling when behind a reverse proxy.\n\nUsers are recommended to upgrade to version 11.0.0-M11 onwards, 10.1.16 onwards, 9.0.83 onwards or 8.5.96 onwards, which fix the issue.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "medium"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALASTOMCAT8.5-2024-018.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-46589"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2023-46589",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-46589"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "tomcat",
+				"repositories": [
+					"amzn2extra-tomcat8.5"
+				],
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:8.5.95-1.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"0:8.5.95-1.amzn2.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "tomcat-admin-webapps",
+				"repositories": [
+					"amzn2extra-tomcat8.5"
+				],
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:8.5.95-1.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"0:8.5.95-1.amzn2.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "tomcat-jsp-2.3-api",
+				"repositories": [
+					"amzn2extra-tomcat8.5"
+				],
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:8.5.95-1.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"0:8.5.95-1.amzn2.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "tomcat-lib",
+				"repositories": [
+					"amzn2extra-tomcat8.5"
+				],
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:8.5.95-1.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"0:8.5.95-1.amzn2.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "tomcat-docs-webapp",
+				"repositories": [
+					"amzn2extra-tomcat8.5"
+				],
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:8.5.95-1.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"0:8.5.95-1.amzn2.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "tomcat-javadoc",
+				"repositories": [
+					"amzn2extra-tomcat8.5"
+				],
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:8.5.95-1.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"0:8.5.95-1.amzn2.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "tomcat-jsvc",
+				"repositories": [
+					"amzn2extra-tomcat8.5"
+				],
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:8.5.95-1.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"0:8.5.95-1.amzn2.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "tomcat-servlet-3.1-api",
+				"repositories": [
+					"amzn2extra-tomcat8.5"
+				],
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:8.5.95-1.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"0:8.5.95-1.amzn2.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "tomcat-el-3.0-api",
+				"repositories": [
+					"amzn2extra-tomcat8.5"
+				],
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:8.5.95-1.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"0:8.5.95-1.amzn2.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "tomcat-webapps",
+				"repositories": [
+					"amzn2extra-tomcat8.5"
+				],
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:8.5.95-1.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"0:8.5.95-1.amzn2.0.1"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

@@ -1,0 +1,89 @@
+{
+	"id": "ALAS2LIVEPATCH-2020-020",
+	"advisories": [
+		{
+			"id": "ALAS2LIVEPATCH-2020-020",
+			"title": "Amazon Linux 2 - Livepatch 2.0 - ALAS2LIVEPATCH-2020-020: important priority package update for kernel-livepatch-4.14.173-137.228",
+			"description": "Package updates are available for Amazon Linux 2 - Livepatch that fix the following vulnerabilities:\nCVE-2019-19319:\n\tIn the Linux kernel 5.0.21, a setxattr operation, after a mount of a crafted ext4 image, can cause a slab-out-of-bounds write access because of an ext4_xattr_set_entry use-after-free in fs/ext4/xattr.c when a large old_size value is used in a memset call.\n1784130: CVE-2019-19319 kernel: out-of-bounds write in ext4_xattr_set_entry in fs/ext4/xattr.c\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "important"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALASLIVEPATCH-2020-020.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-19319"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2019-19319",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-19319"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "kernel-livepatch-4.14.173-137.228",
+				"repositories": [
+					"amzn2extra-livepatch"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.0-4.amzn2"
+					}
+				],
+				"fixed": [
+					"0:1.0-4.amzn2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "kernel-livepatch-4.14.173-137.228-debuginfo",
+				"repositories": [
+					"amzn2extra-livepatch"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.0-4.amzn2"
+					}
+				],
+				"fixed": [
+					"0:1.0-4.amzn2"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

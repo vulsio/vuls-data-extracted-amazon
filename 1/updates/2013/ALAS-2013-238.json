@@ -1,0 +1,91 @@
+{
+	"id": "ALAS-2013-238",
+	"advisories": [
+		{
+			"id": "ALAS-2013-238",
+			"title": "Amazon Linux AMI 2012.09 - ALAS-2013-238: important priority package update for mod_fcgid",
+			"description": "Package updates are available for Amazon Linux AMI that fix the following vulnerabilities:\nCVE-2013-4365:\n\t1017039: \nCVE-2013-4365 mod_fcgid: heap overflow\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "important"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/ALAS-2013-238.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-4365"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2013-4365",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-4365"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "mod_fcgid",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.3.9-1.6.amzn1"
+					}
+				],
+				"fixed": [
+					"0:2.3.9-1.6.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "mod_fcgid-debuginfo",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.3.9-1.6.amzn1"
+					}
+				],
+				"fixed": [
+					"0:2.3.9-1.6.amzn1"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

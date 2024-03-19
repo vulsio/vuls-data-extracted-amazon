@@ -1,0 +1,167 @@
+{
+	"id": "ALAS2-2020-1572",
+	"advisories": [
+		{
+			"id": "ALAS2-2020-1572",
+			"title": "Amazon Linux 2 2017.12 - ALAS2-2020-1572: critical priority package update for thunderbird",
+			"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2020-26950:\n\tNo description is available for this CVE.\n1896306: CVE-2020-26950 Mozilla: Write side effects in MCallGetProperty opcode not accounted for\n\nCVE-2020-15969:\n\tUse after free in WebRTC in Google Chrome prior to 86.0.4240.75 allowed a remote attacker to potentially exploit heap corruption via a crafted HTML page.\n1885885: CVE-2020-15969 chromium-browser: Use after free in WebRTC\n\nCVE-2020-15683:\n\tMozilla developers and community members reported memory safety bugs present in Firefox 81 and Firefox ESR 78.3. Some of these bugs showed evidence of memory corruption and we presume that with enough effort some of these could have been exploited to run arbitrary code. This vulnerability affects Firefox ESR < 78.4, Firefox < 82, and Thunderbird < 78.4.\n1889932: CVE-2020-15683 Mozilla: Memory safety bugs fixed in Firefox 82 and Firefox ESR 78.4\n\nCVE-2020-15678:\n\tThe Mozilla Foundation Security Advisory describes this flaw as:\nWhen recursing through graphical layers while scrolling, an iterator may have become invalid, resulting in a potential use-after-free. This occurs because the function `APZCTreeManager::ComputeClippedCompositionBounds` did not follow iterator invalidation rules.\n1881666: CVE-2020-15678 Mozilla: When recursing through layers while scrolling, an iterator may have become invalid, resulting in a potential use-after-free scenario\n\nCVE-2020-15677:\n\tThe Mozilla Foundation Security Advisory describes this flaw as:\nBy exploiting an Open Redirect vulnerability on a website, an attacker could have spoofed the site displayed in the download file dialog to show the original site (the one suffering from the open redirect) rather than the site the file was actually downloaded from.\n1881664: CVE-2020-15677 Mozilla: Download origin spoofing via redirect\n\nCVE-2020-15676:\n\tThe Mozilla Foundation Security Advisory describes this flaw as:\nFirefox sometimes ran the onload handler for SVG elements that the DOM sanitizer decided to remove, resulting in JavaScript being executed after pasting attacker-controlled data into a contenteditable element.\n1881665: CVE-2020-15676 Mozilla: XSS when pasting attacker-controlled data into a contenteditable element\n\nCVE-2020-15673:\n\tThe Mozilla Foundation Security Advisory describes this flaw as:\nMozilla developer reported memory safety bugs present in Firefox 80 and Firefox ESR 78.2. Some of these bugs showed evidence of memory corruption and we presume that with enough effort some of these could have been exploited to run arbitrary code.\n1881667: CVE-2020-15673 Mozilla: Memory safety bugs fixed in Firefox 81 and Firefox ESR 78.3\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "critical"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALAS-2020-1572.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-15673"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-15676"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-15677"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-15678"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-15683"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-15969"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-26950"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2020-15673",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-15673"
+				}
+			]
+		},
+		{
+			"id": "CVE-2020-15676",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-15676"
+				}
+			]
+		},
+		{
+			"id": "CVE-2020-15677",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-15677"
+				}
+			]
+		},
+		{
+			"id": "CVE-2020-15678",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-15678"
+				}
+			]
+		},
+		{
+			"id": "CVE-2020-15683",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-15683"
+				}
+			]
+		},
+		{
+			"id": "CVE-2020-15969",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-15969"
+				}
+			]
+		},
+		{
+			"id": "CVE-2020-26950",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-26950"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "thunderbird",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:78.4.3-1.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"0:78.4.3-1.amzn2.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "thunderbird-debuginfo",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:78.4.3-1.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"0:78.4.3-1.amzn2.0.1"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

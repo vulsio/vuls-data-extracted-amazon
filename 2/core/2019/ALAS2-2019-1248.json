@@ -1,0 +1,752 @@
+{
+	"id": "ALAS2-2019-1248",
+	"advisories": [
+		{
+			"id": "ALAS2-2019-1248",
+			"title": "Amazon Linux 2 2017.12 - ALAS2-2019-1248: important priority package update for qemu",
+			"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2019-9824:\n\ttcp_emu in slirp/tcp_subr.c (aka slirp/src/tcp_subr.c) in QEMU 3.0.0 uses uninitialized data in an snprintf call, leading to Information disclosure.\n1678515: \nCVE-2019-9824 QEMU: Slirp: information leakage in tcp_emu() due to uninitialized stack variables\n\nCVE-2019-5008:\n\thw/sparc64/sun4u.c in QEMU 3.1.50 is vulnerable to a NULL pointer dereference, which allows the attacker to cause a denial of service via a device driver.\n1705915: \nCVE-2019-5008 QEMU: NULL pointer dereference in hw/sparc64/sun4u.c leading to DoS\n\nCVE-2019-12155:\n\tinterface_release_resource in hw/display/qxl.c in QEMU 4.0.0 has a NULL pointer dereference.\n1712670: \nCVE-2019-12155 QEMU: qxl: null pointer dereference while releasing spice resources\n\nCVE-2018-20815:\n\tA heap buffer overflow issue was found in the load_device_tree() function of QEMU, which is invoked to load a device tree blob at boot time. It occurs due to device tree size manipulation before buffer allocation, which could overflow a signed int type. A user/process could use this flaw to potentially execute arbitrary code on a host system with privileges of the QEMU process.\n1693101: \nCVE-2018-20815 QEMU: device_tree: heap buffer overflow while loading device tree blob\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "important"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALAS-2019-1248.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-20815"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-12155"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-5008"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-9824"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2018-20815",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-20815"
+				}
+			]
+		},
+		{
+			"id": "CVE-2019-12155",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-12155"
+				}
+			]
+		},
+		{
+			"id": "CVE-2019-5008",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-5008"
+				}
+			]
+		},
+		{
+			"id": "CVE-2019-9824",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-9824"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "qemu-ui-sdl",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "10:3.1.0-7.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"10:3.1.0-7.amzn2.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "qemu-user",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "10:3.1.0-7.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"10:3.1.0-7.amzn2.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "qemu-system-x86",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "10:3.1.0-7.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"10:3.1.0-7.amzn2.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "qemu-audio-sdl",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "10:3.1.0-7.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"10:3.1.0-7.amzn2.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "qemu-common",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "10:3.1.0-7.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"10:3.1.0-7.amzn2.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "qemu-img",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "10:3.1.0-7.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"10:3.1.0-7.amzn2.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "qemu-audio-alsa",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "10:3.1.0-7.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"10:3.1.0-7.amzn2.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "qemu-kvm-core",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "10:3.1.0-7.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"10:3.1.0-7.amzn2.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "qemu-user-binfmt",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "10:3.1.0-7.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"10:3.1.0-7.amzn2.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "qemu-debuginfo",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "10:3.1.0-7.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"10:3.1.0-7.amzn2.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "qemu-block-curl",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "10:3.1.0-7.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"10:3.1.0-7.amzn2.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "qemu-block-dmg",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "10:3.1.0-7.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"10:3.1.0-7.amzn2.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "qemu-ui-gtk",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "10:3.1.0-7.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"10:3.1.0-7.amzn2.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "ivshmem-tools",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "10:3.1.0-7.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"10:3.1.0-7.amzn2.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "qemu-block-iscsi",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "10:3.1.0-7.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"10:3.1.0-7.amzn2.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "qemu-user-static",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "10:3.1.0-7.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"10:3.1.0-7.amzn2.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "qemu-guest-agent",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "10:3.1.0-7.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"10:3.1.0-7.amzn2.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "qemu-ui-curses",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "10:3.1.0-7.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"10:3.1.0-7.amzn2.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "qemu-system-aarch64",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "10:3.1.0-7.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"10:3.1.0-7.amzn2.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "qemu-block-nfs",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "10:3.1.0-7.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"10:3.1.0-7.amzn2.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "qemu-audio-oss",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "10:3.1.0-7.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"10:3.1.0-7.amzn2.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "qemu-system-aarch64-core",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "10:3.1.0-7.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"10:3.1.0-7.amzn2.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "qemu-kvm",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "10:3.1.0-7.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"10:3.1.0-7.amzn2.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "qemu",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "10:3.1.0-7.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"10:3.1.0-7.amzn2.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "qemu-block-rbd",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "10:3.1.0-7.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"10:3.1.0-7.amzn2.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "qemu-audio-pa",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "10:3.1.0-7.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"10:3.1.0-7.amzn2.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "qemu-block-ssh",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "10:3.1.0-7.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"10:3.1.0-7.amzn2.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "qemu-system-x86-core",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "10:3.1.0-7.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"10:3.1.0-7.amzn2.0.1"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

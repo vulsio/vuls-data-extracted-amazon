@@ -1,0 +1,246 @@
+{
+	"id": "ALAS2PYTHON3.8-2023-007",
+	"advisories": [
+		{
+			"id": "ALAS2PYTHON3.8-2023-007",
+			"title": "Amazon Linux 2 - Python3.8 2.0 - ALAS2PYTHON3.8-2023-007: medium priority package update for python38",
+			"description": "Package updates are available for Amazon Linux 2 - Python3.8 that fix the following vulnerabilities:\nCVE-2022-48566:\n\tAn issue was discovered in compare_digest in Lib/hmac.py in Python through 3.9.1. Constant-time-defeating optimisations were possible in the accumulator variable in hmac.compare_digest.\n\nCVE-2020-10735:\n\tA flaw was found in python. In algorithms with quadratic time complexity using non-binary bases, when using int(text), a system could take 50ms to parse an int string with 100,000 digits and 5s for 1,000,000 digits (float, decimal, int.from_bytes(), and int() for binary bases 2, 4, 8, 16, and 32 are not affected). The highest threat from this vulnerability is to system availability.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "medium"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALASPYTHON3.8-2023-007.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-10735"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-48566"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2020-10735",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-10735"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-48566",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-48566"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "python38",
+				"repositories": [
+					"amzn2extra-python3.8"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:3.8.15-1.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"0:3.8.15-1.amzn2.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "python38-libs",
+				"repositories": [
+					"amzn2extra-python3.8"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:3.8.15-1.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"0:3.8.15-1.amzn2.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "python38-devel",
+				"repositories": [
+					"amzn2extra-python3.8"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:3.8.15-1.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"0:3.8.15-1.amzn2.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "python38-tools",
+				"repositories": [
+					"amzn2extra-python3.8"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:3.8.15-1.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"0:3.8.15-1.amzn2.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "python38-tkinter",
+				"repositories": [
+					"amzn2extra-python3.8"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:3.8.15-1.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"0:3.8.15-1.amzn2.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "python38-test",
+				"repositories": [
+					"amzn2extra-python3.8"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:3.8.15-1.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"0:3.8.15-1.amzn2.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "python38-debug",
+				"repositories": [
+					"amzn2extra-python3.8"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:3.8.15-1.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"0:3.8.15-1.amzn2.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "python38-debuginfo",
+				"repositories": [
+					"amzn2extra-python3.8"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:3.8.15-1.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"0:3.8.15-1.amzn2.0.1"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

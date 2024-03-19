@@ -1,0 +1,176 @@
+{
+	"id": "ALAS2023-2023-348",
+	"advisories": [
+		{
+			"id": "ALAS2023-2023-348",
+			"title": "Amazon Linux 2023 - ALAS2023-2023-348: Medium priority package update for wireshark",
+			"description": "Package updates are available for Amazon Linux 2023 that fix the following vulnerabilities:\nCVE-2023-4513:\n\tBT SDP dissector memory leak in Wireshark 4.0.0 to 4.0.7 and 3.6.0 to 3.6.15 allows denial of service via packet injection or crafted capture file\n\nCVE-2023-4512:\n\tCBOR dissector crash in Wireshark 4.0.0 to 4.0.6 allows denial of service via packet injection or crafted capture file\n\nCVE-2023-4511:\n\tBT SDP dissector infinite loop in Wireshark 4.0.0 to 4.0.7 and 3.6.0 to 3.6.15 allows denial of service via packet injection or crafted capture file\n\nCVE-2023-2906:\n\tDue to a failure in validating the length provided by an attacker-crafted CP2179 packet, Wireshark versions 2.0.0 through 4.0.7 is susceptible to a divide by zero allowing for a denial of service attack.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "Medium"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2023/ALAS-2023-348.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-2906"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-4511"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-4512"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-4513"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2023-2906",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-2906"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-4511",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-4511"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-4512",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-4512"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-4513",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-4513"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2023",
+			"vulnerable": true,
+			"package": {
+				"name": "wireshark-cli-debuginfo",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:4.0.8-2.amzn2023.0.1"
+					}
+				],
+				"fixed": [
+					"1:4.0.8-2.amzn2023.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2023",
+			"vulnerable": true,
+			"package": {
+				"name": "wireshark-cli",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:4.0.8-2.amzn2023.0.1"
+					}
+				],
+				"fixed": [
+					"1:4.0.8-2.amzn2023.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2023",
+			"vulnerable": true,
+			"package": {
+				"name": "wireshark-devel",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:4.0.8-2.amzn2023.0.1"
+					}
+				],
+				"fixed": [
+					"1:4.0.8-2.amzn2023.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2023",
+			"vulnerable": true,
+			"package": {
+				"name": "wireshark-debugsource",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:4.0.8-2.amzn2023.0.1"
+					}
+				],
+				"fixed": [
+					"1:4.0.8-2.amzn2023.0.1"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

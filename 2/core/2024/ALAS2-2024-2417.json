@@ -1,0 +1,89 @@
+{
+	"id": "ALAS2-2024-2417",
+	"advisories": [
+		{
+			"id": "ALAS2-2024-2417",
+			"title": "Amazon Linux 2 2017.12 - ALAS2-2024-2417: important priority package update for thunderbird",
+			"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2023-7104:\n\tA vulnerability was found in SQLite SQLite3 up to 3.43.0 and classified as critical. This issue affects the function sessionReadRecord of the file ext/session/sqlite3session.c of the component make alltest Handler. The manipulation leads to heap-based buffer overflow. It is recommended to apply a patch to fix this issue. The associated identifier of this vulnerability is VDB-248999.\n\nNOTE: https://sqlite.org/forum/forumpost/5bcbf4571c\nNOTE: Fixed by: https://sqlite.org/src/info/0e4e7a05c4204b47\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "important"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALAS-2024-2417.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-7104"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2023-7104",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-7104"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "thunderbird",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:115.6.0-1.amzn2.0.2"
+					}
+				],
+				"fixed": [
+					"0:115.6.0-1.amzn2.0.2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "thunderbird-debuginfo",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:115.6.0-1.amzn2.0.2"
+					}
+				],
+				"fixed": [
+					"0:115.6.0-1.amzn2.0.2"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

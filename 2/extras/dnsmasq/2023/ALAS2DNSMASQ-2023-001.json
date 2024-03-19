@@ -1,0 +1,113 @@
+{
+	"id": "ALAS2DNSMASQ-2023-001",
+	"advisories": [
+		{
+			"id": "ALAS2DNSMASQ-2023-001",
+			"title": "Amazon Linux 2 - Dnsmasq 2.0 - ALAS2DNSMASQ-2023-001: medium priority package update for dnsmasq",
+			"description": "Package updates are available for Amazon Linux 2 - Dnsmasq that fix the following vulnerabilities:\nCVE-2023-28450:\n\tAn issue was discovered in Dnsmasq before 2.90. The default maximum EDNS.0 UDP packet size was set to 4096 but should be 1232 because of DNS Flag Day 2020.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "medium"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALASDNSMASQ-2023-001.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-28450"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2023-28450",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-28450"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "dnsmasq",
+				"repositories": [
+					"amzn2extra-dnsmasq"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.88-1.amzn2.0.2"
+					}
+				],
+				"fixed": [
+					"0:2.88-1.amzn2.0.2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "dnsmasq-utils",
+				"repositories": [
+					"amzn2extra-dnsmasq"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.88-1.amzn2.0.2"
+					}
+				],
+				"fixed": [
+					"0:2.88-1.amzn2.0.2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "dnsmasq-debuginfo",
+				"repositories": [
+					"amzn2extra-dnsmasq"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.88-1.amzn2.0.2"
+					}
+				],
+				"fixed": [
+					"0:2.88-1.amzn2.0.2"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

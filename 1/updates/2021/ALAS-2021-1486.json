@@ -1,0 +1,92 @@
+{
+	"id": "ALAS-2021-1486",
+	"advisories": [
+		{
+			"id": "ALAS-2021-1486",
+			"title": "Amazon Linux AMI 2014.03 - ALAS-2021-1486: medium priority package update for cloud-init",
+			"description": "Package updates are available for Amazon Linux AMI that fix the following vulnerabilities:\nCVE-2021-3429:\n\t99999: \n\n\n\nCVE-2020-8632:\n\tA flaw was found in cloud-init, where it uses short passwords when generating a random password in new instances. Depending on the instance configuration, a remote or local attacker may abuse this vulnerability to guess the password of the victim user.\n1798728: CVE-2020-8632 cloud-init: Too short random password length in cc_set_password in config/cc_set_passwords.py\n\nCVE-2020-8631:\n\tA flaw was found in cloud-init, where it uses the random.choice function when creating sensitive random strings used for generating a random password in new instances. Depending on the instance configuration, a remote or local attacker may abuse this vulnerability to guess the password of the victim user.\n1798731: CVE-2020-8631 cloud-init: Use of random.choice when generating random password\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "medium"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/ALAS-2021-1486.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-8631"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-8632"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3429"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2020-8631",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-8631"
+				}
+			]
+		},
+		{
+			"id": "CVE-2020-8632",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-8632"
+				}
+			]
+		},
+		{
+			"id": "CVE-2021-3429",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3429"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "cloud-init",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:0.7.6-43.23.amzn1"
+					}
+				],
+				"fixed": [
+					"0:0.7.6-43.23.amzn1"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

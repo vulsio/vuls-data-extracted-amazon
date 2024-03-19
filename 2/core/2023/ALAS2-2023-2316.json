@@ -1,0 +1,73 @@
+{
+	"id": "ALAS2-2023-2316",
+	"advisories": [
+		{
+			"id": "ALAS2-2023-2316",
+			"title": "Amazon Linux 2 2017.12 - ALAS2-2023-2316: important priority package update for yum",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "important"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALAS-2023-2316.html"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "yum",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:3.4.3-158.amzn2.0.7"
+					}
+				],
+				"fixed": [
+					"0:3.4.3-158.amzn2.0.7"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "yum-cron",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:3.4.3-158.amzn2.0.7"
+					}
+				],
+				"fixed": [
+					"0:3.4.3-158.amzn2.0.7"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

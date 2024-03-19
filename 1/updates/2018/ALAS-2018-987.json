@@ -1,0 +1,191 @@
+{
+	"id": "ALAS-2018-987",
+	"advisories": [
+		{
+			"id": "ALAS-2018-987",
+			"title": "Amazon Linux AMI 2014.03 - ALAS-2018-987: medium priority package update for mod24_wsgi",
+			"description": "Package updates are available for Amazon Linux AMI that fix the following vulnerabilities:\nCVE-2014-8583:\n\tmod_wsgi before 4.2.4 for Apache, when creating a daemon process group, does not properly handle when group privileges cannot be dropped, which might allow attackers to gain privileges via unspecified vectors.\n1111034: \nCVE-2014-8583 mod_wsgi: failure to handle errors when attempting to drop group privileges\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "medium"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/ALAS-2018-987.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-8583"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2014-8583",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-8583"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "mod24_wsgi-debuginfo",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:3.5-1.25.amzn1"
+					}
+				],
+				"fixed": [
+					"0:3.5-1.25.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "mod24_wsgi-python26",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:3.5-1.25.amzn1"
+					}
+				],
+				"fixed": [
+					"0:3.5-1.25.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "mod24_wsgi-python27",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:3.5-1.25.amzn1"
+					}
+				],
+				"fixed": [
+					"0:3.5-1.25.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "mod24_wsgi-python34",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:3.5-1.25.amzn1"
+					}
+				],
+				"fixed": [
+					"0:3.5-1.25.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "mod24_wsgi-python35",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:3.5-1.25.amzn1"
+					}
+				],
+				"fixed": [
+					"0:3.5-1.25.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "mod24_wsgi-python36",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:3.5-1.25.amzn1"
+					}
+				],
+				"fixed": [
+					"0:3.5-1.25.amzn1"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

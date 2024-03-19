@@ -1,0 +1,113 @@
+{
+	"id": "ALAS2-2023-2151",
+	"advisories": [
+		{
+			"id": "ALAS2-2023-2151",
+			"title": "Amazon Linux 2 2017.12 - ALAS2-2023-2151: medium priority package update for python-pip",
+			"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2020-14422:\n\tA vulnerability was found in the way the ipaddress python module computes hash values in the IPv4Interface and IPv6Interface classes. This flaw allows an attacker to create many dictionary entries, due to the performance of a dictionary containing the IPv4Interface or IPv6Interface objects, possibly resulting in a denial of service. The highest threat from this vulnerability is to system availability.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "medium"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALAS-2023-2151.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-14422"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2020-14422",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-14422"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "python2-pip",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:20.2.2-1.amzn2.0.4"
+					}
+				],
+				"fixed": [
+					"0:20.2.2-1.amzn2.0.4"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "python3-pip",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:20.2.2-1.amzn2.0.4"
+					}
+				],
+				"fixed": [
+					"0:20.2.2-1.amzn2.0.4"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "python-pip-wheel",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:20.2.2-1.amzn2.0.4"
+					}
+				],
+				"fixed": [
+					"0:20.2.2-1.amzn2.0.4"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

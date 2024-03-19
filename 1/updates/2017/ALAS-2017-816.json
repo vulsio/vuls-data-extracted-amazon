@@ -1,0 +1,218 @@
+{
+	"id": "ALAS-2017-816",
+	"advisories": [
+		{
+			"id": "ALAS-2017-816",
+			"title": "Amazon Linux AMI 2014.03 - ALAS-2017-816: medium priority package update for ntp",
+			"description": "Package updates are available for Amazon Linux AMI that fix the following vulnerabilities:\nCVE-2017-6464:\n\tA vulnerability was discovered in the NTP server&#039;s parsing of configuration directives. A remote, authenticated attacker could cause ntpd to crash by sending a crafted message.\n1433987: \nCVE-2017-6464 ntp: Denial of Service via Malformed Config\n\nCVE-2017-6463:\n\tA vulnerability was discovered in the NTP server&#039;s parsing of configuration directives. A remote, authenticated attacker could cause ntpd to crash by sending a crafted message.\n1434002: \nCVE-2017-6463 ntp: Authenticated DoS via Malicious Config Option\n\nCVE-2017-6462:\n\tA vulnerability was found in NTP, in the parsing of packets from the /dev/datum device. A malicious device could send crafted messages, causing ntpd to crash.\n1433995: \nCVE-2017-6462 ntp: Buffer Overflow in DPTS Clock\n\nCVE-2017-6458:\n\tA vulnerability was found in NTP, in the building of response packets with custom fields. If custom fields were configured in ntp.conf with particularly long names, inclusion of these fields in the response packet could cause a buffer overflow, leading to a crash.\n1434005: \nCVE-2017-6458 ntp: Potential Overflows in ctl_put() functions\n\nCVE-2017-6451:\n\tA vulnerability was found in NTP, in the legacy MX4200 refclock implementation. If this refclock was compiled in and used, an attacker may be able to induce stack overflow, leading to a crash or potential code execution.\n1434011: \nCVE-2017-6451 ntp: Improper use of snprintf() in mx4200_send()\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "medium"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/ALAS-2017-816.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-6451"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-6458"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-6462"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-6463"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-6464"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2017-6451",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-6451"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-6458",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-6458"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-6462",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-6462"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-6463",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-6463"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-6464",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-6464"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "ntpdate",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.2.6p5-44.34.amzn1"
+					}
+				],
+				"fixed": [
+					"0:4.2.6p5-44.34.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "ntp-doc",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.2.6p5-44.34.amzn1"
+					}
+				],
+				"fixed": [
+					"0:4.2.6p5-44.34.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "ntp-perl",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.2.6p5-44.34.amzn1"
+					}
+				],
+				"fixed": [
+					"0:4.2.6p5-44.34.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "ntp",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.2.6p5-44.34.amzn1"
+					}
+				],
+				"fixed": [
+					"0:4.2.6p5-44.34.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "ntp-debuginfo",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.2.6p5-44.34.amzn1"
+					}
+				],
+				"fixed": [
+					"0:4.2.6p5-44.34.amzn1"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

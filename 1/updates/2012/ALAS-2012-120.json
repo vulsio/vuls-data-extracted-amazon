@@ -1,0 +1,270 @@
+{
+	"id": "ALAS-2012-120",
+	"advisories": [
+		{
+			"id": "ALAS-2012-120",
+			"title": "Amazon Linux - ALAS-2012-120: medium priority package update for glibc",
+			"description": "Package updates are available for Amazon Linux that fix the following vulnerabilities:\nCVE-2012-3480:\n\tMultiple integer overflows in the (1) strtod, (2) strtof, (3) strtold, (4) strtod_l, and other unspecified \"related functions\" in stdlib in GNU C Library (aka glibc or libc6) 2.16 allow local users to cause a denial of service (application crash) and possibly execute arbitrary code via a long string, which triggers a stack-based buffer overflow.\nMultiple integer overflow flaws, leading to stack-based buffer overflows, were found in glibc's functions for converting a string to a numeric representation (strtod(), strtof(), and strtold()). If an application used such a function on attacker controlled input, it could cause the application to crash or, potentially, execute arbitrary code.\n847715: \nCVE-2012-3480 glibc: Integer overflows, leading to stack-based buffer overflows in strto* related routines\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "medium"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/ALAS-2012-120.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-3480"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://rhn.redhat.com/errata/RHSA-2012:1208.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2012-3480",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-3480"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "glibc-common",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.12-1.80.42.amzn1"
+					}
+				],
+				"fixed": [
+					"0:2.12-1.80.42.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "glibc-utils",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.12-1.80.42.amzn1"
+					}
+				],
+				"fixed": [
+					"0:2.12-1.80.42.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "glibc-headers",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.12-1.80.42.amzn1"
+					}
+				],
+				"fixed": [
+					"0:2.12-1.80.42.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "glibc-debuginfo",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.12-1.80.42.amzn1"
+					}
+				],
+				"fixed": [
+					"0:2.12-1.80.42.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "nscd",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.12-1.80.42.amzn1"
+					}
+				],
+				"fixed": [
+					"0:2.12-1.80.42.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "glibc-debuginfo-common",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.12-1.80.42.amzn1"
+					}
+				],
+				"fixed": [
+					"0:2.12-1.80.42.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "glibc-static",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.12-1.80.42.amzn1"
+					}
+				],
+				"fixed": [
+					"0:2.12-1.80.42.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "glibc",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.12-1.80.42.amzn1"
+					}
+				],
+				"fixed": [
+					"0:2.12-1.80.42.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "glibc-devel",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.12-1.80.42.amzn1"
+					}
+				],
+				"fixed": [
+					"0:2.12-1.80.42.amzn1"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

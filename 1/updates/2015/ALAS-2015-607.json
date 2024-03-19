@@ -1,0 +1,261 @@
+{
+	"id": "ALAS-2015-607",
+	"advisories": [
+		{
+			"id": "ALAS-2015-607",
+			"title": "Amazon Linux AMI 2014.03 - ALAS-2015-607: important priority package update for ntp",
+			"description": "Package updates are available for Amazon Linux AMI that fix the following vulnerabilities:\nCVE-2015-7871:\n\t1274265: \nCVE-2015-7871 ntp: crypto-NAK symmetric association authentication bypass vulnerability\n\nCVE-2015-7852:\n\t1274261: \nCVE-2015-7852 ntp: ntpq atoascii memory corruption vulnerability\n\nCVE-2015-7704:\n\tIt was discovered that ntpd as a client did not correctly check timestamps in Kiss-of-Death packets. A remote attacker could use this flaw to send a crafted Kiss-of-Death packet to an ntpd client that would increase the client&#039;s polling interval value, and effectively disable synchronization with the server.\n1271070: \nCVE-2015-7704 ntp: disabling synchronization via crafted KoD packet\n\nCVE-2015-7702:\n\t1274254: \nCVE-2015-7691 CVE-2015-7692 CVE-2015-7702 ntp: incomplete checks in ntp_crypto.c\n\nCVE-2015-7701:\n\t1274255: \nCVE-2015-7701 ntp: slow memory leak in CRYPTO_ASSOC\n\nCVE-2015-7692:\n\t1274254: \nCVE-2015-7691 CVE-2015-7692 CVE-2015-7702 ntp: incomplete checks in ntp_crypto.c\n\nCVE-2015-7691:\n\t1274254: \nCVE-2015-7691 CVE-2015-7692 CVE-2015-7702 ntp: incomplete checks in ntp_crypto.c\n\nCVE-2015-5300:\n\t1271076: \nCVE-2015-5300 ntp: MITM attacker can force ntpd to make a step larger than the panic threshold\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "important"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/ALAS-2015-607.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-5300"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-7691"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-7692"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-7701"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-7702"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-7704"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-7852"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-7871"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://rhn.redhat.com/errata/RHSA-2015:1930.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2015-5300",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-5300"
+				}
+			]
+		},
+		{
+			"id": "CVE-2015-7691",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-7691"
+				}
+			]
+		},
+		{
+			"id": "CVE-2015-7692",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-7692"
+				}
+			]
+		},
+		{
+			"id": "CVE-2015-7701",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-7701"
+				}
+			]
+		},
+		{
+			"id": "CVE-2015-7702",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-7702"
+				}
+			]
+		},
+		{
+			"id": "CVE-2015-7704",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-7704"
+				}
+			]
+		},
+		{
+			"id": "CVE-2015-7852",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-7852"
+				}
+			]
+		},
+		{
+			"id": "CVE-2015-7871",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-7871"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "ntp",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.2.6p5-34.27.amzn1"
+					}
+				],
+				"fixed": [
+					"0:4.2.6p5-34.27.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "ntp-doc",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.2.6p5-34.27.amzn1"
+					}
+				],
+				"fixed": [
+					"0:4.2.6p5-34.27.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "ntpdate",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.2.6p5-34.27.amzn1"
+					}
+				],
+				"fixed": [
+					"0:4.2.6p5-34.27.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "ntp-perl",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.2.6p5-34.27.amzn1"
+					}
+				],
+				"fixed": [
+					"0:4.2.6p5-34.27.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "ntp-debuginfo",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.2.6p5-34.27.amzn1"
+					}
+				],
+				"fixed": [
+					"0:4.2.6p5-34.27.amzn1"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

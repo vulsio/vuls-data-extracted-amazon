@@ -1,0 +1,181 @@
+{
+	"id": "ALAS-2022-1558",
+	"advisories": [
+		{
+			"id": "ALAS-2022-1558",
+			"title": "Amazon Linux AMI 2014.03 - ALAS-2022-1558: medium priority package update for busybox",
+			"description": "Package updates are available for Amazon Linux AMI that fix the following vulnerabilities:\nCVE-2021-42386:\n\tA flaw was found in BusyBox, where it did not properly sanitize while processing a crafted awk pattern in the nvalloc function, leading to possible code execution. The highest threat from this vulnerability is to confidentiality, integrity, as well as system availability.\n\nCVE-2021-42385:\n\tA flaw was found in BusyBox, where it did not properly sanitize while processing a crafted awk pattern in the evaluate function, leading to possible code execution. The highest threat from this vulnerability is to confidentiality, integrity, as well as system availability.\n\nCVE-2021-42384:\n\tA flaw was found in BusyBox, where it did not properly sanitize while processing a crafted awk pattern in the handle_special function, leading to possible code execution. The highest threat from this vulnerability is to confidentiality, integrity, as well as system availability.\n\nCVE-2021-42379:\n\tA flaw was found in BusyBox, where it did not properly sanitize while processing a crafted awk pattern in the next_input_file function, leading to possible code execution. The highest threat from this vulnerability is to confidentiality, integrity, as well as system availability.\n\nCVE-2021-42378:\n\tA flaw was found in BusyBox, where it did not properly sanitize while processing a crafted awk pattern, leading to possible code execution. The highest threat from this vulnerability is to confidentiality, integrity, as well as system availability.\n\nCVE-2021-42376:\n\tA flaw was found in BusyBox, where it did not properly sanitize while processing a crafted shell command, leading to a denial of service. The highest threat from this vulnerability is to system availability.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "medium"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/ALAS-2022-1558.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-42376"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-42378"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-42379"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-42384"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-42385"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-42386"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2021-42376",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-42376"
+				}
+			]
+		},
+		{
+			"id": "CVE-2021-42378",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-42378"
+				}
+			]
+		},
+		{
+			"id": "CVE-2021-42379",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-42379"
+				}
+			]
+		},
+		{
+			"id": "CVE-2021-42384",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-42384"
+				}
+			]
+		},
+		{
+			"id": "CVE-2021-42385",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-42385"
+				}
+			]
+		},
+		{
+			"id": "CVE-2021-42386",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-42386"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "busybox",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:1.34.1-1.13.amzn1"
+					}
+				],
+				"fixed": [
+					"1:1.34.1-1.13.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "busybox-debuginfo",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:1.34.1-1.13.amzn1"
+					}
+				],
+				"fixed": [
+					"1:1.34.1-1.13.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "busybox-petitboot",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:1.34.1-1.13.amzn1"
+					}
+				],
+				"fixed": [
+					"1:1.34.1-1.13.amzn1"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

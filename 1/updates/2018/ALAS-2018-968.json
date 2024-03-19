@@ -1,0 +1,141 @@
+{
+	"id": "ALAS-2018-968",
+	"advisories": [
+		{
+			"id": "ALAS-2018-968",
+			"title": "Amazon Linux AMI 2014.03 - ALAS-2018-968: medium priority package update for mod_auth_mellon mod24_auth_mellon",
+			"description": "Package updates are available for Amazon Linux AMI that fix the following vulnerabilities:\nCVE-2017-6807:\n\tIt was found that mod_auth_mellon was vulnerable to a cross-site session transfer attack. An attacker with access to one web site on a server could use the same session to get access to a different site running on the same server.\n1431670: \nCVE-2017-6807 mod_auth_mellon: Cross-site session transfer vulnerability\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "medium"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/ALAS-2018-968.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-6807"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2017-6807",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-6807"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "mod_auth_mellon-debuginfo",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:0.13.1-1.5.amzn1"
+					}
+				],
+				"fixed": [
+					"0:0.13.1-1.5.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "mod_auth_mellon",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:0.13.1-1.5.amzn1"
+					}
+				],
+				"fixed": [
+					"0:0.13.1-1.5.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "mod24_auth_mellon-debuginfo",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:0.13.1-1.7.amzn1"
+					}
+				],
+				"fixed": [
+					"0:0.13.1-1.7.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "mod24_auth_mellon",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:0.13.1-1.7.amzn1"
+					}
+				],
+				"fixed": [
+					"0:0.13.1-1.7.amzn1"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

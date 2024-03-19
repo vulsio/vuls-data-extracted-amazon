@@ -1,0 +1,179 @@
+{
+	"id": "ALAS-2021-1488",
+	"advisories": [
+		{
+			"id": "ALAS-2021-1488",
+			"title": "Amazon Linux AMI 2014.03 - ALAS-2021-1488: medium priority package update for qemu-kvm",
+			"description": "Package updates are available for Amazon Linux AMI that fix the following vulnerabilities:\nCVE-2020-16092:\n\tAn assertion failure flaw was found in QEMU in the network packet processing component. This issue affects the \"e1000e\" and \"vmxnet3\" network devices. This flaw allows a malicious guest user or process to abort the QEMU process on the host, resulting in a denial of service.\n1860283: CVE-2020-16092 QEMU: reachable assertion failure in net_tx_pkt_add_raw_fragment() in hw/net/net_tx_pkt.c\n\nCVE-2020-13765:\n\tAn out-of-bound write access flaw was found in the way QEMU loads ROM contents at boot time. This flaw occurs in the rom_copy() routine while loading the contents of a 32-bit -kernel image into memory. Running an untrusted -kernel image may load contents at arbitrary memory locations, potentially leading to code execution with the privileges of the QEMU process.\n1842912: CVE-2020-13765 QEMU: loader: OOB access while loading registered ROM may lead to code execution\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "medium"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/ALAS-2021-1488.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-13765"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-16092"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2020-13765",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-13765"
+				}
+			]
+		},
+		{
+			"id": "CVE-2020-16092",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-16092"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "qemu-kvm",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "10:1.5.3-156.26.amzn1"
+					}
+				],
+				"fixed": [
+					"10:1.5.3-156.26.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "qemu-kvm-debuginfo",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "10:1.5.3-156.26.amzn1"
+					}
+				],
+				"fixed": [
+					"10:1.5.3-156.26.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "qemu-kvm-common",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "10:1.5.3-156.26.amzn1"
+					}
+				],
+				"fixed": [
+					"10:1.5.3-156.26.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "qemu-img",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "10:1.5.3-156.26.amzn1"
+					}
+				],
+				"fixed": [
+					"10:1.5.3-156.26.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "qemu-kvm-tools",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "10:1.5.3-156.26.amzn1"
+					}
+				],
+				"fixed": [
+					"10:1.5.3-156.26.amzn1"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

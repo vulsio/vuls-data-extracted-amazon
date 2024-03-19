@@ -1,0 +1,133 @@
+{
+	"id": "ALAS-2012-71",
+	"advisories": [
+		{
+			"id": "ALAS-2012-71",
+			"title": "Amazon Linux - ALAS-2012-71: medium priority package update for wireshark",
+			"description": "Package updates are available for Amazon Linux that fix the following vulnerabilities:\nCVE-2011-1590:\n\tThe X.509if dissector in Wireshark 1.2.x before 1.2.16 and 1.4.x before 1.4.5 does not properly initialize certain global variables, which allows remote attackers to cause a denial of service (application crash) via a crafted .pcap file.\nSeveral flaws were found in Wireshark. If Wireshark read a malformed packet off a network or opened a malicious dump file, it could crash or, possibly, execute arbitrary code as the user running Wireshark.\n697741: \nCVE-2011-1590 Wireshark: Use-after-free causes heap-based buffer overflow in X.509if dissector\n\nCVE-2011-1143:\n\tepan/dissectors/packet-ntlmssp.c in the NTLMSSP dissector in Wireshark before 1.4.4 allows remote attackers to cause a denial of service (NULL pointer dereference and application crash) via a crafted .pcap file.\nSeveral denial of service flaws were found in Wireshark. Wireshark could crash or stop responding if it read a malformed packet off a network, or opened a malicious dump file.\n681760: \nCVE-2011-1143 Wireshark: Null pointer dereference causing application crash when reading malformed pcap file\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "medium"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/ALAS-2012-71.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-1143"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-1590"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://rhn.redhat.com/errata/RHSA-2012:0509.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2011-1143",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-1143"
+				}
+			]
+		},
+		{
+			"id": "CVE-2011-1590",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-1590"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "wireshark-devel",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.2.15-2.10.amzn1"
+					}
+				],
+				"fixed": [
+					"0:1.2.15-2.10.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "wireshark",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.2.15-2.10.amzn1"
+					}
+				],
+				"fixed": [
+					"0:1.2.15-2.10.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "wireshark-debuginfo",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.2.15-2.10.amzn1"
+					}
+				],
+				"fixed": [
+					"0:1.2.15-2.10.amzn1"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

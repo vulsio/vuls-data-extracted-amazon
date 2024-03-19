@@ -1,0 +1,195 @@
+{
+	"id": "ALAS-2012-117",
+	"advisories": [
+		{
+			"id": "ALAS-2012-117",
+			"title": "Amazon Linux - ALAS-2012-117: low priority package update for openldap",
+			"description": "Package updates are available for Amazon Linux that fix the following vulnerabilities:\nCVE-2012-2668:\n\tlibraries/libldap/tls_m.c in OpenLDAP, possibly 2.4.31 and earlier, when using the Mozilla NSS backend, always uses the default cipher suite even when TLSCipherSuite is set, which might cause OpenLDAP to use weaker ciphers than intended and make it easier for remote attackers to obtain sensitive information.\nIt was found that the OpenLDAP server daemon ignored olcTLSCipherSuite settings. This resulted in the default cipher suite always being used, which could lead to weaker than expected ciphers being accepted during Transport Layer Security (TLS) negotiation with OpenLDAP clients.\n825875: \nCVE-2012-2668 openldap: does not honor TLSCipherSuite settings\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "low"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/ALAS-2012-117.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-2668"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://rhn.redhat.com/errata/RHSA-2012:1151.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2012-2668",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-2668"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "openldap-devel",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.4.23-26.16.amzn1"
+					}
+				],
+				"fixed": [
+					"0:2.4.23-26.16.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "openldap-debuginfo",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.4.23-26.16.amzn1"
+					}
+				],
+				"fixed": [
+					"0:2.4.23-26.16.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "openldap-servers",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.4.23-26.16.amzn1"
+					}
+				],
+				"fixed": [
+					"0:2.4.23-26.16.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "openldap-servers-sql",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.4.23-26.16.amzn1"
+					}
+				],
+				"fixed": [
+					"0:2.4.23-26.16.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "openldap",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.4.23-26.16.amzn1"
+					}
+				],
+				"fixed": [
+					"0:2.4.23-26.16.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "openldap-clients",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.4.23-26.16.amzn1"
+					}
+				],
+				"fixed": [
+					"0:2.4.23-26.16.amzn1"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

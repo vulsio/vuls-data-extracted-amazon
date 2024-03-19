@@ -1,0 +1,405 @@
+{
+	"id": "ALAS2022-2022-025",
+	"advisories": [
+		{
+			"id": "ALAS2022-2022-025",
+			"title": "Amazon Linux 2022 - ALAS2022-2022-025: Medium priority package update for vim",
+			"description": "Package updates are available for Amazon Linux 2022 that fix the following vulnerabilities:\nCVE-2022-0443:\n\tA flaw was found in vim. The vulnerability occurs due to using freed memory which results in a use-after-free vulnerability. This flaw allows an attacker to input a specially crafted file, leading to a crash or code execution.\n\nCVE-2022-0417:\n\tA flaw was found in vim. The vulnerability occurs due to illegal memory access and leads to a heap buffer overflow. This flaw allows an attacker to input a specially crafted file, leading to a crash or code execution.\n\nCVE-2022-0413:\n\tA flaw was found in vim. The vulnerability occurs due to using freed memory when the substitute uses a recursive function call, resulting in a use-after-free vulnerability. This flaw allows an attacker to input a specially crafted file, leading to a crash or code execution.\n\nCVE-2022-0408:\n\tA flaw was found in vim. The vulnerability occurs due to stack corruption when looking for spell suggestions and leads to a stack buffer overflow. This flaw allows an attacker to input a specially crafted file, leading to a crash or code execution.\n\nCVE-2022-0393:\n\tA flaw was found in vim. The vulnerability occurs due to a crash when recording and using Select mode and leads to an out-of-bounds read. This flaw allows an attacker to input a specially crafted file, leading to a crash or code execution.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "Medium"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2022/ALAS-2022-025.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-0393"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-0408"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-0413"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-0417"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-0443"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2022-0393",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-0393"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-0408",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-0408"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-0413",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-0413"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-0417",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-0417"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-0443",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-0443"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2022",
+			"vulnerable": true,
+			"package": {
+				"name": "vim-enhanced",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "2:8.2.4314-1.amzn2022"
+					}
+				],
+				"fixed": [
+					"2:8.2.4314-1.amzn2022"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2022",
+			"vulnerable": true,
+			"package": {
+				"name": "vim-X11-debuginfo",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "2:8.2.4314-1.amzn2022"
+					}
+				],
+				"fixed": [
+					"2:8.2.4314-1.amzn2022"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2022",
+			"vulnerable": true,
+			"package": {
+				"name": "vim-minimal",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "2:8.2.4314-1.amzn2022"
+					}
+				],
+				"fixed": [
+					"2:8.2.4314-1.amzn2022"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2022",
+			"vulnerable": true,
+			"package": {
+				"name": "vim-common-debuginfo",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "2:8.2.4314-1.amzn2022"
+					}
+				],
+				"fixed": [
+					"2:8.2.4314-1.amzn2022"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2022",
+			"vulnerable": true,
+			"package": {
+				"name": "vim-debuginfo",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "2:8.2.4314-1.amzn2022"
+					}
+				],
+				"fixed": [
+					"2:8.2.4314-1.amzn2022"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2022",
+			"vulnerable": true,
+			"package": {
+				"name": "vim-X11",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "2:8.2.4314-1.amzn2022"
+					}
+				],
+				"fixed": [
+					"2:8.2.4314-1.amzn2022"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2022",
+			"vulnerable": true,
+			"package": {
+				"name": "vim-minimal-debuginfo",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "2:8.2.4314-1.amzn2022"
+					}
+				],
+				"fixed": [
+					"2:8.2.4314-1.amzn2022"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2022",
+			"vulnerable": true,
+			"package": {
+				"name": "vim-filesystem",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "2:8.2.4314-1.amzn2022"
+					}
+				],
+				"fixed": [
+					"2:8.2.4314-1.amzn2022"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2022",
+			"vulnerable": true,
+			"package": {
+				"name": "vim-enhanced-debuginfo",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "2:8.2.4314-1.amzn2022"
+					}
+				],
+				"fixed": [
+					"2:8.2.4314-1.amzn2022"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2022",
+			"vulnerable": true,
+			"package": {
+				"name": "vim-default-editor",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "2:8.2.4314-1.amzn2022"
+					}
+				],
+				"fixed": [
+					"2:8.2.4314-1.amzn2022"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2022",
+			"vulnerable": true,
+			"package": {
+				"name": "vim-data",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "2:8.2.4314-1.amzn2022"
+					}
+				],
+				"fixed": [
+					"2:8.2.4314-1.amzn2022"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2022",
+			"vulnerable": true,
+			"package": {
+				"name": "vim-debugsource",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "2:8.2.4314-1.amzn2022"
+					}
+				],
+				"fixed": [
+					"2:8.2.4314-1.amzn2022"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2022",
+			"vulnerable": true,
+			"package": {
+				"name": "vim-common",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "2:8.2.4314-1.amzn2022"
+					}
+				],
+				"fixed": [
+					"2:8.2.4314-1.amzn2022"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

@@ -1,0 +1,89 @@
+{
+	"id": "ALAS2LIVEPATCH-2021-065",
+	"advisories": [
+		{
+			"id": "ALAS2LIVEPATCH-2021-065",
+			"title": "Amazon Linux 2 - Livepatch 2.0 - ALAS2LIVEPATCH-2021-065: important priority package update for kernel-livepatch-5.10.50-44.131",
+			"description": "Package updates are available for Amazon Linux 2 - Livepatch that fix the following vulnerabilities:\nCVE-2021-41073:\n\tA flaw was found in loop_rw_iter in fs/io_uring.c in the Linux kernel. This problem gives the ability to a local user with a normal user privilege to free a user-defined kernel space buffer.\n2007567: CVE-2021-41073 kernel: local user privilege escalation via loop_rw_iter in fs/io_uring.c\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "important"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALASLIVEPATCH-2021-065.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-41073"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2021-41073",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-41073"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "kernel-livepatch-5.10.50-44.131",
+				"repositories": [
+					"amzn2extra-livepatch"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.0-2.amzn2"
+					}
+				],
+				"fixed": [
+					"0:1.0-2.amzn2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "kernel-livepatch-5.10.50-44.131-debuginfo",
+				"repositories": [
+					"amzn2extra-livepatch"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.0-2.amzn2"
+					}
+				],
+				"fixed": [
+					"0:1.0-2.amzn2"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

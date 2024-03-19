@@ -1,0 +1,161 @@
+{
+	"id": "ALAS2-2023-2104",
+	"advisories": [
+		{
+			"id": "ALAS2-2023-2104",
+			"title": "Amazon Linux 2 2017.12 - ALAS2-2023-2104: medium priority package update for qpdf",
+			"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2021-36978:\n\tQPDF 9.x through 9.1.1 and 10.x through 10.0.4 has a heap-based buffer overflow in Pl_ASCII85Decoder::write (called from Pl_AES_PDF::flush and Pl_AES_PDF::finish) when a certain downstream write fails.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "medium"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALAS-2023-2104.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-36978"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2021-36978",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-36978"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "qpdf-devel",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:5.0.1-4.amzn2.0.2"
+					}
+				],
+				"fixed": [
+					"0:5.0.1-4.amzn2.0.2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "qpdf-doc",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:5.0.1-4.amzn2.0.2"
+					}
+				],
+				"fixed": [
+					"0:5.0.1-4.amzn2.0.2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "qpdf-debuginfo",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:5.0.1-4.amzn2.0.2"
+					}
+				],
+				"fixed": [
+					"0:5.0.1-4.amzn2.0.2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "qpdf",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:5.0.1-4.amzn2.0.2"
+					}
+				],
+				"fixed": [
+					"0:5.0.1-4.amzn2.0.2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "qpdf-libs",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:5.0.1-4.amzn2.0.2"
+					}
+				],
+				"fixed": [
+					"0:5.0.1-4.amzn2.0.2"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

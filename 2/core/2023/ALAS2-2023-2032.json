@@ -1,0 +1,161 @@
+{
+	"id": "ALAS2-2023-2032",
+	"advisories": [
+		{
+			"id": "ALAS2-2023-2032",
+			"title": "Amazon Linux 2 2017.12 - ALAS2-2023-2032: medium priority package update for ldns",
+			"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2020-19860:\n\tWhen ldns version 1.7.1 verifies a zone file, the ldns_rr_new_frm_str_internal function has a heap out of bounds read vulnerability. An attacker can leak information on the heap by constructing a zone file payload.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "medium"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALAS-2023-2032.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-19860"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2020-19860",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-19860"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "ldns",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.6.16-10.amzn2.0.3"
+					}
+				],
+				"fixed": [
+					"0:1.6.16-10.amzn2.0.3"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "ldns-devel",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.6.16-10.amzn2.0.3"
+					}
+				],
+				"fixed": [
+					"0:1.6.16-10.amzn2.0.3"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "ldns-python",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.6.16-10.amzn2.0.3"
+					}
+				],
+				"fixed": [
+					"0:1.6.16-10.amzn2.0.3"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "ldns-doc",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.6.16-10.amzn2.0.3"
+					}
+				],
+				"fixed": [
+					"0:1.6.16-10.amzn2.0.3"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "ldns-debuginfo",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.6.16-10.amzn2.0.3"
+					}
+				],
+				"fixed": [
+					"0:1.6.16-10.amzn2.0.3"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

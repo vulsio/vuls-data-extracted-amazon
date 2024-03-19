@@ -1,0 +1,167 @@
+{
+	"id": "ALAS2-2020-1414",
+	"advisories": [
+		{
+			"id": "ALAS2-2020-1414",
+			"title": "Amazon Linux 2 2017.12 - ALAS2-2020-1414: important priority package update for thunderbird",
+			"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2020-6814:\n\tMozilla developers reported memory safety bugs present in Firefox and Thunderbird 68.5. Some of these bugs showed evidence of memory corruption and we presume that with enough effort some of these could have been exploited to run arbitrary code. This vulnerability affects Thunderbird < 68.6, Firefox < 74, Firefox < ESR68.6, and Firefox ESR < 68.6.\n1812205: CVE-2020-6814 Mozilla: Memory safety bugs fixed in Firefox 74 and Firefox ESR 68.6\n\nCVE-2020-6812:\n\tThe first time AirPods are connected to an iPhone, they become named after the user's name by default (e.g. Jane Doe's AirPods.) Websites with camera or microphone permission are able to enumerate device names, disclosing the user's name. To resolve this issue, Firefox added a special case that renames devices containing the substring 'AirPods' to simply 'AirPods'. This vulnerability affects Thunderbird < 68.6, Firefox < 74, Firefox < ESR68.6, and Firefox ESR < 68.6.\n1812204: CVE-2020-6812 Mozilla: The names of AirPods with personally identifiable information were exposed to websites with camera or microphone permission\n\nCVE-2020-6811:\n\tThe 'Copy as cURL' feature of Devtools' network tab did not properly escape the HTTP method of a request, which can be controlled by the website. If a user used the 'Copy as Curl' feature and pasted the command into a terminal, it could have resulted in command injection and arbitrary command execution. This vulnerability affects Thunderbird < 68.6, Firefox < 74, Firefox < ESR68.6, and Firefox ESR < 68.6.\n1812202: CVE-2020-6811 Mozilla: Devtools' 'Copy as cURL' feature did not fully escape website-controlled data, potentially leading to command injection\n\nCVE-2020-6807:\n\tWhen a device was changed while a stream was about to be destroyed, the <code>stream-reinit</code> task may have been executed after the stream was destroyed, causing a use-after-free and a potentially exploitable crash. This vulnerability affects Thunderbird < 68.6, Firefox < 74, Firefox < ESR68.6, and Firefox ESR < 68.6.\n1812201: CVE-2020-6807 Mozilla: Use-after-free in cubeb during stream destruction\n\nCVE-2020-6806:\n\tBy carefully crafting promise resolutions, it was possible to cause an out-of-bounds read off the end of an array resized during script execution. This could have led to memory corruption and a potentially exploitable crash. This vulnerability affects Thunderbird < 68.6, Firefox < 74, Firefox < ESR68.6, and Firefox ESR < 68.6.\n1812200: CVE-2020-6806 Mozilla: BodyStream::OnInputStreamReady was missing protections against state confusion\n\nCVE-2020-6805:\n\tWhen removing data about an origin whose tab was recently closed, a use-after-free could occur in the Quota manager, resulting in a potentially exploitable crash. This vulnerability affects Thunderbird < 68.6, Firefox < 74, Firefox < ESR68.6, and Firefox ESR < 68.6.\n1812199: CVE-2020-6805 Mozilla: Use-after-free when removing data about origins\n\nCVE-2019-20503:\n\tusrsctp before 2019-12-20 has out-of-bounds reads in sctp_load_addresses_from_init.\n1812203: CVE-2019-20503 usrsctp: Out of bounds reads in sctp_load_addresses_from_init()\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "important"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALAS-2020-1414.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-20503"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-6805"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-6806"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-6807"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-6811"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-6812"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-6814"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2019-20503",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-20503"
+				}
+			]
+		},
+		{
+			"id": "CVE-2020-6805",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-6805"
+				}
+			]
+		},
+		{
+			"id": "CVE-2020-6806",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-6806"
+				}
+			]
+		},
+		{
+			"id": "CVE-2020-6807",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-6807"
+				}
+			]
+		},
+		{
+			"id": "CVE-2020-6811",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-6811"
+				}
+			]
+		},
+		{
+			"id": "CVE-2020-6812",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-6812"
+				}
+			]
+		},
+		{
+			"id": "CVE-2020-6814",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-6814"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "thunderbird",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:68.6.0-1.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"0:68.6.0-1.amzn2.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "thunderbird-debuginfo",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:68.6.0-1.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"0:68.6.0-1.amzn2.0.1"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

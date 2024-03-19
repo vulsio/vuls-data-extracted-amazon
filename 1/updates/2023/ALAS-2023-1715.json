@@ -1,0 +1,117 @@
+{
+	"id": "ALAS-2023-1715",
+	"advisories": [
+		{
+			"id": "ALAS-2023-1715",
+			"title": "Amazon Linux AMI 2014.03 - ALAS-2023-1715: important priority package update for microcode_ctl",
+			"description": "Package updates are available for Amazon Linux AMI that fix the following vulnerabilities:\nCVE-2022-38090:\n\tImproper isolation of shared resources in some Intel(R) Processors when using Intel(R) Software Guard Extensions may allow a privileged user to potentially enable information disclosure via local access.\n\nCVE-2022-33196:\n\tIncorrect default permissions in some memory controller configurations for some Intel(R) Xeon(R) Processors when using Intel(R) Software Guard Extensions which may allow a privileged user to potentially enable escalation of privilege via local access.\n\nCVE-2022-21216:\n\tInsufficient granularity of access control in out-of-band management in some Intel(R) Atom and Intel Xeon Scalable Processors may allow a privileged user to potentially enable escalation of privilege via adjacent network access.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "important"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/ALAS-2023-1715.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-21216"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-33196"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-38090"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2022-21216",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-21216"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-33196",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-33196"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-38090",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-38090"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "microcode_ctl-debuginfo",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "2:2.1-47.41.amzn1"
+					}
+				],
+				"fixed": [
+					"2:2.1-47.41.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "microcode_ctl",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "2:2.1-47.41.amzn1"
+					}
+				],
+				"fixed": [
+					"2:2.1-47.41.amzn1"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

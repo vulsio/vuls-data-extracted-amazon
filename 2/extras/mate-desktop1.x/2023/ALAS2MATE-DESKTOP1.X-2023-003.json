@@ -1,0 +1,137 @@
+{
+	"id": "ALAS2MATE-DESKTOP1.X-2023-003",
+	"advisories": [
+		{
+			"id": "ALAS2MATE-DESKTOP1.X-2023-003",
+			"title": "Amazon Linux 2 - Mate-desktop1.x 2.0 - ALAS2MATE-DESKTOP1.X-2023-003: medium priority package update for djvulibre",
+			"description": "Package updates are available for Amazon Linux 2 - Mate-desktop1.x that fix the following vulnerabilities:\nCVE-2021-46310:\n\tAn issue was discovered IW44Image.cpp in djvulibre 3.5.28 in allows attackers to cause a denial of service via divide by zero.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "medium"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALASMATE-DESKTOP1.X-2023-003.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-46310"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2021-46310",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-46310"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "djvulibre",
+				"repositories": [
+					"amzn2extra-mate-desktop1.x"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:3.5.27-30.amzn2.0.2"
+					}
+				],
+				"fixed": [
+					"0:3.5.27-30.amzn2.0.2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "djvulibre-libs",
+				"repositories": [
+					"amzn2extra-mate-desktop1.x"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:3.5.27-30.amzn2.0.2"
+					}
+				],
+				"fixed": [
+					"0:3.5.27-30.amzn2.0.2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "djvulibre-devel",
+				"repositories": [
+					"amzn2extra-mate-desktop1.x"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:3.5.27-30.amzn2.0.2"
+					}
+				],
+				"fixed": [
+					"0:3.5.27-30.amzn2.0.2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "djvulibre-debuginfo",
+				"repositories": [
+					"amzn2extra-mate-desktop1.x"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:3.5.27-30.amzn2.0.2"
+					}
+				],
+				"fixed": [
+					"0:3.5.27-30.amzn2.0.2"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

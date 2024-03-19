@@ -1,0 +1,224 @@
+{
+	"id": "ALAS2022-2022-154",
+	"advisories": [
+		{
+			"id": "ALAS2022-2022-154",
+			"title": "Amazon Linux 2022 - ALAS2022-2022-154: Medium priority package update for freetype",
+			"description": "Package updates are available for Amazon Linux 2022 that fix the following vulnerabilities:\nCVE-2022-27406:\n\tA segmentation fault was found in FreeType's FT_Request_Size() function in the ftobjs.c file. This flaw allows an attacker to access a memory location in a way that could cause an application to halt or crash, leading to a denial of service.\n\nCVE-2022-27405:\n\tA segmentation fault was found in the FreeType library. This flaw allows an attacker to attempt access to a memory location in a way that could cause an application to halt or crash, leading to a denial of service.\n\nCVE-2022-27404:\n\tA heap buffer overflow flaw was found in Freetype's sfnt_init_face() function in the sfobjs.c file. The vulnerability occurs when creating a face with a strange file and invalid index. This flaw allows an attacker to read and modify a small amount of memory, causing the application to crash.\n\nCVE-2020-15999:\n\tA heap buffer overflow leading to out-of-bounds write was found in freetype. Memory allocation based on truncated PNG width and height values allows for an out-of-bounds write to occur in application memory when an attacker supplies a specially crafted TTF file.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "Medium"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2022/ALAS-2022-154.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-15999"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-27404"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-27405"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-27406"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2020-15999",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-15999"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-27404",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-27404"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-27405",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-27405"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-27406",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-27406"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2022",
+			"vulnerable": true,
+			"package": {
+				"name": "freetype-devel",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.11.0-6.amzn2022.0.1"
+					}
+				],
+				"fixed": [
+					"0:2.11.0-6.amzn2022.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2022",
+			"vulnerable": true,
+			"package": {
+				"name": "freetype",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.11.0-6.amzn2022.0.1"
+					}
+				],
+				"fixed": [
+					"0:2.11.0-6.amzn2022.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2022",
+			"vulnerable": true,
+			"package": {
+				"name": "freetype-demos-debuginfo",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.11.0-6.amzn2022.0.1"
+					}
+				],
+				"fixed": [
+					"0:2.11.0-6.amzn2022.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2022",
+			"vulnerable": true,
+			"package": {
+				"name": "freetype-demos",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.11.0-6.amzn2022.0.1"
+					}
+				],
+				"fixed": [
+					"0:2.11.0-6.amzn2022.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2022",
+			"vulnerable": true,
+			"package": {
+				"name": "freetype-debugsource",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.11.0-6.amzn2022.0.1"
+					}
+				],
+				"fixed": [
+					"0:2.11.0-6.amzn2022.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2022",
+			"vulnerable": true,
+			"package": {
+				"name": "freetype-debuginfo",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.11.0-6.amzn2022.0.1"
+					}
+				],
+				"fixed": [
+					"0:2.11.0-6.amzn2022.0.1"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

@@ -1,0 +1,89 @@
+{
+	"id": "ALAS2-2023-2358",
+	"advisories": [
+		{
+			"id": "ALAS2-2023-2358",
+			"title": "Amazon Linux 2 2017.12 - ALAS2-2023-2358: medium priority package update for indent",
+			"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2023-40305:\n\tGNU indent 2.2.13 has a heap-based buffer overflow in search_brace in indent.c via a crafted file.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "medium"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALAS-2023-2358.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-40305"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2023-40305",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-40305"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "indent",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.2.11-13.amzn2.0.3"
+					}
+				],
+				"fixed": [
+					"0:2.2.11-13.amzn2.0.3"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "indent-debuginfo",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.2.11-13.amzn2.0.3"
+					}
+				],
+				"fixed": [
+					"0:2.2.11-13.amzn2.0.3"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

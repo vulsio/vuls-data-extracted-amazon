@@ -1,0 +1,115 @@
+{
+	"id": "ALAS2-2021-1613",
+	"advisories": [
+		{
+			"id": "ALAS2-2021-1613",
+			"title": "Amazon Linux 2 2017.12 - ALAS2-2021-1613: medium priority package update for ansible",
+			"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2021-20191:\n\tA flaw was found in ansible. Credentials, such as secrets, are being disclosed in console log by default and not protected by no_log feature when using those modules. An attacker can take advantage of this information to steal those credentials. The highest threat from this vulnerability is to data confidentiality.\n1916813: CVE-2021-20191 ansible: multiple modules expose secured values\n\nCVE-2021-20180:\n\tA flaw was found in ansible module where credentials are disclosed in the console log by default and not protected by the security feature when using the bitbucket_pipeline_variable module. This flaw allows an attacker to steal bitbucket_pipeline credentials. The highest threat from this vulnerability is to confidentiality.\n1915808: CVE-2021-20180 ansible module: bitbucket_pipeline_variable exposes secured values\n\nCVE-2021-20178:\n\tA flaw was found in ansible. The 'authkey' and 'privkey' credentials are disclosed by default and not protected by no_log feature when using the snmp_facts module. Attackers could take advantage of this information to steal the SNMP credentials. The highest threat from this vulnerability is to data confidentiality.\n1914774: CVE-2021-20178 ansible: user data leak in snmp_facts module\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "medium"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALAS-2021-1613.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-20178"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-20180"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-20191"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2021-20178",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-20178"
+				}
+			]
+		},
+		{
+			"id": "CVE-2021-20180",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-20180"
+				}
+			]
+		},
+		{
+			"id": "CVE-2021-20191",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-20191"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "ansible",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.9.18-1.amzn2"
+					}
+				],
+				"fixed": [
+					"0:2.9.18-1.amzn2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "ansible-doc",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.9.18-1.amzn2"
+					}
+				],
+				"fixed": [
+					"0:2.9.18-1.amzn2"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

@@ -1,0 +1,50 @@
+{
+	"id": "ALAS-2017-866",
+	"advisories": [
+		{
+			"id": "ALAS-2017-866",
+			"title": "Amazon Linux AMI 2014.03 - ALAS-2017-866: important priority package update for aws-cfn-bootstrap",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "important"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/ALAS-2017-866.html"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "aws-cfn-bootstrap",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.4-20.12.amzn1"
+					}
+				],
+				"fixed": [
+					"0:1.4-20.12.amzn1"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

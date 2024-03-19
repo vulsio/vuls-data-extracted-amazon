@@ -1,0 +1,185 @@
+{
+	"id": "ALAS2-2024-2479",
+	"advisories": [
+		{
+			"id": "ALAS2-2024-2479",
+			"title": "Amazon Linux 2 2017.12 - ALAS2-2024-2479: low priority package update for openssl",
+			"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2024-0727:\n\tProcessing a maliciously formatted PKCS12 file may lead OpenSSL to crash leading to a potential Denial of Service attack\n\nThe package openssl098e is provided purely for binary compatibility with older Amazon Linux versions. It does not receive security updates.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "low"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALAS-2024-2479.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-0727"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2024-0727",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-0727"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "openssl-debuginfo",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:1.0.2k-24.amzn2.0.12"
+					}
+				],
+				"fixed": [
+					"1:1.0.2k-24.amzn2.0.12"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "openssl",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:1.0.2k-24.amzn2.0.12"
+					}
+				],
+				"fixed": [
+					"1:1.0.2k-24.amzn2.0.12"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "openssl-libs",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:1.0.2k-24.amzn2.0.12"
+					}
+				],
+				"fixed": [
+					"1:1.0.2k-24.amzn2.0.12"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "openssl-devel",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:1.0.2k-24.amzn2.0.12"
+					}
+				],
+				"fixed": [
+					"1:1.0.2k-24.amzn2.0.12"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "openssl-static",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:1.0.2k-24.amzn2.0.12"
+					}
+				],
+				"fixed": [
+					"1:1.0.2k-24.amzn2.0.12"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "openssl-perl",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:1.0.2k-24.amzn2.0.12"
+					}
+				],
+				"fixed": [
+					"1:1.0.2k-24.amzn2.0.12"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

@@ -1,0 +1,167 @@
+{
+	"id": "ALAS2FIREFOX-2023-011",
+	"advisories": [
+		{
+			"id": "ALAS2FIREFOX-2023-011",
+			"title": "Amazon Linux 2 - Firefox 2.0 - ALAS2FIREFOX-2023-011: important priority package update for firefox",
+			"description": "Package updates are available for Amazon Linux 2 - Firefox that fix the following vulnerabilities:\nCVE-2022-31747:\n\tA flaw was found in Mozilla. The Mozilla Foundation Security Advisory describes the issue of Mozilla developers and community members reporting memory safety bugs present in Firefox 100 and Firefox ESR 91.0. Some of these bugs showed evidence of memory corruption, and we presume that with enough effort some of these could have been exploited to run arbitrary code.\n\nCVE-2022-31742:\n\tA flaw was found in Mozilla. The Mozilla Foundation Security Advisory describes the issue as an attacker could have exploited a timing attack by sending a large number of allowCredential entries and detecting the difference between invalid key handles and cross-origin key handles. This could have led to cross-origin account linking in violation of WebAuthn goals.\n\nCVE-2022-31741:\n\tA flaw was found in Mozilla. The Mozilla Foundation Security Advisory describes the issue as having a crafted CMS message that could have been processed incorrectly, leading to an invalid memory read and potential memory corruption.\n\nCVE-2022-31740:\n\tA flaw was found in Mozilla. The Mozilla Foundation Security Advisory describes the issue on arm64; WASM code could have resulted in incorrect assembly generation, leading to a register allocation problem and a potentially exploitable crash.\n\nCVE-2022-31738:\n\tA flaw was found in Mozilla. The Mozilla Foundation Security Advisory describes the issue of when exiting fullscreen mode, an iframe could have confused the browser about the current state of the fullscreen, resulting in potential user confusion or spoofing attacks.\n\nCVE-2022-31737:\n\tA flaw was found in Mozilla. The Mozilla Foundation Security Advisory describes the issue as a malicious webpage that could have caused an out-of-bounds write in WebGL, leading to memory corruption and a potentially exploitable crash.\n\nCVE-2022-31736:\n\tA flaw was found in Mozilla. The Mozilla Foundation Security Advisory describes the issue as a malicious website that could have learned the size of a cross-origin resource that supported Range requests.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "important"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALASFIREFOX-2023-011.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-31736"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-31737"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-31738"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-31740"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-31741"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-31742"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-31747"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2022-31736",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-31736"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-31737",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-31737"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-31738",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-31738"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-31740",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-31740"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-31741",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-31741"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-31742",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-31742"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-31747",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-31747"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "firefox",
+				"repositories": [
+					"amzn2extra-firefox"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:91.10.0-1.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"0:91.10.0-1.amzn2.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "firefox-debuginfo",
+				"repositories": [
+					"amzn2extra-firefox"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:91.10.0-1.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"0:91.10.0-1.amzn2.0.1"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

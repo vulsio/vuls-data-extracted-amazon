@@ -1,0 +1,126 @@
+{
+	"id": "ALAS2-2019-1356",
+	"advisories": [
+		{
+			"id": "ALAS2-2019-1356",
+			"title": "Amazon Linux 2 2017.12 - ALAS2-2019-1356: medium priority package update for uriparser",
+			"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2018-19199:\n\tAn issue was discovered in uriparser before 0.9.0. UriQuery.c allows an integer overflow via a uriComposeQuery* or uriComposeQueryEx* function because of an unchecked multiplication.\n99999: \nCVE-2018-19199 uriparser: Integer overflow via uriComposeQuery* or uriComposeQueryEx* function\n\nCVE-2018-19198:\n\tAn issue was discovered in uriparser before 0.9.0. UriQuery.c allows an out-of-bounds write via a uriComposeQuery* or uriComposeQueryEx* function because the &#039;&amp;&#039; character is mishandled in certain contexts.\n99999: \nCVE-2018-19198 uriparser: Out-of-bounds write via uriComposeQuery* or uriComposeQueryEx* function\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "medium"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALAS-2019-1356.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-19198"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-19199"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2018-19198",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-19198"
+				}
+			]
+		},
+		{
+			"id": "CVE-2018-19199",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-19199"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "uriparser-devel",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:0.7.5-10.amzn2"
+					}
+				],
+				"fixed": [
+					"0:0.7.5-10.amzn2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "uriparser-debuginfo",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:0.7.5-10.amzn2"
+					}
+				],
+				"fixed": [
+					"0:0.7.5-10.amzn2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "uriparser",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:0.7.5-10.amzn2"
+					}
+				],
+				"fixed": [
+					"0:0.7.5-10.amzn2"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

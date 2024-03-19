@@ -1,0 +1,185 @@
+{
+	"id": "ALAS2-2018-1014",
+	"advisories": [
+		{
+			"id": "ALAS2-2018-1014",
+			"title": "Amazon Linux 2 2017.12 - ALAS2-2018-1014: important priority package update for corosync",
+			"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2018-1084:\n\tAn integer overflow leading to an out-of-bound read was found in authenticate_nss_2_3() in Corosync. An attacker could craft a malicious packet that would lead to a denial of service.\n1552830: \nCVE-2018-1084 corosync: Integer overflow in exec/totemcrypto.c:authenticate_nss_2_3() function\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "important"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALAS-2018-1014.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-1084"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2018-1084",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-1084"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "corosynclib-devel",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.4.3-2.amzn2.1"
+					}
+				],
+				"fixed": [
+					"0:2.4.3-2.amzn2.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "corosync-qdevice",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.4.3-2.amzn2.1"
+					}
+				],
+				"fixed": [
+					"0:2.4.3-2.amzn2.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "corosync-qnetd",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.4.3-2.amzn2.1"
+					}
+				],
+				"fixed": [
+					"0:2.4.3-2.amzn2.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "corosync",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.4.3-2.amzn2.1"
+					}
+				],
+				"fixed": [
+					"0:2.4.3-2.amzn2.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "corosync-debuginfo",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.4.3-2.amzn2.1"
+					}
+				],
+				"fixed": [
+					"0:2.4.3-2.amzn2.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "corosynclib",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.4.3-2.amzn2.1"
+					}
+				],
+				"fixed": [
+					"0:2.4.3-2.amzn2.1"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

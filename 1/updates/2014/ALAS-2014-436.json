@@ -1,0 +1,220 @@
+{
+	"id": "ALAS-2014-436",
+	"advisories": [
+		{
+			"id": "ALAS-2014-436",
+			"title": "Amazon Linux AMI 2014.03 - ALAS-2014-436: medium priority package update for xerces-j2",
+			"description": "Package updates are available for Amazon Linux AMI that fix the following vulnerabilities:\nCVE-2013-4002:\n\tA resource consumption issue was found in the way Xerces-J handled XML declarations. A remote attacker could use an XML document with a specially crafted declaration using a long pseudo-attribute name that, when parsed by an application using Xerces-J, would cause that application to use an excessive amount of CPU.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "medium"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/ALAS-2014-436.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-4002"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://rhn.redhat.com/errata/RHSA-2014:1319.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2013-4002",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-4002"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "xerces-j2-demo",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.7.1-12.7.19.amzn1"
+					}
+				],
+				"fixed": [
+					"0:2.7.1-12.7.19.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "xerces-j2",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.7.1-12.7.19.amzn1"
+					}
+				],
+				"fixed": [
+					"0:2.7.1-12.7.19.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "xerces-j2-scripts",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.7.1-12.7.19.amzn1"
+					}
+				],
+				"fixed": [
+					"0:2.7.1-12.7.19.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "xerces-j2-javadoc-impl",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.7.1-12.7.19.amzn1"
+					}
+				],
+				"fixed": [
+					"0:2.7.1-12.7.19.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "xerces-j2-javadoc-apis",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.7.1-12.7.19.amzn1"
+					}
+				],
+				"fixed": [
+					"0:2.7.1-12.7.19.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "xerces-j2-javadoc-xni",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.7.1-12.7.19.amzn1"
+					}
+				],
+				"fixed": [
+					"0:2.7.1-12.7.19.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "xerces-j2-javadoc-other",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.7.1-12.7.19.amzn1"
+					}
+				],
+				"fixed": [
+					"0:2.7.1-12.7.19.amzn1"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

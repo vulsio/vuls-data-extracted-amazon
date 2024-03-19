@@ -1,0 +1,92 @@
+{
+	"id": "ALAS-2017-874",
+	"advisories": [
+		{
+			"id": "ALAS-2017-874",
+			"title": "Amazon Linux AMI 2014.03 - ALAS-2017-874: important priority package update for cacti",
+			"description": "Package updates are available for Amazon Linux AMI that fix the following vulnerabilities:\nCVE-2017-12066:\n\t\n\nCVE-2017-12065:\n\t\n\nCVE-2017-10970:\n\tCross-site scripting (XSS) vulnerability in link.php in Cacti 1.1.12 allows remote anonymous users to inject arbitrary web script or HTML via the id parameter, related to the die_html_input_error function in lib/html_validate.php\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "important"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/ALAS-2017-874.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-10970"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-12065"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-12066"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2017-10970",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-10970"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-12065",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-12065"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-12066",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-12066"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "cacti",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.1.16-1.16.amzn1"
+					}
+				],
+				"fixed": [
+					"0:1.1.16-1.16.amzn1"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

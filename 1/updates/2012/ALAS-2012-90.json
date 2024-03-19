@@ -1,0 +1,141 @@
+{
+	"id": "ALAS-2012-90",
+	"advisories": [
+		{
+			"id": "ALAS-2012-90",
+			"title": "Amazon Linux - ALAS-2012-90: low priority package update for quagga",
+			"description": "Package updates are available for Amazon Linux that fix the following vulnerabilities:\nCVE-2012-1820:\n\tTwo flaws were found in the way the bgpd daemon processed certain BGP OPEN messages. A configured BGP peer could cause bgpd on a target system to abort via a specially-crafted BGP OPEN message.\nThe bgp_capability_orf function in bgpd in Quagga 0.99.20.1 and earlier allows remote attackers to cause a denial of service (assertion failure and daemon exit) by leveraging a BGP peering relationship and sending a malformed Outbound Route Filtering (ORF) capability TLV in an OPEN message.\n817580: \nCVE-2012-1820 quagga (bgpd): Assertion failure by processing BGP OPEN message with malformed ORF capability TLV (VU#962587)\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "low"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/ALAS-2012-90.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-1820"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2012-1820",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-1820"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "quagga-debuginfo",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:0.99.20.1-1.5.amzn1"
+					}
+				],
+				"fixed": [
+					"0:0.99.20.1-1.5.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "quagga",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:0.99.20.1-1.5.amzn1"
+					}
+				],
+				"fixed": [
+					"0:0.99.20.1-1.5.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "quagga-contrib",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:0.99.20.1-1.5.amzn1"
+					}
+				],
+				"fixed": [
+					"0:0.99.20.1-1.5.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "quagga-devel",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:0.99.20.1-1.5.amzn1"
+					}
+				],
+				"fixed": [
+					"0:0.99.20.1-1.5.amzn1"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

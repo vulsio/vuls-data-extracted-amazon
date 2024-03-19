@@ -1,0 +1,486 @@
+{
+	"id": "ALAS2022-2022-018",
+	"advisories": [
+		{
+			"id": "ALAS2022-2022-018",
+			"title": "Amazon Linux 2022 - ALAS2022-2022-018: Important priority package update for httpd",
+			"description": "Package updates are available for Amazon Linux 2022 that fix the following vulnerabilities:\nCVE-2021-44790:\n\tA buffer overflow flaw in httpd's lua module could allow an out-of-bounds write. An attacker who is able to submit a crafted request to an httpd instance that is using the lua module may be able to cause an impact to confidentiality, integrity, and/or availability.\n\nCVE-2021-44224:\n\tThere's a null pointer dereference and server-side request forgery flaw in httpd's mod_proxy module, when it is configured to be used as a forward proxy. A crafted packet could be sent on the adjacent network to the forward proxy that could cause a crash, or potentially SSRF via misdirected Unix Domain Socket requests. In the worst case, this could cause a denial of service or compromise to confidentiality of data.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "Important"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2022/ALAS-2022-018.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-44224"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-44790"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2021-44224",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-44224"
+				}
+			]
+		},
+		{
+			"id": "CVE-2021-44790",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-44790"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2022",
+			"vulnerable": true,
+			"package": {
+				"name": "httpd-tools-debuginfo",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.4.52-1.amzn2022.0.1"
+					}
+				],
+				"fixed": [
+					"0:2.4.52-1.amzn2022.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2022",
+			"vulnerable": true,
+			"package": {
+				"name": "mod_session-debuginfo",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.4.52-1.amzn2022.0.1"
+					}
+				],
+				"fixed": [
+					"0:2.4.52-1.amzn2022.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2022",
+			"vulnerable": true,
+			"package": {
+				"name": "httpd-debugsource",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.4.52-1.amzn2022.0.1"
+					}
+				],
+				"fixed": [
+					"0:2.4.52-1.amzn2022.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2022",
+			"vulnerable": true,
+			"package": {
+				"name": "mod_proxy_html",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:2.4.52-1.amzn2022.0.1"
+					}
+				],
+				"fixed": [
+					"1:2.4.52-1.amzn2022.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2022",
+			"vulnerable": true,
+			"package": {
+				"name": "mod_lua",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.4.52-1.amzn2022.0.1"
+					}
+				],
+				"fixed": [
+					"0:2.4.52-1.amzn2022.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2022",
+			"vulnerable": true,
+			"package": {
+				"name": "mod_ldap",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.4.52-1.amzn2022.0.1"
+					}
+				],
+				"fixed": [
+					"0:2.4.52-1.amzn2022.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2022",
+			"vulnerable": true,
+			"package": {
+				"name": "mod_session",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.4.52-1.amzn2022.0.1"
+					}
+				],
+				"fixed": [
+					"0:2.4.52-1.amzn2022.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2022",
+			"vulnerable": true,
+			"package": {
+				"name": "httpd-filesystem",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.4.52-1.amzn2022.0.1"
+					}
+				],
+				"fixed": [
+					"0:2.4.52-1.amzn2022.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2022",
+			"vulnerable": true,
+			"package": {
+				"name": "mod_ssl-debuginfo",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:2.4.52-1.amzn2022.0.1"
+					}
+				],
+				"fixed": [
+					"1:2.4.52-1.amzn2022.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2022",
+			"vulnerable": true,
+			"package": {
+				"name": "httpd-manual",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.4.52-1.amzn2022.0.1"
+					}
+				],
+				"fixed": [
+					"0:2.4.52-1.amzn2022.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2022",
+			"vulnerable": true,
+			"package": {
+				"name": "httpd-devel",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.4.52-1.amzn2022.0.1"
+					}
+				],
+				"fixed": [
+					"0:2.4.52-1.amzn2022.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2022",
+			"vulnerable": true,
+			"package": {
+				"name": "mod_ssl",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:2.4.52-1.amzn2022.0.1"
+					}
+				],
+				"fixed": [
+					"1:2.4.52-1.amzn2022.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2022",
+			"vulnerable": true,
+			"package": {
+				"name": "mod_ldap-debuginfo",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.4.52-1.amzn2022.0.1"
+					}
+				],
+				"fixed": [
+					"0:2.4.52-1.amzn2022.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2022",
+			"vulnerable": true,
+			"package": {
+				"name": "httpd",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.4.52-1.amzn2022.0.1"
+					}
+				],
+				"fixed": [
+					"0:2.4.52-1.amzn2022.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2022",
+			"vulnerable": true,
+			"package": {
+				"name": "mod_proxy_html-debuginfo",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:2.4.52-1.amzn2022.0.1"
+					}
+				],
+				"fixed": [
+					"1:2.4.52-1.amzn2022.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2022",
+			"vulnerable": true,
+			"package": {
+				"name": "httpd-tools",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.4.52-1.amzn2022.0.1"
+					}
+				],
+				"fixed": [
+					"0:2.4.52-1.amzn2022.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2022",
+			"vulnerable": true,
+			"package": {
+				"name": "mod_lua-debuginfo",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.4.52-1.amzn2022.0.1"
+					}
+				],
+				"fixed": [
+					"0:2.4.52-1.amzn2022.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2022",
+			"vulnerable": true,
+			"package": {
+				"name": "httpd-debuginfo",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.4.52-1.amzn2022.0.1"
+					}
+				],
+				"fixed": [
+					"0:2.4.52-1.amzn2022.0.1"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

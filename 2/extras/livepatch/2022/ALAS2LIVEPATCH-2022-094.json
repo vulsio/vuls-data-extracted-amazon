@@ -1,0 +1,89 @@
+{
+	"id": "ALAS2LIVEPATCH-2022-094",
+	"advisories": [
+		{
+			"id": "ALAS2LIVEPATCH-2022-094",
+			"title": "Amazon Linux 2 - Livepatch 2.0 - ALAS2LIVEPATCH-2022-094: important priority package update for kernel-livepatch-4.14.290-217.505",
+			"description": "Package updates are available for Amazon Linux 2 - Livepatch that fix the following vulnerabilities:\nCVE-2022-2588:\n\tA use-after-free flaw was found in route4_change in the net/sched/cls_route.c filter implementation in the Linux kernel. This flaw allows a local user to crash the system and possibly lead to a local privilege escalation problem.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "important"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALASLIVEPATCH-2022-094.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-2588"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2022-2588",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-2588"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "kernel-livepatch-4.14.290-217.505",
+				"repositories": [
+					"amzn2extra-livepatch"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.0-2.amzn2"
+					}
+				],
+				"fixed": [
+					"0:1.0-2.amzn2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "kernel-livepatch-4.14.290-217.505-debuginfo",
+				"repositories": [
+					"amzn2extra-livepatch"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.0-2.amzn2"
+					}
+				],
+				"fixed": [
+					"0:1.0-2.amzn2"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

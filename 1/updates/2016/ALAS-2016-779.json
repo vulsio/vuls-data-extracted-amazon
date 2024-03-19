@@ -1,0 +1,166 @@
+{
+	"id": "ALAS-2016-779",
+	"advisories": [
+		{
+			"id": "ALAS-2016-779",
+			"title": "Amazon Linux AMI 2014.03 - ALAS-2016-779: important priority package update for vim",
+			"description": "Package updates are available for Amazon Linux AMI that fix the following vulnerabilities:\nCVE-2016-1248:\n\tA vulnerability was found in vim in how certain modeline options were treated. An attacker could craft a file that, when opened in vim with modelines enabled, could execute arbitrary commands with privileges of the user running vim.\n1398227: \nCVE-2016-1248 vim: Lack of validation of values for few options results in code exection\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "important"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/ALAS-2016-779.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-1248"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2016-1248",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-1248"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "vim-debuginfo",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "2:8.0.0134-1.43.amzn1"
+					}
+				],
+				"fixed": [
+					"2:8.0.0134-1.43.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "vim-common",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "2:8.0.0134-1.43.amzn1"
+					}
+				],
+				"fixed": [
+					"2:8.0.0134-1.43.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "vim-minimal",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "2:8.0.0134-1.43.amzn1"
+					}
+				],
+				"fixed": [
+					"2:8.0.0134-1.43.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "vim-enhanced",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "2:8.0.0134-1.43.amzn1"
+					}
+				],
+				"fixed": [
+					"2:8.0.0134-1.43.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "vim-filesystem",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "2:8.0.0134-1.43.amzn1"
+					}
+				],
+				"fixed": [
+					"2:8.0.0134-1.43.amzn1"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

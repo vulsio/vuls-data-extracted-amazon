@@ -1,0 +1,161 @@
+{
+	"id": "ALAS2-2023-2000",
+	"advisories": [
+		{
+			"id": "ALAS2-2023-2000",
+			"title": "Amazon Linux 2 2017.12 - ALAS2-2023-2000: medium priority package update for gstreamer1-plugins-base",
+			"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2021-3522:\n\tA flaw was found in gstreamer-plugins-base where an out-of-bounds read when handling certain ID3v2 tags is possible. The highest threat from this vulnerability is to system availability.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "medium"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALAS-2023-2000.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3522"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2021-3522",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3522"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "gstreamer1-plugins-base",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.10.4-2.amzn2.0.3"
+					}
+				],
+				"fixed": [
+					"0:1.10.4-2.amzn2.0.3"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "gstreamer1-plugins-base-tools",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.10.4-2.amzn2.0.3"
+					}
+				],
+				"fixed": [
+					"0:1.10.4-2.amzn2.0.3"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "gstreamer1-plugins-base-devel",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.10.4-2.amzn2.0.3"
+					}
+				],
+				"fixed": [
+					"0:1.10.4-2.amzn2.0.3"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "gstreamer1-plugins-base-devel-docs",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.10.4-2.amzn2.0.3"
+					}
+				],
+				"fixed": [
+					"0:1.10.4-2.amzn2.0.3"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "gstreamer1-plugins-base-debuginfo",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.10.4-2.amzn2.0.3"
+					}
+				],
+				"fixed": [
+					"0:1.10.4-2.amzn2.0.3"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

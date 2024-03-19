@@ -1,0 +1,89 @@
+{
+	"id": "ALAS2022-2022-046",
+	"advisories": [
+		{
+			"id": "ALAS2022-2022-046",
+			"title": "Amazon Linux 2022 - ALAS2022-2022-046: Important priority package update for python-twisted",
+			"description": "Package updates are available for Amazon Linux 2022 that fix the following vulnerabilities:\nCVE-2022-21716:\n\tAn uncontrolled resource consumption flaw was found in python-twisted in the dataReceived() function. This flaw allows an unauthenticated, remote attacker to send a simple command to use all available memory and crash the server.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "Important"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2022/ALAS-2022-046.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-21716"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2022-21716",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-21716"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2022",
+			"vulnerable": true,
+			"package": {
+				"name": "python3-twisted+tls",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:22.2.0-117.amzn2022.0.1"
+					}
+				],
+				"fixed": [
+					"0:22.2.0-117.amzn2022.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2022",
+			"vulnerable": true,
+			"package": {
+				"name": "python3-twisted",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:22.2.0-117.amzn2022.0.1"
+					}
+				],
+				"fixed": [
+					"0:22.2.0-117.amzn2022.0.1"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

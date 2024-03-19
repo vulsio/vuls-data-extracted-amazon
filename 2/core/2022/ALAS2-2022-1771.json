@@ -1,0 +1,261 @@
+{
+	"id": "ALAS2-2022-1771",
+	"advisories": [
+		{
+			"id": "ALAS2-2022-1771",
+			"title": "Amazon Linux 2 2017.12 - ALAS2-2022-1771: medium priority package update for vim",
+			"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2022-0696:\n\tA NULL pointer dereference flaw was found in vim's find_ucmd() function of usercmd.c file. This flaw allows an attacker to trick a user into opening a crafted file, triggering a NULL pointer dereference. This issue leads to an application crash, causing a denial of service.\n\nCVE-2022-0685:\n\tA flaw was found in vim. The vulnerability occurs due to a crash when using a special multi-byte character and leads to an out-of-range vulnerability. This flaw allows an attacker to input a specially crafted file, leading to a crash or code execution.\n\nCVE-2022-0629:\n\tA stack-based buffer overflow flaw was found in vim's ga_concat_shorten_esc() function of src/testing.c file. This flaw allows an attacker to trick a user into opening a crafted file, triggering a stack-overflow. This issue can lead to an application crash, causing a denial of service.\n\nCVE-2022-0572:\n\tA heap-based buffer overflow flaw was found in vim's ex_retab() function of indent.c file. This flaw occurs when repeatedly using :retab. This flaw allows an attacker to trick a user into opening a crafted file triggering a heap-overflow.\n\nCVE-2022-0554:\n\tA flaw was found in vim that causes an out-of-range pointer offset vulnerability. This flaw allows an attacker to input a specially crafted file, leading to a crash or code execution.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "medium"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALAS-2022-1771.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-0554"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-0572"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-0629"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-0685"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-0696"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2022-0554",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-0554"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-0572",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-0572"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-0629",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-0629"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-0685",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-0685"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-0696",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-0696"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "vim-minimal",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "2:8.2.4428-1.amzn2.0.3"
+					}
+				],
+				"fixed": [
+					"2:8.2.4428-1.amzn2.0.3"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "vim-enhanced",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "2:8.2.4428-1.amzn2.0.3"
+					}
+				],
+				"fixed": [
+					"2:8.2.4428-1.amzn2.0.3"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "vim-filesystem",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "2:8.2.4428-1.amzn2.0.3"
+					}
+				],
+				"fixed": [
+					"2:8.2.4428-1.amzn2.0.3"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "vim-X11",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "2:8.2.4428-1.amzn2.0.3"
+					}
+				],
+				"fixed": [
+					"2:8.2.4428-1.amzn2.0.3"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "vim-data",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "2:8.2.4428-1.amzn2.0.3"
+					}
+				],
+				"fixed": [
+					"2:8.2.4428-1.amzn2.0.3"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "vim-debuginfo",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "2:8.2.4428-1.amzn2.0.3"
+					}
+				],
+				"fixed": [
+					"2:8.2.4428-1.amzn2.0.3"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "vim-common",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "2:8.2.4428-1.amzn2.0.3"
+					}
+				],
+				"fixed": [
+					"2:8.2.4428-1.amzn2.0.3"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

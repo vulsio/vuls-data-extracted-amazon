@@ -1,0 +1,91 @@
+{
+	"id": "ALAS-2015-554",
+	"advisories": [
+		{
+			"id": "ALAS-2015-554",
+			"title": "Amazon Linux AMI 2014.03 - ALAS-2015-554: medium priority package update for t1utils",
+			"description": "Package updates are available for Amazon Linux AMI that fix the following vulnerabilities:\nCVE-2015-3905:\n\tA buffer overflow flaw was found in the way t1utils processed, for example, certain PFB (Printer Font Binary) files. An attacker could use this flaw to potentially execute arbitrary code by tricking a user into processing a specially crafted PFB file with t1utils.\n1218365: \nCVE-2015-3905 t1utils: buffer overflow flaw\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "medium"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/ALAS-2015-554.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-3905"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2015-3905",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-3905"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "t1utils",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.39-1.3.amzn1"
+					}
+				],
+				"fixed": [
+					"0:1.39-1.3.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "t1utils-debuginfo",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.39-1.3.amzn1"
+					}
+				],
+				"fixed": [
+					"0:1.39-1.3.amzn1"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

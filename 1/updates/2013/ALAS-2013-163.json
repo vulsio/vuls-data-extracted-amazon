@@ -1,0 +1,208 @@
+{
+	"id": "ALAS-2013-163",
+	"advisories": [
+		{
+			"id": "ALAS-2013-163",
+			"title": "Amazon Linux AMI 2012.09 - ALAS-2013-163: important priority package update for java-1.6.0-openjdk",
+			"description": "Package updates are available for Amazon Linux AMI that fix the following vulnerabilities:\nCVE-2013-1486:\n\tAn improper permission check issue was discovered in the JMX component in OpenJDK. An untrusted Java application or applet could use this flaw to bypass Java sandbox restrictions.\n\nCVE-2013-0169:\n\tIt was discovered that OpenJDK leaked timing information when decrypting TLS/SSL protocol encrypted records when CBC-mode cipher suites were used. A remote attacker could possibly use this flaw to retrieve plain text from the encrypted packets by using a TLS/SSL server as a padding oracle.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "important"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/ALAS-2013-163.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-0169"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-1486"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://rhn.redhat.com/errata/RHSA-2013:0273.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2013-0169",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-0169"
+				}
+			]
+		},
+		{
+			"id": "CVE-2013-1486",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-1486"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "java-1.6.0-openjdk-devel",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:1.6.0.0-56.1.11.8.51.amzn1"
+					}
+				],
+				"fixed": [
+					"1:1.6.0.0-56.1.11.8.51.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "java-1.6.0-openjdk",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:1.6.0.0-56.1.11.8.51.amzn1"
+					}
+				],
+				"fixed": [
+					"1:1.6.0.0-56.1.11.8.51.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "java-1.6.0-openjdk-javadoc",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:1.6.0.0-56.1.11.8.51.amzn1"
+					}
+				],
+				"fixed": [
+					"1:1.6.0.0-56.1.11.8.51.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "java-1.6.0-openjdk-demo",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:1.6.0.0-56.1.11.8.51.amzn1"
+					}
+				],
+				"fixed": [
+					"1:1.6.0.0-56.1.11.8.51.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "java-1.6.0-openjdk-debuginfo",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:1.6.0.0-56.1.11.8.51.amzn1"
+					}
+				],
+				"fixed": [
+					"1:1.6.0.0-56.1.11.8.51.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "java-1.6.0-openjdk-src",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:1.6.0.0-56.1.11.8.51.amzn1"
+					}
+				],
+				"fixed": [
+					"1:1.6.0.0-56.1.11.8.51.amzn1"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

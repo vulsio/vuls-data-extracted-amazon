@@ -1,0 +1,247 @@
+{
+	"id": "ALAS-2014-438",
+	"advisories": [
+		{
+			"id": "ALAS-2014-438",
+			"title": "Amazon Linux AMI 2014.03 - ALAS-2014-438: medium priority package update for cups",
+			"description": "Package updates are available for Amazon Linux AMI that fix the following vulnerabilities:\nCVE-2014-5031:\n\tIt was discovered that CUPS allowed certain users to create symbolic links in certain directories under /var/cache/cups/. A local user with the 'lp' group privileges could use this flaw to read the contents of arbitrary files on the system or, potentially, escalate their privileges on the system.\n\nCVE-2014-5030:\n\tIt was discovered that CUPS allowed certain users to create symbolic links in certain directories under /var/cache/cups/. A local user with the 'lp' group privileges could use this flaw to read the contents of arbitrary files on the system or, potentially, escalate their privileges on the system.\n\nCVE-2014-5029:\n\tIt was discovered that CUPS allowed certain users to create symbolic links in certain directories under /var/cache/cups/. A local user with the 'lp' group privileges could use this flaw to read the contents of arbitrary files on the system or, potentially, escalate their privileges on the system.\n\nCVE-2014-3537:\n\tIt was discovered that CUPS allowed certain users to create symbolic links in certain directories under /var/cache/cups/. A local user with the 'lp' group privileges could use this flaw to read the contents of arbitrary files on the system or, potentially, escalate their privileges on the system.\n\nCVE-2014-2856:\n\tA cross-site scripting (XSS) flaw was found in the CUPS web interface. An attacker could use this flaw to perform a cross-site scripting attack against users of the CUPS web interface.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "medium"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/ALAS-2014-438.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-2856"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-3537"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-5029"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-5030"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-5031"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://rhn.redhat.com/errata/RHSA-2014:1388.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2014-2856",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-2856"
+				}
+			]
+		},
+		{
+			"id": "CVE-2014-3537",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-3537"
+				}
+			]
+		},
+		{
+			"id": "CVE-2014-5029",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-5029"
+				}
+			]
+		},
+		{
+			"id": "CVE-2014-5030",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-5030"
+				}
+			]
+		},
+		{
+			"id": "CVE-2014-5031",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-5031"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "cups-php",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:1.4.2-67.20.al12"
+					}
+				],
+				"fixed": [
+					"1:1.4.2-67.20.al12"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "cups-lpd",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:1.4.2-67.20.al12"
+					}
+				],
+				"fixed": [
+					"1:1.4.2-67.20.al12"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "cups-devel",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:1.4.2-67.20.al12"
+					}
+				],
+				"fixed": [
+					"1:1.4.2-67.20.al12"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "cups-libs",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:1.4.2-67.20.al12"
+					}
+				],
+				"fixed": [
+					"1:1.4.2-67.20.al12"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "cups-debuginfo",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:1.4.2-67.20.al12"
+					}
+				],
+				"fixed": [
+					"1:1.4.2-67.20.al12"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "cups",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:1.4.2-67.20.al12"
+					}
+				],
+				"fixed": [
+					"1:1.4.2-67.20.al12"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

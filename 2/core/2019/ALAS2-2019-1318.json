@@ -1,0 +1,150 @@
+{
+	"id": "ALAS2-2019-1318",
+	"advisories": [
+		{
+			"id": "ALAS2-2019-1318",
+			"title": "Amazon Linux 2 2017.12 - ALAS2-2019-1318: important priority package update for SDL2",
+			"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2019-13616:\n\tA heap-based buffer overflow was discovered in SDL in the SDL_BlitCopy() function, that was called while copying an existing surface into a new optimized one, due to lack of validation while loading a BMP image in the SDL_LoadBMP_RW() function. An application that uses SDL to parse untrusted input files may be vulnerable to this flaw, which could allow an attacker to make the application crash or possibly execute code.\n99999: \nCVE-2019-13616 SDL: heap-based buffer overflow in SDL blit functions in video/SDL_blit*.c\n\nCVE-2019-12222:\n\tAn issue was discovered in libSDL2.a in Simple DirectMedia Layer (SDL) 2.0.9. There is an out-of-bounds read in the function SDL_InvalidateMap at video/SDL_pixels.c.\n99999: \nCVE-2019-12222 SDL: out-of-bounds read in function SDL_InvalidateMap in video/SDL_pixels.c\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "important"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALAS-2019-1318.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-12222"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-13616"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2019-12222",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-12222"
+				}
+			]
+		},
+		{
+			"id": "CVE-2019-13616",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-13616"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "SDL2-debuginfo",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.0.10-1.amzn2"
+					}
+				],
+				"fixed": [
+					"0:2.0.10-1.amzn2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "SDL2",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.0.10-1.amzn2"
+					}
+				],
+				"fixed": [
+					"0:2.0.10-1.amzn2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "SDL2-devel",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.0.10-1.amzn2"
+					}
+				],
+				"fixed": [
+					"0:2.0.10-1.amzn2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "SDL2-static",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.0.10-1.amzn2"
+					}
+				],
+				"fixed": [
+					"0:2.0.10-1.amzn2"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

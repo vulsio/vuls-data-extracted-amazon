@@ -1,0 +1,133 @@
+{
+	"id": "ALAS-2015-505",
+	"advisories": [
+		{
+			"id": "ALAS-2015-505",
+			"title": "Amazon Linux AMI 2014.03 - ALAS-2015-505: important priority package update for flac",
+			"description": "Package updates are available for Amazon Linux AMI that fix the following vulnerabilities:\nCVE-2014-9028:\n\tA buffer overflow flaw was found in the way flac decoded FLAC audio files. An attacker could create a specially crafted FLAC audio file that could cause an application using the flac library to crash or execute arbitrary code when the file was read.\n\nCVE-2014-8962:\n\tA buffer over-read flaw was found in the way flac processed certain ID3v2 metadata. An attacker could create a specially crafted FLAC audio file that could cause an application using the flac library to crash when the file was read.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "important"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/ALAS-2015-505.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-8962"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-9028"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://rhn.redhat.com/errata/RHSA-2015:0767.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2014-8962",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-8962"
+				}
+			]
+		},
+		{
+			"id": "CVE-2014-9028",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-9028"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "flac",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.2.1-7.7.amzn1"
+					}
+				],
+				"fixed": [
+					"0:1.2.1-7.7.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "flac-debuginfo",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.2.1-7.7.amzn1"
+					}
+				],
+				"fixed": [
+					"0:1.2.1-7.7.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "flac-devel",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.2.1-7.7.amzn1"
+					}
+				],
+				"fixed": [
+					"0:1.2.1-7.7.amzn1"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

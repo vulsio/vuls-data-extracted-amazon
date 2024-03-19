@@ -1,0 +1,393 @@
+{
+	"id": "ALAS-2018-944",
+	"advisories": [
+		{
+			"id": "ALAS-2018-944",
+			"title": "Amazon Linux AMI 2014.03 - ALAS-2018-944: important priority package update for kernel",
+			"description": "Package updates are available for Amazon Linux AMI that fix the following vulnerabilities:\nCVE-2017-8824:\n\tA use-after-free vulnerability was found in DCCP socket code affecting the Linux kernel since 2.6.16. This vulnerability could allow an attacker to their escalate privileges.\n1519591: \nCVE-2017-8824 kernel: Use-after-free vulnerability in DCCP socket\n\nCVE-2017-17741:\n\tLinux kernel compiled with the KVM virtualization (CONFIG_KVM) support is vulnerable to an out-of-bounds read access issue. It could occur when emulating vmcall instructions invoked by a guest. A guest user/process could use this flaw to disclose kernel memory bytes.\n1527112: \nCVE-2017-17741 kernel: kvm: stack-based out-of-bounds read via vmcall instruction\n\nCVE-2017-17712:\n\tA flaw was found in the Linux kernel&#039;s implementation of raw_sendmsg allowing a local attacker to panic the kernel or possibly leak kernel addresses. A local attacker, with the privilege of creating raw sockets, can abuse a possible race condition when setting the socket option to allow the kernel to automatically create ip header values and thus potentially escalate their privileges.\n1526427: \nCVE-2017-17712 kernel: Race condition in raw_sendmsg function allows denial-of-service or kernel addresses leak\n\nCVE-2017-17450:\n\tnet/netfilter/xt_osf.c in the Linux kernel through 4.14.4 does not require the CAP_NET_ADMIN capability for add_callback and remove_callback operations, which allows local users to bypass intended access restrictions because the xt_osf_fingers data structure is shared across all net namespaces.\n1525761: \nCVE-2017-17450 kernel: Unchecked capabilities in net/netfilter/xt_osf.c allows for unprivileged modification to systemwide fingerprint list\n\nCVE-2017-17448:\n\tnet/netfilter/nfnetlink_cthelper.c in the Linux kernel through 4.14.4 does not require the CAP_NET_ADMIN capability for new, get, and del operations, which allows local users to bypass intended access restrictions because the nfnl_cthelper_list data structure is shared across all net namespaces.\n1525768: \nCVE-2017-17448 kernel: Missing capabilities check in net/netfilter/nfnetlink_cthelper.c allows for unprivileged access to systemwide nfnl_cthelper_list structure\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "important"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/ALAS-2018-944.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-17448"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-17450"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-17712"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-17741"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-8824"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2017-17448",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-17448"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-17450",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-17450"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-17712",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-17712"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-17741",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-17741"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-8824",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-8824"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "kernel-devel",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.9.77-31.58.amzn1"
+					}
+				],
+				"fixed": [
+					"0:4.9.77-31.58.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "kernel",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.9.77-31.58.amzn1"
+					}
+				],
+				"fixed": [
+					"0:4.9.77-31.58.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "kernel-tools-debuginfo",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.9.77-31.58.amzn1"
+					}
+				],
+				"fixed": [
+					"0:4.9.77-31.58.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "kernel-debuginfo",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.9.77-31.58.amzn1"
+					}
+				],
+				"fixed": [
+					"0:4.9.77-31.58.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "kernel-debuginfo-common-i686",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.9.77-31.58.amzn1"
+					}
+				],
+				"fixed": [
+					"0:4.9.77-31.58.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "kernel-doc",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.9.77-31.58.amzn1"
+					}
+				],
+				"fixed": [
+					"0:4.9.77-31.58.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "perf",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.9.77-31.58.amzn1"
+					}
+				],
+				"fixed": [
+					"0:4.9.77-31.58.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "kernel-tools-devel",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.9.77-31.58.amzn1"
+					}
+				],
+				"fixed": [
+					"0:4.9.77-31.58.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "kernel-headers",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.9.77-31.58.amzn1"
+					}
+				],
+				"fixed": [
+					"0:4.9.77-31.58.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "kernel-tools",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.9.77-31.58.amzn1"
+					}
+				],
+				"fixed": [
+					"0:4.9.77-31.58.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "perf-debuginfo",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.9.77-31.58.amzn1"
+					}
+				],
+				"fixed": [
+					"0:4.9.77-31.58.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "kernel-debuginfo-common-x86_64",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.9.77-31.58.amzn1"
+					}
+				],
+				"fixed": [
+					"0:4.9.77-31.58.amzn1"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

@@ -1,0 +1,116 @@
+{
+	"id": "ALAS-2022-1654",
+	"advisories": [
+		{
+			"id": "ALAS-2022-1654",
+			"title": "Amazon Linux AMI 2014.03 - ALAS-2022-1654: important priority package update for expat",
+			"description": "Package updates are available for Amazon Linux AMI that fix the following vulnerabilities:\nCVE-2022-40674:\n\tA vulnerability was found in expat. With this flaw, it is possible to create a situation in which parsing is suspended while substituting in an internal entity so that XML_ResumeParser directly uses the internalEntityProcessor as its processor. If the subsequent parse includes some unclosed tags, this will return without calling storeRawNames to ensure that the raw versions of the tag names are stored in memory other than the parse buffer itself. Issues occur if the parse buffer is changed or reallocated (for example, if processing a file line by line), problems occur. Using this vulnerability in the doContent function allows an attacker to triage a denial of service or potentially arbitrary code execution.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "important"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/ALAS-2022-1654.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-40674"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2022-40674",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-40674"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "expat-debuginfo",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.1.0-15.32.amzn1"
+					}
+				],
+				"fixed": [
+					"0:2.1.0-15.32.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "expat-devel",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.1.0-15.32.amzn1"
+					}
+				],
+				"fixed": [
+					"0:2.1.0-15.32.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "expat",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.1.0-15.32.amzn1"
+					}
+				],
+				"fixed": [
+					"0:2.1.0-15.32.amzn1"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

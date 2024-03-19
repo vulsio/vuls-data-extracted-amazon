@@ -1,0 +1,220 @@
+{
+	"id": "ALAS-2012-97",
+	"advisories": [
+		{
+			"id": "ALAS-2012-97",
+			"title": "Amazon Linux - ALAS-2012-97: medium priority package update for net-snmp",
+			"description": "Package updates are available for Amazon Linux that fix the following vulnerabilities:\nCVE-2012-2141:\n\tArray index error in the handle_nsExtendOutput2Table function in agent/mibgroup/agent/extend.c in Net-SNMP 5.7.1 allows remote authenticated users to cause a denial of service (out-of-bounds read and snmpd crash) via an SNMP GET request for an entry not in the extension table.\nAn out-of-bounds buffer read flaw was found in the net-snmp agent. A remote attacker with read privileges to a Management Information Base (MIB) subtree handled by the \"extend\" directive (in \"/etc/snmp/snmpd.conf\") could use this flaw to crash snmpd via a crafted SNMP GET request.\nAn array index error, leading to an out-of-bounds buffer read flaw, was found in the way the net-snmp agent looked up entries in the extension table. A remote attacker with read privileges to a Management Information Base (MIB) subtree handled by the \"extend\" directive (in \"/etc/snmp/snmpd.conf\") could use this flaw to crash snmpd via a crafted SNMP GET request.\n815813: \nCVE-2012-2141 net-snmp: Array index error, leading to out-of heap-based buffer read (snmpd crash)\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "medium"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/ALAS-2012-97.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-2141"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://rhn.redhat.com/errata/RHSA-2012:0876.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2012-2141",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-2141"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "net-snmp-devel",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:5.5-41.10.amzn1"
+					}
+				],
+				"fixed": [
+					"1:5.5-41.10.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "net-snmp",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:5.5-41.10.amzn1"
+					}
+				],
+				"fixed": [
+					"1:5.5-41.10.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "net-snmp-perl",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:5.5-41.10.amzn1"
+					}
+				],
+				"fixed": [
+					"1:5.5-41.10.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "net-snmp-utils",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:5.5-41.10.amzn1"
+					}
+				],
+				"fixed": [
+					"1:5.5-41.10.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "net-snmp-libs",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:5.5-41.10.amzn1"
+					}
+				],
+				"fixed": [
+					"1:5.5-41.10.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "net-snmp-python",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:5.5-41.10.amzn1"
+					}
+				],
+				"fixed": [
+					"1:5.5-41.10.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "net-snmp-debuginfo",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:5.5-41.10.amzn1"
+					}
+				],
+				"fixed": [
+					"1:5.5-41.10.amzn1"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

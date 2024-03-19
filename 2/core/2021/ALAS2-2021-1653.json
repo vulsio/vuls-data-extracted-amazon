@@ -1,0 +1,150 @@
+{
+	"id": "ALAS2-2021-1653",
+	"advisories": [
+		{
+			"id": "ALAS2-2021-1653",
+			"title": "Amazon Linux 2 2017.12 - ALAS2-2021-1653: medium priority package update for curl",
+			"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2021-22898:\n\tA vulnerability was found in curl where a flaw in the option parser for sending NEW_ENV variables libcurl can pass uninitialized data from a stack-based buffer to the server. This issue leads to potentially revealing sensitive internal information to the server using a clear-text network protocol. The highest threat from this vulnerability is to confidentiality.\n1964887: CVE-2021-22898 curl: TELNET stack contents disclosure\n\nCVE-2021-22876:\n\tIt was discovered that libcurl did not remove authentication credentials from URLs when automatically populating the Referer HTTP request header while handling HTTP redirects. This could lead to exposure of the credentials to the server to which requests were redirected.\n1941964: CVE-2021-22876 curl: Leak of authentication credentials in URL via automatic Referer\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "medium"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALAS-2021-1653.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-22876"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-22898"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2021-22876",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-22876"
+				}
+			]
+		},
+		{
+			"id": "CVE-2021-22898",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-22898"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "libcurl",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:7.61.1-12.amzn2.0.4"
+					}
+				],
+				"fixed": [
+					"0:7.61.1-12.amzn2.0.4"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "libcurl-devel",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:7.61.1-12.amzn2.0.4"
+					}
+				],
+				"fixed": [
+					"0:7.61.1-12.amzn2.0.4"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "curl-debuginfo",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:7.61.1-12.amzn2.0.4"
+					}
+				],
+				"fixed": [
+					"0:7.61.1-12.amzn2.0.4"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "curl",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:7.61.1-12.amzn2.0.4"
+					}
+				],
+				"fixed": [
+					"0:7.61.1-12.amzn2.0.4"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

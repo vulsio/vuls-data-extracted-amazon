@@ -1,0 +1,216 @@
+{
+	"id": "ALAS-2021-1485",
+	"advisories": [
+		{
+			"id": "ALAS-2021-1485",
+			"title": "Amazon Linux AMI 2014.03 - ALAS-2021-1485: important priority package update for bind",
+			"description": "Package updates are available for Amazon Linux AMI that fix the following vulnerabilities:\nCVE-2020-8625:\n\tA buffer overflow flaw was found in the SPNEGO implementation used by BIND. This flaw allows a remote attacker to cause the named process to crash or possibly perform remote code execution. The highest threat from this vulnerability is to confidentiality, integrity, as well as system availability.\n1928486: CVE-2020-8625 bind: Buffer overflow in the SPNEGO implementation affecting GSSAPI security policy negotiation\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "important"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/ALAS-2021-1485.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-8625"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2020-8625",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-8625"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "bind-utils",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "32:9.8.2-0.68.rc1.86.amzn1"
+					}
+				],
+				"fixed": [
+					"32:9.8.2-0.68.rc1.86.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "bind-devel",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "32:9.8.2-0.68.rc1.86.amzn1"
+					}
+				],
+				"fixed": [
+					"32:9.8.2-0.68.rc1.86.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "bind-chroot",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "32:9.8.2-0.68.rc1.86.amzn1"
+					}
+				],
+				"fixed": [
+					"32:9.8.2-0.68.rc1.86.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "bind-sdb",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "32:9.8.2-0.68.rc1.86.amzn1"
+					}
+				],
+				"fixed": [
+					"32:9.8.2-0.68.rc1.86.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "bind",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "32:9.8.2-0.68.rc1.86.amzn1"
+					}
+				],
+				"fixed": [
+					"32:9.8.2-0.68.rc1.86.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "bind-debuginfo",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "32:9.8.2-0.68.rc1.86.amzn1"
+					}
+				],
+				"fixed": [
+					"32:9.8.2-0.68.rc1.86.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "bind-libs",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "32:9.8.2-0.68.rc1.86.amzn1"
+					}
+				],
+				"fixed": [
+					"32:9.8.2-0.68.rc1.86.amzn1"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

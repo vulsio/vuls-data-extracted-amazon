@@ -1,0 +1,89 @@
+{
+	"id": "ALAS2LIVEPATCH-2021-035",
+	"advisories": [
+		{
+			"id": "ALAS2LIVEPATCH-2021-035",
+			"title": "Amazon Linux 2 - Livepatch 2.0 - ALAS2LIVEPATCH-2021-035: important priority package update for kernel-livepatch-4.14.203-156.332",
+			"description": "Package updates are available for Amazon Linux 2 - Livepatch that fix the following vulnerabilities:\nCVE-2020-28374:\n\tA flaw was found in the Linux kernel's implementation of the Linux SCSI target host, where an authenticated attacker could write to any block on the exported SCSI device backing store. This flaw allows an authenticated attacker to send LIO block requests to the Linux system to overwrite data on the backing store. The highest threat from this vulnerability is to integrity. In addition, this flaw affects the tcmu-runner package, where the affected SCSI command is called.\n1899804: CVE-2020-28374 kernel: SCSI target (LIO) write to any block on ILO backstore\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "important"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALASLIVEPATCH-2021-035.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-28374"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2020-28374",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-28374"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "kernel-livepatch-4.14.203-156.332",
+				"repositories": [
+					"amzn2extra-livepatch"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.0-3.amzn2"
+					}
+				],
+				"fixed": [
+					"0:1.0-3.amzn2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "kernel-livepatch-4.14.203-156.332-debuginfo",
+				"repositories": [
+					"amzn2extra-livepatch"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.0-3.amzn2"
+					}
+				],
+				"fixed": [
+					"0:1.0-3.amzn2"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

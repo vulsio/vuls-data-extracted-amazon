@@ -1,0 +1,89 @@
+{
+	"id": "ALAS2-2018-985",
+	"advisories": [
+		{
+			"id": "ALAS2-2018-985",
+			"title": "Amazon Linux 2 2017.12 - ALAS2-2018-985: medium priority package update for mailman",
+			"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2018-5950:\n\tA cross-site scripting (XSS) flaw was found in mailman. An attacker, able to trick the user into visiting a specific URL, can execute arbitrary web scripts on the user&#039;s side and force the victim to perform unintended actions.\n1537941: \nCVE-2018-5950 mailman: Cross-site scripting (XSS) vulnerability in web UI\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "medium"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALAS-2018-985.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-5950"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2018-5950",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-5950"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "mailman",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "3:2.1.15-26.amzn2.1"
+					}
+				],
+				"fixed": [
+					"3:2.1.15-26.amzn2.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "mailman-debuginfo",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "3:2.1.15-26.amzn2.1"
+					}
+				],
+				"fixed": [
+					"3:2.1.15-26.amzn2.1"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

@@ -1,0 +1,115 @@
+{
+	"id": "ALAS2LIVEPATCH-2021-043",
+	"advisories": [
+		{
+			"id": "ALAS2LIVEPATCH-2021-043",
+			"title": "Amazon Linux 2 - Livepatch 2.0 - ALAS2LIVEPATCH-2021-043: important priority package update for kernel-livepatch-4.14.219-161.340",
+			"description": "Package updates are available for Amazon Linux 2 - Livepatch that fix the following vulnerabilities:\nCVE-2021-27365:\n\tA flaw was found in the Linux kernel. A heap buffer overflow in the iSCSI subsystem is triggered by setting an iSCSI string attribute to a value larger than one page and then trying to read it. The highest threat from this vulnerability is to data confidentiality and integrity as well as system availability.\n1930078: CVE-2021-27365 kernel: heap buffer overflow in the iSCSI subsystem\n\nCVE-2021-27364:\n\tA flaw was found in the Linux kernel. An out-of-bounds read was discovered in the libiscsi module that could lead to reading kernel memory or a crash. The highest threat from this vulnerability is to data confidentiality as well as system availability.\n1930080: CVE-2021-27364 kernel: out-of-bounds read in libiscsi module\n\nCVE-2021-27363:\n\tA flaw was found in the way access to sessions and handles was handled in the iSCSI driver in the Linux kernel. A local user could use this flaw to leak iSCSI transport handle kernel address or end arbitrary iSCSI connections on the system.\n1930079: CVE-2021-27363 kernel: iscsi: unrestricted access to sessions and handles\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "important"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALASLIVEPATCH-2021-043.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-27363"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-27364"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-27365"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2021-27363",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-27363"
+				}
+			]
+		},
+		{
+			"id": "CVE-2021-27364",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-27364"
+				}
+			]
+		},
+		{
+			"id": "CVE-2021-27365",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-27365"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "kernel-livepatch-4.14.219-161.340",
+				"repositories": [
+					"amzn2extra-livepatch"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.0-2.amzn2"
+					}
+				],
+				"fixed": [
+					"0:1.0-2.amzn2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "kernel-livepatch-4.14.219-161.340-debuginfo",
+				"repositories": [
+					"amzn2extra-livepatch"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.0-2.amzn2"
+					}
+				],
+				"fixed": [
+					"0:1.0-2.amzn2"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

@@ -1,0 +1,174 @@
+{
+	"id": "ALAS2-2020-1430",
+	"advisories": [
+		{
+			"id": "ALAS2-2020-1430",
+			"title": "Amazon Linux 2 2017.12 - ALAS2-2020-1430: important priority package update for unbound",
+			"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2020-12663:\n\tNo description is available for this CVE.\n99999: \nCVE-2020-12663 unbound: infinite loop via malformed DNS answers received from upstream servers\n\nCVE-2020-12662:\n\tNo description is available for this CVE.\n99999: \nCVE-2020-12662 unbound: insufficient control of network message volume leads to DoS\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "important"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALAS-2020-1430.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-12662"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-12663"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2020-12662",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-12662"
+				}
+			]
+		},
+		{
+			"id": "CVE-2020-12663",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-12663"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "unbound-devel",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.6.6-1.amzn2.0.3"
+					}
+				],
+				"fixed": [
+					"0:1.6.6-1.amzn2.0.3"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "unbound-libs",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.6.6-1.amzn2.0.3"
+					}
+				],
+				"fixed": [
+					"0:1.6.6-1.amzn2.0.3"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "unbound-python",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.6.6-1.amzn2.0.3"
+					}
+				],
+				"fixed": [
+					"0:1.6.6-1.amzn2.0.3"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "unbound-debuginfo",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.6.6-1.amzn2.0.3"
+					}
+				],
+				"fixed": [
+					"0:1.6.6-1.amzn2.0.3"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "unbound",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.6.6-1.amzn2.0.3"
+					}
+				],
+				"fixed": [
+					"0:1.6.6-1.amzn2.0.3"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

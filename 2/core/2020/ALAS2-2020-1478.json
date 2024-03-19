@@ -1,0 +1,89 @@
+{
+	"id": "ALAS2-2020-1478",
+	"advisories": [
+		{
+			"id": "ALAS2-2020-1478",
+			"title": "Amazon Linux 2 2017.12 - ALAS2-2020-1478: medium priority package update for gnome-shell",
+			"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2019-3820:\n\tIt was discovered that the gnome-shell lock screen since version 3.15.91 did not properly restrict all contextual actions. An attacker with physical access to a locked workstation could invoke certain keyboard shortcuts, and potentially other actions.\n1669391: CVE-2019-3820 gnome-shell: partial lock screen bypass\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "medium"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALAS-2020-1478.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-3820"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2019-3820",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-3820"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "gnome-shell",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:3.28.3-24.amzn2"
+					}
+				],
+				"fixed": [
+					"0:3.28.3-24.amzn2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "gnome-shell-debuginfo",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:3.28.3-24.amzn2"
+					}
+				],
+				"fixed": [
+					"0:3.28.3-24.amzn2"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

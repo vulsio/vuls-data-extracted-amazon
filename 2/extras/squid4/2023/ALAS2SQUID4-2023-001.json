@@ -1,0 +1,89 @@
+{
+	"id": "ALAS2SQUID4-2023-001",
+	"advisories": [
+		{
+			"id": "ALAS2SQUID4-2023-001",
+			"title": "Amazon Linux 2 - Squid4 2.0 - ALAS2SQUID4-2023-001: important priority package update for squid",
+			"description": "Package updates are available for Amazon Linux 2 - Squid4 that fix the following vulnerabilities:\nCVE-2022-41318:\n\tA flaw was found in Squid. An incorrect integer overflow protection in the Squid SSPI and SMB authentication helpers is vulnerable to a buffer overflow attack, resulting in information disclosure or a denial of service.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "important"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALASSQUID4-2023-001.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-41318"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2022-41318",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-41318"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "squid",
+				"repositories": [
+					"amzn2extra-squid4"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "7:4.15-1.amzn2.0.4"
+					}
+				],
+				"fixed": [
+					"7:4.15-1.amzn2.0.4"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "squid-debuginfo",
+				"repositories": [
+					"amzn2extra-squid4"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "7:4.15-1.amzn2.0.4"
+					}
+				],
+				"fixed": [
+					"7:4.15-1.amzn2.0.4"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

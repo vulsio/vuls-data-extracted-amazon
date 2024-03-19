@@ -1,0 +1,137 @@
+{
+	"id": "ALAS2NITRO-ENCLAVES-2023-021",
+	"advisories": [
+		{
+			"id": "ALAS2NITRO-ENCLAVES-2023-021",
+			"title": "Amazon Linux 2 - Nitro-enclaves 2.0 - ALAS2NITRO-ENCLAVES-2023-021: important priority package update for aws-nitro-enclaves-cli",
+			"description": "Package updates are available for Amazon Linux 2 - Nitro-enclaves that fix the following vulnerabilities:\nCVE-2022-31394:\n\tHyperium Hyper before 0.14.19 does not allow for customization of the max_header_list_size method in the H2 third-party software, allowing attackers to perform HTTP2 attacks.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "important"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALASNITRO-ENCLAVES-2023-021.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-31394"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2022-31394",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-31394"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "aws-nitro-enclaves-cli-devel",
+				"repositories": [
+					"amzn2extra-nitro-enclaves"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.2.2-0.amzn2"
+					}
+				],
+				"fixed": [
+					"0:1.2.2-0.amzn2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "aws-nitro-enclaves-cli-debuginfo",
+				"repositories": [
+					"amzn2extra-nitro-enclaves"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.2.2-0.amzn2"
+					}
+				],
+				"fixed": [
+					"0:1.2.2-0.amzn2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "aws-nitro-enclaves-cli",
+				"repositories": [
+					"amzn2extra-nitro-enclaves"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.2.2-0.amzn2"
+					}
+				],
+				"fixed": [
+					"0:1.2.2-0.amzn2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "aws-nitro-enclaves-cli-integration-tests",
+				"repositories": [
+					"amzn2extra-nitro-enclaves"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.2.2-0.amzn2"
+					}
+				],
+				"fixed": [
+					"0:1.2.2-0.amzn2"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

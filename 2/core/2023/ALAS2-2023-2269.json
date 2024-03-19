@@ -1,0 +1,315 @@
+{
+	"id": "ALAS2-2023-2269",
+	"advisories": [
+		{
+			"id": "ALAS2-2023-2269",
+			"title": "Amazon Linux 2 2017.12 - ALAS2-2023-2269: medium priority package update for freerdp",
+			"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2023-40589:\n\tFreeRDP is a free implementation of the Remote Desktop Protocol (RDP), released under the Apache license. In affected versions there is a Global-Buffer-Overflow in the ncrush_decompress function. Feeding crafted input into this function can trigger the overflow which has only been shown to cause a crash. This issue has been addressed in versions 2.11.0 and 3.0.0-beta3. Users are advised to upgrade. There are no known workarounds for this issue.\n\nCVE-2023-40569:\n\tFreeRDP is a free implementation of the Remote Desktop Protocol (RDP), released under the Apache license. Affected versions are subject to an Out-Of-Bounds Write in the `progressive_decompress` function. This issue is likely down to incorrect calculations of the `nXSrc` and `nYSrc` variables. This issue has been addressed in versions 2.11.0 and 3.0.0-beta3. Users are advised to upgrade. there are no known workarounds for this vulnerability.\n\nCVE-2023-40567:\n\tFreeRDP is a free implementation of the Remote Desktop Protocol (RDP), released under the Apache license. Affected versions are subject to an Out-Of-Bounds Write in the `clear_decompress_bands_data` function in which there is no offset validation. Abuse of this vulnerability may lead to an out of bounds write. This issue has been addressed in versions 2.11.0 and 3.0.0-beta3. Users are advised to upgrade. there are no known workarounds for this vulnerability.\n\nCVE-2023-40188:\n\tNOTE: https://github.com/FreeRDP/FreeRDP/security/advisories/GHSA-9w28-wwj5-p4xq\n\nCVE-2023-40186:\n\tNOTE: https://github.com/FreeRDP/FreeRDP/security/advisories/GHSA-hcj4-3c3r-5j3v\n\nCVE-2023-40181:\n\tNOTE: https://github.com/FreeRDP/FreeRDP/security/advisories/GHSA-mxp4-rx7x-h2g8\n\nCVE-2023-39356:\n\tFreeRDP is a free implementation of the Remote Desktop Protocol (RDP), released under the Apache license. In affected versions a missing offset validation may lead to an Out Of Bound Read in the function `gdi_multi_opaque_rect`. In particular there is no code to validate if the value `multi_opaque_rect->numRectangles` is less than 45. Looping through `multi_opaque_rect->`numRectangles without proper boundary checks can lead to Out-of-Bounds Read errors which will likely lead to a crash. This issue has been addressed in versions 2.11.0 and 3.0.0-beta3. Users are advised to upgrade. There are no known workarounds for this vulnerability.\n\nCVE-2023-39354:\n\tFreeRDP is a free implementation of the Remote Desktop Protocol (RDP), released under the Apache license. Affected versions are subject to an Out-Of-Bounds Read in the `nsc_rle_decompress_data` function. The Out-Of-Bounds Read occurs because it processes `context->Planes` without  checking if it contains data of sufficient length. Should an attacker be able to leverage this vulnerability they may be able to cause a crash. This issue has been addressed in versions 2.11.0 and 3.0.0-beta3. Users are advised to upgrade. There are no known workarounds for this vulnerability.\n\nCVE-2023-39353:\n\tFreeRDP is a free implementation of the Remote Desktop Protocol (RDP), released under the Apache license. Affected versions are subject to a missing offset validation leading to Out Of Bound Read. In the `libfreerdp/codec/rfx.c` file there is no offset validation in `tile->quantIdxY`, `tile->quantIdxCb`, and `tile->quantIdxCr`. As a result crafted input can lead to an out of bounds read access which in turn will cause a crash. This issue has been addressed in versions 2.11.0 and 3.0.0-beta3. Users are advised to upgrade. There are no known workarounds for this vulnerability.\n\nCVE-2023-39351:\n\tFreeRDP is a free implementation of the Remote Desktop Protocol (RDP), released under the Apache license. Affected versions of FreeRDP are subject to a Null Pointer Dereference leading a crash in the RemoteFX (rfx) handling.  Inside the `rfx_process_message_tileset` function, the program allocates tiles using `rfx_allocate_tiles` for the number of numTiles. If the initialization process of tiles is not completed for various reasons, tiles will have a NULL pointer. Which may be accessed in further processing and would cause a program crash. This issue has been addressed in versions 2.11.0 and 3.0.0-beta3. Users are advised to upgrade. There are no known workarounds for this vulnerability.\n\nCVE-2023-39350:\n\tFreeRDP is a free implementation of the Remote Desktop Protocol (RDP), released under the Apache license. This issue affects Clients only. Integer underflow leading to DOS (e.g. abort due to `WINPR_ASSERT` with default compilation flags). When an insufficient blockLen is provided, and proper length validation is not performed, an Integer Underflow occurs, leading to a Denial of Service (DOS) vulnerability. This issue has been addressed in versions 2.11.0 and 3.0.0-beta3. Users are advised to upgrade. There are no known workarounds for this vulnerability.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "medium"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALAS-2023-2269.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-39350"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-39351"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-39353"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-39354"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-39356"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-40181"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-40186"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-40188"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-40567"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-40569"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-40589"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2023-39350",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-39350"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-39351",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-39351"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-39353",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-39353"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-39354",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-39354"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-39356",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-39356"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-40181",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-40181"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-40186",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-40186"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-40188",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-40188"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-40567",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-40567"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-40569",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-40569"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-40589",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-40589"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "libwinpr",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "2:2.11.1-1.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"2:2.11.1-1.amzn2.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "libwinpr-devel",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "2:2.11.1-1.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"2:2.11.1-1.amzn2.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "freerdp-debuginfo",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "2:2.11.1-1.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"2:2.11.1-1.amzn2.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "freerdp",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "2:2.11.1-1.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"2:2.11.1-1.amzn2.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "freerdp-libs",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "2:2.11.1-1.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"2:2.11.1-1.amzn2.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "freerdp-devel",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "2:2.11.1-1.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"2:2.11.1-1.amzn2.0.1"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

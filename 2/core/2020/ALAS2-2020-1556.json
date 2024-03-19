@@ -1,0 +1,429 @@
+{
+	"id": "ALAS2-2020-1556",
+	"advisories": [
+		{
+			"id": "ALAS2-2020-1556",
+			"title": "Amazon Linux 2 2017.12 - ALAS2-2020-1556: important priority package update for kernel",
+			"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2020-25211:\n\tIn the Linux kernel through 5.8.7, local attackers able to inject conntrack netlink configuration could overflow a local buffer, causing crashes or triggering use of incorrect protocol numbers in ctnetlink_parse_tuple_filter in net/netfilter/nf_conntrack_netlink.c, aka CID-1cc5ef91d2ff.\nA flaw was found in the Linux kernel. A local attacker, able to inject conntrack netlink configuration, could overflow a local buffer causing crashes or triggering the use of incorrect protocol numbers in ctnetlink_parse_tuple_filter in net/netfilter/nf_conntrack_netlink.c. The highest threat from this vulnerability is to data confidentiality and integrity as well as system availability.\n1877571: CVE-2020-25211 kernel: Local buffer overflow in ctnetlink_parse_tuple_filter in net/netfilter/nf_conntrack_netlink.c\n\nCVE-2020-24490:\n\tA heap buffer overflow flaw was found in the way the Linux kernel's Bluetooth implementation processed extended advertising report events. This flaw allows a remote attacker in an adjacent range to crash the system, causing a denial of service or to potentially execute arbitrary code on the system by sending a specially crafted Bluetooth packet. The highest threat from this vulnerability is to confidentiality, integrity, as well as system availability.\n1888449: CVE-2020-24490 kernel: net: bluetooth: heap buffer overflow when processing extended advertising report events\n\nCVE-2020-12352:\n\tAn information leak flaw was found in the way Linux kernel's Bluetooth stack implementation handled initialization of stack memory when handling certain AMP (Alternate MAC-PHY Manager Protocol) packets. This flaw allows a remote attacker in an adjacent range to leak small portions of stack memory on the system by sending specially crafted AMP packets. The highest threat from this vulnerability is to data confidentiality.\n1886529: CVE-2020-12352 kernel: net: bluetooth: information leak when processing certain AMP packets\n\nCVE-2020-12351:\n\tA flaw was found in the way the Linux kernel's Bluetooth implementation handled L2CAP (Logical Link Control and Adaptation Protocol) packets with A2MP (Alternate MAC-PHY Manager Protocol) CID (Channel Identifier). This flaw allows a remote attacker in an adjacent range to crash the system, causing a denial of service or potentially executing arbitrary code on the system by sending a specially crafted L2CAP packet. The highest threat from this vulnerability is to data confidentiality and integrity as well as system availability.\n1886521: CVE-2020-12351 kernel: net: bluetooth: type confusion while processing AMP packets\n\nCVE-2020-0423:\n\t99999: \n\n\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "important"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALAS-2020-1556.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-0423"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-12351"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-12352"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-24490"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-25211"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2020-0423",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-0423"
+				}
+			]
+		},
+		{
+			"id": "CVE-2020-12351",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-12351"
+				}
+			]
+		},
+		{
+			"id": "CVE-2020-12352",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-12352"
+				}
+			]
+		},
+		{
+			"id": "CVE-2020-24490",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-24490"
+				}
+			]
+		},
+		{
+			"id": "CVE-2020-25211",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-25211"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "kernel-debuginfo-common-aarch64",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.14.203-156.332.amzn2"
+					}
+				],
+				"fixed": [
+					"0:4.14.203-156.332.amzn2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "perf",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.14.203-156.332.amzn2"
+					}
+				],
+				"fixed": [
+					"0:4.14.203-156.332.amzn2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "python-perf",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.14.203-156.332.amzn2"
+					}
+				],
+				"fixed": [
+					"0:4.14.203-156.332.amzn2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "kernel-headers",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.14.203-156.332.amzn2"
+					}
+				],
+				"fixed": [
+					"0:4.14.203-156.332.amzn2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "kernel-tools",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.14.203-156.332.amzn2"
+					}
+				],
+				"fixed": [
+					"0:4.14.203-156.332.amzn2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "kernel-devel",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.14.203-156.332.amzn2"
+					}
+				],
+				"fixed": [
+					"0:4.14.203-156.332.amzn2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "kernel-debuginfo",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.14.203-156.332.amzn2"
+					}
+				],
+				"fixed": [
+					"0:4.14.203-156.332.amzn2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "kernel-debuginfo-common-x86_64",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.14.203-156.332.amzn2"
+					}
+				],
+				"fixed": [
+					"0:4.14.203-156.332.amzn2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "kernel-livepatch-4.14.203-156.332",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.0-0.amzn2"
+					}
+				],
+				"fixed": [
+					"0:1.0-0.amzn2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "kernel",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.14.203-156.332.amzn2"
+					}
+				],
+				"fixed": [
+					"0:4.14.203-156.332.amzn2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "python-perf-debuginfo",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.14.203-156.332.amzn2"
+					}
+				],
+				"fixed": [
+					"0:4.14.203-156.332.amzn2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "kernel-tools-devel",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.14.203-156.332.amzn2"
+					}
+				],
+				"fixed": [
+					"0:4.14.203-156.332.amzn2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "kernel-tools-debuginfo",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.14.203-156.332.amzn2"
+					}
+				],
+				"fixed": [
+					"0:4.14.203-156.332.amzn2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "perf-debuginfo",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.14.203-156.332.amzn2"
+					}
+				],
+				"fixed": [
+					"0:4.14.203-156.332.amzn2"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

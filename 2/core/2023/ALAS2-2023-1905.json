@@ -1,0 +1,113 @@
+{
+	"id": "ALAS2-2023-1905",
+	"advisories": [
+		{
+			"id": "ALAS2-2023-1905",
+			"title": "Amazon Linux 2 2017.12 - ALAS2-2023-1905: medium priority package update for pcs",
+			"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2019-11358:\n\tA Prototype Pollution vulnerability was found in jquery. Untrusted JSON passed to the `extend` function could lead to modifying objects up the prototype chain, including the global Object. A crafted JSON object passed to a vulnerable method could lead to denial of service or data injection, with various consequences.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "medium"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALAS-2023-1905.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-11358"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2019-11358",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-11358"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "pcs",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:0.9.169-3.amzn2.3.0.1"
+					}
+				],
+				"fixed": [
+					"0:0.9.169-3.amzn2.3.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "pcs-snmp",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:0.9.169-3.amzn2.3.0.1"
+					}
+				],
+				"fixed": [
+					"0:0.9.169-3.amzn2.3.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "pcs-debuginfo",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:0.9.169-3.amzn2.3.0.1"
+					}
+				],
+				"fixed": [
+					"0:0.9.169-3.amzn2.3.0.1"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

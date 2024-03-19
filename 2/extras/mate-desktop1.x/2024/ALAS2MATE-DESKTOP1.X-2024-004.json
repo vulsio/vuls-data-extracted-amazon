@@ -1,0 +1,139 @@
+{
+	"id": "ALAS2MATE-DESKTOP1.X-2024-004",
+	"advisories": [
+		{
+			"id": "ALAS2MATE-DESKTOP1.X-2024-004",
+			"title": "Amazon Linux 2 - Mate-desktop1.x 2.0 - ALAS2MATE-DESKTOP1.X-2024-004: important priority package update for libsass",
+			"description": "Package updates are available for Amazon Linux 2 - Mate-desktop1.x that fix the following vulnerabilities:\nCVE-2022-43358:\n\tStack overflow vulnerability in ast_selectors.cpp: in function Sass::ComplexSelector::has_placeholder in libsass:3.6.5-8-g210218, which can be exploited by attackers to cause a denial of service (DoS).\n\nCVE-2022-43357:\n\tStack overflow vulnerability in ast_selectors.cpp in function Sass::CompoundSelector::has_real_parent_ref in libsass:3.6.5-8-g210218, which can be exploited by attackers to causea denial of service (DoS). Also affects the command line driver for libsass, sassc 3.6.2.\n\nCVE-2022-26592:\n\tStack Overflow vulnerability in libsass 3.6.5 via the CompoundSelector::has_real_parent_ref function.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "important"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALASMATE-DESKTOP1.X-2024-004.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-26592"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-43357"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-43358"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2022-26592",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-26592"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-43357",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-43357"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-43358",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-43358"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "libsass",
+				"repositories": [
+					"amzn2extra-mate-desktop1.x"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:3.6.4-3.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"0:3.6.4-3.amzn2.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "libsass-devel",
+				"repositories": [
+					"amzn2extra-mate-desktop1.x"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:3.6.4-3.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"0:3.6.4-3.amzn2.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "libsass-debuginfo",
+				"repositories": [
+					"amzn2extra-mate-desktop1.x"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:3.6.4-3.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"0:3.6.4-3.amzn2.0.1"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

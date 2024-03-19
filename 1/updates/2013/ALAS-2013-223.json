@@ -1,0 +1,154 @@
+{
+	"id": "ALAS-2013-223",
+	"advisories": [
+		{
+			"id": "ALAS-2013-223",
+			"title": "Amazon Linux AMI 2012.09 - ALAS-2013-223: important priority package update for 389-ds-base",
+			"description": "Package updates are available for Amazon Linux AMI that fix the following vulnerabilities:\nCVE-2013-4283:\n\tns-slapd in 389 Directory Server before 1.3.0.8 allows remote attackers to cause a denial of service (server crash) via a crafted Distinguished Name (DN) in a MOD operation request.\nIt was discovered that the 389 Directory Server did not properly handle the receipt of certain MOD operations with a bogus Distinguished Name (DN). A remote, unauthenticated attacker could use this flaw to cause the 389 Directory Server to crash.\n999634: \nCVE-2013-4283 389-ds-base: ns-slapd crash due to bogus DN\n\nCVE-2013-2219:\n\tThe Red Hat Directory Server before 8.2.11-13 and 389 Directory Server do not properly restrict access to entity attributes, which allows remote authenticated users to obtain sensitive information via a search query for the attribute.\nIt was discovered that the 389 Directory Server did not honor defined attribute access controls when evaluating search filter expressions. A remote attacker (with permission to query the Directory Server) could use this flaw to determine the values of restricted attributes via a series of search queries with filter conditions that used restricted attributes.\n979508: \nCVE-2013-2219 Directory Server: ACLs inoperative in some search scenarios\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "important"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/ALAS-2013-223.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-2219"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-4283"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2013-2219",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-2219"
+				}
+			]
+		},
+		{
+			"id": "CVE-2013-4283",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-4283"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "389-ds-base-debuginfo",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.3.1.8-1.5.amzn1"
+					}
+				],
+				"fixed": [
+					"0:1.3.1.8-1.5.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "389-ds-base-libs",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.3.1.8-1.5.amzn1"
+					}
+				],
+				"fixed": [
+					"0:1.3.1.8-1.5.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "389-ds-base-devel",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.3.1.8-1.5.amzn1"
+					}
+				],
+				"fixed": [
+					"0:1.3.1.8-1.5.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "389-ds-base",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.3.1.8-1.5.amzn1"
+					}
+				],
+				"fixed": [
+					"0:1.3.1.8-1.5.amzn1"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

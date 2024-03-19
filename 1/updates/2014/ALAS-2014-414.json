@@ -1,0 +1,191 @@
+{
+	"id": "ALAS-2014-414",
+	"advisories": [
+		{
+			"id": "ALAS-2014-414",
+			"title": "Amazon Linux AMI 2014.03 - ALAS-2014-414: low priority package update for httpd",
+			"description": "Package updates are available for Amazon Linux AMI that fix the following vulnerabilities:\nCVE-2013-5704:\n\tThe mod_headers module in the Apache HTTP Server 2.2.22 allows remote attackers to bypass \"RequestHeader unset\" directives by placing a header in the trailer portion of data sent with chunked transfer coding.  NOTE: the vendor states \"this is not a security issue in httpd as such.\"\n1082903: \nCVE-2013-5704 httpd: bypass of mod_headers rules via chunked requests\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "low"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/ALAS-2014-414.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-5704"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2013-5704",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-5704"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "httpd-manual",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.2.29-1.4.amzn1"
+					}
+				],
+				"fixed": [
+					"0:2.2.29-1.4.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "httpd",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.2.29-1.4.amzn1"
+					}
+				],
+				"fixed": [
+					"0:2.2.29-1.4.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "mod_ssl",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:2.2.29-1.4.amzn1"
+					}
+				],
+				"fixed": [
+					"1:2.2.29-1.4.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "httpd-debuginfo",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.2.29-1.4.amzn1"
+					}
+				],
+				"fixed": [
+					"0:2.2.29-1.4.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "httpd-devel",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.2.29-1.4.amzn1"
+					}
+				],
+				"fixed": [
+					"0:2.2.29-1.4.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "httpd-tools",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.2.29-1.4.amzn1"
+					}
+				],
+				"fixed": [
+					"0:2.2.29-1.4.amzn1"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

@@ -1,0 +1,166 @@
+{
+	"id": "ALAS-2014-423",
+	"advisories": [
+		{
+			"id": "ALAS-2014-423",
+			"title": "Amazon Linux AMI 2014.03 - ALAS-2014-423: important priority package update for nss-softokn",
+			"description": "Package updates are available for Amazon Linux AMI that fix the following vulnerabilities:\nCVE-2014-1568:\n\tA flaw was found in the way NSS parsed ASN.1 (Abstract Syntax Notation One) input from certain RSA signatures. A remote attacker could use this flaw to forge RSA certificates by providing a specially crafted signature to an application using NSS.\n1145429: \nCVE-2014-1568 nss: RSA PKCS#1 signature verification forgery flaw (MFSA 2014-73)\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "important"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/ALAS-2014-423.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-1568"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2014-1568",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-1568"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "nss-softokn-debuginfo",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:3.16.2-2.2.amzn1"
+					}
+				],
+				"fixed": [
+					"0:3.16.2-2.2.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "nss-softokn-devel",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:3.16.2-2.2.amzn1"
+					}
+				],
+				"fixed": [
+					"0:3.16.2-2.2.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "nss-softokn-freebl-devel",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:3.16.2-2.2.amzn1"
+					}
+				],
+				"fixed": [
+					"0:3.16.2-2.2.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "nss-softokn",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:3.16.2-2.2.amzn1"
+					}
+				],
+				"fixed": [
+					"0:3.16.2-2.2.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "nss-softokn-freebl",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:3.16.2-2.2.amzn1"
+					}
+				],
+				"fixed": [
+					"0:3.16.2-2.2.amzn1"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

@@ -1,0 +1,116 @@
+{
+	"id": "ALAS-2019-1176",
+	"advisories": [
+		{
+			"id": "ALAS-2019-1176",
+			"title": "Amazon Linux AMI 2014.03 - ALAS-2019-1176: medium priority package update for squid",
+			"description": "Package updates are available for Amazon Linux AMI that fix the following vulnerabilities:\nCVE-2018-19132:\n\tA memory leak was discovered in the way Squid handles SNMP denied queries. A remote attacker may use this flaw to exhaust the resources on the server machine.\n1645154: \nCVE-2018-19132 squid: Memory leak in SNMP query rejection code\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "medium"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/ALAS-2019-1176.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-19132"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2018-19132",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-19132"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "squid-debuginfo",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "7:3.5.20-12.38.amzn1"
+					}
+				],
+				"fixed": [
+					"7:3.5.20-12.38.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "squid",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "7:3.5.20-12.38.amzn1"
+					}
+				],
+				"fixed": [
+					"7:3.5.20-12.38.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "squid-migration-script",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "7:3.5.20-12.38.amzn1"
+					}
+				],
+				"fixed": [
+					"7:3.5.20-12.38.amzn1"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

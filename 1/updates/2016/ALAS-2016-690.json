@@ -1,0 +1,104 @@
+{
+	"id": "ALAS-2016-690",
+	"advisories": [
+		{
+			"id": "ALAS-2016-690",
+			"title": "Amazon Linux AMI 2014.03 - ALAS-2016-690: medium priority package update for foomatic",
+			"description": "Package updates are available for Amazon Linux AMI that fix the following vulnerabilities:\nCVE-2015-8560:\n\tIt was discovered that foomatic-rip failed to remove all shell special characters from inputs used to construct command lines for external programs run by the filter. An attacker could possibly use this flaw to execute arbitrary commands.\n1291227: \nCVE-2015-8560 cups-filters: foomatic-rip did not consider semicolon as illegal shell escape character\n\nCVE-2010-5325:\n\tIt was discovered that the unhtmlify() function of foomatic-rip did not correctly calculate buffer sizes, possibly leading to a heap-based memory corruption. A malicious attacker could exploit this flaw to cause foomatic-rip to crash or, possibly, execute arbitrary code.\n1218297: \nCVE-2010-5325 foomatic: potential remote arbitrary code execution\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "medium"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/ALAS-2016-690.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-5325"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-8560"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2010-5325",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-5325"
+				}
+			]
+		},
+		{
+			"id": "CVE-2015-8560",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-8560"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "foomatic",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.0.4-5.11.amzn1"
+					}
+				],
+				"fixed": [
+					"0:4.0.4-5.11.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "foomatic-debuginfo",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.0.4-5.11.amzn1"
+					}
+				],
+				"fixed": [
+					"0:4.0.4-5.11.amzn1"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

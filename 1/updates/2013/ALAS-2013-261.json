@@ -1,0 +1,146 @@
+{
+	"id": "ALAS-2013-261",
+	"advisories": [
+		{
+			"id": "ALAS-2013-261",
+			"title": "Amazon Linux AMI 2012.09 - ALAS-2013-261: low priority package update for coreutils",
+			"description": "Package updates are available for Amazon Linux AMI that fix the following vulnerabilities:\nCVE-2013-0223:\n\tIt was discovered that the sort, uniq, and join utilities did not properly restrict the use of the alloca() function. An attacker could use this flaw to crash those utilities by providing long input strings.\n\nCVE-2013-0222:\n\tIt was discovered that the sort, uniq, and join utilities did not properly restrict the use of the alloca() function. An attacker could use this flaw to crash those utilities by providing long input strings.\n\nCVE-2013-0221:\n\tIt was discovered that the sort, uniq, and join utilities did not properly restrict the use of the alloca() function. An attacker could use this flaw to crash those utilities by providing long input strings.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "low"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/ALAS-2013-261.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-0221"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-0222"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-0223"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://rhn.redhat.com/errata/RHSA-2013:1652.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2013-0221",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-0221"
+				}
+			]
+		},
+		{
+			"id": "CVE-2013-0222",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-0222"
+				}
+			]
+		},
+		{
+			"id": "CVE-2013-0223",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-0223"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "coreutils-libs",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:8.4-31.17.amzn1"
+					}
+				],
+				"fixed": [
+					"0:8.4-31.17.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "coreutils",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:8.4-31.17.amzn1"
+					}
+				],
+				"fixed": [
+					"0:8.4-31.17.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "coreutils-debuginfo",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:8.4-31.17.amzn1"
+					}
+				],
+				"fixed": [
+					"0:8.4-31.17.amzn1"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}
