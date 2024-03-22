@@ -1,0 +1,137 @@
+{
+	"id": "ALAS2023-2024-567",
+	"advisories": [
+		{
+			"id": "ALAS2023-2024-567",
+			"title": "Amazon Linux 2023 - ALAS2023-2024-567: Medium priority package update for wireshark",
+			"description": "Package updates are available for Amazon Linux 2023 that fix the following vulnerabilities:\nCVE-2024-24478:\n\tAn issue in Wireshark team Wireshark before v.4.2.0 allows a remote attacker to cause a denial of service via the packet-bgp.c, dissect_bgp_open(tvbuff_t*tvb, proto_tree*tree, packet_info*pinfo), optlen components.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "Medium"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2023/ALAS-2024-567.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-24478"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2024-24478",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-24478"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2023",
+			"vulnerable": true,
+			"package": {
+				"name": "wireshark-debugsource",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:4.0.8-2.amzn2023.0.5"
+					}
+				],
+				"fixed": [
+					"1:4.0.8-2.amzn2023.0.5"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2023",
+			"vulnerable": true,
+			"package": {
+				"name": "wireshark-cli-debuginfo",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:4.0.8-2.amzn2023.0.5"
+					}
+				],
+				"fixed": [
+					"1:4.0.8-2.amzn2023.0.5"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2023",
+			"vulnerable": true,
+			"package": {
+				"name": "wireshark-cli",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:4.0.8-2.amzn2023.0.5"
+					}
+				],
+				"fixed": [
+					"1:4.0.8-2.amzn2023.0.5"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2023",
+			"vulnerable": true,
+			"package": {
+				"name": "wireshark-devel",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:4.0.8-2.amzn2023.0.5"
+					}
+				],
+				"fixed": [
+					"1:4.0.8-2.amzn2023.0.5"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

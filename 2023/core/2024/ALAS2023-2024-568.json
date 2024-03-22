@@ -1,0 +1,307 @@
+{
+	"id": "ALAS2023-2024-568",
+	"advisories": [
+		{
+			"id": "ALAS2023-2024-568",
+			"title": "Amazon Linux 2023 - ALAS2023-2024-568: Medium priority package update for nodejs",
+			"description": "Package updates are available for Amazon Linux 2023 that fix the following vulnerabilities:\nCVE-2024-25629:\n\tc-ares is a C library for asynchronous DNS requests. `ares__read_line()` is used to parse local configuration files such as `/etc/resolv.conf`, `/etc/nsswitch.conf`, the `HOSTALIASES` file, and if using a c-ares version prior to 1.27.0, the `/etc/hosts` file. If any of these configuration files has an embedded `NULL` character as the first character in a new line, it can lead to attempting to read memory prior to the start of the given buffer which may result in a crash. This issue is fixed in c-ares 1.27.0. No known workarounds exist.\n\nCVE-2024-24758:\n\tUndici is an HTTP/1.1 client, written from scratch for Node.js. Undici already cleared Authorization headers on cross-origin redirects, but did not clear `Proxy-Authentication` headers. This issue has been patched in versions 5.28.3 and 6.6.1. Users are advised to upgrade. There are no known workarounds for this vulnerability.\n\nCVE-2024-22025:\n\tNOTE: https://nodejs.org/en/blog/release/v18.19.1\nNOTE: https://github.com/nodejs/node/commit/f31d47e135973746c4f490d5eb635eded8bb3dda (v18.x)\nNOTE: https://github.com/nodejs/node/commit/9052ef43dc2d1b0db340591a9bc9e45a25c01d90 (main)\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "Medium"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2023/ALAS-2024-568.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-22025"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-24758"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-25629"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2024-22025",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-22025"
+				}
+			]
+		},
+		{
+			"id": "CVE-2024-24758",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-24758"
+				}
+			]
+		},
+		{
+			"id": "CVE-2024-25629",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-25629"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2023",
+			"vulnerable": true,
+			"package": {
+				"name": "nodejs-full-i18n",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:18.18.2-1.amzn2023.0.3"
+					}
+				],
+				"fixed": [
+					"1:18.18.2-1.amzn2023.0.3"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2023",
+			"vulnerable": true,
+			"package": {
+				"name": "nodejs-docs",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:18.18.2-1.amzn2023.0.3"
+					}
+				],
+				"fixed": [
+					"1:18.18.2-1.amzn2023.0.3"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2023",
+			"vulnerable": true,
+			"package": {
+				"name": "nodejs",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:18.18.2-1.amzn2023.0.3"
+					}
+				],
+				"fixed": [
+					"1:18.18.2-1.amzn2023.0.3"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2023",
+			"vulnerable": true,
+			"package": {
+				"name": "nodejs-debugsource",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:18.18.2-1.amzn2023.0.3"
+					}
+				],
+				"fixed": [
+					"1:18.18.2-1.amzn2023.0.3"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2023",
+			"vulnerable": true,
+			"package": {
+				"name": "nodejs-libs-debuginfo",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:18.18.2-1.amzn2023.0.3"
+					}
+				],
+				"fixed": [
+					"1:18.18.2-1.amzn2023.0.3"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2023",
+			"vulnerable": true,
+			"package": {
+				"name": "nodejs-debuginfo",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:18.18.2-1.amzn2023.0.3"
+					}
+				],
+				"fixed": [
+					"1:18.18.2-1.amzn2023.0.3"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2023",
+			"vulnerable": true,
+			"package": {
+				"name": "nodejs-devel",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:18.18.2-1.amzn2023.0.3"
+					}
+				],
+				"fixed": [
+					"1:18.18.2-1.amzn2023.0.3"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2023",
+			"vulnerable": true,
+			"package": {
+				"name": "nodejs-libs",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:18.18.2-1.amzn2023.0.3"
+					}
+				],
+				"fixed": [
+					"1:18.18.2-1.amzn2023.0.3"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2023",
+			"vulnerable": true,
+			"package": {
+				"name": "v8-10.2-devel",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "3:10.2.154.26-1.18.18.2.1.amzn2023.0.3"
+					}
+				],
+				"fixed": [
+					"3:10.2.154.26-1.18.18.2.1.amzn2023.0.3"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2023",
+			"vulnerable": true,
+			"package": {
+				"name": "nodejs-npm",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:9.8.1-1.18.18.2.1.amzn2023.0.3"
+					}
+				],
+				"fixed": [
+					"1:9.8.1-1.18.18.2.1.amzn2023.0.3"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

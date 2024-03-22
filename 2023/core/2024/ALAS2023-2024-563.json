@@ -1,0 +1,137 @@
+{
+	"id": "ALAS2023-2024-563",
+	"advisories": [
+		{
+			"id": "ALAS2023-2024-563",
+			"title": "Amazon Linux 2023 - ALAS2023-2024-563: Medium priority package update for c-ares",
+			"description": "Package updates are available for Amazon Linux 2023 that fix the following vulnerabilities:\nCVE-2024-25629:\n\tc-ares is a C library for asynchronous DNS requests. `ares__read_line()` is used to parse local configuration files such as `/etc/resolv.conf`, `/etc/nsswitch.conf`, the `HOSTALIASES` file, and if using a c-ares version prior to 1.27.0, the `/etc/hosts` file. If any of these configuration files has an embedded `NULL` character as the first character in a new line, it can lead to attempting to read memory prior to the start of the given buffer which may result in a crash. This issue is fixed in c-ares 1.27.0. No known workarounds exist.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "Medium"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2023/ALAS-2024-563.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-25629"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2024-25629",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-25629"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2023",
+			"vulnerable": true,
+			"package": {
+				"name": "c-ares",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.19.0-1.amzn2023.0.1"
+					}
+				],
+				"fixed": [
+					"0:1.19.0-1.amzn2023.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2023",
+			"vulnerable": true,
+			"package": {
+				"name": "c-ares-debugsource",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.19.0-1.amzn2023.0.1"
+					}
+				],
+				"fixed": [
+					"0:1.19.0-1.amzn2023.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2023",
+			"vulnerable": true,
+			"package": {
+				"name": "c-ares-devel",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.19.0-1.amzn2023.0.1"
+					}
+				],
+				"fixed": [
+					"0:1.19.0-1.amzn2023.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2023",
+			"vulnerable": true,
+			"package": {
+				"name": "c-ares-debuginfo",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.19.0-1.amzn2023.0.1"
+					}
+				],
+				"fixed": [
+					"0:1.19.0-1.amzn2023.0.1"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

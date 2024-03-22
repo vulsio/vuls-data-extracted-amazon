@@ -92,6 +92,30 @@
 			"ecosystem": "amazon:2023",
 			"vulnerable": true,
 			"package": {
+				"name": "kernel-tools-devel",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:6.1.12-17.42.amzn2023"
+					}
+				],
+				"fixed": [
+					"0:6.1.12-17.42.amzn2023"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2023",
+			"vulnerable": true,
+			"package": {
 				"name": "bpftool-debuginfo",
 				"repositories": [
 					"amazonlinux"
@@ -164,6 +188,30 @@
 			"ecosystem": "amazon:2023",
 			"vulnerable": true,
 			"package": {
+				"name": "kernel-livepatch-6.1.12-17.42",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.0-0.amzn2023"
+					}
+				],
+				"fixed": [
+					"0:1.0-0.amzn2023"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2023",
+			"vulnerable": true,
+			"package": {
 				"name": "kernel-headers",
 				"repositories": [
 					"amazonlinux"
@@ -188,79 +236,7 @@
 			"ecosystem": "amazon:2023",
 			"vulnerable": true,
 			"package": {
-				"name": "perf",
-				"repositories": [
-					"amazonlinux"
-				],
-				"architectures": [
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:6.1.12-17.42.amzn2023"
-					}
-				],
-				"fixed": [
-					"0:6.1.12-17.42.amzn2023"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:2023",
-			"vulnerable": true,
-			"package": {
-				"name": "kernel-libbpf-devel",
-				"repositories": [
-					"amazonlinux"
-				],
-				"architectures": [
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:6.1.12-17.42.amzn2023"
-					}
-				],
-				"fixed": [
-					"0:6.1.12-17.42.amzn2023"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:2023",
-			"vulnerable": true,
-			"package": {
 				"name": "kernel-devel",
-				"repositories": [
-					"amazonlinux"
-				],
-				"architectures": [
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:6.1.12-17.42.amzn2023"
-					}
-				],
-				"fixed": [
-					"0:6.1.12-17.42.amzn2023"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:2023",
-			"vulnerable": true,
-			"package": {
-				"name": "kernel-debuginfo-common-aarch64",
 				"repositories": [
 					"amazonlinux"
 				],
@@ -332,7 +308,7 @@
 			"ecosystem": "amazon:2023",
 			"vulnerable": true,
 			"package": {
-				"name": "python3-perf-debuginfo",
+				"name": "perf-debuginfo",
 				"repositories": [
 					"amazonlinux"
 				],
@@ -404,12 +380,12 @@
 			"ecosystem": "amazon:2023",
 			"vulnerable": true,
 			"package": {
-				"name": "kernel",
+				"name": "kernel-debuginfo-common-x86_64",
 				"repositories": [
 					"amazonlinux"
 				],
 				"architectures": [
-					"aarch64"
+					"x86_64"
 				]
 			},
 			"affected": {
@@ -428,12 +404,12 @@
 			"ecosystem": "amazon:2023",
 			"vulnerable": true,
 			"package": {
-				"name": "kernel-debuginfo-common-x86_64",
+				"name": "kernel-debuginfo-common-aarch64",
 				"repositories": [
 					"amazonlinux"
 				],
 				"architectures": [
-					"x86_64"
+					"aarch64"
 				]
 			},
 			"affected": {
@@ -476,31 +452,7 @@
 			"ecosystem": "amazon:2023",
 			"vulnerable": true,
 			"package": {
-				"name": "kernel-livepatch-6.1.12-17.42",
-				"repositories": [
-					"amazonlinux"
-				],
-				"architectures": [
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.0-0.amzn2023"
-					}
-				],
-				"fixed": [
-					"0:1.0-0.amzn2023"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:2023",
-			"vulnerable": true,
-			"package": {
-				"name": "perf-debuginfo",
+				"name": "perf",
 				"repositories": [
 					"amazonlinux"
 				],
@@ -524,7 +476,55 @@
 			"ecosystem": "amazon:2023",
 			"vulnerable": true,
 			"package": {
-				"name": "kernel-tools-devel",
+				"name": "python3-perf-debuginfo",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:6.1.12-17.42.amzn2023"
+					}
+				],
+				"fixed": [
+					"0:6.1.12-17.42.amzn2023"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2023",
+			"vulnerable": true,
+			"package": {
+				"name": "kernel-libbpf-devel",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:6.1.12-17.42.amzn2023"
+					}
+				],
+				"fixed": [
+					"0:6.1.12-17.42.amzn2023"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2023",
+			"vulnerable": true,
+			"package": {
+				"name": "kernel",
 				"repositories": [
 					"amazonlinux"
 				],
