@@ -168,7 +168,7 @@
 			"ecosystem": "amazon:1",
 			"vulnerable": true,
 			"package": {
-				"name": "kernel-tools",
+				"name": "perf-debuginfo",
 				"repositories": [
 					"amzn-main",
 					"amzn-updates"
@@ -218,7 +218,7 @@
 			"ecosystem": "amazon:1",
 			"vulnerable": true,
 			"package": {
-				"name": "kernel-tools-debuginfo",
+				"name": "perf",
 				"repositories": [
 					"amzn-main",
 					"amzn-updates"
@@ -268,7 +268,32 @@
 			"ecosystem": "amazon:1",
 			"vulnerable": true,
 			"package": {
-				"name": "perf-debuginfo",
+				"name": "kernel-tools",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.14.214-118.339.amzn1"
+					}
+				],
+				"fixed": [
+					"0:4.14.214-118.339.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "kernel-tools-debuginfo",
 				"repositories": [
 					"amzn-main",
 					"amzn-updates"
@@ -319,31 +344,6 @@
 			"vulnerable": true,
 			"package": {
 				"name": "kernel-debuginfo",
-				"repositories": [
-					"amzn-main",
-					"amzn-updates"
-				],
-				"architectures": [
-					"i686"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:4.14.214-118.339.amzn1"
-					}
-				],
-				"fixed": [
-					"0:4.14.214-118.339.amzn1"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:1",
-			"vulnerable": true,
-			"package": {
-				"name": "perf",
 				"repositories": [
 					"amzn-main",
 					"amzn-updates"

@@ -40,7 +40,32 @@
 			"ecosystem": "amazon:1",
 			"vulnerable": true,
 			"package": {
-				"name": "glibc-static",
+				"name": "glibc",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.17-55.86.amzn1"
+					}
+				],
+				"fixed": [
+					"0:2.17-55.86.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "glibc-devel",
 				"repositories": [
 					"amzn-main",
 					"amzn-updates"
@@ -115,7 +140,7 @@
 			"ecosystem": "amazon:1",
 			"vulnerable": true,
 			"package": {
-				"name": "glibc-common",
+				"name": "glibc-headers",
 				"repositories": [
 					"amzn-main",
 					"amzn-updates"
@@ -165,32 +190,7 @@
 			"ecosystem": "amazon:1",
 			"vulnerable": true,
 			"package": {
-				"name": "glibc",
-				"repositories": [
-					"amzn-main",
-					"amzn-updates"
-				],
-				"architectures": [
-					"i686"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:2.17-55.86.amzn1"
-					}
-				],
-				"fixed": [
-					"0:2.17-55.86.amzn1"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:1",
-			"vulnerable": true,
-			"package": {
-				"name": "glibc-devel",
+				"name": "glibc-static",
 				"repositories": [
 					"amzn-main",
 					"amzn-updates"
@@ -240,7 +240,7 @@
 			"ecosystem": "amazon:1",
 			"vulnerable": true,
 			"package": {
-				"name": "glibc-headers",
+				"name": "glibc-common",
 				"repositories": [
 					"amzn-main",
 					"amzn-updates"
