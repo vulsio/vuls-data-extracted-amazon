@@ -40,7 +40,31 @@
 			"ecosystem": "amazon:2023",
 			"vulnerable": true,
 			"package": {
-				"name": "nginx-mod-stream-debuginfo",
+				"name": "nginx-filesystem",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:1.24.0-1.amzn2023.0.2"
+					}
+				],
+				"fixed": [
+					"1:1.24.0-1.amzn2023.0.2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2023",
+			"vulnerable": true,
+			"package": {
+				"name": "nginx-mod-mail-debuginfo",
 				"repositories": [
 					"amazonlinux"
 				],
@@ -64,7 +88,7 @@
 			"ecosystem": "amazon:2023",
 			"vulnerable": true,
 			"package": {
-				"name": "nginx-mod-http-perl",
+				"name": "nginx-core",
 				"repositories": [
 					"amazonlinux"
 				],
@@ -88,7 +112,7 @@
 			"ecosystem": "amazon:2023",
 			"vulnerable": true,
 			"package": {
-				"name": "nginx-mod-devel",
+				"name": "nginx-mod-stream",
 				"repositories": [
 					"amazonlinux"
 				],
@@ -160,30 +184,6 @@
 			"ecosystem": "amazon:2023",
 			"vulnerable": true,
 			"package": {
-				"name": "nginx-mod-http-image-filter-debuginfo",
-				"repositories": [
-					"amazonlinux"
-				],
-				"architectures": [
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:1.24.0-1.amzn2023.0.2"
-					}
-				],
-				"fixed": [
-					"1:1.24.0-1.amzn2023.0.2"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:2023",
-			"vulnerable": true,
-			"package": {
 				"name": "nginx",
 				"repositories": [
 					"amazonlinux"
@@ -208,7 +208,7 @@
 			"ecosystem": "amazon:2023",
 			"vulnerable": true,
 			"package": {
-				"name": "nginx-mod-http-xslt-filter-debuginfo",
+				"name": "nginx-mod-http-perl",
 				"repositories": [
 					"amazonlinux"
 				],
@@ -232,55 +232,7 @@
 			"ecosystem": "amazon:2023",
 			"vulnerable": true,
 			"package": {
-				"name": "nginx-filesystem",
-				"repositories": [
-					"amazonlinux"
-				],
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:1.24.0-1.amzn2023.0.2"
-					}
-				],
-				"fixed": [
-					"1:1.24.0-1.amzn2023.0.2"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:2023",
-			"vulnerable": true,
-			"package": {
-				"name": "nginx-core",
-				"repositories": [
-					"amazonlinux"
-				],
-				"architectures": [
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:1.24.0-1.amzn2023.0.2"
-					}
-				],
-				"fixed": [
-					"1:1.24.0-1.amzn2023.0.2"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:2023",
-			"vulnerable": true,
-			"package": {
-				"name": "nginx-core-debuginfo",
+				"name": "nginx-mod-devel",
 				"repositories": [
 					"amazonlinux"
 				],
@@ -328,7 +280,7 @@
 			"ecosystem": "amazon:2023",
 			"vulnerable": true,
 			"package": {
-				"name": "nginx-mod-stream",
+				"name": "nginx-mod-http-xslt-filter",
 				"repositories": [
 					"amazonlinux"
 				],
@@ -352,7 +304,55 @@
 			"ecosystem": "amazon:2023",
 			"vulnerable": true,
 			"package": {
-				"name": "nginx-debugsource",
+				"name": "nginx-mod-http-image-filter-debuginfo",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:1.24.0-1.amzn2023.0.2"
+					}
+				],
+				"fixed": [
+					"1:1.24.0-1.amzn2023.0.2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2023",
+			"vulnerable": true,
+			"package": {
+				"name": "nginx-mod-stream-debuginfo",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:1.24.0-1.amzn2023.0.2"
+					}
+				],
+				"fixed": [
+					"1:1.24.0-1.amzn2023.0.2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2023",
+			"vulnerable": true,
+			"package": {
+				"name": "nginx-mod-http-xslt-filter-debuginfo",
 				"repositories": [
 					"amazonlinux"
 				],
@@ -424,7 +424,7 @@
 			"ecosystem": "amazon:2023",
 			"vulnerable": true,
 			"package": {
-				"name": "nginx-mod-mail-debuginfo",
+				"name": "nginx-core-debuginfo",
 				"repositories": [
 					"amazonlinux"
 				],
@@ -448,7 +448,7 @@
 			"ecosystem": "amazon:2023",
 			"vulnerable": true,
 			"package": {
-				"name": "nginx-mod-http-xslt-filter",
+				"name": "nginx-debugsource",
 				"repositories": [
 					"amazonlinux"
 				],
