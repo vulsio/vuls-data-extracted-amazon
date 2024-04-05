@@ -64,7 +64,7 @@
 			"ecosystem": "amazon:2",
 			"vulnerable": true,
 			"package": {
-				"name": "libgccjit-devel",
+				"name": "libstdc++",
 				"repositories": [
 					"amzn2-core"
 				],
@@ -88,7 +88,7 @@
 			"ecosystem": "amazon:2",
 			"vulnerable": true,
 			"package": {
-				"name": "gcc-base-debuginfo",
+				"name": "libgccjit-devel",
 				"repositories": [
 					"amzn2-core"
 				],
@@ -136,7 +136,7 @@
 			"ecosystem": "amazon:2",
 			"vulnerable": true,
 			"package": {
-				"name": "libgomp",
+				"name": "gcc-go",
 				"repositories": [
 					"amzn2-core"
 				],
@@ -160,7 +160,31 @@
 			"ecosystem": "amazon:2",
 			"vulnerable": true,
 			"package": {
-				"name": "cpp",
+				"name": "gcc-plugin-devel",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:7.3.1-14.amzn2"
+					}
+				],
+				"fixed": [
+					"0:7.3.1-14.amzn2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "gcc-base-debuginfo",
 				"repositories": [
 					"amzn2-core"
 				],
@@ -208,7 +232,7 @@
 			"ecosystem": "amazon:2",
 			"vulnerable": true,
 			"package": {
-				"name": "libgo",
+				"name": "libatomic10-devel",
 				"repositories": [
 					"amzn2-core"
 				],
@@ -220,11 +244,35 @@
 				"type": "rpm",
 				"range": [
 					{
-						"lt": "0:7.3.1-14.amzn2"
+						"lt": "0:10.3.1-1.amzn2.0.2"
 					}
 				],
 				"fixed": [
-					"0:7.3.1-14.amzn2"
+					"0:10.3.1-1.amzn2.0.2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "gcc10-debuginfo",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:10.3.1-1.amzn2.0.2"
+					}
+				],
+				"fixed": [
+					"0:10.3.1-1.amzn2.0.2"
 				]
 			}
 		},
@@ -256,7 +304,55 @@
 			"ecosystem": "amazon:2",
 			"vulnerable": true,
 			"package": {
-				"name": "libgfortran",
+				"name": "libgomp",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:7.3.1-14.amzn2"
+					}
+				],
+				"fixed": [
+					"0:7.3.1-14.amzn2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "gcc-gdb-plugin",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:7.3.1-14.amzn2"
+					}
+				],
+				"fixed": [
+					"0:7.3.1-14.amzn2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "libsanitizer",
 				"repositories": [
 					"amzn2-core"
 				],
@@ -304,7 +400,7 @@
 			"ecosystem": "amazon:2",
 			"vulnerable": true,
 			"package": {
-				"name": "gcc-go",
+				"name": "libasan10-devel",
 				"repositories": [
 					"amzn2-core"
 				],
@@ -316,11 +412,11 @@
 				"type": "rpm",
 				"range": [
 					{
-						"lt": "0:7.3.1-14.amzn2"
+						"lt": "0:10.3.1-1.amzn2.0.2"
 					}
 				],
 				"fixed": [
-					"0:7.3.1-14.amzn2"
+					"0:10.3.1-1.amzn2.0.2"
 				]
 			}
 		},
@@ -328,7 +424,7 @@
 			"ecosystem": "amazon:2",
 			"vulnerable": true,
 			"package": {
-				"name": "libitm",
+				"name": "gcc-gfortran",
 				"repositories": [
 					"amzn2-core"
 				],
@@ -376,7 +472,7 @@
 			"ecosystem": "amazon:2",
 			"vulnerable": true,
 			"package": {
-				"name": "libcilkrts",
+				"name": "libmpx",
 				"repositories": [
 					"amzn2-core"
 				],
@@ -400,79 +496,7 @@
 			"ecosystem": "amazon:2",
 			"vulnerable": true,
 			"package": {
-				"name": "libquadmath10-devel",
-				"repositories": [
-					"amzn2-core"
-				],
-				"architectures": [
-					"i686"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:10.3.1-1.amzn2.0.2"
-					}
-				],
-				"fixed": [
-					"0:10.3.1-1.amzn2.0.2"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:2",
-			"vulnerable": true,
-			"package": {
-				"name": "libstdc++",
-				"repositories": [
-					"amzn2-core"
-				],
-				"architectures": [
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:7.3.1-14.amzn2"
-					}
-				],
-				"fixed": [
-					"0:7.3.1-14.amzn2"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:2",
-			"vulnerable": true,
-			"package": {
-				"name": "libstdc++-docs",
-				"repositories": [
-					"amzn2-core"
-				],
-				"architectures": [
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:7.3.1-14.amzn2"
-					}
-				],
-				"fixed": [
-					"0:7.3.1-14.amzn2"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:2",
-			"vulnerable": true,
-			"package": {
-				"name": "gcc-objc++",
+				"name": "gcc-c++",
 				"repositories": [
 					"amzn2-core"
 				],
@@ -520,7 +544,7 @@
 			"ecosystem": "amazon:2",
 			"vulnerable": true,
 			"package": {
-				"name": "gcc-debuginfo",
+				"name": "libgnat",
 				"repositories": [
 					"amzn2-core"
 				],
@@ -544,7 +568,7 @@
 			"ecosystem": "amazon:2",
 			"vulnerable": true,
 			"package": {
-				"name": "libatomic10-devel",
+				"name": "libitm10-devel",
 				"repositories": [
 					"amzn2-core"
 				],
@@ -592,7 +616,7 @@
 			"ecosystem": "amazon:2",
 			"vulnerable": true,
 			"package": {
-				"name": "gcc-gfortran",
+				"name": "gcc-objc++",
 				"repositories": [
 					"amzn2-core"
 				],
@@ -616,7 +640,31 @@
 			"ecosystem": "amazon:2",
 			"vulnerable": true,
 			"package": {
-				"name": "libmpx",
+				"name": "libobjc",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:7.3.1-14.amzn2"
+					}
+				],
+				"fixed": [
+					"0:7.3.1-14.amzn2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "libcilkrts",
 				"repositories": [
 					"amzn2-core"
 				],
@@ -640,55 +688,7 @@
 			"ecosystem": "amazon:2",
 			"vulnerable": true,
 			"package": {
-				"name": "gcc-plugin-devel",
-				"repositories": [
-					"amzn2-core"
-				],
-				"architectures": [
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:7.3.1-14.amzn2"
-					}
-				],
-				"fixed": [
-					"0:7.3.1-14.amzn2"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:2",
-			"vulnerable": true,
-			"package": {
-				"name": "gcc10-debuginfo",
-				"repositories": [
-					"amzn2-core"
-				],
-				"architectures": [
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:10.3.1-1.amzn2.0.2"
-					}
-				],
-				"fixed": [
-					"0:10.3.1-1.amzn2.0.2"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:2",
-			"vulnerable": true,
-			"package": {
-				"name": "libsanitizer",
+				"name": "cpp",
 				"repositories": [
 					"amzn2-core"
 				],
@@ -736,132 +736,36 @@
 			"ecosystem": "amazon:2",
 			"vulnerable": true,
 			"package": {
-				"name": "libitm10-devel",
-				"repositories": [
-					"amzn2-core"
-				],
-				"architectures": [
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:10.3.1-1.amzn2.0.2"
-					}
-				],
-				"fixed": [
-					"0:10.3.1-1.amzn2.0.2"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:2",
-			"vulnerable": true,
-			"package": {
-				"name": "cpp10",
-				"repositories": [
-					"amzn2-core"
-				],
-				"architectures": [
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:10.3.1-1.amzn2.0.2"
-					}
-				],
-				"fixed": [
-					"0:10.3.1-1.amzn2.0.2"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:2",
-			"vulnerable": true,
-			"package": {
-				"name": "libgccjit",
-				"repositories": [
-					"amzn2-core"
-				],
-				"architectures": [
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:7.3.1-14.amzn2"
-					}
-				],
-				"fixed": [
-					"0:7.3.1-14.amzn2"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:2",
-			"vulnerable": true,
-			"package": {
-				"name": "libasan10-devel",
-				"repositories": [
-					"amzn2-core"
-				],
-				"architectures": [
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:10.3.1-1.amzn2.0.2"
-					}
-				],
-				"fixed": [
-					"0:10.3.1-1.amzn2.0.2"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:2",
-			"vulnerable": true,
-			"package": {
-				"name": "gcc10-c++",
-				"repositories": [
-					"amzn2-core"
-				],
-				"architectures": [
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:10.3.1-1.amzn2.0.2"
-					}
-				],
-				"fixed": [
-					"0:10.3.1-1.amzn2.0.2"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:2",
-			"vulnerable": true,
-			"package": {
 				"name": "libstdc++10-docs",
 				"repositories": [
 					"amzn2-core"
 				],
 				"architectures": [
 					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:10.3.1-1.amzn2.0.2"
+					}
+				],
+				"fixed": [
+					"0:10.3.1-1.amzn2.0.2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "libquadmath10-devel",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"i686"
 				]
 			},
 			"affected": {
@@ -928,7 +832,7 @@
 			"ecosystem": "amazon:2",
 			"vulnerable": true,
 			"package": {
-				"name": "gcc-c++",
+				"name": "libstdc++-docs",
 				"repositories": [
 					"amzn2-core"
 				],
@@ -952,7 +856,7 @@
 			"ecosystem": "amazon:2",
 			"vulnerable": true,
 			"package": {
-				"name": "libobjc",
+				"name": "libgfortran",
 				"repositories": [
 					"amzn2-core"
 				],
@@ -976,7 +880,7 @@
 			"ecosystem": "amazon:2",
 			"vulnerable": true,
 			"package": {
-				"name": "gcc-gdb-plugin",
+				"name": "libgccjit",
 				"repositories": [
 					"amzn2-core"
 				],
@@ -1000,7 +904,7 @@
 			"ecosystem": "amazon:2",
 			"vulnerable": true,
 			"package": {
-				"name": "libgnat",
+				"name": "libitm",
 				"repositories": [
 					"amzn2-core"
 				],
@@ -1017,6 +921,102 @@
 				],
 				"fixed": [
 					"0:7.3.1-14.amzn2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "libgo",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:7.3.1-14.amzn2"
+					}
+				],
+				"fixed": [
+					"0:7.3.1-14.amzn2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "gcc-debuginfo",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:7.3.1-14.amzn2"
+					}
+				],
+				"fixed": [
+					"0:7.3.1-14.amzn2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "gcc10-c++",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:10.3.1-1.amzn2.0.2"
+					}
+				],
+				"fixed": [
+					"0:10.3.1-1.amzn2.0.2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "cpp10",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:10.3.1-1.amzn2.0.2"
+					}
+				],
+				"fixed": [
+					"0:10.3.1-1.amzn2.0.2"
 				]
 			}
 		}
