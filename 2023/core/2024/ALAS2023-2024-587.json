@@ -1,0 +1,113 @@
+{
+	"id": "ALAS2023-2024-587",
+	"advisories": [
+		{
+			"id": "ALAS2023-2024-587",
+			"title": "Amazon Linux 2023 - ALAS2023-2024-587: Medium priority package update for libreswan",
+			"description": "Package updates are available for Amazon Linux 2023 that fix the following vulnerabilities:\nCVE-2024-2357:\n\tThe Libreswan Project was notified of an issue causing libreswan to restart under some IKEv2 retransmit scenarios when a connection is configured to use PreSharedKeys (authby=secret) and the connection cannot find a matching configured secret. When such a connection is automatically added on startup using the auto= keyword, it can cause repeated crashes leading to a Denial of Service.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "Medium"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2023/ALAS-2024-587.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-2357"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2024-2357",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-2357"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2023",
+			"vulnerable": true,
+			"package": {
+				"name": "libreswan-debuginfo",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.12-3.amzn2023.0.1"
+					}
+				],
+				"fixed": [
+					"0:4.12-3.amzn2023.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2023",
+			"vulnerable": true,
+			"package": {
+				"name": "libreswan",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.12-3.amzn2023.0.1"
+					}
+				],
+				"fixed": [
+					"0:4.12-3.amzn2023.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2023",
+			"vulnerable": true,
+			"package": {
+				"name": "libreswan-debugsource",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.12-3.amzn2023.0.1"
+					}
+				],
+				"fixed": [
+					"0:4.12-3.amzn2023.0.1"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}
