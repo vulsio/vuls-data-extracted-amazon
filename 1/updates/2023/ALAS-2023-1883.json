@@ -4,7 +4,7 @@
 		{
 			"id": "ALAS-2023-1883",
 			"title": "Amazon Linux AMI 2014.03 - ALAS-2023-1883: important priority package update for kernel",
-			"description": "Package updates are available for Amazon Linux AMI that fix the following vulnerabilities:\nCVE-2023-5717:\n\tA heap out-of-bounds write vulnerability in the Linux kernel's Linux Kernel Performance Events (perf) component can be exploited to achieve local privilege escalation.\n\nIf perf_read_group() is called while an event's sibling_list is smaller than its child's sibling_list, it can increment or write to memory locations outside of the allocated buffer.\n\nWe recommend upgrading past commit 32671e3799ca2e4590773fd0e63aaa4229e50c06.\n\nCVE-2023-34324:\n\tA flaw in the kernel Xen event handler can cause a deadlock with Xen console handling in unprivileged Xen guests.\n\nCVE-2023-3397:\n\tA race condition between two functions, lmLogClose() and txEnd(), in the Linux kernel's JFS filesystem can lead to a use-after-free vulnerability and crash.\n",
+			"description": "Package updates are available for Amazon Linux AMI that fix the following vulnerabilities:\nCVE-2023-5717:\n\tA heap out-of-bounds write vulnerability in the Linux kernel's Linux Kernel Performance Events (perf) component can be exploited to achieve local privilege escalation.\n\nIf perf_read_group() is called while an event's sibling_list is smaller than its child's sibling_list, it can increment or write to memory locations outside of the allocated buffer.\n\nWe recommend upgrading past commit 32671e3799ca2e4590773fd0e63aaa4229e50c06.\n\nCVE-2023-42754:\n\tA NULL pointer dereference flaw was found in the Linux kernel ipv4 stack. The socket buffer (skb) was assumed to be associated with a device before calling __ip_options_compile, which is not always the case if the skb is re-routed by ipvs. This issue may allow a local user with CAP_NET_ADMIN privileges to crash the system.\n\nCVE-2023-34324:\n\tA flaw in the kernel Xen event handler can cause a deadlock with Xen console handling in unprivileged Xen guests.\n\nCVE-2023-3397:\n\tA race condition between two functions, lmLogClose() and txEnd(), in the Linux kernel's JFS filesystem can lead to a use-after-free vulnerability and crash.\n",
 			"severity": [
 				{
 					"type": "vendor",
@@ -24,6 +24,10 @@
 				{
 					"source": "linux-security@amazon.com",
 					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-34324"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-42754"
 				},
 				{
 					"source": "linux-security@amazon.com",
@@ -52,6 +56,15 @@
 			]
 		},
 		{
+			"id": "CVE-2023-42754",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-42754"
+				}
+			]
+		},
+		{
 			"id": "CVE-2023-5717",
 			"references": [
 				{
@@ -66,7 +79,7 @@
 			"ecosystem": "amazon:1",
 			"vulnerable": true,
 			"package": {
-				"name": "kernel-tools-devel",
+				"name": "kernel-headers",
 				"repositories": [
 					"amzn-main",
 					"amzn-updates"
@@ -91,7 +104,7 @@
 			"ecosystem": "amazon:1",
 			"vulnerable": true,
 			"package": {
-				"name": "perf",
+				"name": "perf-debuginfo",
 				"repositories": [
 					"amzn-main",
 					"amzn-updates"
@@ -117,56 +130,6 @@
 			"vulnerable": true,
 			"package": {
 				"name": "kernel-tools-debuginfo",
-				"repositories": [
-					"amzn-main",
-					"amzn-updates"
-				],
-				"architectures": [
-					"i686"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:4.14.328-174.540.amzn1"
-					}
-				],
-				"fixed": [
-					"0:4.14.328-174.540.amzn1"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:1",
-			"vulnerable": true,
-			"package": {
-				"name": "kernel-devel",
-				"repositories": [
-					"amzn-main",
-					"amzn-updates"
-				],
-				"architectures": [
-					"i686"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:4.14.328-174.540.amzn1"
-					}
-				],
-				"fixed": [
-					"0:4.14.328-174.540.amzn1"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:1",
-			"vulnerable": true,
-			"package": {
-				"name": "kernel-debuginfo",
 				"repositories": [
 					"amzn-main",
 					"amzn-updates"
@@ -241,6 +204,31 @@
 			"ecosystem": "amazon:1",
 			"vulnerable": true,
 			"package": {
+				"name": "perf",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.14.328-174.540.amzn1"
+					}
+				],
+				"fixed": [
+					"0:4.14.328-174.540.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
 				"name": "kernel-debuginfo-common-x86_64",
 				"repositories": [
 					"amzn-main",
@@ -266,32 +254,7 @@
 			"ecosystem": "amazon:1",
 			"vulnerable": true,
 			"package": {
-				"name": "perf-debuginfo",
-				"repositories": [
-					"amzn-main",
-					"amzn-updates"
-				],
-				"architectures": [
-					"i686"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:4.14.328-174.540.amzn1"
-					}
-				],
-				"fixed": [
-					"0:4.14.328-174.540.amzn1"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:1",
-			"vulnerable": true,
-			"package": {
-				"name": "kernel-headers",
+				"name": "kernel-devel",
 				"repositories": [
 					"amzn-main",
 					"amzn-updates"
@@ -317,6 +280,56 @@
 			"vulnerable": true,
 			"package": {
 				"name": "kernel-debuginfo-common-i686",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.14.328-174.540.amzn1"
+					}
+				],
+				"fixed": [
+					"0:4.14.328-174.540.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "kernel-debuginfo",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.14.328-174.540.amzn1"
+					}
+				],
+				"fixed": [
+					"0:4.14.328-174.540.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "kernel-tools-devel",
 				"repositories": [
 					"amzn-main",
 					"amzn-updates"
