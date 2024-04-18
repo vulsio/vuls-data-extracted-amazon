@@ -1,0 +1,307 @@
+{
+	"id": "ALAS2-2024-2511",
+	"advisories": [
+		{
+			"id": "ALAS2-2024-2511",
+			"title": "Amazon Linux 2 2017.12 - ALAS2-2024-2511: important priority package update for xorg-x11-server",
+			"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2024-31083:\n\tThe ProcRenderAddGlyphs() function calls the AllocateGlyph() function to store new glyphs sent by the client to the X server.  AllocateGlyph() would return a new glyph with refcount=0 and a re-used glyph would end up not changing the refcount at all. The resulting glyph_new array would thus have multiple entries pointing to the same non-refcounted glyphs.\n\nProcRenderAddGlyphs() may free a glyph, resulting in a use-after-free when the same glyph pointer is then later used.\n\nCVE-2024-31081:\n\tA heap-based buffer over-read vulnerability was found in the X.org server's ProcXIPassiveGrabDevice() function. This issue occurs when byte-swapped length values are used in replies, potentially leading to memory leakage and segmentation faults, particularly when triggered by a client with a different endianness. This vulnerability could be exploited by an attacker to cause the X server to read heap memory values and then transmit them back to the client until encountering an unmapped page, resulting in a crash. Despite the attacker's inability to control the specific memory copied into the replies, the small length values typically stored in a 32-bit integer can result in significant attempted out-of-bounds reads.\n\nCVE-2024-31080:\n\tA heap-based buffer over-read vulnerability was found in the X.org server's ProcXIGetSelectedEvents() function. This issue occurs when byte-swapped length values are used in replies, potentially leading to memory leakage and segmentation faults, particularly when triggered by a client with a different endianness. This vulnerability could be exploited by an attacker to cause the X server to read heap memory values and then transmit them back to the client until encountering an unmapped page, resulting in a crash. Despite the attacker's inability to control the specific memory copied into the replies, the small length values typically stored in a 32-bit integer can result in significant attempted out-of-bounds reads.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "important"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALAS-2024-2511.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-31080"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-31081"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-31083"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2024-31080",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-31080"
+				}
+			]
+		},
+		{
+			"id": "CVE-2024-31081",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-31081"
+				}
+			]
+		},
+		{
+			"id": "CVE-2024-31083",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-31083"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "xorg-x11-server-common",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.20.4-22.amzn2.0.6"
+					}
+				],
+				"fixed": [
+					"0:1.20.4-22.amzn2.0.6"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "xorg-x11-server-Xorg",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.20.4-22.amzn2.0.6"
+					}
+				],
+				"fixed": [
+					"0:1.20.4-22.amzn2.0.6"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "xorg-x11-server-Xvfb",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.20.4-22.amzn2.0.6"
+					}
+				],
+				"fixed": [
+					"0:1.20.4-22.amzn2.0.6"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "xorg-x11-server-Xnest",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.20.4-22.amzn2.0.6"
+					}
+				],
+				"fixed": [
+					"0:1.20.4-22.amzn2.0.6"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "xorg-x11-server-Xdmx",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.20.4-22.amzn2.0.6"
+					}
+				],
+				"fixed": [
+					"0:1.20.4-22.amzn2.0.6"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "xorg-x11-server-Xephyr",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.20.4-22.amzn2.0.6"
+					}
+				],
+				"fixed": [
+					"0:1.20.4-22.amzn2.0.6"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "xorg-x11-server-Xwayland",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.20.4-22.amzn2.0.6"
+					}
+				],
+				"fixed": [
+					"0:1.20.4-22.amzn2.0.6"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "xorg-x11-server-devel",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.20.4-22.amzn2.0.6"
+					}
+				],
+				"fixed": [
+					"0:1.20.4-22.amzn2.0.6"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "xorg-x11-server-source",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.20.4-22.amzn2.0.6"
+					}
+				],
+				"fixed": [
+					"0:1.20.4-22.amzn2.0.6"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "xorg-x11-server-debuginfo",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.20.4-22.amzn2.0.6"
+					}
+				],
+				"fixed": [
+					"0:1.20.4-22.amzn2.0.6"
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}
