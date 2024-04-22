@@ -157,7 +157,32 @@
 			"ecosystem": "amazon:1",
 			"vulnerable": true,
 			"package": {
-				"name": "mysql55-debuginfo",
+				"name": "mysql55-libs",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:5.5.56-1.17.amzn1"
+					}
+				],
+				"fixed": [
+					"0:5.5.56-1.17.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "mysql55-bench",
 				"repositories": [
 					"amzn-main",
 					"amzn-updates"
@@ -307,31 +332,6 @@
 			"ecosystem": "amazon:1",
 			"vulnerable": true,
 			"package": {
-				"name": "mysql55-libs",
-				"repositories": [
-					"amzn-main",
-					"amzn-updates"
-				],
-				"architectures": [
-					"i686"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:5.5.56-1.17.amzn1"
-					}
-				],
-				"fixed": [
-					"0:5.5.56-1.17.amzn1"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:1",
-			"vulnerable": true,
-			"package": {
 				"name": "mysql55-server",
 				"repositories": [
 					"amzn-main",
@@ -382,7 +382,7 @@
 			"ecosystem": "amazon:1",
 			"vulnerable": true,
 			"package": {
-				"name": "mysql55-bench",
+				"name": "mysql55-debuginfo",
 				"repositories": [
 					"amzn-main",
 					"amzn-updates"

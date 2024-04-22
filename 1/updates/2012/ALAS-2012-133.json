@@ -96,13 +96,13 @@
 			"ecosystem": "amazon:1",
 			"vulnerable": true,
 			"package": {
-				"name": "kernel-tools",
+				"name": "kernel-doc",
 				"repositories": [
 					"amzn-main",
 					"amzn-updates"
 				],
 				"architectures": [
-					"x86_64"
+					"noarch"
 				]
 			},
 			"affected": {
@@ -196,13 +196,38 @@
 			"ecosystem": "amazon:1",
 			"vulnerable": true,
 			"package": {
-				"name": "kernel-doc",
+				"name": "kernel-debuginfo",
 				"repositories": [
 					"amzn-main",
 					"amzn-updates"
 				],
 				"architectures": [
-					"noarch"
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:3.2.30-49.59.amzn1"
+					}
+				],
+				"fixed": [
+					"0:3.2.30-49.59.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "kernel-tools",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"x86_64"
 				]
 			},
 			"affected": {
@@ -247,31 +272,6 @@
 			"vulnerable": true,
 			"package": {
 				"name": "kernel",
-				"repositories": [
-					"amzn-main",
-					"amzn-updates"
-				],
-				"architectures": [
-					"x86_64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:3.2.30-49.59.amzn1"
-					}
-				],
-				"fixed": [
-					"0:3.2.30-49.59.amzn1"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:1",
-			"vulnerable": true,
-			"package": {
-				"name": "kernel-debuginfo",
 				"repositories": [
 					"amzn-main",
 					"amzn-updates"
