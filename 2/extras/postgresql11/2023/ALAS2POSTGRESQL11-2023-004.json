@@ -40,7 +40,7 @@
 			"ecosystem": "amazon:2",
 			"vulnerable": true,
 			"package": {
-				"name": "postgresql-static",
+				"name": "postgresql",
 				"repositories": [
 					"amzn2extra-postgresql11"
 				],
@@ -64,7 +64,31 @@
 			"ecosystem": "amazon:2",
 			"vulnerable": true,
 			"package": {
-				"name": "postgresql-debuginfo",
+				"name": "postgresql-test",
+				"repositories": [
+					"amzn2extra-postgresql11"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:11.20-1.amzn2.0.2"
+					}
+				],
+				"fixed": [
+					"0:11.20-1.amzn2.0.2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "postgresql-static",
 				"repositories": [
 					"amzn2extra-postgresql11"
 				],
@@ -136,7 +160,7 @@
 			"ecosystem": "amazon:2",
 			"vulnerable": true,
 			"package": {
-				"name": "postgresql-test",
+				"name": "postgresql-debuginfo",
 				"repositories": [
 					"amzn2extra-postgresql11"
 				],
@@ -160,7 +184,7 @@
 			"ecosystem": "amazon:2",
 			"vulnerable": true,
 			"package": {
-				"name": "postgresql-server",
+				"name": "postgresql-pltcl",
 				"repositories": [
 					"amzn2extra-postgresql11"
 				],
@@ -208,12 +232,12 @@
 			"ecosystem": "amazon:2",
 			"vulnerable": true,
 			"package": {
-				"name": "postgresql-server-devel",
+				"name": "postgresql-test-rpm-macros",
 				"repositories": [
 					"amzn2extra-postgresql11"
 				],
 				"architectures": [
-					"aarch64"
+					"noarch"
 				]
 			},
 			"affected": {
@@ -232,12 +256,12 @@
 			"ecosystem": "amazon:2",
 			"vulnerable": true,
 			"package": {
-				"name": "postgresql-test-rpm-macros",
+				"name": "postgresql-upgrade",
 				"repositories": [
 					"amzn2extra-postgresql11"
 				],
 				"architectures": [
-					"noarch"
+					"aarch64"
 				]
 			},
 			"affected": {
@@ -304,31 +328,7 @@
 			"ecosystem": "amazon:2",
 			"vulnerable": true,
 			"package": {
-				"name": "postgresql-pltcl",
-				"repositories": [
-					"amzn2extra-postgresql11"
-				],
-				"architectures": [
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:11.20-1.amzn2.0.2"
-					}
-				],
-				"fixed": [
-					"0:11.20-1.amzn2.0.2"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:2",
-			"vulnerable": true,
-			"package": {
-				"name": "postgresql",
+				"name": "postgresql-server",
 				"repositories": [
 					"amzn2extra-postgresql11"
 				],
@@ -376,7 +376,7 @@
 			"ecosystem": "amazon:2",
 			"vulnerable": true,
 			"package": {
-				"name": "postgresql-upgrade",
+				"name": "postgresql-server-devel",
 				"repositories": [
 					"amzn2extra-postgresql11"
 				],
