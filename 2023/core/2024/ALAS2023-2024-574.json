@@ -24,7 +24,31 @@
 			"ecosystem": "amazon:2023",
 			"vulnerable": true,
 			"package": {
-				"name": "rust-std-static",
+				"name": "rust-lldb",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.68.2-1.amzn2023.0.4"
+					}
+				],
+				"fixed": [
+					"0:1.68.2-1.amzn2023.0.4"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2023",
+			"vulnerable": true,
+			"package": {
+				"name": "cargo",
 				"repositories": [
 					"amazonlinux"
 				],
@@ -48,7 +72,55 @@
 			"ecosystem": "amazon:2023",
 			"vulnerable": true,
 			"package": {
-				"name": "cargo-debuginfo",
+				"name": "rust-doc",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.68.2-1.amzn2023.0.4"
+					}
+				],
+				"fixed": [
+					"0:1.68.2-1.amzn2023.0.4"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2023",
+			"vulnerable": true,
+			"package": {
+				"name": "rust-debugger-common",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.68.2-1.amzn2023.0.4"
+					}
+				],
+				"fixed": [
+					"0:1.68.2-1.amzn2023.0.4"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2023",
+			"vulnerable": true,
+			"package": {
+				"name": "rustfmt-debuginfo",
 				"repositories": [
 					"amazonlinux"
 				],
@@ -96,150 +168,6 @@
 			"ecosystem": "amazon:2023",
 			"vulnerable": true,
 			"package": {
-				"name": "rustfmt-debuginfo",
-				"repositories": [
-					"amazonlinux"
-				],
-				"architectures": [
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.68.2-1.amzn2023.0.4"
-					}
-				],
-				"fixed": [
-					"0:1.68.2-1.amzn2023.0.4"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:2023",
-			"vulnerable": true,
-			"package": {
-				"name": "rust-std-static-wasm32-wasi",
-				"repositories": [
-					"amazonlinux"
-				],
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.68.2-1.amzn2023.0.4"
-					}
-				],
-				"fixed": [
-					"0:1.68.2-1.amzn2023.0.4"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:2023",
-			"vulnerable": true,
-			"package": {
-				"name": "clippy",
-				"repositories": [
-					"amazonlinux"
-				],
-				"architectures": [
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.68.2-1.amzn2023.0.4"
-					}
-				],
-				"fixed": [
-					"0:1.68.2-1.amzn2023.0.4"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:2023",
-			"vulnerable": true,
-			"package": {
-				"name": "rust",
-				"repositories": [
-					"amazonlinux"
-				],
-				"architectures": [
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.68.2-1.amzn2023.0.4"
-					}
-				],
-				"fixed": [
-					"0:1.68.2-1.amzn2023.0.4"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:2023",
-			"vulnerable": true,
-			"package": {
-				"name": "rust-gdb",
-				"repositories": [
-					"amazonlinux"
-				],
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.68.2-1.amzn2023.0.4"
-					}
-				],
-				"fixed": [
-					"0:1.68.2-1.amzn2023.0.4"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:2023",
-			"vulnerable": true,
-			"package": {
-				"name": "rust-analyzer",
-				"repositories": [
-					"amazonlinux"
-				],
-				"architectures": [
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.68.2-1.amzn2023.0.4"
-					}
-				],
-				"fixed": [
-					"0:1.68.2-1.amzn2023.0.4"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:2023",
-			"vulnerable": true,
-			"package": {
 				"name": "rust-src",
 				"repositories": [
 					"amazonlinux"
@@ -264,12 +192,12 @@
 			"ecosystem": "amazon:2023",
 			"vulnerable": true,
 			"package": {
-				"name": "rust-debugger-common",
+				"name": "rust-debugsource",
 				"repositories": [
 					"amazonlinux"
 				],
 				"architectures": [
-					"noarch"
+					"aarch64"
 				]
 			},
 			"affected": {
@@ -288,7 +216,31 @@
 			"ecosystem": "amazon:2023",
 			"vulnerable": true,
 			"package": {
-				"name": "rust-lldb",
+				"name": "rust-analyzer-debuginfo",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.68.2-1.amzn2023.0.4"
+					}
+				],
+				"fixed": [
+					"0:1.68.2-1.amzn2023.0.4"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2023",
+			"vulnerable": true,
+			"package": {
+				"name": "rust-std-static-wasm32-wasi",
 				"repositories": [
 					"amazonlinux"
 				],
@@ -360,102 +312,6 @@
 			"ecosystem": "amazon:2023",
 			"vulnerable": true,
 			"package": {
-				"name": "rust-analysis",
-				"repositories": [
-					"amazonlinux"
-				],
-				"architectures": [
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.68.2-1.amzn2023.0.4"
-					}
-				],
-				"fixed": [
-					"0:1.68.2-1.amzn2023.0.4"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:2023",
-			"vulnerable": true,
-			"package": {
-				"name": "cargo",
-				"repositories": [
-					"amazonlinux"
-				],
-				"architectures": [
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.68.2-1.amzn2023.0.4"
-					}
-				],
-				"fixed": [
-					"0:1.68.2-1.amzn2023.0.4"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:2023",
-			"vulnerable": true,
-			"package": {
-				"name": "rust-debugsource",
-				"repositories": [
-					"amazonlinux"
-				],
-				"architectures": [
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.68.2-1.amzn2023.0.4"
-					}
-				],
-				"fixed": [
-					"0:1.68.2-1.amzn2023.0.4"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:2023",
-			"vulnerable": true,
-			"package": {
-				"name": "rust-doc",
-				"repositories": [
-					"amazonlinux"
-				],
-				"architectures": [
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.68.2-1.amzn2023.0.4"
-					}
-				],
-				"fixed": [
-					"0:1.68.2-1.amzn2023.0.4"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:2023",
-			"vulnerable": true,
-			"package": {
 				"name": "rust-debuginfo",
 				"repositories": [
 					"amazonlinux"
@@ -480,12 +336,156 @@
 			"ecosystem": "amazon:2023",
 			"vulnerable": true,
 			"package": {
-				"name": "rust-analyzer-debuginfo",
+				"name": "rust-analyzer",
 				"repositories": [
 					"amazonlinux"
 				],
 				"architectures": [
 					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.68.2-1.amzn2023.0.4"
+					}
+				],
+				"fixed": [
+					"0:1.68.2-1.amzn2023.0.4"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2023",
+			"vulnerable": true,
+			"package": {
+				"name": "clippy",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.68.2-1.amzn2023.0.4"
+					}
+				],
+				"fixed": [
+					"0:1.68.2-1.amzn2023.0.4"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2023",
+			"vulnerable": true,
+			"package": {
+				"name": "rust-std-static",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.68.2-1.amzn2023.0.4"
+					}
+				],
+				"fixed": [
+					"0:1.68.2-1.amzn2023.0.4"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2023",
+			"vulnerable": true,
+			"package": {
+				"name": "cargo-debuginfo",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.68.2-1.amzn2023.0.4"
+					}
+				],
+				"fixed": [
+					"0:1.68.2-1.amzn2023.0.4"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2023",
+			"vulnerable": true,
+			"package": {
+				"name": "rust",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.68.2-1.amzn2023.0.4"
+					}
+				],
+				"fixed": [
+					"0:1.68.2-1.amzn2023.0.4"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2023",
+			"vulnerable": true,
+			"package": {
+				"name": "rust-analysis",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.68.2-1.amzn2023.0.4"
+					}
+				],
+				"fixed": [
+					"0:1.68.2-1.amzn2023.0.4"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2023",
+			"vulnerable": true,
+			"package": {
+				"name": "rust-gdb",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"noarch"
 				]
 			},
 			"affected": {
