@@ -53,7 +53,7 @@
 			"ecosystem": "amazon:2",
 			"vulnerable": true,
 			"package": {
-				"name": "xorg-x11-server-devel",
+				"name": "xorg-x11-server-common",
 				"repositories": [
 					"amzn2-core"
 				],
@@ -77,12 +77,12 @@
 			"ecosystem": "amazon:2",
 			"vulnerable": true,
 			"package": {
-				"name": "xorg-x11-server-debuginfo",
+				"name": "xorg-x11-server-source",
 				"repositories": [
 					"amzn2-core"
 				],
 				"architectures": [
-					"aarch64"
+					"noarch"
 				]
 			},
 			"affected": {
@@ -102,6 +102,30 @@
 			"vulnerable": true,
 			"package": {
 				"name": "xorg-x11-server-Xorg",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.20.4-19.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"0:1.20.4-19.amzn2.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "xorg-x11-server-Xnest",
 				"repositories": [
 					"amzn2-core"
 				],
@@ -197,54 +221,6 @@
 			"ecosystem": "amazon:2",
 			"vulnerable": true,
 			"package": {
-				"name": "xorg-x11-server-common",
-				"repositories": [
-					"amzn2-core"
-				],
-				"architectures": [
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.20.4-19.amzn2.0.1"
-					}
-				],
-				"fixed": [
-					"0:1.20.4-19.amzn2.0.1"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:2",
-			"vulnerable": true,
-			"package": {
-				"name": "xorg-x11-server-Xnest",
-				"repositories": [
-					"amzn2-core"
-				],
-				"architectures": [
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.20.4-19.amzn2.0.1"
-					}
-				],
-				"fixed": [
-					"0:1.20.4-19.amzn2.0.1"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:2",
-			"vulnerable": true,
-			"package": {
 				"name": "xorg-x11-server-Xwayland",
 				"repositories": [
 					"amzn2-core"
@@ -269,12 +245,36 @@
 			"ecosystem": "amazon:2",
 			"vulnerable": true,
 			"package": {
-				"name": "xorg-x11-server-source",
+				"name": "xorg-x11-server-devel",
 				"repositories": [
 					"amzn2-core"
 				],
 				"architectures": [
-					"noarch"
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.20.4-19.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"0:1.20.4-19.amzn2.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "xorg-x11-server-debuginfo",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"aarch64"
 				]
 			},
 			"affected": {
