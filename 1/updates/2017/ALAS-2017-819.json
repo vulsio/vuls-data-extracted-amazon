@@ -40,7 +40,32 @@
 			"ecosystem": "amazon:1",
 			"vulnerable": true,
 			"package": {
-				"name": "R-debuginfo",
+				"name": "R-devel",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:3.3.3-1.51.amzn1"
+					}
+				],
+				"fixed": [
+					"0:3.3.3-1.51.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "R",
 				"repositories": [
 					"amzn-main",
 					"amzn-updates"
@@ -115,7 +140,7 @@
 			"ecosystem": "amazon:1",
 			"vulnerable": true,
 			"package": {
-				"name": "R-core",
+				"name": "libRmath-static",
 				"repositories": [
 					"amzn-main",
 					"amzn-updates"
@@ -165,7 +190,7 @@
 			"ecosystem": "amazon:1",
 			"vulnerable": true,
 			"package": {
-				"name": "R",
+				"name": "R-debuginfo",
 				"repositories": [
 					"amzn-main",
 					"amzn-updates"
@@ -240,32 +265,7 @@
 			"ecosystem": "amazon:1",
 			"vulnerable": true,
 			"package": {
-				"name": "libRmath-static",
-				"repositories": [
-					"amzn-main",
-					"amzn-updates"
-				],
-				"architectures": [
-					"i686"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:3.3.3-1.51.amzn1"
-					}
-				],
-				"fixed": [
-					"0:3.3.3-1.51.amzn1"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:1",
-			"vulnerable": true,
-			"package": {
-				"name": "R-devel",
+				"name": "R-core",
 				"repositories": [
 					"amzn-main",
 					"amzn-updates"
