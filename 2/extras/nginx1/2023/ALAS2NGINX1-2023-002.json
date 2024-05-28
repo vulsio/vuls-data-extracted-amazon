@@ -40,7 +40,31 @@
 			"ecosystem": "amazon:2",
 			"vulnerable": true,
 			"package": {
-				"name": "nginx-mod-http-xslt-filter",
+				"name": "nginx-all-modules",
+				"repositories": [
+					"amzn2extra-nginx1"
+				],
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:1.20.0-2.amzn2.0.4"
+					}
+				],
+				"fixed": [
+					"1:1.20.0-2.amzn2.0.4"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "nginx-mod-http-geoip",
 				"repositories": [
 					"amzn2extra-nginx1"
 				],
@@ -64,31 +88,7 @@
 			"ecosystem": "amazon:2",
 			"vulnerable": true,
 			"package": {
-				"name": "nginx-mod-mail",
-				"repositories": [
-					"amzn2extra-nginx1"
-				],
-				"architectures": [
-					"x86_64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:1.20.0-2.amzn2.0.4"
-					}
-				],
-				"fixed": [
-					"1:1.20.0-2.amzn2.0.4"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:2",
-			"vulnerable": true,
-			"package": {
-				"name": "nginx-mod-stream",
+				"name": "nginx-mod-http-perl",
 				"repositories": [
 					"amzn2extra-nginx1"
 				],
@@ -160,60 +160,12 @@
 			"ecosystem": "amazon:2",
 			"vulnerable": true,
 			"package": {
-				"name": "nginx-all-modules",
-				"repositories": [
-					"amzn2extra-nginx1"
-				],
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:1.20.0-2.amzn2.0.4"
-					}
-				],
-				"fixed": [
-					"1:1.20.0-2.amzn2.0.4"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:2",
-			"vulnerable": true,
-			"package": {
 				"name": "nginx-filesystem",
 				"repositories": [
 					"amzn2extra-nginx1"
 				],
 				"architectures": [
 					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:1.20.0-2.amzn2.0.4"
-					}
-				],
-				"fixed": [
-					"1:1.20.0-2.amzn2.0.4"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:2",
-			"vulnerable": true,
-			"package": {
-				"name": "nginx-mod-http-geoip",
-				"repositories": [
-					"amzn2extra-nginx1"
-				],
-				"architectures": [
-					"x86_64"
 				]
 			},
 			"affected": {
@@ -256,7 +208,55 @@
 			"ecosystem": "amazon:2",
 			"vulnerable": true,
 			"package": {
-				"name": "nginx-mod-http-perl",
+				"name": "nginx-mod-http-xslt-filter",
+				"repositories": [
+					"amzn2extra-nginx1"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:1.20.0-2.amzn2.0.4"
+					}
+				],
+				"fixed": [
+					"1:1.20.0-2.amzn2.0.4"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "nginx-mod-mail",
+				"repositories": [
+					"amzn2extra-nginx1"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:1.20.0-2.amzn2.0.4"
+					}
+				],
+				"fixed": [
+					"1:1.20.0-2.amzn2.0.4"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "nginx-mod-stream",
 				"repositories": [
 					"amzn2extra-nginx1"
 				],
