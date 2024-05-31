@@ -4,7 +4,7 @@
 		{
 			"id": "ALAS2-2022-1843",
 			"title": "Amazon Linux 2 2017.12 - ALAS2-2022-1843: important priority package update for postgresql",
-			"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2022-1552:\n\tA flaw was found in PostgreSQL. There is an issue with incomplete efforts to operate safely when a privileged user is maintaining another user's objects. The Autovacuum, REINDEX, CREATE INDEX, REFRESH MATERIALIZED VIEW, CLUSTER, and pg_amcheck commands activated relevant protections too late or not at all during the process. This flaw allows an attacker with permission to create non-temporary objects in at least one schema to execute arbitrary SQL functions under a superuser identity.\n",
+			"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2023-5869:\n\tWhile modifying certain SQL array values, missing overflow checks let authenticated database users write arbitrary bytes to a memory area that facilitates arbitrary code execution. Missing overflow checks also let authenticated database users read a wide area of server memory. The CVE-2021-32027 fix covered some attacks of this description, but it missed others.\n\nCVE-2022-1552:\n\tA flaw was found in PostgreSQL. There is an issue with incomplete efforts to operate safely when a privileged user is maintaining another user's objects. The Autovacuum, REINDEX, CREATE INDEX, REFRESH MATERIALIZED VIEW, CLUSTER, and pg_amcheck commands activated relevant protections too late or not at all during the process. This flaw allows an attacker with permission to create non-temporary objects in at least one schema to execute arbitrary SQL functions under a superuser identity.\n\nCVE-2021-32027:\n\tA flaw was found in postgresql. While modifying certain SQL array values, missing bounds checks let authenticated database users write arbitrary bytes to a wide area of server memory. The highest threat from this vulnerability is to data confidentiality and integrity as well as system availability.\n",
 			"severity": [
 				{
 					"type": "vendor",
@@ -19,12 +19,29 @@
 				},
 				{
 					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-32027"
+				},
+				{
+					"source": "linux-security@amazon.com",
 					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-1552"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-5869"
 				}
 			]
 		}
 	],
 	"vulnerabilities": [
+		{
+			"id": "CVE-2021-32027",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-32027"
+				}
+			]
+		},
 		{
 			"id": "CVE-2022-1552",
 			"references": [
@@ -33,81 +50,18 @@
 					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-1552"
 				}
 			]
+		},
+		{
+			"id": "CVE-2023-5869",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-5869"
+				}
+			]
 		}
 	],
 	"detection": [
-		{
-			"ecosystem": "amazon:2",
-			"vulnerable": true,
-			"package": {
-				"name": "postgresql-libs",
-				"repositories": [
-					"amzn2-core"
-				],
-				"architectures": [
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:9.2.24-8.amzn2"
-					}
-				],
-				"fixed": [
-					"0:9.2.24-8.amzn2"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:2",
-			"vulnerable": true,
-			"package": {
-				"name": "postgresql-server",
-				"repositories": [
-					"amzn2-core"
-				],
-				"architectures": [
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:9.2.24-8.amzn2"
-					}
-				],
-				"fixed": [
-					"0:9.2.24-8.amzn2"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:2",
-			"vulnerable": true,
-			"package": {
-				"name": "postgresql-plpython",
-				"repositories": [
-					"amzn2-core"
-				],
-				"architectures": [
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:9.2.24-8.amzn2"
-					}
-				],
-				"fixed": [
-					"0:9.2.24-8.amzn2"
-				]
-			}
-		},
 		{
 			"ecosystem": "amazon:2",
 			"vulnerable": true,
@@ -136,7 +90,7 @@
 			"ecosystem": "amazon:2",
 			"vulnerable": true,
 			"package": {
-				"name": "postgresql-debuginfo",
+				"name": "postgresql-test",
 				"repositories": [
 					"amzn2-core"
 				],
@@ -160,7 +114,7 @@
 			"ecosystem": "amazon:2",
 			"vulnerable": true,
 			"package": {
-				"name": "postgresql",
+				"name": "postgresql-server",
 				"repositories": [
 					"amzn2-core"
 				],
@@ -232,55 +186,7 @@
 			"ecosystem": "amazon:2",
 			"vulnerable": true,
 			"package": {
-				"name": "postgresql-devel",
-				"repositories": [
-					"amzn2-core"
-				],
-				"architectures": [
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:9.2.24-8.amzn2"
-					}
-				],
-				"fixed": [
-					"0:9.2.24-8.amzn2"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:2",
-			"vulnerable": true,
-			"package": {
 				"name": "postgresql-static",
-				"repositories": [
-					"amzn2-core"
-				],
-				"architectures": [
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:9.2.24-8.amzn2"
-					}
-				],
-				"fixed": [
-					"0:9.2.24-8.amzn2"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:2",
-			"vulnerable": true,
-			"package": {
-				"name": "postgresql-upgrade",
 				"repositories": [
 					"amzn2-core"
 				],
@@ -328,7 +234,127 @@
 			"ecosystem": "amazon:2",
 			"vulnerable": true,
 			"package": {
-				"name": "postgresql-test",
+				"name": "postgresql-plpython",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:9.2.24-8.amzn2"
+					}
+				],
+				"fixed": [
+					"0:9.2.24-8.amzn2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "postgresql-debuginfo",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:9.2.24-8.amzn2"
+					}
+				],
+				"fixed": [
+					"0:9.2.24-8.amzn2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "postgresql",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:9.2.24-8.amzn2"
+					}
+				],
+				"fixed": [
+					"0:9.2.24-8.amzn2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "postgresql-libs",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:9.2.24-8.amzn2"
+					}
+				],
+				"fixed": [
+					"0:9.2.24-8.amzn2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "postgresql-devel",
+				"repositories": [
+					"amzn2-core"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:9.2.24-8.amzn2"
+					}
+				],
+				"fixed": [
+					"0:9.2.24-8.amzn2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "postgresql-upgrade",
 				"repositories": [
 					"amzn2-core"
 				],

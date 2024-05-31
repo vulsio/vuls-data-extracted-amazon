@@ -4,7 +4,7 @@
 		{
 			"id": "ALAS-2018-1049",
 			"title": "Amazon Linux AMI 2014.03 - ALAS-2018-1049: critical priority package update for kernel",
-			"description": "Package updates are available for Amazon Linux AMI that fix the following vulnerabilities:\nCVE-2018-5390:\n\tTBD\n",
+			"description": "Package updates are available for Amazon Linux AMI that fix the following vulnerabilities:\nCVE-2018-5390:\n\tA flaw named SegmentSmack was found in the way the Linux kernel handled specially crafted TCP packets. A remote attacker could use this flaw to trigger time and calculation expensive calls to tcp_collapse_ofo_queue() and tcp_prune_ofo_queue() functions by sending specially modified packets within ongoing TCP sessions which could lead to a CPU saturation and hence a denial of service on the system. Maintaining the denial of service condition requires continuous two-way TCP sessions to a reachable open port, thus the attacks cannot be performed using spoofed IP addresses.\n\nCVE-2018-13405:\n\tA vulnerability was found in the fs/inode.c:inode_init_owner() function logic of the LInux kernel that allows local users to create files with an unintended group ownership and with group execution and SGID permission bits set, in a scenario where a directory is SGID and belongs to a certain group and is writable by a user who is not a member of this group. This can lead to excessive permissions granted in case when they should not.\n",
 			"severity": [
 				{
 					"type": "vendor",
@@ -19,12 +19,25 @@
 				},
 				{
 					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-13405"
+				},
+				{
+					"source": "linux-security@amazon.com",
 					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-5390"
 				}
 			]
 		}
 	],
 	"vulnerabilities": [
+		{
+			"id": "CVE-2018-13405",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-13405"
+				}
+			]
+		},
 		{
 			"id": "CVE-2018-5390",
 			"references": [
@@ -40,7 +53,7 @@
 			"ecosystem": "amazon:1",
 			"vulnerable": true,
 			"package": {
-				"name": "kernel-tools",
+				"name": "kernel-devel",
 				"repositories": [
 					"amzn-main",
 					"amzn-updates"
@@ -90,7 +103,82 @@
 			"ecosystem": "amazon:1",
 			"vulnerable": true,
 			"package": {
+				"name": "perf",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.14.59-64.43.amzn1"
+					}
+				],
+				"fixed": [
+					"0:4.14.59-64.43.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "kernel-tools-debuginfo",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.14.59-64.43.amzn1"
+					}
+				],
+				"fixed": [
+					"0:4.14.59-64.43.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
 				"name": "kernel-tools-devel",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.14.59-64.43.amzn1"
+					}
+				],
+				"fixed": [
+					"0:4.14.59-64.43.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "kernel-debuginfo",
 				"repositories": [
 					"amzn-main",
 					"amzn-updates"
@@ -165,7 +253,7 @@
 			"ecosystem": "amazon:1",
 			"vulnerable": true,
 			"package": {
-				"name": "perf",
+				"name": "kernel-tools",
 				"repositories": [
 					"amzn-main",
 					"amzn-updates"
@@ -216,81 +304,6 @@
 			"vulnerable": true,
 			"package": {
 				"name": "kernel",
-				"repositories": [
-					"amzn-main",
-					"amzn-updates"
-				],
-				"architectures": [
-					"i686"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:4.14.59-64.43.amzn1"
-					}
-				],
-				"fixed": [
-					"0:4.14.59-64.43.amzn1"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:1",
-			"vulnerable": true,
-			"package": {
-				"name": "kernel-tools-debuginfo",
-				"repositories": [
-					"amzn-main",
-					"amzn-updates"
-				],
-				"architectures": [
-					"i686"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:4.14.59-64.43.amzn1"
-					}
-				],
-				"fixed": [
-					"0:4.14.59-64.43.amzn1"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:1",
-			"vulnerable": true,
-			"package": {
-				"name": "kernel-devel",
-				"repositories": [
-					"amzn-main",
-					"amzn-updates"
-				],
-				"architectures": [
-					"i686"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:4.14.59-64.43.amzn1"
-					}
-				],
-				"fixed": [
-					"0:4.14.59-64.43.amzn1"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:1",
-			"vulnerable": true,
-			"package": {
-				"name": "kernel-debuginfo",
 				"repositories": [
 					"amzn-main",
 					"amzn-updates"
