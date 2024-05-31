@@ -131,6 +131,30 @@
 			"ecosystem": "amazon:2",
 			"vulnerable": true,
 			"package": {
+				"name": "java-11-openjdk-debug",
+				"repositories": [
+					"amzn2extra-java-openjdk11"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:11.0.16.0.8-1.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"1:11.0.16.0.8-1.amzn2.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
 				"name": "java-11-openjdk-static-libs",
 				"repositories": [
 					"amzn2extra-java-openjdk11"
@@ -155,7 +179,7 @@
 			"ecosystem": "amazon:2",
 			"vulnerable": true,
 			"package": {
-				"name": "java-11-openjdk-demo",
+				"name": "java-11-openjdk-debuginfo",
 				"repositories": [
 					"amzn2extra-java-openjdk11"
 				],
@@ -227,31 +251,7 @@
 			"ecosystem": "amazon:2",
 			"vulnerable": true,
 			"package": {
-				"name": "java-11-openjdk-headless-debug",
-				"repositories": [
-					"amzn2extra-java-openjdk11"
-				],
-				"architectures": [
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:11.0.16.0.8-1.amzn2.0.1"
-					}
-				],
-				"fixed": [
-					"1:11.0.16.0.8-1.amzn2.0.1"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:2",
-			"vulnerable": true,
-			"package": {
-				"name": "java-11-openjdk-devel-debug",
+				"name": "java-11-openjdk-jmods",
 				"repositories": [
 					"amzn2extra-java-openjdk11"
 				],
@@ -347,126 +347,6 @@
 			"ecosystem": "amazon:2",
 			"vulnerable": true,
 			"package": {
-				"name": "java-11-openjdk-javadoc",
-				"repositories": [
-					"amzn2extra-java-openjdk11"
-				],
-				"architectures": [
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:11.0.16.0.8-1.amzn2.0.1"
-					}
-				],
-				"fixed": [
-					"1:11.0.16.0.8-1.amzn2.0.1"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:2",
-			"vulnerable": true,
-			"package": {
-				"name": "java-11-openjdk-javadoc-zip",
-				"repositories": [
-					"amzn2extra-java-openjdk11"
-				],
-				"architectures": [
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:11.0.16.0.8-1.amzn2.0.1"
-					}
-				],
-				"fixed": [
-					"1:11.0.16.0.8-1.amzn2.0.1"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:2",
-			"vulnerable": true,
-			"package": {
-				"name": "java-11-openjdk-debuginfo",
-				"repositories": [
-					"amzn2extra-java-openjdk11"
-				],
-				"architectures": [
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:11.0.16.0.8-1.amzn2.0.1"
-					}
-				],
-				"fixed": [
-					"1:11.0.16.0.8-1.amzn2.0.1"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:2",
-			"vulnerable": true,
-			"package": {
-				"name": "java-11-openjdk",
-				"repositories": [
-					"amzn2extra-java-openjdk11"
-				],
-				"architectures": [
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:11.0.16.0.8-1.amzn2.0.1"
-					}
-				],
-				"fixed": [
-					"1:11.0.16.0.8-1.amzn2.0.1"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:2",
-			"vulnerable": true,
-			"package": {
-				"name": "java-11-openjdk-jmods",
-				"repositories": [
-					"amzn2extra-java-openjdk11"
-				],
-				"architectures": [
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:11.0.16.0.8-1.amzn2.0.1"
-					}
-				],
-				"fixed": [
-					"1:11.0.16.0.8-1.amzn2.0.1"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:2",
-			"vulnerable": true,
-			"package": {
 				"name": "java-11-openjdk-headless",
 				"repositories": [
 					"amzn2extra-java-openjdk11"
@@ -515,7 +395,79 @@
 			"ecosystem": "amazon:2",
 			"vulnerable": true,
 			"package": {
+				"name": "java-11-openjdk-devel-debug",
+				"repositories": [
+					"amzn2extra-java-openjdk11"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:11.0.16.0.8-1.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"1:11.0.16.0.8-1.amzn2.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
 				"name": "java-11-openjdk-static-libs-debug",
+				"repositories": [
+					"amzn2extra-java-openjdk11"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:11.0.16.0.8-1.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"1:11.0.16.0.8-1.amzn2.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "java-11-openjdk-javadoc",
+				"repositories": [
+					"amzn2extra-java-openjdk11"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:11.0.16.0.8-1.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"1:11.0.16.0.8-1.amzn2.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "java-11-openjdk-javadoc-zip",
 				"repositories": [
 					"amzn2extra-java-openjdk11"
 				],
@@ -563,7 +515,55 @@
 			"ecosystem": "amazon:2",
 			"vulnerable": true,
 			"package": {
-				"name": "java-11-openjdk-debug",
+				"name": "java-11-openjdk",
+				"repositories": [
+					"amzn2extra-java-openjdk11"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:11.0.16.0.8-1.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"1:11.0.16.0.8-1.amzn2.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "java-11-openjdk-headless-debug",
+				"repositories": [
+					"amzn2extra-java-openjdk11"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:11.0.16.0.8-1.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"1:11.0.16.0.8-1.amzn2.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "java-11-openjdk-demo",
 				"repositories": [
 					"amzn2extra-java-openjdk11"
 				],
