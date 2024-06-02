@@ -40,7 +40,31 @@
 			"ecosystem": "amazon:2023",
 			"vulnerable": true,
 			"package": {
-				"name": "nss-sysinit",
+				"name": "nspr-devel",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.35.0-5.amzn2023.0.4"
+					}
+				],
+				"fixed": [
+					"0:4.35.0-5.amzn2023.0.4"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2023",
+			"vulnerable": true,
+			"package": {
+				"name": "nss-devel",
 				"repositories": [
 					"amazonlinux"
 				],
@@ -64,7 +88,7 @@
 			"ecosystem": "amazon:2023",
 			"vulnerable": true,
 			"package": {
-				"name": "nss-softokn-devel",
+				"name": "nss-debuginfo",
 				"repositories": [
 					"amazonlinux"
 				],
@@ -88,7 +112,7 @@
 			"ecosystem": "amazon:2023",
 			"vulnerable": true,
 			"package": {
-				"name": "nss-softokn-debuginfo",
+				"name": "nspr-debuginfo",
 				"repositories": [
 					"amazonlinux"
 				],
@@ -100,35 +124,11 @@
 				"type": "rpm",
 				"range": [
 					{
-						"lt": "0:3.90.0-3.amzn2023.0.4"
+						"lt": "0:4.35.0-5.amzn2023.0.4"
 					}
 				],
 				"fixed": [
-					"0:3.90.0-3.amzn2023.0.4"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:2023",
-			"vulnerable": true,
-			"package": {
-				"name": "nss-util-debuginfo",
-				"repositories": [
-					"amazonlinux"
-				],
-				"architectures": [
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:3.90.0-3.amzn2023.0.4"
-					}
-				],
-				"fixed": [
-					"0:3.90.0-3.amzn2023.0.4"
+					"0:4.35.0-5.amzn2023.0.4"
 				]
 			}
 		},
@@ -184,151 +184,31 @@
 			"ecosystem": "amazon:2023",
 			"vulnerable": true,
 			"package": {
-				"name": "nss-tools",
-				"repositories": [
-					"amazonlinux"
-				],
-				"architectures": [
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:3.90.0-3.amzn2023.0.4"
-					}
-				],
-				"fixed": [
-					"0:3.90.0-3.amzn2023.0.4"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:2023",
-			"vulnerable": true,
-			"package": {
-				"name": "nss-debuginfo",
-				"repositories": [
-					"amazonlinux"
-				],
-				"architectures": [
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:3.90.0-3.amzn2023.0.4"
-					}
-				],
-				"fixed": [
-					"0:3.90.0-3.amzn2023.0.4"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:2023",
-			"vulnerable": true,
-			"package": {
-				"name": "nss-util",
-				"repositories": [
-					"amazonlinux"
-				],
-				"architectures": [
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:3.90.0-3.amzn2023.0.4"
-					}
-				],
-				"fixed": [
-					"0:3.90.0-3.amzn2023.0.4"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:2023",
-			"vulnerable": true,
-			"package": {
-				"name": "nss-tools-debuginfo",
-				"repositories": [
-					"amazonlinux"
-				],
-				"architectures": [
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:3.90.0-3.amzn2023.0.4"
-					}
-				],
-				"fixed": [
-					"0:3.90.0-3.amzn2023.0.4"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:2023",
-			"vulnerable": true,
-			"package": {
-				"name": "nss-softokn-freebl-devel",
-				"repositories": [
-					"amazonlinux"
-				],
-				"architectures": [
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:3.90.0-3.amzn2023.0.4"
-					}
-				],
-				"fixed": [
-					"0:3.90.0-3.amzn2023.0.4"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:2023",
-			"vulnerable": true,
-			"package": {
-				"name": "nss",
-				"repositories": [
-					"amazonlinux"
-				],
-				"architectures": [
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:3.90.0-3.amzn2023.0.4"
-					}
-				],
-				"fixed": [
-					"0:3.90.0-3.amzn2023.0.4"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:2023",
-			"vulnerable": true,
-			"package": {
 				"name": "nss-softokn-freebl",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:3.90.0-3.amzn2023.0.4"
+					}
+				],
+				"fixed": [
+					"0:3.90.0-3.amzn2023.0.4"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2023",
+			"vulnerable": true,
+			"package": {
+				"name": "nss-softokn-devel",
 				"repositories": [
 					"amazonlinux"
 				],
@@ -376,7 +256,7 @@
 			"ecosystem": "amazon:2023",
 			"vulnerable": true,
 			"package": {
-				"name": "nss-devel",
+				"name": "nss-softokn",
 				"repositories": [
 					"amazonlinux"
 				],
@@ -393,54 +273,6 @@
 				],
 				"fixed": [
 					"0:3.90.0-3.amzn2023.0.4"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:2023",
-			"vulnerable": true,
-			"package": {
-				"name": "nspr-debuginfo",
-				"repositories": [
-					"amazonlinux"
-				],
-				"architectures": [
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:4.35.0-5.amzn2023.0.4"
-					}
-				],
-				"fixed": [
-					"0:4.35.0-5.amzn2023.0.4"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:2023",
-			"vulnerable": true,
-			"package": {
-				"name": "nspr",
-				"repositories": [
-					"amazonlinux"
-				],
-				"architectures": [
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:4.35.0-5.amzn2023.0.4"
-					}
-				],
-				"fixed": [
-					"0:4.35.0-5.amzn2023.0.4"
 				]
 			}
 		},
@@ -472,7 +304,7 @@
 			"ecosystem": "amazon:2023",
 			"vulnerable": true,
 			"package": {
-				"name": "nss-softokn",
+				"name": "nss-util-debuginfo",
 				"repositories": [
 					"amazonlinux"
 				],
@@ -496,7 +328,7 @@
 			"ecosystem": "amazon:2023",
 			"vulnerable": true,
 			"package": {
-				"name": "nspr-devel",
+				"name": "nspr",
 				"repositories": [
 					"amazonlinux"
 				],
@@ -520,7 +352,175 @@
 			"ecosystem": "amazon:2023",
 			"vulnerable": true,
 			"package": {
+				"name": "nss-util",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:3.90.0-3.amzn2023.0.4"
+					}
+				],
+				"fixed": [
+					"0:3.90.0-3.amzn2023.0.4"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2023",
+			"vulnerable": true,
+			"package": {
+				"name": "nss-softokn-freebl-devel",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:3.90.0-3.amzn2023.0.4"
+					}
+				],
+				"fixed": [
+					"0:3.90.0-3.amzn2023.0.4"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2023",
+			"vulnerable": true,
+			"package": {
+				"name": "nss-tools",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:3.90.0-3.amzn2023.0.4"
+					}
+				],
+				"fixed": [
+					"0:3.90.0-3.amzn2023.0.4"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2023",
+			"vulnerable": true,
+			"package": {
+				"name": "nss-sysinit",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:3.90.0-3.amzn2023.0.4"
+					}
+				],
+				"fixed": [
+					"0:3.90.0-3.amzn2023.0.4"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2023",
+			"vulnerable": true,
+			"package": {
 				"name": "nss-pkcs11-devel",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:3.90.0-3.amzn2023.0.4"
+					}
+				],
+				"fixed": [
+					"0:3.90.0-3.amzn2023.0.4"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2023",
+			"vulnerable": true,
+			"package": {
+				"name": "nss-tools-debuginfo",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:3.90.0-3.amzn2023.0.4"
+					}
+				],
+				"fixed": [
+					"0:3.90.0-3.amzn2023.0.4"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2023",
+			"vulnerable": true,
+			"package": {
+				"name": "nss",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:3.90.0-3.amzn2023.0.4"
+					}
+				],
+				"fixed": [
+					"0:3.90.0-3.amzn2023.0.4"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2023",
+			"vulnerable": true,
+			"package": {
+				"name": "nss-softokn-debuginfo",
 				"repositories": [
 					"amazonlinux"
 				],
