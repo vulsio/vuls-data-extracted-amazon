@@ -40,7 +40,82 @@
 			"ecosystem": "amazon:1",
 			"vulnerable": true,
 			"package": {
-				"name": "httpd",
+				"name": "mod_ssl",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "1:2.2.34-1.15.amzn1"
+					}
+				],
+				"fixed": [
+					"1:2.2.34-1.15.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "mod24_ldap",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.4.27-3.73.amzn1"
+					}
+				],
+				"fixed": [
+					"0:2.4.27-3.73.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "httpd24-devel",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.4.27-3.73.amzn1"
+					}
+				],
+				"fixed": [
+					"0:2.4.27-3.73.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "httpd-tools",
 				"repositories": [
 					"amzn-main",
 					"amzn-updates"
@@ -90,56 +165,6 @@
 			"ecosystem": "amazon:1",
 			"vulnerable": true,
 			"package": {
-				"name": "httpd-debuginfo",
-				"repositories": [
-					"amzn-main",
-					"amzn-updates"
-				],
-				"architectures": [
-					"i686"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:2.2.34-1.15.amzn1"
-					}
-				],
-				"fixed": [
-					"0:2.2.34-1.15.amzn1"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:1",
-			"vulnerable": true,
-			"package": {
-				"name": "httpd24",
-				"repositories": [
-					"amzn-main",
-					"amzn-updates"
-				],
-				"architectures": [
-					"i686"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:2.4.27-3.73.amzn1"
-					}
-				],
-				"fixed": [
-					"0:2.4.27-3.73.amzn1"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:1",
-			"vulnerable": true,
-			"package": {
 				"name": "httpd24-manual",
 				"repositories": [
 					"amzn-main",
@@ -165,7 +190,32 @@
 			"ecosystem": "amazon:1",
 			"vulnerable": true,
 			"package": {
-				"name": "httpd-devel",
+				"name": "mod24_session",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.4.27-3.73.amzn1"
+					}
+				],
+				"fixed": [
+					"0:2.4.27-3.73.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "httpd",
 				"repositories": [
 					"amzn-main",
 					"amzn-updates"
@@ -190,7 +240,7 @@
 			"ecosystem": "amazon:1",
 			"vulnerable": true,
 			"package": {
-				"name": "mod24_ldap",
+				"name": "httpd24-debuginfo",
 				"repositories": [
 					"amzn-main",
 					"amzn-updates"
@@ -265,7 +315,57 @@
 			"ecosystem": "amazon:1",
 			"vulnerable": true,
 			"package": {
-				"name": "httpd24-devel",
+				"name": "httpd-devel",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.2.34-1.15.amzn1"
+					}
+				],
+				"fixed": [
+					"0:2.2.34-1.15.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "httpd-debuginfo",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:2.2.34-1.15.amzn1"
+					}
+				],
+				"fixed": [
+					"0:2.2.34-1.15.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "httpd24",
 				"repositories": [
 					"amzn-main",
 					"amzn-updates"
@@ -308,106 +408,6 @@
 				],
 				"fixed": [
 					"1:2.4.27-3.73.amzn1"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:1",
-			"vulnerable": true,
-			"package": {
-				"name": "httpd24-debuginfo",
-				"repositories": [
-					"amzn-main",
-					"amzn-updates"
-				],
-				"architectures": [
-					"i686"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:2.4.27-3.73.amzn1"
-					}
-				],
-				"fixed": [
-					"0:2.4.27-3.73.amzn1"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:1",
-			"vulnerable": true,
-			"package": {
-				"name": "httpd-tools",
-				"repositories": [
-					"amzn-main",
-					"amzn-updates"
-				],
-				"architectures": [
-					"i686"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:2.2.34-1.15.amzn1"
-					}
-				],
-				"fixed": [
-					"0:2.2.34-1.15.amzn1"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:1",
-			"vulnerable": true,
-			"package": {
-				"name": "mod_ssl",
-				"repositories": [
-					"amzn-main",
-					"amzn-updates"
-				],
-				"architectures": [
-					"i686"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "1:2.2.34-1.15.amzn1"
-					}
-				],
-				"fixed": [
-					"1:2.2.34-1.15.amzn1"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:1",
-			"vulnerable": true,
-			"package": {
-				"name": "mod24_session",
-				"repositories": [
-					"amzn-main",
-					"amzn-updates"
-				],
-				"architectures": [
-					"i686"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:2.4.27-3.73.amzn1"
-					}
-				],
-				"fixed": [
-					"0:2.4.27-3.73.amzn1"
 				]
 			}
 		}
