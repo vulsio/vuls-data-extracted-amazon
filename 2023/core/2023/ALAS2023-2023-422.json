@@ -4,7 +4,7 @@
 		{
 			"id": "ALAS2023-2023-422",
 			"title": "Amazon Linux 2023 - ALAS2023-2023-422: Important priority package update for kernel",
-			"description": "Package updates are available for Amazon Linux 2023 that fix the following vulnerabilities:\nCVE-2024-0641:\n\tA denial of service vulnerability was found in tipc_crypto_key_revoke in net/tipc/crypto.c in the Linux kernel's TIPC subsystem. This flaw allows guests with local user privileges to trigger a deadlock and potentially crash the system.\n\nCVE-2023-39191:\n\tAn improper input validation flaw was found in the eBPF subsystem in the Linux kernel. The issue occurs due to a lack of proper validation of dynamic pointers within user-supplied eBPF programs prior to executing them. This may allow an attacker with CAP_BPF privileges to escalate privileges and execute arbitrary code in the context of the kernel.\n\nCVE-2023-34324:\n\tA flaw in the kernel Xen event handler can cause a deadlock with Xen console handling in unprivileged Xen guests.\n",
+			"description": "Package updates are available for Amazon Linux 2023 that fix the following vulnerabilities:\nCVE-2024-0641:\n\tA denial of service vulnerability was found in tipc_crypto_key_revoke in net/tipc/crypto.c in the Linux kernel's TIPC subsystem. This flaw allows guests with local user privileges to trigger a deadlock and potentially crash the system.\n\nCVE-2023-52481:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\narm64: errata: Add Cortex-A520 speculative unprivileged load workaround\n\nCVE-2023-52477:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nusb: hub: Guard against accesses to uninitialized BOS descriptors\n\nCVE-2023-52476:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nperf/x86/lbr: Filter vsyscall addresses\n\nCVE-2023-39191:\n\tAn improper input validation flaw was found in the eBPF subsystem in the Linux kernel. The issue occurs due to a lack of proper validation of dynamic pointers within user-supplied eBPF programs prior to executing them. This may allow an attacker with CAP_BPF privileges to escalate privileges and execute arbitrary code in the context of the kernel.\n\nCVE-2023-34324:\n\tA flaw in the kernel Xen event handler can cause a deadlock with Xen console handling in unprivileged Xen guests.\n",
 			"severity": [
 				{
 					"type": "vendor",
@@ -24,6 +24,18 @@
 				{
 					"source": "linux-security@amazon.com",
 					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-39191"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52476"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52477"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52481"
 				},
 				{
 					"source": "linux-security@amazon.com",
@@ -52,6 +64,33 @@
 			]
 		},
 		{
+			"id": "CVE-2023-52476",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52476"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-52477",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52477"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-52481",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52481"
+				}
+			]
+		},
+		{
 			"id": "CVE-2024-0641",
 			"references": [
 				{
@@ -62,30 +101,6 @@
 		}
 	],
 	"detection": [
-		{
-			"ecosystem": "amazon:2023",
-			"vulnerable": true,
-			"package": {
-				"name": "kernel-tools-debuginfo",
-				"repositories": [
-					"amazonlinux"
-				],
-				"architectures": [
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:6.1.59-84.139.amzn2023"
-					}
-				],
-				"fixed": [
-					"0:6.1.59-84.139.amzn2023"
-				]
-			}
-		},
 		{
 			"ecosystem": "amazon:2023",
 			"vulnerable": true,
@@ -114,7 +129,7 @@
 			"ecosystem": "amazon:2023",
 			"vulnerable": true,
 			"package": {
-				"name": "kernel-libbpf-devel",
+				"name": "kernel",
 				"repositories": [
 					"amazonlinux"
 				],
@@ -138,7 +153,7 @@
 			"ecosystem": "amazon:2023",
 			"vulnerable": true,
 			"package": {
-				"name": "kernel-tools",
+				"name": "kernel-tools-debuginfo",
 				"repositories": [
 					"amazonlinux"
 				],
@@ -186,30 +201,6 @@
 			"ecosystem": "amazon:2023",
 			"vulnerable": true,
 			"package": {
-				"name": "kernel-livepatch-6.1.59-84.139",
-				"repositories": [
-					"amazonlinux"
-				],
-				"architectures": [
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.0-0.amzn2023"
-					}
-				],
-				"fixed": [
-					"0:1.0-0.amzn2023"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:2023",
-			"vulnerable": true,
-			"package": {
 				"name": "perf-debuginfo",
 				"repositories": [
 					"amazonlinux"
@@ -234,7 +225,7 @@
 			"ecosystem": "amazon:2023",
 			"vulnerable": true,
 			"package": {
-				"name": "kernel-libbpf-static",
+				"name": "kernel-modules-extra",
 				"repositories": [
 					"amazonlinux"
 				],
@@ -258,12 +249,12 @@
 			"ecosystem": "amazon:2023",
 			"vulnerable": true,
 			"package": {
-				"name": "perf",
+				"name": "kernel-debuginfo-common-x86_64",
 				"repositories": [
 					"amazonlinux"
 				],
 				"architectures": [
-					"aarch64"
+					"x86_64"
 				]
 			},
 			"affected": {
@@ -282,7 +273,7 @@
 			"ecosystem": "amazon:2023",
 			"vulnerable": true,
 			"package": {
-				"name": "kernel-headers",
+				"name": "python3-perf-debuginfo",
 				"repositories": [
 					"amazonlinux"
 				],
@@ -354,6 +345,102 @@
 			"ecosystem": "amazon:2023",
 			"vulnerable": true,
 			"package": {
+				"name": "kernel-libbpf-devel",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:6.1.59-84.139.amzn2023"
+					}
+				],
+				"fixed": [
+					"0:6.1.59-84.139.amzn2023"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2023",
+			"vulnerable": true,
+			"package": {
+				"name": "kernel-tools",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:6.1.59-84.139.amzn2023"
+					}
+				],
+				"fixed": [
+					"0:6.1.59-84.139.amzn2023"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2023",
+			"vulnerable": true,
+			"package": {
+				"name": "kernel-livepatch-6.1.59-84.139",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.0-0.amzn2023"
+					}
+				],
+				"fixed": [
+					"0:1.0-0.amzn2023"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2023",
+			"vulnerable": true,
+			"package": {
+				"name": "kernel-headers",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:6.1.59-84.139.amzn2023"
+					}
+				],
+				"fixed": [
+					"0:6.1.59-84.139.amzn2023"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2023",
+			"vulnerable": true,
+			"package": {
 				"name": "kernel-debuginfo",
 				"repositories": [
 					"amazonlinux"
@@ -402,12 +489,12 @@
 			"ecosystem": "amazon:2023",
 			"vulnerable": true,
 			"package": {
-				"name": "kernel-debuginfo-common-x86_64",
+				"name": "kernel-debuginfo-common-aarch64",
 				"repositories": [
 					"amazonlinux"
 				],
 				"architectures": [
-					"x86_64"
+					"aarch64"
 				]
 			},
 			"affected": {
@@ -450,7 +537,7 @@
 			"ecosystem": "amazon:2023",
 			"vulnerable": true,
 			"package": {
-				"name": "kernel",
+				"name": "kernel-libbpf-static",
 				"repositories": [
 					"amazonlinux"
 				],
@@ -474,55 +561,7 @@
 			"ecosystem": "amazon:2023",
 			"vulnerable": true,
 			"package": {
-				"name": "kernel-debuginfo-common-aarch64",
-				"repositories": [
-					"amazonlinux"
-				],
-				"architectures": [
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:6.1.59-84.139.amzn2023"
-					}
-				],
-				"fixed": [
-					"0:6.1.59-84.139.amzn2023"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:2023",
-			"vulnerable": true,
-			"package": {
-				"name": "python3-perf-debuginfo",
-				"repositories": [
-					"amazonlinux"
-				],
-				"architectures": [
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:6.1.59-84.139.amzn2023"
-					}
-				],
-				"fixed": [
-					"0:6.1.59-84.139.amzn2023"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:2023",
-			"vulnerable": true,
-			"package": {
-				"name": "kernel-modules-extra",
+				"name": "perf",
 				"repositories": [
 					"amazonlinux"
 				],
