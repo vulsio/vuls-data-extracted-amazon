@@ -66,6 +66,54 @@
 			"ecosystem": "amazon:2",
 			"vulnerable": true,
 			"package": {
+				"name": "postgresql-test-rpm-macros",
+				"repositories": [
+					"amzn2extra-postgresql13"
+				],
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:13.11-1.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"0:13.11-1.amzn2.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "postgresql-static",
+				"repositories": [
+					"amzn2extra-postgresql13"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:13.11-1.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"0:13.11-1.amzn2.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
 				"name": "postgresql-llvmjit",
 				"repositories": [
 					"amzn2extra-postgresql13"
@@ -90,7 +138,7 @@
 			"ecosystem": "amazon:2",
 			"vulnerable": true,
 			"package": {
-				"name": "postgresql-debuginfo",
+				"name": "postgresql-server",
 				"repositories": [
 					"amzn2extra-postgresql13"
 				],
@@ -115,30 +163,6 @@
 			"vulnerable": true,
 			"package": {
 				"name": "postgresql-contrib",
-				"repositories": [
-					"amzn2extra-postgresql13"
-				],
-				"architectures": [
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:13.11-1.amzn2.0.1"
-					}
-				],
-				"fixed": [
-					"0:13.11-1.amzn2.0.1"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:2",
-			"vulnerable": true,
-			"package": {
-				"name": "postgresql-upgrade-devel",
 				"repositories": [
 					"amzn2extra-postgresql13"
 				],
@@ -210,54 +234,6 @@
 			"ecosystem": "amazon:2",
 			"vulnerable": true,
 			"package": {
-				"name": "postgresql-static",
-				"repositories": [
-					"amzn2extra-postgresql13"
-				],
-				"architectures": [
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:13.11-1.amzn2.0.1"
-					}
-				],
-				"fixed": [
-					"0:13.11-1.amzn2.0.1"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:2",
-			"vulnerable": true,
-			"package": {
-				"name": "postgresql-plpython3",
-				"repositories": [
-					"amzn2extra-postgresql13"
-				],
-				"architectures": [
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:13.11-1.amzn2.0.1"
-					}
-				],
-				"fixed": [
-					"0:13.11-1.amzn2.0.1"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:2",
-			"vulnerable": true,
-			"package": {
 				"name": "postgresql-test",
 				"repositories": [
 					"amzn2extra-postgresql13"
@@ -282,7 +258,7 @@
 			"ecosystem": "amazon:2",
 			"vulnerable": true,
 			"package": {
-				"name": "postgresql-private-devel",
+				"name": "postgresql-debuginfo",
 				"repositories": [
 					"amzn2extra-postgresql13"
 				],
@@ -306,12 +282,12 @@
 			"ecosystem": "amazon:2",
 			"vulnerable": true,
 			"package": {
-				"name": "postgresql-test-rpm-macros",
+				"name": "postgresql",
 				"repositories": [
 					"amzn2extra-postgresql13"
 				],
 				"architectures": [
-					"noarch"
+					"aarch64"
 				]
 			},
 			"affected": {
@@ -330,7 +306,7 @@
 			"ecosystem": "amazon:2",
 			"vulnerable": true,
 			"package": {
-				"name": "postgresql-server",
+				"name": "postgresql-private-devel",
 				"repositories": [
 					"amzn2extra-postgresql13"
 				],
@@ -426,7 +402,7 @@
 			"ecosystem": "amazon:2",
 			"vulnerable": true,
 			"package": {
-				"name": "postgresql",
+				"name": "postgresql-private-libs",
 				"repositories": [
 					"amzn2extra-postgresql13"
 				],
@@ -450,7 +426,31 @@
 			"ecosystem": "amazon:2",
 			"vulnerable": true,
 			"package": {
-				"name": "postgresql-private-libs",
+				"name": "postgresql-upgrade-devel",
+				"repositories": [
+					"amzn2extra-postgresql13"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:13.11-1.amzn2.0.1"
+					}
+				],
+				"fixed": [
+					"0:13.11-1.amzn2.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "postgresql-plpython3",
 				"repositories": [
 					"amzn2extra-postgresql13"
 				],
