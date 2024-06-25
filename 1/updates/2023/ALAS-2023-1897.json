@@ -4,7 +4,7 @@
 		{
 			"id": "ALAS-2023-1897",
 			"title": "Amazon Linux AMI 2014.03 - ALAS-2023-1897: medium priority package update for kernel",
-			"description": "Package updates are available for Amazon Linux AMI that fix the following vulnerabilities:\nCVE-2023-3567:\n\tA use-after-free flaw was found in vcs_read in drivers/tty/vt/vc_screen.c in vc_screen in the Linux Kernel. In this flaw an attacker with local user access may lead to a system crash or a leak of internal kernel information.\n",
+			"description": "Package updates are available for Amazon Linux AMI that fix the following vulnerabilities:\nCVE-2023-52845:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\ntipc: Change nla_policy for bearer-related names to NLA_NUL_STRING\n\nCVE-2023-3567:\n\tA use-after-free flaw was found in vcs_read in drivers/tty/vt/vc_screen.c in vc_screen in the Linux Kernel. In this flaw an attacker with local user access may lead to a system crash or a leak of internal kernel information.\n",
 			"severity": [
 				{
 					"type": "vendor",
@@ -20,6 +20,10 @@
 				{
 					"source": "linux-security@amazon.com",
 					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-3567"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52845"
 				}
 			]
 		}
@@ -33,59 +37,18 @@
 					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-3567"
 				}
 			]
+		},
+		{
+			"id": "CVE-2023-52845",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52845"
+				}
+			]
 		}
 	],
 	"detection": [
-		{
-			"ecosystem": "amazon:1",
-			"vulnerable": true,
-			"package": {
-				"name": "kernel-tools-devel",
-				"repositories": [
-					"amzn-main",
-					"amzn-updates"
-				],
-				"architectures": [
-					"i686"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:4.14.330-176.540.amzn1"
-					}
-				],
-				"fixed": [
-					"0:4.14.330-176.540.amzn1"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:1",
-			"vulnerable": true,
-			"package": {
-				"name": "kernel-tools-debuginfo",
-				"repositories": [
-					"amzn-main",
-					"amzn-updates"
-				],
-				"architectures": [
-					"i686"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:4.14.330-176.540.amzn1"
-					}
-				],
-				"fixed": [
-					"0:4.14.330-176.540.amzn1"
-				]
-			}
-		},
 		{
 			"ecosystem": "amazon:1",
 			"vulnerable": true,
@@ -115,7 +78,57 @@
 			"ecosystem": "amazon:1",
 			"vulnerable": true,
 			"package": {
+				"name": "kernel-tools",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.14.330-176.540.amzn1"
+					}
+				],
+				"fixed": [
+					"0:4.14.330-176.540.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
 				"name": "perf",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.14.330-176.540.amzn1"
+					}
+				],
+				"fixed": [
+					"0:4.14.330-176.540.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "kernel-debuginfo-common-i686",
 				"repositories": [
 					"amzn-main",
 					"amzn-updates"
@@ -190,57 +203,7 @@
 			"ecosystem": "amazon:1",
 			"vulnerable": true,
 			"package": {
-				"name": "perf-debuginfo",
-				"repositories": [
-					"amzn-main",
-					"amzn-updates"
-				],
-				"architectures": [
-					"i686"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:4.14.330-176.540.amzn1"
-					}
-				],
-				"fixed": [
-					"0:4.14.330-176.540.amzn1"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:1",
-			"vulnerable": true,
-			"package": {
 				"name": "kernel-headers",
-				"repositories": [
-					"amzn-main",
-					"amzn-updates"
-				],
-				"architectures": [
-					"i686"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:4.14.330-176.540.amzn1"
-					}
-				],
-				"fixed": [
-					"0:4.14.330-176.540.amzn1"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:1",
-			"vulnerable": true,
-			"package": {
-				"name": "kernel-tools",
 				"repositories": [
 					"amzn-main",
 					"amzn-updates"
@@ -290,7 +253,57 @@
 			"ecosystem": "amazon:1",
 			"vulnerable": true,
 			"package": {
-				"name": "kernel-debuginfo-common-i686",
+				"name": "kernel-tools-devel",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.14.330-176.540.amzn1"
+					}
+				],
+				"fixed": [
+					"0:4.14.330-176.540.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "kernel-tools-debuginfo",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:4.14.330-176.540.amzn1"
+					}
+				],
+				"fixed": [
+					"0:4.14.330-176.540.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "perf-debuginfo",
 				"repositories": [
 					"amzn-main",
 					"amzn-updates"
