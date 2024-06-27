@@ -40,6 +40,30 @@
 			"ecosystem": "amazon:2",
 			"vulnerable": true,
 			"package": {
+				"name": "containerd-debuginfo",
+				"repositories": [
+					"amzn2extra-docker"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.4.13-3.amzn2"
+					}
+				],
+				"fixed": [
+					"0:1.4.13-3.amzn2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
 				"name": "containerd",
 				"repositories": [
 					"amzn2extra-docker"
@@ -65,30 +89,6 @@
 			"vulnerable": true,
 			"package": {
 				"name": "containerd-stress",
-				"repositories": [
-					"amzn2extra-docker"
-				],
-				"architectures": [
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.4.13-3.amzn2"
-					}
-				],
-				"fixed": [
-					"0:1.4.13-3.amzn2"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:2",
-			"vulnerable": true,
-			"package": {
-				"name": "containerd-debuginfo",
 				"repositories": [
 					"amzn2extra-docker"
 				],
