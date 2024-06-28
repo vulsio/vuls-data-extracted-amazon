@@ -40,7 +40,7 @@
 			"ecosystem": "amazon:1",
 			"vulnerable": true,
 			"package": {
-				"name": "yum-utils",
+				"name": "yum-plugin-protectbase",
 				"repositories": [
 					"amzn-main",
 					"amzn-updates"
@@ -65,7 +65,7 @@
 			"ecosystem": "amazon:1",
 			"vulnerable": true,
 			"package": {
-				"name": "yum-plugin-refresh-updatesd",
+				"name": "yum-plugin-aliases",
 				"repositories": [
 					"amzn-main",
 					"amzn-updates"
@@ -90,7 +90,7 @@
 			"ecosystem": "amazon:1",
 			"vulnerable": true,
 			"package": {
-				"name": "yum-plugin-keys",
+				"name": "yum-plugin-merge-conf",
 				"repositories": [
 					"amzn-main",
 					"amzn-updates"
@@ -115,7 +115,7 @@
 			"ecosystem": "amazon:1",
 			"vulnerable": true,
 			"package": {
-				"name": "yum-plugin-post-transaction-actions",
+				"name": "yum-plugin-show-leaves",
 				"repositories": [
 					"amzn-main",
 					"amzn-updates"
@@ -140,7 +140,32 @@
 			"ecosystem": "amazon:1",
 			"vulnerable": true,
 			"package": {
-				"name": "yum-plugin-copr",
+				"name": "yum-plugin-changelog",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.1.31-46.30.amzn1"
+					}
+				],
+				"fixed": [
+					"0:1.1.31-46.30.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "yum-plugin-remove-with-leaves",
 				"repositories": [
 					"amzn-main",
 					"amzn-updates"
@@ -190,81 +215,6 @@
 			"ecosystem": "amazon:1",
 			"vulnerable": true,
 			"package": {
-				"name": "yum-plugin-ps",
-				"repositories": [
-					"amzn-main",
-					"amzn-updates"
-				],
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.1.31-46.30.amzn1"
-					}
-				],
-				"fixed": [
-					"0:1.1.31-46.30.amzn1"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:1",
-			"vulnerable": true,
-			"package": {
-				"name": "yum-plugin-rpm-warm-cache",
-				"repositories": [
-					"amzn-main",
-					"amzn-updates"
-				],
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.1.31-46.30.amzn1"
-					}
-				],
-				"fixed": [
-					"0:1.1.31-46.30.amzn1"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:1",
-			"vulnerable": true,
-			"package": {
-				"name": "yum-plugin-tmprepo",
-				"repositories": [
-					"amzn-main",
-					"amzn-updates"
-				],
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.1.31-46.30.amzn1"
-					}
-				],
-				"fixed": [
-					"0:1.1.31-46.30.amzn1"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:1",
-			"vulnerable": true,
-			"package": {
 				"name": "yum-plugin-ovl",
 				"repositories": [
 					"amzn-main",
@@ -290,82 +240,7 @@
 			"ecosystem": "amazon:1",
 			"vulnerable": true,
 			"package": {
-				"name": "yum-plugin-auto-update-debug-info",
-				"repositories": [
-					"amzn-main",
-					"amzn-updates"
-				],
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.1.31-46.30.amzn1"
-					}
-				],
-				"fixed": [
-					"0:1.1.31-46.30.amzn1"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:1",
-			"vulnerable": true,
-			"package": {
-				"name": "yum-updateonboot",
-				"repositories": [
-					"amzn-main",
-					"amzn-updates"
-				],
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.1.31-46.30.amzn1"
-					}
-				],
-				"fixed": [
-					"0:1.1.31-46.30.amzn1"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:1",
-			"vulnerable": true,
-			"package": {
-				"name": "yum-plugin-versionlock",
-				"repositories": [
-					"amzn-main",
-					"amzn-updates"
-				],
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.1.31-46.30.amzn1"
-					}
-				],
-				"fixed": [
-					"0:1.1.31-46.30.amzn1"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:1",
-			"vulnerable": true,
-			"package": {
-				"name": "yum-plugin-merge-conf",
+				"name": "yum-plugin-fastestmirror",
 				"repositories": [
 					"amzn-main",
 					"amzn-updates"
@@ -440,157 +315,57 @@
 			"ecosystem": "amazon:1",
 			"vulnerable": true,
 			"package": {
-				"name": "yum-plugin-changelog",
-				"repositories": [
-					"amzn-main",
-					"amzn-updates"
-				],
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.1.31-46.30.amzn1"
-					}
-				],
-				"fixed": [
-					"0:1.1.31-46.30.amzn1"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:1",
-			"vulnerable": true,
-			"package": {
-				"name": "yum-plugin-verify",
-				"repositories": [
-					"amzn-main",
-					"amzn-updates"
-				],
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.1.31-46.30.amzn1"
-					}
-				],
-				"fixed": [
-					"0:1.1.31-46.30.amzn1"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:1",
-			"vulnerable": true,
-			"package": {
-				"name": "yum-plugin-list-data",
-				"repositories": [
-					"amzn-main",
-					"amzn-updates"
-				],
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.1.31-46.30.amzn1"
-					}
-				],
-				"fixed": [
-					"0:1.1.31-46.30.amzn1"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:1",
-			"vulnerable": true,
-			"package": {
-				"name": "yum-plugin-fastestmirror",
-				"repositories": [
-					"amzn-main",
-					"amzn-updates"
-				],
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.1.31-46.30.amzn1"
-					}
-				],
-				"fixed": [
-					"0:1.1.31-46.30.amzn1"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:1",
-			"vulnerable": true,
-			"package": {
-				"name": "yum-plugin-tsflags",
-				"repositories": [
-					"amzn-main",
-					"amzn-updates"
-				],
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.1.31-46.30.amzn1"
-					}
-				],
-				"fixed": [
-					"0:1.1.31-46.30.amzn1"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:1",
-			"vulnerable": true,
-			"package": {
-				"name": "yum-plugin-local",
-				"repositories": [
-					"amzn-main",
-					"amzn-updates"
-				],
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.1.31-46.30.amzn1"
-					}
-				],
-				"fixed": [
-					"0:1.1.31-46.30.amzn1"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:1",
-			"vulnerable": true,
-			"package": {
 				"name": "yum-plugin-priorities",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.1.31-46.30.amzn1"
+					}
+				],
+				"fixed": [
+					"0:1.1.31-46.30.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "yum-plugin-ps",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.1.31-46.30.amzn1"
+					}
+				],
+				"fixed": [
+					"0:1.1.31-46.30.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "yum-plugin-versionlock",
 				"repositories": [
 					"amzn-main",
 					"amzn-updates"
@@ -640,7 +415,207 @@
 			"ecosystem": "amazon:1",
 			"vulnerable": true,
 			"package": {
-				"name": "yum-plugin-protectbase",
+				"name": "yum-utils",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.1.31-46.30.amzn1"
+					}
+				],
+				"fixed": [
+					"0:1.1.31-46.30.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "yum-plugin-rpm-warm-cache",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.1.31-46.30.amzn1"
+					}
+				],
+				"fixed": [
+					"0:1.1.31-46.30.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "yum-plugin-tmprepo",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.1.31-46.30.amzn1"
+					}
+				],
+				"fixed": [
+					"0:1.1.31-46.30.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "yum-plugin-keys",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.1.31-46.30.amzn1"
+					}
+				],
+				"fixed": [
+					"0:1.1.31-46.30.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "yum-plugin-list-data",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.1.31-46.30.amzn1"
+					}
+				],
+				"fixed": [
+					"0:1.1.31-46.30.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "yum-plugin-local",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.1.31-46.30.amzn1"
+					}
+				],
+				"fixed": [
+					"0:1.1.31-46.30.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "yum-plugin-copr",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.1.31-46.30.amzn1"
+					}
+				],
+				"fixed": [
+					"0:1.1.31-46.30.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "yum-plugin-post-transaction-actions",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.1.31-46.30.amzn1"
+					}
+				],
+				"fixed": [
+					"0:1.1.31-46.30.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "yum-plugin-verify",
 				"repositories": [
 					"amzn-main",
 					"amzn-updates"
@@ -690,7 +665,7 @@
 			"ecosystem": "amazon:1",
 			"vulnerable": true,
 			"package": {
-				"name": "yum-plugin-aliases",
+				"name": "yum-updateonboot",
 				"repositories": [
 					"amzn-main",
 					"amzn-updates"
@@ -715,32 +690,7 @@
 			"ecosystem": "amazon:1",
 			"vulnerable": true,
 			"package": {
-				"name": "yum-plugin-remove-with-leaves",
-				"repositories": [
-					"amzn-main",
-					"amzn-updates"
-				],
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.1.31-46.30.amzn1"
-					}
-				],
-				"fixed": [
-					"0:1.1.31-46.30.amzn1"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:1",
-			"vulnerable": true,
-			"package": {
-				"name": "yum-plugin-show-leaves",
+				"name": "yum-plugin-tsflags",
 				"repositories": [
 					"amzn-main",
 					"amzn-updates"
@@ -766,6 +716,56 @@
 			"vulnerable": true,
 			"package": {
 				"name": "yum-NetworkManager-dispatcher",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.1.31-46.30.amzn1"
+					}
+				],
+				"fixed": [
+					"0:1.1.31-46.30.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "yum-plugin-auto-update-debug-info",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.1.31-46.30.amzn1"
+					}
+				],
+				"fixed": [
+					"0:1.1.31-46.30.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "yum-plugin-refresh-updatesd",
 				"repositories": [
 					"amzn-main",
 					"amzn-updates"
