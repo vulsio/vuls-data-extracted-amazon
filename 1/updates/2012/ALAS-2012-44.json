@@ -239,7 +239,7 @@
 			"ecosystem": "amazon:1",
 			"vulnerable": true,
 			"package": {
-				"name": "mysql-embedded",
+				"name": "mysql",
 				"repositories": [
 					"amzn-main",
 					"amzn-updates"
@@ -264,7 +264,32 @@
 			"ecosystem": "amazon:1",
 			"vulnerable": true,
 			"package": {
-				"name": "mysql-embedded-devel",
+				"name": "mysql-libs",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:5.1.61-1.27.amzn1"
+					}
+				],
+				"fixed": [
+					"0:5.1.61-1.27.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "mysql-test",
 				"repositories": [
 					"amzn-main",
 					"amzn-updates"
@@ -314,7 +339,7 @@
 			"ecosystem": "amazon:1",
 			"vulnerable": true,
 			"package": {
-				"name": "mysql-libs",
+				"name": "mysql-embedded",
 				"repositories": [
 					"amzn-main",
 					"amzn-updates"
@@ -389,31 +414,6 @@
 			"ecosystem": "amazon:1",
 			"vulnerable": true,
 			"package": {
-				"name": "mysql",
-				"repositories": [
-					"amzn-main",
-					"amzn-updates"
-				],
-				"architectures": [
-					"x86_64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:5.1.61-1.27.amzn1"
-					}
-				],
-				"fixed": [
-					"0:5.1.61-1.27.amzn1"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:1",
-			"vulnerable": true,
-			"package": {
 				"name": "mysql-devel",
 				"repositories": [
 					"amzn-main",
@@ -439,7 +439,7 @@
 			"ecosystem": "amazon:1",
 			"vulnerable": true,
 			"package": {
-				"name": "mysql-test",
+				"name": "mysql-embedded-devel",
 				"repositories": [
 					"amzn-main",
 					"amzn-updates"
