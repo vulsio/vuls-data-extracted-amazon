@@ -53,7 +53,55 @@
 			"ecosystem": "amazon:2023",
 			"vulnerable": true,
 			"package": {
-				"name": "bind-libs",
+				"name": "bind-license",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "32:9.16.42-1.amzn2023.0.1"
+					}
+				],
+				"fixed": [
+					"32:9.16.42-1.amzn2023.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2023",
+			"vulnerable": true,
+			"package": {
+				"name": "bind-doc",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "32:9.16.42-1.amzn2023.0.1"
+					}
+				],
+				"fixed": [
+					"32:9.16.42-1.amzn2023.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2023",
+			"vulnerable": true,
+			"package": {
+				"name": "bind-pkcs11",
 				"repositories": [
 					"amazonlinux"
 				],
@@ -101,7 +149,7 @@
 			"ecosystem": "amazon:2023",
 			"vulnerable": true,
 			"package": {
-				"name": "bind-pkcs11-libs",
+				"name": "bind",
 				"repositories": [
 					"amazonlinux"
 				],
@@ -125,31 +173,7 @@
 			"ecosystem": "amazon:2023",
 			"vulnerable": true,
 			"package": {
-				"name": "bind-dlz-mysql-debuginfo",
-				"repositories": [
-					"amazonlinux"
-				],
-				"architectures": [
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "32:9.16.42-1.amzn2023.0.1"
-					}
-				],
-				"fixed": [
-					"32:9.16.42-1.amzn2023.0.1"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:2023",
-			"vulnerable": true,
-			"package": {
-				"name": "python3-bind",
+				"name": "bind-dnssec-doc",
 				"repositories": [
 					"amazonlinux"
 				],
@@ -173,31 +197,7 @@
 			"ecosystem": "amazon:2023",
 			"vulnerable": true,
 			"package": {
-				"name": "bind-pkcs11-devel",
-				"repositories": [
-					"amazonlinux"
-				],
-				"architectures": [
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "32:9.16.42-1.amzn2023.0.1"
-					}
-				],
-				"fixed": [
-					"32:9.16.42-1.amzn2023.0.1"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:2023",
-			"vulnerable": true,
-			"package": {
-				"name": "bind-debugsource",
+				"name": "bind-pkcs11-libs-debuginfo",
 				"repositories": [
 					"amazonlinux"
 				],
@@ -245,7 +245,7 @@
 			"ecosystem": "amazon:2023",
 			"vulnerable": true,
 			"package": {
-				"name": "bind-pkcs11-utils-debuginfo",
+				"name": "bind-dnssec-utils-debuginfo",
 				"repositories": [
 					"amazonlinux"
 				],
@@ -269,31 +269,7 @@
 			"ecosystem": "amazon:2023",
 			"vulnerable": true,
 			"package": {
-				"name": "bind-license",
-				"repositories": [
-					"amazonlinux"
-				],
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "32:9.16.42-1.amzn2023.0.1"
-					}
-				],
-				"fixed": [
-					"32:9.16.42-1.amzn2023.0.1"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:2023",
-			"vulnerable": true,
-			"package": {
-				"name": "bind-devel",
+				"name": "bind-libs-debuginfo",
 				"repositories": [
 					"amazonlinux"
 				],
@@ -341,7 +317,7 @@
 			"ecosystem": "amazon:2023",
 			"vulnerable": true,
 			"package": {
-				"name": "bind-dnssec-utils-debuginfo",
+				"name": "bind-dlz-mysql-debuginfo",
 				"repositories": [
 					"amazonlinux"
 				],
@@ -365,7 +341,151 @@
 			"ecosystem": "amazon:2023",
 			"vulnerable": true,
 			"package": {
-				"name": "bind-dlz-filesystem",
+				"name": "bind-dnssec-utils",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "32:9.16.42-1.amzn2023.0.1"
+					}
+				],
+				"fixed": [
+					"32:9.16.42-1.amzn2023.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2023",
+			"vulnerable": true,
+			"package": {
+				"name": "bind-dlz-ldap-debuginfo",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "32:9.16.42-1.amzn2023.0.1"
+					}
+				],
+				"fixed": [
+					"32:9.16.42-1.amzn2023.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2023",
+			"vulnerable": true,
+			"package": {
+				"name": "bind-dlz-sqlite3-debuginfo",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "32:9.16.42-1.amzn2023.0.1"
+					}
+				],
+				"fixed": [
+					"32:9.16.42-1.amzn2023.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2023",
+			"vulnerable": true,
+			"package": {
+				"name": "bind-pkcs11-utils-debuginfo",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "32:9.16.42-1.amzn2023.0.1"
+					}
+				],
+				"fixed": [
+					"32:9.16.42-1.amzn2023.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2023",
+			"vulnerable": true,
+			"package": {
+				"name": "bind-dlz-sqlite3",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "32:9.16.42-1.amzn2023.0.1"
+					}
+				],
+				"fixed": [
+					"32:9.16.42-1.amzn2023.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2023",
+			"vulnerable": true,
+			"package": {
+				"name": "bind-pkcs11-devel",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "32:9.16.42-1.amzn2023.0.1"
+					}
+				],
+				"fixed": [
+					"32:9.16.42-1.amzn2023.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2023",
+			"vulnerable": true,
+			"package": {
+				"name": "bind-libs",
 				"repositories": [
 					"amazonlinux"
 				],
@@ -437,6 +557,78 @@
 			"ecosystem": "amazon:2023",
 			"vulnerable": true,
 			"package": {
+				"name": "bind-dlz-filesystem-debuginfo",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "32:9.16.42-1.amzn2023.0.1"
+					}
+				],
+				"fixed": [
+					"32:9.16.42-1.amzn2023.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2023",
+			"vulnerable": true,
+			"package": {
+				"name": "bind-devel",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "32:9.16.42-1.amzn2023.0.1"
+					}
+				],
+				"fixed": [
+					"32:9.16.42-1.amzn2023.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2023",
+			"vulnerable": true,
+			"package": {
+				"name": "python3-bind",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "32:9.16.42-1.amzn2023.0.1"
+					}
+				],
+				"fixed": [
+					"32:9.16.42-1.amzn2023.0.1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2023",
+			"vulnerable": true,
+			"package": {
 				"name": "bind-dlz-mysql",
 				"repositories": [
 					"amazonlinux"
@@ -461,55 +653,7 @@
 			"ecosystem": "amazon:2023",
 			"vulnerable": true,
 			"package": {
-				"name": "bind-pkcs11-libs-debuginfo",
-				"repositories": [
-					"amazonlinux"
-				],
-				"architectures": [
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "32:9.16.42-1.amzn2023.0.1"
-					}
-				],
-				"fixed": [
-					"32:9.16.42-1.amzn2023.0.1"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:2023",
-			"vulnerable": true,
-			"package": {
-				"name": "bind-dnssec-doc",
-				"repositories": [
-					"amazonlinux"
-				],
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "32:9.16.42-1.amzn2023.0.1"
-					}
-				],
-				"fixed": [
-					"32:9.16.42-1.amzn2023.0.1"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:2023",
-			"vulnerable": true,
-			"package": {
-				"name": "bind-dlz-ldap-debuginfo",
+				"name": "bind-debugsource",
 				"repositories": [
 					"amazonlinux"
 				],
@@ -581,7 +725,7 @@
 			"ecosystem": "amazon:2023",
 			"vulnerable": true,
 			"package": {
-				"name": "bind-libs-debuginfo",
+				"name": "bind-pkcs11-libs",
 				"repositories": [
 					"amazonlinux"
 				],
@@ -605,151 +749,7 @@
 			"ecosystem": "amazon:2023",
 			"vulnerable": true,
 			"package": {
-				"name": "bind-dlz-sqlite3",
-				"repositories": [
-					"amazonlinux"
-				],
-				"architectures": [
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "32:9.16.42-1.amzn2023.0.1"
-					}
-				],
-				"fixed": [
-					"32:9.16.42-1.amzn2023.0.1"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:2023",
-			"vulnerable": true,
-			"package": {
-				"name": "bind-pkcs11",
-				"repositories": [
-					"amazonlinux"
-				],
-				"architectures": [
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "32:9.16.42-1.amzn2023.0.1"
-					}
-				],
-				"fixed": [
-					"32:9.16.42-1.amzn2023.0.1"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:2023",
-			"vulnerable": true,
-			"package": {
-				"name": "bind-dnssec-utils",
-				"repositories": [
-					"amazonlinux"
-				],
-				"architectures": [
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "32:9.16.42-1.amzn2023.0.1"
-					}
-				],
-				"fixed": [
-					"32:9.16.42-1.amzn2023.0.1"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:2023",
-			"vulnerable": true,
-			"package": {
-				"name": "bind-dlz-filesystem-debuginfo",
-				"repositories": [
-					"amazonlinux"
-				],
-				"architectures": [
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "32:9.16.42-1.amzn2023.0.1"
-					}
-				],
-				"fixed": [
-					"32:9.16.42-1.amzn2023.0.1"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:2023",
-			"vulnerable": true,
-			"package": {
-				"name": "bind",
-				"repositories": [
-					"amazonlinux"
-				],
-				"architectures": [
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "32:9.16.42-1.amzn2023.0.1"
-					}
-				],
-				"fixed": [
-					"32:9.16.42-1.amzn2023.0.1"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:2023",
-			"vulnerable": true,
-			"package": {
-				"name": "bind-doc",
-				"repositories": [
-					"amazonlinux"
-				],
-				"architectures": [
-					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "32:9.16.42-1.amzn2023.0.1"
-					}
-				],
-				"fixed": [
-					"32:9.16.42-1.amzn2023.0.1"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:2023",
-			"vulnerable": true,
-			"package": {
-				"name": "bind-dlz-sqlite3-debuginfo",
+				"name": "bind-dlz-filesystem",
 				"repositories": [
 					"amazonlinux"
 				],
