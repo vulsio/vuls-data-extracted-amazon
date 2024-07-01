@@ -66,7 +66,7 @@
 			"ecosystem": "amazon:1",
 			"vulnerable": true,
 			"package": {
-				"name": "clamav-lib",
+				"name": "clamav-db",
 				"repositories": [
 					"amzn-main",
 					"amzn-updates"
@@ -116,7 +116,7 @@
 			"ecosystem": "amazon:1",
 			"vulnerable": true,
 			"package": {
-				"name": "clamd",
+				"name": "clamav",
 				"repositories": [
 					"amzn-main",
 					"amzn-updates"
@@ -141,13 +141,13 @@
 			"ecosystem": "amazon:1",
 			"vulnerable": true,
 			"package": {
-				"name": "clamav-filesystem",
+				"name": "clamav-milter",
 				"repositories": [
 					"amzn-main",
 					"amzn-updates"
 				],
 				"architectures": [
-					"noarch"
+					"i686"
 				]
 			},
 			"affected": {
@@ -166,7 +166,7 @@
 			"ecosystem": "amazon:1",
 			"vulnerable": true,
 			"package": {
-				"name": "clamav-milter",
+				"name": "clamav-lib",
 				"repositories": [
 					"amzn-main",
 					"amzn-updates"
@@ -216,7 +216,57 @@
 			"ecosystem": "amazon:1",
 			"vulnerable": true,
 			"package": {
-				"name": "clamav-db",
+				"name": "clamav-filesystem",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"noarch"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:0.101.2-1.38.amzn1"
+					}
+				],
+				"fixed": [
+					"0:0.101.2-1.38.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "clamav-update",
+				"repositories": [
+					"amzn-main",
+					"amzn-updates"
+				],
+				"architectures": [
+					"i686"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:0.101.2-1.38.amzn1"
+					}
+				],
+				"fixed": [
+					"0:0.101.2-1.38.amzn1"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:1",
+			"vulnerable": true,
+			"package": {
+				"name": "clamd",
 				"repositories": [
 					"amzn-main",
 					"amzn-updates"
@@ -248,56 +298,6 @@
 				],
 				"architectures": [
 					"noarch"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:0.101.2-1.38.amzn1"
-					}
-				],
-				"fixed": [
-					"0:0.101.2-1.38.amzn1"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:1",
-			"vulnerable": true,
-			"package": {
-				"name": "clamav",
-				"repositories": [
-					"amzn-main",
-					"amzn-updates"
-				],
-				"architectures": [
-					"i686"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:0.101.2-1.38.amzn1"
-					}
-				],
-				"fixed": [
-					"0:0.101.2-1.38.amzn1"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:1",
-			"vulnerable": true,
-			"package": {
-				"name": "clamav-update",
-				"repositories": [
-					"amzn-main",
-					"amzn-updates"
-				],
-				"architectures": [
-					"i686"
 				]
 			},
 			"affected": {
