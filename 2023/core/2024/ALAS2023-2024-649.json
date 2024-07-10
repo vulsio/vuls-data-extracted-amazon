@@ -4,6 +4,7 @@
 		{
 			"id": "ALAS2023-2024-649",
 			"title": "Amazon Linux 2023 - ALAS2023-2024-649: Important priority package update for openssh",
+			"description": "Package updates are available for Amazon Linux 2023 that fix the following vulnerabilities:\nCVE-2024-6387:\n\tA signal handler race condition was found in OpenSSH's server (sshd), where a client does not authenticate within LoginGraceTime seconds (120 by default, 600 in old OpenSSH versions), then sshd's SIGALRM handler is called asynchronously. However, this signal handler calls various functions that are not async-signal-safe, for example, syslog().\n",
 			"severity": [
 				{
 					"type": "vendor",
@@ -15,6 +16,21 @@
 				{
 					"source": "linux-security@amazon.com",
 					"url": "https://alas.aws.amazon.com/AL2023/ALAS-2024-649.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-6387"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2024-6387",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-6387"
 				}
 			]
 		}
@@ -24,55 +40,7 @@
 			"ecosystem": "amazon:2023",
 			"vulnerable": true,
 			"package": {
-				"name": "openssh-keycat",
-				"repositories": [
-					"amazonlinux"
-				],
-				"architectures": [
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:8.7p1-8.amzn2023.0.11"
-					}
-				],
-				"fixed": [
-					"0:8.7p1-8.amzn2023.0.11"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:2023",
-			"vulnerable": true,
-			"package": {
-				"name": "openssh-clients",
-				"repositories": [
-					"amazonlinux"
-				],
-				"architectures": [
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:8.7p1-8.amzn2023.0.11"
-					}
-				],
-				"fixed": [
-					"0:8.7p1-8.amzn2023.0.11"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:2023",
-			"vulnerable": true,
-			"package": {
-				"name": "openssh-debuginfo",
+				"name": "openssh-server",
 				"repositories": [
 					"amazonlinux"
 				],
@@ -192,54 +160,6 @@
 			"ecosystem": "amazon:2023",
 			"vulnerable": true,
 			"package": {
-				"name": "openssh-clients-debuginfo",
-				"repositories": [
-					"amazonlinux"
-				],
-				"architectures": [
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:8.7p1-8.amzn2023.0.11"
-					}
-				],
-				"fixed": [
-					"0:8.7p1-8.amzn2023.0.11"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:2023",
-			"vulnerable": true,
-			"package": {
-				"name": "openssh-server",
-				"repositories": [
-					"amazonlinux"
-				],
-				"architectures": [
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:8.7p1-8.amzn2023.0.11"
-					}
-				],
-				"fixed": [
-					"0:8.7p1-8.amzn2023.0.11"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:2023",
-			"vulnerable": true,
-			"package": {
 				"name": "openssh",
 				"repositories": [
 					"amazonlinux"
@@ -265,6 +185,102 @@
 			"vulnerable": true,
 			"package": {
 				"name": "openssh-debugsource",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:8.7p1-8.amzn2023.0.11"
+					}
+				],
+				"fixed": [
+					"0:8.7p1-8.amzn2023.0.11"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2023",
+			"vulnerable": true,
+			"package": {
+				"name": "openssh-clients-debuginfo",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:8.7p1-8.amzn2023.0.11"
+					}
+				],
+				"fixed": [
+					"0:8.7p1-8.amzn2023.0.11"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2023",
+			"vulnerable": true,
+			"package": {
+				"name": "openssh-debuginfo",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:8.7p1-8.amzn2023.0.11"
+					}
+				],
+				"fixed": [
+					"0:8.7p1-8.amzn2023.0.11"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2023",
+			"vulnerable": true,
+			"package": {
+				"name": "openssh-keycat",
+				"repositories": [
+					"amazonlinux"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:8.7p1-8.amzn2023.0.11"
+					}
+				],
+				"fixed": [
+					"0:8.7p1-8.amzn2023.0.11"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2023",
+			"vulnerable": true,
+			"package": {
+				"name": "openssh-clients",
 				"repositories": [
 					"amazonlinux"
 				],
