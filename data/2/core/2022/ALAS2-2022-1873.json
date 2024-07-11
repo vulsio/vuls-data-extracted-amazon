@@ -1,0 +1,95 @@
+{
+	"id": "ALAS2-2022-1873",
+	"advisories": [
+		{
+			"id": "ALAS2-2022-1873",
+			"title": "Amazon Linux 2 2017.12 - ALAS2-2022-1873: important priority package update for rsync",
+			"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2022-29154:\n\tA flaw was found in rsync that is triggered by a victim rsync user/client connecting to a malicious rsync server. The server can copy and overwrite arbitrary files in the client's rsync target directory and subdirectories. This flaw allows a malicious server, or in some cases, another attacker who performs a man-in-the-middle attack, to potentially overwrite sensitive files on the client machine, resulting in further exploitation.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "important"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-29154"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALAS-2022-1873.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2022-29154",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-29154"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "rsync",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:3.1.2-11.amzn2.0.1"
+								}
+							],
+							"fixed": [
+								"0:3.1.2-11.amzn2.0.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "rsync-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:3.1.2-11.amzn2.0.1"
+								}
+							],
+							"fixed": [
+								"0:3.1.2-11.amzn2.0.1"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

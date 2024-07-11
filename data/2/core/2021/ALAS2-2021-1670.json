@@ -1,0 +1,246 @@
+{
+	"id": "ALAS2-2021-1670",
+	"advisories": [
+		{
+			"id": "ALAS2-2021-1670",
+			"title": "Amazon Linux 2 2017.12 - ALAS2-2021-1670: medium priority package update for python3",
+			"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2020-27619:\n\tIn Python3's Lib/test/multibytecodec_support.py CJK codec tests call eval() on content retrieved via HTTP.\n1889886: CVE-2020-27619 python: Unsafe use of eval() on data retrieved via HTTP in the test suite\n\nCVE-2020-26116:\n\tA flaw was found in Python. The built-in modules httplib and http.client (included in Python 2 and Python 3, respectively) do not properly validate CRLF sequences in the HTTP request method, potentially allowing manipulation to the request by injecting additional HTTP headers. The highest threat from this vulnerability is to confidentiality and integrity.\n1883014: CVE-2020-26116 python: CRLF injection via HTTP request method in httplib/http.client\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "medium"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-26116"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-27619"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALAS-2021-1670.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2020-26116",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-26116"
+				}
+			]
+		},
+		{
+			"id": "CVE-2020-27619",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-27619"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "python3-libs",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:3.7.10-1.amzn2.0.1"
+								}
+							],
+							"fixed": [
+								"0:3.7.10-1.amzn2.0.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "python3-devel",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:3.7.10-1.amzn2.0.1"
+								}
+							],
+							"fixed": [
+								"0:3.7.10-1.amzn2.0.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "python3-tools",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:3.7.10-1.amzn2.0.1"
+								}
+							],
+							"fixed": [
+								"0:3.7.10-1.amzn2.0.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "python3-tkinter",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:3.7.10-1.amzn2.0.1"
+								}
+							],
+							"fixed": [
+								"0:3.7.10-1.amzn2.0.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "python3-test",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:3.7.10-1.amzn2.0.1"
+								}
+							],
+							"fixed": [
+								"0:3.7.10-1.amzn2.0.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "python3-debug",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:3.7.10-1.amzn2.0.1"
+								}
+							],
+							"fixed": [
+								"0:3.7.10-1.amzn2.0.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "python3-debuginfo",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:3.7.10-1.amzn2.0.1"
+								}
+							],
+							"fixed": [
+								"0:3.7.10-1.amzn2.0.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "python3",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:3.7.10-1.amzn2.0.1"
+								}
+							],
+							"fixed": [
+								"0:3.7.10-1.amzn2.0.1"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

@@ -1,0 +1,95 @@
+{
+	"id": "ALAS2-2020-1395",
+	"advisories": [
+		{
+			"id": "ALAS2-2020-1395",
+			"title": "Amazon Linux 2 2017.12 - ALAS2-2020-1395: important priority package update for apache-commons-beanutils",
+			"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2019-10086:\n\tIn Apache Commons Beanutils 1.9.2, a special BeanIntrospector class was added which allows suppressing the ability for an attacker to access the classloader via the class property available on all Java objects. We, however were not using this by default characteristic of the PropertyUtilsBean.\n1767483: CVE-2019-10086 apache-commons-beanutils: does not suppresses the class property in PropertyUtilsBean by default\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "important"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-10086"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALAS-2020-1395.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2019-10086",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-10086"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "apache-commons-beanutils-javadoc",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.8.3-15.amzn2"
+								}
+							],
+							"fixed": [
+								"0:1.8.3-15.amzn2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "apache-commons-beanutils",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.8.3-15.amzn2"
+								}
+							],
+							"fixed": [
+								"0:1.8.3-15.amzn2"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

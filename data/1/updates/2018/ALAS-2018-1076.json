@@ -1,0 +1,182 @@
+{
+	"id": "ALAS-2018-1076",
+	"advisories": [
+		{
+			"id": "ALAS-2018-1076",
+			"title": "Amazon Linux AMI 2014.03 - ALAS-2018-1076: important priority package update for pcre",
+			"description": "Package updates are available for Amazon Linux AMI that fix the following vulnerabilities:\nCVE-2016-3191:\n\tThe compile_branch function in pcre_compile.c in PCRE 8.x before 8.39 and pcre2_compile.c in PCRE2 before 10.22 mishandles patterns containing an (*ACCEPT) substring in conjunction with nested parentheses, which allows remote attackers to execute arbitrary code or cause a denial of service (stack-based buffer overflow) via a crafted regular expression, as demonstrated by a JavaScript RegExp object encountered by Konqueror, aka ZDI-CAN-3542.\n\nCVE-2015-8391:\n\tThe pcre_compile function in pcre_compile.c in PCRE before 8.38 mishandles certain [: nesting, which allows remote attackers to cause a denial of service (CPU consumption) or possibly have unspecified other impact via a crafted regular expression, as demonstrated by a JavaScript RegExp object encountered by Konqueror.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "important"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-8391"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-3191"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/ALAS-2018-1076.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2015-8391",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-8391"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-3191",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-3191"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:1",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "pcre-static",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:8.21-7.8.amzn1"
+								}
+							],
+							"fixed": [
+								"0:8.21-7.8.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "pcre",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:8.21-7.8.amzn1"
+								}
+							],
+							"fixed": [
+								"0:8.21-7.8.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "pcre-tools",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:8.21-7.8.amzn1"
+								}
+							],
+							"fixed": [
+								"0:8.21-7.8.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "pcre-debuginfo",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:8.21-7.8.amzn1"
+								}
+							],
+							"fixed": [
+								"0:8.21-7.8.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "pcre-devel",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:8.21-7.8.amzn1"
+								}
+							],
+							"fixed": [
+								"0:8.21-7.8.amzn1"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

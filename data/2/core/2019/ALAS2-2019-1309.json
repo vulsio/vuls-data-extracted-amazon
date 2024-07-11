@@ -1,0 +1,187 @@
+{
+	"id": "ALAS2-2019-1309",
+	"advisories": [
+		{
+			"id": "ALAS2-2019-1309",
+			"title": "Amazon Linux 2 2017.12 - ALAS2-2019-1309: medium priority package update for golang",
+			"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2019-14809:\n\tnet/url in Go before 1.11.13 and 1.12.x before 1.12.8 mishandles malformed hosts in URLs, leading to an authorization bypass in some applications. This is related to a Host field with a suffix appearing in neither Hostname() nor Port(), and is related to a non-numeric port number. For example, an attacker can compose a crafted javascript:// URL that results in a hostname of google.com.\n1743129: \nCVE-2019-14809 golang: malformed hosts in URLs leads to authorization bypass\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "medium"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-14809"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALAS-2019-1309.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2019-14809",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-14809"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "golang",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.9.4-3.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"0:1.9.4-3.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "golang-docs",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.9.4-3.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"0:1.9.4-3.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "golang-misc",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.9.4-3.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"0:1.9.4-3.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "golang-tests",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.9.4-3.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"0:1.9.4-3.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "golang-src",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.9.4-3.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"0:1.9.4-3.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "golang-bin",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.9.4-3.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"0:1.9.4-3.amzn2.0.3"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

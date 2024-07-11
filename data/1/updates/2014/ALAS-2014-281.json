@@ -1,0 +1,61 @@
+{
+	"id": "ALAS-2014-281",
+	"advisories": [
+		{
+			"id": "ALAS-2014-281",
+			"title": "Amazon Linux AMI 2012.09 - ALAS-2014-281: medium priority package update for ca-certificates",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "medium"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/ALAS-2014-281.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://rhn.redhat.com/errata/RHSA-2013:1866.html"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:1",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ca-certificates",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2012.1.95-3.12.amzn1"
+								}
+							],
+							"fixed": [
+								"0:2012.1.95-3.12.amzn1"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

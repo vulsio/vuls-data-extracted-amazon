@@ -1,0 +1,302 @@
+{
+	"id": "ALAS2-2019-1164",
+	"advisories": [
+		{
+			"id": "ALAS2-2019-1164",
+			"title": "Amazon Linux 2 2017.12 - ALAS2-2019-1164: important priority package update for systemd",
+			"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2019-6454:\n\t\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "important"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-6454"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALAS-2019-1164.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2019-6454",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-6454"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "systemd-libs",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:219-57.amzn2.0.9"
+								}
+							],
+							"fixed": [
+								"0:219-57.amzn2.0.9"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "systemd-sysv",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:219-57.amzn2.0.9"
+								}
+							],
+							"fixed": [
+								"0:219-57.amzn2.0.9"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "systemd-python",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:219-57.amzn2.0.9"
+								}
+							],
+							"fixed": [
+								"0:219-57.amzn2.0.9"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libgudev1",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:219-57.amzn2.0.9"
+								}
+							],
+							"fixed": [
+								"0:219-57.amzn2.0.9"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "systemd-journal-gateway",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:219-57.amzn2.0.9"
+								}
+							],
+							"fixed": [
+								"0:219-57.amzn2.0.9"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "systemd-debuginfo",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:219-57.amzn2.0.9"
+								}
+							],
+							"fixed": [
+								"0:219-57.amzn2.0.9"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "systemd",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:219-57.amzn2.0.9"
+								}
+							],
+							"fixed": [
+								"0:219-57.amzn2.0.9"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "systemd-devel",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:219-57.amzn2.0.9"
+								}
+							],
+							"fixed": [
+								"0:219-57.amzn2.0.9"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libgudev1-devel",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:219-57.amzn2.0.9"
+								}
+							],
+							"fixed": [
+								"0:219-57.amzn2.0.9"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "systemd-networkd",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:219-57.amzn2.0.9"
+								}
+							],
+							"fixed": [
+								"0:219-57.amzn2.0.9"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "systemd-resolved",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:219-57.amzn2.0.9"
+								}
+							],
+							"fixed": [
+								"0:219-57.amzn2.0.9"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

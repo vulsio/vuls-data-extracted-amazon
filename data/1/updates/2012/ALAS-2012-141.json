@@ -1,0 +1,293 @@
+{
+	"id": "ALAS-2012-141",
+	"advisories": [
+		{
+			"id": "ALAS-2012-141",
+			"title": "Amazon Linux - ALAS-2012-141: important priority package update for mysql51",
+			"description": "Package updates are available for Amazon Linux that fix the following vulnerabilities:\nCVE-2012-1688:\n\tUnspecified vulnerability in the MySQL Server component in Oracle MySQL 5.1.61 and earlier, and 5.5.21 and earlier, allows remote authenticated users to affect availability, related to Server DML.\nThis update fixes several vulnerabilities in the MySQL database server. Information about these flaws can be found on the Oracle Critical Patch Update Advisory pages, listed in the References section.\n814285: \nCVE-2012-1688 mysql: unspecified DoS vulnerability related to DML (CPU Apr 2012)\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "important"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-1688"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/ALAS-2012-141.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://rhn.redhat.com/errata/RHSA-2012:1462.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2012-1688",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-1688"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:1",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mysql51-test",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.1.66-1.56.amzn1"
+								}
+							],
+							"fixed": [
+								"0:5.1.66-1.56.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mysql51-libs",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.1.66-1.56.amzn1"
+								}
+							],
+							"fixed": [
+								"0:5.1.66-1.56.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mysql51-common",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.1.66-1.56.amzn1"
+								}
+							],
+							"fixed": [
+								"0:5.1.66-1.56.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mysql51-embedded",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.1.66-1.56.amzn1"
+								}
+							],
+							"fixed": [
+								"0:5.1.66-1.56.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mysql51-bench",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.1.66-1.56.amzn1"
+								}
+							],
+							"fixed": [
+								"0:5.1.66-1.56.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mysql51-server",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.1.66-1.56.amzn1"
+								}
+							],
+							"fixed": [
+								"0:5.1.66-1.56.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mysql51-embedded-devel",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.1.66-1.56.amzn1"
+								}
+							],
+							"fixed": [
+								"0:5.1.66-1.56.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mysql51-devel",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.1.66-1.56.amzn1"
+								}
+							],
+							"fixed": [
+								"0:5.1.66-1.56.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mysql51-debuginfo",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.1.66-1.56.amzn1"
+								}
+							],
+							"fixed": [
+								"0:5.1.66-1.56.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mysql51",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.1.66-1.56.amzn1"
+								}
+							],
+							"fixed": [
+								"0:5.1.66-1.56.amzn1"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

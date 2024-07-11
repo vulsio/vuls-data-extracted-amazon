@@ -1,0 +1,233 @@
+{
+	"id": "ALAS2-2023-2012",
+	"advisories": [
+		{
+			"id": "ALAS2-2023-2012",
+			"title": "Amazon Linux 2 2017.12 - ALAS2-2023-2012: important priority package update for emacs",
+			"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2023-28617:\n\torg-babel-execute:latex in ob-latex.el in Org Mode through 9.6.1 for GNU Emacs allows attackers to execute arbitrary commands via a file name or directory name that contains shell metacharacters.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "important"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-28617"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALAS-2023-2012.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2023-28617",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-28617"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "emacs-terminal",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:27.2-4.amzn2.0.4"
+								}
+							],
+							"fixed": [
+								"1:27.2-4.amzn2.0.4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "emacs-filesystem",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:27.2-4.amzn2.0.4"
+								}
+							],
+							"fixed": [
+								"1:27.2-4.amzn2.0.4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "emacs-devel",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:27.2-4.amzn2.0.4"
+								}
+							],
+							"fixed": [
+								"1:27.2-4.amzn2.0.4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "emacs-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:27.2-4.amzn2.0.4"
+								}
+							],
+							"fixed": [
+								"1:27.2-4.amzn2.0.4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "emacs",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:27.2-4.amzn2.0.4"
+								}
+							],
+							"fixed": [
+								"1:27.2-4.amzn2.0.4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "emacs-lucid",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:27.2-4.amzn2.0.4"
+								}
+							],
+							"fixed": [
+								"1:27.2-4.amzn2.0.4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "emacs-nox",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:27.2-4.amzn2.0.4"
+								}
+							],
+							"fixed": [
+								"1:27.2-4.amzn2.0.4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "emacs-common",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:27.2-4.amzn2.0.4"
+								}
+							],
+							"fixed": [
+								"1:27.2-4.amzn2.0.4"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

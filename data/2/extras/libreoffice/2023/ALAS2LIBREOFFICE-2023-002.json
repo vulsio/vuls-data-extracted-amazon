@@ -1,0 +1,4221 @@
+{
+	"id": "ALAS2LIBREOFFICE-2023-002",
+	"advisories": [
+		{
+			"id": "ALAS2LIBREOFFICE-2023-002",
+			"title": "Amazon Linux 2 - Libreoffice 2.0 - ALAS2LIBREOFFICE-2023-002: important priority package update for libreoffice",
+			"description": "Package updates are available for Amazon Linux 2 - Libreoffice that fix the following vulnerabilities:\nCVE-2019-9854:\n\tLibreOffice has a feature where documents can specify that pre-installed macros can be executed on various script events such as mouse-over, document-open etc. Access is intended to be restricted to scripts under the share/Scripts/python, user/Scripts/python sub-directories of the LibreOffice install. Protection was added, to address CVE-2019-9852, to avoid a directory traversal attack where scripts in arbitrary locations on the file system could be executed by employing a URL encoding attack to defeat the path verification step. However this protection could be bypassed by taking advantage of a flaw in how LibreOffice assembled the final script URL location directly from components of the passed in path as opposed to solely from the sanitized output of the path verification step. This issue affects: Document Foundation LibreOffice 6.2 versions prior to 6.2.7; 6.3 versions prior to 6.3.1.\n\nCVE-2019-9853:\n\tLibreOffice documents can contain macros. The execution of those macros is controlled by the document security settings, typically execution of macros are blocked by default. A URL decoding flaw existed in how the urls to the macros within the document were processed and categorized, resulting in the possibility to construct a document where macro execution bypassed the security settings. The documents were correctly detected as containing macros, and prompted the user to their existence within the documents, but macros within the document were subsequently not controlled by the security settings allowing arbitrary macro execution This issue affects: LibreOffice 6.2 series versions prior to 6.2.7; LibreOffice 6.3 series versions prior to 6.3.1.\n\nCVE-2019-9852:\n\tLibreOffice has a feature where documents can specify that pre-installed macros can be executed on various script events such as mouse-over, document-open etc. Access is intended to be restricted to scripts under the share/Scripts/python, user/Scripts/python sub-directories of the LibreOffice install. Protection was added, to address CVE-2018-16858, to avoid a directory traversal attack where scripts in arbitrary locations on the file system could be executed. However this new protection could be bypassed by a URL encoding attack. In the fixed versions, the parsed url describing the script location is correctly encoded before further processing. This issue affects: Document Foundation LibreOffice versions prior to 6.2.6.\n\nCVE-2019-9851:\n\tLibreOffice is typically bundled with LibreLogo, a programmable turtle vector graphics script, which can execute arbitrary python commands contained with the document it is launched from. Protection was added, to address CVE-2019-9848, to block calling LibreLogo from document event script handers, e.g. mouse over. However LibreOffice also has a separate feature where documents can specify that pre-installed scripts can be executed on various global script events such as document-open, etc. In the fixed versions, global script event handlers are validated equivalently to document script event handlers. This issue affects: Document Foundation LibreOffice versions prior to 6.2.6.\n\nCVE-2019-9850:\n\tLibreOffice is typically bundled with LibreLogo, a programmable turtle vector graphics script, which can execute arbitrary python commands contained with the document it is launched from. LibreOffice also has a feature where documents can specify that pre-installed scripts can be executed on various document script events such as mouse-over, etc. Protection was added, to address CVE-2019-9848, to block calling LibreLogo from script event handers. However an insufficient url validation vulnerability in LibreOffice allowed malicious to bypass that protection and again trigger calling LibreLogo from script event handlers. This issue affects: Document Foundation LibreOffice versions prior to 6.2.6.\n\nCVE-2019-9849:\n\tLibreOffice has a 'stealth mode' in which only documents from locations deemed 'trusted' are allowed to retrieve remote resources. This mode is not the default mode, but can be enabled by users who want to disable LibreOffice's ability to include remote resources within a document. A flaw existed where bullet graphics were omitted from this protection prior to version 6.2.5. This issue affects: Document Foundation LibreOffice versions prior to 6.2.5.\n\nCVE-2019-9848:\n\tLibreOffice has a feature where documents can specify that pre-installed scripts can be executed on various document events such as mouse-over, etc. LibreOffice is typically also bundled with LibreLogo, a programmable turtle vector graphics script, which can be manipulated into executing arbitrary python commands. By using the document event feature to trigger LibreLogo to execute python contained within a document a malicious document could be constructed which would execute arbitrary python commands silently without warning. In the fixed versions, LibreLogo cannot be called from a document event handler. This issue affects: Document Foundation LibreOffice versions prior to 6.2.5.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "important"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-9848"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-9849"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-9850"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-9851"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-9852"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-9853"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-9854"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALASLIBREOFFICE-2023-002.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2019-9848",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-9848"
+				}
+			]
+		},
+		{
+			"id": "CVE-2019-9849",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-9849"
+				}
+			]
+		},
+		{
+			"id": "CVE-2019-9850",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-9850"
+				}
+			]
+		},
+		{
+			"id": "CVE-2019-9851",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-9851"
+				}
+			]
+		},
+		{
+			"id": "CVE-2019-9852",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-9852"
+				}
+			]
+		},
+		{
+			"id": "CVE-2019-9853",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-9853"
+				}
+			]
+		},
+		{
+			"id": "CVE-2019-9854",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-9854"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-base",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-pdfimport",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-help-id",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "autocorr-fi",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-xsltfilter",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-help-bg",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-help-fr",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-langpack-hi",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-langpack-xh",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-gtk2",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-langpack-af",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-langpack-es",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-langpack-nr",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "autocorr-lb",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "autocorr-pt",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-officebean",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-langpack-en",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-help-it",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-langpack-ts",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "autocorr-de",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "autocorr-sl",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-langpack-it",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-langpack-lv",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-help-nl",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-help-uk",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-core",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-langpack-hu",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-help-ja",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-langpack-nn",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-langpack-tr",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-ure-common",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-gtk3",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "autocorr-sr",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "autocorr-sv",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "autocorr-cs",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-ogltrans",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-emailmerge",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-help-lt",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-help-nb",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-langpack-pt-BR",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-help-pt-PT",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "autocorr-af",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "autocorr-is",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-langpack-st",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-graphicfilter",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-ure",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-langpack-dz",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-langpack-ga",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-langpack-kn",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-langpack-pt-PT",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "autocorr-zh",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "autocorr-ga",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-calc",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-help-ar",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-langpack-ca",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-help-et",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-langpack-fr",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-langpack-sl",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "autocorr-es",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-langpack-ro",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-help-ta",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-glade",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-langpack-et",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-langpack-gl",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-langpack-th",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-langpack-uk",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "autocorr-hu",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-langpack-te",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-bsh",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-wiki-publisher",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-langpack-de",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-help-de",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-help-el",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-help-gl",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-help-sv",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "autocorr-nl",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-nlpsolver",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-impress",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-help-da",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-help-dz",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-help-es",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-help-hu",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-langpack-ss",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-gdb-debug-support",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-langpack-bg",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-langpack-ja",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-langpack-lt",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-langpack-mai",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-langpack-sk",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-langpack-zu",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-rhino",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-data",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-help-bn",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-langpack-eu",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-help-gu",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-langpack-mr",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-help-pt-BR",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "autocorr-lt",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "autocorr-tr",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-langpack-br",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-langpack-kk",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-help-ru",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-help-si",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "autocorr-pl",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-langpack-gu",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-help-lv",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-langpack-nso",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-langpack-tn",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-langpack-zh-Hans",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "autocorr-fr",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "autocorr-ja",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-postgresql",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "autocorr-ca",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "autocorr-fa",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-sdk-doc",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreofficekit",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-langpack-pa",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "autocorr-it",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "autocorr-ro",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-filters",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-langpack-ar",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-langpack-id",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-langpack-si",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-help-zh-Hans",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "autocorr-ru",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-help-ca",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-langpack-da",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-langpack-ml",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-officebean-common",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-langpack-nb",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-langpack-pl",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-langpack-ta",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-help-tr",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-pyuno",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-draw",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-help-eu",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-langpack-fa",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-langpack-or",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-langpack-ru",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-debuginfo",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-langpack-sv",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-math",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-sdk",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-langpack-bn",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-langpack-cy",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-help-hr",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-langpack-ko",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-langpack-sr",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "autocorr-bg",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreofficekit-devel",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-langpack-as",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-help-nn",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-langpack-zh-Hant",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "autocorr-hr",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "autocorr-mn",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-writer",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "autocorr-vi",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-help-cs",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "autocorr-en",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-help-hi",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-langpack-hr",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-help-zh-Hant",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "autocorr-sk",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-langpack-el",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-langpack-nl",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-help-ro",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-help-sk",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-help-sl",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-opensymbol-fonts",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-librelogo",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-x11",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-langpack-cs",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-help-pl",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-help-ko",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libreoffice-langpack-ve",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "autocorr-da",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "autocorr-ko",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn2extra-libreoffice"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.3.6.1-21.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"1:5.3.6.1-21.amzn2.0.3"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

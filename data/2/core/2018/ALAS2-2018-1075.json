@@ -1,0 +1,279 @@
+{
+	"id": "ALAS2-2018-1075",
+	"advisories": [
+		{
+			"id": "ALAS2-2018-1075",
+			"title": "Amazon Linux 2 2017.12 - ALAS2-2018-1075: low priority package update for openssh",
+			"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2018-15473:\n\tOpenSSH through 7.7 is prone to a user enumeration vulnerability due to not delaying bailout for an invalid authenticating user until after the packet containing the request has been fully parsed, related to auth2-gss.c, auth2-hostbased.c, and auth2-pubkey.c.\n1619063: \nCVE-2018-15473 openssh: User enumeration via malformed packets in authentication requests\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "low"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-15473"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALAS-2018-1075.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2018-15473",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-15473"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "openssh-server-sysvinit",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:7.4p1-16.amzn2.0.5"
+								}
+							],
+							"fixed": [
+								"0:7.4p1-16.amzn2.0.5"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "openssh-clients",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:7.4p1-16.amzn2.0.5"
+								}
+							],
+							"fixed": [
+								"0:7.4p1-16.amzn2.0.5"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "openssh-server",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:7.4p1-16.amzn2.0.5"
+								}
+							],
+							"fixed": [
+								"0:7.4p1-16.amzn2.0.5"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "openssh-ldap",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:7.4p1-16.amzn2.0.5"
+								}
+							],
+							"fixed": [
+								"0:7.4p1-16.amzn2.0.5"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "openssh-keycat",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:7.4p1-16.amzn2.0.5"
+								}
+							],
+							"fixed": [
+								"0:7.4p1-16.amzn2.0.5"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "openssh-askpass",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:7.4p1-16.amzn2.0.5"
+								}
+							],
+							"fixed": [
+								"0:7.4p1-16.amzn2.0.5"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "openssh-cavs",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:7.4p1-16.amzn2.0.5"
+								}
+							],
+							"fixed": [
+								"0:7.4p1-16.amzn2.0.5"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "pam_ssh_agent_auth",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:0.10.3-2.16.amzn2.0.5"
+								}
+							],
+							"fixed": [
+								"0:0.10.3-2.16.amzn2.0.5"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "openssh",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:7.4p1-16.amzn2.0.5"
+								}
+							],
+							"fixed": [
+								"0:7.4p1-16.amzn2.0.5"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "openssh-debuginfo",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:7.4p1-16.amzn2.0.5"
+								}
+							],
+							"fixed": [
+								"0:7.4p1-16.amzn2.0.5"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

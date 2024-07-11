@@ -1,0 +1,108 @@
+{
+	"id": "ALAS2-2022-1842",
+	"advisories": [
+		{
+			"id": "ALAS2-2022-1842",
+			"title": "Amazon Linux 2 2017.12 - ALAS2-2022-1842: medium priority package update for microcode_ctl",
+			"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2022-21233:\n\tA flaw was found in hw. The APIC can operate in xAPIC mode (also known as a legacy mode), in which APIC configuration registers are exposed through a memory-mapped I/O (MMIO) page. This flaw allows an attacker who can execute code on a target CPU to query the APIC configuration page. When reading the APIC configuration page with an unaligned read from the MMIO page, the registers may return stale data from previous requests made by the same processor core to the same configuration page, leading to unauthorized access.\n\nCVE-2022-0005:\n\tSensitive information accessible by physical probing of JTAG interface for some Intel(R) Processors with SGX may allow an unprivileged user to potentially enable information disclosure via physical access.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "medium"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-0005"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-21233"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALAS-2022-1842.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2022-0005",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-0005"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-21233",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-21233"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "microcode_ctl",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "2:2.1-47.amzn2.0.13"
+								}
+							],
+							"fixed": [
+								"2:2.1-47.amzn2.0.13"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "microcode_ctl-debuginfo",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "2:2.1-47.amzn2.0.13"
+								}
+							],
+							"fixed": [
+								"2:2.1-47.amzn2.0.13"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

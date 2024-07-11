@@ -1,0 +1,169 @@
+{
+	"id": "ALAS-2012-107",
+	"advisories": [
+		{
+			"id": "ALAS-2012-107",
+			"title": "Amazon Linux - ALAS-2012-107: medium priority package update for lighttpd",
+			"description": "Package updates are available for Amazon Linux that fix the following vulnerabilities:\nCVE-2011-4362:\n\tInteger signedness error in the base64_decode function in the HTTP authentication functionality (http_auth.c) in lighttpd 1.4 before 1.4.30 and 1.5 before SVN revision 2806 allows remote attackers to cause a denial of service (segmentation fault) via crafted base64 input that triggers an out-of-bounds read with a negative index.\n758624: \nCVE-2011-4362 lighttpd: Out of bounds read due to a signedness error (DoS, crash)\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "medium"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-4362"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/ALAS-2012-107.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2011-4362",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-4362"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:1",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "lighttpd-fastcgi",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.4.31-1.2.amzn1"
+								}
+							],
+							"fixed": [
+								"0:1.4.31-1.2.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "lighttpd-mod_mysql_vhost",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.4.31-1.2.amzn1"
+								}
+							],
+							"fixed": [
+								"0:1.4.31-1.2.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "lighttpd-debuginfo",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.4.31-1.2.amzn1"
+								}
+							],
+							"fixed": [
+								"0:1.4.31-1.2.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "lighttpd-mod_geoip",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.4.31-1.2.amzn1"
+								}
+							],
+							"fixed": [
+								"0:1.4.31-1.2.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "lighttpd",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.4.31-1.2.amzn1"
+								}
+							],
+							"fixed": [
+								"0:1.4.31-1.2.amzn1"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

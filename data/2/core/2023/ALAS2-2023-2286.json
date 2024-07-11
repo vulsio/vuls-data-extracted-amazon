@@ -1,0 +1,213 @@
+{
+	"id": "ALAS2-2023-2286",
+	"advisories": [
+		{
+			"id": "ALAS2-2023-2286",
+			"title": "Amazon Linux 2 2017.12 - ALAS2-2023-2286: important priority package update for python-pillow",
+			"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2014-3007:\n\tPython Image Library (PIL) 1.1.7 and earlier and Pillow 2.3 might allow remote attackers to execute arbitrary commands via shell metacharacters in unspecified vectors related to CVE-2014-1932, possibly JpegImagePlugin.py.\n\nCVE-2014-1933:\n\tThe (1) JpegImagePlugin.py and (2) EpsImagePlugin.py scripts in Python Image Library (PIL) 1.1.7 and earlier and Pillow before 2.3.1 uses the names of temporary files on the command line, which makes it easier for local users to conduct symlink attacks by listing the processes.\n\nCVE-2014-1932:\n\tThe (1) load_djpeg function in JpegImagePlugin.py, (2) Ghostscript function in EpsImagePlugin.py, (3) load function in IptcImagePlugin.py, and (4) _copy function in Image.py in Python Image Library (PIL) 1.1.7 and earlier and Pillow before 2.3.1 do not properly create temporary files, which allow local users to overwrite arbitrary files and obtain sensitive information via a symlink attack on the temporary file.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "important"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-1932"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-1933"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-3007"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALAS-2023-2286.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2014-1932",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-1932"
+				}
+			]
+		},
+		{
+			"id": "CVE-2014-1933",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-1933"
+				}
+			]
+		},
+		{
+			"id": "CVE-2014-3007",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-3007"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "python-pillow-tk",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.0.0-23.gitd1c6db8.amzn2.0.8"
+								}
+							],
+							"fixed": [
+								"0:2.0.0-23.gitd1c6db8.amzn2.0.8"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "python-pillow-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.0.0-23.gitd1c6db8.amzn2.0.8"
+								}
+							],
+							"fixed": [
+								"0:2.0.0-23.gitd1c6db8.amzn2.0.8"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "python-pillow",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.0.0-23.gitd1c6db8.amzn2.0.8"
+								}
+							],
+							"fixed": [
+								"0:2.0.0-23.gitd1c6db8.amzn2.0.8"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "python-pillow-devel",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.0.0-23.gitd1c6db8.amzn2.0.8"
+								}
+							],
+							"fixed": [
+								"0:2.0.0-23.gitd1c6db8.amzn2.0.8"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "python-pillow-doc",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.0.0-23.gitd1c6db8.amzn2.0.8"
+								}
+							],
+							"fixed": [
+								"0:2.0.0-23.gitd1c6db8.amzn2.0.8"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "python-pillow-sane",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.0.0-23.gitd1c6db8.amzn2.0.8"
+								}
+							],
+							"fixed": [
+								"0:2.0.0-23.gitd1c6db8.amzn2.0.8"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

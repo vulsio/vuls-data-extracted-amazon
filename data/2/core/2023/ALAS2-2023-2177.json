@@ -1,0 +1,164 @@
+{
+	"id": "ALAS2-2023-2177",
+	"advisories": [
+		{
+			"id": "ALAS2-2023-2177",
+			"title": "Amazon Linux 2 2017.12 - ALAS2-2023-2177: important priority package update for webkitgtk4",
+			"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2023-37450:\n\tA vulnerability was found in webkitgtk. This issue occurs when processing web content, which may lead to arbitrary code execution.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "important"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-37450"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALAS-2023-2177.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2023-37450",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-37450"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "webkitgtk4",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.38.5-3.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"0:2.38.5-3.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "webkitgtk4-devel",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.38.5-3.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"0:2.38.5-3.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "webkitgtk4-jsc",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.38.5-3.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"0:2.38.5-3.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "webkitgtk4-jsc-devel",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.38.5-3.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"0:2.38.5-3.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "webkitgtk4-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.38.5-3.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"0:2.38.5-3.amzn2.0.3"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

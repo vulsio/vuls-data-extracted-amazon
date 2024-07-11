@@ -1,0 +1,164 @@
+{
+	"id": "ALAS2NITRO-ENCLAVES-2022-019",
+	"advisories": [
+		{
+			"id": "ALAS2NITRO-ENCLAVES-2022-019",
+			"title": "Amazon Linux 2 - Nitro-enclaves 2.0 - ALAS2NITRO-ENCLAVES-2022-019: medium priority package update for containerd docker",
+			"description": "Package updates are available for Amazon Linux 2 - Nitro-enclaves that fix the following vulnerabilities:\nCVE-2022-24769:\n\tA flaw was found in Moby (Docker Engine), where containers were started incorrectly with non-empty inheritable Linux process capabilities. This flaw allows an attacker with access to programs with inheritable file capabilities to elevate those capabilities to the permitted set when execve(2) runs. Containers using Linux users and groups to perform privilege separation inside the container are most directly impacted.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "medium"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-24769"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALASNITRO-ENCLAVES-2022-019.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2022-24769",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-24769"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "docker",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2extra-nitro-enclaves"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:20.10.13-2.amzn2"
+								}
+							],
+							"fixed": [
+								"0:20.10.13-2.amzn2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "docker-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2extra-nitro-enclaves"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:20.10.13-2.amzn2"
+								}
+							],
+							"fixed": [
+								"0:20.10.13-2.amzn2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "containerd",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2extra-nitro-enclaves"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.4.13-2.amzn2.0.1"
+								}
+							],
+							"fixed": [
+								"0:1.4.13-2.amzn2.0.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "containerd-stress",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2extra-nitro-enclaves"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.4.13-2.amzn2.0.1"
+								}
+							],
+							"fixed": [
+								"0:1.4.13-2.amzn2.0.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "containerd-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2extra-nitro-enclaves"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.4.13-2.amzn2.0.1"
+								}
+							],
+							"fixed": [
+								"0:1.4.13-2.amzn2.0.1"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

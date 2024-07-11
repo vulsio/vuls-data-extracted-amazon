@@ -1,0 +1,95 @@
+{
+	"id": "ALAS2-2018-1030",
+	"advisories": [
+		{
+			"id": "ALAS2-2018-1030",
+			"title": "Amazon Linux 2 2017.12 - ALAS2-2018-1030: low priority package update for xdg-user-dirs",
+			"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2017-15131:\n\tIt was found that the system umask policy is not being honored when creating XDG user directories (~/Desktop etc) on first login. This could lead to user&#039;s files being inadvertently exposed to other local users.\n1455094: \nCVE-2017-15131 xdg-user-dirs, gnome-session: Xsession creation of XDG user directories does not honor system umask policy\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "low"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-15131"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALAS-2018-1030.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2017-15131",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-15131"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "xdg-user-dirs",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:0.15-5.amzn2"
+								}
+							],
+							"fixed": [
+								"0:0.15-5.amzn2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "xdg-user-dirs-debuginfo",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:0.15-5.amzn2"
+								}
+							],
+							"fixed": [
+								"0:0.15-5.amzn2"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

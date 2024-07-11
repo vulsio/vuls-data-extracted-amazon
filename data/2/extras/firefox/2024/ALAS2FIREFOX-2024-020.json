@@ -1,0 +1,95 @@
+{
+	"id": "ALAS2FIREFOX-2024-020",
+	"advisories": [
+		{
+			"id": "ALAS2FIREFOX-2024-020",
+			"title": "Amazon Linux 2 - Firefox 2.0 - ALAS2FIREFOX-2024-020: important priority package update for firefox",
+			"description": "Package updates are available for Amazon Linux 2 - Firefox that fix the following vulnerabilities:\nCVE-2023-7104:\n\tA vulnerability was found in SQLite SQLite3 up to 3.43.0 and classified as critical. This issue affects the function sessionReadRecord of the file ext/session/sqlite3session.c of the component make alltest Handler. The manipulation leads to heap-based buffer overflow. It is recommended to apply a patch to fix this issue. The associated identifier of this vulnerability is VDB-248999.\n\nNOTE: https://sqlite.org/forum/forumpost/5bcbf4571c\nNOTE: Fixed by: https://sqlite.org/src/info/0e4e7a05c4204b47\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "important"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-7104"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALASFIREFOX-2024-020.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2023-7104",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-7104"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "firefox",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2extra-firefox"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:115.6.0-1.amzn2.0.2"
+								}
+							],
+							"fixed": [
+								"0:115.6.0-1.amzn2.0.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "firefox-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2extra-firefox"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:115.6.0-1.amzn2.0.2"
+								}
+							],
+							"fixed": [
+								"0:115.6.0-1.amzn2.0.2"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

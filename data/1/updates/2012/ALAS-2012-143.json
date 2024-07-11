@@ -1,0 +1,173 @@
+{
+	"id": "ALAS-2012-143",
+	"advisories": [
+		{
+			"id": "ALAS-2012-143",
+			"title": "Amazon Linux - ALAS-2012-143: important priority package update for libxml2",
+			"description": "Package updates are available for Amazon Linux that fix the following vulnerabilities:\nCVE-2012-5134:\n\tHeap-based buffer underflow in the xmlParseAttValueComplex function in parser.c in libxml2 2.9.0 and earlier, as used in Google Chrome before 23.0.1271.91, allows remote attackers to cause a denial of service or possibly execute arbitrary code via crafted entities in an XML document.\nA heap-based buffer underflow flaw was found in the way libxml2 decoded certain entities. A remote attacker could provide a specially-crafted XML file that, when opened in an application linked against libxml2, would cause the application to crash or, potentially, execute arbitrary code with the privileges of the user running the application.\n880466: \nCVE-2012-5134 libxml2: Heap-buffer-underflow in xmlParseAttValueComplex\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "important"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-5134"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/ALAS-2012-143.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://rhn.redhat.com/errata/RHSA-2012:1512.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2012-5134",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-5134"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:1",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libxml2-devel",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.7.8-10.25.amzn1"
+								}
+							],
+							"fixed": [
+								"0:2.7.8-10.25.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libxml2-python",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.7.8-10.25.amzn1"
+								}
+							],
+							"fixed": [
+								"0:2.7.8-10.25.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libxml2-static",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.7.8-10.25.amzn1"
+								}
+							],
+							"fixed": [
+								"0:2.7.8-10.25.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libxml2",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.7.8-10.25.amzn1"
+								}
+							],
+							"fixed": [
+								"0:2.7.8-10.25.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libxml2-debuginfo",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.7.8-10.25.amzn1"
+								}
+							],
+							"fixed": [
+								"0:2.7.8-10.25.amzn1"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

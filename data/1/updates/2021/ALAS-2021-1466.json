@@ -1,0 +1,86 @@
+{
+	"id": "ALAS-2021-1466",
+	"advisories": [
+		{
+			"id": "ALAS-2021-1466",
+			"title": "Amazon Linux AMI 2014.03 - ALAS-2021-1466: medium priority package update for php7-pear",
+			"description": "Package updates are available for Amazon Linux AMI that fix the following vulnerabilities:\nCVE-2020-28949:\n\tArchive_Tar through 1.4.10 has :// filename sanitization only to address phar attacks, and thus any other stream-wrapper attack (such as file:// to overwrite files) can still succeed.\n1910323: CVE-2020-28949 Archive_Tar: improper filename sanitization leads to file overwrites\n\nCVE-2020-28948:\n\tArchive_Tar through 1.4.10 allows an unserialization attack because phar: is blocked but PHAR: is not blocked.\n1904001: CVE-2020-28948 Archive_Tar: allows an unserialization attack because phar: is blocked but PHAR: is not blocked\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "medium"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-28948"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-28949"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/ALAS-2021-1466.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2020-28948",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-28948"
+				}
+			]
+		},
+		{
+			"id": "CVE-2020-28949",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-28949"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:1",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php7-pear",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:1.10.12-4.30.amzn1"
+								}
+							],
+							"fixed": [
+								"1:1.10.12-4.30.amzn1"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

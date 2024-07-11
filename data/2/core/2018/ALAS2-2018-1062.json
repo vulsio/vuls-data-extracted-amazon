@@ -1,0 +1,302 @@
+{
+	"id": "ALAS2-2018-1062",
+	"advisories": [
+		{
+			"id": "ALAS2-2018-1062",
+			"title": "Amazon Linux 2 2017.12 - ALAS2-2018-1062: medium priority package update for httpd",
+			"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2018-8011:\n\tBy specially crafting HTTP requests, the mod_md challenge handler would dereference a NULL pointer and cause the child process to segfault. This could be used to DoS the server. Fixed in Apache HTTP Server 2.4.34 (Affected 2.4.33).\n1605052: \nCVE-2018-8011 httpd: mod_md: NULL pointer dereference causing httpd child process crash\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "medium"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-8011"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALAS-2018-1062.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2018-8011",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-8011"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mod_md",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.4.34-1.amzn2.1.0"
+								}
+							],
+							"fixed": [
+								"0:2.4.34-1.amzn2.1.0"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mod_proxy_html",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:2.4.34-1.amzn2.1.0"
+								}
+							],
+							"fixed": [
+								"1:2.4.34-1.amzn2.1.0"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mod_ldap",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.4.34-1.amzn2.1.0"
+								}
+							],
+							"fixed": [
+								"0:2.4.34-1.amzn2.1.0"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "httpd-filesystem",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.4.34-1.amzn2.1.0"
+								}
+							],
+							"fixed": [
+								"0:2.4.34-1.amzn2.1.0"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "httpd-tools",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.4.34-1.amzn2.1.0"
+								}
+							],
+							"fixed": [
+								"0:2.4.34-1.amzn2.1.0"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mod_ssl",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:2.4.34-1.amzn2.1.0"
+								}
+							],
+							"fixed": [
+								"1:2.4.34-1.amzn2.1.0"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mod_session",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.4.34-1.amzn2.1.0"
+								}
+							],
+							"fixed": [
+								"0:2.4.34-1.amzn2.1.0"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "httpd-debuginfo",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.4.34-1.amzn2.1.0"
+								}
+							],
+							"fixed": [
+								"0:2.4.34-1.amzn2.1.0"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "httpd",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.4.34-1.amzn2.1.0"
+								}
+							],
+							"fixed": [
+								"0:2.4.34-1.amzn2.1.0"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "httpd-devel",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.4.34-1.amzn2.1.0"
+								}
+							],
+							"fixed": [
+								"0:2.4.34-1.amzn2.1.0"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "httpd-manual",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.4.34-1.amzn2.1.0"
+								}
+							],
+							"fixed": [
+								"0:2.4.34-1.amzn2.1.0"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

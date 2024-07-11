@@ -1,0 +1,108 @@
+{
+	"id": "ALAS2022-2023-279",
+	"advisories": [
+		{
+			"id": "ALAS2022-2023-279",
+			"title": "Amazon Linux 2022 - ALAS2022-2023-279: Medium priority package update for java-1.8.0-amazon-corretto",
+			"description": "Package updates are available for Amazon Linux 2022 that fix the following vulnerabilities:\nCVE-2023-21843:\n\tBetter Banking of Sounds: JARSoundbankReader can load classes from remote URLs.\n\nCVE-2023-21830:\n\tImprove CORBA communication: CORBA deserialization can result in outbound network connections with data passed in.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "Medium"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-21830"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-21843"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2022/ALAS-2023-279.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2023-21830",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-21830"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-21843",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-21843"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2022",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "java-1.8.0-amazon-corretto",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:1.8.0_362.b08-1.amzn2022"
+								}
+							],
+							"fixed": [
+								"1:1.8.0_362.b08-1.amzn2022"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "java-1.8.0-amazon-corretto-devel",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:1.8.0_362.b08-1.amzn2022"
+								}
+							],
+							"fixed": [
+								"1:1.8.0_362.b08-1.amzn2022"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

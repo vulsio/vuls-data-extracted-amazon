@@ -1,0 +1,141 @@
+{
+	"id": "ALAS2-2021-1660",
+	"advisories": [
+		{
+			"id": "ALAS2-2021-1660",
+			"title": "Amazon Linux 2 2017.12 - ALAS2-2021-1660: important priority package update for lasso",
+			"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2021-28091:\n\tAn XML Signature Wrapping (XSW) vulnerability was found in Lasso. This flaw allows an attacker to modify a valid SAML response to include an unsigned SAML assertion, which may be used to impersonate another valid user recognized by the service using Lasso. The highest threat from this vulnerability is to data confidentiality and integrity as well as service availability.\n1940089: CVE-2021-28091 lasso: XML signature wrapping vulnerability when parsing SAML responses\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "important"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-28091"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALAS-2021-1660.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2021-28091",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-28091"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "lasso",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.5.1-5.amzn2.0.1"
+								}
+							],
+							"fixed": [
+								"0:2.5.1-5.amzn2.0.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "lasso-devel",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.5.1-5.amzn2.0.1"
+								}
+							],
+							"fixed": [
+								"0:2.5.1-5.amzn2.0.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "lasso-python",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.5.1-5.amzn2.0.1"
+								}
+							],
+							"fixed": [
+								"0:2.5.1-5.amzn2.0.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "lasso-debuginfo",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.5.1-5.amzn2.0.1"
+								}
+							],
+							"fixed": [
+								"0:2.5.1-5.amzn2.0.1"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

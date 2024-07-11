@@ -1,0 +1,196 @@
+{
+	"id": "ALAS2-2020-1464",
+	"advisories": [
+		{
+			"id": "ALAS2-2020-1464",
+			"title": "Amazon Linux 2 2017.12 - ALAS2-2020-1464: important priority package update for java-11-amazon-corretto",
+			"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2020-14621:\n\tCVE-2020-14621 :\n\nCVE-2020-14593:\n\tCVE-2020-14593 :\n\nCVE-2020-14583:\n\tCVE-2020-14583 :\n\nCVE-2020-14581:\n\tCVE-2020-14581 :\n\nCVE-2020-14577:\n\tCVE-2020-14577 :\n\nCVE-2020-14562:\n\tCVE-2020-14562 :\n\nCVE-2020-14556:\n\tCVE-2020-14556 :\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "important"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-14556"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-14562"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-14577"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-14581"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-14583"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-14593"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-14621"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALAS-2020-1464.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2020-14556",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-14556"
+				}
+			]
+		},
+		{
+			"id": "CVE-2020-14562",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-14562"
+				}
+			]
+		},
+		{
+			"id": "CVE-2020-14577",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-14577"
+				}
+			]
+		},
+		{
+			"id": "CVE-2020-14581",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-14581"
+				}
+			]
+		},
+		{
+			"id": "CVE-2020-14583",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-14583"
+				}
+			]
+		},
+		{
+			"id": "CVE-2020-14593",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-14593"
+				}
+			]
+		},
+		{
+			"id": "CVE-2020-14621",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-14621"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "java-11-amazon-corretto",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:11.0.8+10-1.amzn2"
+								}
+							],
+							"fixed": [
+								"1:11.0.8+10-1.amzn2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "java-11-amazon-corretto-headless",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:11.0.8+10-1.amzn2"
+								}
+							],
+							"fixed": [
+								"1:11.0.8+10-1.amzn2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "java-11-amazon-corretto-javadoc",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:11.0.8+10-1.amzn2"
+								}
+							],
+							"fixed": [
+								"1:11.0.8+10-1.amzn2"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

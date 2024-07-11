@@ -1,0 +1,785 @@
+{
+	"id": "ALAS2-2018-1134",
+	"advisories": [
+		{
+			"id": "ALAS2-2018-1134",
+			"title": "Amazon Linux 2 2017.12 - ALAS2-2018-1134: medium priority package update for libvirt",
+			"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2018-6764:\n\tutil/virlog.c in libvirt does not properly determine the hostname on LXC container startup, which allows local guest OS users to bypass an intended container protection mechanism and execute arbitrary commands via a crafted NSS module.\n1541444: \nCVE-2018-6764 libvirt: guest could inject executable code via libnss_dns.so loaded by libvirt_lxc before init\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "medium"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-6764"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALAS-2018-1134.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2018-6764",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-6764"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libvirt-daemon-driver-qemu",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:4.5.0-10.amzn2.3.1"
+								}
+							],
+							"fixed": [
+								"0:4.5.0-10.amzn2.3.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libvirt-daemon-driver-storage-core",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:4.5.0-10.amzn2.3.1"
+								}
+							],
+							"fixed": [
+								"0:4.5.0-10.amzn2.3.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libvirt-daemon-driver-storage-logical",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:4.5.0-10.amzn2.3.1"
+								}
+							],
+							"fixed": [
+								"0:4.5.0-10.amzn2.3.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libvirt-daemon-driver-storage",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:4.5.0-10.amzn2.3.1"
+								}
+							],
+							"fixed": [
+								"0:4.5.0-10.amzn2.3.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libvirt-daemon-driver-lxc",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:4.5.0-10.amzn2.3.1"
+								}
+							],
+							"fixed": [
+								"0:4.5.0-10.amzn2.3.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libvirt-daemon-driver-storage-rbd",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:4.5.0-10.amzn2.3.1"
+								}
+							],
+							"fixed": [
+								"0:4.5.0-10.amzn2.3.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libvirt-daemon",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:4.5.0-10.amzn2.3.1"
+								}
+							],
+							"fixed": [
+								"0:4.5.0-10.amzn2.3.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libvirt-debuginfo",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:4.5.0-10.amzn2.3.1"
+								}
+							],
+							"fixed": [
+								"0:4.5.0-10.amzn2.3.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libvirt-daemon-driver-storage-disk",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:4.5.0-10.amzn2.3.1"
+								}
+							],
+							"fixed": [
+								"0:4.5.0-10.amzn2.3.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libvirt-admin",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:4.5.0-10.amzn2.3.1"
+								}
+							],
+							"fixed": [
+								"0:4.5.0-10.amzn2.3.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libvirt-login-shell",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:4.5.0-10.amzn2.3.1"
+								}
+							],
+							"fixed": [
+								"0:4.5.0-10.amzn2.3.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libvirt",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:4.5.0-10.amzn2.3.1"
+								}
+							],
+							"fixed": [
+								"0:4.5.0-10.amzn2.3.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libvirt-daemon-driver-network",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:4.5.0-10.amzn2.3.1"
+								}
+							],
+							"fixed": [
+								"0:4.5.0-10.amzn2.3.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libvirt-daemon-driver-nwfilter",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:4.5.0-10.amzn2.3.1"
+								}
+							],
+							"fixed": [
+								"0:4.5.0-10.amzn2.3.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libvirt-daemon-driver-interface",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:4.5.0-10.amzn2.3.1"
+								}
+							],
+							"fixed": [
+								"0:4.5.0-10.amzn2.3.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libvirt-devel",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:4.5.0-10.amzn2.3.1"
+								}
+							],
+							"fixed": [
+								"0:4.5.0-10.amzn2.3.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libvirt-daemon-driver-storage-scsi",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:4.5.0-10.amzn2.3.1"
+								}
+							],
+							"fixed": [
+								"0:4.5.0-10.amzn2.3.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libvirt-daemon-driver-storage-iscsi",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:4.5.0-10.amzn2.3.1"
+								}
+							],
+							"fixed": [
+								"0:4.5.0-10.amzn2.3.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libvirt-libs",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:4.5.0-10.amzn2.3.1"
+								}
+							],
+							"fixed": [
+								"0:4.5.0-10.amzn2.3.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libvirt-daemon-driver-storage-gluster",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:4.5.0-10.amzn2.3.1"
+								}
+							],
+							"fixed": [
+								"0:4.5.0-10.amzn2.3.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libvirt-daemon-kvm",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:4.5.0-10.amzn2.3.1"
+								}
+							],
+							"fixed": [
+								"0:4.5.0-10.amzn2.3.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libvirt-bash-completion",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:4.5.0-10.amzn2.3.1"
+								}
+							],
+							"fixed": [
+								"0:4.5.0-10.amzn2.3.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libvirt-daemon-config-nwfilter",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:4.5.0-10.amzn2.3.1"
+								}
+							],
+							"fixed": [
+								"0:4.5.0-10.amzn2.3.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libvirt-daemon-driver-nodedev",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:4.5.0-10.amzn2.3.1"
+								}
+							],
+							"fixed": [
+								"0:4.5.0-10.amzn2.3.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libvirt-daemon-driver-secret",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:4.5.0-10.amzn2.3.1"
+								}
+							],
+							"fixed": [
+								"0:4.5.0-10.amzn2.3.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libvirt-daemon-driver-storage-mpath",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:4.5.0-10.amzn2.3.1"
+								}
+							],
+							"fixed": [
+								"0:4.5.0-10.amzn2.3.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libvirt-daemon-lxc",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:4.5.0-10.amzn2.3.1"
+								}
+							],
+							"fixed": [
+								"0:4.5.0-10.amzn2.3.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libvirt-docs",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:4.5.0-10.amzn2.3.1"
+								}
+							],
+							"fixed": [
+								"0:4.5.0-10.amzn2.3.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libvirt-daemon-config-network",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:4.5.0-10.amzn2.3.1"
+								}
+							],
+							"fixed": [
+								"0:4.5.0-10.amzn2.3.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libvirt-client",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:4.5.0-10.amzn2.3.1"
+								}
+							],
+							"fixed": [
+								"0:4.5.0-10.amzn2.3.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libvirt-nss",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:4.5.0-10.amzn2.3.1"
+								}
+							],
+							"fixed": [
+								"0:4.5.0-10.amzn2.3.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libvirt-lock-sanlock",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:4.5.0-10.amzn2.3.1"
+								}
+							],
+							"fixed": [
+								"0:4.5.0-10.amzn2.3.1"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

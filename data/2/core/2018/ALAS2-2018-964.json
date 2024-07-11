@@ -1,0 +1,118 @@
+{
+	"id": "ALAS2-2018-964",
+	"advisories": [
+		{
+			"id": "ALAS2-2018-964",
+			"title": "Amazon Linux 2 2017.12 - ALAS2-2018-964: medium priority package update for memcached",
+			"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2018-1000115:\n\tIt was discovered that the memcached connections using UDP transport protocol can be abused for efficient traffic amplification distributed denial of service (DDoS) attacks. A remote attacker could send a malicious UDP request using a spoofed source IP address of a target system to memcached, causing it to send a significantly larger response to the target.\n1551182: \nCVE-2018-1000115 memcached: UDP server support allows spoofed traffic amplification DoS\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "medium"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-1000115"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALAS-2018-964.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2018-1000115",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-1000115"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "memcached",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.4.15-10.amzn2.1.1"
+								}
+							],
+							"fixed": [
+								"0:1.4.15-10.amzn2.1.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "memcached-devel",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.4.15-10.amzn2.1.1"
+								}
+							],
+							"fixed": [
+								"0:1.4.15-10.amzn2.1.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "memcached-debuginfo",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.4.15-10.amzn2.1.1"
+								}
+							],
+							"fixed": [
+								"0:1.4.15-10.amzn2.1.1"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

@@ -1,0 +1,97 @@
+{
+	"id": "ALAS-2018-1084",
+	"advisories": [
+		{
+			"id": "ALAS-2018-1084",
+			"title": "Amazon Linux AMI 2014.03 - ALAS-2018-1084: important priority package update for procmail",
+			"description": "Package updates are available for Amazon Linux AMI that fix the following vulnerabilities:\nCVE-2017-16844:\n\tA heap-based buffer overflow flaw was found in procmail&#039;s formail utility. A remote attacker could send a specially crafted email that, when processed by formail, could cause formail to crash or, possibly, execute arbitrary code as the user running formail.\n1500070: \nCVE-2017-16844 procmail: Heap-based buffer overflow in loadbuf function in formisc.c\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "important"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-16844"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/ALAS-2018-1084.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2017-16844",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-16844"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:1",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "procmail-debuginfo",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:3.22-25.1.7.amzn1"
+								}
+							],
+							"fixed": [
+								"0:3.22-25.1.7.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "procmail",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:3.22-25.1.7.amzn1"
+								}
+							],
+							"fixed": [
+								"0:3.22-25.1.7.amzn1"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

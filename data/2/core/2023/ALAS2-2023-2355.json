@@ -1,0 +1,131 @@
+{
+	"id": "ALAS2-2023-2355",
+	"advisories": [
+		{
+			"id": "ALAS2-2023-2355",
+			"title": "Amazon Linux 2 2017.12 - ALAS2-2023-2355: important priority package update for gstreamer1-plugins-bad-free",
+			"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2023-44446:\n\tgstreamer: MXF demuxer use-after-free vulnerability\n\nCVE-2023-44429:\n\tgstreamer: AV1 codec parser heap-based buffer overflow\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "important"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-44429"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-44446"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALAS-2023-2355.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2023-44429",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-44429"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-44446",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-44446"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "gstreamer1-plugins-bad-free",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.18.4-5.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"0:1.18.4-5.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "gstreamer1-plugins-bad-free-devel",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.18.4-5.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"0:1.18.4-5.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "gstreamer1-plugins-bad-free-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.18.4-5.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"0:1.18.4-5.amzn2.0.3"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

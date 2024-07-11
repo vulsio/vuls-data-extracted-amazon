@@ -1,0 +1,348 @@
+{
+	"id": "ALAS2023-2023-340",
+	"advisories": [
+		{
+			"id": "ALAS2023-2023-340",
+			"title": "Amazon Linux 2023 - ALAS2023-2023-340: Medium priority package update for poppler",
+			"description": "Package updates are available for Amazon Linux 2023 that fix the following vulnerabilities:\nCVE-2022-38349:\n\tAn issue was discovered in Poppler 22.08.0. There is a reachable assertion in Object.h, will lead to denial of service because PDFDoc::replacePageDict in PDFDoc.cc lacks a stream check before saving an embedded file.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "Medium"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-38349"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2023/ALAS-2023-340.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2022-38349",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-38349"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2023",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "poppler-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:22.08.0-3.amzn2023.0.3"
+								}
+							],
+							"fixed": [
+								"0:22.08.0-3.amzn2023.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "poppler-cpp",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:22.08.0-3.amzn2023.0.3"
+								}
+							],
+							"fixed": [
+								"0:22.08.0-3.amzn2023.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "poppler-devel",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:22.08.0-3.amzn2023.0.3"
+								}
+							],
+							"fixed": [
+								"0:22.08.0-3.amzn2023.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "poppler-glib-doc",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:22.08.0-3.amzn2023.0.3"
+								}
+							],
+							"fixed": [
+								"0:22.08.0-3.amzn2023.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "poppler-glib-devel",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:22.08.0-3.amzn2023.0.3"
+								}
+							],
+							"fixed": [
+								"0:22.08.0-3.amzn2023.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "poppler-glib",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:22.08.0-3.amzn2023.0.3"
+								}
+							],
+							"fixed": [
+								"0:22.08.0-3.amzn2023.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "poppler-cpp-devel",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:22.08.0-3.amzn2023.0.3"
+								}
+							],
+							"fixed": [
+								"0:22.08.0-3.amzn2023.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "poppler-glib-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:22.08.0-3.amzn2023.0.3"
+								}
+							],
+							"fixed": [
+								"0:22.08.0-3.amzn2023.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "poppler-cpp-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:22.08.0-3.amzn2023.0.3"
+								}
+							],
+							"fixed": [
+								"0:22.08.0-3.amzn2023.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "poppler-utils-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:22.08.0-3.amzn2023.0.3"
+								}
+							],
+							"fixed": [
+								"0:22.08.0-3.amzn2023.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "poppler",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:22.08.0-3.amzn2023.0.3"
+								}
+							],
+							"fixed": [
+								"0:22.08.0-3.amzn2023.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "poppler-utils",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:22.08.0-3.amzn2023.0.3"
+								}
+							],
+							"fixed": [
+								"0:22.08.0-3.amzn2023.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "poppler-debugsource",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:22.08.0-3.amzn2023.0.3"
+								}
+							],
+							"fixed": [
+								"0:22.08.0-3.amzn2023.0.3"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

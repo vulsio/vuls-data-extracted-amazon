@@ -1,0 +1,118 @@
+{
+	"id": "ALAS2022-2022-038",
+	"advisories": [
+		{
+			"id": "ALAS2022-2022-038",
+			"title": "Amazon Linux 2022 - ALAS2022-2022-038: Medium priority package update for keepalived",
+			"description": "Package updates are available for Amazon Linux 2022 that fix the following vulnerabilities:\nCVE-2021-44225:\n\tA flaw was found in keepalived, where an improper authentication vulnerability allows an unprivileged user to change properties that could lead to an access-control bypass.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "Medium"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-44225"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2022/ALAS-2022-038.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2021-44225",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-44225"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2022",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "keepalived",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.2.4-2.amzn2022"
+								}
+							],
+							"fixed": [
+								"0:2.2.4-2.amzn2022"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "keepalived-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.2.4-2.amzn2022"
+								}
+							],
+							"fixed": [
+								"0:2.2.4-2.amzn2022"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "keepalived-debugsource",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.2.4-2.amzn2022"
+								}
+							],
+							"fixed": [
+								"0:2.2.4-2.amzn2022"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

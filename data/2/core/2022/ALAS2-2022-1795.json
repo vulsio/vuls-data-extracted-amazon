@@ -1,0 +1,210 @@
+{
+	"id": "ALAS2-2022-1795",
+	"advisories": [
+		{
+			"id": "ALAS2-2022-1795",
+			"title": "Amazon Linux 2 2017.12 - ALAS2-2022-1795: critical priority package update for xmlrpc-c",
+			"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2022-25235:\n\tA flaw was found in expat. Passing malformed 2- and 3-byte UTF-8 sequences (for example, from start tag names) to the XML processing application on top of expat can lead to arbitrary code execution. This issue is dependent on how invalid UTF-8 is handled inside the XML processor.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "critical"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-25235"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALAS-2022-1795.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2022-25235",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-25235"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "xmlrpc-c-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.32.5-1905.svn2451.amzn2.0.2"
+								}
+							],
+							"fixed": [
+								"0:1.32.5-1905.svn2451.amzn2.0.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "xmlrpc-c",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.32.5-1905.svn2451.amzn2.0.2"
+								}
+							],
+							"fixed": [
+								"0:1.32.5-1905.svn2451.amzn2.0.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "xmlrpc-c-c++",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.32.5-1905.svn2451.amzn2.0.2"
+								}
+							],
+							"fixed": [
+								"0:1.32.5-1905.svn2451.amzn2.0.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "xmlrpc-c-client",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.32.5-1905.svn2451.amzn2.0.2"
+								}
+							],
+							"fixed": [
+								"0:1.32.5-1905.svn2451.amzn2.0.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "xmlrpc-c-client++",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.32.5-1905.svn2451.amzn2.0.2"
+								}
+							],
+							"fixed": [
+								"0:1.32.5-1905.svn2451.amzn2.0.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "xmlrpc-c-devel",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.32.5-1905.svn2451.amzn2.0.2"
+								}
+							],
+							"fixed": [
+								"0:1.32.5-1905.svn2451.amzn2.0.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "xmlrpc-c-apps",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.32.5-1905.svn2451.amzn2.0.2"
+								}
+							],
+							"fixed": [
+								"0:1.32.5-1905.svn2451.amzn2.0.2"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

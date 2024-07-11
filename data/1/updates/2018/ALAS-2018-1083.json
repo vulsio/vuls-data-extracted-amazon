@@ -1,0 +1,182 @@
+{
+	"id": "ALAS-2018-1083",
+	"advisories": [
+		{
+			"id": "ALAS-2018-1083",
+			"title": "Amazon Linux AMI 2014.03 - ALAS-2018-1083: low priority package update for ntp",
+			"description": "Package updates are available for Amazon Linux AMI that fix the following vulnerabilities:\nCVE-2018-7170:\n\tntpd in ntp 4.2.x before 4.2.8p7 and 4.3.x before 4.3.92 allows authenticated users that know the private symmetric key to create arbitrarily-many ephemeral associations in order to win the clock selection of ntpd and modify a victim&#039;s clock via a Sybil attack. This issue exists because of an incomplete fix for CVE-2016-1549.\n1550214: \nCVE-2018-7170 ntp: Ephemeral association time spoofing additional protection\n\nCVE-2018-12327:\n\tThe ntpq and ntpdc command-line utilities that are part of ntp package are vulnerable to stack-based buffer overflow via crafted hostname. Applications using these vulnerable utilities with an untrusted input may be potentially exploited, resulting in a crash or arbitrary code execution under privileges of that application.\n1593580: \nCVE-2018-12327 ntp: Stack-based buffer overflow in ntpq and ntpdc allows denial of service or code execution\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "low"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-12327"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-7170"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/ALAS-2018-1083.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2018-12327",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-12327"
+				}
+			]
+		},
+		{
+			"id": "CVE-2018-7170",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-7170"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:1",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ntp-debuginfo",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:4.2.8p12-1.39.amzn1"
+								}
+							],
+							"fixed": [
+								"0:4.2.8p12-1.39.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ntp",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:4.2.8p12-1.39.amzn1"
+								}
+							],
+							"fixed": [
+								"0:4.2.8p12-1.39.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ntp-doc",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:4.2.8p12-1.39.amzn1"
+								}
+							],
+							"fixed": [
+								"0:4.2.8p12-1.39.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ntpdate",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:4.2.8p12-1.39.amzn1"
+								}
+							],
+							"fixed": [
+								"0:4.2.8p12-1.39.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ntp-perl",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:4.2.8p12-1.39.amzn1"
+								}
+							],
+							"fixed": [
+								"0:4.2.8p12-1.39.amzn1"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

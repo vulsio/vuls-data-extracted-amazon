@@ -1,0 +1,443 @@
+{
+	"id": "ALAS2KERNEL-5.10-2023-032",
+	"advisories": [
+		{
+			"id": "ALAS2KERNEL-5.10-2023-032",
+			"title": "Amazon Linux 2 - Kernel-5.10 2.0 - ALAS2KERNEL-5.10-2023-032: medium priority package update for kernel",
+			"description": "Package updates are available for Amazon Linux 2 - Kernel-5.10 that fix the following vulnerabilities:\nCVE-2023-31436:\n\tqfq_change_class in net/sched/sch_qfq.c in the Linux kernel before 6.2.13 allows an out-of-bounds write because lmax can exceed QFQ_MIN_LMAX.\n\nCVE-2023-2513:\n\tA use-after-free vulnerability was found in the Linux kernel's ext4 filesystem in the way it handled the extra inode size for extended attributes. This flaw could allow a privileged local user to cause a system crash or other undefined behaviors.\n\nCVE-2023-2163:\n\tbpf: incorrect verifier pruning due to missing register precision taints, which may lead to out-of-band read/write access due to an incorrect verifier conclusion.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "medium"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-2163"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-2513"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-31436"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALASKERNEL-5.10-2023-032.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2023-2163",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-2163"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-2513",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-2513"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-31436",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-31436"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "kernel",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2extra-kernel-5.10"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.10.179-166.674.amzn2"
+								}
+							],
+							"fixed": [
+								"0:5.10.179-166.674.amzn2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "kernel-headers",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2extra-kernel-5.10"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.10.179-166.674.amzn2"
+								}
+							],
+							"fixed": [
+								"0:5.10.179-166.674.amzn2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "python-perf",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2extra-kernel-5.10"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.10.179-166.674.amzn2"
+								}
+							],
+							"fixed": [
+								"0:5.10.179-166.674.amzn2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "kernel-tools",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2extra-kernel-5.10"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.10.179-166.674.amzn2"
+								}
+							],
+							"fixed": [
+								"0:5.10.179-166.674.amzn2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "kernel-tools-devel",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2extra-kernel-5.10"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.10.179-166.674.amzn2"
+								}
+							],
+							"fixed": [
+								"0:5.10.179-166.674.amzn2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "kernel-tools-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2extra-kernel-5.10"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.10.179-166.674.amzn2"
+								}
+							],
+							"fixed": [
+								"0:5.10.179-166.674.amzn2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "kernel-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2extra-kernel-5.10"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.10.179-166.674.amzn2"
+								}
+							],
+							"fixed": [
+								"0:5.10.179-166.674.amzn2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "kernel-livepatch-5.10.179-166.674",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2extra-kernel-5.10"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.0-0.amzn2"
+								}
+							],
+							"fixed": [
+								"0:1.0-0.amzn2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "bpftool",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2extra-kernel-5.10"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.10.179-166.674.amzn2"
+								}
+							],
+							"fixed": [
+								"0:5.10.179-166.674.amzn2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "kernel-debuginfo-common-aarch64",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2extra-kernel-5.10"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.10.179-166.674.amzn2"
+								}
+							],
+							"fixed": [
+								"0:5.10.179-166.674.amzn2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "python-perf-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2extra-kernel-5.10"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.10.179-166.674.amzn2"
+								}
+							],
+							"fixed": [
+								"0:5.10.179-166.674.amzn2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "kernel-devel",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2extra-kernel-5.10"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.10.179-166.674.amzn2"
+								}
+							],
+							"fixed": [
+								"0:5.10.179-166.674.amzn2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "kernel-debuginfo-common-x86_64",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-kernel-5.10"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.10.179-166.674.amzn2"
+								}
+							],
+							"fixed": [
+								"0:5.10.179-166.674.amzn2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "perf",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2extra-kernel-5.10"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.10.179-166.674.amzn2"
+								}
+							],
+							"fixed": [
+								"0:5.10.179-166.674.amzn2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "perf-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2extra-kernel-5.10"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.10.179-166.674.amzn2"
+								}
+							],
+							"fixed": [
+								"0:5.10.179-166.674.amzn2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "bpftool-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2extra-kernel-5.10"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.10.179-166.674.amzn2"
+								}
+							],
+							"fixed": [
+								"0:5.10.179-166.674.amzn2"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

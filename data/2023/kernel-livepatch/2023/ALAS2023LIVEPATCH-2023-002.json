@@ -1,0 +1,85 @@
+{
+	"id": "ALAS2023LIVEPATCH-2023-002",
+	"advisories": [
+		{
+			"id": "ALAS2023LIVEPATCH-2023-002",
+			"title": "Amazon Linux 2023 - Kernel Livepatch - ALAS2023LIVEPATCH-2023-002: important priority package update for kernel-livepatch-6.1.19-30.43",
+			"description": "Package updates are available for Amazon Linux 2023 - Kernel Livepatch that fix the following vulnerabilities:\nCVE-2023-28466:\n\tdo_tls_getsockopt in net/tls/tls_main.c in the Linux kernel through 6.2.6 lacks a lock_sock call, leading to a race condition (with a resultant use-after-free or NULL pointer dereference).\n\nCVE-2023-1611:\n\tA use-after-free flaw was found in btrfs_search_slot in fs/btrfs/ctree.c in btrfs in the Linux Kernel. This flaw allows an attacker to crash the system and possibly cause a kernel information lea\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "important"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-1611"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-28466"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2023/ALASLIVEPATCH-2023-002.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2023-1611",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-1611"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-28466",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-28466"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2023",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "kernel-livepatch-6.1.19-30.43",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"kernel-livepatch"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.0-1.amzn2023"
+								}
+							],
+							"fixed": [
+								"0:1.0-1.amzn2023"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

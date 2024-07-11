@@ -1,0 +1,259 @@
+{
+	"id": "ALAS2PYTHON3.8-2023-009",
+	"advisories": [
+		{
+			"id": "ALAS2PYTHON3.8-2023-009",
+			"title": "Amazon Linux 2 - Python3.8 2.0 - ALAS2PYTHON3.8-2023-009: medium priority package update for python38",
+			"description": "Package updates are available for Amazon Linux 2 - Python3.8 that fix the following vulnerabilities:\nCVE-2021-29921:\n\tA flaw was found in python-ipaddress. Improper input validation of octal strings in stdlib ipaddress allows unauthenticated remote attackers to perform indeterminate SSRF, RFI, and LFI attacks on many programs that rely on Python stdlib ipaddress. The highest threat from this vulnerability is to data integrity and system availability.\n\nCVE-2020-27619:\n\tIn Python3's Lib/test/multibytecodec_support.py CJK codec tests call eval() on content retrieved via HTTP.\n\nCVE-2015-0010:\n\tThe CryptProtectMemory function in cng.sys (aka the Cryptography Next Generation driver) in the kernel-mode drivers in Microsoft Windows Server 2003 SP2, Windows Vista SP2, Windows Server 2008 SP2 and R2 SP1, Windows 7 SP1, Windows 8, Windows 8.1, Windows Server 2012 Gold and R2, and Windows RT Gold and 8.1, when the CRYPTPROTECTMEMORY_SAME_LOGON option is used, does not check an impersonation token's level, which allows local users to bypass intended decryption restrictions by leveraging a service that (1) has a named-pipe planting vulnerability or (2) uses world-readable shared memory for encrypted data, aka \"CNG Security Feature Bypass Vulnerability\" or MSRC ID 20707.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "medium"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-0010"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-27619"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-29921"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALASPYTHON3.8-2023-009.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2015-0010",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-0010"
+				}
+			]
+		},
+		{
+			"id": "CVE-2020-27619",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-27619"
+				}
+			]
+		},
+		{
+			"id": "CVE-2021-29921",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-29921"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "python38-debug",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2extra-python3.8"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:3.8.5-1.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"0:3.8.5-1.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "python38-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2extra-python3.8"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:3.8.5-1.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"0:3.8.5-1.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "python38",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2extra-python3.8"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:3.8.5-1.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"0:3.8.5-1.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "python38-libs",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2extra-python3.8"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:3.8.5-1.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"0:3.8.5-1.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "python38-devel",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2extra-python3.8"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:3.8.5-1.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"0:3.8.5-1.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "python38-tools",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2extra-python3.8"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:3.8.5-1.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"0:3.8.5-1.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "python38-tkinter",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2extra-python3.8"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:3.8.5-1.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"0:3.8.5-1.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "python38-test",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2extra-python3.8"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:3.8.5-1.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"0:3.8.5-1.amzn2.0.3"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

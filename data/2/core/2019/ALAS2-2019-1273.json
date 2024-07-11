@@ -1,0 +1,304 @@
+{
+	"id": "ALAS2-2019-1273",
+	"advisories": [
+		{
+			"id": "ALAS2-2019-1273",
+			"title": "Amazon Linux 2 2017.12 - ALAS2-2019-1273: important priority package update for edk2",
+			"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2018-3630:\n\t1683653: \nCVE-2018-3630 ovmf: Logic error in FV parsing in MdeModulePkg\\Core\\Pei\\FwVol\\FwVol.c\n\nCVE-2018-3613:\n\tLogic issue in variable service module for EDK II/UDK2018/UDK2017/UDK2015 may allow an authenticated user to potentially enable escalation of privilege, information disclosure and/or denial of service via local access.\n1641433: \nCVE-2018-3613 edk2: Logic error in MdeModulePkg in EDK II firmware allows for privilege escalation by authenticated users\n\nCVE-2018-12181:\n\tA stack-based buffer overflow was discovered in edk2 when the HII database contains a Bitmap that claims to be 4-bit or 8-bit per pixel, but the palette contains more than 16(2^4) or 256(2^8) colors.\n1686783: \nCVE-2018-12181 edk2: Stack buffer overflow with corrupted BMP\n\nCVE-2018-12180:\n\tBuffer overflow in BlockIo service for EDK II may allow an unauthenticated user to potentially enable escalation of privilege, information disclosure and/or denial of service via network access.\n1683372: \nCVE-2018-12180 edk2: Buffer Overflow in BlockIo service for RAM disk\n\nCVE-2018-12178:\n\tA missing check leads to an out-of-bounds read and write flaw in NetworkPkg/DnsDxe as shipped in edk2, when it parses DNS responses. A remote attacker who controls the DNS server used by the vulnerable firmware may use this flaw to make the system crash.\n1683326: \nCVE-2018-12178 edk2: improper DNS packet size check\n\nCVE-2017-5735:\n\t1641465: \nCVE-2017-5735 edk2: Privilege escalation via heap-based buffer overflow in Decode() function\n\nCVE-2017-5734:\n\t1641458: \nCVE-2017-5734 edk2: Privilege escalation via stack-based buffer overflow in MakeTable() function\n\nCVE-2017-5733:\n\t1641450: \nCVE-2017-5733 edk2: Privilege escalation via heap-based buffer overflow in MakeTable() function\n\nCVE-2017-5732:\n\t1641446: \nCVE-2017-5732 edk2: Privilege escalation via processing of malformed files in BaseUefiDecompressLib.c\n\nCVE-2017-5731:\n\t1641442: \nCVE-2017-5731 edk2: Privilege escalation via processing of malformed files in TianoCompress.c\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "important"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5731"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5732"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5733"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5734"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5735"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-12178"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-12180"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-12181"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-3613"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-3630"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALAS-2019-1273.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2017-5731",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5731"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-5732",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5732"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-5733",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5733"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-5734",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5734"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-5735",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5735"
+				}
+			]
+		},
+		{
+			"id": "CVE-2018-12178",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-12178"
+				}
+			]
+		},
+		{
+			"id": "CVE-2018-12180",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-12180"
+				}
+			]
+		},
+		{
+			"id": "CVE-2018-12181",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-12181"
+				}
+			]
+		},
+		{
+			"id": "CVE-2018-3613",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-3613"
+				}
+			]
+		},
+		{
+			"id": "CVE-2018-3630",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-3630"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "edk2-aarch64",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:20190308stable-1.amzn2.0.1"
+								}
+							],
+							"fixed": [
+								"0:20190308stable-1.amzn2.0.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "edk2-debuginfo",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:20190308stable-1.amzn2.0.1"
+								}
+							],
+							"fixed": [
+								"0:20190308stable-1.amzn2.0.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "edk2-ovmf",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:20190308stable-1.amzn2.0.1"
+								}
+							],
+							"fixed": [
+								"0:20190308stable-1.amzn2.0.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "edk2-tools",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:20190308stable-1.amzn2.0.1"
+								}
+							],
+							"fixed": [
+								"0:20190308stable-1.amzn2.0.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "edk2-tools-python",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:20190308stable-1.amzn2.0.1"
+								}
+							],
+							"fixed": [
+								"0:20190308stable-1.amzn2.0.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "edk2-tools-doc",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:20190308stable-1.amzn2.0.1"
+								}
+							],
+							"fixed": [
+								"0:20190308stable-1.amzn2.0.1"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

@@ -1,0 +1,279 @@
+{
+	"id": "ALAS2023-2023-368",
+	"advisories": [
+		{
+			"id": "ALAS2023-2023-368",
+			"title": "Amazon Linux 2023 - ALAS2023-2023-368: Important priority package update for curl",
+			"description": "Package updates are available for Amazon Linux 2023 that fix the following vulnerabilities:\nCVE-2023-38039:\n\tHTTP headers eat all memory\n\nNOTE: https://www.openwall.com/lists/oss-security/2023/09/13/1\nNOTE: https://curl.se/docs/CVE-2023-38039.html\nNOTE: Introduced by: https://github.com/curl/curl/commit/7c8c723682d524ac9580b9ca3b71419163cb5660 (curl-7_83_0)\nNOTE: Experimental tag removed in: https://github.com/curl/curl/commit/4d94fac9f0d1dd02b8308291e4c47651142dc28b (curl-7_84_0)\nNOTE: Fixed by: https://github.com/curl/curl/commit/3ee79c1674fd6f99e8efca52cd7510e08b766770 (curl-8_3_0)\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "Important"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-38039"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2023/ALAS-2023-368.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2023-38039",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-38039"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2023",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libcurl",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:8.3.0-1.amzn2023.0.1"
+								}
+							],
+							"fixed": [
+								"0:8.3.0-1.amzn2023.0.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libcurl-devel",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:8.3.0-1.amzn2023.0.1"
+								}
+							],
+							"fixed": [
+								"0:8.3.0-1.amzn2023.0.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "curl-debugsource",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:8.3.0-1.amzn2023.0.1"
+								}
+							],
+							"fixed": [
+								"0:8.3.0-1.amzn2023.0.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libcurl-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:8.3.0-1.amzn2023.0.1"
+								}
+							],
+							"fixed": [
+								"0:8.3.0-1.amzn2023.0.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libcurl-minimal",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:8.3.0-1.amzn2023.0.1"
+								}
+							],
+							"fixed": [
+								"0:8.3.0-1.amzn2023.0.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "curl-minimal",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:8.3.0-1.amzn2023.0.1"
+								}
+							],
+							"fixed": [
+								"0:8.3.0-1.amzn2023.0.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "curl",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:8.3.0-1.amzn2023.0.1"
+								}
+							],
+							"fixed": [
+								"0:8.3.0-1.amzn2023.0.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libcurl-minimal-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:8.3.0-1.amzn2023.0.1"
+								}
+							],
+							"fixed": [
+								"0:8.3.0-1.amzn2023.0.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "curl-minimal-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:8.3.0-1.amzn2023.0.1"
+								}
+							],
+							"fixed": [
+								"0:8.3.0-1.amzn2023.0.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "curl-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:8.3.0-1.amzn2023.0.1"
+								}
+							],
+							"fixed": [
+								"0:8.3.0-1.amzn2023.0.1"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

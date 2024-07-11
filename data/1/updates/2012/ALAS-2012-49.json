@@ -1,0 +1,149 @@
+{
+	"id": "ALAS-2012-49",
+	"advisories": [
+		{
+			"id": "ALAS-2012-49",
+			"title": "Amazon Linux - ALAS-2012-49: important priority package update for libpng",
+			"description": "Package updates are available for Amazon Linux that fix the following vulnerabilities:\nCVE-2011-3026:\n\tInteger overflow in libpng, as used in Google Chrome before 17.0.963.56, allows remote attackers to cause a denial of service or possibly have unspecified other impact via unknown vectors that trigger an integer truncation.\nA heap-based buffer overflow flaw was found in the way XULRunner handled PNG (Portable Network Graphics) images. A web page containing a malicious PNG image could cause an application linked against XULRunner (such as Firefox) to crash or, potentially, execute arbitrary code with the privileges of the user running the application.\nA heap-based buffer overflow flaw was found in the way Thunderbird handled PNG (Portable Network Graphics) images. An HTML mail message or remote content containing a specially-crafted PNG image could cause Thunderbird to crash or, possibly, execute arbitrary code with the privileges of the user running Thunderbird.\nA heap-based buffer overflow flaw was found in libpng. An attacker could create a specially-crafted PNG image that, when opened, could cause an application using libpng to crash or, possibly, execute arbitrary code with the privileges of the user running the application.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "important"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-3026"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/ALAS-2012-49.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://rhn.redhat.com/errata/RHSA-2012:0317.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2011-3026",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-3026"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:1",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libpng-static",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "2:1.2.46-2.10.amzn1"
+								}
+							],
+							"fixed": [
+								"2:1.2.46-2.10.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libpng-debuginfo",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "2:1.2.46-2.10.amzn1"
+								}
+							],
+							"fixed": [
+								"2:1.2.46-2.10.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libpng",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "2:1.2.46-2.10.amzn1"
+								}
+							],
+							"fixed": [
+								"2:1.2.46-2.10.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libpng-devel",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "2:1.2.46-2.10.amzn1"
+								}
+							],
+							"fixed": [
+								"2:1.2.46-2.10.amzn1"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

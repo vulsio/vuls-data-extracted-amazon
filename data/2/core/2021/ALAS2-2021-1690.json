@@ -1,0 +1,141 @@
+{
+	"id": "ALAS2-2021-1690",
+	"advisories": [
+		{
+			"id": "ALAS2-2021-1690",
+			"title": "Amazon Linux 2 2017.12 - ALAS2-2021-1690: important priority package update for velocity",
+			"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2020-13936:\n\tA flaw was found in velocity. An attacker, able to modify Velocity templates, may execute arbitrary Java code or run arbitrary system commands with the same privileges as the account running the Servlet container. The highest threat from this vulnerability is to data confidentiality and integrity as well as system availability.\n1937440: CVE-2020-13936 velocity: arbitrary code execution when attacker is able to modify templates\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "important"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-13936"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALAS-2021-1690.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2020-13936",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-13936"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "velocity-demo",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.7-10.2.amzn2"
+								}
+							],
+							"fixed": [
+								"0:1.7-10.2.amzn2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "velocity",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.7-10.2.amzn2"
+								}
+							],
+							"fixed": [
+								"0:1.7-10.2.amzn2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "velocity-manual",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.7-10.2.amzn2"
+								}
+							],
+							"fixed": [
+								"0:1.7-10.2.amzn2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "velocity-javadoc",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.7-10.2.amzn2"
+								}
+							],
+							"fixed": [
+								"0:1.7-10.2.amzn2"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

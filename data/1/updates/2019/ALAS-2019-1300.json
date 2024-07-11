@@ -1,0 +1,110 @@
+{
+	"id": "ALAS-2019-1300",
+	"advisories": [
+		{
+			"id": "ALAS-2019-1300",
+			"title": "Amazon Linux AMI 2014.03 - ALAS-2019-1300: medium priority package update for mod24_auth_openidc",
+			"description": "Package updates are available for Amazon Linux AMI that fix the following vulnerabilities:\nCVE-2017-6413:\n\tIt was found that mod_auth_openidc did not properly sanitize HTTP headers for certain request paths. A remote attacker could potentially use this flaw to bypass authentication and access sensitive information by sending crafted HTTP requests.\n1428855: \nCVE-2017-6413 mod_auth_openidc: OIDC_CLAIM and OIDCAuthNHeader not skipped in an \"AuthType oauth20\" configuration\n\nCVE-2017-6059:\n\tA text injection flaw was found in how mod_auth_openidc handled error pages. An attacker could potentially use this flaw to conduct content spoofing and phishing attacks by tricking users into opening specially crafted URLs.\n1425350: \nCVE-2017-6059 mod_auth_openidc: Shows user-supplied content on error pages\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "medium"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-6059"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-6413"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/ALAS-2019-1300.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2017-6059",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-6059"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-6413",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-6413"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:1",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mod24_auth_openidc",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.8.8-5.5.amzn1"
+								}
+							],
+							"fixed": [
+								"0:1.8.8-5.5.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mod24_auth_openidc-debuginfo",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.8.8-5.5.amzn1"
+								}
+							],
+							"fixed": [
+								"0:1.8.8-5.5.amzn1"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

@@ -1,0 +1,752 @@
+{
+	"id": "ALAS2022-2022-138",
+	"advisories": [
+		{
+			"id": "ALAS2022-2022-138",
+			"title": "Amazon Linux 2022 - ALAS2022-2022-138: Medium priority package update for bind",
+			"description": "Package updates are available for Amazon Linux 2022 that fix the following vulnerabilities:\nCVE-2022-0396:\n\tA flaw was found in Bind that incorrectly handles certain crafted TCP streams. The vulnerability allows TCP connection slots to be consumed for an indefinite time frame via a specifically crafted TCP stream sent from a client. This flaw allows a remote attacker to send specially crafted TCP streams with keep-response-order enabled that could cause connections to BIND to remain in CLOSE_WAIT status for an indefinite period, even after the client has terminated the connection. This issue results in BIND consuming resources, leading to a denial of service.\n\nCVE-2021-25220:\n\tA cache poisoning vulnerability was found in BIND when using forwarders. Bogus NS records supplied by the forwarders may be cached and used by name if it needs to recurse for any reason. This issue causes it to obtain and pass on potentially incorrect answers. This flaw allows a remote attacker to manipulate cache results with incorrect records, leading to queries made to the wrong servers, possibly resulting in false information received on the client's end.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "Medium"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-25220"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-0396"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2022/ALAS-2022-138.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2021-25220",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-25220"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-0396",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-0396"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2022",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "bind-libs-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "32:9.16.27-1.amzn2022"
+								}
+							],
+							"fixed": [
+								"32:9.16.27-1.amzn2022"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "bind-license",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "32:9.16.27-1.amzn2022"
+								}
+							],
+							"fixed": [
+								"32:9.16.27-1.amzn2022"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "bind-dlz-filesystem-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "32:9.16.27-1.amzn2022"
+								}
+							],
+							"fixed": [
+								"32:9.16.27-1.amzn2022"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "bind-utils-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "32:9.16.27-1.amzn2022"
+								}
+							],
+							"fixed": [
+								"32:9.16.27-1.amzn2022"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "bind-libs",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "32:9.16.27-1.amzn2022"
+								}
+							],
+							"fixed": [
+								"32:9.16.27-1.amzn2022"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "bind-debugsource",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "32:9.16.27-1.amzn2022"
+								}
+							],
+							"fixed": [
+								"32:9.16.27-1.amzn2022"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "bind-pkcs11-libs",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "32:9.16.27-1.amzn2022"
+								}
+							],
+							"fixed": [
+								"32:9.16.27-1.amzn2022"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "bind-pkcs11-utils",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "32:9.16.27-1.amzn2022"
+								}
+							],
+							"fixed": [
+								"32:9.16.27-1.amzn2022"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "bind-doc",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "32:9.16.27-1.amzn2022"
+								}
+							],
+							"fixed": [
+								"32:9.16.27-1.amzn2022"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "bind-dlz-mysql",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "32:9.16.27-1.amzn2022"
+								}
+							],
+							"fixed": [
+								"32:9.16.27-1.amzn2022"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "bind-dlz-sqlite3",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "32:9.16.27-1.amzn2022"
+								}
+							],
+							"fixed": [
+								"32:9.16.27-1.amzn2022"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "bind-dlz-ldap",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "32:9.16.27-1.amzn2022"
+								}
+							],
+							"fixed": [
+								"32:9.16.27-1.amzn2022"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "bind-dlz-filesystem",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "32:9.16.27-1.amzn2022"
+								}
+							],
+							"fixed": [
+								"32:9.16.27-1.amzn2022"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "bind-pkcs11-libs-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "32:9.16.27-1.amzn2022"
+								}
+							],
+							"fixed": [
+								"32:9.16.27-1.amzn2022"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "bind-dlz-mysql-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "32:9.16.27-1.amzn2022"
+								}
+							],
+							"fixed": [
+								"32:9.16.27-1.amzn2022"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "bind-dnssec-doc",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "32:9.16.27-1.amzn2022"
+								}
+							],
+							"fixed": [
+								"32:9.16.27-1.amzn2022"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "bind-pkcs11-devel",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "32:9.16.27-1.amzn2022"
+								}
+							],
+							"fixed": [
+								"32:9.16.27-1.amzn2022"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "bind-dnssec-utils-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "32:9.16.27-1.amzn2022"
+								}
+							],
+							"fixed": [
+								"32:9.16.27-1.amzn2022"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "bind-dlz-ldap-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "32:9.16.27-1.amzn2022"
+								}
+							],
+							"fixed": [
+								"32:9.16.27-1.amzn2022"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "bind-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "32:9.16.27-1.amzn2022"
+								}
+							],
+							"fixed": [
+								"32:9.16.27-1.amzn2022"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "bind-dlz-sqlite3-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "32:9.16.27-1.amzn2022"
+								}
+							],
+							"fixed": [
+								"32:9.16.27-1.amzn2022"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "bind-chroot",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "32:9.16.27-1.amzn2022"
+								}
+							],
+							"fixed": [
+								"32:9.16.27-1.amzn2022"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "bind-pkcs11",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "32:9.16.27-1.amzn2022"
+								}
+							],
+							"fixed": [
+								"32:9.16.27-1.amzn2022"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "bind-pkcs11-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "32:9.16.27-1.amzn2022"
+								}
+							],
+							"fixed": [
+								"32:9.16.27-1.amzn2022"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "bind-utils",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "32:9.16.27-1.amzn2022"
+								}
+							],
+							"fixed": [
+								"32:9.16.27-1.amzn2022"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "bind",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "32:9.16.27-1.amzn2022"
+								}
+							],
+							"fixed": [
+								"32:9.16.27-1.amzn2022"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "bind-dnssec-utils",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "32:9.16.27-1.amzn2022"
+								}
+							],
+							"fixed": [
+								"32:9.16.27-1.amzn2022"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "bind-devel",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "32:9.16.27-1.amzn2022"
+								}
+							],
+							"fixed": [
+								"32:9.16.27-1.amzn2022"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "bind-pkcs11-utils-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "32:9.16.27-1.amzn2022"
+								}
+							],
+							"fixed": [
+								"32:9.16.27-1.amzn2022"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "python3-bind",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "32:9.16.27-1.amzn2022"
+								}
+							],
+							"fixed": [
+								"32:9.16.27-1.amzn2022"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

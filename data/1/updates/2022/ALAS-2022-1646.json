@@ -1,0 +1,236 @@
+{
+	"id": "ALAS-2022-1646",
+	"advisories": [
+		{
+			"id": "ALAS-2022-1646",
+			"title": "Amazon Linux AMI 2014.03 - ALAS-2022-1646: medium priority package update for curl",
+			"description": "Package updates are available for Amazon Linux AMI that fix the following vulnerabilities:\nCVE-2022-35252:\n\tA vulnerability found in curl. This security flaw happens when curl is used to retrieve and parse cookies from an HTTP(S) server, where it accepts cookies using control codes (byte values below 32), and also when cookies that contain such control codes are later sent back to an HTTP(S) server, possibly causing the server to return a 400 response. This issue effectively allows a \"sister site\" to deny service to siblings and cause a denial of service attack.\n\nCVE-2022-32208:\n\tA vulnerability was found in curl. This issue occurs because it mishandles message verification failures when curl does FTP transfers secured by krb5. This flaw makes it possible for a Man-in-the-middle attack to go unnoticed and allows data injection into the client.\n\nCVE-2022-32206:\n\tA vulnerability was found in curl. This issue occurs because the number of acceptable \"links\" in the \"decompression chain\" was unbounded, allowing a malicious server to insert a virtually unlimited number of compression steps. This flaw leads to a denial of service, either by mistake or by a malicious actor.\n\nCVE-2022-27782:\n\tA vulnerability was found in curl. This issue occurs because curl can reuse a previously created connection even when a TLS or SSH-related option is changed that should have prohibited reuse. This flaw leads to an authentication bypass, either by mistake or by a malicious actor.\n\nCVE-2022-27781:\n\tA vulnerability was found in curl. This issue occurs due to an erroneous function. A malicious server could make curl within Network Security Services (NSS) get stuck in a never-ending busy loop when trying to retrieve that information. This flaw allows an Infinite Loop, affecting system availability.\n\nCVE-2022-27776:\n\tA vulnerability was found in curl. This security flaw allows leak authentication or cookie header data on HTTP redirects to the same host but another port number. Sending the same set of headers to a server on a different port number is a problem for applications that pass on custom `Authorization:` or `Cookie:`headers. Those headers often contain privacy-sensitive information or data.\n\nCVE-2022-27774:\n\tA vulnerability was found in curl. This security flaw allows leaking credentials to other servers when it follows redirects from auth-protected HTTP(S) URLs to other protocols and port numbers.\n\nCVE-2022-22576:\n\tA vulnerability was found in curl. This security flaw allows reusing OAUTH2-authenticated connections without properly ensuring that the connection was authenticated with the same credentials set for this transfer. This issue leads to an authentication bypass, either by mistake or by a malicious actor.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "medium"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-22576"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-27774"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-27776"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-27781"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-27782"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-32206"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-32208"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-35252"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/ALAS-2022-1646.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2022-22576",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-22576"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-27774",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-27774"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-27776",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-27776"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-27781",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-27781"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-27782",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-27782"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-32206",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-32206"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-32208",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-32208"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-35252",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-35252"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:1",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libcurl",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:7.61.1-12.101.amzn1"
+								}
+							],
+							"fixed": [
+								"0:7.61.1-12.101.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "curl-debuginfo",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:7.61.1-12.101.amzn1"
+								}
+							],
+							"fixed": [
+								"0:7.61.1-12.101.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "curl",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:7.61.1-12.101.amzn1"
+								}
+							],
+							"fixed": [
+								"0:7.61.1-12.101.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libcurl-devel",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:7.61.1-12.101.amzn1"
+								}
+							],
+							"fixed": [
+								"0:7.61.1-12.101.amzn1"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

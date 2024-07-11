@@ -1,0 +1,97 @@
+{
+	"id": "ALAS-2012-69",
+	"advisories": [
+		{
+			"id": "ALAS-2012-69",
+			"title": "Amazon Linux - ALAS-2012-69: low priority package update for perl-YAML-LibYAML",
+			"description": "Package updates are available for Amazon Linux that fix the following vulnerabilities:\nCVE-2012-1152:\n\tMultiple format string vulnerabilities in the error reporting functionality in the YAML::LibYAML (aka YAML-LibYAML and perl-YAML-LibYAML) module 0.38 for Perl allow remote attackers to cause a denial of service (process crash) via format string specifiers in a (1) YAML stream to the Load function, (2) YAML node to the load_node function, (3) YAML mapping to the load_mapping function, or (4) YAML sequence to the load_sequence function.\n801738: \nCVE-2012-1152 perl-YAML-LibYAML: Multiple format string flaws by reporting errors during YAML document load\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "low"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-1152"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/ALAS-2012-69.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2012-1152",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-1152"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:1",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "perl-YAML-LibYAML-debuginfo",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:0.38-2.2.amzn1"
+								}
+							],
+							"fixed": [
+								"0:0.38-2.2.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "perl-YAML-LibYAML",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:0.38-2.2.amzn1"
+								}
+							],
+							"fixed": [
+								"0:0.38-2.2.amzn1"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

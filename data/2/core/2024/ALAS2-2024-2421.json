@@ -1,0 +1,325 @@
+{
+	"id": "ALAS2-2024-2421",
+	"advisories": [
+		{
+			"id": "ALAS2-2024-2421",
+			"title": "Amazon Linux 2 2017.12 - ALAS2-2024-2421: medium priority package update for qt5-qtbase",
+			"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2023-51714:\n\tAn issue was discovered in the HTTP2 implementation in Qt before 5.15.17, 6.x before 6.2.11, 6.3.x through 6.5.x before 6.5.4, and 6.6.x before 6.6.2. network/access/http2/hpacktable.cpp has an incorrect HPack integer overflow check.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "medium"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-51714"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALAS-2024-2421.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2023-51714",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-51714"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "qt5-qtbase-examples",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.9.2-3.amzn2.0.13"
+								}
+							],
+							"fixed": [
+								"0:5.9.2-3.amzn2.0.13"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "qt5-qtbase-static",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.9.2-3.amzn2.0.13"
+								}
+							],
+							"fixed": [
+								"0:5.9.2-3.amzn2.0.13"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "qt5-qtbase-mysql",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.9.2-3.amzn2.0.13"
+								}
+							],
+							"fixed": [
+								"0:5.9.2-3.amzn2.0.13"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "qt5-qtbase-odbc",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.9.2-3.amzn2.0.13"
+								}
+							],
+							"fixed": [
+								"0:5.9.2-3.amzn2.0.13"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "qt5-rpm-macros",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.9.2-3.amzn2.0.13"
+								}
+							],
+							"fixed": [
+								"0:5.9.2-3.amzn2.0.13"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "qt5-qtbase-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.9.2-3.amzn2.0.13"
+								}
+							],
+							"fixed": [
+								"0:5.9.2-3.amzn2.0.13"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "qt5-qtbase-common",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.9.2-3.amzn2.0.13"
+								}
+							],
+							"fixed": [
+								"0:5.9.2-3.amzn2.0.13"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "qt5-qtbase-devel",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.9.2-3.amzn2.0.13"
+								}
+							],
+							"fixed": [
+								"0:5.9.2-3.amzn2.0.13"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "qt5-qtbase-doc",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.9.2-3.amzn2.0.13"
+								}
+							],
+							"fixed": [
+								"0:5.9.2-3.amzn2.0.13"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "qt5-qtbase-postgresql",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.9.2-3.amzn2.0.13"
+								}
+							],
+							"fixed": [
+								"0:5.9.2-3.amzn2.0.13"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "qt5-qtbase-gui",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.9.2-3.amzn2.0.13"
+								}
+							],
+							"fixed": [
+								"0:5.9.2-3.amzn2.0.13"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "qt5-qtbase",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.9.2-3.amzn2.0.13"
+								}
+							],
+							"fixed": [
+								"0:5.9.2-3.amzn2.0.13"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

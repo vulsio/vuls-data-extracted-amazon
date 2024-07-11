@@ -1,0 +1,118 @@
+{
+	"id": "ALAS2NITRO-ENCLAVES-2023-028",
+	"advisories": [
+		{
+			"id": "ALAS2NITRO-ENCLAVES-2023-028",
+			"title": "Amazon Linux 2 - Nitro-enclaves 2.0 - ALAS2NITRO-ENCLAVES-2023-028: medium priority package update for containerd",
+			"description": "Package updates are available for Amazon Linux 2 - Nitro-enclaves that fix the following vulnerabilities:\nCVE-2023-29409:\n\tExtremely large RSA keys in certificate chains can cause a client/server to expend significant CPU time verifying signatures. With fix, the size of RSA keys transmitted during handshakes is restricted to <= 8192 bits. Based on a survey of publicly trusted RSA keys, there are currently only three certificates in circulation with keys larger than this, and all three appear to be test certificates that are not actively deployed. It is possible there are larger keys in use in private PKIs, but we target the web PKI, so causing breakage here in the interests of increasing the default safety of users of crypto/tls seems reasonable.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "medium"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-29409"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALASNITRO-ENCLAVES-2023-028.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2023-29409",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-29409"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "containerd",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2extra-nitro-enclaves"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.6.19-1.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"0:1.6.19-1.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "containerd-stress",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2extra-nitro-enclaves"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.6.19-1.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"0:1.6.19-1.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "containerd-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2extra-nitro-enclaves"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.6.19-1.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"0:1.6.19-1.amzn2.0.3"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

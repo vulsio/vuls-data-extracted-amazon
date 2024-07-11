@@ -1,0 +1,624 @@
+{
+	"id": "ALAS2-2024-2520",
+	"advisories": [
+		{
+			"id": "ALAS2-2024-2520",
+			"title": "Amazon Linux 2 2017.12 - ALAS2-2024-2520: important priority package update for php",
+			"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2017-9227:\n\tAn issue was discovered in Oniguruma 6.2.0, as used in Oniguruma-mod in Ruby through 2.4.1 and mbstring in PHP through 7.1.5. A stack out-of-bounds read occurs in mbc_enc_len() during regular expression searching. Invalid handling of reg->dmin in forward_search_range() could result in an invalid pointer dereference, as an out-of-bounds read from a stack buffer.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "important"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-9227"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALAS-2024-2520.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2017-9227",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-9227"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php-odbc",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.4.16-46.amzn2.0.5"
+								}
+							],
+							"fixed": [
+								"0:5.4.16-46.amzn2.0.5"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php-pspell",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.4.16-46.amzn2.0.5"
+								}
+							],
+							"fixed": [
+								"0:5.4.16-46.amzn2.0.5"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php-common",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.4.16-46.amzn2.0.5"
+								}
+							],
+							"fixed": [
+								"0:5.4.16-46.amzn2.0.5"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php-devel",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.4.16-46.amzn2.0.5"
+								}
+							],
+							"fixed": [
+								"0:5.4.16-46.amzn2.0.5"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php-ldap",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.4.16-46.amzn2.0.5"
+								}
+							],
+							"fixed": [
+								"0:5.4.16-46.amzn2.0.5"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php-pgsql",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.4.16-46.amzn2.0.5"
+								}
+							],
+							"fixed": [
+								"0:5.4.16-46.amzn2.0.5"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php-intl",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.4.16-46.amzn2.0.5"
+								}
+							],
+							"fixed": [
+								"0:5.4.16-46.amzn2.0.5"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php-enchant",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.4.16-46.amzn2.0.5"
+								}
+							],
+							"fixed": [
+								"0:5.4.16-46.amzn2.0.5"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.4.16-46.amzn2.0.5"
+								}
+							],
+							"fixed": [
+								"0:5.4.16-46.amzn2.0.5"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php-pdo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.4.16-46.amzn2.0.5"
+								}
+							],
+							"fixed": [
+								"0:5.4.16-46.amzn2.0.5"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php-mysqlnd",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.4.16-46.amzn2.0.5"
+								}
+							],
+							"fixed": [
+								"0:5.4.16-46.amzn2.0.5"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php-soap",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.4.16-46.amzn2.0.5"
+								}
+							],
+							"fixed": [
+								"0:5.4.16-46.amzn2.0.5"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php-bcmath",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.4.16-46.amzn2.0.5"
+								}
+							],
+							"fixed": [
+								"0:5.4.16-46.amzn2.0.5"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php-gd",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.4.16-46.amzn2.0.5"
+								}
+							],
+							"fixed": [
+								"0:5.4.16-46.amzn2.0.5"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php-dba",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.4.16-46.amzn2.0.5"
+								}
+							],
+							"fixed": [
+								"0:5.4.16-46.amzn2.0.5"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php-recode",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.4.16-46.amzn2.0.5"
+								}
+							],
+							"fixed": [
+								"0:5.4.16-46.amzn2.0.5"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php-fpm",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.4.16-46.amzn2.0.5"
+								}
+							],
+							"fixed": [
+								"0:5.4.16-46.amzn2.0.5"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php-xml",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.4.16-46.amzn2.0.5"
+								}
+							],
+							"fixed": [
+								"0:5.4.16-46.amzn2.0.5"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php-xmlrpc",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.4.16-46.amzn2.0.5"
+								}
+							],
+							"fixed": [
+								"0:5.4.16-46.amzn2.0.5"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php-mbstring",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.4.16-46.amzn2.0.5"
+								}
+							],
+							"fixed": [
+								"0:5.4.16-46.amzn2.0.5"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php-embedded",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.4.16-46.amzn2.0.5"
+								}
+							],
+							"fixed": [
+								"0:5.4.16-46.amzn2.0.5"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.4.16-46.amzn2.0.5"
+								}
+							],
+							"fixed": [
+								"0:5.4.16-46.amzn2.0.5"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php-cli",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.4.16-46.amzn2.0.5"
+								}
+							],
+							"fixed": [
+								"0:5.4.16-46.amzn2.0.5"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php-process",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.4.16-46.amzn2.0.5"
+								}
+							],
+							"fixed": [
+								"0:5.4.16-46.amzn2.0.5"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "php-snmp",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.4.16-46.amzn2.0.5"
+								}
+							],
+							"fixed": [
+								"0:5.4.16-46.amzn2.0.5"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

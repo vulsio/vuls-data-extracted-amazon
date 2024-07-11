@@ -1,0 +1,439 @@
+{
+	"id": "ALAS2KERNEL-5.4-2022-012",
+	"advisories": [
+		{
+			"id": "ALAS2KERNEL-5.4-2022-012",
+			"title": "Amazon Linux 2 - Kernel-5.4 2.0 - ALAS2KERNEL-5.4-2022-012: important priority package update for kernel",
+			"description": "Package updates are available for Amazon Linux 2 - Kernel-5.4 that fix the following vulnerabilities:\nCVE-2020-13143:\n\tgadget_dev_desc_UDC_store in drivers/usb/gadget/configfs.c in the Linux kernel 3.16 through 5.6.13 relies on kstrdup without considering the possibility of an internal 0 value, which allows attackers to trigger an out-of-bounds read, aka CID-15753588bcd4.\n\nCVE-2020-12770:\n\tA vulnerability was found in sg_write in drivers/scsi/sg.c in the SCSI generic (sg) driver subsystem. This flaw allows an attacker with local access and special user or root privileges to cause a denial of service if the allocated list is not cleaned with an invalid (Sg_fd * sfp) pointer at the time of failure, also possibly causing a kernel internal information leak problem.\n\nCVE-2020-12768:\n\tA flaw was found in the Linux kernel. A memory leak in svm_cpu_init() is possible leading to a system crash.  The highest threat from this vulnerability is to system availability.\n\nCVE-2020-10757:\n\tA flaw was found in the way mremap handled DAX Huge Pages. This flaw allows a local attacker with access to a DAX enabled storage to escalate their privileges on the system.\n\nCVE-2020-10751:\n\tA flaw was found in the Linux kernel's SELinux LSM hook implementation, where it anticipated the skb would only contain a single Netlink message. The hook incorrectly validated the first Netlink message in the skb only, to allow or deny the rest of the messages within the skb with the granted permissions and without further processing. At this time, there is no known ability for an attacker to abuse this flaw.\n\nCVE-2020-10732:\n\tA flaw was found in the Linux kernel's implementation of Userspace core dumps. This flaw allows an attacker with a local account to crash a trivial program and exfiltrate private kernel data.\n\nCVE-2020-0543:\n\tA new domain bypass transient execution attack known as Special Register Buffer Data Sampling (SRBDS) has been found. This flaw allows data values from special internal registers to be leaked by an attacker able to execute code on any core of the CPU. An unprivileged, local attacker can use this flaw to infer values returned by affected instructions known to be commonly used during cryptographic operations that rely on uniqueness, secrecy, or both.\n\nCVE-2019-19462:\n\tA NULL pointer dereference flaw may occur in the Linux kernel's relay_open in kernel/relay.c. if the alloc_percpu() function is not validated in time of failure and used as a valid address for access. An attacker could use this flaw to cause a denial of service.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "important"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-19462"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-0543"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-10732"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-10751"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-10757"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-12768"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-12770"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-13143"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALASKERNEL-5.4-2022-012.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2019-19462",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-19462"
+				}
+			]
+		},
+		{
+			"id": "CVE-2020-0543",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-0543"
+				}
+			]
+		},
+		{
+			"id": "CVE-2020-10732",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-10732"
+				}
+			]
+		},
+		{
+			"id": "CVE-2020-10751",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-10751"
+				}
+			]
+		},
+		{
+			"id": "CVE-2020-10757",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-10757"
+				}
+			]
+		},
+		{
+			"id": "CVE-2020-12768",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-12768"
+				}
+			]
+		},
+		{
+			"id": "CVE-2020-12770",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-12770"
+				}
+			]
+		},
+		{
+			"id": "CVE-2020-13143",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-13143"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "kernel-tools-devel",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-kernel-5.4"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.4.46-19.75.amzn2"
+								}
+							],
+							"fixed": [
+								"0:5.4.46-19.75.amzn2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "kernel-tools-debuginfo",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-kernel-5.4"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.4.46-19.75.amzn2"
+								}
+							],
+							"fixed": [
+								"0:5.4.46-19.75.amzn2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "kernel-debuginfo",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-kernel-5.4"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.4.46-19.75.amzn2"
+								}
+							],
+							"fixed": [
+								"0:5.4.46-19.75.amzn2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "perf",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-kernel-5.4"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.4.46-19.75.amzn2"
+								}
+							],
+							"fixed": [
+								"0:5.4.46-19.75.amzn2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "perf-debuginfo",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-kernel-5.4"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.4.46-19.75.amzn2"
+								}
+							],
+							"fixed": [
+								"0:5.4.46-19.75.amzn2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "kernel-debuginfo-common-aarch64",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2extra-kernel-5.4"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.4.46-19.75.amzn2"
+								}
+							],
+							"fixed": [
+								"0:5.4.46-19.75.amzn2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "python-perf",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-kernel-5.4"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.4.46-19.75.amzn2"
+								}
+							],
+							"fixed": [
+								"0:5.4.46-19.75.amzn2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "python-perf-debuginfo",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-kernel-5.4"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.4.46-19.75.amzn2"
+								}
+							],
+							"fixed": [
+								"0:5.4.46-19.75.amzn2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "kernel-tools",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-kernel-5.4"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.4.46-19.75.amzn2"
+								}
+							],
+							"fixed": [
+								"0:5.4.46-19.75.amzn2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "kernel-devel",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-kernel-5.4"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.4.46-19.75.amzn2"
+								}
+							],
+							"fixed": [
+								"0:5.4.46-19.75.amzn2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "kernel-debuginfo-common-x86_64",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-kernel-5.4"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.4.46-19.75.amzn2"
+								}
+							],
+							"fixed": [
+								"0:5.4.46-19.75.amzn2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "kernel",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-kernel-5.4"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.4.46-19.75.amzn2"
+								}
+							],
+							"fixed": [
+								"0:5.4.46-19.75.amzn2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "kernel-headers",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2extra-kernel-5.4"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.4.46-19.75.amzn2"
+								}
+							],
+							"fixed": [
+								"0:5.4.46-19.75.amzn2"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

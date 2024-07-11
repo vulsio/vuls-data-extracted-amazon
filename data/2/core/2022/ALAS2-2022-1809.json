@@ -1,0 +1,219 @@
+{
+	"id": "ALAS2-2022-1809",
+	"advisories": [
+		{
+			"id": "ALAS2-2022-1809",
+			"title": "Amazon Linux 2 2017.12 - ALAS2-2022-1809: medium priority package update for expat",
+			"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2022-22827:\n\tstoreAtts in xmlparse.c in Expat (aka libexpat) before 2.4.3 has an integer overflow.\n\nCVE-2022-22826:\n\tnextScaffoldPart in xmlparse.c in Expat (aka libexpat) before 2.4.3 has an integer overflow.\n\nCVE-2022-22825:\n\tlookup in xmlparse.c in Expat (aka libexpat) before 2.4.3 has an integer overflow.\n\nCVE-2022-22824:\n\tdefineAttribute in xmlparse.c in Expat (aka libexpat) before 2.4.3 has an integer overflow.\n\nCVE-2022-22823:\n\tbuild_model in xmlparse.c in Expat (aka libexpat) before 2.4.3 has an integer overflow.\n\nCVE-2022-22822:\n\taddBinding in xmlparse.c in Expat (aka libexpat) before 2.4.3 has an integer overflow.\n\nCVE-2021-46143:\n\tIn doProlog in xmlparse.c in Expat (aka libexpat) before 2.4.3, an integer overflow exists for m_groupSize.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "medium"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-46143"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-22822"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-22823"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-22824"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-22825"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-22826"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-22827"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALAS-2022-1809.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2021-46143",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-46143"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-22822",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-22822"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-22823",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-22823"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-22824",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-22824"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-22825",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-22825"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-22826",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-22826"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-22827",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-22827"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "expat",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.1.0-14.amzn2.0.1"
+								}
+							],
+							"fixed": [
+								"0:2.1.0-14.amzn2.0.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "expat-devel",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.1.0-14.amzn2.0.1"
+								}
+							],
+							"fixed": [
+								"0:2.1.0-14.amzn2.0.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "expat-static",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.1.0-14.amzn2.0.1"
+								}
+							],
+							"fixed": [
+								"0:2.1.0-14.amzn2.0.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "expat-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.1.0-14.amzn2.0.1"
+								}
+							],
+							"fixed": [
+								"0:2.1.0-14.amzn2.0.1"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

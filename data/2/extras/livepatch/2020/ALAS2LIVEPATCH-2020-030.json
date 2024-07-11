@@ -1,0 +1,95 @@
+{
+	"id": "ALAS2LIVEPATCH-2020-030",
+	"advisories": [
+		{
+			"id": "ALAS2LIVEPATCH-2020-030",
+			"title": "Amazon Linux 2 - Livepatch 2.0 - ALAS2LIVEPATCH-2020-030: medium priority package update for kernel-livepatch-4.14.198-152.320",
+			"description": "Package updates are available for Amazon Linux 2 - Livepatch that fix the following vulnerabilities:\nCVE-2020-25284:\n\tA flaw was found in the capabilities check of the rados block device functionality in the Linux kernel. Incorrect capability checks could alllow a local user with root priviledges (but no capabilities) to add or remove Rados Block Devices from the system.\n1882594: CVE-2020-25284 kernel: incomplete permission checking for access to rbd devices\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "medium"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-25284"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALASLIVEPATCH-2020-030.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2020-25284",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-25284"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "kernel-livepatch-4.14.198-152.320",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-livepatch"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.0-2.amzn2"
+								}
+							],
+							"fixed": [
+								"0:1.0-2.amzn2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "kernel-livepatch-4.14.198-152.320-debuginfo",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-livepatch"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.0-2.amzn2"
+								}
+							],
+							"fixed": [
+								"0:1.0-2.amzn2"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

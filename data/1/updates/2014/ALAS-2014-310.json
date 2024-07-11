@@ -1,0 +1,101 @@
+{
+	"id": "ALAS-2014-310",
+	"advisories": [
+		{
+			"id": "ALAS-2014-310",
+			"title": "Amazon Linux AMI 2012.09 - ALAS-2014-310: important priority package update for mutt",
+			"description": "Package updates are available for Amazon Linux AMI that fix the following vulnerabilities:\nCVE-2014-0467:\n\tA heap-based buffer overflow flaw was found in the way mutt processed certain email headers. A remote attacker could use this flaw to send an email with specially crafted headers that, when processed, could cause mutt to crash or, potentially, execute arbitrary code with the permissions of the user running mutt.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "important"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0467"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/ALAS-2014-310.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://rhn.redhat.com/errata/RHSA-2014:0304.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2014-0467",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0467"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:1",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mutt-debuginfo",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "5:1.5.20-4.20091214hg736b6a.7.amzn1"
+								}
+							],
+							"fixed": [
+								"5:1.5.20-4.20091214hg736b6a.7.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mutt",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "5:1.5.20-4.20091214hg736b6a.7.amzn1"
+								}
+							],
+							"fixed": [
+								"5:1.5.20-4.20091214hg736b6a.7.amzn1"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

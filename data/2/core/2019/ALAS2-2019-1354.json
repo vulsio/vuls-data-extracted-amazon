@@ -1,0 +1,131 @@
+{
+	"id": "ALAS2-2019-1354",
+	"advisories": [
+		{
+			"id": "ALAS2-2019-1354",
+			"title": "Amazon Linux 2 2017.12 - ALAS2-2019-1354: medium priority package update for unixODBC",
+			"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2018-7485:\n\tAn argument order confusion flaw was found in the SQLWriteFileDSN API of unixODBC. This could only be exploited via a malicious ODBC database connector package with the maximum impact being a denial of service.\n99999: \nCVE-2018-7485 unixODBC: Insecure buffer copy in SQLWriteFileDSN function in odbcinst/SQLWriteFileDSN.c\n\nCVE-2018-7409:\n\tA buffer overflow flaw was found in the unicode_to_ansi_copy() function of unixODBC. This overflow is not directly controllable by an attacker making the maximum potential impact a crash or denial of service.\n99999: \nCVE-2018-7409 unixODBC: Buffer overflow in unicode_to_ansi_copy() can lead to crash or other unspecified impact\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "medium"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-7409"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-7485"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALAS-2019-1354.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2018-7409",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-7409"
+				}
+			]
+		},
+		{
+			"id": "CVE-2018-7485",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-7485"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "unixODBC",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.3.1-14.amzn2"
+								}
+							],
+							"fixed": [
+								"0:2.3.1-14.amzn2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "unixODBC-devel",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.3.1-14.amzn2"
+								}
+							],
+							"fixed": [
+								"0:2.3.1-14.amzn2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "unixODBC-debuginfo",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.3.1-14.amzn2"
+								}
+							],
+							"fixed": [
+								"0:2.3.1-14.amzn2"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

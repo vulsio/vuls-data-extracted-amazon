@@ -1,0 +1,384 @@
+{
+	"id": "ALAS2022-2022-149",
+	"advisories": [
+		{
+			"id": "ALAS2022-2022-149",
+			"title": "Amazon Linux 2022 - ALAS2022-2022-149: Important priority package update for subversion",
+			"description": "Package updates are available for Amazon Linux 2022 that fix the following vulnerabilities:\nCVE-2022-24070:\n\tA use-after-free vulnerability was found in Subversion in the mod_dav_svn Apache HTTP server (HTTPd) module. While looking up path-based authorization (authz) rules, multiple calls to the post_config hook can invalidate cached pointers to object-pools, which Subversion subsequently uses. This issue crashes the single HTTPd worker thread or the entire HTTPd server process, depending on the configuration of the Apache HTTPd server.\n\nCVE-2021-28544:\n\tA flaw was found in Subversion. When using path-based authorization (authz), the helper function detect_changed() does not omit potentially sensitive information from log messages. In particular, if a node is copied from a protected location, its copyfrom path (the path to the protected location) is reported even when omission should occur.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "Important"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-28544"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-24070"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2022/ALAS-2022-149.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2021-28544",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-28544"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-24070",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-24070"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2022",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "subversion-tools-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.14.2-5.amzn2022.0.1"
+								}
+							],
+							"fixed": [
+								"0:1.14.2-5.amzn2022.0.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "subversion-perl",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.14.2-5.amzn2022.0.1"
+								}
+							],
+							"fixed": [
+								"0:1.14.2-5.amzn2022.0.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "subversion",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.14.2-5.amzn2022.0.1"
+								}
+							],
+							"fixed": [
+								"0:1.14.2-5.amzn2022.0.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "subversion-tools",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.14.2-5.amzn2022.0.1"
+								}
+							],
+							"fixed": [
+								"0:1.14.2-5.amzn2022.0.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "subversion-debugsource",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.14.2-5.amzn2022.0.1"
+								}
+							],
+							"fixed": [
+								"0:1.14.2-5.amzn2022.0.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "subversion-perl-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.14.2-5.amzn2022.0.1"
+								}
+							],
+							"fixed": [
+								"0:1.14.2-5.amzn2022.0.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "subversion-libs-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.14.2-5.amzn2022.0.1"
+								}
+							],
+							"fixed": [
+								"0:1.14.2-5.amzn2022.0.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "subversion-libs",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.14.2-5.amzn2022.0.1"
+								}
+							],
+							"fixed": [
+								"0:1.14.2-5.amzn2022.0.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "python3-subversion-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.14.2-5.amzn2022.0.1"
+								}
+							],
+							"fixed": [
+								"0:1.14.2-5.amzn2022.0.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "subversion-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.14.2-5.amzn2022.0.1"
+								}
+							],
+							"fixed": [
+								"0:1.14.2-5.amzn2022.0.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "subversion-devel",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.14.2-5.amzn2022.0.1"
+								}
+							],
+							"fixed": [
+								"0:1.14.2-5.amzn2022.0.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "subversion-devel-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.14.2-5.amzn2022.0.1"
+								}
+							],
+							"fixed": [
+								"0:1.14.2-5.amzn2022.0.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "subversion-javahl",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.14.2-5.amzn2022.0.1"
+								}
+							],
+							"fixed": [
+								"0:1.14.2-5.amzn2022.0.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "python3-subversion",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.14.2-5.amzn2022.0.1"
+								}
+							],
+							"fixed": [
+								"0:1.14.2-5.amzn2022.0.1"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

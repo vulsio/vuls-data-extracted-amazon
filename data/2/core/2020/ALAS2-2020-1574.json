@@ -1,0 +1,670 @@
+{
+	"id": "ALAS2-2020-1574",
+	"advisories": [
+		{
+			"id": "ALAS2-2020-1574",
+			"title": "Amazon Linux 2 2017.12 - ALAS2-2020-1574: important priority package update for qt qt5-qtbase",
+			"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2020-17507:\n\tAn issue was discovered in Qt through 5.12.9, and 5.13.x through 5.15.x before 5.15.1. read_xbm_body in gui/image/qxbmhandler.cpp has a buffer over-read.\n1868532: CVE-2020-17507 qt: buffer over-read in read_xbm_body in gui/image/qxbmhandler.cpp\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "important"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-17507"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALAS-2020-1574.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2020-17507",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-17507"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "qt5-qtbase-doc",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.9.2-3.amzn2.0.4"
+								}
+							],
+							"fixed": [
+								"0:5.9.2-3.amzn2.0.4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "qt-debuginfo",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:4.8.5-15.amzn2.0.5"
+								}
+							],
+							"fixed": [
+								"1:4.8.5-15.amzn2.0.5"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "qt5-qtbase-examples",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.9.2-3.amzn2.0.4"
+								}
+							],
+							"fixed": [
+								"0:5.9.2-3.amzn2.0.4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "qt-doc",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:4.8.5-15.amzn2.0.5"
+								}
+							],
+							"fixed": [
+								"1:4.8.5-15.amzn2.0.5"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "qt-devel-private",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:4.8.5-15.amzn2.0.5"
+								}
+							],
+							"fixed": [
+								"1:4.8.5-15.amzn2.0.5"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "qt-mysql",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:4.8.5-15.amzn2.0.5"
+								}
+							],
+							"fixed": [
+								"1:4.8.5-15.amzn2.0.5"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "qt-qdbusviewer",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:4.8.5-15.amzn2.0.5"
+								}
+							],
+							"fixed": [
+								"1:4.8.5-15.amzn2.0.5"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "qt5-qtbase-postgresql",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.9.2-3.amzn2.0.4"
+								}
+							],
+							"fixed": [
+								"0:5.9.2-3.amzn2.0.4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "qt5-qtbase-debuginfo",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.9.2-3.amzn2.0.4"
+								}
+							],
+							"fixed": [
+								"0:5.9.2-3.amzn2.0.4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "qt5-qtbase",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.9.2-3.amzn2.0.4"
+								}
+							],
+							"fixed": [
+								"0:5.9.2-3.amzn2.0.4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "qt5-qtbase-odbc",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.9.2-3.amzn2.0.4"
+								}
+							],
+							"fixed": [
+								"0:5.9.2-3.amzn2.0.4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "qt5-rpm-macros",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.9.2-3.amzn2.0.4"
+								}
+							],
+							"fixed": [
+								"0:5.9.2-3.amzn2.0.4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "qt-examples",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:4.8.5-15.amzn2.0.5"
+								}
+							],
+							"fixed": [
+								"1:4.8.5-15.amzn2.0.5"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "qt5-qtbase-common",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.9.2-3.amzn2.0.4"
+								}
+							],
+							"fixed": [
+								"0:5.9.2-3.amzn2.0.4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "qt-config",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:4.8.5-15.amzn2.0.5"
+								}
+							],
+							"fixed": [
+								"1:4.8.5-15.amzn2.0.5"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "qt-qvfb",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:4.8.5-15.amzn2.0.5"
+								}
+							],
+							"fixed": [
+								"1:4.8.5-15.amzn2.0.5"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "qt-odbc",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:4.8.5-15.amzn2.0.5"
+								}
+							],
+							"fixed": [
+								"1:4.8.5-15.amzn2.0.5"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "qt5-qtbase-static",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.9.2-3.amzn2.0.4"
+								}
+							],
+							"fixed": [
+								"0:5.9.2-3.amzn2.0.4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "qt-assistant",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:4.8.5-15.amzn2.0.5"
+								}
+							],
+							"fixed": [
+								"1:4.8.5-15.amzn2.0.5"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "qt-postgresql",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:4.8.5-15.amzn2.0.5"
+								}
+							],
+							"fixed": [
+								"1:4.8.5-15.amzn2.0.5"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "qt-x11",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:4.8.5-15.amzn2.0.5"
+								}
+							],
+							"fixed": [
+								"1:4.8.5-15.amzn2.0.5"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "qt5-qtbase-gui",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.9.2-3.amzn2.0.4"
+								}
+							],
+							"fixed": [
+								"0:5.9.2-3.amzn2.0.4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "qt",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:4.8.5-15.amzn2.0.5"
+								}
+							],
+							"fixed": [
+								"1:4.8.5-15.amzn2.0.5"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "qt5-qtbase-devel",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.9.2-3.amzn2.0.4"
+								}
+							],
+							"fixed": [
+								"0:5.9.2-3.amzn2.0.4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "qt5-qtbase-mysql",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.9.2-3.amzn2.0.4"
+								}
+							],
+							"fixed": [
+								"0:5.9.2-3.amzn2.0.4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "qt-demos",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:4.8.5-15.amzn2.0.5"
+								}
+							],
+							"fixed": [
+								"1:4.8.5-15.amzn2.0.5"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "qt-devel",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:4.8.5-15.amzn2.0.5"
+								}
+							],
+							"fixed": [
+								"1:4.8.5-15.amzn2.0.5"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

@@ -1,0 +1,190 @@
+{
+	"id": "ALAS2-2021-1662",
+	"advisories": [
+		{
+			"id": "ALAS2-2021-1662",
+			"title": "Amazon Linux 2 2017.12 - ALAS2-2021-1662: medium priority package update for libxml2",
+			"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2021-3541:\n\tNo description is available for this CVE.\n1950515: CVE-2021-3541 libxml2: Exponential entity expansion attack bypasses all existing protection mechanisms\n\nCVE-2021-3517:\n\tThere is a flaw in the xml entity encoding functionality of libxml2. An attacker who is able to supply a crafted file to be processed by an application linked with the affected functionality of libxml2 could trigger an out-of-bounds read. The most likely impact of this flaw is to application availability, with some potential impact to confidentiality and integrity if an attacker is able to use memory information to further exploit the application.\n1954232: CVE-2021-3517 libxml2: Heap-based buffer overflow in xmlEncodeEntitiesInternal() in entities.c\n\nCVE-2020-24977:\n\tGNOME project libxml2 v2.9.10 has a global buffer over-read vulnerability in xmlEncodeEntitiesInternal at libxml2/entities.c. The issue has been fixed in commit 50f06b3e.\n1877788: CVE-2020-24977 libxml2: Buffer overflow vulnerability in xmlEncodeEntitiesInternal() in entities.c\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "medium"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-24977"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3517"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3541"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALAS-2021-1662.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2020-24977",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-24977"
+				}
+			]
+		},
+		{
+			"id": "CVE-2021-3517",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3517"
+				}
+			]
+		},
+		{
+			"id": "CVE-2021-3541",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3541"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libxml2-devel",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.9.1-6.amzn2.5.3"
+								}
+							],
+							"fixed": [
+								"0:2.9.1-6.amzn2.5.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libxml2-static",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.9.1-6.amzn2.5.3"
+								}
+							],
+							"fixed": [
+								"0:2.9.1-6.amzn2.5.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libxml2-python",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.9.1-6.amzn2.5.3"
+								}
+							],
+							"fixed": [
+								"0:2.9.1-6.amzn2.5.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libxml2-debuginfo",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.9.1-6.amzn2.5.3"
+								}
+							],
+							"fixed": [
+								"0:2.9.1-6.amzn2.5.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libxml2",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.9.1-6.amzn2.5.3"
+								}
+							],
+							"fixed": [
+								"0:2.9.1-6.amzn2.5.3"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

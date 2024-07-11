@@ -1,0 +1,72 @@
+{
+	"id": "ALAS2-2022-1827",
+	"advisories": [
+		{
+			"id": "ALAS2-2022-1827",
+			"title": "Amazon Linux 2 2017.12 - ALAS2-2022-1827: important priority package update for python-twisted-web",
+			"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2022-24801:\n\tA flaw was found in python-twisted. This vulnerability occurs due to the parsing of illegal constructs in the twisted.web.http module. The illegal constructs include '+/-' in the Content-Length header, '\\n and \\t' etc. Non-conformant parsing leads to a desync if requests pass through multiple HTTP parsers. This flaw allows a remote attacker to perform an HTTP request smuggling attack.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "important"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-24801"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALAS-2022-1827.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2022-24801",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-24801"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "python-twisted-web",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:12.1.0-8.amzn2"
+								}
+							],
+							"fixed": [
+								"0:12.1.0-8.amzn2"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

@@ -1,0 +1,190 @@
+{
+	"id": "ALAS2-2022-1872",
+	"advisories": [
+		{
+			"id": "ALAS2-2022-1872",
+			"title": "Amazon Linux 2 2017.12 - ALAS2-2022-1872: important priority package update for libtiff",
+			"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2022-2869:\n\tA flaw was found in libtiff's tiffcrop tool that has a uint32_t underflow, which leads to an out-of-bounds read and write in the extractContigSamples8bits routine. This flaw allows an attacker who supplies a crafted file to tiffcrop to trick a user into opening the crafted file with tiffcrop, causing a crash or potential further exploitations.\n\nCVE-2022-2868:\n\tlibtiff's tiffcrop utility has a improper input validation flaw that can lead to out of bounds read and ultimately cause a crash if an attacker is able to supply a crafted file to tiffcrop.\n\nCVE-2022-2867:\n\tA flaw was found in libtiffs tiffcrop utility that has a uint32_t underflow that can lead to an out-of-bounds read and write. This flaw allows an attacker who supplies a crafted file to tiffcrop to cause a crash or, in some cases, further exploitation.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "important"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-2867"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-2868"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-2869"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALAS-2022-1872.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2022-2867",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-2867"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-2868",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-2868"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-2869",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-2869"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libtiff-devel",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:4.0.3-35.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"0:4.0.3-35.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libtiff-static",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:4.0.3-35.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"0:4.0.3-35.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libtiff-tools",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:4.0.3-35.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"0:4.0.3-35.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libtiff-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:4.0.3-35.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"0:4.0.3-35.amzn2.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libtiff",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:4.0.3-35.amzn2.0.3"
+								}
+							],
+							"fixed": [
+								"0:4.0.3-35.amzn2.0.3"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

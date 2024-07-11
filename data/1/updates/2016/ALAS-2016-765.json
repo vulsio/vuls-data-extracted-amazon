@@ -1,0 +1,169 @@
+{
+	"id": "ALAS-2016-765",
+	"advisories": [
+		{
+			"id": "ALAS-2016-765",
+			"title": "Amazon Linux AMI 2014.03 - ALAS-2016-765: important priority package update for policycoreutils",
+			"description": "Package updates are available for Amazon Linux AMI that fix the following vulnerabilities:\nCVE-2016-7545:\n\tIt was found that the sandbox tool provided in policycoreutils was vulnerable to a TIOCSTI ioctl attack. A specially crafted program executed via the sandbox command could use this flaw to execute arbitrary commands in the context of the parent bash, escaping the sandbox.\n1378577: \nCVE-2016-7545 policycoreutils: SELinux sandbox escape via TIOCSTI ioctl\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "important"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-7545"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/ALAS-2016-765.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2016-7545",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-7545"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:1",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "policycoreutils-newrole",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.1.12-5.25.amzn1"
+								}
+							],
+							"fixed": [
+								"0:2.1.12-5.25.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "policycoreutils",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.1.12-5.25.amzn1"
+								}
+							],
+							"fixed": [
+								"0:2.1.12-5.25.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "policycoreutils-python",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.1.12-5.25.amzn1"
+								}
+							],
+							"fixed": [
+								"0:2.1.12-5.25.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "policycoreutils-restorecond",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.1.12-5.25.amzn1"
+								}
+							],
+							"fixed": [
+								"0:2.1.12-5.25.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "policycoreutils-debuginfo",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.1.12-5.25.amzn1"
+								}
+							],
+							"fixed": [
+								"0:2.1.12-5.25.amzn1"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

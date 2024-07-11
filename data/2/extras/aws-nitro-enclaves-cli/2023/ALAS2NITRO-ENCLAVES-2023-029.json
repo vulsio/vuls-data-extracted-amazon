@@ -1,0 +1,95 @@
+{
+	"id": "ALAS2NITRO-ENCLAVES-2023-029",
+	"advisories": [
+		{
+			"id": "ALAS2NITRO-ENCLAVES-2023-029",
+			"title": "Amazon Linux 2 - Nitro-enclaves 2.0 - ALAS2NITRO-ENCLAVES-2023-029: important priority package update for amazon-ecr-credential-helper",
+			"description": "Package updates are available for Amazon Linux 2 - Nitro-enclaves that fix the following vulnerabilities:\nCVE-2022-41723:\n\thttp2/hpack: avoid quadratic complexity in hpack decoding\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "important"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-41723"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALASNITRO-ENCLAVES-2023-029.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2022-41723",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-41723"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "amazon-ecr-credential-helper",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2extra-nitro-enclaves"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:0.7.1-1.amzn2"
+								}
+							],
+							"fixed": [
+								"0:0.7.1-1.amzn2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "amazon-ecr-credential-helper-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2extra-nitro-enclaves"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:0.7.1-1.amzn2"
+								}
+							],
+							"fixed": [
+								"0:0.7.1-1.amzn2"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

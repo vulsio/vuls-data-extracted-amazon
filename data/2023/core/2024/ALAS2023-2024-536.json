@@ -1,0 +1,325 @@
+{
+	"id": "ALAS2023-2024-536",
+	"advisories": [
+		{
+			"id": "ALAS2023-2024-536",
+			"title": "Amazon Linux 2023 - ALAS2023-2024-536: Medium priority package update for vim",
+			"description": "Package updates are available for Amazon Linux 2023 that fix the following vulnerabilities:\nCVE-2024-22667:\n\tVim before 9.0.2142 has a stack-based buffer overflow because did_set_langmap in map.c calls sprintf to write to the error buffer that is passed down to the option callback functions.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "Medium"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-22667"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2023/ALAS-2024-536.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2024-22667",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-22667"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2023",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "vim-enhanced-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "2:9.0.2153-1.amzn2023"
+								}
+							],
+							"fixed": [
+								"2:9.0.2153-1.amzn2023"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "xxd",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "2:9.0.2153-1.amzn2023"
+								}
+							],
+							"fixed": [
+								"2:9.0.2153-1.amzn2023"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "xxd-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "2:9.0.2153-1.amzn2023"
+								}
+							],
+							"fixed": [
+								"2:9.0.2153-1.amzn2023"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "vim-debugsource",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "2:9.0.2153-1.amzn2023"
+								}
+							],
+							"fixed": [
+								"2:9.0.2153-1.amzn2023"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "vim-common",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "2:9.0.2153-1.amzn2023"
+								}
+							],
+							"fixed": [
+								"2:9.0.2153-1.amzn2023"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "vim-data",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "2:9.0.2153-1.amzn2023"
+								}
+							],
+							"fixed": [
+								"2:9.0.2153-1.amzn2023"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "vim-minimal-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "2:9.0.2153-1.amzn2023"
+								}
+							],
+							"fixed": [
+								"2:9.0.2153-1.amzn2023"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "vim-default-editor",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "2:9.0.2153-1.amzn2023"
+								}
+							],
+							"fixed": [
+								"2:9.0.2153-1.amzn2023"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "vim-minimal",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "2:9.0.2153-1.amzn2023"
+								}
+							],
+							"fixed": [
+								"2:9.0.2153-1.amzn2023"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "vim-filesystem",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "2:9.0.2153-1.amzn2023"
+								}
+							],
+							"fixed": [
+								"2:9.0.2153-1.amzn2023"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "vim-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "2:9.0.2153-1.amzn2023"
+								}
+							],
+							"fixed": [
+								"2:9.0.2153-1.amzn2023"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "vim-enhanced",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "2:9.0.2153-1.amzn2023"
+								}
+							],
+							"fixed": [
+								"2:9.0.2153-1.amzn2023"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

@@ -1,0 +1,318 @@
+{
+	"id": "ALAS2-2022-1744",
+	"advisories": [
+		{
+			"id": "ALAS2-2022-1744",
+			"title": "Amazon Linux 2 2017.12 - ALAS2-2022-1744: important priority package update for xorg-x11-server",
+			"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2021-4011:\n\tA flaw was found in xorg-x11-server where an out-of-bounds access can occur in the SwapCreateRegister function.\n\nCVE-2021-4010:\n\tA flaw was found in xorg-x11-server where an out-of-bounds access can occur in the SProcScreenSaverSuspend function.\n\nCVE-2021-4009:\n\tA flaw was found in xorg-x11-server. An out-of-bounds access can occur in the SProcXFixesCreatePointerBarrier function.\n\nCVE-2021-4008:\n\tA flaw was found in the Xorg-x11-server. An out-of-bounds access issue can occur in the SProcRenderCompositeGlyphs function due to improper validation of the request length.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "important"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-4008"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-4009"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-4010"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-4011"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALAS-2022-1744.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2021-4008",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-4008"
+				}
+			]
+		},
+		{
+			"id": "CVE-2021-4009",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-4009"
+				}
+			]
+		},
+		{
+			"id": "CVE-2021-4010",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-4010"
+				}
+			]
+		},
+		{
+			"id": "CVE-2021-4011",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-4011"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "xorg-x11-server-Xwayland",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.20.4-15.amzn2.0.4"
+								}
+							],
+							"fixed": [
+								"0:1.20.4-15.amzn2.0.4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "xorg-x11-server-common",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.20.4-15.amzn2.0.4"
+								}
+							],
+							"fixed": [
+								"0:1.20.4-15.amzn2.0.4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "xorg-x11-server-Xorg",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.20.4-15.amzn2.0.4"
+								}
+							],
+							"fixed": [
+								"0:1.20.4-15.amzn2.0.4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "xorg-x11-server-Xdmx",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.20.4-15.amzn2.0.4"
+								}
+							],
+							"fixed": [
+								"0:1.20.4-15.amzn2.0.4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "xorg-x11-server-Xvfb",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.20.4-15.amzn2.0.4"
+								}
+							],
+							"fixed": [
+								"0:1.20.4-15.amzn2.0.4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "xorg-x11-server-Xephyr",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.20.4-15.amzn2.0.4"
+								}
+							],
+							"fixed": [
+								"0:1.20.4-15.amzn2.0.4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "xorg-x11-server-Xnest",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.20.4-15.amzn2.0.4"
+								}
+							],
+							"fixed": [
+								"0:1.20.4-15.amzn2.0.4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "xorg-x11-server-devel",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.20.4-15.amzn2.0.4"
+								}
+							],
+							"fixed": [
+								"0:1.20.4-15.amzn2.0.4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "xorg-x11-server-source",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.20.4-15.amzn2.0.4"
+								}
+							],
+							"fixed": [
+								"0:1.20.4-15.amzn2.0.4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "xorg-x11-server-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.20.4-15.amzn2.0.4"
+								}
+							],
+							"fixed": [
+								"0:1.20.4-15.amzn2.0.4"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

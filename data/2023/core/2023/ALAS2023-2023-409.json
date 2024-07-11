@@ -1,0 +1,614 @@
+{
+	"id": "ALAS2023-2023-409",
+	"advisories": [
+		{
+			"id": "ALAS2023-2023-409",
+			"title": "Amazon Linux 2023 - ALAS2023-2023-409: Important priority package update for grub2",
+			"description": "Package updates are available for Amazon Linux 2023 that fix the following vulnerabilities:\nCVE-2023-4693:\n\tAn out-of-bounds read flaw was found on grub2's NTFS filesystem driver. This issue may allow a physically present attacker to present a specially crafted NTFS file system image to read arbitrary memory locations. A successful attack allows sensitive data cached in memory or EFI variable values to be leaked, presenting a high Confidentiality risk.\n\nCVE-2023-4692:\n\tAn out-of-bounds write flaw was found in grub2's NTFS filesystem driver. This issue may allow an attacker to present a specially crafted NTFS filesystem image, leading to grub's heap metadata corruption. In some circumstances, the attack may also corrupt the UEFI firmware heap metadata. As a result, arbitrary code execution and secure boot protection bypass may be achieved.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "Important"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-4692"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-4693"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2023/ALAS-2023-409.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2023-4692",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-4692"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-4693",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-4693"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2023",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "grub2-tools",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:2.06-61.amzn2023.0.8"
+								}
+							],
+							"fixed": [
+								"1:2.06-61.amzn2023.0.8"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "grub2-pc-modules",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:2.06-61.amzn2023.0.8"
+								}
+							],
+							"fixed": [
+								"1:2.06-61.amzn2023.0.8"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "grub2-tools-minimal-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:2.06-61.amzn2023.0.8"
+								}
+							],
+							"fixed": [
+								"1:2.06-61.amzn2023.0.8"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "grub2-efi-x64-modules",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:2.06-61.amzn2023.0.8"
+								}
+							],
+							"fixed": [
+								"1:2.06-61.amzn2023.0.8"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "grub2-tools-extra-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:2.06-61.amzn2023.0.8"
+								}
+							],
+							"fixed": [
+								"1:2.06-61.amzn2023.0.8"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "grub2-pc",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:2.06-61.amzn2023.0.8"
+								}
+							],
+							"fixed": [
+								"1:2.06-61.amzn2023.0.8"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "grub2-tools-minimal",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:2.06-61.amzn2023.0.8"
+								}
+							],
+							"fixed": [
+								"1:2.06-61.amzn2023.0.8"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "grub2-emu-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:2.06-61.amzn2023.0.8"
+								}
+							],
+							"fixed": [
+								"1:2.06-61.amzn2023.0.8"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "grub2-common",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:2.06-61.amzn2023.0.8"
+								}
+							],
+							"fixed": [
+								"1:2.06-61.amzn2023.0.8"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "grub2-debugsource",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:2.06-61.amzn2023.0.8"
+								}
+							],
+							"fixed": [
+								"1:2.06-61.amzn2023.0.8"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "grub2-efi-x64-ec2",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:2.06-61.amzn2023.0.8"
+								}
+							],
+							"fixed": [
+								"1:2.06-61.amzn2023.0.8"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "grub2-efi-aa64-modules",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:2.06-61.amzn2023.0.8"
+								}
+							],
+							"fixed": [
+								"1:2.06-61.amzn2023.0.8"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "grub2-efi-aa64-cdboot",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:2.06-61.amzn2023.0.8"
+								}
+							],
+							"fixed": [
+								"1:2.06-61.amzn2023.0.8"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "grub2-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:2.06-61.amzn2023.0.8"
+								}
+							],
+							"fixed": [
+								"1:2.06-61.amzn2023.0.8"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "grub2-tools-efi",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:2.06-61.amzn2023.0.8"
+								}
+							],
+							"fixed": [
+								"1:2.06-61.amzn2023.0.8"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "grub2-emu",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:2.06-61.amzn2023.0.8"
+								}
+							],
+							"fixed": [
+								"1:2.06-61.amzn2023.0.8"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "grub2-efi-x64",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:2.06-61.amzn2023.0.8"
+								}
+							],
+							"fixed": [
+								"1:2.06-61.amzn2023.0.8"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "grub2-tools-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:2.06-61.amzn2023.0.8"
+								}
+							],
+							"fixed": [
+								"1:2.06-61.amzn2023.0.8"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "grub2-efi-x64-cdboot",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:2.06-61.amzn2023.0.8"
+								}
+							],
+							"fixed": [
+								"1:2.06-61.amzn2023.0.8"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "grub2-tools-extra",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:2.06-61.amzn2023.0.8"
+								}
+							],
+							"fixed": [
+								"1:2.06-61.amzn2023.0.8"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "grub2-emu-modules",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:2.06-61.amzn2023.0.8"
+								}
+							],
+							"fixed": [
+								"1:2.06-61.amzn2023.0.8"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "grub2-efi-aa64",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:2.06-61.amzn2023.0.8"
+								}
+							],
+							"fixed": [
+								"1:2.06-61.amzn2023.0.8"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "grub2-tools-efi-debuginfo",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:2.06-61.amzn2023.0.8"
+								}
+							],
+							"fixed": [
+								"1:2.06-61.amzn2023.0.8"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "grub2-efi-aa64-ec2",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:2.06-61.amzn2023.0.8"
+								}
+							],
+							"fixed": [
+								"1:2.06-61.amzn2023.0.8"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

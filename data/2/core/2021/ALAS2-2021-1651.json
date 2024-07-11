@@ -1,0 +1,440 @@
+{
+	"id": "ALAS2-2021-1651",
+	"advisories": [
+		{
+			"id": "ALAS2-2021-1651",
+			"title": "Amazon Linux 2 2017.12 - ALAS2-2021-1651: medium priority package update for bind",
+			"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2021-25214:\n\tIncremental zone transfers (IXFR) provide a way of transferring changed portion(s) of a zone between servers. An IXFR stream containing SOA records with an owner name other than the transferred zone's apex may cause the receiving named server to inadvertently remove the SOA record for the zone in question from the zone database. This leads to an assertion failure when the next SOA refresh query for that zone is made.\n1953849: CVE-2021-25214 bind: A broken inbound incremental zone update (IXFR) can cause named to terminate unexpectedly\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "medium"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-25214"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALAS-2021-1651.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2021-25214",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-25214"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "bind-pkcs11-libs",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "32:9.11.4-26.P2.amzn2.5.2"
+								}
+							],
+							"fixed": [
+								"32:9.11.4-26.P2.amzn2.5.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "bind-license",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "32:9.11.4-26.P2.amzn2.5.2"
+								}
+							],
+							"fixed": [
+								"32:9.11.4-26.P2.amzn2.5.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "bind-devel",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "32:9.11.4-26.P2.amzn2.5.2"
+								}
+							],
+							"fixed": [
+								"32:9.11.4-26.P2.amzn2.5.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "bind-export-devel",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "32:9.11.4-26.P2.amzn2.5.2"
+								}
+							],
+							"fixed": [
+								"32:9.11.4-26.P2.amzn2.5.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "bind-pkcs11",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "32:9.11.4-26.P2.amzn2.5.2"
+								}
+							],
+							"fixed": [
+								"32:9.11.4-26.P2.amzn2.5.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "bind-pkcs11-utils",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "32:9.11.4-26.P2.amzn2.5.2"
+								}
+							],
+							"fixed": [
+								"32:9.11.4-26.P2.amzn2.5.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "bind-libs-lite",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "32:9.11.4-26.P2.amzn2.5.2"
+								}
+							],
+							"fixed": [
+								"32:9.11.4-26.P2.amzn2.5.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "bind-debuginfo",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "32:9.11.4-26.P2.amzn2.5.2"
+								}
+							],
+							"fixed": [
+								"32:9.11.4-26.P2.amzn2.5.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "bind",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "32:9.11.4-26.P2.amzn2.5.2"
+								}
+							],
+							"fixed": [
+								"32:9.11.4-26.P2.amzn2.5.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "bind-sdb",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "32:9.11.4-26.P2.amzn2.5.2"
+								}
+							],
+							"fixed": [
+								"32:9.11.4-26.P2.amzn2.5.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "bind-libs",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "32:9.11.4-26.P2.amzn2.5.2"
+								}
+							],
+							"fixed": [
+								"32:9.11.4-26.P2.amzn2.5.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "bind-chroot",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "32:9.11.4-26.P2.amzn2.5.2"
+								}
+							],
+							"fixed": [
+								"32:9.11.4-26.P2.amzn2.5.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "bind-pkcs11-devel",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "32:9.11.4-26.P2.amzn2.5.2"
+								}
+							],
+							"fixed": [
+								"32:9.11.4-26.P2.amzn2.5.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "bind-utils",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "32:9.11.4-26.P2.amzn2.5.2"
+								}
+							],
+							"fixed": [
+								"32:9.11.4-26.P2.amzn2.5.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "bind-lite-devel",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "32:9.11.4-26.P2.amzn2.5.2"
+								}
+							],
+							"fixed": [
+								"32:9.11.4-26.P2.amzn2.5.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "bind-sdb-chroot",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "32:9.11.4-26.P2.amzn2.5.2"
+								}
+							],
+							"fixed": [
+								"32:9.11.4-26.P2.amzn2.5.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "bind-export-libs",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "32:9.11.4-26.P2.amzn2.5.2"
+								}
+							],
+							"fixed": [
+								"32:9.11.4-26.P2.amzn2.5.2"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

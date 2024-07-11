@@ -1,0 +1,136 @@
+{
+	"id": "ALAS-2019-1312",
+	"advisories": [
+		{
+			"id": "ALAS-2019-1312",
+			"title": "Amazon Linux AMI 2014.03 - ALAS-2019-1312: important priority package update for patch",
+			"description": "Package updates are available for Amazon Linux AMI that fix the following vulnerabilities:\nCVE-2019-13638:\n\tGNU patch through 2.7.6 is vulnerable to OS shell command injection that can be exploited by opening a crafted patch file that contains an ed style diff payload with shell metacharacters. The ed editor does not need to be present on the vulnerable system. This is different from CVE-2018-1000156.\n99999: \nCVE-2019-13638 patch: OS shell command injection when processing crafted patch files\n\nCVE-2018-6952:\n\tA double-free flaw was found in the way the patch utility processed patch files. An attacker could potentially use this flaw to crash the patch utility by tricking it into processing crafted patches.\n99999: \nCVE-2018-6952 patch: Double free of memory in pch.c:another_hunk() causes a crash\n\nCVE-2018-20969:\n\tdo_ed_script in pch.c in GNU patch through 2.7.6 does not block strings beginning with a ! character. NOTE: this is the same commit as for CVE-2019-13638, but the ! syntax is specific to ed, and is unrelated to a shell metacharacter.\n99999: \nCVE-2018-20969 patch: do_ed_script in pch.c does not block strings beginning with a ! character\n\nCVE-2016-10713:\n\tA heap-based out-of-bounds read flaw was found in the way the patch utility parsed patch files. An attacker could potentially use this flaw to crash the patch utility by tricking it into processing crafted patch files.\n99999: \nCVE-2016-10713 patch: Out-of-bounds access in pch_write_line function in pch.c\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "important"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10713"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-20969"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-6952"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-13638"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/ALAS-2019-1312.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2016-10713",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10713"
+				}
+			]
+		},
+		{
+			"id": "CVE-2018-20969",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-20969"
+				}
+			]
+		},
+		{
+			"id": "CVE-2018-6952",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-6952"
+				}
+			]
+		},
+		{
+			"id": "CVE-2019-13638",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-13638"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:1",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "patch",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.7.1-12.14.amzn1"
+								}
+							],
+							"fixed": [
+								"0:2.7.1-12.14.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "patch-debuginfo",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.7.1-12.14.amzn1"
+								}
+							],
+							"fixed": [
+								"0:2.7.1-12.14.amzn1"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

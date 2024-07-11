@@ -1,0 +1,693 @@
+{
+	"id": "ALAS2022-2022-096",
+	"advisories": [
+		{
+			"id": "ALAS2022-2022-096",
+			"title": "Amazon Linux 2022 - ALAS2022-2022-096: Medium priority package update for mariadb105",
+			"description": "Package updates are available for Amazon Linux 2022 that fix the following vulnerabilities:\nCVE-2021-46669:\n\tA use-after-free vulnerability was found in MariaDB. This flaw allows attackers to trigger a convert_const_to_int() use-after-free when the BIGINT data type is used, resulting in a denial of service.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "Medium"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-46669"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2022/ALAS-2022-096.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2021-46669",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-46669"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2022",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mariadb105-server-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "3:10.5.16-1.amzn2022.0.2"
+								}
+							],
+							"fixed": [
+								"3:10.5.16-1.amzn2022.0.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mariadb105-gssapi-server-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "3:10.5.16-1.amzn2022.0.2"
+								}
+							],
+							"fixed": [
+								"3:10.5.16-1.amzn2022.0.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mariadb105-rocksdb-engine-debuginfo",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "3:10.5.16-1.amzn2022.0.2"
+								}
+							],
+							"fixed": [
+								"3:10.5.16-1.amzn2022.0.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mariadb105-server-utils",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "3:10.5.16-1.amzn2022.0.2"
+								}
+							],
+							"fixed": [
+								"3:10.5.16-1.amzn2022.0.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mariadb105-gssapi-server",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "3:10.5.16-1.amzn2022.0.2"
+								}
+							],
+							"fixed": [
+								"3:10.5.16-1.amzn2022.0.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mariadb105-connect-engine-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "3:10.5.16-1.amzn2022.0.2"
+								}
+							],
+							"fixed": [
+								"3:10.5.16-1.amzn2022.0.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mariadb105-sphinx-engine-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "3:10.5.16-1.amzn2022.0.2"
+								}
+							],
+							"fixed": [
+								"3:10.5.16-1.amzn2022.0.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mariadb105-cracklib-password-check-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "3:10.5.16-1.amzn2022.0.2"
+								}
+							],
+							"fixed": [
+								"3:10.5.16-1.amzn2022.0.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mariadb105-common",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "3:10.5.16-1.amzn2022.0.2"
+								}
+							],
+							"fixed": [
+								"3:10.5.16-1.amzn2022.0.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mariadb105-server",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "3:10.5.16-1.amzn2022.0.2"
+								}
+							],
+							"fixed": [
+								"3:10.5.16-1.amzn2022.0.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mariadb105-debugsource",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "3:10.5.16-1.amzn2022.0.2"
+								}
+							],
+							"fixed": [
+								"3:10.5.16-1.amzn2022.0.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mariadb105-pam-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "3:10.5.16-1.amzn2022.0.2"
+								}
+							],
+							"fixed": [
+								"3:10.5.16-1.amzn2022.0.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mariadb105-errmsg",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "3:10.5.16-1.amzn2022.0.2"
+								}
+							],
+							"fixed": [
+								"3:10.5.16-1.amzn2022.0.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mariadb105",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "3:10.5.16-1.amzn2022.0.2"
+								}
+							],
+							"fixed": [
+								"3:10.5.16-1.amzn2022.0.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mariadb105-connect-engine",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "3:10.5.16-1.amzn2022.0.2"
+								}
+							],
+							"fixed": [
+								"3:10.5.16-1.amzn2022.0.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mariadb105-server-utils-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "3:10.5.16-1.amzn2022.0.2"
+								}
+							],
+							"fixed": [
+								"3:10.5.16-1.amzn2022.0.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mariadb105-devel",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "3:10.5.16-1.amzn2022.0.2"
+								}
+							],
+							"fixed": [
+								"3:10.5.16-1.amzn2022.0.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mariadb105-test-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "3:10.5.16-1.amzn2022.0.2"
+								}
+							],
+							"fixed": [
+								"3:10.5.16-1.amzn2022.0.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mariadb105-oqgraph-engine",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "3:10.5.16-1.amzn2022.0.2"
+								}
+							],
+							"fixed": [
+								"3:10.5.16-1.amzn2022.0.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mariadb105-oqgraph-engine-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "3:10.5.16-1.amzn2022.0.2"
+								}
+							],
+							"fixed": [
+								"3:10.5.16-1.amzn2022.0.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mariadb105-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "3:10.5.16-1.amzn2022.0.2"
+								}
+							],
+							"fixed": [
+								"3:10.5.16-1.amzn2022.0.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mariadb105-rocksdb-engine",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "3:10.5.16-1.amzn2022.0.2"
+								}
+							],
+							"fixed": [
+								"3:10.5.16-1.amzn2022.0.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mariadb105-test",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "3:10.5.16-1.amzn2022.0.2"
+								}
+							],
+							"fixed": [
+								"3:10.5.16-1.amzn2022.0.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mariadb105-backup-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "3:10.5.16-1.amzn2022.0.2"
+								}
+							],
+							"fixed": [
+								"3:10.5.16-1.amzn2022.0.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mariadb105-sphinx-engine",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "3:10.5.16-1.amzn2022.0.2"
+								}
+							],
+							"fixed": [
+								"3:10.5.16-1.amzn2022.0.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mariadb105-pam",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "3:10.5.16-1.amzn2022.0.2"
+								}
+							],
+							"fixed": [
+								"3:10.5.16-1.amzn2022.0.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mariadb105-backup",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "3:10.5.16-1.amzn2022.0.2"
+								}
+							],
+							"fixed": [
+								"3:10.5.16-1.amzn2022.0.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mariadb105-cracklib-password-check",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "3:10.5.16-1.amzn2022.0.2"
+								}
+							],
+							"fixed": [
+								"3:10.5.16-1.amzn2022.0.2"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

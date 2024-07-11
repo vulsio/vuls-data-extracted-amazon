@@ -1,0 +1,95 @@
+{
+	"id": "ALAS2-2018-1043",
+	"advisories": [
+		{
+			"id": "ALAS2-2018-1043",
+			"title": "Amazon Linux 2 2017.12 - ALAS2-2018-1043: important priority package update for plexus-archiver",
+			"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2018-1002200:\n\tA path traversal vulnerability has been discovered in plexus-archiver when extracting a carefully crafted zip file which holds path traversal file names. A remote attacker could use this vulnerability to write files outside the target directory and overwrite existing files with malicious code or vulnerable configurations.\n1584392: \nCVE-2018-1002200 plexus-archiver: arbitrary file write vulnerability / arbitrary code execution using a specially crafted zip file\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "important"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-1002200"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALAS-2018-1043.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2018-1002200",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-1002200"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "plexus-archiver",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.4.2-5.amzn2"
+								}
+							],
+							"fixed": [
+								"0:2.4.2-5.amzn2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "plexus-archiver-javadoc",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.4.2-5.amzn2"
+								}
+							],
+							"fixed": [
+								"0:2.4.2-5.amzn2"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

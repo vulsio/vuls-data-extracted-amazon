@@ -1,0 +1,212 @@
+{
+	"id": "ALAS2FIREFOX-2024-026",
+	"advisories": [
+		{
+			"id": "ALAS2FIREFOX-2024-026",
+			"title": "Amazon Linux 2 - Firefox 2.0 - ALAS2FIREFOX-2024-026: important priority package update for firefox",
+			"description": "Package updates are available for Amazon Linux 2 - Firefox that fix the following vulnerabilities:\nCVE-2024-5702:\n\tMemory corruption in the networking stack could have led to a potentially exploitable crash. This vulnerability affects Firefox < 125 and Firefox ESR < 115.12.\n\nCVE-2024-5700:\n\tMemory safety bugs present in Firefox 126, Firefox ESR 115.11, and Thunderbird 115.11. Some of these bugs showed evidence of memory corruption and we presume that with enough effort some of these could have been exploited to run arbitrary code. This vulnerability affects Firefox < 127 and Firefox ESR < 115.12.\n\nCVE-2024-5693:\n\tOffscreen Canvas did not properly track cross-origin tainting, which could be used to access image data from another site in violation of same-origin policy. This vulnerability affects Firefox < 127, Firefox ESR < 115.12, and Thunderbird < 115.12.\n\nCVE-2024-5691:\n\tBy tricking the browser with a `X-Frame-Options` header, a sandboxed iframe could have presented a button that, if clicked by a user, would bypass restrictions to open a new window. This vulnerability affects Firefox < 127 and Firefox ESR < 115.12.\n\nCVE-2024-5688:\n\tIf a garbage collection was triggered at the right time, a use-after-free could have occurred during object transplant. This vulnerability affects Firefox < 127 and Firefox ESR < 115.12.\n\nCVE-2022-36320:\n\tRESERVED\nNOTE: https://www.mozilla.org/en-US/security/advisories/mfsa2022-30/#CVE-2022-36320\n\nCVE-2022-36317:\n\tWhen visiting a website with an overly long URL, the user interface would start to hang. Due to session restore, this could lead to a permanent Denial of Service.<br>*This bug only affects Firefox for Android. Other operating systems are unaffected.*. This vulnerability affects Firefox < 103.\n\nCVE-2022-36314:\n\tA flaw was found in Mozilla. The Mozilla Foundation Security Advisory describes the issue of when opening a Windows shortcut from the local filesystem, an attacker could supply a remote path that leads to unexpected network requests from the operating system.\n\nCVE-2022-31744:\n\tAn attacker could have injected CSS into stylesheets accessible via internal URIs, such as resource:, and in doing so bypass a page's Content Security Policy. This vulnerability affects Firefox ESR < 91.11, Thunderbird < 102, Thunderbird < 91.11, and Firefox < 101.\n\nCVE-2022-2205:\n\tRESERVED\nNOTE: https://www.mozilla.org/en-US/security/advisories/mfsa2022-30/#CVE-2022-2205\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "important"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-2205"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-31744"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-36314"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-36317"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-36320"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-5688"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-5691"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-5693"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-5700"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-5702"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALASFIREFOX-2024-026.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2022-2205",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-2205"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-31744",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-31744"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-36314",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-36314"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-36317",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-36317"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-36320",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-36320"
+				}
+			]
+		},
+		{
+			"id": "CVE-2024-5688",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-5688"
+				}
+			]
+		},
+		{
+			"id": "CVE-2024-5691",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-5691"
+				}
+			]
+		},
+		{
+			"id": "CVE-2024-5693",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-5693"
+				}
+			]
+		},
+		{
+			"id": "CVE-2024-5700",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-5700"
+				}
+			]
+		},
+		{
+			"id": "CVE-2024-5702",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-5702"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "firefox",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2extra-firefox"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:115.12.0-1.amzn2.0.1"
+								}
+							],
+							"fixed": [
+								"0:115.12.0-1.amzn2.0.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "firefox-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2extra-firefox"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:115.12.0-1.amzn2.0.1"
+								}
+							],
+							"fixed": [
+								"0:115.12.0-1.amzn2.0.1"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

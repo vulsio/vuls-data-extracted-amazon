@@ -1,0 +1,134 @@
+{
+	"id": "ALAS2HAPROXY2-2023-005",
+	"advisories": [
+		{
+			"id": "ALAS2HAPROXY2-2023-005",
+			"title": "Amazon Linux 2 - Haproxy2 2.0 - ALAS2HAPROXY2-2023-005: medium priority package update for haproxy2",
+			"description": "Package updates are available for Amazon Linux 2 - Haproxy2 that fix the following vulnerabilities:\nCVE-2021-40346:\n\tProxy server haproxy has a flaw that can could allow an HTTP request smuggling attack with the goal of bypassing access-control list rules defined by haproxy. The attack was made possible by utilizing an integer overflow vulnerability that allowed reaching an unexpected state in haproxy while parsing an HTTP request. The highest threat from this vulnerability is integrity.\n\nCVE-2021-39242:\n\tAn issue was discovered in HAProxy 2.2 before 2.2.16, 2.3 before 2.3.13, and 2.4 before 2.4.3. It can lead to a situation with an attacker-controlled HTTP Host header, because a mismatch between Host and authority is mishandled.\n\nCVE-2021-39241:\n\thaproxy has an input validation flaw that could allow a remote attacker to bypass implemented security restrictions.  An HTTP method name may contain a space followed by the name of a protected resource. Given this, It is possible that an server would interpret this as a request for that protected resource. The highest threat from this vulnerability is possible confidentiality concerns.\n\nCVE-2021-39240:\n\tA flaw was found in haproxy. An input validation flaw when processing HTTP/2 requests causes haproxy to not ensure that the scheme and path portions of a URI have the expected characters.  This may cause specially crafted input to bypass implemented security restrictions. The highest threat from this vulnerability is confidentiality.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "medium"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-39240"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-39241"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-39242"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-40346"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALASHAPROXY2-2023-005.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2021-39240",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-39240"
+				}
+			]
+		},
+		{
+			"id": "CVE-2021-39241",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-39241"
+				}
+			]
+		},
+		{
+			"id": "CVE-2021-39242",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-39242"
+				}
+			]
+		},
+		{
+			"id": "CVE-2021-40346",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-40346"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "haproxy2",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-haproxy2"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.2.17-1.amzn2.0.1"
+								}
+							],
+							"fixed": [
+								"0:2.2.17-1.amzn2.0.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "haproxy2-debuginfo",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-haproxy2"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.2.17-1.amzn2.0.1"
+								}
+							],
+							"fixed": [
+								"0:2.2.17-1.amzn2.0.1"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

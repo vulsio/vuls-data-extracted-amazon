@@ -1,0 +1,187 @@
+{
+	"id": "ALAS2023-2024-642",
+	"advisories": [
+		{
+			"id": "ALAS2023-2024-642",
+			"title": "Amazon Linux 2023 - ALAS2023-2024-642: Medium priority package update for nasm",
+			"description": "Package updates are available for Amazon Linux 2023 that fix the following vulnerabilities:\nCVE-2023-38665:\n\tNull pointer dereference in ieee_write_file in nasm 2.16rc0 allows attackers to cause a denial of service (crash).\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "Medium"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-38665"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2023/ALAS-2024-642.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2023-38665",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-38665"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2023",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "nasm-doc",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.15.05-1.amzn2023.0.6"
+								}
+							],
+							"fixed": [
+								"0:2.15.05-1.amzn2023.0.6"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "nasm-rdoff",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.15.05-1.amzn2023.0.6"
+								}
+							],
+							"fixed": [
+								"0:2.15.05-1.amzn2023.0.6"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "nasm-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.15.05-1.amzn2023.0.6"
+								}
+							],
+							"fixed": [
+								"0:2.15.05-1.amzn2023.0.6"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "nasm-debugsource",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.15.05-1.amzn2023.0.6"
+								}
+							],
+							"fixed": [
+								"0:2.15.05-1.amzn2023.0.6"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "nasm",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.15.05-1.amzn2023.0.6"
+								}
+							],
+							"fixed": [
+								"0:2.15.05-1.amzn2023.0.6"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "nasm-rdoff-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.15.05-1.amzn2023.0.6"
+								}
+							],
+							"fixed": [
+								"0:2.15.05-1.amzn2023.0.6"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

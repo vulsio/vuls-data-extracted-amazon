@@ -1,0 +1,95 @@
+{
+	"id": "ALAS2-2021-1623",
+	"advisories": [
+		{
+			"id": "ALAS2-2021-1623",
+			"title": "Amazon Linux 2 2017.12 - ALAS2-2021-1623: important priority package update for screen",
+			"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2021-26937:\n\tA flaw was found in screen. A specially crafted sequence of combining characters could cause an out of bounds write leading to arbitrary code execution. The highest threat from this vulnerability is to data confidentiality and integrity as well as system availability.\n1927062: CVE-2021-26937 screen: crash when processing combining chars\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "important"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-26937"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALAS-2021-1623.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2021-26937",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-26937"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "screen",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:4.1.0-0.27.20120314git3c2946.amzn2"
+								}
+							],
+							"fixed": [
+								"0:4.1.0-0.27.20120314git3c2946.amzn2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "screen-debuginfo",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:4.1.0-0.27.20120314git3c2946.amzn2"
+								}
+							],
+							"fixed": [
+								"0:4.1.0-0.27.20120314git3c2946.amzn2"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

@@ -1,0 +1,389 @@
+{
+	"id": "ALAS-2017-782",
+	"advisories": [
+		{
+			"id": "ALAS-2017-782",
+			"title": "Amazon Linux AMI 2014.03 - ALAS-2017-782: medium priority package update for kernel",
+			"description": "Package updates are available for Amazon Linux AMI that fix the following vulnerabilities:\nCVE-2016-9793:\n\tThe sock_setsockopt function in net/core/sock.c in the Linux kernel before 4.8.14 mishandles negative values of sk_sndbuf and sk_rcvbuf, which allows local users to cause a denial of service (memory corruption and system crash) or possibly have unspecified other impact by leveraging the CAP_NET_ADMIN capability for a crafted setsockopt system call with the (1) SO_SNDBUFFORCE or (2) SO_RCVBUFFORCE option.\n1402013: \nCVE-2016-9793 kernel: Signed overflow for SO_{SND|RCV}BUFFORCE\n\nCVE-2016-9576:\n\tThe blk_rq_map_user_iov function in block/blk-map.c in the Linux kernel before 4.8.14 does not properly restrict the type of iterator, which allows local users to read or write to arbitrary kernel memory locations or cause a denial of service (use-after-free) by leveraging access to a /dev/sg device.\n1403145: \nCVE-2016-9576 kernel: Use after free in SCSI generic device interface\n\nCVE-2016-8650:\n\tA flaw was found in the Linux kernel key management subsystem in which a local attacker could crash the kernel or corrupt the stack and additional memory (denial of service) by supplying a specially crafted RSA key.  This flaw panics the machine during the verification of the RSA key.\n1395187: \nCVE-2016-8650 kernel: Null pointer dereference via keyctl\n\nCVE-2016-8399:\n\tA flaw was found in the Linux networking subsystem where a local attacker with CAP_NET_ADMIN capabilities could cause an out of bounds read by creating a smaller-than-expected ICMP header and sending to its destination via sendto().\n1403833: \nCVE-2016-8399 kernel: net: Out of bounds stack read in memcpy_fromiovec\n\nCVE-2016-10147:\n\tAlgorithms not compatible with mcryptd could be spawned by mcryptd with a direct crypto_alloc_tfm invocation using a &quot;mcryptd(alg)&quot; name construct.  This causes mcryptd to crash the kernel if an arbitrary &quot;alg&quot; is incompatible and not intended to be used with mcryptd.\n1404200: \nCVE-2016-10147 kernel: Kernel crash by spawning mcrypt(alg) with incompatible algorithm\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "medium"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10147"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-8399"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-8650"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-9576"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-9793"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/ALAS-2017-782.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2016-10147",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10147"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-8399",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-8399"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-8650",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-8650"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-9576",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-9576"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-9793",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-9793"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:1",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "kernel-debuginfo-common-i686",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:4.4.39-34.54.amzn1"
+								}
+							],
+							"fixed": [
+								"0:4.4.39-34.54.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "kernel-doc",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:4.4.39-34.54.amzn1"
+								}
+							],
+							"fixed": [
+								"0:4.4.39-34.54.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "kernel-devel",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:4.4.39-34.54.amzn1"
+								}
+							],
+							"fixed": [
+								"0:4.4.39-34.54.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "kernel-tools",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:4.4.39-34.54.amzn1"
+								}
+							],
+							"fixed": [
+								"0:4.4.39-34.54.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "kernel",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:4.4.39-34.54.amzn1"
+								}
+							],
+							"fixed": [
+								"0:4.4.39-34.54.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "kernel-headers",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:4.4.39-34.54.amzn1"
+								}
+							],
+							"fixed": [
+								"0:4.4.39-34.54.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "kernel-debuginfo-common-x86_64",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:4.4.39-34.54.amzn1"
+								}
+							],
+							"fixed": [
+								"0:4.4.39-34.54.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "kernel-tools-devel",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:4.4.39-34.54.amzn1"
+								}
+							],
+							"fixed": [
+								"0:4.4.39-34.54.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "perf-debuginfo",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:4.4.39-34.54.amzn1"
+								}
+							],
+							"fixed": [
+								"0:4.4.39-34.54.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "kernel-debuginfo",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:4.4.39-34.54.amzn1"
+								}
+							],
+							"fixed": [
+								"0:4.4.39-34.54.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "perf",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:4.4.39-34.54.amzn1"
+								}
+							],
+							"fixed": [
+								"0:4.4.39-34.54.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "kernel-tools-debuginfo",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:4.4.39-34.54.amzn1"
+								}
+							],
+							"fixed": [
+								"0:4.4.39-34.54.amzn1"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

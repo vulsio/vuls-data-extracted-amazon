@@ -1,0 +1,380 @@
+{
+	"id": "ALAS2-2021-1674",
+	"advisories": [
+		{
+			"id": "ALAS2-2021-1674",
+			"title": "Amazon Linux 2 2017.12 - ALAS2-2021-1674: medium priority package update for httpd",
+			"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2021-30641:\n\tA flaw was found in Apache httpd. A possible regression from an earlier security fix broke behavior of MergeSlashes. The highest threat from this vulnerability is to data integrity.\n1966743: CVE-2021-30641 httpd: MergeSlashes regression\n\nCVE-2021-26691:\n\tA heap overflow flaw was found In Apache httpd mod_session. The highest threat from this vulnerability is to system availability.\n1966732: CVE-2021-26691 httpd: Heap overflow in mod_session\n\nCVE-2021-26690:\n\tA NULL pointer dereference was found in Apache httpd mod_session. The highest threat from this vulnerability is to data confidentiality and integrity as well as system availability.\n1966729: CVE-2021-26690 httpd: mod_session NULL pointer dereference in parser\n\nCVE-2020-35452:\n\tA flaw was found in Apache httpd. The mod_auth_digest has a single zero byte stack overflow. The highest threat from this vulnerability is to data confidentiality and integrity as well as system availability.\n1966724: CVE-2020-35452 httpd: Single zero byte stack overflow in mod_auth_digest\n\nCVE-2020-13950:\n\tA flaw was found In Apache httpd. The mod_proxy has a NULL pointer dereference. The highest threat from this vulnerability is to data confidentiality and integrity as well as system availability.\n1966738: CVE-2020-13950 httpd: mod_proxy NULL pointer dereference\n\nCVE-2020-13938:\n\tA flaw was found in HTTPd. In some Apache HTTP Server versions, unprivileged local users can stop HTTPd on Windows. The highest threat from this vulnerability is to system availability.\n1970006: CVE-2020-13938 httpd: Improper Handling of Insufficient Privileges\n\nCVE-2019-17567:\n\tA flaw was found in Apache httpd. The mod_proxy_wstunnel module tunnels non-upgraded connections.\n1966740: CVE-2019-17567 httpd:  mod_proxy_wstunnel tunneling of non Upgraded connection\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "medium"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-17567"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-13938"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-13950"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-35452"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-26690"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-26691"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-30641"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALAS-2021-1674.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2019-17567",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-17567"
+				}
+			]
+		},
+		{
+			"id": "CVE-2020-13938",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-13938"
+				}
+			]
+		},
+		{
+			"id": "CVE-2020-13950",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-13950"
+				}
+			]
+		},
+		{
+			"id": "CVE-2020-35452",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-35452"
+				}
+			]
+		},
+		{
+			"id": "CVE-2021-26690",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-26690"
+				}
+			]
+		},
+		{
+			"id": "CVE-2021-26691",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-26691"
+				}
+			]
+		},
+		{
+			"id": "CVE-2021-30641",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-30641"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mod_ssl",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:2.4.48-2.amzn2"
+								}
+							],
+							"fixed": [
+								"1:2.4.48-2.amzn2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mod_md",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.4.48-2.amzn2"
+								}
+							],
+							"fixed": [
+								"0:2.4.48-2.amzn2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mod_session",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.4.48-2.amzn2"
+								}
+							],
+							"fixed": [
+								"0:2.4.48-2.amzn2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "httpd-manual",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.4.48-2.amzn2"
+								}
+							],
+							"fixed": [
+								"0:2.4.48-2.amzn2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "httpd-tools",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.4.48-2.amzn2"
+								}
+							],
+							"fixed": [
+								"0:2.4.48-2.amzn2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "httpd-filesystem",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.4.48-2.amzn2"
+								}
+							],
+							"fixed": [
+								"0:2.4.48-2.amzn2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mod_proxy_html",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:2.4.48-2.amzn2"
+								}
+							],
+							"fixed": [
+								"1:2.4.48-2.amzn2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mod_ldap",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.4.48-2.amzn2"
+								}
+							],
+							"fixed": [
+								"0:2.4.48-2.amzn2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "httpd-debuginfo",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.4.48-2.amzn2"
+								}
+							],
+							"fixed": [
+								"0:2.4.48-2.amzn2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "httpd",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.4.48-2.amzn2"
+								}
+							],
+							"fixed": [
+								"0:2.4.48-2.amzn2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "httpd-devel",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.4.48-2.amzn2"
+								}
+							],
+							"fixed": [
+								"0:2.4.48-2.amzn2"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

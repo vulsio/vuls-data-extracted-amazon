@@ -1,0 +1,463 @@
+{
+	"id": "ALAS2023-2024-527",
+	"advisories": [
+		{
+			"id": "ALAS2023-2024-527",
+			"title": "Amazon Linux 2023 - ALAS2023-2024-527: Medium priority package update for graphviz",
+			"description": "Package updates are available for Amazon Linux 2023 that fix the following vulnerabilities:\nCVE-2023-46045:\n\tbuffer overflow via a crafted config6a file\n\nNOTE: Crosses no security boundary, config files are under local control\nNOTE: https://gitlab.com/graphviz/graphviz/-/issues/2441\nNOTE: Introduced by: https://gitlab.com/graphviz/graphviz/-/commit/cf95714837f06f684929b54659523c2c9b1fc19f (2.38.0)\nNOTE: Fixed by: https://gitlab.com/graphviz/graphviz/-/commit/361f274ca901c3c476697a6404662d95f4dd43cb\nNOTE: Fixed by: https://gitlab.com/graphviz/graphviz/-/commit/3f31704cafd7da3e86bb2861accf5e90c973e62a\nNOTE: Fixed by: https://gitlab.com/graphviz/graphviz/-/commit/a95f977f5d809915ec4b14836d2b5b7f5e74881e\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "Medium"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-46045"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2023/ALAS-2024-527.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2023-46045",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-46045"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2023",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "graphviz-debugsource",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.44.0-25.amzn2023.0.7"
+								}
+							],
+							"fixed": [
+								"0:2.44.0-25.amzn2023.0.7"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "graphviz-devel",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.44.0-25.amzn2023.0.7"
+								}
+							],
+							"fixed": [
+								"0:2.44.0-25.amzn2023.0.7"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "graphviz-java",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.44.0-25.amzn2023.0.7"
+								}
+							],
+							"fixed": [
+								"0:2.44.0-25.amzn2023.0.7"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "graphviz-lua-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.44.0-25.amzn2023.0.7"
+								}
+							],
+							"fixed": [
+								"0:2.44.0-25.amzn2023.0.7"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "graphviz-gd-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.44.0-25.amzn2023.0.7"
+								}
+							],
+							"fixed": [
+								"0:2.44.0-25.amzn2023.0.7"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "graphviz-graphs",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.44.0-25.amzn2023.0.7"
+								}
+							],
+							"fixed": [
+								"0:2.44.0-25.amzn2023.0.7"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "graphviz-java-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.44.0-25.amzn2023.0.7"
+								}
+							],
+							"fixed": [
+								"0:2.44.0-25.amzn2023.0.7"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "graphviz-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.44.0-25.amzn2023.0.7"
+								}
+							],
+							"fixed": [
+								"0:2.44.0-25.amzn2023.0.7"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "graphviz-doc",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.44.0-25.amzn2023.0.7"
+								}
+							],
+							"fixed": [
+								"0:2.44.0-25.amzn2023.0.7"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "graphviz-ocaml-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.44.0-25.amzn2023.0.7"
+								}
+							],
+							"fixed": [
+								"0:2.44.0-25.amzn2023.0.7"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "graphviz-tcl-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.44.0-25.amzn2023.0.7"
+								}
+							],
+							"fixed": [
+								"0:2.44.0-25.amzn2023.0.7"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "graphviz-perl",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.44.0-25.amzn2023.0.7"
+								}
+							],
+							"fixed": [
+								"0:2.44.0-25.amzn2023.0.7"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "graphviz-tcl",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.44.0-25.amzn2023.0.7"
+								}
+							],
+							"fixed": [
+								"0:2.44.0-25.amzn2023.0.7"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "graphviz-gd",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.44.0-25.amzn2023.0.7"
+								}
+							],
+							"fixed": [
+								"0:2.44.0-25.amzn2023.0.7"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "graphviz-ocaml",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.44.0-25.amzn2023.0.7"
+								}
+							],
+							"fixed": [
+								"0:2.44.0-25.amzn2023.0.7"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "graphviz",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.44.0-25.amzn2023.0.7"
+								}
+							],
+							"fixed": [
+								"0:2.44.0-25.amzn2023.0.7"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "graphviz-perl-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.44.0-25.amzn2023.0.7"
+								}
+							],
+							"fixed": [
+								"0:2.44.0-25.amzn2023.0.7"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "graphviz-lua",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.44.0-25.amzn2023.0.7"
+								}
+							],
+							"fixed": [
+								"0:2.44.0-25.amzn2023.0.7"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

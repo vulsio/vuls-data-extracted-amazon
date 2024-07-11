@@ -1,0 +1,279 @@
+{
+	"id": "ALAS2R3.4-2024-001",
+	"advisories": [
+		{
+			"id": "ALAS2R3.4-2024-001",
+			"title": "Amazon Linux 2 - R3.4 2.0 - ALAS2R3.4-2024-001: important priority package update for R",
+			"description": "Package updates are available for Amazon Linux 2 - R3.4 that fix the following vulnerabilities:\nCVE-2024-27322:\n\tDeserialization of untrusted data can occur in the R statistical programming language, on any version starting at 1.4.0 up to and not including 4.4.0, enabling a maliciously crafted RDS (R Data Serialization) formatted file or R package to run arbitrary code on an end user's system when interacted with.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "important"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27322"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALASR3.4-2024-001.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2024-27322",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27322"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "R",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2extra-r3.4"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:3.4.3-1.amzn2.0.2"
+								}
+							],
+							"fixed": [
+								"0:3.4.3-1.amzn2.0.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "R-java",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2extra-r3.4"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:3.4.3-1.amzn2.0.2"
+								}
+							],
+							"fixed": [
+								"0:3.4.3-1.amzn2.0.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "R-java-devel",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2extra-r3.4"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:3.4.3-1.amzn2.0.2"
+								}
+							],
+							"fixed": [
+								"0:3.4.3-1.amzn2.0.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libRmath",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2extra-r3.4"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:3.4.3-1.amzn2.0.2"
+								}
+							],
+							"fixed": [
+								"0:3.4.3-1.amzn2.0.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libRmath-devel",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2extra-r3.4"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:3.4.3-1.amzn2.0.2"
+								}
+							],
+							"fixed": [
+								"0:3.4.3-1.amzn2.0.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "R-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2extra-r3.4"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:3.4.3-1.amzn2.0.2"
+								}
+							],
+							"fixed": [
+								"0:3.4.3-1.amzn2.0.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "R-core",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2extra-r3.4"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:3.4.3-1.amzn2.0.2"
+								}
+							],
+							"fixed": [
+								"0:3.4.3-1.amzn2.0.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "R-core-devel",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2extra-r3.4"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:3.4.3-1.amzn2.0.2"
+								}
+							],
+							"fixed": [
+								"0:3.4.3-1.amzn2.0.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "R-devel",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2extra-r3.4"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:3.4.3-1.amzn2.0.2"
+								}
+							],
+							"fixed": [
+								"0:3.4.3-1.amzn2.0.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libRmath-static",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2extra-r3.4"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:3.4.3-1.amzn2.0.2"
+								}
+							],
+							"fixed": [
+								"0:3.4.3-1.amzn2.0.2"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

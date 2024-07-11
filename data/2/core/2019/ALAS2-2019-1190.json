@@ -1,0 +1,79 @@
+{
+	"id": "ALAS2-2019-1190",
+	"advisories": [
+		{
+			"id": "ALAS2-2019-1190",
+			"title": "Amazon Linux 2 2017.12 - ALAS2-2019-1190: important priority package update for filesystem",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "important"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALAS-2019-1190.html"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "filesystem",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:3.2-25.amzn2.0.4"
+								}
+							],
+							"fixed": [
+								"0:3.2-25.amzn2.0.4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "filesystem-content",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:3.2-25.amzn2.0.4"
+								}
+							],
+							"fixed": [
+								"0:3.2-25.amzn2.0.4"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

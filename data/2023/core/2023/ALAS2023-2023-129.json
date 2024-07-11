@@ -1,0 +1,118 @@
+{
+	"id": "ALAS2023-2023-129",
+	"advisories": [
+		{
+			"id": "ALAS2023-2023-129",
+			"title": "Amazon Linux 2023 - ALAS2023-2023-129: Important priority package update for aws-nitro-enclaves-cli",
+			"description": "Package updates are available for Amazon Linux 2023 that fix the following vulnerabilities:\nCVE-2022-31394:\n\tHyperium Hyper before 0.14.19 does not allow for customization of the max_header_list_size method in the H2 third-party software, allowing attackers to perform HTTP2 attacks.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "Important"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-31394"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2023/ALAS-2023-129.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2022-31394",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-31394"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2023",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "aws-nitro-enclaves-cli-devel",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.2.2-0.amzn2023"
+								}
+							],
+							"fixed": [
+								"0:1.2.2-0.amzn2023"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "aws-nitro-enclaves-cli-integration-tests",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.2.2-0.amzn2023"
+								}
+							],
+							"fixed": [
+								"0:1.2.2-0.amzn2023"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "aws-nitro-enclaves-cli",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.2.2-0.amzn2023"
+								}
+							],
+							"fixed": [
+								"0:1.2.2-0.amzn2023"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

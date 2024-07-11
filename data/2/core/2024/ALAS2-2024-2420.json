@@ -1,0 +1,141 @@
+{
+	"id": "ALAS2-2024-2420",
+	"advisories": [
+		{
+			"id": "ALAS2-2024-2420",
+			"title": "Amazon Linux 2 2017.12 - ALAS2-2024-2420: important priority package update for postfix",
+			"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2023-51764:\n\tPostfix through 3.8.4 allows SMTP smuggling unless configured with smtpd_data_restrictions=reject_unauth_pipelining and smtpd_discard_ehlo_keywords=chunking (or certain other options that exist in recent versions). Remote attackers can use a published exploitation technique to inject e-mail messages with a spoofed MAIL FROM address, allowing bypass of an SPF protection mechanism. This occurs because Postfix supports <LF>.<CR><LF> but some other popular e-mail servers do not. To prevent attack variants (by always disallowing <LF> without <CR>), a different solution is required: the smtpd_forbid_bare_newline=yes option with a Postfix minimum version of 3.5.23, 3.6.13, 3.7.9, 3.8.4, or 3.9.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "important"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-51764"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALAS-2024-2420.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2023-51764",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-51764"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "postfix-sysvinit",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "2:2.10.1-6.amzn2.0.4"
+								}
+							],
+							"fixed": [
+								"2:2.10.1-6.amzn2.0.4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "postfix-perl-scripts",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "2:2.10.1-6.amzn2.0.4"
+								}
+							],
+							"fixed": [
+								"2:2.10.1-6.amzn2.0.4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "postfix-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "2:2.10.1-6.amzn2.0.4"
+								}
+							],
+							"fixed": [
+								"2:2.10.1-6.amzn2.0.4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "postfix",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "2:2.10.1-6.amzn2.0.4"
+								}
+							],
+							"fixed": [
+								"2:2.10.1-6.amzn2.0.4"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

@@ -1,0 +1,95 @@
+{
+	"id": "ALAS2SQUID4-2023-005",
+	"advisories": [
+		{
+			"id": "ALAS2SQUID4-2023-005",
+			"title": "Amazon Linux 2 - Squid4 2.0 - ALAS2SQUID4-2023-005: important priority package update for squid",
+			"description": "Package updates are available for Amazon Linux 2 - Squid4 that fix the following vulnerabilities:\nCVE-2020-25097:\n\tA flaw was found in squid. Due to improper validation while parsing the request URI, squid is vulnerable to HTTP request smuggling. This issue could allow a trusted client to perform an HTTP request smuggling attack and access services otherwise forbidden by squid. The highest threat from this vulnerability is to data confidentiality.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "important"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-25097"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALASSQUID4-2023-005.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2020-25097",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-25097"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "squid",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2extra-squid4"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "7:4.14-1.amzn2.0.1"
+								}
+							],
+							"fixed": [
+								"7:4.14-1.amzn2.0.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "squid-debuginfo",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2extra-squid4"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "7:4.14-1.amzn2.0.1"
+								}
+							],
+							"fixed": [
+								"7:4.14-1.amzn2.0.1"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

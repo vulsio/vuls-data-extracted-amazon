@@ -1,0 +1,95 @@
+{
+	"id": "ALAS2-2021-1663",
+	"advisories": [
+		{
+			"id": "ALAS2-2021-1663",
+			"title": "Amazon Linux 2 2017.12 - ALAS2-2021-1663: medium priority package update for microcode_ctl",
+			"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2020-8696:\n\tA flaw was found in the Intel Advanced Vector Extensions (AVX) implementation, where a local authenticated attacker with the ability to execute AVX instructions can gather the AVX register state from previous AVX executions. This vulnerability allows information disclosure of the AVX register state.\n1890355: CVE-2020-8696 hw: Vector Register Leakage-Active\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "medium"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-8696"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALAS-2021-1663.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2020-8696",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-8696"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "microcode_ctl-debuginfo",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "2:2.1-47.amzn2.0.9"
+								}
+							],
+							"fixed": [
+								"2:2.1-47.amzn2.0.9"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "microcode_ctl",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "2:2.1-47.amzn2.0.9"
+								}
+							],
+							"fixed": [
+								"2:2.1-47.amzn2.0.9"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

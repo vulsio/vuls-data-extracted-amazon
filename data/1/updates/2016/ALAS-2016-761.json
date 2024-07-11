@@ -1,0 +1,147 @@
+{
+	"id": "ALAS-2016-761",
+	"advisories": [
+		{
+			"id": "ALAS-2016-761",
+			"title": "Amazon Linux AMI 2014.03 - ALAS-2016-761: important priority package update for memcached",
+			"description": "Package updates are available for Amazon Linux AMI that fix the following vulnerabilities:\nCVE-2016-8706:\n\tAn integer overflow flaw, leading to a heap-based buffer overflow, was found in memcached&#039;s parsing of SASL authentication messages. An attacker could create a specially crafted message that would cause the memcached server to crash or, potentially, execute arbitrary code.\n1390512: \nCVE-2016-8706 memcached: SASL authentication remote code execution\n\nCVE-2016-8705:\n\tAn integer overflow flaw, leading to a heap-based buffer overflow, was found in the memcached binary protocol. An attacker could create a specially crafted message that would cause the memcached server to crash or, potentially, execute arbitrary code.\n1390511: \nCVE-2016-8705 memcached: Server update remote code execution\n\nCVE-2016-8704:\n\tAn integer overflow flaw, leading to a heap-based buffer overflow, was found in the memcached binary protocol. An attacker could create a specially crafted message that would cause the memcached server to crash or, potentially, execute arbitrary code.\n1390510: \nCVE-2016-8704 memcached: Server append/prepend remote code execution\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "important"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-8704"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-8705"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-8706"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/ALAS-2016-761.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2016-8704",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-8704"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-8705",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-8705"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-8706",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-8706"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:1",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "memcached-debuginfo",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.4.15-9.13.amzn1"
+								}
+							],
+							"fixed": [
+								"0:1.4.15-9.13.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "memcached",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.4.15-9.13.amzn1"
+								}
+							],
+							"fixed": [
+								"0:1.4.15-9.13.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "memcached-devel",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.4.15-9.13.amzn1"
+								}
+							],
+							"fixed": [
+								"0:1.4.15-9.13.amzn1"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

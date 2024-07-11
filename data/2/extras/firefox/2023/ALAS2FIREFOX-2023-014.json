@@ -1,0 +1,147 @@
+{
+	"id": "ALAS2FIREFOX-2023-014",
+	"advisories": [
+		{
+			"id": "ALAS2FIREFOX-2023-014",
+			"title": "Amazon Linux 2 - Firefox 2.0 - ALAS2FIREFOX-2023-014: important priority package update for firefox",
+			"description": "Package updates are available for Amazon Linux 2 - Firefox that fix the following vulnerabilities:\nCVE-2023-4584:\n\tMemory safety bug\n\nCVE-2023-4581:\n\tXLL file extensions were downloadable without warnings.\n\nCVE-2023-4575:\n\tMemory corruption in IPC FilePickerShownCallback\n\nCVE-2023-4574:\n\tMemory corruption in IPC ColorPickerShownCallback\n\nCVE-2023-4573:\n\tMemory corruption in IPC CanvasTranslator\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "important"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-4573"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-4574"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-4575"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-4581"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-4584"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALASFIREFOX-2023-014.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2023-4573",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-4573"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-4574",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-4574"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-4575",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-4575"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-4581",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-4581"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-4584",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-4584"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "firefox",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2extra-firefox"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:102.15.0-1.amzn2.0.1"
+								}
+							],
+							"fixed": [
+								"0:102.15.0-1.amzn2.0.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "firefox-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2extra-firefox"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:102.15.0-1.amzn2.0.1"
+								}
+							],
+							"fixed": [
+								"0:102.15.0-1.amzn2.0.1"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

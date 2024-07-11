@@ -1,0 +1,302 @@
+{
+	"id": "ALAS-2014-458",
+	"advisories": [
+		{
+			"id": "ALAS-2014-458",
+			"title": "Amazon Linux AMI 2014.03 - ALAS-2014-458: important priority package update for rpm",
+			"description": "Package updates are available for Amazon Linux AMI that fix the following vulnerabilities:\nCVE-2014-8118:\n\tIt was found that RPM could encounter an integer overflow, leading to a stack-based overflow, while parsing a crafted CPIO header in the payload section of an RPM file.  This could allow an attacker to modify signed RPM files in such a way that they would execute code chosen by the attacker during package installation.\n1168715: \nCVE-2014-8118 rpm: integer overflow and stack overflow in CPIO header parsing\n\nCVE-2013-6435:\n\tIt was found that RPM wrote file contents to the target installation directory under a temporary name, and verified its cryptographic signature only after the temporary file has been written completely. Under certain conditions, the system interprets the unverified temporary file contents and extracts commands from it. This could allow an attacker to modify signed RPM files in such a way that they would execute code chosen by the attacker during package installation.\n1039811: \nCVE-2013-6435 rpm: race condition during the installation process\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "important"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-6435"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-8118"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/ALAS-2014-458.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2013-6435",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-6435"
+				}
+			]
+		},
+		{
+			"id": "CVE-2014-8118",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-8118"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:1",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "rpm-libs",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:4.11.2-2.58.amzn1"
+								}
+							],
+							"fixed": [
+								"0:4.11.2-2.58.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "rpm-apidocs",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:4.11.2-2.58.amzn1"
+								}
+							],
+							"fixed": [
+								"0:4.11.2-2.58.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "rpm-build",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:4.11.2-2.58.amzn1"
+								}
+							],
+							"fixed": [
+								"0:4.11.2-2.58.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "rpm-python",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:4.11.2-2.58.amzn1"
+								}
+							],
+							"fixed": [
+								"0:4.11.2-2.58.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "rpm",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:4.11.2-2.58.amzn1"
+								}
+							],
+							"fixed": [
+								"0:4.11.2-2.58.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "rpm-build-libs",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:4.11.2-2.58.amzn1"
+								}
+							],
+							"fixed": [
+								"0:4.11.2-2.58.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "rpm-cron",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:4.11.2-2.58.amzn1"
+								}
+							],
+							"fixed": [
+								"0:4.11.2-2.58.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "rpm-debuginfo",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:4.11.2-2.58.amzn1"
+								}
+							],
+							"fixed": [
+								"0:4.11.2-2.58.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "rpm-devel",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:4.11.2-2.58.amzn1"
+								}
+							],
+							"fixed": [
+								"0:4.11.2-2.58.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "rpm-sign",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:4.11.2-2.58.amzn1"
+								}
+							],
+							"fixed": [
+								"0:4.11.2-2.58.amzn1"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

@@ -1,0 +1,123 @@
+{
+	"id": "ALAS-2018-1091",
+	"advisories": [
+		{
+			"id": "ALAS-2018-1091",
+			"title": "Amazon Linux AMI 2014.03 - ALAS-2018-1091: important priority package update for spamassassin",
+			"description": "Package updates are available for Amazon Linux AMI that fix the following vulnerabilities:\nCVE-2018-11781:\n\tA flaw was found in the way a local user on the SpamAssassin server could inject code in the meta rule syntax. This could cause the arbitrary code execution on the server when these rules are being processed.\n1629536: \nCVE-2018-11781 spamassassin: Local user code injection in the meta rule syntax\n\nCVE-2018-11780:\n\tA potential Remote Code Execution bug exists with the PDFInfo plugin in Apache SpamAssassin before 3.4.2.\n1629532: \nCVE-2018-11780 spamassassin: Potential remote code execution vulnerability in PDFInfo plugin\n\nCVE-2017-15705:\n\tA flaw was found in the way SpamAssassin processes HTML email containing unclosed HTML tags. A carefully crafted mail message could cause SpamAssassin to consume significant resources.  If a large number of these messages are sent, a denial of service could occur potentially delaying or preventing the delivery of email.\n1629521: \nCVE-2017-15705 spamassassin: Certain unclosed tags in crafted emails allow for scan timeouts and result in denial of service\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "important"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-15705"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11780"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11781"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/ALAS-2018-1091.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2017-15705",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-15705"
+				}
+			]
+		},
+		{
+			"id": "CVE-2018-11780",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11780"
+				}
+			]
+		},
+		{
+			"id": "CVE-2018-11781",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11781"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:1",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "spamassassin-debuginfo",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:3.4.2-2.14.amzn1"
+								}
+							],
+							"fixed": [
+								"0:3.4.2-2.14.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "spamassassin",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:3.4.2-2.14.amzn1"
+								}
+							],
+							"fixed": [
+								"0:3.4.2-2.14.amzn1"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

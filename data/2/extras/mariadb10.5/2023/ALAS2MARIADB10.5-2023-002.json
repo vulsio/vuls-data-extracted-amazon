@@ -1,0 +1,581 @@
+{
+	"id": "ALAS2MARIADB10.5-2023-002",
+	"advisories": [
+		{
+			"id": "ALAS2MARIADB10.5-2023-002",
+			"title": "Amazon Linux 2 - Mariadb10.5 2.0 - ALAS2MARIADB10.5-2023-002: medium priority package update for mariadb",
+			"description": "Package updates are available for Amazon Linux 2 - Mariadb10.5 that fix the following vulnerabilities:\nCVE-2022-32084:\n\tMariaDB v10.2 to v10.7 was discovered to contain a segmentation fault via the component sub_select.\n\nCVE-2022-32082:\n\tMariaDB v10.5 to v10.7 was discovered to contain an assertion failure at table->get_ref_count() == 0 in dict0dict.cc.\n\nCVE-2022-32081:\n\tMariaDB v10.4 to v10.7 was discovered to contain an use-after-poison in prepare_inplace_add_virtual at /storage/innobase/handler/handler0alter.cc.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "medium"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-32081"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-32082"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-32084"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALASMARIADB10.5-2023-002.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2022-32081",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-32081"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-32082",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-32082"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-32084",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-32084"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mariadb-test",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2extra-mariadb10.5"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "3:10.5.10-2.amzn2.0.2"
+								}
+							],
+							"fixed": [
+								"3:10.5.10-2.amzn2.0.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mariadb-config",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2extra-mariadb10.5"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "3:10.5.10-2.amzn2.0.2"
+								}
+							],
+							"fixed": [
+								"3:10.5.10-2.amzn2.0.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mariadb-errmsg",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2extra-mariadb10.5"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "3:10.5.10-2.amzn2.0.2"
+								}
+							],
+							"fixed": [
+								"3:10.5.10-2.amzn2.0.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mariadb-oqgraph-engine",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2extra-mariadb10.5"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "3:10.5.10-2.amzn2.0.2"
+								}
+							],
+							"fixed": [
+								"3:10.5.10-2.amzn2.0.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mariadb-gssapi-server",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2extra-mariadb10.5"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "3:10.5.10-2.amzn2.0.2"
+								}
+							],
+							"fixed": [
+								"3:10.5.10-2.amzn2.0.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mariadb-sphinx-engine",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2extra-mariadb10.5"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "3:10.5.10-2.amzn2.0.2"
+								}
+							],
+							"fixed": [
+								"3:10.5.10-2.amzn2.0.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mariadb-embedded",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2extra-mariadb10.5"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "3:10.5.10-2.amzn2.0.2"
+								}
+							],
+							"fixed": [
+								"3:10.5.10-2.amzn2.0.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mariadb-libs",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2extra-mariadb10.5"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "3:10.5.10-2.amzn2.0.2"
+								}
+							],
+							"fixed": [
+								"3:10.5.10-2.amzn2.0.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mariadb-backup",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2extra-mariadb10.5"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "3:10.5.10-2.amzn2.0.2"
+								}
+							],
+							"fixed": [
+								"3:10.5.10-2.amzn2.0.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mariadb-pam",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2extra-mariadb10.5"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "3:10.5.10-2.amzn2.0.2"
+								}
+							],
+							"fixed": [
+								"3:10.5.10-2.amzn2.0.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mariadb-embedded-devel",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2extra-mariadb10.5"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "3:10.5.10-2.amzn2.0.2"
+								}
+							],
+							"fixed": [
+								"3:10.5.10-2.amzn2.0.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mariadb-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2extra-mariadb10.5"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "3:10.5.10-2.amzn2.0.2"
+								}
+							],
+							"fixed": [
+								"3:10.5.10-2.amzn2.0.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mariadb",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2extra-mariadb10.5"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "3:10.5.10-2.amzn2.0.2"
+								}
+							],
+							"fixed": [
+								"3:10.5.10-2.amzn2.0.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mariadb-common",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2extra-mariadb10.5"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "3:10.5.10-2.amzn2.0.2"
+								}
+							],
+							"fixed": [
+								"3:10.5.10-2.amzn2.0.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mariadb-server-galera",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2extra-mariadb10.5"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "3:10.5.10-2.amzn2.0.2"
+								}
+							],
+							"fixed": [
+								"3:10.5.10-2.amzn2.0.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mariadb-connect-engine",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2extra-mariadb10.5"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "3:10.5.10-2.amzn2.0.2"
+								}
+							],
+							"fixed": [
+								"3:10.5.10-2.amzn2.0.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mariadb-cracklib-password-check",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2extra-mariadb10.5"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "3:10.5.10-2.amzn2.0.2"
+								}
+							],
+							"fixed": [
+								"3:10.5.10-2.amzn2.0.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mariadb-devel",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2extra-mariadb10.5"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "3:10.5.10-2.amzn2.0.2"
+								}
+							],
+							"fixed": [
+								"3:10.5.10-2.amzn2.0.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mariadb-server",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2extra-mariadb10.5"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "3:10.5.10-2.amzn2.0.2"
+								}
+							],
+							"fixed": [
+								"3:10.5.10-2.amzn2.0.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mariadb-rocksdb-engine",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-mariadb10.5"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "3:10.5.10-2.amzn2.0.2"
+								}
+							],
+							"fixed": [
+								"3:10.5.10-2.amzn2.0.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mariadb-s3-engine",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2extra-mariadb10.5"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "3:10.5.10-2.amzn2.0.2"
+								}
+							],
+							"fixed": [
+								"3:10.5.10-2.amzn2.0.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mariadb-server-utils",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2extra-mariadb10.5"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "3:10.5.10-2.amzn2.0.2"
+								}
+							],
+							"fixed": [
+								"3:10.5.10-2.amzn2.0.2"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

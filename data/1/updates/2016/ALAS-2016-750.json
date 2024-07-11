@@ -1,0 +1,97 @@
+{
+	"id": "ALAS-2016-750",
+	"advisories": [
+		{
+			"id": "ALAS-2016-750",
+			"title": "Amazon Linux AMI 2014.03 - ALAS-2016-750: medium priority package update for openvpn",
+			"description": "Package updates are available for Amazon Linux AMI that fix the following vulnerabilities:\nCVE-2016-6329:\n\tCiphers with 64-bit block sizes used in CBC mode were found to be vulnerable to birthday attack when key renegotiation doesn't happen frequently or at all in long running connections. Blowfish cipher as used in OpenVPN by default is vulnerable to this attack, that allows remote attacker to recover partial plaintext information (XOR of two plaintext blocks).\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "medium"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-6329"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/ALAS-2016-750.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2016-6329",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-6329"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:1",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "openvpn",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.3.12-1.16.amzn1"
+								}
+							],
+							"fixed": [
+								"0:2.3.12-1.16.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "openvpn-debuginfo",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.3.12-1.16.amzn1"
+								}
+							],
+							"fixed": [
+								"0:2.3.12-1.16.amzn1"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

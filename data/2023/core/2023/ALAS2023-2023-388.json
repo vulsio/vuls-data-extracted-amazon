@@ -1,0 +1,144 @@
+{
+	"id": "ALAS2023-2023-388",
+	"advisories": [
+		{
+			"id": "ALAS2023-2023-388",
+			"title": "Amazon Linux 2023 - ALAS2023-2023-388: Important priority package update for amazon-ssm-agent",
+			"description": "Package updates are available for Amazon Linux 2023 that fix the following vulnerabilities:\nCVE-2023-24538:\n\tTemplates did not properly consider backticks (`) as Javascript string delimiters, and as such did\nnot escape them as expected. Backticks are used, since ES6, for JS template literals. If a template\ncontained a Go template action within a Javascript template literal, the contents of the action could\nbe used to terminate the literal, injecting arbitrary Javascript code into the Go template.\n\nCVE-2022-41723:\n\thttp2/hpack: avoid quadratic complexity in hpack decoding\n\nCVE-2021-43565:\n\tThe x/crypto/ssh package before 0.0.0-20211202192323-5770296d904e of golang.org/x/crypto allows an attacker to panic an SSH server.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "Important"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-43565"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-41723"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-24538"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2023/ALAS-2023-388.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2021-43565",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-43565"
+				}
+			]
+		},
+		{
+			"id": "CVE-2022-41723",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-41723"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-24538",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-24538"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2023",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "amazon-ssm-agent-debugsource",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:3.2.1705.0-1.amzn2023"
+								}
+							],
+							"fixed": [
+								"0:3.2.1705.0-1.amzn2023"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "amazon-ssm-agent",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:3.2.1705.0-1.amzn2023"
+								}
+							],
+							"fixed": [
+								"0:3.2.1705.0-1.amzn2023"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "amazon-ssm-agent-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:3.2.1705.0-1.amzn2023"
+								}
+							],
+							"fixed": [
+								"0:3.2.1705.0-1.amzn2023"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

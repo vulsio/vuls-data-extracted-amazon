@@ -1,0 +1,110 @@
+{
+	"id": "ALAS-2023-1836",
+	"advisories": [
+		{
+			"id": "ALAS-2023-1836",
+			"title": "Amazon Linux AMI 2014.03 - ALAS-2023-1836: medium priority package update for mutt",
+			"description": "Package updates are available for Amazon Linux AMI that fix the following vulnerabilities:\nCVE-2023-4875:\n\tNull pointer dereference when composing from a specially crafted draft message in Mutt >1.5.2 <2.2.12\n\nCVE-2023-4874:\n\tNull pointer dereference when viewing a specially crafted email in Mutt >1.5.2 <2.2.12\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "medium"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-4874"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-4875"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/ALAS-2023-1836.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2023-4874",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-4874"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-4875",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-4875"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:1",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mutt-debuginfo",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "5:1.5.20-7.20091214hg736b6a.10.amzn1"
+								}
+							],
+							"fixed": [
+								"5:1.5.20-7.20091214hg736b6a.10.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mutt",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "5:1.5.20-7.20091214hg736b6a.10.amzn1"
+								}
+							],
+							"fixed": [
+								"5:1.5.20-7.20091214hg736b6a.10.amzn1"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

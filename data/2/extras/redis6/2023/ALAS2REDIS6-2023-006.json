@@ -1,0 +1,141 @@
+{
+	"id": "ALAS2REDIS6-2023-006",
+	"advisories": [
+		{
+			"id": "ALAS2REDIS6-2023-006",
+			"title": "Amazon Linux 2 - Redis6 2.0 - ALAS2REDIS6-2023-006: important priority package update for redis",
+			"description": "Package updates are available for Amazon Linux 2 - Redis6 that fix the following vulnerabilities:\nCVE-2021-32687:\n\tRedis is an open source, in-memory database that persists on disk. An integer overflow bug affecting all versions of Redis can be exploited to corrupt the heap and potentially be used to leak arbitrary contents of the heap or trigger remote code execution. The vulnerability involves changing the default set-max-intset-entries configuration parameter to a very large value and constructing specially crafted commands to manipulate sets. The problem is fixed in Redis versions 6.2.6, 6.0.16 and 5.0.14. An additional workaround to mitigate the problem without patching the redis-server executable is to prevent users from modifying the set-max-intset-entries configuration parameter. This can be done using ACL to restrict unprivileged users from using the CONFIG SET command.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "important"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-32687"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALASREDIS6-2023-006.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2021-32687",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-32687"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "redis-devel",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-redis6"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:6.2.5-1.amzn2.0.1"
+								}
+							],
+							"fixed": [
+								"0:6.2.5-1.amzn2.0.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "redis-doc",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn2extra-redis6"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:6.2.5-1.amzn2.0.1"
+								}
+							],
+							"fixed": [
+								"0:6.2.5-1.amzn2.0.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "redis-debuginfo",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-redis6"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:6.2.5-1.amzn2.0.1"
+								}
+							],
+							"fixed": [
+								"0:6.2.5-1.amzn2.0.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "redis",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-redis6"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:6.2.5-1.amzn2.0.1"
+								}
+							],
+							"fixed": [
+								"0:6.2.5-1.amzn2.0.1"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

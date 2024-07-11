@@ -1,0 +1,187 @@
+{
+	"id": "ALAS2023-2023-425",
+	"advisories": [
+		{
+			"id": "ALAS2023-2023-425",
+			"title": "Amazon Linux 2023 - ALAS2023-2023-425: Medium priority package update for binutils",
+			"description": "Package updates are available for Amazon Linux 2023 that fix the following vulnerabilities:\nCVE-2023-1579:\n\tA potential illegal memory access in binutils has been found when parsing a corrupt file.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "Medium"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-1579"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2023/ALAS-2023-425.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2023-1579",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-1579"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2023",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "binutils-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.39-6.amzn2023.0.10"
+								}
+							],
+							"fixed": [
+								"0:2.39-6.amzn2023.0.10"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "binutils-gprofng",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.39-6.amzn2023.0.10"
+								}
+							],
+							"fixed": [
+								"0:2.39-6.amzn2023.0.10"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "binutils-debugsource",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.39-6.amzn2023.0.10"
+								}
+							],
+							"fixed": [
+								"0:2.39-6.amzn2023.0.10"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "binutils",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.39-6.amzn2023.0.10"
+								}
+							],
+							"fixed": [
+								"0:2.39-6.amzn2023.0.10"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "binutils-devel",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.39-6.amzn2023.0.10"
+								}
+							],
+							"fixed": [
+								"0:2.39-6.amzn2023.0.10"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "binutils-gprofng-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.39-6.amzn2023.0.10"
+								}
+							],
+							"fixed": [
+								"0:2.39-6.amzn2023.0.10"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

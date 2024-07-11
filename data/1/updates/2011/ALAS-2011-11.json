@@ -1,0 +1,147 @@
+{
+	"id": "ALAS-2011-11",
+	"advisories": [
+		{
+			"id": "ALAS-2011-11",
+			"title": "Amazon Linux - ALAS-2011-11: medium priority package update for puppet",
+			"description": "Package updates are available for Amazon Linux that fix the following vulnerabilities:\nCVE-2011-3871:\n\tPuppet 2.7.x before 2.7.5, 2.6.x before 2.6.11, and 0.25.x, when running in --edit mode, uses a predictable file name, which allows local users to run arbitrary Puppet code or trick a user into editing arbitrary files.\n\nCVE-2011-3870:\n\tPuppet 2.7.x before 2.7.5, 2.6.x before 2.6.11, and 0.25.x allows local users to modify the permissions of arbitrary files via a symlink attack on the SSH authorized_keys file.\n\nCVE-2011-3869:\n\tPuppet 2.7.x before 2.7.5, 2.6.x before 2.6.11, and 0.25.x allows local users to overwrite arbitrary files via a symlink attack on the .k5login file.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "medium"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-3869"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-3870"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-3871"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/ALAS-2011-11.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2011-3869",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-3869"
+				}
+			]
+		},
+		{
+			"id": "CVE-2011-3870",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-3870"
+				}
+			]
+		},
+		{
+			"id": "CVE-2011-3871",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-3871"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:1",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "puppet-server",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.6.6-3.2.amzn1"
+								}
+							],
+							"fixed": [
+								"0:2.6.6-3.2.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "puppet-debuginfo",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.6.6-3.2.amzn1"
+								}
+							],
+							"fixed": [
+								"0:2.6.6-3.2.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "puppet",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.6.6-3.2.amzn1"
+								}
+							],
+							"fixed": [
+								"0:2.6.6-3.2.amzn1"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

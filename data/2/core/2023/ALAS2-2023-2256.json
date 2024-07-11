@@ -1,0 +1,193 @@
+{
+	"id": "ALAS2-2023-2256",
+	"advisories": [
+		{
+			"id": "ALAS2-2023-2256",
+			"title": "Amazon Linux 2 2017.12 - ALAS2-2023-2256: medium priority package update for LibRaw",
+			"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2021-32142:\n\tBuffer Overflow vulnerability in LibRaw linux/unix v0.20.0 allows attacker to escalate privileges via the LibRaw_buffer_datastream::gets(char*, int) in /src/libraw/src/libraw_datastream.cpp.\n\nCVE-2020-35532:\n\tIn LibRaw, an out-of-bounds read vulnerability exists within the \"simple_decode_row()\" function (libraw\\src\\x3f\\x3f_utils_patched.cpp) which can be triggered via an image with a large row_stride field.\n\nCVE-2020-35531:\n\tIn LibRaw, an out-of-bounds read vulnerability exists within the get_huffman_diff() function (libraw\\src\\x3f\\x3f_utils_patched.cpp) when reading data from an image file.\n\nCVE-2020-35530:\n\tIn LibRaw, there is an out-of-bounds write vulnerability within the \"new_node()\" function (libraw\\src\\x3f\\x3f_utils_patched.cpp) that can be triggered via a crafted X3F file.\n\nCVE-2020-22628:\n\tBuffer Overflow vulnerability in LibRaw::stretch() function in libraw\\src\\postprocessing\\aspect_ratio.cpp.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "medium"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-22628"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-35530"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-35531"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-35532"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-32142"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALAS-2023-2256.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2020-22628",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-22628"
+				}
+			]
+		},
+		{
+			"id": "CVE-2020-35530",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-35530"
+				}
+			]
+		},
+		{
+			"id": "CVE-2020-35531",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-35531"
+				}
+			]
+		},
+		{
+			"id": "CVE-2020-35532",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-35532"
+				}
+			]
+		},
+		{
+			"id": "CVE-2021-32142",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-32142"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "LibRaw",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:0.19.4-1.amzn2.0.2"
+								}
+							],
+							"fixed": [
+								"0:0.19.4-1.amzn2.0.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "LibRaw-devel",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:0.19.4-1.amzn2.0.2"
+								}
+							],
+							"fixed": [
+								"0:0.19.4-1.amzn2.0.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "LibRaw-static",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:0.19.4-1.amzn2.0.2"
+								}
+							],
+							"fixed": [
+								"0:0.19.4-1.amzn2.0.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "LibRaw-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:0.19.4-1.amzn2.0.2"
+								}
+							],
+							"fixed": [
+								"0:0.19.4-1.amzn2.0.2"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

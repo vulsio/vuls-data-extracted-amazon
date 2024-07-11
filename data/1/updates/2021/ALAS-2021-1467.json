@@ -1,0 +1,169 @@
+{
+	"id": "ALAS-2021-1467",
+	"advisories": [
+		{
+			"id": "ALAS-2021-1467",
+			"title": "Amazon Linux AMI 2014.03 - ALAS-2021-1467: medium priority package update for qemu-kvm",
+			"description": "Package updates are available for Amazon Linux AMI that fix the following vulnerabilities:\nCVE-2019-15890:\n\tA use-after-free issue was found in the SLiRP networking implementation of the QEMU emulator. The issue occurs in ip_reass() routine while reassembling incoming packets, if the first fragment is bigger than the m->m_dat[] buffer. A user or process could use this flaw to crash the QEMU process on the host, resulting in a denial of service.\n1749716: CVE-2019-15890 QEMU: Slirp: use-after-free during packet reassembly\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "medium"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-15890"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/ALAS-2021-1467.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2019-15890",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-15890"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:1",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "qemu-kvm-debuginfo",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "10:1.5.3-156.25.amzn1"
+								}
+							],
+							"fixed": [
+								"10:1.5.3-156.25.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "qemu-kvm",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "10:1.5.3-156.25.amzn1"
+								}
+							],
+							"fixed": [
+								"10:1.5.3-156.25.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "qemu-kvm-tools",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "10:1.5.3-156.25.amzn1"
+								}
+							],
+							"fixed": [
+								"10:1.5.3-156.25.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "qemu-kvm-common",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "10:1.5.3-156.25.amzn1"
+								}
+							],
+							"fixed": [
+								"10:1.5.3-156.25.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "qemu-img",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "10:1.5.3-156.25.amzn1"
+								}
+							],
+							"fixed": [
+								"10:1.5.3-156.25.amzn1"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

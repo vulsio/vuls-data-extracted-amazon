@@ -1,0 +1,131 @@
+{
+	"id": "ALAS2023-2023-445",
+	"advisories": [
+		{
+			"id": "ALAS2023-2023-445",
+			"title": "Amazon Linux 2023 - ALAS2023-2023-445: Medium priority package update for squid",
+			"description": "Package updates are available for Amazon Linux 2023 that fix the following vulnerabilities:\nCVE-2024-25617:\n\tSquid is an open source caching proxy for the Web supporting HTTP, HTTPS, FTP, and more. Due to a Collapse of Data into Unsafe Value bug ,Squid may be vulnerable to a Denial of Service attack against HTTP header parsing. This problem allows a remote client or a remote server to perform Denial of Service when sending oversized headers in HTTP messages. In versions of Squid prior to 6.5 this can be achieved if the request_header_max_size or reply_header_max_size settings are unchanged from the default. In Squid version 6.5 and later, the default setting of these parameters is safe. Squid will emit a critical warning in cache.log if the administrator is setting these parameters to unsafe values. Squid will not at this time prevent these settings from being changed to unsafe values. Users are advised to upgrade to version 6.5. There are no known workarounds for this vulnerability. This issue is also tracked as SQUID-2024:2\n\nCVE-2023-49286:\n\tSquid is a caching proxy for the Web supporting HTTP, HTTPS, FTP, and more. Due to an Incorrect Check of Function Return Value bug Squid is vulnerable to a Denial of Service attack against its Helper process management. This bug is fixed by Squid version 6.5. Users are advised to upgrade. There are no known workarounds for this vulnerability.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "Medium"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-49286"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-25617"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2023/ALAS-2023-445.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2023-49286",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-49286"
+				}
+			]
+		},
+		{
+			"id": "CVE-2024-25617",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-25617"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2023",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "squid-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "7:5.8-1.amzn2023.0.3"
+								}
+							],
+							"fixed": [
+								"7:5.8-1.amzn2023.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "squid",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "7:5.8-1.amzn2023.0.3"
+								}
+							],
+							"fixed": [
+								"7:5.8-1.amzn2023.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "squid-debugsource",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "7:5.8-1.amzn2023.0.3"
+								}
+							],
+							"fixed": [
+								"7:5.8-1.amzn2023.0.3"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

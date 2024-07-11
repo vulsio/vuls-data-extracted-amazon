@@ -1,0 +1,601 @@
+{
+	"id": "ALAS2023-2024-546",
+	"advisories": [
+		{
+			"id": "ALAS2023-2024-546",
+			"title": "Amazon Linux 2023 - ALAS2023-2024-546: Low priority package update for grub2",
+			"description": "Package updates are available for Amazon Linux 2023 that fix the following vulnerabilities:\nCVE-2024-1048:\n\tA flaw was found in the grub2-set-bootflag utility of grub2. After the fix of CVE-2019-14865, grub2-set-bootflag will create a temporary file with the new grubenv content and rename it to the original grubenv file. If the program is killed before the rename operation, the temporary file will not be removed and may fill the filesystem when invoked multiple times, resulting in a filesystem out of free inodes or blocks.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "Low"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-1048"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2023/ALAS-2024-546.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2024-1048",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-1048"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2023",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "grub2-tools-extra",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:2.06-61.amzn2023.0.10"
+								}
+							],
+							"fixed": [
+								"1:2.06-61.amzn2023.0.10"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "grub2-debugsource",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:2.06-61.amzn2023.0.10"
+								}
+							],
+							"fixed": [
+								"1:2.06-61.amzn2023.0.10"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "grub2-tools-minimal",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:2.06-61.amzn2023.0.10"
+								}
+							],
+							"fixed": [
+								"1:2.06-61.amzn2023.0.10"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "grub2-emu",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:2.06-61.amzn2023.0.10"
+								}
+							],
+							"fixed": [
+								"1:2.06-61.amzn2023.0.10"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "grub2-tools-efi",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:2.06-61.amzn2023.0.10"
+								}
+							],
+							"fixed": [
+								"1:2.06-61.amzn2023.0.10"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "grub2-pc-modules",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:2.06-61.amzn2023.0.10"
+								}
+							],
+							"fixed": [
+								"1:2.06-61.amzn2023.0.10"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "grub2-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:2.06-61.amzn2023.0.10"
+								}
+							],
+							"fixed": [
+								"1:2.06-61.amzn2023.0.10"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "grub2-tools-efi-debuginfo",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:2.06-61.amzn2023.0.10"
+								}
+							],
+							"fixed": [
+								"1:2.06-61.amzn2023.0.10"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "grub2-efi-x64-cdboot",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:2.06-61.amzn2023.0.10"
+								}
+							],
+							"fixed": [
+								"1:2.06-61.amzn2023.0.10"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "grub2-tools-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:2.06-61.amzn2023.0.10"
+								}
+							],
+							"fixed": [
+								"1:2.06-61.amzn2023.0.10"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "grub2-emu-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:2.06-61.amzn2023.0.10"
+								}
+							],
+							"fixed": [
+								"1:2.06-61.amzn2023.0.10"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "grub2-tools-minimal-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:2.06-61.amzn2023.0.10"
+								}
+							],
+							"fixed": [
+								"1:2.06-61.amzn2023.0.10"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "grub2-efi-aa64-ec2",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:2.06-61.amzn2023.0.10"
+								}
+							],
+							"fixed": [
+								"1:2.06-61.amzn2023.0.10"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "grub2-efi-aa64-modules",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:2.06-61.amzn2023.0.10"
+								}
+							],
+							"fixed": [
+								"1:2.06-61.amzn2023.0.10"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "grub2-tools",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:2.06-61.amzn2023.0.10"
+								}
+							],
+							"fixed": [
+								"1:2.06-61.amzn2023.0.10"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "grub2-efi-x64-ec2",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:2.06-61.amzn2023.0.10"
+								}
+							],
+							"fixed": [
+								"1:2.06-61.amzn2023.0.10"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "grub2-efi-x64-modules",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:2.06-61.amzn2023.0.10"
+								}
+							],
+							"fixed": [
+								"1:2.06-61.amzn2023.0.10"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "grub2-common",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:2.06-61.amzn2023.0.10"
+								}
+							],
+							"fixed": [
+								"1:2.06-61.amzn2023.0.10"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "grub2-emu-modules",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:2.06-61.amzn2023.0.10"
+								}
+							],
+							"fixed": [
+								"1:2.06-61.amzn2023.0.10"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "grub2-pc",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:2.06-61.amzn2023.0.10"
+								}
+							],
+							"fixed": [
+								"1:2.06-61.amzn2023.0.10"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "grub2-efi-x64",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:2.06-61.amzn2023.0.10"
+								}
+							],
+							"fixed": [
+								"1:2.06-61.amzn2023.0.10"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "grub2-tools-extra-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:2.06-61.amzn2023.0.10"
+								}
+							],
+							"fixed": [
+								"1:2.06-61.amzn2023.0.10"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "grub2-efi-aa64",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:2.06-61.amzn2023.0.10"
+								}
+							],
+							"fixed": [
+								"1:2.06-61.amzn2023.0.10"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "grub2-efi-aa64-cdboot",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:2.06-61.amzn2023.0.10"
+								}
+							],
+							"fixed": [
+								"1:2.06-61.amzn2023.0.10"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

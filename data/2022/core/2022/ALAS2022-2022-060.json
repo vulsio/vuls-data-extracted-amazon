@@ -1,0 +1,95 @@
+{
+	"id": "ALAS2022-2022-060",
+	"advisories": [
+		{
+			"id": "ALAS2022-2022-060",
+			"title": "Amazon Linux 2022 - ALAS2022-2022-060: Critical priority package update for maven-shared-utils",
+			"description": "Package updates are available for Amazon Linux 2022 that fix the following vulnerabilities:\nCVE-2022-29599:\n\torg.apache.maven.shared:maven-shared-utils is a functional replacement for plexus-utils in Maven. Affected versions of this package are vulnerable to Command Injection. The Commandline class can emit double-quoted strings without proper escaping, allowing shell injection attacks. The BourneShell class should unconditionally single-quote emitted strings (including the name of the command itself being quoted), with {{'\"'\"'}} used for embedded single quotes, for maximum safety across shells implementing a superset of POSIX quoting rules.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "Critical"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-29599"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2022/ALAS-2022-060.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2022-29599",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-29599"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2022",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "maven-shared-utils",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:3.2.1-0.8.amzn2022.0.1"
+								}
+							],
+							"fixed": [
+								"0:3.2.1-0.8.amzn2022.0.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "maven-shared-utils-javadoc",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:3.2.1-0.8.amzn2022.0.1"
+								}
+							],
+							"fixed": [
+								"0:3.2.1-0.8.amzn2022.0.1"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

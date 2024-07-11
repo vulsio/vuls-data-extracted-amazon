@@ -1,0 +1,187 @@
+{
+	"id": "ALAS2-2024-2578",
+	"advisories": [
+		{
+			"id": "ALAS2-2024-2578",
+			"title": "Amazon Linux 2 2017.12 - ALAS2-2024-2578: medium priority package update for edk2",
+			"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2024-1298:\n\tEDK2 contains a vulnerability when S3 sleep is activated where an Attacker may cause a Division-By-Zero due to a UNIT32 overflow via local access. A successful exploit of this vulnerability may lead to a loss of Availability.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "medium"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-1298"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALAS-2024-2578.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2024-1298",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-1298"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "edk2-tools",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:20200801stable-1.amzn2.0.7"
+								}
+							],
+							"fixed": [
+								"0:20200801stable-1.amzn2.0.7"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "edk2-tools-python",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:20200801stable-1.amzn2.0.7"
+								}
+							],
+							"fixed": [
+								"0:20200801stable-1.amzn2.0.7"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "edk2-tools-doc",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:20200801stable-1.amzn2.0.7"
+								}
+							],
+							"fixed": [
+								"0:20200801stable-1.amzn2.0.7"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "edk2-ovmf",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:20200801stable-1.amzn2.0.7"
+								}
+							],
+							"fixed": [
+								"0:20200801stable-1.amzn2.0.7"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "edk2-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:20200801stable-1.amzn2.0.7"
+								}
+							],
+							"fixed": [
+								"0:20200801stable-1.amzn2.0.7"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "edk2-aarch64",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:20200801stable-1.amzn2.0.7"
+								}
+							],
+							"fixed": [
+								"0:20200801stable-1.amzn2.0.7"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

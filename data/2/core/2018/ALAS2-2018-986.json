@@ -1,0 +1,157 @@
+{
+	"id": "ALAS2-2018-986",
+	"advisories": [
+		{
+			"id": "ALAS2-2018-986",
+			"title": "Amazon Linux 2 2017.12 - ALAS2-2018-986: low priority package update for zsh",
+			"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2018-7549:\n\tIn params.c in zsh through 5.4.2, there is a crash during a copy of an empty hash table, as demonstrated by typeset -p.\n1549858: \nCVE-2018-7549 zsh: crash on copying empty hash table\n\nCVE-2018-7548:\n\tIn subst.c in zsh through 5.4.2, there is a NULL pointer dereference when using ${(PA)...} on an empty array result.\n1549841: \nCVE-2018-7548 zsh: null-pointer deref when using ${(PA)...} on an empty array result\n\nCVE-2017-18206:\n\tIn utils.c in zsh before 5.4, symlink expansion had a buffer overflow.\n1549861: \nCVE-2017-18206 zsh: buffer overrun in xsymlinks\n\nCVE-2017-18205:\n\tIn builtin.c in zsh before 5.4, when sh compatibility mode is used, there is a NULL pointer dereference during processing of the cd command with no argument if HOME is not set.\n1549862: \nCVE-2017-18205 zsh: NULL dereference in cd in sh compatibility mode under given circumstances\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "low"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-18205"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-18206"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-7548"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-7549"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALAS-2018-986.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2017-18205",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-18205"
+				}
+			]
+		},
+		{
+			"id": "CVE-2017-18206",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-18206"
+				}
+			]
+		},
+		{
+			"id": "CVE-2018-7548",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-7548"
+				}
+			]
+		},
+		{
+			"id": "CVE-2018-7549",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-7549"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "zsh",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.3.1-7.amzn2"
+								}
+							],
+							"fixed": [
+								"0:5.3.1-7.amzn2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "zsh-html",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.3.1-7.amzn2"
+								}
+							],
+							"fixed": [
+								"0:5.3.1-7.amzn2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "zsh-debuginfo",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.3.1-7.amzn2"
+								}
+							],
+							"fixed": [
+								"0:5.3.1-7.amzn2"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

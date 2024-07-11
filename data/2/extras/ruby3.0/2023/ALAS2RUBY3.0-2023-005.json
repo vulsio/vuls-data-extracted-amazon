@@ -1,0 +1,591 @@
+{
+	"id": "ALAS2RUBY3.0-2023-005",
+	"advisories": [
+		{
+			"id": "ALAS2RUBY3.0-2023-005",
+			"title": "Amazon Linux 2 - Ruby3.0 2.0 - ALAS2RUBY3.0-2023-005: medium priority package update for ruby",
+			"description": "Package updates are available for Amazon Linux 2 - Ruby3.0 that fix the following vulnerabilities:\nCVE-2021-32066:\n\tAn issue was discovered in Ruby through 2.6.7, 2.7.x through 2.7.3, and 3.x through 3.0.1. Net::IMAP does not raise an exception when StartTLS fails with an an unknown response, which might allow man-in-the-middle attackers to bypass the TLS protections by leveraging a network position between the client and the registry to block the StartTLS command, aka a \"StartTLS stripping attack.\"\n\nCVE-2021-31810:\n\tAn issue was discovered in Ruby through 2.6.7, 2.7.x through 2.7.3, and 3.x through 3.0.1. A malicious FTP server can use the PASV response to trick Net::FTP into connecting back to a given IP address and port. This potentially makes curl extract information about services that are otherwise private and not disclosed (e.g., the attacker can conduct port scans and service banner extractions).\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "medium"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-31810"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-32066"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALASRUBY3.0-2023-005.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2021-31810",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-31810"
+				}
+			]
+		},
+		{
+			"id": "CVE-2021-32066",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-32066"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "rubygem-bundler",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn2extra-ruby3.0"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.2.22-149.amzn2"
+								}
+							],
+							"fixed": [
+								"0:2.2.22-149.amzn2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ruby",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-ruby3.0"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:3.0.2-149.amzn2"
+								}
+							],
+							"fixed": [
+								"0:3.0.2-149.amzn2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "rubygem-irb",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn2extra-ruby3.0"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.3.5-149.amzn2"
+								}
+							],
+							"fixed": [
+								"0:1.3.5-149.amzn2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "rubygem-io-console",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-ruby3.0"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:0.5.7-149.amzn2"
+								}
+							],
+							"fixed": [
+								"0:0.5.7-149.amzn2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ruby-libs",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-ruby3.0"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:3.0.2-149.amzn2"
+								}
+							],
+							"fixed": [
+								"0:3.0.2-149.amzn2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "rubygem-rdoc",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn2extra-ruby3.0"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:6.3.1-149.amzn2"
+								}
+							],
+							"fixed": [
+								"0:6.3.1-149.amzn2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "rubygem-power_assert",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn2extra-ruby3.0"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.2.0-149.amzn2"
+								}
+							],
+							"fixed": [
+								"0:1.2.0-149.amzn2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "rubygem-rake",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn2extra-ruby3.0"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:13.0.3-149.amzn2"
+								}
+							],
+							"fixed": [
+								"0:13.0.3-149.amzn2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "rubygem-rbs",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn2extra-ruby3.0"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.0.4-149.amzn2"
+								}
+							],
+							"fixed": [
+								"0:1.0.4-149.amzn2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "rubygem-test-unit",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn2extra-ruby3.0"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:3.3.7-149.amzn2"
+								}
+							],
+							"fixed": [
+								"0:3.3.7-149.amzn2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "rubygem-rexml",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn2extra-ruby3.0"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:3.2.5-149.amzn2"
+								}
+							],
+							"fixed": [
+								"0:3.2.5-149.amzn2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "rubygem-rss",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn2extra-ruby3.0"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:0.2.9-149.amzn2"
+								}
+							],
+							"fixed": [
+								"0:0.2.9-149.amzn2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ruby-default-gems",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn2extra-ruby3.0"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:3.0.2-149.amzn2"
+								}
+							],
+							"fixed": [
+								"0:3.0.2-149.amzn2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "rubygem-bigdecimal",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-ruby3.0"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:3.0.0-149.amzn2"
+								}
+							],
+							"fixed": [
+								"0:3.0.0-149.amzn2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ruby-debuginfo",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-ruby3.0"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:3.0.2-149.amzn2"
+								}
+							],
+							"fixed": [
+								"0:3.0.2-149.amzn2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "rubygems-devel",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn2extra-ruby3.0"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:3.2.22-149.amzn2"
+								}
+							],
+							"fixed": [
+								"0:3.2.22-149.amzn2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ruby-doc",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn2extra-ruby3.0"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:3.0.2-149.amzn2"
+								}
+							],
+							"fixed": [
+								"0:3.0.2-149.amzn2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "rubygem-json",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-ruby3.0"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.5.1-149.amzn2"
+								}
+							],
+							"fixed": [
+								"0:2.5.1-149.amzn2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "rubygem-psych",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-ruby3.0"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:3.3.0-149.amzn2"
+								}
+							],
+							"fixed": [
+								"0:3.3.0-149.amzn2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "rubygem-minitest",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn2extra-ruby3.0"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.14.2-149.amzn2"
+								}
+							],
+							"fixed": [
+								"0:5.14.2-149.amzn2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "rubygem-typeprof",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn2extra-ruby3.0"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:0.12.0-149.amzn2"
+								}
+							],
+							"fixed": [
+								"0:0.12.0-149.amzn2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ruby-devel",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-ruby3.0"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:3.0.2-149.amzn2"
+								}
+							],
+							"fixed": [
+								"0:3.0.2-149.amzn2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "rubygems",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn2extra-ruby3.0"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:3.2.22-149.amzn2"
+								}
+							],
+							"fixed": [
+								"0:3.2.22-149.amzn2"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

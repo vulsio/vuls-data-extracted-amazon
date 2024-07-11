@@ -1,0 +1,210 @@
+{
+	"id": "ALAS2022-2022-135",
+	"advisories": [
+		{
+			"id": "ALAS2022-2022-135",
+			"title": "Amazon Linux 2022 - ALAS2022-2022-135: Low priority package update for gmp",
+			"description": "Package updates are available for Amazon Linux 2022 that fix the following vulnerabilities:\nCVE-2021-43618:\n\tA flaw was found in gmp. An integer overflow vulnerability could allow an attacker to input an integer value leading to a crash. The highest threat from this vulnerability is to system availability.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "Low"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-43618"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2022/ALAS-2022-135.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2021-43618",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-43618"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2022",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "gmp-debugsource",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:6.2.1-2.amzn2022"
+								}
+							],
+							"fixed": [
+								"1:6.2.1-2.amzn2022"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "gmp-static",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:6.2.1-2.amzn2022"
+								}
+							],
+							"fixed": [
+								"1:6.2.1-2.amzn2022"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "gmp-c++-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:6.2.1-2.amzn2022"
+								}
+							],
+							"fixed": [
+								"1:6.2.1-2.amzn2022"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "gmp-devel",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:6.2.1-2.amzn2022"
+								}
+							],
+							"fixed": [
+								"1:6.2.1-2.amzn2022"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "gmp",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:6.2.1-2.amzn2022"
+								}
+							],
+							"fixed": [
+								"1:6.2.1-2.amzn2022"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "gmp-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:6.2.1-2.amzn2022"
+								}
+							],
+							"fixed": [
+								"1:6.2.1-2.amzn2022"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "gmp-c++",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:6.2.1-2.amzn2022"
+								}
+							],
+							"fixed": [
+								"1:6.2.1-2.amzn2022"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

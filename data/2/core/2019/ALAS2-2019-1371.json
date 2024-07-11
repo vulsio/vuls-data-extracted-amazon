@@ -1,0 +1,544 @@
+{
+	"id": "ALAS2-2019-1371",
+	"advisories": [
+		{
+			"id": "ALAS2-2019-1371",
+			"title": "Amazon Linux 2 2017.12 - ALAS2-2019-1371: important priority package update for git",
+			"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2019-19604:\n\tArbitrary command execution is possible in Git before 2.20.2, 2.21.x before 2.21.1, 2.22.x before 2.22.2, 2.23.x before 2.23.1, and 2.24.x before 2.24.1 because a \"git submodule update\" operation can run commands found in the .gitmodules file of a malicious repository.\n1781971: CVE-2019-19604 git: Recursive clone followed by a submodule update could execute code contained within repository without the user explicitly consent\n\nCVE-2019-1387:\n\tNo description is available for this CVE.\n1781127: CVE-2019-1387 git: remote code execution in recursive clones with nested submodules\n\nCVE-2019-1354:\n\tNo description is available for this CVE.\n1781968: \nCVE-2019-1354 git: Git does not refuse to write out tracked files with backlashes in filenames\n    \n\nCVE-2019-1353:\n\tNo description is available for this CVE.\n1781966: \nCVE-2019-1353 git: NTFS protections inactive when running Git in the Windows Subsystem for Linux\n    \n\nCVE-2019-1352:\n\tNo description is available for this CVE.\n1781963: \nCVE-2019-1352 git: Files inside the .git directory may be overwritten during cloning via NTFS Alternate Data Streams\n    \n\nCVE-2019-1351:\n\tNo description is available for this CVE.\n1781960: \nCVE-2019-1351 git: Git mistakes some paths for relative paths allowing writing outside of the worktree while cloning\n    \n\nCVE-2019-1350:\n\tNo description is available for this CVE.\n1781958: \nCVE-2019-1350 git: Incorrect quoting of command-line arguments allowed remote code execution during a recursive clone\n    \n\nCVE-2019-1349:\n\tNo description is available for this CVE.\n1781143: \nCVE-2019-1349 git: recursive submodule cloning allows using git directory twice with synonymous directory name written in .git/\n    \n\nCVE-2019-1348:\n\tNo description is available for this CVE.\n1781953: \nCVE-2019-1348 git: Arbitrary path overwriting via export-marks command option\n    \n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "important"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-1348"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-1349"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-1350"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-1351"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-1352"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-1353"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-1354"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-1387"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-19604"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALAS-2019-1371.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2019-1348",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-1348"
+				}
+			]
+		},
+		{
+			"id": "CVE-2019-1349",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-1349"
+				}
+			]
+		},
+		{
+			"id": "CVE-2019-1350",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-1350"
+				}
+			]
+		},
+		{
+			"id": "CVE-2019-1351",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-1351"
+				}
+			]
+		},
+		{
+			"id": "CVE-2019-1352",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-1352"
+				}
+			]
+		},
+		{
+			"id": "CVE-2019-1353",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-1353"
+				}
+			]
+		},
+		{
+			"id": "CVE-2019-1354",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-1354"
+				}
+			]
+		},
+		{
+			"id": "CVE-2019-1387",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-1387"
+				}
+			]
+		},
+		{
+			"id": "CVE-2019-19604",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-19604"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "gitweb",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.23.1-1.amzn2.0.1"
+								}
+							],
+							"fixed": [
+								"0:2.23.1-1.amzn2.0.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "git-gui",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.23.1-1.amzn2.0.1"
+								}
+							],
+							"fixed": [
+								"0:2.23.1-1.amzn2.0.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "perl-Git-SVN",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.23.1-1.amzn2.0.1"
+								}
+							],
+							"fixed": [
+								"0:2.23.1-1.amzn2.0.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "git-debuginfo",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.23.1-1.amzn2.0.1"
+								}
+							],
+							"fixed": [
+								"0:2.23.1-1.amzn2.0.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "git-cvs",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.23.1-1.amzn2.0.1"
+								}
+							],
+							"fixed": [
+								"0:2.23.1-1.amzn2.0.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "git-core-doc",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.23.1-1.amzn2.0.1"
+								}
+							],
+							"fixed": [
+								"0:2.23.1-1.amzn2.0.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "git-daemon",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.23.1-1.amzn2.0.1"
+								}
+							],
+							"fixed": [
+								"0:2.23.1-1.amzn2.0.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "perl-Git",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.23.1-1.amzn2.0.1"
+								}
+							],
+							"fixed": [
+								"0:2.23.1-1.amzn2.0.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "git-all",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.23.1-1.amzn2.0.1"
+								}
+							],
+							"fixed": [
+								"0:2.23.1-1.amzn2.0.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "git-email",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.23.1-1.amzn2.0.1"
+								}
+							],
+							"fixed": [
+								"0:2.23.1-1.amzn2.0.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "gitk",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.23.1-1.amzn2.0.1"
+								}
+							],
+							"fixed": [
+								"0:2.23.1-1.amzn2.0.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "git-instaweb",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.23.1-1.amzn2.0.1"
+								}
+							],
+							"fixed": [
+								"0:2.23.1-1.amzn2.0.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "git-core",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.23.1-1.amzn2.0.1"
+								}
+							],
+							"fixed": [
+								"0:2.23.1-1.amzn2.0.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "git-p4",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.23.1-1.amzn2.0.1"
+								}
+							],
+							"fixed": [
+								"0:2.23.1-1.amzn2.0.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "git-subtree",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.23.1-1.amzn2.0.1"
+								}
+							],
+							"fixed": [
+								"0:2.23.1-1.amzn2.0.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "git-svn",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.23.1-1.amzn2.0.1"
+								}
+							],
+							"fixed": [
+								"0:2.23.1-1.amzn2.0.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "git",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.23.1-1.amzn2.0.1"
+								}
+							],
+							"fixed": [
+								"0:2.23.1-1.amzn2.0.1"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

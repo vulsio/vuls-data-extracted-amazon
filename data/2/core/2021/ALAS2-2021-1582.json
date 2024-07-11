@@ -1,0 +1,279 @@
+{
+	"id": "ALAS2-2021-1582",
+	"advisories": [
+		{
+			"id": "ALAS2-2021-1582",
+			"title": "Amazon Linux 2 2017.12 - ALAS2-2021-1582: important priority package update for net-snmp",
+			"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2020-15862:\n\tA flaw was found in Net-SNMP through version 5.73, where an Improper Privilege Management issue occurs due to SNMP WRITE access to the EXTEND MIB allows running arbitrary commands as root. The highest threat from this vulnerability is to confidentiality, integrity, as well as system availability.\n1873038: CVE-2020-15862 net-snmp: Improper Privilege Management in EXTEND MIB may lead to privileged commands execution\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "important"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-15862"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALAS-2021-1582.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2020-15862",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-15862"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "net-snmp-sysvinit",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.7.2-49.amzn2.1"
+								}
+							],
+							"fixed": [
+								"1:5.7.2-49.amzn2.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "net-snmp-utils",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.7.2-49.amzn2.1"
+								}
+							],
+							"fixed": [
+								"1:5.7.2-49.amzn2.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "net-snmp-perl",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.7.2-49.amzn2.1"
+								}
+							],
+							"fixed": [
+								"1:5.7.2-49.amzn2.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "net-snmp-gui",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.7.2-49.amzn2.1"
+								}
+							],
+							"fixed": [
+								"1:5.7.2-49.amzn2.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "net-snmp-libs",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.7.2-49.amzn2.1"
+								}
+							],
+							"fixed": [
+								"1:5.7.2-49.amzn2.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "net-snmp-debuginfo",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.7.2-49.amzn2.1"
+								}
+							],
+							"fixed": [
+								"1:5.7.2-49.amzn2.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "net-snmp",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.7.2-49.amzn2.1"
+								}
+							],
+							"fixed": [
+								"1:5.7.2-49.amzn2.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "net-snmp-devel",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.7.2-49.amzn2.1"
+								}
+							],
+							"fixed": [
+								"1:5.7.2-49.amzn2.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "net-snmp-agent-libs",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.7.2-49.amzn2.1"
+								}
+							],
+							"fixed": [
+								"1:5.7.2-49.amzn2.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "net-snmp-python",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:5.7.2-49.amzn2.1"
+								}
+							],
+							"fixed": [
+								"1:5.7.2-49.amzn2.1"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

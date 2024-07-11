@@ -1,0 +1,131 @@
+{
+	"id": "ALAS2-2020-1530",
+	"advisories": [
+		{
+			"id": "ALAS2-2020-1530",
+			"title": "Amazon Linux 2 2017.12 - ALAS2-2020-1530: medium priority package update for libsrtp",
+			"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2015-6360:\n\tThe encryption-processing feature in Cisco libSRTP before 1.5.3 allows remote attackers to cause a denial of service via crafted fields in SRTP packets, aka Bug ID CSCux00686.\n1323702: CVE-2015-6360 libsrtp: improper handling of CSRC count and extension header length in RTP header\n\nCVE-2013-2139:\n\tBuffer overflow in srtp.c in libsrtp in srtp 1.4.5 and earlier allows remote attackers to cause a denial of service (crash) via vectors related to a length inconsistency in the crypto_policy_set_from_profile_for_rtp and srtp_protect functions.\n970697: CVE-2013-2139 libsrtp: buffer overflow in application of crypto profiles\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "medium"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-2139"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-6360"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALAS-2020-1530.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2013-2139",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-2139"
+				}
+			]
+		},
+		{
+			"id": "CVE-2015-6360",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-6360"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libsrtp",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.4.4-11.20101004cvs.amzn2"
+								}
+							],
+							"fixed": [
+								"0:1.4.4-11.20101004cvs.amzn2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libsrtp-devel",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.4.4-11.20101004cvs.amzn2"
+								}
+							],
+							"fixed": [
+								"0:1.4.4-11.20101004cvs.amzn2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libsrtp-debuginfo",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.4.4-11.20101004cvs.amzn2"
+								}
+							],
+							"fixed": [
+								"0:1.4.4-11.20101004cvs.amzn2"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

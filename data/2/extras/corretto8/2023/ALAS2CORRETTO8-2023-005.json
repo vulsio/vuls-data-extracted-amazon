@@ -1,0 +1,108 @@
+{
+	"id": "ALAS2CORRETTO8-2023-005",
+	"advisories": [
+		{
+			"id": "ALAS2CORRETTO8-2023-005",
+			"title": "Amazon Linux 2 - Corretto8 2.0 - ALAS2CORRETTO8-2023-005: medium priority package update for java-1.8.0-amazon-corretto",
+			"description": "Package updates are available for Amazon Linux 2 - Corretto8 that fix the following vulnerabilities:\nCVE-2023-21843:\n\tBetter Banking of Sounds: JARSoundbankReader can load classes from remote URLs.\n\nCVE-2023-21830:\n\tImprove CORBA communication: CORBA deserialization can result in outbound network connections with data passed in.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "medium"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-21830"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-21843"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALASCORRETTO8-2023-005.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2023-21830",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-21830"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-21843",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-21843"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "java-1.8.0-amazon-corretto",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-corretto8"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:1.8.0_362.b08-1.amzn2"
+								}
+							],
+							"fixed": [
+								"1:1.8.0_362.b08-1.amzn2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "java-1.8.0-amazon-corretto-devel",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-corretto8"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:1.8.0_362.b08-1.amzn2"
+								}
+							],
+							"fixed": [
+								"1:1.8.0_362.b08-1.amzn2"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

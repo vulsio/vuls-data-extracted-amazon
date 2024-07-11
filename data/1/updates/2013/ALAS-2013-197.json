@@ -1,0 +1,186 @@
+{
+	"id": "ALAS-2013-197",
+	"advisories": [
+		{
+			"id": "ALAS-2013-197",
+			"title": "Amazon Linux AMI 2012.09 - ALAS-2013-197: important priority package update for gnutls",
+			"description": "Package updates are available for Amazon Linux AMI that fix the following vulnerabilities:\nCVE-2013-2116:\n\tIt was discovered that the fix for the CVE-2013-1619 issue released via RHSA-2013:0588 introduced a regression in the way GnuTLS decrypted TLS/SSL encrypted records when CBC-mode cipher suites were used. A remote attacker could possibly use this flaw to crash a server or client application that uses GnuTLS.\n\nCVE-2013-1619:\n\tIt was discovered that the fix for the CVE-2013-1619 issue released via RHSA-2013:0588 introduced a regression in the way GnuTLS decrypted TLS/SSL encrypted records when CBC-mode cipher suites were used. A remote attacker could possibly use this flaw to crash a server or client application that uses GnuTLS.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "important"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-1619"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-2116"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/ALAS-2013-197.html"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://rhn.redhat.com/errata/RHSA-2013:0883.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2013-1619",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-1619"
+				}
+			]
+		},
+		{
+			"id": "CVE-2013-2116",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-2116"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:1",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "gnutls-utils",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.8.5-10.10.amzn1"
+								}
+							],
+							"fixed": [
+								"0:2.8.5-10.10.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "gnutls-guile",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.8.5-10.10.amzn1"
+								}
+							],
+							"fixed": [
+								"0:2.8.5-10.10.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "gnutls-debuginfo",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.8.5-10.10.amzn1"
+								}
+							],
+							"fixed": [
+								"0:2.8.5-10.10.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "gnutls-devel",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.8.5-10.10.amzn1"
+								}
+							],
+							"fixed": [
+								"0:2.8.5-10.10.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "gnutls",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.8.5-10.10.amzn1"
+								}
+							],
+							"fixed": [
+								"0:2.8.5-10.10.amzn1"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

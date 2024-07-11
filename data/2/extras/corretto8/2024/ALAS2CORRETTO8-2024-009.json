@@ -1,0 +1,79 @@
+{
+	"id": "ALAS2CORRETTO8-2024-009",
+	"advisories": [
+		{
+			"id": "ALAS2CORRETTO8-2024-009",
+			"title": "Amazon Linux 2 - Corretto8 2.0 - ALAS2CORRETTO8-2024-009: low priority package update for java-1.8.0-amazon-corretto",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "low"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALASCORRETTO8-2024-009.html"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "java-1.8.0-amazon-corretto-devel",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-corretto8"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:1.8.0_402.b06-1.amzn2"
+								}
+							],
+							"fixed": [
+								"1:1.8.0_402.b06-1.amzn2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "java-1.8.0-amazon-corretto",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2extra-corretto8"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:1.8.0_402.b06-1.amzn2"
+								}
+							],
+							"fixed": [
+								"1:1.8.0_402.b06-1.amzn2"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

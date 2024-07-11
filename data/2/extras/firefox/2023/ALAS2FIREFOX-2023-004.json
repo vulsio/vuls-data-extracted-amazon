@@ -1,0 +1,160 @@
+{
+	"id": "ALAS2FIREFOX-2023-004",
+	"advisories": [
+		{
+			"id": "ALAS2FIREFOX-2023-004",
+			"title": "Amazon Linux 2 - Firefox 2.0 - ALAS2FIREFOX-2023-004: important priority package update for firefox",
+			"description": "Package updates are available for Amazon Linux 2 - Firefox that fix the following vulnerabilities:\nCVE-2023-28176:\n\tMozilla Fuzzing Team reported memory safety bugs present in Firefox 110 and ESR 102.8. Some of these bugs showed evidence of memory corruption, and we presume that with enough effort, some of these could have been exploited to run arbitrary code.\n\nCVE-2023-28164:\n\tThe Mozilla Foundation describes this issue as follows:\n\nDragging a URL from a cross-origin iframe that was removed during the drag could have led to user confusion and website spoofing attacks.\n\nCVE-2023-28163:\n\tA flaw was found in Mozilla. The Mozilla Foundation Security Advisory describes the issue that when downloading files through the Save As dialog on Windows with suggested filenames containing environment variable names, Windows would have resolved those in the current user's context. This bug only affects Firefox on Windows. Other versions of Firefox are unaffected.\n\nCVE-2023-28162:\n\tThis issue affects Firefox and Thunderbird ESR 102.8 and earlier. The Mozilla Foundation describes this issue as follows:\n\nWhile implementing AudioWorklets, some code may have casted one type to another, invalid, dynamic type. This could have led to a potentially exploitable crash.\n\nCVE-2023-25752:\n\tThe Mozilla Foundation describes this issue as follows:\n\nWhen accessing throttled streams, the count of available bytes needed to be checked in the calling function to be within bounds. This may have lead future code to be incorrect and vulnerable.\n\nCVE-2023-25751:\n\tThe Mozilla Foundation describes this issue as follows:\n\nSometimes, when invalidating JIT code while following an iterator, the newly generated code could be overwritten incorrectly. This could lead to a potentially exploitable crash.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "important"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-25751"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-25752"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-28162"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-28163"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-28164"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-28176"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2/ALASFIREFOX-2023-004.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2023-25751",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-25751"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-25752",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-25752"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-28162",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-28162"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-28163",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-28163"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-28164",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-28164"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-28176",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-28176"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "firefox",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2extra-firefox"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:102.9.0-1.amzn2.0.1"
+								}
+							],
+							"fixed": [
+								"0:102.9.0-1.amzn2.0.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "firefox-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2extra-firefox"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:102.9.0-1.amzn2.0.1"
+								}
+							],
+							"fixed": [
+								"0:102.9.0-1.amzn2.0.1"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

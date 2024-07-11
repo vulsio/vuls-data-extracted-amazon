@@ -1,0 +1,269 @@
+{
+	"id": "ALAS-2016-699",
+	"advisories": [
+		{
+			"id": "ALAS-2016-699",
+			"title": "Amazon Linux AMI 2014.03 - ALAS-2016-699: important priority package update for ImageMagick",
+			"description": "Package updates are available for Amazon Linux AMI that fix the following vulnerabilities:\nCVE-2016-3718:\n\tA server-side request forgery flaw was discovered in the way ImageMagick processed certain images. A remote attacker could exploit this flaw to mislead an application using ImageMagick or an unsuspecting user using the ImageMagick utilities into, for example, performing HTTP(S) requests or opening FTP sessions via specially crafted images.\n1332802: \nCVE-2016-3718 ImageMagick: SSRF vulnerability\n\nCVE-2016-3717:\n\tIt was discovered that certain ImageMagick coders and pseudo-protocols did not properly prevent security sensitive operations when processing specially crafted images. A remote attacker could create a specially crafted image that, when processed by an application using ImageMagick or an unsuspecting user using the ImageMagick utilities, would allow the attacker to disclose the contents of arbitrary files.\n1332505: \nCVE-2016-3717 ImageMagick: Local file read\n\nCVE-2016-3716:\n\tIt was discovered that certain ImageMagick coders and pseudo-protocols did not properly prevent security sensitive operations when processing specially crafted images. A remote attacker could create a specially crafted image that, when processed by an application using ImageMagick or an unsuspecting user using the ImageMagick utilities, would allow the attacker to move arbitrary files.\n1332504: \nCVE-2016-3716 ImageMagick: File moving\n\nCVE-2016-3715:\n\tIt was discovered that certain ImageMagick coders and pseudo-protocols did not properly prevent security sensitive operations when processing specially crafted images. A remote attacker could create a specially crafted image that, when processed by an application using ImageMagick or an unsuspecting user using the ImageMagick utilities, would allow the attacker to delete arbitrary files.\n1332500: \nCVE-2016-3715 ImageMagick: File deletion\n\nCVE-2016-3714:\n\tIt was discovered that ImageMagick did not properly sanitize certain input before passing it to the delegate functionality. A remote attacker could create a specially crafted image that, when processed by an application using ImageMagick or an unsuspecting user using the ImageMagick utilities, would lead to arbitrary execution of shell commands with the privileges of the user running the application.\n1332492: \nCVE-2016-3714 ImageMagick: Insufficient shell characters filtering\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "important"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-3714"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-3715"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-3716"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-3717"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-3718"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/ALAS-2016-699.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2016-3714",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-3714"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-3715",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-3715"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-3716",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-3716"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-3717",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-3717"
+				}
+			]
+		},
+		{
+			"id": "CVE-2016-3718",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-3718"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:1",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ImageMagick-perl",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:6.7.8.9-13.19.amzn1"
+								}
+							],
+							"fixed": [
+								"0:6.7.8.9-13.19.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ImageMagick-debuginfo",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:6.7.8.9-13.19.amzn1"
+								}
+							],
+							"fixed": [
+								"0:6.7.8.9-13.19.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ImageMagick",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:6.7.8.9-13.19.amzn1"
+								}
+							],
+							"fixed": [
+								"0:6.7.8.9-13.19.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ImageMagick-c++",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:6.7.8.9-13.19.amzn1"
+								}
+							],
+							"fixed": [
+								"0:6.7.8.9-13.19.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ImageMagick-devel",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:6.7.8.9-13.19.amzn1"
+								}
+							],
+							"fixed": [
+								"0:6.7.8.9-13.19.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ImageMagick-c++-devel",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:6.7.8.9-13.19.amzn1"
+								}
+							],
+							"fixed": [
+								"0:6.7.8.9-13.19.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ImageMagick-doc",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:6.7.8.9-13.19.amzn1"
+								}
+							],
+							"fixed": [
+								"0:6.7.8.9-13.19.amzn1"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

@@ -1,0 +1,338 @@
+{
+	"id": "ALAS2023-2023-379",
+	"advisories": [
+		{
+			"id": "ALAS2023-2023-379",
+			"title": "Amazon Linux 2023 - ALAS2023-2023-379: Medium priority package update for ImageMagick",
+			"description": "Package updates are available for Amazon Linux 2023 that fix the following vulnerabilities:\nCVE-2023-5341:\n\tA vulnerability was found in ImageMagick where heap use-after-free was found in coders/bmp.c.\n\nCVE-2021-20309:\n\tA flaw was found in ImageMagick, where a division by zero in WaveImage() of MagickCore/visual-effects.c may trigger undefined behavior via a crafted image file submitted to an application using ImageMagick. The highest threat from this vulnerability is to system availability.\n",
+			"severity": [
+				{
+					"type": "vendor",
+					"source": "linux-security@amazon.com",
+					"vendor": "Medium"
+				}
+			],
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-20309"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-5341"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2023/ALAS-2023-379.html"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"id": "CVE-2021-20309",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-20309"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-5341",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-5341"
+				}
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2023",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ImageMagick-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:6.9.12.82-1.amzn2023.0.7"
+								}
+							],
+							"fixed": [
+								"1:6.9.12.82-1.amzn2023.0.7"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ImageMagick-libs-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:6.9.12.82-1.amzn2023.0.7"
+								}
+							],
+							"fixed": [
+								"1:6.9.12.82-1.amzn2023.0.7"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ImageMagick-libs",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:6.9.12.82-1.amzn2023.0.7"
+								}
+							],
+							"fixed": [
+								"1:6.9.12.82-1.amzn2023.0.7"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ImageMagick-perl-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:6.9.12.82-1.amzn2023.0.7"
+								}
+							],
+							"fixed": [
+								"1:6.9.12.82-1.amzn2023.0.7"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ImageMagick-c++-devel",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:6.9.12.82-1.amzn2023.0.7"
+								}
+							],
+							"fixed": [
+								"1:6.9.12.82-1.amzn2023.0.7"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ImageMagick-c++-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:6.9.12.82-1.amzn2023.0.7"
+								}
+							],
+							"fixed": [
+								"1:6.9.12.82-1.amzn2023.0.7"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ImageMagick-devel",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:6.9.12.82-1.amzn2023.0.7"
+								}
+							],
+							"fixed": [
+								"1:6.9.12.82-1.amzn2023.0.7"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ImageMagick-doc",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:6.9.12.82-1.amzn2023.0.7"
+								}
+							],
+							"fixed": [
+								"1:6.9.12.82-1.amzn2023.0.7"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ImageMagick-debugsource",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:6.9.12.82-1.amzn2023.0.7"
+								}
+							],
+							"fixed": [
+								"1:6.9.12.82-1.amzn2023.0.7"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ImageMagick",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:6.9.12.82-1.amzn2023.0.7"
+								}
+							],
+							"fixed": [
+								"1:6.9.12.82-1.amzn2023.0.7"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ImageMagick-perl",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:6.9.12.82-1.amzn2023.0.7"
+								}
+							],
+							"fixed": [
+								"1:6.9.12.82-1.amzn2023.0.7"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "ImageMagick-c++",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:6.9.12.82-1.amzn2023.0.7"
+								}
+							],
+							"fixed": [
+								"1:6.9.12.82-1.amzn2023.0.7"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}
