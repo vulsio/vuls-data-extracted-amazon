@@ -4,7 +4,7 @@
 		{
 			"id": "ALAS2KERNEL-5.10-2024-054",
 			"title": "Amazon Linux 2 - Kernel-5.10 2.0 - ALAS2KERNEL-5.10-2024-054: medium priority package update for kernel",
-			"description": "Package updates are available for Amazon Linux 2 - Kernel-5.10 that fix the following vulnerabilities:\nCVE-2024-26898:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\naoe: fix the potential use-after-free problem in aoecmd_cfg_pkts\n\nCVE-2023-52447:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nbpf: Defer the free of inner map when necessary\n\nWhen updating or deleting an inner map in map array or map htab, the map\nmay still be accessed by non-sleepable program or sleepable program.\nHowever bpf_map_fd_put_ptr() decreases the ref-counter of the inner map\ndirectly through bpf_map_put(), if the ref-counter is the last one\n(which is true for most cases), the inner map will be freed by\nops->map_free() in a kworker. But for now, most .map_free() callbacks\ndon't use synchronize_rcu() or its variants to wait for the elapse of a\nRCU grace period, so after the invocation of ops->map_free completes,\nthe bpf program which is accessing the inner map may incur\nuse-after-free problem.\n\nFix the free of inner map by invoking bpf_map_free_deferred() after both\none RCU grace period and one tasks trace RCU grace period if the inner\nmap has been removed from the outer map before. The deferment is\naccomplished by using call_rcu() or call_rcu_tasks_trace() when\nreleasing the last ref-counter of bpf map. The newly-added rcu_head\nfield in bpf_map shares the same storage space with work field to\nreduce the size of bpf_map.\n",
+			"description": "Package updates are available for Amazon Linux 2 - Kernel-5.10 that fix the following vulnerabilities:\nCVE-2024-36031:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nkeys: Fix overwrite of key expiration on instantiation\n\nCVE-2024-26898:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\naoe: fix the potential use-after-free problem in aoecmd_cfg_pkts\n\nCVE-2023-52447:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nbpf: Defer the free of inner map when necessary\n\nWhen updating or deleting an inner map in map array or map htab, the map\nmay still be accessed by non-sleepable program or sleepable program.\nHowever bpf_map_fd_put_ptr() decreases the ref-counter of the inner map\ndirectly through bpf_map_put(), if the ref-counter is the last one\n(which is true for most cases), the inner map will be freed by\nops->map_free() in a kworker. But for now, most .map_free() callbacks\ndon't use synchronize_rcu() or its variants to wait for the elapse of a\nRCU grace period, so after the invocation of ops->map_free completes,\nthe bpf program which is accessing the inner map may incur\nuse-after-free problem.\n\nFix the free of inner map by invoking bpf_map_free_deferred() after both\none RCU grace period and one tasks trace RCU grace period if the inner\nmap has been removed from the outer map before. The deferment is\naccomplished by using call_rcu() or call_rcu_tasks_trace() when\nreleasing the last ref-counter of bpf map. The newly-added rcu_head\nfield in bpf_map shares the same storage space with work field to\nreduce the size of bpf_map.\n",
 			"severity": [
 				{
 					"type": "vendor",
@@ -24,6 +24,10 @@
 				{
 					"source": "linux-security@amazon.com",
 					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26898"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36031"
 				}
 			]
 		}
@@ -46,33 +50,18 @@
 					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26898"
 				}
 			]
+		},
+		{
+			"id": "CVE-2024-36031",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36031"
+				}
+			]
 		}
 	],
 	"detection": [
-		{
-			"ecosystem": "amazon:2",
-			"vulnerable": true,
-			"package": {
-				"name": "kernel-livepatch-5.10.214-202.855",
-				"repositories": [
-					"amzn2extra-kernel-5.10"
-				],
-				"architectures": [
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.0-0.amzn2"
-					}
-				],
-				"fixed": [
-					"0:1.0-0.amzn2"
-				]
-			}
-		},
 		{
 			"ecosystem": "amazon:2",
 			"vulnerable": true,
@@ -125,127 +114,7 @@
 			"ecosystem": "amazon:2",
 			"vulnerable": true,
 			"package": {
-				"name": "kernel-tools-debuginfo",
-				"repositories": [
-					"amzn2extra-kernel-5.10"
-				],
-				"architectures": [
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:5.10.214-202.855.amzn2"
-					}
-				],
-				"fixed": [
-					"0:5.10.214-202.855.amzn2"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:2",
-			"vulnerable": true,
-			"package": {
-				"name": "bpftool-debuginfo",
-				"repositories": [
-					"amzn2extra-kernel-5.10"
-				],
-				"architectures": [
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:5.10.214-202.855.amzn2"
-					}
-				],
-				"fixed": [
-					"0:5.10.214-202.855.amzn2"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:2",
-			"vulnerable": true,
-			"package": {
-				"name": "kernel-devel",
-				"repositories": [
-					"amzn2extra-kernel-5.10"
-				],
-				"architectures": [
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:5.10.214-202.855.amzn2"
-					}
-				],
-				"fixed": [
-					"0:5.10.214-202.855.amzn2"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:2",
-			"vulnerable": true,
-			"package": {
-				"name": "kernel-debuginfo-common-aarch64",
-				"repositories": [
-					"amzn2extra-kernel-5.10"
-				],
-				"architectures": [
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:5.10.214-202.855.amzn2"
-					}
-				],
-				"fixed": [
-					"0:5.10.214-202.855.amzn2"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:2",
-			"vulnerable": true,
-			"package": {
-				"name": "kernel",
-				"repositories": [
-					"amzn2extra-kernel-5.10"
-				],
-				"architectures": [
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:5.10.214-202.855.amzn2"
-					}
-				],
-				"fixed": [
-					"0:5.10.214-202.855.amzn2"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:2",
-			"vulnerable": true,
-			"package": {
-				"name": "kernel-headers",
+				"name": "python-perf",
 				"repositories": [
 					"amzn2extra-kernel-5.10"
 				],
@@ -293,7 +162,7 @@
 			"ecosystem": "amazon:2",
 			"vulnerable": true,
 			"package": {
-				"name": "kernel-tools",
+				"name": "kernel",
 				"repositories": [
 					"amzn2extra-kernel-5.10"
 				],
@@ -317,7 +186,7 @@
 			"ecosystem": "amazon:2",
 			"vulnerable": true,
 			"package": {
-				"name": "bpftool",
+				"name": "bpftool-debuginfo",
 				"repositories": [
 					"amzn2extra-kernel-5.10"
 				],
@@ -365,31 +234,7 @@
 			"ecosystem": "amazon:2",
 			"vulnerable": true,
 			"package": {
-				"name": "kernel-debuginfo-common-x86_64",
-				"repositories": [
-					"amzn2extra-kernel-5.10"
-				],
-				"architectures": [
-					"x86_64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:5.10.214-202.855.amzn2"
-					}
-				],
-				"fixed": [
-					"0:5.10.214-202.855.amzn2"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:2",
-			"vulnerable": true,
-			"package": {
-				"name": "python-perf",
+				"name": "kernel-headers",
 				"repositories": [
 					"amzn2extra-kernel-5.10"
 				],
@@ -414,6 +259,174 @@
 			"vulnerable": true,
 			"package": {
 				"name": "kernel-tools-devel",
+				"repositories": [
+					"amzn2extra-kernel-5.10"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:5.10.214-202.855.amzn2"
+					}
+				],
+				"fixed": [
+					"0:5.10.214-202.855.amzn2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "bpftool",
+				"repositories": [
+					"amzn2extra-kernel-5.10"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:5.10.214-202.855.amzn2"
+					}
+				],
+				"fixed": [
+					"0:5.10.214-202.855.amzn2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "kernel-livepatch-5.10.214-202.855",
+				"repositories": [
+					"amzn2extra-kernel-5.10"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.0-0.amzn2"
+					}
+				],
+				"fixed": [
+					"0:1.0-0.amzn2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "kernel-debuginfo-common-aarch64",
+				"repositories": [
+					"amzn2extra-kernel-5.10"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:5.10.214-202.855.amzn2"
+					}
+				],
+				"fixed": [
+					"0:5.10.214-202.855.amzn2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "kernel-debuginfo-common-x86_64",
+				"repositories": [
+					"amzn2extra-kernel-5.10"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:5.10.214-202.855.amzn2"
+					}
+				],
+				"fixed": [
+					"0:5.10.214-202.855.amzn2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "kernel-tools",
+				"repositories": [
+					"amzn2extra-kernel-5.10"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:5.10.214-202.855.amzn2"
+					}
+				],
+				"fixed": [
+					"0:5.10.214-202.855.amzn2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "kernel-tools-debuginfo",
+				"repositories": [
+					"amzn2extra-kernel-5.10"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:5.10.214-202.855.amzn2"
+					}
+				],
+				"fixed": [
+					"0:5.10.214-202.855.amzn2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "kernel-devel",
 				"repositories": [
 					"amzn2extra-kernel-5.10"
 				],

@@ -4,7 +4,7 @@
 		{
 			"id": "ALAS2KERNEL-5.4-2024-068",
 			"title": "Amazon Linux 2 - Kernel-5.4 2.0 - ALAS2KERNEL-5.4-2024-068: medium priority package update for kernel",
-			"description": "Package updates are available for Amazon Linux 2 - Kernel-5.4 that fix the following vulnerabilities:\nCVE-2024-27417:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nipv6: fix potential \"struct net\" leak in inet6_rtm_getaddr()\n\nCVE-2024-26736:\n\tIn the Linux kernel, the following vulnerability has been resolved: afs: Increase buffer size in afs_update_volume_status() The max length of volume->vid value is 20 characters. So increase idbuf[] size up to 24 to avoid overflow. Found by Linux Verification Center (linuxtesting.org) with SVACE. [DH: Actually, it's 20 + NUL, so increase it to 24 and use snprintf()]\n",
+			"description": "Package updates are available for Amazon Linux 2 - Kernel-5.4 that fix the following vulnerabilities:\nCVE-2024-27417:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nipv6: fix potential \"struct net\" leak in inet6_rtm_getaddr()\n\nCVE-2024-26736:\n\tIn the Linux kernel, the following vulnerability has been resolved: afs: Increase buffer size in afs_update_volume_status() The max length of volume->vid value is 20 characters. So increase idbuf[] size up to 24 to avoid overflow. Found by Linux Verification Center (linuxtesting.org) with SVACE. [DH: Actually, it's 20 + NUL, so increase it to 24 and use snprintf()]\n\nCVE-2024-0841:\n\tA null pointer dereference flaw was found in the hugetlbfs_fill_super function in the Linux kernel hugetlbfs (HugeTLB pages) functionality. This issue may allow a local user to crash the system or potentially escalate their privileges on the system.\n\nCVE-2023-52504:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nx86/alternatives: Disable KASAN in apply_alternatives()\n",
 			"severity": [
 				{
 					"type": "vendor",
@@ -19,6 +19,14 @@
 				},
 				{
 					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52504"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-0841"
+				},
+				{
+					"source": "linux-security@amazon.com",
 					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26736"
 				},
 				{
@@ -29,6 +37,24 @@
 		}
 	],
 	"vulnerabilities": [
+		{
+			"id": "CVE-2023-52504",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52504"
+				}
+			]
+		},
+		{
+			"id": "CVE-2024-0841",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-0841"
+				}
+			]
+		},
 		{
 			"id": "CVE-2024-26736",
 			"references": [
@@ -49,102 +75,6 @@
 		}
 	],
 	"detection": [
-		{
-			"ecosystem": "amazon:2",
-			"vulnerable": true,
-			"package": {
-				"name": "perf",
-				"repositories": [
-					"amzn2extra-kernel-5.4"
-				],
-				"architectures": [
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:5.4.271-184.369.amzn2"
-					}
-				],
-				"fixed": [
-					"0:5.4.271-184.369.amzn2"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:2",
-			"vulnerable": true,
-			"package": {
-				"name": "python-perf-debuginfo",
-				"repositories": [
-					"amzn2extra-kernel-5.4"
-				],
-				"architectures": [
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:5.4.271-184.369.amzn2"
-					}
-				],
-				"fixed": [
-					"0:5.4.271-184.369.amzn2"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:2",
-			"vulnerable": true,
-			"package": {
-				"name": "kernel-tools-debuginfo",
-				"repositories": [
-					"amzn2extra-kernel-5.4"
-				],
-				"architectures": [
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:5.4.271-184.369.amzn2"
-					}
-				],
-				"fixed": [
-					"0:5.4.271-184.369.amzn2"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:2",
-			"vulnerable": true,
-			"package": {
-				"name": "kernel-devel",
-				"repositories": [
-					"amzn2extra-kernel-5.4"
-				],
-				"architectures": [
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:5.4.271-184.369.amzn2"
-					}
-				],
-				"fixed": [
-					"0:5.4.271-184.369.amzn2"
-				]
-			}
-		},
 		{
 			"ecosystem": "amazon:2",
 			"vulnerable": true,
@@ -173,7 +103,7 @@
 			"ecosystem": "amazon:2",
 			"vulnerable": true,
 			"package": {
-				"name": "kernel-debuginfo-common-aarch64",
+				"name": "kernel-debuginfo",
 				"repositories": [
 					"amzn2extra-kernel-5.4"
 				],
@@ -245,7 +175,31 @@
 			"ecosystem": "amazon:2",
 			"vulnerable": true,
 			"package": {
-				"name": "python-perf",
+				"name": "kernel-debuginfo-common-x86_64",
+				"repositories": [
+					"amzn2extra-kernel-5.4"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:5.4.271-184.369.amzn2"
+					}
+				],
+				"fixed": [
+					"0:5.4.271-184.369.amzn2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "kernel-tools-devel",
 				"repositories": [
 					"amzn2extra-kernel-5.4"
 				],
@@ -269,7 +223,7 @@
 			"ecosystem": "amazon:2",
 			"vulnerable": true,
 			"package": {
-				"name": "bpftool",
+				"name": "kernel-tools-debuginfo",
 				"repositories": [
 					"amzn2extra-kernel-5.4"
 				],
@@ -317,7 +271,7 @@
 			"ecosystem": "amazon:2",
 			"vulnerable": true,
 			"package": {
-				"name": "kernel-debuginfo",
+				"name": "kernel-devel",
 				"repositories": [
 					"amzn2extra-kernel-5.4"
 				],
@@ -341,12 +295,36 @@
 			"ecosystem": "amazon:2",
 			"vulnerable": true,
 			"package": {
-				"name": "kernel-debuginfo-common-x86_64",
+				"name": "kernel-debuginfo-common-aarch64",
 				"repositories": [
 					"amzn2extra-kernel-5.4"
 				],
 				"architectures": [
-					"x86_64"
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:5.4.271-184.369.amzn2"
+					}
+				],
+				"fixed": [
+					"0:5.4.271-184.369.amzn2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "perf",
+				"repositories": [
+					"amzn2extra-kernel-5.4"
+				],
+				"architectures": [
+					"aarch64"
 				]
 			},
 			"affected": {
@@ -389,7 +367,55 @@
 			"ecosystem": "amazon:2",
 			"vulnerable": true,
 			"package": {
-				"name": "kernel-tools-devel",
+				"name": "python-perf",
+				"repositories": [
+					"amzn2extra-kernel-5.4"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:5.4.271-184.369.amzn2"
+					}
+				],
+				"fixed": [
+					"0:5.4.271-184.369.amzn2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "python-perf-debuginfo",
+				"repositories": [
+					"amzn2extra-kernel-5.4"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:5.4.271-184.369.amzn2"
+					}
+				],
+				"fixed": [
+					"0:5.4.271-184.369.amzn2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "bpftool",
 				"repositories": [
 					"amzn2extra-kernel-5.4"
 				],

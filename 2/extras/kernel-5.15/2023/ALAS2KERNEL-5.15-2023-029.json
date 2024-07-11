@@ -4,7 +4,7 @@
 		{
 			"id": "ALAS2KERNEL-5.15-2023-029",
 			"title": "Amazon Linux 2 - Kernel-5.15 2.0 - ALAS2KERNEL-5.15-2023-029: medium priority package update for kernel",
-			"description": "Package updates are available for Amazon Linux 2 - Kernel-5.15 that fix the following vulnerabilities:\nCVE-2024-0641:\n\tA denial of service vulnerability was found in tipc_crypto_key_revoke in net/tipc/crypto.c in the Linux kernel's TIPC subsystem. This flaw allows guests with local user privileges to trigger a deadlock and potentially crash the system.\n\nCVE-2023-52477:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nusb: hub: Guard against accesses to uninitialized BOS descriptors\n\nCVE-2023-34324:\n\tA flaw in the kernel Xen event handler can cause a deadlock with Xen console handling in unprivileged Xen guests.\n",
+			"description": "Package updates are available for Amazon Linux 2 - Kernel-5.15 that fix the following vulnerabilities:\nCVE-2024-0641:\n\tA denial of service vulnerability was found in tipc_crypto_key_revoke in net/tipc/crypto.c in the Linux kernel's TIPC subsystem. This flaw allows guests with local user privileges to trigger a deadlock and potentially crash the system.\n\nCVE-2023-52559:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\niommu/vt-d: Avoid memory allocation in iommu_suspend()\n\nCVE-2023-52523:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nbpf, sockmap: Reject sk_msg egress redirects to non-TCP sockets\n\nCVE-2023-52522:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nnet: fix possible store tearing in neigh_periodic_work()\n\nCVE-2023-52504:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nx86/alternatives: Disable KASAN in apply_alternatives()\n\nCVE-2023-52477:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nusb: hub: Guard against accesses to uninitialized BOS descriptors\n\nCVE-2023-34324:\n\tA flaw in the kernel Xen event handler can cause a deadlock with Xen console handling in unprivileged Xen guests.\n",
 			"severity": [
 				{
 					"type": "vendor",
@@ -24,6 +24,22 @@
 				{
 					"source": "linux-security@amazon.com",
 					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52477"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52504"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52522"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52523"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52559"
 				},
 				{
 					"source": "linux-security@amazon.com",
@@ -52,6 +68,42 @@
 			]
 		},
 		{
+			"id": "CVE-2023-52504",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52504"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-52522",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52522"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-52523",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52523"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-52559",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52559"
+				}
+			]
+		},
+		{
 			"id": "CVE-2024-0641",
 			"references": [
 				{
@@ -66,7 +118,31 @@
 			"ecosystem": "amazon:2",
 			"vulnerable": true,
 			"package": {
-				"name": "kernel",
+				"name": "python-perf-debuginfo",
+				"repositories": [
+					"amzn2extra-kernel-5.15"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:5.15.136-90.144.amzn2"
+					}
+				],
+				"fixed": [
+					"0:5.15.136-90.144.amzn2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "bpftool",
 				"repositories": [
 					"amzn2extra-kernel-5.15"
 				],
@@ -96,30 +172,6 @@
 				],
 				"architectures": [
 					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:5.15.136-90.144.amzn2"
-					}
-				],
-				"fixed": [
-					"0:5.15.136-90.144.amzn2"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:2",
-			"vulnerable": true,
-			"package": {
-				"name": "kernel-debuginfo-common-x86_64",
-				"repositories": [
-					"amzn2extra-kernel-5.15"
-				],
-				"architectures": [
-					"x86_64"
 				]
 			},
 			"affected": {
@@ -186,199 +238,7 @@
 			"ecosystem": "amazon:2",
 			"vulnerable": true,
 			"package": {
-				"name": "kernel-tools-debuginfo",
-				"repositories": [
-					"amzn2extra-kernel-5.15"
-				],
-				"architectures": [
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:5.15.136-90.144.amzn2"
-					}
-				],
-				"fixed": [
-					"0:5.15.136-90.144.amzn2"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:2",
-			"vulnerable": true,
-			"package": {
 				"name": "bpftool-debuginfo",
-				"repositories": [
-					"amzn2extra-kernel-5.15"
-				],
-				"architectures": [
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:5.15.136-90.144.amzn2"
-					}
-				],
-				"fixed": [
-					"0:5.15.136-90.144.amzn2"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:2",
-			"vulnerable": true,
-			"package": {
-				"name": "python-perf",
-				"repositories": [
-					"amzn2extra-kernel-5.15"
-				],
-				"architectures": [
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:5.15.136-90.144.amzn2"
-					}
-				],
-				"fixed": [
-					"0:5.15.136-90.144.amzn2"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:2",
-			"vulnerable": true,
-			"package": {
-				"name": "kernel-debuginfo",
-				"repositories": [
-					"amzn2extra-kernel-5.15"
-				],
-				"architectures": [
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:5.15.136-90.144.amzn2"
-					}
-				],
-				"fixed": [
-					"0:5.15.136-90.144.amzn2"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:2",
-			"vulnerable": true,
-			"package": {
-				"name": "bpftool",
-				"repositories": [
-					"amzn2extra-kernel-5.15"
-				],
-				"architectures": [
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:5.15.136-90.144.amzn2"
-					}
-				],
-				"fixed": [
-					"0:5.15.136-90.144.amzn2"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:2",
-			"vulnerable": true,
-			"package": {
-				"name": "kernel-devel",
-				"repositories": [
-					"amzn2extra-kernel-5.15"
-				],
-				"architectures": [
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:5.15.136-90.144.amzn2"
-					}
-				],
-				"fixed": [
-					"0:5.15.136-90.144.amzn2"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:2",
-			"vulnerable": true,
-			"package": {
-				"name": "kernel-livepatch-5.15.136-90.144",
-				"repositories": [
-					"amzn2extra-kernel-5.15"
-				],
-				"architectures": [
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:1.0-0.amzn2"
-					}
-				],
-				"fixed": [
-					"0:1.0-0.amzn2"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:2",
-			"vulnerable": true,
-			"package": {
-				"name": "kernel-debuginfo-common-aarch64",
-				"repositories": [
-					"amzn2extra-kernel-5.15"
-				],
-				"architectures": [
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:5.15.136-90.144.amzn2"
-					}
-				],
-				"fixed": [
-					"0:5.15.136-90.144.amzn2"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:2",
-			"vulnerable": true,
-			"package": {
-				"name": "perf",
 				"repositories": [
 					"amzn2extra-kernel-5.15"
 				],
@@ -426,7 +286,199 @@
 			"ecosystem": "amazon:2",
 			"vulnerable": true,
 			"package": {
-				"name": "python-perf-debuginfo",
+				"name": "kernel-devel",
+				"repositories": [
+					"amzn2extra-kernel-5.15"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:5.15.136-90.144.amzn2"
+					}
+				],
+				"fixed": [
+					"0:5.15.136-90.144.amzn2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "kernel-debuginfo",
+				"repositories": [
+					"amzn2extra-kernel-5.15"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:5.15.136-90.144.amzn2"
+					}
+				],
+				"fixed": [
+					"0:5.15.136-90.144.amzn2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "kernel-debuginfo-common-aarch64",
+				"repositories": [
+					"amzn2extra-kernel-5.15"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:5.15.136-90.144.amzn2"
+					}
+				],
+				"fixed": [
+					"0:5.15.136-90.144.amzn2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "kernel-tools-debuginfo",
+				"repositories": [
+					"amzn2extra-kernel-5.15"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:5.15.136-90.144.amzn2"
+					}
+				],
+				"fixed": [
+					"0:5.15.136-90.144.amzn2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "kernel-debuginfo-common-x86_64",
+				"repositories": [
+					"amzn2extra-kernel-5.15"
+				],
+				"architectures": [
+					"x86_64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:5.15.136-90.144.amzn2"
+					}
+				],
+				"fixed": [
+					"0:5.15.136-90.144.amzn2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "perf",
+				"repositories": [
+					"amzn2extra-kernel-5.15"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:5.15.136-90.144.amzn2"
+					}
+				],
+				"fixed": [
+					"0:5.15.136-90.144.amzn2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "python-perf",
+				"repositories": [
+					"amzn2extra-kernel-5.15"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:5.15.136-90.144.amzn2"
+					}
+				],
+				"fixed": [
+					"0:5.15.136-90.144.amzn2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "kernel-livepatch-5.15.136-90.144",
+				"repositories": [
+					"amzn2extra-kernel-5.15"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.0-0.amzn2"
+					}
+				],
+				"fixed": [
+					"0:1.0-0.amzn2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "kernel",
 				"repositories": [
 					"amzn2extra-kernel-5.15"
 				],

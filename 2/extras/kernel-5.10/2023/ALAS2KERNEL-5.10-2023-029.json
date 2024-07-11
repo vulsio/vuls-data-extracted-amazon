@@ -4,7 +4,7 @@
 		{
 			"id": "ALAS2KERNEL-5.10-2023-029",
 			"title": "Amazon Linux 2 - Kernel-5.10 2.0 - ALAS2KERNEL-5.10-2023-029: important priority package update for kernel",
-			"description": "Package updates are available for Amazon Linux 2 - Kernel-5.10 that fix the following vulnerabilities:\nCVE-2023-33203:\n\tThe Linux kernel before 6.2.9 has a race condition and resultant use-after-free in drivers/net/ethernet/qualcomm/emac/emac.c if a physically proximate attacker unplugs an emac based device.\n\nCVE-2023-28466:\n\tdo_tls_getsockopt in net/tls/tls_main.c in the Linux kernel through 6.2.6 lacks a lock_sock call, leading to a race condition (with a resultant use-after-free or NULL pointer dereference).\n\nCVE-2023-2194:\n\tAn out-of-bounds write vulnerability was found in the Linux kernel's SLIMpro I2C device driver. The userspace \"data->block[0]\" variable was not capped to a number between 0-255 and was used as the size of a memcpy, possibly writing beyond the end of dma_buffer. This flaw could allow a local privileged user to crash the system or potentially achieve code execution.\n\nCVE-2022-4379:\n\tA use-after-free vulnerability was found in __nfs42_ssc_open() in fs/nfs/nfs4file.c in the Linux kernel. This flaw allows an attacker to conduct a remote denial of service.\n",
+			"description": "Package updates are available for Amazon Linux 2 - Kernel-5.10 that fix the following vulnerabilities:\nCVE-2023-33203:\n\tThe Linux kernel before 6.2.9 has a race condition and resultant use-after-free in drivers/net/ethernet/qualcomm/emac/emac.c if a physically proximate attacker unplugs an emac based device.\n\nCVE-2023-28466:\n\tdo_tls_getsockopt in net/tls/tls_main.c in the Linux kernel through 6.2.6 lacks a lock_sock call, leading to a race condition (with a resultant use-after-free or NULL pointer dereference).\n\nCVE-2023-2194:\n\tAn out-of-bounds write vulnerability was found in the Linux kernel's SLIMpro I2C device driver. The userspace \"data->block[0]\" variable was not capped to a number between 0-255 and was used as the size of a memcpy, possibly writing beyond the end of dma_buffer. This flaw could allow a local privileged user to crash the system or potentially achieve code execution.\n\nCVE-2023-1611:\n\tA use-after-free flaw was found in btrfs_search_slot in fs/btrfs/ctree.c in btrfs in the Linux Kernel.This flaw allows an attacker to crash the system and possibly cause a kernel information lea\n\nCVE-2022-4379:\n\tA use-after-free vulnerability was found in __nfs42_ssc_open() in fs/nfs/nfs4file.c in the Linux kernel. This flaw allows an attacker to conduct a remote denial of service.\n",
 			"severity": [
 				{
 					"type": "vendor",
@@ -20,6 +20,10 @@
 				{
 					"source": "linux-security@amazon.com",
 					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-4379"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-1611"
 				},
 				{
 					"source": "linux-security@amazon.com",
@@ -43,6 +47,15 @@
 				{
 					"source": "linux-security@amazon.com",
 					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-4379"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-1611",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-1611"
 				}
 			]
 		},
@@ -79,23 +92,23 @@
 			"ecosystem": "amazon:2",
 			"vulnerable": true,
 			"package": {
-				"name": "kernel-livepatch-5.10.177-158.645",
+				"name": "kernel-debuginfo-common-x86_64",
 				"repositories": [
 					"amzn2extra-kernel-5.10"
 				],
 				"architectures": [
-					"aarch64"
+					"x86_64"
 				]
 			},
 			"affected": {
 				"type": "rpm",
 				"range": [
 					{
-						"lt": "0:1.0-0.amzn2"
+						"lt": "0:5.10.177-158.645.amzn2"
 					}
 				],
 				"fixed": [
-					"0:1.0-0.amzn2"
+					"0:5.10.177-158.645.amzn2"
 				]
 			}
 		},
@@ -103,7 +116,7 @@
 			"ecosystem": "amazon:2",
 			"vulnerable": true,
 			"package": {
-				"name": "kernel",
+				"name": "kernel-devel",
 				"repositories": [
 					"amzn2extra-kernel-5.10"
 				],
@@ -127,55 +140,7 @@
 			"ecosystem": "amazon:2",
 			"vulnerable": true,
 			"package": {
-				"name": "kernel-headers",
-				"repositories": [
-					"amzn2extra-kernel-5.10"
-				],
-				"architectures": [
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:5.10.177-158.645.amzn2"
-					}
-				],
-				"fixed": [
-					"0:5.10.177-158.645.amzn2"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:2",
-			"vulnerable": true,
-			"package": {
-				"name": "python-perf",
-				"repositories": [
-					"amzn2extra-kernel-5.10"
-				],
-				"architectures": [
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:5.10.177-158.645.amzn2"
-					}
-				],
-				"fixed": [
-					"0:5.10.177-158.645.amzn2"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:2",
-			"vulnerable": true,
-			"package": {
-				"name": "bpftool",
+				"name": "kernel-tools",
 				"repositories": [
 					"amzn2extra-kernel-5.10"
 				],
@@ -223,36 +188,12 @@
 			"ecosystem": "amazon:2",
 			"vulnerable": true,
 			"package": {
-				"name": "perf",
+				"name": "kernel",
 				"repositories": [
 					"amzn2extra-kernel-5.10"
 				],
 				"architectures": [
 					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:5.10.177-158.645.amzn2"
-					}
-				],
-				"fixed": [
-					"0:5.10.177-158.645.amzn2"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:2",
-			"vulnerable": true,
-			"package": {
-				"name": "kernel-debuginfo-common-x86_64",
-				"repositories": [
-					"amzn2extra-kernel-5.10"
-				],
-				"architectures": [
-					"x86_64"
 				]
 			},
 			"affected": {
@@ -272,102 +213,6 @@
 			"vulnerable": true,
 			"package": {
 				"name": "python-perf-debuginfo",
-				"repositories": [
-					"amzn2extra-kernel-5.10"
-				],
-				"architectures": [
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:5.10.177-158.645.amzn2"
-					}
-				],
-				"fixed": [
-					"0:5.10.177-158.645.amzn2"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:2",
-			"vulnerable": true,
-			"package": {
-				"name": "kernel-devel",
-				"repositories": [
-					"amzn2extra-kernel-5.10"
-				],
-				"architectures": [
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:5.10.177-158.645.amzn2"
-					}
-				],
-				"fixed": [
-					"0:5.10.177-158.645.amzn2"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:2",
-			"vulnerable": true,
-			"package": {
-				"name": "kernel-debuginfo-common-aarch64",
-				"repositories": [
-					"amzn2extra-kernel-5.10"
-				],
-				"architectures": [
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:5.10.177-158.645.amzn2"
-					}
-				],
-				"fixed": [
-					"0:5.10.177-158.645.amzn2"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:2",
-			"vulnerable": true,
-			"package": {
-				"name": "perf-debuginfo",
-				"repositories": [
-					"amzn2extra-kernel-5.10"
-				],
-				"architectures": [
-					"aarch64"
-				]
-			},
-			"affected": {
-				"type": "rpm",
-				"range": [
-					{
-						"lt": "0:5.10.177-158.645.amzn2"
-					}
-				],
-				"fixed": [
-					"0:5.10.177-158.645.amzn2"
-				]
-			}
-		},
-		{
-			"ecosystem": "amazon:2",
-			"vulnerable": true,
-			"package": {
-				"name": "kernel-tools",
 				"repositories": [
 					"amzn2extra-kernel-5.10"
 				],
@@ -440,6 +285,174 @@
 			"vulnerable": true,
 			"package": {
 				"name": "kernel-debuginfo",
+				"repositories": [
+					"amzn2extra-kernel-5.10"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:5.10.177-158.645.amzn2"
+					}
+				],
+				"fixed": [
+					"0:5.10.177-158.645.amzn2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "kernel-livepatch-5.10.177-158.645",
+				"repositories": [
+					"amzn2extra-kernel-5.10"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:1.0-0.amzn2"
+					}
+				],
+				"fixed": [
+					"0:1.0-0.amzn2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "kernel-debuginfo-common-aarch64",
+				"repositories": [
+					"amzn2extra-kernel-5.10"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:5.10.177-158.645.amzn2"
+					}
+				],
+				"fixed": [
+					"0:5.10.177-158.645.amzn2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "kernel-headers",
+				"repositories": [
+					"amzn2extra-kernel-5.10"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:5.10.177-158.645.amzn2"
+					}
+				],
+				"fixed": [
+					"0:5.10.177-158.645.amzn2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "perf",
+				"repositories": [
+					"amzn2extra-kernel-5.10"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:5.10.177-158.645.amzn2"
+					}
+				],
+				"fixed": [
+					"0:5.10.177-158.645.amzn2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "perf-debuginfo",
+				"repositories": [
+					"amzn2extra-kernel-5.10"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:5.10.177-158.645.amzn2"
+					}
+				],
+				"fixed": [
+					"0:5.10.177-158.645.amzn2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "python-perf",
+				"repositories": [
+					"amzn2extra-kernel-5.10"
+				],
+				"architectures": [
+					"aarch64"
+				]
+			},
+			"affected": {
+				"type": "rpm",
+				"range": [
+					{
+						"lt": "0:5.10.177-158.645.amzn2"
+					}
+				],
+				"fixed": [
+					"0:5.10.177-158.645.amzn2"
+				]
+			}
+		},
+		{
+			"ecosystem": "amazon:2",
+			"vulnerable": true,
+			"package": {
+				"name": "bpftool",
 				"repositories": [
 					"amzn2extra-kernel-5.10"
 				],
