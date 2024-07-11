@@ -70,7 +70,7 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "httpd-manual",
+							"name": "httpd-filesystem",
 							"architectures": [
 								"noarch"
 							],
@@ -93,9 +93,9 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "httpd-filesystem",
+							"name": "httpd-tools",
 							"architectures": [
-								"noarch"
+								"aarch64"
 							],
 							"repositories": [
 								"amzn2-core"
@@ -185,7 +185,7 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "httpd",
+							"name": "mod_ldap",
 							"architectures": [
 								"aarch64"
 							],
@@ -231,7 +231,30 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "httpd-tools",
+							"name": "httpd-manual",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.4.55-1.amzn2"
+								}
+							],
+							"fixed": [
+								"0:2.4.55-1.amzn2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "httpd-debuginfo",
 							"architectures": [
 								"aarch64"
 							],
@@ -254,7 +277,7 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "mod_ldap",
+							"name": "httpd",
 							"architectures": [
 								"aarch64"
 							],
@@ -278,29 +301,6 @@
 						"vulnerable": true,
 						"package": {
 							"name": "mod_session",
-							"architectures": [
-								"aarch64"
-							],
-							"repositories": [
-								"amzn2-core"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:2.4.55-1.amzn2"
-								}
-							],
-							"fixed": [
-								"0:2.4.55-1.amzn2"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "httpd-debuginfo",
 							"architectures": [
 								"aarch64"
 							],

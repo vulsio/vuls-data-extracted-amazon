@@ -109,7 +109,7 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "kernel-debuginfo",
+							"name": "perf",
 							"architectures": [
 								"i686"
 							],
@@ -133,7 +133,7 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "kernel-tools",
+							"name": "kernel-headers",
 							"architectures": [
 								"i686"
 							],
@@ -157,9 +157,9 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "kernel-doc",
+							"name": "kernel-tools-debuginfo",
 							"architectures": [
-								"noarch"
+								"i686"
 							],
 							"repositories": [
 								"amzn-main",
@@ -206,6 +206,54 @@
 						"vulnerable": true,
 						"package": {
 							"name": "kernel-devel",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:4.9.58-18.51.amzn1"
+								}
+							],
+							"fixed": [
+								"0:4.9.58-18.51.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "kernel-debuginfo",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:4.9.58-18.51.amzn1"
+								}
+							],
+							"fixed": [
+								"0:4.9.58-18.51.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "kernel",
 							"architectures": [
 								"i686"
 							],
@@ -277,31 +325,7 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "perf",
-							"architectures": [
-								"i686"
-							],
-							"repositories": [
-								"amzn-main",
-								"amzn-updates"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:4.9.58-18.51.amzn1"
-								}
-							],
-							"fixed": [
-								"0:4.9.58-18.51.amzn1"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "kernel-headers",
+							"name": "kernel-tools",
 							"architectures": [
 								"i686"
 							],
@@ -349,33 +373,9 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "kernel-tools-debuginfo",
+							"name": "kernel-doc",
 							"architectures": [
-								"i686"
-							],
-							"repositories": [
-								"amzn-main",
-								"amzn-updates"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:4.9.58-18.51.amzn1"
-								}
-							],
-							"fixed": [
-								"0:4.9.58-18.51.amzn1"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "kernel",
-							"architectures": [
-								"i686"
+								"noarch"
 							],
 							"repositories": [
 								"amzn-main",
