@@ -4,7 +4,7 @@
 		{
 			"id": "ALAS2-2024-2549",
 			"title": "Amazon Linux 2 2017.12 - ALAS2-2024-2549: medium priority package update for kernel",
-			"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2024-26898:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\naoe: fix the potential use-after-free problem in aoecmd_cfg_pkts\n\nCVE-2024-26625:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nllc: call sock_orphan() at release time\n\nCVE-2024-0607:\n\tnetfilter: nf_tables: fix pointer math issue in nft_byteorder_eval()\n\nCVE-2023-52698:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\ncalipso: fix memory leak in netlbl_calipso_add_pass()\n\nCVE-2023-52486:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\ndrm: Don't unref the same fb many times by mistake due to deadlock handling\n\nCVE-2023-52464:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nEDAC/thunderx: Fix possible out-of-bounds string access\n\nEnabling -Wstringop-overflow globally exposes a warning for a common bug\nin the usage of strncat():\n\n  drivers/edac/thunderx_edac.c: In function 'thunderx_ocx_com_threaded_isr':\n  drivers/edac/thunderx_edac.c:1136:17: error: 'strncat' specified bound 1024 equals destination size [-Werror=stringop-overflow=]\n   1136 |                 strncat(msg, other, OCX_MESSAGE_SIZE);\n        |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n   ...\n   1145 |                                 strncat(msg, other, OCX_MESSAGE_SIZE);\n   ...\n   1150 |                                 strncat(msg, other, OCX_MESSAGE_SIZE);\n\n   ...\n\nApparently the author of this driver expected strncat() to behave the\nway that strlcat() does, which uses the size of the destination buffer\nas its third argument rather than the length of the source buffer. The\nresult is that there is no check on the size of the allocated buffer.\n\nChange it to strlcat().\n\n  [ bp: Trim compiler output, fixup commit message. ]\n\nCVE-2023-46838:\n\tA flaw has been found in Xen. An unprivileged guest can cause Denial of Service (DoS) of the host by sending network packets to the backend, causing the backend to crash.\n",
+			"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2024-26898:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\naoe: fix the potential use-after-free problem in aoecmd_cfg_pkts\n\nCVE-2024-26635:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nllc: Drop support for ETH_P_TR_802_2.\n\nCVE-2024-26633:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nip6_tunnel: fix NEXTHDR_FRAGMENT handling in ip6_tnl_parse_tlv_enc_lim()\n\nCVE-2024-26625:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nllc: call sock_orphan() at release time\n\nCVE-2024-0607:\n\tnetfilter: nf_tables: fix pointer math issue in nft_byteorder_eval()\n\nCVE-2024-0340:\n\tA vulnerability was found in vhost_new_msg in drivers/vhost/vhost.c in the Linux kernel, which does not properly initialize memory in messages passed between virtual guests and the host operating system in the vhost/vhost.c:vhost_new_msg() function. This issue can allow local privileged users to read some kernel memory contents when reading from the /dev/vhost-net device file.\n\nCVE-2023-52698:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\ncalipso: fix memory leak in netlbl_calipso_add_pass()\n\nCVE-2023-52619:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\npstore/ram: Fix crash when setting number of cpus to an odd number\n\nCVE-2023-52615:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nhwrng: core - Fix page fault dead lock on mmap-ed hwrng\n\nCVE-2023-52612:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\ncrypto: scomp - fix req->dst buffer overflow\n\nCVE-2023-52583:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nceph: fix deadlock or deadcode of misusing dget()\n\nCVE-2023-52486:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\ndrm: Don't unref the same fb many times by mistake due to deadlock handling\n\nCVE-2023-52470:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\ndrm/radeon: check the alloc_workqueue return value in radeon_crtc_init()\n\ncheck the alloc_workqueue return value in radeon_crtc_init()\nto avoid null-ptr-deref.\n\nCVE-2023-52464:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nEDAC/thunderx: Fix possible out-of-bounds string access\n\nEnabling -Wstringop-overflow globally exposes a warning for a common bug\nin the usage of strncat():\n\n  drivers/edac/thunderx_edac.c: In function 'thunderx_ocx_com_threaded_isr':\n  drivers/edac/thunderx_edac.c:1136:17: error: 'strncat' specified bound 1024 equals destination size [-Werror=stringop-overflow=]\n   1136 |                 strncat(msg, other, OCX_MESSAGE_SIZE);\n        |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n   ...\n   1145 |                                 strncat(msg, other, OCX_MESSAGE_SIZE);\n   ...\n   1150 |                                 strncat(msg, other, OCX_MESSAGE_SIZE);\n\n   ...\n\nApparently the author of this driver expected strncat() to behave the\nway that strlcat() does, which uses the size of the destination buffer\nas its third argument rather than the length of the source buffer. The\nresult is that there is no check on the size of the allocated buffer.\n\nChange it to strlcat().\n\n  [ bp: Trim compiler output, fixup commit message. ]\n\nCVE-2023-46838:\n\tA flaw has been found in Xen. An unprivileged guest can cause Denial of Service (DoS) of the host by sending network packets to the backend, causing the backend to crash.\n",
 			"severity": [
 				{
 					"type": "vendor",
@@ -23,11 +23,35 @@
 				},
 				{
 					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52470"
+				},
+				{
+					"source": "linux-security@amazon.com",
 					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52486"
 				},
 				{
 					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52583"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52612"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52615"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52619"
+				},
+				{
+					"source": "linux-security@amazon.com",
 					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52698"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-0340"
 				},
 				{
 					"source": "linux-security@amazon.com",
@@ -36,6 +60,14 @@
 				{
 					"source": "linux-security@amazon.com",
 					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26625"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26633"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26635"
 				},
 				{
 					"source": "linux-security@amazon.com",
@@ -68,6 +100,15 @@
 			]
 		},
 		{
+			"id": "CVE-2023-52470",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52470"
+				}
+			]
+		},
+		{
 			"id": "CVE-2023-52486",
 			"references": [
 				{
@@ -77,11 +118,56 @@
 			]
 		},
 		{
+			"id": "CVE-2023-52583",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52583"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-52612",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52612"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-52615",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52615"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-52619",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52619"
+				}
+			]
+		},
+		{
 			"id": "CVE-2023-52698",
 			"references": [
 				{
 					"source": "linux-security@amazon.com",
 					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52698"
+				}
+			]
+		},
+		{
+			"id": "CVE-2024-0340",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-0340"
 				}
 			]
 		},
@@ -104,6 +190,24 @@
 			]
 		},
 		{
+			"id": "CVE-2024-26633",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26633"
+				}
+			]
+		},
+		{
+			"id": "CVE-2024-26635",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26635"
+				}
+			]
+		},
+		{
 			"id": "CVE-2024-26898",
 			"references": [
 				{
@@ -119,29 +223,6 @@
 			"criteria": {
 				"operator": "OR",
 				"criterions": [
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "kernel-debuginfo-common-aarch64",
-							"architectures": [
-								"aarch64"
-							],
-							"repositories": [
-								"amzn2-core"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:4.14.343-259.562.amzn2"
-								}
-							],
-							"fixed": [
-								"0:4.14.343-259.562.amzn2"
-							]
-						}
-					},
 					{
 						"vulnerable": true,
 						"package": {
@@ -168,9 +249,147 @@
 					{
 						"vulnerable": true,
 						"package": {
+							"name": "kernel-headers",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:4.14.343-259.562.amzn2"
+								}
+							],
+							"fixed": [
+								"0:4.14.343-259.562.amzn2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "perf",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:4.14.343-259.562.amzn2"
+								}
+							],
+							"fixed": [
+								"0:4.14.343-259.562.amzn2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "perf-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:4.14.343-259.562.amzn2"
+								}
+							],
+							"fixed": [
+								"0:4.14.343-259.562.amzn2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
 							"name": "kernel-debuginfo-common-x86_64",
 							"architectures": [
 								"x86_64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:4.14.343-259.562.amzn2"
+								}
+							],
+							"fixed": [
+								"0:4.14.343-259.562.amzn2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "kernel-tools-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:4.14.343-259.562.amzn2"
+								}
+							],
+							"fixed": [
+								"0:4.14.343-259.562.amzn2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "kernel-livepatch-4.14.343-259.562",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.0-0.amzn2"
+								}
+							],
+							"fixed": [
+								"0:1.0-0.amzn2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "kernel-tools",
+							"architectures": [
+								"aarch64"
 							],
 							"repositories": [
 								"amzn2-core"
@@ -237,53 +456,7 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "kernel-headers",
-							"architectures": [
-								"aarch64"
-							],
-							"repositories": [
-								"amzn2-core"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:4.14.343-259.562.amzn2"
-								}
-							],
-							"fixed": [
-								"0:4.14.343-259.562.amzn2"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "perf-debuginfo",
-							"architectures": [
-								"aarch64"
-							],
-							"repositories": [
-								"amzn2-core"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:4.14.343-259.562.amzn2"
-								}
-							],
-							"fixed": [
-								"0:4.14.343-259.562.amzn2"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "kernel-tools",
+							"name": "kernel-debuginfo-common-aarch64",
 							"architectures": [
 								"aarch64"
 							],
@@ -353,75 +526,6 @@
 						"vulnerable": true,
 						"package": {
 							"name": "kernel-devel",
-							"architectures": [
-								"aarch64"
-							],
-							"repositories": [
-								"amzn2-core"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:4.14.343-259.562.amzn2"
-								}
-							],
-							"fixed": [
-								"0:4.14.343-259.562.amzn2"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "kernel-livepatch-4.14.343-259.562",
-							"architectures": [
-								"x86_64"
-							],
-							"repositories": [
-								"amzn2-core"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:1.0-0.amzn2"
-								}
-							],
-							"fixed": [
-								"0:1.0-0.amzn2"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "perf",
-							"architectures": [
-								"aarch64"
-							],
-							"repositories": [
-								"amzn2-core"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:4.14.343-259.562.amzn2"
-								}
-							],
-							"fixed": [
-								"0:4.14.343-259.562.amzn2"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "kernel-tools-debuginfo",
 							"architectures": [
 								"aarch64"
 							],

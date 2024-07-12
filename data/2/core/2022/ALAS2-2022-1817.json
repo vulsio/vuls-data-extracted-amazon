@@ -44,7 +44,7 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "rls",
+							"name": "rustfmt",
 							"architectures": [
 								"aarch64"
 							],
@@ -90,7 +90,30 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "rust-analysis",
+							"name": "rust-src",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.61.0-2.amzn2.0.1"
+								}
+							],
+							"fixed": [
+								"0:1.61.0-2.amzn2.0.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "rust-debuginfo",
 							"architectures": [
 								"aarch64"
 							],
@@ -113,7 +136,7 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "rust-debuginfo",
+							"name": "rust",
 							"architectures": [
 								"aarch64"
 							],
@@ -182,53 +205,7 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "cargo",
-							"architectures": [
-								"aarch64"
-							],
-							"repositories": [
-								"amzn2-core"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:1.61.0-2.amzn2.0.1"
-								}
-							],
-							"fixed": [
-								"0:1.61.0-2.amzn2.0.1"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "rustfmt",
-							"architectures": [
-								"aarch64"
-							],
-							"repositories": [
-								"amzn2-core"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:1.61.0-2.amzn2.0.1"
-								}
-							],
-							"fixed": [
-								"0:1.61.0-2.amzn2.0.1"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "rust-src",
+							"name": "cargo-doc",
 							"architectures": [
 								"noarch"
 							],
@@ -251,7 +228,30 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "rust",
+							"name": "rls",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.61.0-2.amzn2.0.1"
+								}
+							],
+							"fixed": [
+								"0:1.61.0-2.amzn2.0.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "rust-analysis",
 							"architectures": [
 								"aarch64"
 							],
@@ -320,9 +320,9 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "cargo-doc",
+							"name": "cargo",
 							"architectures": [
-								"noarch"
+								"aarch64"
 							],
 							"repositories": [
 								"amzn2-core"

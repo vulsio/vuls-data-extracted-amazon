@@ -4,7 +4,7 @@
 		{
 			"id": "ALAS2-2024-2581",
 			"title": "Amazon Linux 2 2017.12 - ALAS2-2024-2581: important priority package update for kernel",
-			"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2023-30456:\n\tAn issue was discovered in arch/x86/kvm/vmx/nested.c in the Linux kernel before 6.2.8. nVMX on x86_64 lacks consistency checks for CR0 and CR4.\n\nCVE-2021-47110:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nx86/kvm: Disable kvmclock on all CPUs on shutdown\n",
+			"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2024-36959:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\npinctrl: devicetree: fix refcount leak in pinctrl_dt_to_map()\n\nCVE-2024-36954:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\ntipc: fix a possible memleak in tipc_buf_append\n\nCVE-2024-36940:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\npinctrl: core: delete incorrect free in pinctrl_enable()\n\nCVE-2024-36905:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\ntcp: defer shutdown(SEND_SHUTDOWN) for TCP_SYN_RECV sockets\n\nCVE-2024-36902:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nipv6: fib6_rules: avoid possible NULL dereference in fib6_rule_action()\n\nCVE-2024-36886:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\ntipc: fix UAF in error path\n\nCVE-2024-36883:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nnet: fix out-of-bounds access in ops_init\n\nCVE-2024-36017:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nrtnetlink: Correct nested IFLA_VF_VLAN_LIST attribute validation\n\nCVE-2024-35947:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\ndyndbg: fix old BUG_ON in >control parser\n\nCVE-2024-26923:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\naf_unix: Fix garbage collector racing against connect()\n\nCVE-2023-52578:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nnet: bridge: use DEV_STATS_INC()\n\nCVE-2023-30456:\n\tAn issue was discovered in arch/x86/kvm/vmx/nested.c in the Linux kernel before 6.2.8. nVMX on x86_64 lacks consistency checks for CR0 and CR4.\n",
 			"severity": [
 				{
 					"type": "vendor",
@@ -15,11 +15,51 @@
 			"references": [
 				{
 					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-47110"
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-30456"
 				},
 				{
 					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-30456"
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52578"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26923"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35947"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36017"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36883"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36886"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36902"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36905"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36940"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36954"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36959"
 				},
 				{
 					"source": "linux-security@amazon.com",
@@ -30,20 +70,110 @@
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2021-47110",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-47110"
-				}
-			]
-		},
-		{
 			"id": "CVE-2023-30456",
 			"references": [
 				{
 					"source": "linux-security@amazon.com",
 					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-30456"
+				}
+			]
+		},
+		{
+			"id": "CVE-2023-52578",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52578"
+				}
+			]
+		},
+		{
+			"id": "CVE-2024-26923",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26923"
+				}
+			]
+		},
+		{
+			"id": "CVE-2024-35947",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35947"
+				}
+			]
+		},
+		{
+			"id": "CVE-2024-36017",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36017"
+				}
+			]
+		},
+		{
+			"id": "CVE-2024-36883",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36883"
+				}
+			]
+		},
+		{
+			"id": "CVE-2024-36886",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36886"
+				}
+			]
+		},
+		{
+			"id": "CVE-2024-36902",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36902"
+				}
+			]
+		},
+		{
+			"id": "CVE-2024-36905",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36905"
+				}
+			]
+		},
+		{
+			"id": "CVE-2024-36940",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36940"
+				}
+			]
+		},
+		{
+			"id": "CVE-2024-36954",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36954"
+				}
+			]
+		},
+		{
+			"id": "CVE-2024-36959",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36959"
 				}
 			]
 		}
@@ -57,7 +187,7 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "kernel-headers",
+							"name": "python-perf",
 							"architectures": [
 								"aarch64"
 							],
@@ -80,7 +210,30 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "kernel-debuginfo-common-x86_64",
+							"name": "kernel-devel",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:4.14.348-265.562.amzn2"
+								}
+							],
+							"fixed": [
+								"0:4.14.348-265.562.amzn2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "kernel-livepatch-4.14.348-265.562",
 							"architectures": [
 								"x86_64"
 							],
@@ -92,41 +245,18 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:4.14.348-265.562.amzn2"
+									"lt": "0:1.0-0.amzn2"
 								}
 							],
 							"fixed": [
-								"0:4.14.348-265.562.amzn2"
+								"0:1.0-0.amzn2"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "python-perf-debuginfo",
-							"architectures": [
-								"aarch64"
-							],
-							"repositories": [
-								"amzn2-core"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:4.14.348-265.562.amzn2"
-								}
-							],
-							"fixed": [
-								"0:4.14.348-265.562.amzn2"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "kernel-tools-devel",
+							"name": "kernel-debuginfo-common-aarch64",
 							"architectures": [
 								"aarch64"
 							],
@@ -195,99 +325,7 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "kernel-tools-debuginfo",
-							"architectures": [
-								"aarch64"
-							],
-							"repositories": [
-								"amzn2-core"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:4.14.348-265.562.amzn2"
-								}
-							],
-							"fixed": [
-								"0:4.14.348-265.562.amzn2"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "kernel-devel",
-							"architectures": [
-								"aarch64"
-							],
-							"repositories": [
-								"amzn2-core"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:4.14.348-265.562.amzn2"
-								}
-							],
-							"fixed": [
-								"0:4.14.348-265.562.amzn2"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "kernel-debuginfo",
-							"architectures": [
-								"aarch64"
-							],
-							"repositories": [
-								"amzn2-core"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:4.14.348-265.562.amzn2"
-								}
-							],
-							"fixed": [
-								"0:4.14.348-265.562.amzn2"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "perf-debuginfo",
-							"architectures": [
-								"aarch64"
-							],
-							"repositories": [
-								"amzn2-core"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:4.14.348-265.562.amzn2"
-								}
-							],
-							"fixed": [
-								"0:4.14.348-265.562.amzn2"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "python-perf",
+							"name": "python-perf-debuginfo",
 							"architectures": [
 								"aarch64"
 							],
@@ -333,7 +371,76 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "kernel-livepatch-4.14.348-265.562",
+							"name": "kernel-tools-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:4.14.348-265.562.amzn2"
+								}
+							],
+							"fixed": [
+								"0:4.14.348-265.562.amzn2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "kernel-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:4.14.348-265.562.amzn2"
+								}
+							],
+							"fixed": [
+								"0:4.14.348-265.562.amzn2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "kernel-headers",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:4.14.348-265.562.amzn2"
+								}
+							],
+							"fixed": [
+								"0:4.14.348-265.562.amzn2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "kernel-debuginfo-common-x86_64",
 							"architectures": [
 								"x86_64"
 							],
@@ -345,18 +452,41 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:1.0-0.amzn2"
+									"lt": "0:4.14.348-265.562.amzn2"
 								}
 							],
 							"fixed": [
-								"0:1.0-0.amzn2"
+								"0:4.14.348-265.562.amzn2"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "kernel-debuginfo-common-aarch64",
+							"name": "perf-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:4.14.348-265.562.amzn2"
+								}
+							],
+							"fixed": [
+								"0:4.14.348-265.562.amzn2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "kernel-tools-devel",
 							"architectures": [
 								"aarch64"
 							],
