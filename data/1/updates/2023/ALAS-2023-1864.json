@@ -44,7 +44,7 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "java-1.8.0-openjdk-src",
+							"name": "java-1.8.0-openjdk",
 							"architectures": [
 								"i686"
 							],
@@ -68,9 +68,9 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "java-1.8.0-openjdk-javadoc-zip",
+							"name": "java-1.8.0-openjdk-debuginfo",
 							"architectures": [
-								"noarch"
+								"i686"
 							],
 							"repositories": [
 								"amzn-main",
@@ -92,7 +92,31 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "java-1.8.0-openjdk-debuginfo",
+							"name": "java-1.8.0-openjdk-demo",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:1.8.0.382.b05-1.79.amzn1"
+								}
+							],
+							"fixed": [
+								"1:1.8.0.382.b05-1.79.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "java-1.8.0-openjdk-devel",
 							"architectures": [
 								"i686"
 							],
@@ -140,30 +164,6 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "java-1.8.0-openjdk",
-							"architectures": [
-								"i686"
-							],
-							"repositories": [
-								"amzn-main",
-								"amzn-updates"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "1:1.8.0.382.b05-1.79.amzn1"
-								}
-							],
-							"fixed": [
-								"1:1.8.0.382.b05-1.79.amzn1"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
 							"name": "java-1.8.0-openjdk-javadoc",
 							"architectures": [
 								"noarch"
@@ -188,9 +188,9 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "java-1.8.0-openjdk-devel",
+							"name": "java-1.8.0-openjdk-javadoc-zip",
 							"architectures": [
-								"i686"
+								"noarch"
 							],
 							"repositories": [
 								"amzn-main",
@@ -212,7 +212,7 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "java-1.8.0-openjdk-demo",
+							"name": "java-1.8.0-openjdk-src",
 							"architectures": [
 								"i686"
 							],

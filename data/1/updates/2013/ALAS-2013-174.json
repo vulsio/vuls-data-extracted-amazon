@@ -81,7 +81,7 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "httpd-tools",
+							"name": "httpd-debuginfo",
 							"architectures": [
 								"i686"
 							],
@@ -105,7 +105,7 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "httpd-debuginfo",
+							"name": "httpd-devel",
 							"architectures": [
 								"i686"
 							],
@@ -153,6 +153,30 @@
 					{
 						"vulnerable": true,
 						"package": {
+							"name": "httpd-tools",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.2.24-1.29.amzn1"
+								}
+							],
+							"fixed": [
+								"0:2.2.24-1.29.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
 							"name": "mod_ssl",
 							"architectures": [
 								"i686"
@@ -171,30 +195,6 @@
 							],
 							"fixed": [
 								"1:2.2.24-1.29.amzn1"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "httpd-devel",
-							"architectures": [
-								"i686"
-							],
-							"repositories": [
-								"amzn-main",
-								"amzn-updates"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:2.2.24-1.29.amzn1"
-								}
-							],
-							"fixed": [
-								"0:2.2.24-1.29.amzn1"
 							]
 						}
 					}

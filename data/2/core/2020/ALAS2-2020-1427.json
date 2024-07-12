@@ -57,7 +57,7 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "httpd-devel",
+							"name": "httpd",
 							"architectures": [
 								"i686"
 							],
@@ -80,9 +80,32 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "httpd-manual",
+							"name": "httpd-debuginfo",
 							"architectures": [
-								"noarch"
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.4.43-1.amzn2"
+								}
+							],
+							"fixed": [
+								"0:2.4.43-1.amzn2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "httpd-devel",
+							"architectures": [
+								"i686"
 							],
 							"repositories": [
 								"amzn2-core"
@@ -126,78 +149,9 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "mod_ssl",
+							"name": "httpd-manual",
 							"architectures": [
-								"i686"
-							],
-							"repositories": [
-								"amzn2-core"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "1:2.4.43-1.amzn2"
-								}
-							],
-							"fixed": [
-								"1:2.4.43-1.amzn2"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "mod_ldap",
-							"architectures": [
-								"i686"
-							],
-							"repositories": [
-								"amzn2-core"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:2.4.43-1.amzn2"
-								}
-							],
-							"fixed": [
-								"0:2.4.43-1.amzn2"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "mod_session",
-							"architectures": [
-								"i686"
-							],
-							"repositories": [
-								"amzn2-core"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:2.4.43-1.amzn2"
-								}
-							],
-							"fixed": [
-								"0:2.4.43-1.amzn2"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "httpd",
-							"architectures": [
-								"i686"
+								"noarch"
 							],
 							"repositories": [
 								"amzn2-core"
@@ -219,6 +173,29 @@
 						"vulnerable": true,
 						"package": {
 							"name": "httpd-tools",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.4.43-1.amzn2"
+								}
+							],
+							"fixed": [
+								"0:2.4.43-1.amzn2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mod_ldap",
 							"architectures": [
 								"i686"
 							],
@@ -287,7 +264,7 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "httpd-debuginfo",
+							"name": "mod_session",
 							"architectures": [
 								"i686"
 							],
@@ -304,6 +281,29 @@
 							],
 							"fixed": [
 								"0:2.4.43-1.amzn2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mod_ssl",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:2.4.43-1.amzn2"
+								}
+							],
+							"fixed": [
+								"1:2.4.43-1.amzn2"
 							]
 						}
 					}

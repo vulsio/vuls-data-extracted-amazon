@@ -278,7 +278,7 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "kernel-tools-debuginfo",
+							"name": "bpftool",
 							"architectures": [
 								"aarch64"
 							],
@@ -324,7 +324,7 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "kernel-libbpf",
+							"name": "kernel",
 							"architectures": [
 								"aarch64"
 							],
@@ -347,30 +347,7 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "perf",
-							"architectures": [
-								"aarch64"
-							],
-							"repositories": [
-								"amazonlinux"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:5.15.72-43.134.amzn2022"
-								}
-							],
-							"fixed": [
-								"0:5.15.72-43.134.amzn2022"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "kernel-headers",
+							"name": "kernel-debuginfo",
 							"architectures": [
 								"aarch64"
 							],
@@ -416,9 +393,9 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "kernel-livepatch-5.15.72-43.134",
+							"name": "kernel-debuginfo-common-x86_64",
 							"architectures": [
-								"aarch64"
+								"x86_64"
 							],
 							"repositories": [
 								"amazonlinux"
@@ -428,18 +405,18 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:1.0-0.amzn2022"
+									"lt": "0:5.15.72-43.134.amzn2022"
 								}
 							],
 							"fixed": [
-								"0:1.0-0.amzn2022"
+								"0:5.15.72-43.134.amzn2022"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "kernel-debuginfo",
+							"name": "kernel-devel",
 							"architectures": [
 								"aarch64"
 							],
@@ -462,7 +439,30 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "kernel-devel",
+							"name": "kernel-headers",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.15.72-43.134.amzn2022"
+								}
+							],
+							"fixed": [
+								"0:5.15.72-43.134.amzn2022"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "kernel-libbpf",
 							"architectures": [
 								"aarch64"
 							],
@@ -508,29 +508,6 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "bpftool",
-							"architectures": [
-								"aarch64"
-							],
-							"repositories": [
-								"amazonlinux"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:5.15.72-43.134.amzn2022"
-								}
-							],
-							"fixed": [
-								"0:5.15.72-43.134.amzn2022"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
 							"name": "kernel-libbpf-static",
 							"architectures": [
 								"aarch64"
@@ -554,7 +531,99 @@
 					{
 						"vulnerable": true,
 						"package": {
+							"name": "kernel-livepatch-5.15.72-43.134",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.0-0.amzn2022"
+								}
+							],
+							"fixed": [
+								"0:1.0-0.amzn2022"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
 							"name": "kernel-tools",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.15.72-43.134.amzn2022"
+								}
+							],
+							"fixed": [
+								"0:5.15.72-43.134.amzn2022"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "kernel-tools-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.15.72-43.134.amzn2022"
+								}
+							],
+							"fixed": [
+								"0:5.15.72-43.134.amzn2022"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "kernel-tools-devel",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:5.15.72-43.134.amzn2022"
+								}
+							],
+							"fixed": [
+								"0:5.15.72-43.134.amzn2022"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "perf",
 							"architectures": [
 								"aarch64"
 							],
@@ -600,76 +669,7 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "kernel",
-							"architectures": [
-								"aarch64"
-							],
-							"repositories": [
-								"amazonlinux"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:5.15.72-43.134.amzn2022"
-								}
-							],
-							"fixed": [
-								"0:5.15.72-43.134.amzn2022"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "kernel-debuginfo-common-x86_64",
-							"architectures": [
-								"x86_64"
-							],
-							"repositories": [
-								"amazonlinux"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:5.15.72-43.134.amzn2022"
-								}
-							],
-							"fixed": [
-								"0:5.15.72-43.134.amzn2022"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
 							"name": "python3-perf",
-							"architectures": [
-								"aarch64"
-							],
-							"repositories": [
-								"amazonlinux"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:5.15.72-43.134.amzn2022"
-								}
-							],
-							"fixed": [
-								"0:5.15.72-43.134.amzn2022"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "kernel-tools-devel",
 							"architectures": [
 								"aarch64"
 							],

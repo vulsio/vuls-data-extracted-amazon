@@ -226,9 +226,9 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "golang-race",
+							"name": "golang",
 							"architectures": [
-								"x86_64"
+								"aarch64"
 							],
 							"repositories": [
 								"amzn2-core"
@@ -249,7 +249,7 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "golang",
+							"name": "golang-bin",
 							"architectures": [
 								"aarch64"
 							],
@@ -318,9 +318,32 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "golang-tests",
+							"name": "golang-race",
 							"architectures": [
-								"noarch"
+								"x86_64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.18.5-1.amzn2"
+								}
+							],
+							"fixed": [
+								"0:1.18.5-1.amzn2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "golang-shared",
+							"architectures": [
+								"aarch64"
 							],
 							"repositories": [
 								"amzn2-core"
@@ -364,32 +387,9 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "golang-bin",
+							"name": "golang-tests",
 							"architectures": [
-								"aarch64"
-							],
-							"repositories": [
-								"amzn2-core"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:1.18.5-1.amzn2"
-								}
-							],
-							"fixed": [
-								"0:1.18.5-1.amzn2"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "golang-shared",
-							"architectures": [
-								"aarch64"
+								"noarch"
 							],
 							"repositories": [
 								"amzn2-core"

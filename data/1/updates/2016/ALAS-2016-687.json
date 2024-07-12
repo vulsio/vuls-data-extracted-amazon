@@ -44,9 +44,33 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "golang-misc",
+							"name": "golang",
 							"architectures": [
-								"noarch"
+								"i686"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.5.3-1.21.amzn1"
+								}
+							],
+							"fixed": [
+								"0:1.5.3-1.21.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "golang-bin",
+							"architectures": [
+								"i686"
 							],
 							"repositories": [
 								"amzn-main",
@@ -92,9 +116,9 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "golang-bin",
+							"name": "golang-misc",
 							"architectures": [
-								"i686"
+								"noarch"
 							],
 							"repositories": [
 								"amzn-main",
@@ -143,30 +167,6 @@
 							"name": "golang-tests",
 							"architectures": [
 								"noarch"
-							],
-							"repositories": [
-								"amzn-main",
-								"amzn-updates"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:1.5.3-1.21.amzn1"
-								}
-							],
-							"fixed": [
-								"0:1.5.3-1.21.amzn1"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "golang",
-							"architectures": [
-								"i686"
 							],
 							"repositories": [
 								"amzn-main",
