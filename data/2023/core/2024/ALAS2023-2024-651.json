@@ -1,49 +1,36 @@
 {
-	"id": "ALAS2023-2023-371",
+	"id": "ALAS2023-2024-651",
 	"advisories": [
 		{
-			"id": "ALAS2023-2023-371",
-			"title": "Amazon Linux 2023 - ALAS2023-2023-371: Medium priority package update for poppler",
-			"description": "Package updates are available for Amazon Linux 2023 that fix the following vulnerabilities:\nCVE-2023-34872:\n\tA vulnerability in Outline.cc for Poppler prior to 23.06.0 allows a remote attacker to cause a Denial of Service (DoS) (crash) via a crafted PDF file in OutlineItem::open.\n\nCVE-2022-27337:\n\tA logic error in the Hints::Hints function of Poppler v22.03.0 allows attackers to cause a Denial of Service (DoS) via a crafted PDF file.\n",
+			"id": "ALAS2023-2024-651",
+			"title": "Amazon Linux 2023 - ALAS2023-2024-651: Important priority package update for openssh",
+			"description": "Package updates are available for Amazon Linux 2023 that fix the following vulnerabilities:\nCVE-2024-6409:\n\tA signal handler race condition vulnerability was found in OpenSSH's server (sshd), where a client does not authenticate within LoginGraceTime seconds (120 by default, 600 in old OpenSSH versions), then sshd's SIGALRM handler is called asynchronously. However, this signal handler calls various functions that are not async-signal-safe, for example, syslog(). This issue leaves it vulnerable to a signal handler race condition on the cleanup_exit() function, which introduces the same vulnerability as CVE-2024-6387 in the unprivileged child of the SSHD server.\n",
 			"severity": [
 				{
 					"type": "vendor",
 					"source": "linux-security@amazon.com",
-					"vendor": "Medium"
+					"vendor": "Important"
 				}
 			],
 			"references": [
 				{
 					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-27337"
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-6409"
 				},
 				{
 					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-34872"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "https://alas.aws.amazon.com/AL2023/ALAS-2023-371.html"
+					"url": "https://alas.aws.amazon.com/AL2023/ALAS-2024-651.html"
 				}
 			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2022-27337",
+			"id": "CVE-2024-6409",
 			"references": [
 				{
 					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-27337"
-				}
-			]
-		},
-		{
-			"id": "CVE-2023-34872",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-34872"
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-6409"
 				}
 			]
 		}
@@ -57,7 +44,7 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "poppler",
+							"name": "openssh",
 							"architectures": [
 								"aarch64"
 							],
@@ -69,18 +56,18 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:22.08.0-3.amzn2023.0.4"
+									"lt": "0:8.7p1-8.amzn2023.0.12"
 								}
 							],
 							"fixed": [
-								"0:22.08.0-3.amzn2023.0.4"
+								"0:8.7p1-8.amzn2023.0.12"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "poppler-cpp",
+							"name": "openssh-clients",
 							"architectures": [
 								"aarch64"
 							],
@@ -92,18 +79,18 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:22.08.0-3.amzn2023.0.4"
+									"lt": "0:8.7p1-8.amzn2023.0.12"
 								}
 							],
 							"fixed": [
-								"0:22.08.0-3.amzn2023.0.4"
+								"0:8.7p1-8.amzn2023.0.12"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "poppler-cpp-debuginfo",
+							"name": "openssh-clients-debuginfo",
 							"architectures": [
 								"aarch64"
 							],
@@ -115,18 +102,18 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:22.08.0-3.amzn2023.0.4"
+									"lt": "0:8.7p1-8.amzn2023.0.12"
 								}
 							],
 							"fixed": [
-								"0:22.08.0-3.amzn2023.0.4"
+								"0:8.7p1-8.amzn2023.0.12"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "poppler-cpp-devel",
+							"name": "openssh-debuginfo",
 							"architectures": [
 								"aarch64"
 							],
@@ -138,18 +125,18 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:22.08.0-3.amzn2023.0.4"
+									"lt": "0:8.7p1-8.amzn2023.0.12"
 								}
 							],
 							"fixed": [
-								"0:22.08.0-3.amzn2023.0.4"
+								"0:8.7p1-8.amzn2023.0.12"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "poppler-debuginfo",
+							"name": "openssh-debugsource",
 							"architectures": [
 								"aarch64"
 							],
@@ -161,18 +148,18 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:22.08.0-3.amzn2023.0.4"
+									"lt": "0:8.7p1-8.amzn2023.0.12"
 								}
 							],
 							"fixed": [
-								"0:22.08.0-3.amzn2023.0.4"
+								"0:8.7p1-8.amzn2023.0.12"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "poppler-debugsource",
+							"name": "openssh-keycat",
 							"architectures": [
 								"aarch64"
 							],
@@ -184,18 +171,18 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:22.08.0-3.amzn2023.0.4"
+									"lt": "0:8.7p1-8.amzn2023.0.12"
 								}
 							],
 							"fixed": [
-								"0:22.08.0-3.amzn2023.0.4"
+								"0:8.7p1-8.amzn2023.0.12"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "poppler-devel",
+							"name": "openssh-keycat-debuginfo",
 							"architectures": [
 								"aarch64"
 							],
@@ -207,18 +194,18 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:22.08.0-3.amzn2023.0.4"
+									"lt": "0:8.7p1-8.amzn2023.0.12"
 								}
 							],
 							"fixed": [
-								"0:22.08.0-3.amzn2023.0.4"
+								"0:8.7p1-8.amzn2023.0.12"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "poppler-glib",
+							"name": "openssh-server",
 							"architectures": [
 								"aarch64"
 							],
@@ -230,18 +217,18 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:22.08.0-3.amzn2023.0.4"
+									"lt": "0:8.7p1-8.amzn2023.0.12"
 								}
 							],
 							"fixed": [
-								"0:22.08.0-3.amzn2023.0.4"
+								"0:8.7p1-8.amzn2023.0.12"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "poppler-glib-debuginfo",
+							"name": "openssh-server-debuginfo",
 							"architectures": [
 								"aarch64"
 							],
@@ -253,18 +240,18 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:22.08.0-3.amzn2023.0.4"
+									"lt": "0:8.7p1-8.amzn2023.0.12"
 								}
 							],
 							"fixed": [
-								"0:22.08.0-3.amzn2023.0.4"
+								"0:8.7p1-8.amzn2023.0.12"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "poppler-glib-devel",
+							"name": "pam_ssh_agent_auth",
 							"architectures": [
 								"aarch64"
 							],
@@ -276,41 +263,18 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:22.08.0-3.amzn2023.0.4"
+									"lt": "0:0.10.4-4.8.amzn2023.0.12"
 								}
 							],
 							"fixed": [
-								"0:22.08.0-3.amzn2023.0.4"
+								"0:0.10.4-4.8.amzn2023.0.12"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "poppler-glib-doc",
-							"architectures": [
-								"noarch"
-							],
-							"repositories": [
-								"amazonlinux"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:22.08.0-3.amzn2023.0.4"
-								}
-							],
-							"fixed": [
-								"0:22.08.0-3.amzn2023.0.4"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "poppler-utils",
+							"name": "pam_ssh_agent_auth-debuginfo",
 							"architectures": [
 								"aarch64"
 							],
@@ -322,34 +286,11 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:22.08.0-3.amzn2023.0.4"
+									"lt": "0:0.10.4-4.8.amzn2023.0.12"
 								}
 							],
 							"fixed": [
-								"0:22.08.0-3.amzn2023.0.4"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "poppler-utils-debuginfo",
-							"architectures": [
-								"aarch64"
-							],
-							"repositories": [
-								"amazonlinux"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:22.08.0-3.amzn2023.0.4"
-								}
-							],
-							"fixed": [
-								"0:22.08.0-3.amzn2023.0.4"
+								"0:0.10.4-4.8.amzn2023.0.12"
 							]
 						}
 					}

@@ -1,49 +1,75 @@
 {
-	"id": "ALAS2023-2023-371",
+	"id": "ALAS2023-2024-663",
 	"advisories": [
 		{
-			"id": "ALAS2023-2023-371",
-			"title": "Amazon Linux 2023 - ALAS2023-2023-371: Medium priority package update for poppler",
-			"description": "Package updates are available for Amazon Linux 2023 that fix the following vulnerabilities:\nCVE-2023-34872:\n\tA vulnerability in Outline.cc for Poppler prior to 23.06.0 allows a remote attacker to cause a Denial of Service (DoS) (crash) via a crafted PDF file in OutlineItem::open.\n\nCVE-2022-27337:\n\tA logic error in the Hints::Hints function of Poppler v22.03.0 allows attackers to cause a Denial of Service (DoS) via a crafted PDF file.\n",
+			"id": "ALAS2023-2024-663",
+			"title": "Amazon Linux 2023 - ALAS2023-2024-663: Important priority package update for emacs",
+			"description": "Package updates are available for Amazon Linux 2023 that fix the following vulnerabilities:\nCVE-2024-39331:\n\tIn Emacs before 29.4, org-link-expand-abbrev in lisp/ol.el expands a %(...) link abbrev even when it specifies an unsafe function, such as shell-command-to-string. This affects Org Mode before 9.7.5.\n\nCVE-2024-30205:\n\tIn Emacs before 29.3, Org mode considers contents of remote files to be trusted. This affects Org Mode before 9.6.23.\n\nCVE-2024-30204:\n\tIn Emacs before 29.3, LaTeX preview is enabled by default for e-mail attachments.\n\nCVE-2024-30203:\n\tIn Emacs before 29.3, Gnus treats inline MIME contents as trusted.\n",
 			"severity": [
 				{
 					"type": "vendor",
 					"source": "linux-security@amazon.com",
-					"vendor": "Medium"
+					"vendor": "Important"
 				}
 			],
 			"references": [
 				{
 					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-27337"
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-30203"
 				},
 				{
 					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-34872"
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-30204"
 				},
 				{
 					"source": "linux-security@amazon.com",
-					"url": "https://alas.aws.amazon.com/AL2023/ALAS-2023-371.html"
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-30205"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39331"
+				},
+				{
+					"source": "linux-security@amazon.com",
+					"url": "https://alas.aws.amazon.com/AL2023/ALAS-2024-663.html"
 				}
 			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2022-27337",
+			"id": "CVE-2024-30203",
 			"references": [
 				{
 					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-27337"
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-30203"
 				}
 			]
 		},
 		{
-			"id": "CVE-2023-34872",
+			"id": "CVE-2024-30204",
 			"references": [
 				{
 					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-34872"
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-30204"
+				}
+			]
+		},
+		{
+			"id": "CVE-2024-30205",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-30205"
+				}
+			]
+		},
+		{
+			"id": "CVE-2024-39331",
+			"references": [
+				{
+					"source": "linux-security@amazon.com",
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39331"
 				}
 			]
 		}
@@ -57,7 +83,7 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "poppler",
+							"name": "emacs",
 							"architectures": [
 								"aarch64"
 							],
@@ -69,18 +95,18 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:22.08.0-3.amzn2023.0.4"
+									"lt": "1:28.2-3.amzn2023.0.8"
 								}
 							],
 							"fixed": [
-								"0:22.08.0-3.amzn2023.0.4"
+								"1:28.2-3.amzn2023.0.8"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "poppler-cpp",
+							"name": "emacs-common",
 							"architectures": [
 								"aarch64"
 							],
@@ -92,18 +118,18 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:22.08.0-3.amzn2023.0.4"
+									"lt": "1:28.2-3.amzn2023.0.8"
 								}
 							],
 							"fixed": [
-								"0:22.08.0-3.amzn2023.0.4"
+								"1:28.2-3.amzn2023.0.8"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "poppler-cpp-debuginfo",
+							"name": "emacs-common-debuginfo",
 							"architectures": [
 								"aarch64"
 							],
@@ -115,18 +141,18 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:22.08.0-3.amzn2023.0.4"
+									"lt": "1:28.2-3.amzn2023.0.8"
 								}
 							],
 							"fixed": [
-								"0:22.08.0-3.amzn2023.0.4"
+								"1:28.2-3.amzn2023.0.8"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "poppler-cpp-devel",
+							"name": "emacs-debuginfo",
 							"architectures": [
 								"aarch64"
 							],
@@ -138,18 +164,18 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:22.08.0-3.amzn2023.0.4"
+									"lt": "1:28.2-3.amzn2023.0.8"
 								}
 							],
 							"fixed": [
-								"0:22.08.0-3.amzn2023.0.4"
+								"1:28.2-3.amzn2023.0.8"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "poppler-debuginfo",
+							"name": "emacs-debugsource",
 							"architectures": [
 								"aarch64"
 							],
@@ -161,18 +187,18 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:22.08.0-3.amzn2023.0.4"
+									"lt": "1:28.2-3.amzn2023.0.8"
 								}
 							],
 							"fixed": [
-								"0:22.08.0-3.amzn2023.0.4"
+								"1:28.2-3.amzn2023.0.8"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "poppler-debugsource",
+							"name": "emacs-devel",
 							"architectures": [
 								"aarch64"
 							],
@@ -184,110 +210,18 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:22.08.0-3.amzn2023.0.4"
+									"lt": "1:28.2-3.amzn2023.0.8"
 								}
 							],
 							"fixed": [
-								"0:22.08.0-3.amzn2023.0.4"
+								"1:28.2-3.amzn2023.0.8"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "poppler-devel",
-							"architectures": [
-								"aarch64"
-							],
-							"repositories": [
-								"amazonlinux"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:22.08.0-3.amzn2023.0.4"
-								}
-							],
-							"fixed": [
-								"0:22.08.0-3.amzn2023.0.4"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "poppler-glib",
-							"architectures": [
-								"aarch64"
-							],
-							"repositories": [
-								"amazonlinux"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:22.08.0-3.amzn2023.0.4"
-								}
-							],
-							"fixed": [
-								"0:22.08.0-3.amzn2023.0.4"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "poppler-glib-debuginfo",
-							"architectures": [
-								"aarch64"
-							],
-							"repositories": [
-								"amazonlinux"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:22.08.0-3.amzn2023.0.4"
-								}
-							],
-							"fixed": [
-								"0:22.08.0-3.amzn2023.0.4"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "poppler-glib-devel",
-							"architectures": [
-								"aarch64"
-							],
-							"repositories": [
-								"amazonlinux"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:22.08.0-3.amzn2023.0.4"
-								}
-							],
-							"fixed": [
-								"0:22.08.0-3.amzn2023.0.4"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "poppler-glib-doc",
+							"name": "emacs-filesystem",
 							"architectures": [
 								"noarch"
 							],
@@ -299,18 +233,18 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:22.08.0-3.amzn2023.0.4"
+									"lt": "1:28.2-3.amzn2023.0.8"
 								}
 							],
 							"fixed": [
-								"0:22.08.0-3.amzn2023.0.4"
+								"1:28.2-3.amzn2023.0.8"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "poppler-utils",
+							"name": "emacs-lucid",
 							"architectures": [
 								"aarch64"
 							],
@@ -322,18 +256,18 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:22.08.0-3.amzn2023.0.4"
+									"lt": "1:28.2-3.amzn2023.0.8"
 								}
 							],
 							"fixed": [
-								"0:22.08.0-3.amzn2023.0.4"
+								"1:28.2-3.amzn2023.0.8"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "poppler-utils-debuginfo",
+							"name": "emacs-lucid-debuginfo",
 							"architectures": [
 								"aarch64"
 							],
@@ -345,11 +279,80 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:22.08.0-3.amzn2023.0.4"
+									"lt": "1:28.2-3.amzn2023.0.8"
 								}
 							],
 							"fixed": [
-								"0:22.08.0-3.amzn2023.0.4"
+								"1:28.2-3.amzn2023.0.8"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "emacs-nox",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:28.2-3.amzn2023.0.8"
+								}
+							],
+							"fixed": [
+								"1:28.2-3.amzn2023.0.8"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "emacs-nox-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:28.2-3.amzn2023.0.8"
+								}
+							],
+							"fixed": [
+								"1:28.2-3.amzn2023.0.8"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "emacs-terminal",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:28.2-3.amzn2023.0.8"
+								}
+							],
+							"fixed": [
+								"1:28.2-3.amzn2023.0.8"
 							]
 						}
 					}

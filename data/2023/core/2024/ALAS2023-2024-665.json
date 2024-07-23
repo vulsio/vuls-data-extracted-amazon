@@ -1,49 +1,36 @@
 {
-	"id": "ALAS2023-2023-326",
+	"id": "ALAS2023-2024-665",
 	"advisories": [
 		{
-			"id": "ALAS2023-2023-326",
-			"title": "Amazon Linux 2023 - ALAS2023-2023-326: Important priority package update for dotnet6.0",
-			"description": "Package updates are available for Amazon Linux 2023 that fix the following vulnerabilities:\nCVE-2023-38180:\n\t.NET and Visual Studio Denial of Service Vulnerability\n\nCVE-2023-35390:\n\t.NET and Visual Studio Remote Code Execution Vulnerability\n",
+			"id": "ALAS2023-2024-665",
+			"title": "Amazon Linux 2023 - ALAS2023-2024-665: Medium priority package update for kernel",
+			"description": "Package updates are available for Amazon Linux 2023 that fix the following vulnerabilities:\nCVE-2024-27397:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nnetfilter: nf_tables: use timestamp to check for set element timeout\n",
 			"severity": [
 				{
 					"type": "vendor",
 					"source": "linux-security@amazon.com",
-					"vendor": "Important"
+					"vendor": "Medium"
 				}
 			],
 			"references": [
 				{
 					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-35390"
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27397"
 				},
 				{
 					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-38180"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "https://alas.aws.amazon.com/AL2023/ALAS-2023-326.html"
+					"url": "https://alas.aws.amazon.com/AL2023/ALAS-2024-665.html"
 				}
 			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2023-35390",
+			"id": "CVE-2024-27397",
 			"references": [
 				{
 					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-35390"
-				}
-			]
-		},
-		{
-			"id": "CVE-2023-38180",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-38180"
+					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27397"
 				}
 			]
 		}
@@ -57,7 +44,7 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "aspnetcore-runtime-6.0",
+							"name": "bpftool",
 							"architectures": [
 								"aarch64"
 							],
@@ -69,18 +56,18 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:6.0.21-1.amzn2023.0.2"
+									"lt": "0:6.1.97-104.177.amzn2023"
 								}
 							],
 							"fixed": [
-								"0:6.0.21-1.amzn2023.0.2"
+								"0:6.1.97-104.177.amzn2023"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "aspnetcore-targeting-pack-6.0",
+							"name": "bpftool-debuginfo",
 							"architectures": [
 								"aarch64"
 							],
@@ -92,18 +79,18 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:6.0.21-1.amzn2023.0.2"
+									"lt": "0:6.1.97-104.177.amzn2023"
 								}
 							],
 							"fixed": [
-								"0:6.0.21-1.amzn2023.0.2"
+								"0:6.1.97-104.177.amzn2023"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "dotnet",
+							"name": "kernel",
 							"architectures": [
 								"aarch64"
 							],
@@ -115,18 +102,18 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:6.0.121-1.amzn2023.0.2"
+									"lt": "0:6.1.97-104.177.amzn2023"
 								}
 							],
 							"fixed": [
-								"0:6.0.121-1.amzn2023.0.2"
+								"0:6.1.97-104.177.amzn2023"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "dotnet-apphost-pack-6.0",
+							"name": "kernel-debuginfo",
 							"architectures": [
 								"aarch64"
 							],
@@ -138,18 +125,18 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:6.0.21-1.amzn2023.0.2"
+									"lt": "0:6.1.97-104.177.amzn2023"
 								}
 							],
 							"fixed": [
-								"0:6.0.21-1.amzn2023.0.2"
+								"0:6.1.97-104.177.amzn2023"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "dotnet-apphost-pack-6.0-debuginfo",
+							"name": "kernel-debuginfo-common-aarch64",
 							"architectures": [
 								"aarch64"
 							],
@@ -161,20 +148,20 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:6.0.21-1.amzn2023.0.2"
+									"lt": "0:6.1.97-104.177.amzn2023"
 								}
 							],
 							"fixed": [
-								"0:6.0.21-1.amzn2023.0.2"
+								"0:6.1.97-104.177.amzn2023"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "dotnet-host",
+							"name": "kernel-debuginfo-common-x86_64",
 							"architectures": [
-								"aarch64"
+								"x86_64"
 							],
 							"repositories": [
 								"amazonlinux"
@@ -184,18 +171,18 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:6.0.21-1.amzn2023.0.2"
+									"lt": "0:6.1.97-104.177.amzn2023"
 								}
 							],
 							"fixed": [
-								"0:6.0.21-1.amzn2023.0.2"
+								"0:6.1.97-104.177.amzn2023"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "dotnet-host-debuginfo",
+							"name": "kernel-devel",
 							"architectures": [
 								"aarch64"
 							],
@@ -207,18 +194,18 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:6.0.21-1.amzn2023.0.2"
+									"lt": "0:6.1.97-104.177.amzn2023"
 								}
 							],
 							"fixed": [
-								"0:6.0.21-1.amzn2023.0.2"
+								"0:6.1.97-104.177.amzn2023"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "dotnet-hostfxr-6.0",
+							"name": "kernel-headers",
 							"architectures": [
 								"aarch64"
 							],
@@ -230,18 +217,18 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:6.0.21-1.amzn2023.0.2"
+									"lt": "0:6.1.97-104.177.amzn2023"
 								}
 							],
 							"fixed": [
-								"0:6.0.21-1.amzn2023.0.2"
+								"0:6.1.97-104.177.amzn2023"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "dotnet-hostfxr-6.0-debuginfo",
+							"name": "kernel-libbpf",
 							"architectures": [
 								"aarch64"
 							],
@@ -253,18 +240,18 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:6.0.21-1.amzn2023.0.2"
+									"lt": "0:6.1.97-104.177.amzn2023"
 								}
 							],
 							"fixed": [
-								"0:6.0.21-1.amzn2023.0.2"
+								"0:6.1.97-104.177.amzn2023"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "dotnet-runtime-6.0",
+							"name": "kernel-libbpf-devel",
 							"architectures": [
 								"aarch64"
 							],
@@ -276,18 +263,18 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:6.0.21-1.amzn2023.0.2"
+									"lt": "0:6.1.97-104.177.amzn2023"
 								}
 							],
 							"fixed": [
-								"0:6.0.21-1.amzn2023.0.2"
+								"0:6.1.97-104.177.amzn2023"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "dotnet-runtime-6.0-debuginfo",
+							"name": "kernel-libbpf-static",
 							"architectures": [
 								"aarch64"
 							],
@@ -299,18 +286,18 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:6.0.21-1.amzn2023.0.2"
+									"lt": "0:6.1.97-104.177.amzn2023"
 								}
 							],
 							"fixed": [
-								"0:6.0.21-1.amzn2023.0.2"
+								"0:6.1.97-104.177.amzn2023"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "dotnet-sdk-6.0",
+							"name": "kernel-livepatch-6.1.97-104.177",
 							"architectures": [
 								"aarch64"
 							],
@@ -322,18 +309,18 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:6.0.121-1.amzn2023.0.2"
+									"lt": "0:1.0-0.amzn2023"
 								}
 							],
 							"fixed": [
-								"0:6.0.121-1.amzn2023.0.2"
+								"0:1.0-0.amzn2023"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "dotnet-sdk-6.0-debuginfo",
+							"name": "kernel-modules-extra",
 							"architectures": [
 								"aarch64"
 							],
@@ -345,18 +332,18 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:6.0.121-1.amzn2023.0.2"
+									"lt": "0:6.1.97-104.177.amzn2023"
 								}
 							],
 							"fixed": [
-								"0:6.0.121-1.amzn2023.0.2"
+								"0:6.1.97-104.177.amzn2023"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "dotnet-sdk-6.0-source-built-artifacts",
+							"name": "kernel-modules-extra-common",
 							"architectures": [
 								"aarch64"
 							],
@@ -368,18 +355,18 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:6.0.121-1.amzn2023.0.2"
+									"lt": "0:6.1.97-104.177.amzn2023"
 								}
 							],
 							"fixed": [
-								"0:6.0.121-1.amzn2023.0.2"
+								"0:6.1.97-104.177.amzn2023"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "dotnet-targeting-pack-6.0",
+							"name": "kernel-tools",
 							"architectures": [
 								"aarch64"
 							],
@@ -391,18 +378,18 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:6.0.21-1.amzn2023.0.2"
+									"lt": "0:6.1.97-104.177.amzn2023"
 								}
 							],
 							"fixed": [
-								"0:6.0.21-1.amzn2023.0.2"
+								"0:6.1.97-104.177.amzn2023"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "dotnet-templates-6.0",
+							"name": "kernel-tools-debuginfo",
 							"architectures": [
 								"aarch64"
 							],
@@ -414,18 +401,18 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:6.0.121-1.amzn2023.0.2"
+									"lt": "0:6.1.97-104.177.amzn2023"
 								}
 							],
 							"fixed": [
-								"0:6.0.121-1.amzn2023.0.2"
+								"0:6.1.97-104.177.amzn2023"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "dotnet6.0-debuginfo",
+							"name": "kernel-tools-devel",
 							"architectures": [
 								"aarch64"
 							],
@@ -437,18 +424,18 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:6.0.121-1.amzn2023.0.2"
+									"lt": "0:6.1.97-104.177.amzn2023"
 								}
 							],
 							"fixed": [
-								"0:6.0.121-1.amzn2023.0.2"
+								"0:6.1.97-104.177.amzn2023"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "dotnet6.0-debugsource",
+							"name": "perf",
 							"architectures": [
 								"aarch64"
 							],
@@ -460,18 +447,18 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:6.0.121-1.amzn2023.0.2"
+									"lt": "0:6.1.97-104.177.amzn2023"
 								}
 							],
 							"fixed": [
-								"0:6.0.121-1.amzn2023.0.2"
+								"0:6.1.97-104.177.amzn2023"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "netstandard-targeting-pack-2.1",
+							"name": "perf-debuginfo",
 							"architectures": [
 								"aarch64"
 							],
@@ -483,11 +470,57 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:6.0.121-1.amzn2023.0.2"
+									"lt": "0:6.1.97-104.177.amzn2023"
 								}
 							],
 							"fixed": [
-								"0:6.0.121-1.amzn2023.0.2"
+								"0:6.1.97-104.177.amzn2023"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "python3-perf",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:6.1.97-104.177.amzn2023"
+								}
+							],
+							"fixed": [
+								"0:6.1.97-104.177.amzn2023"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "python3-perf-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:6.1.97-104.177.amzn2023"
+								}
+							],
+							"fixed": [
+								"0:6.1.97-104.177.amzn2023"
 							]
 						}
 					}
