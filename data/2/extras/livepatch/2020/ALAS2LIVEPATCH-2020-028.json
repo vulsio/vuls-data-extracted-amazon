@@ -2,49 +2,64 @@
 	"id": "ALAS2LIVEPATCH-2020-028",
 	"advisories": [
 		{
-			"id": "ALAS2LIVEPATCH-2020-028",
-			"title": "Amazon Linux 2 - Livepatch 2.0 - ALAS2LIVEPATCH-2020-028: medium priority package update for kernel-livepatch-4.14.192-147.314",
-			"description": "Package updates are available for Amazon Linux 2 - Livepatch that fix the following vulnerabilities:\nCVE-2020-25284:\n\tA flaw was found in the capabilities check of the rados block device functionality in the Linux kernel. Incorrect capability checks could alllow a local user with root priviledges (but no capabilities) to add or remove Rados Block Devices from the system.\n1882594: CVE-2020-25284 kernel: incomplete permission checking for access to rbd devices\n\nCVE-2020-25211:\n\tIn the Linux kernel through 5.8.7, local attackers able to inject conntrack netlink configuration could overflow a local buffer, causing crashes or triggering use of incorrect protocol numbers in ctnetlink_parse_tuple_filter in net/netfilter/nf_conntrack_netlink.c, aka CID-1cc5ef91d2ff.\nA flaw was found in the Linux kernel. A local attacker, able to inject conntrack netlink configuration, could overflow a local buffer causing crashes or triggering the use of incorrect protocol numbers in ctnetlink_parse_tuple_filter in net/netfilter/nf_conntrack_netlink.c. The highest threat from this vulnerability is to data confidentiality and integrity as well as system availability.\n1877571: CVE-2020-25211 kernel: Local buffer overflow in ctnetlink_parse_tuple_filter in net/netfilter/nf_conntrack_netlink.c\n",
-			"severity": [
-				{
-					"type": "vendor",
-					"source": "linux-security@amazon.com",
-					"vendor": "medium"
-				}
-			],
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-25211"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-25284"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "https://alas.aws.amazon.com/AL2/ALASLIVEPATCH-2020-028.html"
-				}
+			"content": {
+				"id": "ALAS2LIVEPATCH-2020-028",
+				"title": "Amazon Linux 2 - Livepatch 2.0 - ALAS2LIVEPATCH-2020-028: medium priority package update for kernel-livepatch-4.14.192-147.314",
+				"description": "Package updates are available for Amazon Linux 2 - Livepatch that fix the following vulnerabilities:\nCVE-2020-25284:\n\tA flaw was found in the capabilities check of the rados block device functionality in the Linux kernel. Incorrect capability checks could alllow a local user with root priviledges (but no capabilities) to add or remove Rados Block Devices from the system.\n1882594: CVE-2020-25284 kernel: incomplete permission checking for access to rbd devices\n\nCVE-2020-25211:\n\tIn the Linux kernel through 5.8.7, local attackers able to inject conntrack netlink configuration could overflow a local buffer, causing crashes or triggering use of incorrect protocol numbers in ctnetlink_parse_tuple_filter in net/netfilter/nf_conntrack_netlink.c, aka CID-1cc5ef91d2ff.\nA flaw was found in the Linux kernel. A local attacker, able to inject conntrack netlink configuration, could overflow a local buffer causing crashes or triggering the use of incorrect protocol numbers in ctnetlink_parse_tuple_filter in net/netfilter/nf_conntrack_netlink.c. The highest threat from this vulnerability is to data confidentiality and integrity as well as system availability.\n1877571: CVE-2020-25211 kernel: Local buffer overflow in ctnetlink_parse_tuple_filter in net/netfilter/nf_conntrack_netlink.c\n",
+				"severity": [
+					{
+						"type": "vendor",
+						"source": "linux-security@amazon.com",
+						"vendor": "medium"
+					}
+				],
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-25211"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-25284"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "https://alas.aws.amazon.com/AL2/ALASLIVEPATCH-2020-028.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2"
 			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2020-25211",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-25211"
-				}
+			"content": {
+				"id": "CVE-2020-25211",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-25211"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2"
 			]
 		},
 		{
-			"id": "CVE-2020-25284",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-25284"
-				}
+			"content": {
+				"id": "CVE-2020-25284",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-25284"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2"
 			]
 		}
 	],

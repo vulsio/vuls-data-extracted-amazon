@@ -2,49 +2,64 @@
 	"id": "ALAS2POSTGRESQL12-2023-003",
 	"advisories": [
 		{
-			"id": "ALAS2POSTGRESQL12-2023-003",
-			"title": "Amazon Linux 2 - Postgresql12 2.0 - ALAS2POSTGRESQL12-2023-003: important priority package update for libpq",
-			"description": "Package updates are available for Amazon Linux 2 - Postgresql12 that fix the following vulnerabilities:\nCVE-2022-1552:\n\tA flaw was found in PostgreSQL. There is an issue with incomplete efforts to operate safely when a privileged user is maintaining another user's objects. The Autovacuum, REINDEX, CREATE INDEX, REFRESH MATERIALIZED VIEW, CLUSTER, and pg_amcheck commands activated relevant protections too late or not at all during the process. This flaw allows an attacker with permission to create non-temporary objects in at least one schema to execute arbitrary SQL functions under a superuser identity.\n\nCVE-2021-23222:\n\tA man-in-the-middle attacker can inject false responses to the client's first few queries, despite the use of SSL certificate verification and encryption.\n",
-			"severity": [
-				{
-					"type": "vendor",
-					"source": "linux-security@amazon.com",
-					"vendor": "important"
-				}
-			],
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-23222"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-1552"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "https://alas.aws.amazon.com/AL2/ALASPOSTGRESQL12-2023-003.html"
-				}
+			"content": {
+				"id": "ALAS2POSTGRESQL12-2023-003",
+				"title": "Amazon Linux 2 - Postgresql12 2.0 - ALAS2POSTGRESQL12-2023-003: important priority package update for libpq",
+				"description": "Package updates are available for Amazon Linux 2 - Postgresql12 that fix the following vulnerabilities:\nCVE-2022-1552:\n\tA flaw was found in PostgreSQL. There is an issue with incomplete efforts to operate safely when a privileged user is maintaining another user's objects. The Autovacuum, REINDEX, CREATE INDEX, REFRESH MATERIALIZED VIEW, CLUSTER, and pg_amcheck commands activated relevant protections too late or not at all during the process. This flaw allows an attacker with permission to create non-temporary objects in at least one schema to execute arbitrary SQL functions under a superuser identity.\n\nCVE-2021-23222:\n\tA man-in-the-middle attacker can inject false responses to the client's first few queries, despite the use of SSL certificate verification and encryption.\n",
+				"severity": [
+					{
+						"type": "vendor",
+						"source": "linux-security@amazon.com",
+						"vendor": "important"
+					}
+				],
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-23222"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-1552"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "https://alas.aws.amazon.com/AL2/ALASPOSTGRESQL12-2023-003.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2"
 			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2021-23222",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-23222"
-				}
+			"content": {
+				"id": "CVE-2021-23222",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-23222"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2"
 			]
 		},
 		{
-			"id": "CVE-2022-1552",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-1552"
-				}
+			"content": {
+				"id": "CVE-2022-1552",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-1552"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2"
 			]
 		}
 	],

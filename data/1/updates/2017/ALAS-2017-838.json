@@ -2,49 +2,64 @@
 	"id": "ALAS-2017-838",
 	"advisories": [
 		{
-			"id": "ALAS-2017-838",
-			"title": "Amazon Linux AMI 2014.03 - ALAS-2017-838: medium priority package update for postgresql92",
-			"description": "Package updates are available for Amazon Linux AMI that fix the following vulnerabilities:\nCVE-2017-7486:\n\tIt was found that the pg_user_mappings view from postgresql could disclose information about user mappings to a foreign database to unprivileged users. An authenticated attacker with USAGE privilege for this mapping could, when querying the view, obtain user mapping data, such as the username and password used to connect to the foreign database.\n1448089: \nCVE-2017-7486 postgresql: pg_user_mappings view discloses foreign server passwords\n\nCVE-2017-7484:\n\tIt was found that some selectivity estimation functions did not check user privileges before providing information from pg_statistic, possibly leaking information. An unprivileged attacker could use this flaw to steal some information from tables they are otherwise not allowed to access.\n1448078: \nCVE-2017-7484 postgresql: Selectivity estimators bypass SELECT privilege checks\n",
-			"severity": [
-				{
-					"type": "vendor",
-					"source": "linux-security@amazon.com",
-					"vendor": "medium"
-				}
-			],
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-7484"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-7486"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "https://alas.aws.amazon.com/ALAS-2017-838.html"
-				}
+			"content": {
+				"id": "ALAS-2017-838",
+				"title": "Amazon Linux AMI 2014.03 - ALAS-2017-838: medium priority package update for postgresql92",
+				"description": "Package updates are available for Amazon Linux AMI that fix the following vulnerabilities:\nCVE-2017-7486:\n\tIt was found that the pg_user_mappings view from postgresql could disclose information about user mappings to a foreign database to unprivileged users. An authenticated attacker with USAGE privilege for this mapping could, when querying the view, obtain user mapping data, such as the username and password used to connect to the foreign database.\n1448089: \nCVE-2017-7486 postgresql: pg_user_mappings view discloses foreign server passwords\n\nCVE-2017-7484:\n\tIt was found that some selectivity estimation functions did not check user privileges before providing information from pg_statistic, possibly leaking information. An unprivileged attacker could use this flaw to steal some information from tables they are otherwise not allowed to access.\n1448078: \nCVE-2017-7484 postgresql: Selectivity estimators bypass SELECT privilege checks\n",
+				"severity": [
+					{
+						"type": "vendor",
+						"source": "linux-security@amazon.com",
+						"vendor": "medium"
+					}
+				],
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-7484"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-7486"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "https://alas.aws.amazon.com/ALAS-2017-838.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:1"
 			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2017-7484",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-7484"
-				}
+			"content": {
+				"id": "CVE-2017-7484",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-7484"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:1"
 			]
 		},
 		{
-			"id": "CVE-2017-7486",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-7486"
-				}
+			"content": {
+				"id": "CVE-2017-7486",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-7486"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:1"
 			]
 		}
 	],

@@ -2,118 +2,158 @@
 	"id": "ALAS-2014-443",
 	"advisories": [
 		{
-			"id": "ALAS-2014-443",
-			"title": "Amazon Linux AMI 2014.03 - ALAS-2014-443: medium priority package update for krb5",
-			"description": "Package updates are available for Amazon Linux AMI that fix the following vulnerabilities:\nCVE-2014-4345:\n\tA buffer overflow was found in the KADM5 administration server (kadmind) when it was used with an LDAP back end for the KDC database. A remote, authenticated attacker could potentially use this flaw to execute arbitrary code on the system running kadmind.\n\nCVE-2014-4344:\n\tA NULL pointer dereference flaw was found in the MIT Kerberos SPNEGO acceptor for continuation tokens. A remote, unauthenticated attacker could use this flaw to crash a GSSAPI-enabled server application.\n\nCVE-2014-4343:\n\tA double-free flaw was found in the MIT Kerberos SPNEGO initiators. An attacker able to spoof packets to appear as though they are from an GSSAPI acceptor could use this flaw to crash a client application that uses MIT Kerberos.\n\nCVE-2014-4342:\n\tTwo buffer over-read flaws were found in the way MIT Kerberos handled certain requests. A remote, unauthenticated attacker who is able to inject packets into a client or server application's GSSAPI session could use either of these flaws to crash the application.\n\nCVE-2014-4341:\n\tTwo buffer over-read flaws were found in the way MIT Kerberos handled certain requests. A remote, unauthenticated attacker who is able to inject packets into a client or server application's GSSAPI session could use either of these flaws to crash the application.\n\nCVE-2013-6800:\n\tIt was found that if a KDC served multiple realms, certain requests could cause the setup_server_realm() function to dereference a NULL pointer. A remote, unauthenticated attacker could use this flaw to crash the KDC using a specially crafted request.\n\nCVE-2013-1418:\n\tIt was found that if a KDC served multiple realms, certain requests could cause the setup_server_realm() function to dereference a NULL pointer. A remote, unauthenticated attacker could use this flaw to crash the KDC using a specially crafted request.\n",
-			"severity": [
-				{
-					"type": "vendor",
-					"source": "linux-security@amazon.com",
-					"vendor": "medium"
-				}
-			],
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-1418"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-6800"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-4341"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-4342"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-4343"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-4344"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-4345"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "https://alas.aws.amazon.com/ALAS-2014-443.html"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "https://rhn.redhat.com/errata/RHSA-2014:1389.html"
-				}
+			"content": {
+				"id": "ALAS-2014-443",
+				"title": "Amazon Linux AMI 2014.03 - ALAS-2014-443: medium priority package update for krb5",
+				"description": "Package updates are available for Amazon Linux AMI that fix the following vulnerabilities:\nCVE-2014-4345:\n\tA buffer overflow was found in the KADM5 administration server (kadmind) when it was used with an LDAP back end for the KDC database. A remote, authenticated attacker could potentially use this flaw to execute arbitrary code on the system running kadmind.\n\nCVE-2014-4344:\n\tA NULL pointer dereference flaw was found in the MIT Kerberos SPNEGO acceptor for continuation tokens. A remote, unauthenticated attacker could use this flaw to crash a GSSAPI-enabled server application.\n\nCVE-2014-4343:\n\tA double-free flaw was found in the MIT Kerberos SPNEGO initiators. An attacker able to spoof packets to appear as though they are from an GSSAPI acceptor could use this flaw to crash a client application that uses MIT Kerberos.\n\nCVE-2014-4342:\n\tTwo buffer over-read flaws were found in the way MIT Kerberos handled certain requests. A remote, unauthenticated attacker who is able to inject packets into a client or server application's GSSAPI session could use either of these flaws to crash the application.\n\nCVE-2014-4341:\n\tTwo buffer over-read flaws were found in the way MIT Kerberos handled certain requests. A remote, unauthenticated attacker who is able to inject packets into a client or server application's GSSAPI session could use either of these flaws to crash the application.\n\nCVE-2013-6800:\n\tIt was found that if a KDC served multiple realms, certain requests could cause the setup_server_realm() function to dereference a NULL pointer. A remote, unauthenticated attacker could use this flaw to crash the KDC using a specially crafted request.\n\nCVE-2013-1418:\n\tIt was found that if a KDC served multiple realms, certain requests could cause the setup_server_realm() function to dereference a NULL pointer. A remote, unauthenticated attacker could use this flaw to crash the KDC using a specially crafted request.\n",
+				"severity": [
+					{
+						"type": "vendor",
+						"source": "linux-security@amazon.com",
+						"vendor": "medium"
+					}
+				],
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-1418"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-6800"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-4341"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-4342"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-4343"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-4344"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-4345"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "https://alas.aws.amazon.com/ALAS-2014-443.html"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "https://rhn.redhat.com/errata/RHSA-2014:1389.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:1"
 			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2013-1418",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-1418"
-				}
+			"content": {
+				"id": "CVE-2013-1418",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-1418"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:1"
 			]
 		},
 		{
-			"id": "CVE-2013-6800",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-6800"
-				}
+			"content": {
+				"id": "CVE-2013-6800",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-6800"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:1"
 			]
 		},
 		{
-			"id": "CVE-2014-4341",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-4341"
-				}
+			"content": {
+				"id": "CVE-2014-4341",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-4341"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:1"
 			]
 		},
 		{
-			"id": "CVE-2014-4342",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-4342"
-				}
+			"content": {
+				"id": "CVE-2014-4342",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-4342"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:1"
 			]
 		},
 		{
-			"id": "CVE-2014-4343",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-4343"
-				}
+			"content": {
+				"id": "CVE-2014-4343",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-4343"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:1"
 			]
 		},
 		{
-			"id": "CVE-2014-4344",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-4344"
-				}
+			"content": {
+				"id": "CVE-2014-4344",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-4344"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:1"
 			]
 		},
 		{
-			"id": "CVE-2014-4345",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-4345"
-				}
+			"content": {
+				"id": "CVE-2014-4345",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-4345"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:1"
 			]
 		}
 	],

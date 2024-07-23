@@ -2,166 +2,226 @@
 	"id": "ALAS2023-2023-146",
 	"advisories": [
 		{
-			"id": "ALAS2023-2023-146",
-			"title": "Amazon Linux 2023 - ALAS2023-2023-146: Important priority package update for python-pillow",
-			"description": "Package updates are available for Amazon Linux 2023 that fix the following vulnerabilities:\nCVE-2022-45199:\n\tPillow before 9.3.0 allows denial of service via SAMPLESPERPIXEL.\n\nCVE-2022-45198:\n\tPillow before 9.2.0 performs Improper Handling of Highly Compressed GIF Data (Data Amplification).\n\nCVE-2021-34552:\n\tPillow through 8.2.0 and PIL (aka Python Imaging Library) through 1.1.7 allow an attacker to pass controlled parameters directly into a convert function to trigger a buffer overflow in Convert.c.\n\nCVE-2021-28677:\n\tAn issue was discovered in Pillow before 8.2.0. For EPS data, the readline implementation used in EPSImageFile has to deal with any combination of \\r and \\n as line endings. It used an accidentally quadratic method of accumulating lines while looking for a line ending. A malicious EPS file could use this to perform a DoS of Pillow in the open phase, before an image was accepted for opening.\n\nCVE-2021-28676:\n\tAn issue was discovered in Pillow before 8.2.0. For FLI data, FliDecode did not properly check that the block advance was non-zero, potentially leading to an infinite loop on load.\n\nCVE-2021-27923:\n\tPillow before 8.1.1 allows attackers to cause a denial of service (memory consumption) because the reported size of a contained image is not properly checked for an ICO container, and thus an attempted memory allocation can be very large.\n\nCVE-2021-27922:\n\tPillow before 8.1.1 allows attackers to cause a denial of service (memory consumption) because the reported size of a contained image is not properly checked for an ICNS container, and thus an attempted memory allocation can be very large.\n\nCVE-2021-27921:\n\tPillow before 8.1.1 allows attackers to cause a denial of service (memory consumption) because the reported size of a contained image is not properly checked for a BLP container, and thus an attempted memory allocation can be very large.\n\nCVE-2021-25293:\n\tAn issue was discovered in Pillow before 8.1.1. There is an out-of-bounds read in SGIRleDecode.c.\n\nCVE-2021-25291:\n\tAn issue was discovered in Pillow before 8.1.1. In TiffDecode.c, there is an out-of-bounds read in TiffreadRGBATile via invalid tile boundaries.\n\nCVE-2021-25290:\n\tAn issue was discovered in Pillow before 8.1.1. In TiffDecode.c, there is a negative-offset memcpy with an invalid size.\n",
-			"severity": [
-				{
-					"type": "vendor",
-					"source": "linux-security@amazon.com",
-					"vendor": "Important"
-				}
-			],
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-25290"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-25291"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-25293"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-27921"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-27922"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-27923"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-28676"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-28677"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-34552"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-45198"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-45199"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "https://alas.aws.amazon.com/AL2023/ALAS-2023-146.html"
-				}
+			"content": {
+				"id": "ALAS2023-2023-146",
+				"title": "Amazon Linux 2023 - ALAS2023-2023-146: Important priority package update for python-pillow",
+				"description": "Package updates are available for Amazon Linux 2023 that fix the following vulnerabilities:\nCVE-2022-45199:\n\tPillow before 9.3.0 allows denial of service via SAMPLESPERPIXEL.\n\nCVE-2022-45198:\n\tPillow before 9.2.0 performs Improper Handling of Highly Compressed GIF Data (Data Amplification).\n\nCVE-2021-34552:\n\tPillow through 8.2.0 and PIL (aka Python Imaging Library) through 1.1.7 allow an attacker to pass controlled parameters directly into a convert function to trigger a buffer overflow in Convert.c.\n\nCVE-2021-28677:\n\tAn issue was discovered in Pillow before 8.2.0. For EPS data, the readline implementation used in EPSImageFile has to deal with any combination of \\r and \\n as line endings. It used an accidentally quadratic method of accumulating lines while looking for a line ending. A malicious EPS file could use this to perform a DoS of Pillow in the open phase, before an image was accepted for opening.\n\nCVE-2021-28676:\n\tAn issue was discovered in Pillow before 8.2.0. For FLI data, FliDecode did not properly check that the block advance was non-zero, potentially leading to an infinite loop on load.\n\nCVE-2021-27923:\n\tPillow before 8.1.1 allows attackers to cause a denial of service (memory consumption) because the reported size of a contained image is not properly checked for an ICO container, and thus an attempted memory allocation can be very large.\n\nCVE-2021-27922:\n\tPillow before 8.1.1 allows attackers to cause a denial of service (memory consumption) because the reported size of a contained image is not properly checked for an ICNS container, and thus an attempted memory allocation can be very large.\n\nCVE-2021-27921:\n\tPillow before 8.1.1 allows attackers to cause a denial of service (memory consumption) because the reported size of a contained image is not properly checked for a BLP container, and thus an attempted memory allocation can be very large.\n\nCVE-2021-25293:\n\tAn issue was discovered in Pillow before 8.1.1. There is an out-of-bounds read in SGIRleDecode.c.\n\nCVE-2021-25291:\n\tAn issue was discovered in Pillow before 8.1.1. In TiffDecode.c, there is an out-of-bounds read in TiffreadRGBATile via invalid tile boundaries.\n\nCVE-2021-25290:\n\tAn issue was discovered in Pillow before 8.1.1. In TiffDecode.c, there is a negative-offset memcpy with an invalid size.\n",
+				"severity": [
+					{
+						"type": "vendor",
+						"source": "linux-security@amazon.com",
+						"vendor": "Important"
+					}
+				],
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-25290"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-25291"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-25293"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-27921"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-27922"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-27923"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-28676"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-28677"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-34552"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-45198"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-45199"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "https://alas.aws.amazon.com/AL2023/ALAS-2023-146.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2023"
 			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2021-25290",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-25290"
-				}
+			"content": {
+				"id": "CVE-2021-25290",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-25290"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2023"
 			]
 		},
 		{
-			"id": "CVE-2021-25291",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-25291"
-				}
+			"content": {
+				"id": "CVE-2021-25291",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-25291"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2023"
 			]
 		},
 		{
-			"id": "CVE-2021-25293",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-25293"
-				}
+			"content": {
+				"id": "CVE-2021-25293",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-25293"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2023"
 			]
 		},
 		{
-			"id": "CVE-2021-27921",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-27921"
-				}
+			"content": {
+				"id": "CVE-2021-27921",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-27921"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2023"
 			]
 		},
 		{
-			"id": "CVE-2021-27922",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-27922"
-				}
+			"content": {
+				"id": "CVE-2021-27922",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-27922"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2023"
 			]
 		},
 		{
-			"id": "CVE-2021-27923",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-27923"
-				}
+			"content": {
+				"id": "CVE-2021-27923",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-27923"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2023"
 			]
 		},
 		{
-			"id": "CVE-2021-28676",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-28676"
-				}
+			"content": {
+				"id": "CVE-2021-28676",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-28676"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2023"
 			]
 		},
 		{
-			"id": "CVE-2021-28677",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-28677"
-				}
+			"content": {
+				"id": "CVE-2021-28677",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-28677"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2023"
 			]
 		},
 		{
-			"id": "CVE-2021-34552",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-34552"
-				}
+			"content": {
+				"id": "CVE-2021-34552",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-34552"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2023"
 			]
 		},
 		{
-			"id": "CVE-2022-45198",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-45198"
-				}
+			"content": {
+				"id": "CVE-2022-45198",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-45198"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2023"
 			]
 		},
 		{
-			"id": "CVE-2022-45199",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-45199"
-				}
+			"content": {
+				"id": "CVE-2022-45199",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-45199"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2023"
 			]
 		}
 	],

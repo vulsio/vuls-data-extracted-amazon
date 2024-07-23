@@ -2,75 +2,100 @@
 	"id": "ALAS2DOCKER-2023-031",
 	"advisories": [
 		{
-			"id": "ALAS2DOCKER-2023-031",
-			"title": "Amazon Linux 2 - Docker 2.0 - ALAS2DOCKER-2023-031: important priority package update for docker",
-			"description": "Package updates are available for Amazon Linux 2 - Docker that fix the following vulnerabilities:\nCVE-2023-39325:\n\tThe HTTP/2 protocol allows a denial of service (server resource consumption) because request cancellation can reset many streams quickly, as exploited in the wild in August through October 2023.\n\nCVE-2023-24540:\n\thtml/template: improper handling of JavaScript whitespace.\n\nNot all valid JavaScript whitespace characters were considered to be whitespace. Templates containing whitespace characters outside of the character set \"\\t\\n\\f\\r\\u0020\\u2028\\u2029\" in JavaScript contexts that also contain actions may not be properly sanitized during execution.\n\nCVE-2023-24538:\n\tTemplates did not properly consider backticks (`) as Javascript string delimiters, and as such did\nnot escape them as expected. Backticks are used, since ES6, for JS template literals. If a template\ncontained a Go template action within a Javascript template literal, the contents of the action could\nbe used to terminate the literal, injecting arbitrary Javascript code into the Go template.\n\nCVE-2022-41723:\n\thttp2/hpack: avoid quadratic complexity in hpack decoding\n",
-			"severity": [
-				{
-					"type": "vendor",
-					"source": "linux-security@amazon.com",
-					"vendor": "important"
-				}
-			],
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-41723"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-24538"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-24540"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-39325"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "https://alas.aws.amazon.com/AL2/ALASDOCKER-2023-031.html"
-				}
+			"content": {
+				"id": "ALAS2DOCKER-2023-031",
+				"title": "Amazon Linux 2 - Docker 2.0 - ALAS2DOCKER-2023-031: important priority package update for docker",
+				"description": "Package updates are available for Amazon Linux 2 - Docker that fix the following vulnerabilities:\nCVE-2023-39325:\n\tThe HTTP/2 protocol allows a denial of service (server resource consumption) because request cancellation can reset many streams quickly, as exploited in the wild in August through October 2023.\n\nCVE-2023-24540:\n\thtml/template: improper handling of JavaScript whitespace.\n\nNot all valid JavaScript whitespace characters were considered to be whitespace. Templates containing whitespace characters outside of the character set \"\\t\\n\\f\\r\\u0020\\u2028\\u2029\" in JavaScript contexts that also contain actions may not be properly sanitized during execution.\n\nCVE-2023-24538:\n\tTemplates did not properly consider backticks (`) as Javascript string delimiters, and as such did\nnot escape them as expected. Backticks are used, since ES6, for JS template literals. If a template\ncontained a Go template action within a Javascript template literal, the contents of the action could\nbe used to terminate the literal, injecting arbitrary Javascript code into the Go template.\n\nCVE-2022-41723:\n\thttp2/hpack: avoid quadratic complexity in hpack decoding\n",
+				"severity": [
+					{
+						"type": "vendor",
+						"source": "linux-security@amazon.com",
+						"vendor": "important"
+					}
+				],
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-41723"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-24538"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-24540"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-39325"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "https://alas.aws.amazon.com/AL2/ALASDOCKER-2023-031.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2"
 			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2022-41723",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-41723"
-				}
+			"content": {
+				"id": "CVE-2022-41723",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-41723"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2"
 			]
 		},
 		{
-			"id": "CVE-2023-24538",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-24538"
-				}
+			"content": {
+				"id": "CVE-2023-24538",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-24538"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2"
 			]
 		},
 		{
-			"id": "CVE-2023-24540",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-24540"
-				}
+			"content": {
+				"id": "CVE-2023-24540",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-24540"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2"
 			]
 		},
 		{
-			"id": "CVE-2023-39325",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-39325"
-				}
+			"content": {
+				"id": "CVE-2023-39325",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-39325"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2"
 			]
 		}
 	],

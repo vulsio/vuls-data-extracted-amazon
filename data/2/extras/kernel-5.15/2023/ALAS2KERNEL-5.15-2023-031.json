@@ -2,36 +2,46 @@
 	"id": "ALAS2KERNEL-5.15-2023-031",
 	"advisories": [
 		{
-			"id": "ALAS2KERNEL-5.15-2023-031",
-			"title": "Amazon Linux 2 - Kernel-5.15 2.0 - ALAS2KERNEL-5.15-2023-031: important priority package update for kernel",
-			"description": "Package updates are available for Amazon Linux 2 - Kernel-5.15 that fix the following vulnerabilities:\nCVE-2023-6111:\n\tA use-after-free vulnerability in the Linux kernel's netfilter: nf_tables component can be exploited to achieve local privilege escalation.\n\nThe function nft_trans_gc_catchall did not remove the catchall set element from the catchall_list when the argument sync is true, making it possible to free a catchall set element many times.\n\nWe recommend upgrading past commit 93995bf4af2c5a99e2a87f0cd5ce547d31eb7630.\n",
-			"severity": [
-				{
-					"type": "vendor",
-					"source": "linux-security@amazon.com",
-					"vendor": "important"
-				}
-			],
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-6111"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "https://alas.aws.amazon.com/AL2/ALASKERNEL-5.15-2023-031.html"
-				}
+			"content": {
+				"id": "ALAS2KERNEL-5.15-2023-031",
+				"title": "Amazon Linux 2 - Kernel-5.15 2.0 - ALAS2KERNEL-5.15-2023-031: important priority package update for kernel",
+				"description": "Package updates are available for Amazon Linux 2 - Kernel-5.15 that fix the following vulnerabilities:\nCVE-2023-6111:\n\tA use-after-free vulnerability in the Linux kernel's netfilter: nf_tables component can be exploited to achieve local privilege escalation.\n\nThe function nft_trans_gc_catchall did not remove the catchall set element from the catchall_list when the argument sync is true, making it possible to free a catchall set element many times.\n\nWe recommend upgrading past commit 93995bf4af2c5a99e2a87f0cd5ce547d31eb7630.\n",
+				"severity": [
+					{
+						"type": "vendor",
+						"source": "linux-security@amazon.com",
+						"vendor": "important"
+					}
+				],
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-6111"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "https://alas.aws.amazon.com/AL2/ALASKERNEL-5.15-2023-031.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2"
 			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2023-6111",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-6111"
-				}
+			"content": {
+				"id": "CVE-2023-6111",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-6111"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2"
 			]
 		}
 	],

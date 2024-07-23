@@ -2,101 +2,136 @@
 	"id": "ALAS-2016-707",
 	"advisories": [
 		{
-			"id": "ALAS-2016-707",
-			"title": "Amazon Linux AMI 2014.03 - ALAS-2016-707: medium priority package update for php55",
-			"description": "Package updates are available for Amazon Linux AMI that fix the following vulnerabilities:\nCVE-2016-5096:\n\t1339949: \nCVE-2016-5096 php: Integer underflow causing arbitrary null write in fread/gzread\n\nCVE-2016-5095:\n\t\n\nCVE-2016-5094:\n\t1340738: \nCVE-2016-5094 php: Integer overflow in php_html_entities()\n\nCVE-2016-5093:\n\t1339590: \nCVE-2016-5093 php: Out-of-bounds heap read in get_icu_value_internal\n\nCVE-2016-4343:\n\tThe phar_make_dirstream function in ext/phar/dirstream.c in PHP before 5.6.18 and 7.x before 7.0.3 mishandles zero-size ././@LongLink files, which allows remote attackers to cause a denial of service (uninitialized pointer dereference) or possibly have unspecified other impact via a crafted TAR archive.\n1332454: \nCVE-2016-4343 php: Uninitialized pointer in phar_make_dirstream()\n\nCVE-2013-7456:\n\t1340433: \nCVE-2013-7456 gd, php: Out-of-bounds read in imagescale\n",
-			"severity": [
-				{
-					"type": "vendor",
-					"source": "linux-security@amazon.com",
-					"vendor": "medium"
-				}
-			],
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-7456"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-4343"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-5093"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-5094"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-5095"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-5096"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "https://alas.aws.amazon.com/ALAS-2016-707.html"
-				}
+			"content": {
+				"id": "ALAS-2016-707",
+				"title": "Amazon Linux AMI 2014.03 - ALAS-2016-707: medium priority package update for php55",
+				"description": "Package updates are available for Amazon Linux AMI that fix the following vulnerabilities:\nCVE-2016-5096:\n\t1339949: \nCVE-2016-5096 php: Integer underflow causing arbitrary null write in fread/gzread\n\nCVE-2016-5095:\n\t\n\nCVE-2016-5094:\n\t1340738: \nCVE-2016-5094 php: Integer overflow in php_html_entities()\n\nCVE-2016-5093:\n\t1339590: \nCVE-2016-5093 php: Out-of-bounds heap read in get_icu_value_internal\n\nCVE-2016-4343:\n\tThe phar_make_dirstream function in ext/phar/dirstream.c in PHP before 5.6.18 and 7.x before 7.0.3 mishandles zero-size ././@LongLink files, which allows remote attackers to cause a denial of service (uninitialized pointer dereference) or possibly have unspecified other impact via a crafted TAR archive.\n1332454: \nCVE-2016-4343 php: Uninitialized pointer in phar_make_dirstream()\n\nCVE-2013-7456:\n\t1340433: \nCVE-2013-7456 gd, php: Out-of-bounds read in imagescale\n",
+				"severity": [
+					{
+						"type": "vendor",
+						"source": "linux-security@amazon.com",
+						"vendor": "medium"
+					}
+				],
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-7456"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-4343"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-5093"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-5094"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-5095"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-5096"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "https://alas.aws.amazon.com/ALAS-2016-707.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:1"
 			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2013-7456",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-7456"
-				}
+			"content": {
+				"id": "CVE-2013-7456",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-7456"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:1"
 			]
 		},
 		{
-			"id": "CVE-2016-4343",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-4343"
-				}
+			"content": {
+				"id": "CVE-2016-4343",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-4343"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:1"
 			]
 		},
 		{
-			"id": "CVE-2016-5093",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-5093"
-				}
+			"content": {
+				"id": "CVE-2016-5093",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-5093"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:1"
 			]
 		},
 		{
-			"id": "CVE-2016-5094",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-5094"
-				}
+			"content": {
+				"id": "CVE-2016-5094",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-5094"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:1"
 			]
 		},
 		{
-			"id": "CVE-2016-5095",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-5095"
-				}
+			"content": {
+				"id": "CVE-2016-5095",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-5095"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:1"
 			]
 		},
 		{
-			"id": "CVE-2016-5096",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-5096"
-				}
+			"content": {
+				"id": "CVE-2016-5096",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-5096"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:1"
 			]
 		}
 	],

@@ -2,62 +2,82 @@
 	"id": "ALAS2023-2023-209",
 	"advisories": [
 		{
-			"id": "ALAS2023-2023-209",
-			"title": "Amazon Linux 2023 - ALAS2023-2023-209: Important priority package update for golang",
-			"description": "Package updates are available for Amazon Linux 2023 that fix the following vulnerabilities:\nCVE-2023-29400:\n\thtml/template: improper handling of empty HTML attributes.\n\nTemplates containing actions in unquoted HTML attributes (e.g. \"attr={{.}}\") executed with empty input could result in output that would have unexpected results when parsed due to HTML normalization rules. This may allow injection of arbitrary attributes into tags.\n\nCVE-2023-24540:\n\thtml/template: improper handling of JavaScript whitespace.\n\nNot all valid JavaScript whitespace characters were considered to be whitespace. Templates containing whitespace characters outside of the character set \"\\t\\n\\f\\r\\u0020\\u2028\\u2029\" in JavaScript contexts that also contain actions may not be properly sanitized during execution.\n\nCVE-2023-24539:\n\thtml/template: improper sanitization of CSS values\n\nAngle brackets (<>) were not considered dangerous characters when inserted into CSS contexts. Templates containing multiple actions separated by a '/' character could result in unexpectedly closing the CSS context and allowing for injection of unexpected HMTL, if executed with untrusted input.\n",
-			"severity": [
-				{
-					"type": "vendor",
-					"source": "linux-security@amazon.com",
-					"vendor": "Important"
-				}
-			],
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-24539"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-24540"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-29400"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "https://alas.aws.amazon.com/AL2023/ALAS-2023-209.html"
-				}
+			"content": {
+				"id": "ALAS2023-2023-209",
+				"title": "Amazon Linux 2023 - ALAS2023-2023-209: Important priority package update for golang",
+				"description": "Package updates are available for Amazon Linux 2023 that fix the following vulnerabilities:\nCVE-2023-29400:\n\thtml/template: improper handling of empty HTML attributes.\n\nTemplates containing actions in unquoted HTML attributes (e.g. \"attr={{.}}\") executed with empty input could result in output that would have unexpected results when parsed due to HTML normalization rules. This may allow injection of arbitrary attributes into tags.\n\nCVE-2023-24540:\n\thtml/template: improper handling of JavaScript whitespace.\n\nNot all valid JavaScript whitespace characters were considered to be whitespace. Templates containing whitespace characters outside of the character set \"\\t\\n\\f\\r\\u0020\\u2028\\u2029\" in JavaScript contexts that also contain actions may not be properly sanitized during execution.\n\nCVE-2023-24539:\n\thtml/template: improper sanitization of CSS values\n\nAngle brackets (<>) were not considered dangerous characters when inserted into CSS contexts. Templates containing multiple actions separated by a '/' character could result in unexpectedly closing the CSS context and allowing for injection of unexpected HMTL, if executed with untrusted input.\n",
+				"severity": [
+					{
+						"type": "vendor",
+						"source": "linux-security@amazon.com",
+						"vendor": "Important"
+					}
+				],
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-24539"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-24540"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-29400"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "https://alas.aws.amazon.com/AL2023/ALAS-2023-209.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2023"
 			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2023-24539",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-24539"
-				}
+			"content": {
+				"id": "CVE-2023-24539",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-24539"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2023"
 			]
 		},
 		{
-			"id": "CVE-2023-24540",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-24540"
-				}
+			"content": {
+				"id": "CVE-2023-24540",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-24540"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2023"
 			]
 		},
 		{
-			"id": "CVE-2023-29400",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-29400"
-				}
+			"content": {
+				"id": "CVE-2023-29400",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-29400"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2023"
 			]
 		}
 	],

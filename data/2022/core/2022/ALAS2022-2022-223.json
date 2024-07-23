@@ -2,36 +2,46 @@
 	"id": "ALAS2022-2022-223",
 	"advisories": [
 		{
-			"id": "ALAS2022-2022-223",
-			"title": "Amazon Linux 2022 - ALAS2022-2022-223: Critical priority package update for nss",
-			"description": "Package updates are available for Amazon Linux 2022 that fix the following vulnerabilities:\nCVE-2021-43527:\n\tNSS (Network Security Services) up to and including 3.73 is vulnerable to a heap overflow when handling DER-encoded DSA or RSA-PSS signatures. Applications using NSS for handling signatures encoded within CMS, S/MIME, PKCS #7, or PKCS #12 are likely to be impacted. Applications using NSS for certificate validation or other TLS, X.509, OCSP or CRL functionality may be impacted, depending on how they configure NSS.\nWhen verifying a DER-encoded signature, NSS decodes the signature into a fixed-size buffer and passes the buffer to the underlying PKCS #11 module. The length of the signature is not correctly checked when processing DSA and RSA-PSS signatures. DSA and RSA-PSS signatures larger than 16384 bits will overflow the buffer in VFYContextStr. The vulnerable code is located within secvfy.c:vfy_CreateContext. (CVE-2021-43527)\n",
-			"severity": [
-				{
-					"type": "vendor",
-					"source": "linux-security@amazon.com",
-					"vendor": "Critical"
-				}
-			],
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-43527"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "https://alas.aws.amazon.com/AL2022/ALAS-2022-223.html"
-				}
+			"content": {
+				"id": "ALAS2022-2022-223",
+				"title": "Amazon Linux 2022 - ALAS2022-2022-223: Critical priority package update for nss",
+				"description": "Package updates are available for Amazon Linux 2022 that fix the following vulnerabilities:\nCVE-2021-43527:\n\tNSS (Network Security Services) up to and including 3.73 is vulnerable to a heap overflow when handling DER-encoded DSA or RSA-PSS signatures. Applications using NSS for handling signatures encoded within CMS, S/MIME, PKCS #7, or PKCS #12 are likely to be impacted. Applications using NSS for certificate validation or other TLS, X.509, OCSP or CRL functionality may be impacted, depending on how they configure NSS.\nWhen verifying a DER-encoded signature, NSS decodes the signature into a fixed-size buffer and passes the buffer to the underlying PKCS #11 module. The length of the signature is not correctly checked when processing DSA and RSA-PSS signatures. DSA and RSA-PSS signatures larger than 16384 bits will overflow the buffer in VFYContextStr. The vulnerable code is located within secvfy.c:vfy_CreateContext. (CVE-2021-43527)\n",
+				"severity": [
+					{
+						"type": "vendor",
+						"source": "linux-security@amazon.com",
+						"vendor": "Critical"
+					}
+				],
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-43527"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "https://alas.aws.amazon.com/AL2022/ALAS-2022-223.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2022"
 			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2021-43527",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-43527"
-				}
+			"content": {
+				"id": "CVE-2021-43527",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-43527"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2022"
 			]
 		}
 	],

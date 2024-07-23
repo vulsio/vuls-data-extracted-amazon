@@ -2,36 +2,46 @@
 	"id": "ALAS-2023-1682",
 	"advisories": [
 		{
-			"id": "ALAS-2023-1682",
-			"title": "Amazon Linux AMI 2014.03 - ALAS-2023-1682: important priority package update for sudo",
-			"description": "Package updates are available for Amazon Linux AMI that fix the following vulnerabilities:\nCVE-2023-22809:\n\tIn Sudo before 1.9.12p2, the sudoedit (aka -e) feature mishandles extra arguments passed in the user-provided environment variables (SUDO_EDITOR, VISUAL, and EDITOR), allowing a local attacker to append arbitrary entries to the list of files to process. This can lead to privilege escalation. Affected versions are 1.8.0 through 1.9.12.p1. The problem exists because a user-specified editor may contain a \"--\" argument that defeats a protection mechanism, e.g., an EDITOR='vim -- /path/to/extra/file' value.\n",
-			"severity": [
-				{
-					"type": "vendor",
-					"source": "linux-security@amazon.com",
-					"vendor": "important"
-				}
-			],
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-22809"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "https://alas.aws.amazon.com/ALAS-2023-1682.html"
-				}
+			"content": {
+				"id": "ALAS-2023-1682",
+				"title": "Amazon Linux AMI 2014.03 - ALAS-2023-1682: important priority package update for sudo",
+				"description": "Package updates are available for Amazon Linux AMI that fix the following vulnerabilities:\nCVE-2023-22809:\n\tIn Sudo before 1.9.12p2, the sudoedit (aka -e) feature mishandles extra arguments passed in the user-provided environment variables (SUDO_EDITOR, VISUAL, and EDITOR), allowing a local attacker to append arbitrary entries to the list of files to process. This can lead to privilege escalation. Affected versions are 1.8.0 through 1.9.12.p1. The problem exists because a user-specified editor may contain a \"--\" argument that defeats a protection mechanism, e.g., an EDITOR='vim -- /path/to/extra/file' value.\n",
+				"severity": [
+					{
+						"type": "vendor",
+						"source": "linux-security@amazon.com",
+						"vendor": "important"
+					}
+				],
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-22809"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "https://alas.aws.amazon.com/ALAS-2023-1682.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:1"
 			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2023-22809",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-22809"
-				}
+			"content": {
+				"id": "CVE-2023-22809",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-22809"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:1"
 			]
 		}
 	],

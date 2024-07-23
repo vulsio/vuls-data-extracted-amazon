@@ -2,49 +2,64 @@
 	"id": "ALAS2PHP8.0-2023-006",
 	"advisories": [
 		{
-			"id": "ALAS2PHP8.0-2023-006",
-			"title": "Amazon Linux 2 - Php8.0 2.0 - ALAS2PHP8.0-2023-006: important priority package update for php",
-			"description": "Package updates are available for Amazon Linux 2 - Php8.0 that fix the following vulnerabilities:\nCVE-2022-31626:\n\tA buffer overflow vulnerability was found in PHP when processing passwords in mysqlnd/pdo in mysqlnd_wireprotocol.c. When using the pdo_mysql extension with mysqlnd driver, if the third party is allowed to supply a password to the host for the connection, a password of excessive length can trigger a buffer overflow in PHP. This flaw allows a remote attacker to pass a password (with an excessive length) via PDO to the MySQL server, triggering arbitrary code execution on the target system.\n\nCVE-2022-31625:\n\tA vulnerability was found in PHP due to an uninitialized array in pg_query_params() function. When using the Postgres database extension, supplying invalid parameters to the parameterized query may lead to PHP attempting to free memory, using uninitialized data as pointers. This flaw allows a remote attacker with the ability to control query parameters to execute arbitrary code on the system or may cause a denial of service.\n",
-			"severity": [
-				{
-					"type": "vendor",
-					"source": "linux-security@amazon.com",
-					"vendor": "important"
-				}
-			],
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-31625"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-31626"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "https://alas.aws.amazon.com/AL2/ALASPHP8.0-2023-006.html"
-				}
+			"content": {
+				"id": "ALAS2PHP8.0-2023-006",
+				"title": "Amazon Linux 2 - Php8.0 2.0 - ALAS2PHP8.0-2023-006: important priority package update for php",
+				"description": "Package updates are available for Amazon Linux 2 - Php8.0 that fix the following vulnerabilities:\nCVE-2022-31626:\n\tA buffer overflow vulnerability was found in PHP when processing passwords in mysqlnd/pdo in mysqlnd_wireprotocol.c. When using the pdo_mysql extension with mysqlnd driver, if the third party is allowed to supply a password to the host for the connection, a password of excessive length can trigger a buffer overflow in PHP. This flaw allows a remote attacker to pass a password (with an excessive length) via PDO to the MySQL server, triggering arbitrary code execution on the target system.\n\nCVE-2022-31625:\n\tA vulnerability was found in PHP due to an uninitialized array in pg_query_params() function. When using the Postgres database extension, supplying invalid parameters to the parameterized query may lead to PHP attempting to free memory, using uninitialized data as pointers. This flaw allows a remote attacker with the ability to control query parameters to execute arbitrary code on the system or may cause a denial of service.\n",
+				"severity": [
+					{
+						"type": "vendor",
+						"source": "linux-security@amazon.com",
+						"vendor": "important"
+					}
+				],
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-31625"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-31626"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "https://alas.aws.amazon.com/AL2/ALASPHP8.0-2023-006.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2"
 			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2022-31625",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-31625"
-				}
+			"content": {
+				"id": "CVE-2022-31625",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-31625"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2"
 			]
 		},
 		{
-			"id": "CVE-2022-31626",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-31626"
-				}
+			"content": {
+				"id": "CVE-2022-31626",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-31626"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2"
 			]
 		}
 	],

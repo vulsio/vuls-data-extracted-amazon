@@ -2,62 +2,82 @@
 	"id": "ALAS2-2023-2322",
 	"advisories": [
 		{
-			"id": "ALAS2-2023-2322",
-			"title": "Amazon Linux 2 2017.12 - ALAS2-2023-2322: important priority package update for httpd",
-			"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2023-45802:\n\tDescription\nA flaw was found in mod_http2. When a HTTP/2 stream is reset (RST frame) by a client, there is a time window were the request's memory resources were not reclaimed immediately. Instead, de-allocation was deferred to connection close. A client could send new requests and resets, keeping the connection busy and open, causing the memory footprint to keep on growing. On connection close, all resources are reclaimed but the process might run out of memory before connection close.\n\nStatement\nDuring \"normal\" HTTP/2 use, the probability of encountering this issue is very low. The kept memory would not become noticeable before the connection closes or times out.\n\nMitigation\nMitigation for this issue is either not available or the currently available options don't meet the Red Hat Product Security criteria comprising ease of use and deployment, applicability to widespread installation base or stability.\n\nCVE-2023-43622:\n\tA flaw was found in httpd. This flaw allows an attacker opening an HTTP/2 connection with an initial window size of 0 to block handling of that connection indefinitely in the Apache HTTP Server. This vulnerability can exhaust worker resources in the server, similar to the well-known \"slow loris\" attack pattern.\n\nCVE-2023-31122:\n\tOut-of-bounds Read vulnerability in mod_macro of Apache HTTP Server.This issue affects Apache HTTP Server: through 2.4.57.\n",
-			"severity": [
-				{
-					"type": "vendor",
-					"source": "linux-security@amazon.com",
-					"vendor": "important"
-				}
-			],
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-31122"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-43622"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-45802"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "https://alas.aws.amazon.com/AL2/ALAS-2023-2322.html"
-				}
+			"content": {
+				"id": "ALAS2-2023-2322",
+				"title": "Amazon Linux 2 2017.12 - ALAS2-2023-2322: important priority package update for httpd",
+				"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2023-45802:\n\tDescription\nA flaw was found in mod_http2. When a HTTP/2 stream is reset (RST frame) by a client, there is a time window were the request's memory resources were not reclaimed immediately. Instead, de-allocation was deferred to connection close. A client could send new requests and resets, keeping the connection busy and open, causing the memory footprint to keep on growing. On connection close, all resources are reclaimed but the process might run out of memory before connection close.\n\nStatement\nDuring \"normal\" HTTP/2 use, the probability of encountering this issue is very low. The kept memory would not become noticeable before the connection closes or times out.\n\nMitigation\nMitigation for this issue is either not available or the currently available options don't meet the Red Hat Product Security criteria comprising ease of use and deployment, applicability to widespread installation base or stability.\n\nCVE-2023-43622:\n\tA flaw was found in httpd. This flaw allows an attacker opening an HTTP/2 connection with an initial window size of 0 to block handling of that connection indefinitely in the Apache HTTP Server. This vulnerability can exhaust worker resources in the server, similar to the well-known \"slow loris\" attack pattern.\n\nCVE-2023-31122:\n\tOut-of-bounds Read vulnerability in mod_macro of Apache HTTP Server.This issue affects Apache HTTP Server: through 2.4.57.\n",
+				"severity": [
+					{
+						"type": "vendor",
+						"source": "linux-security@amazon.com",
+						"vendor": "important"
+					}
+				],
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-31122"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-43622"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-45802"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "https://alas.aws.amazon.com/AL2/ALAS-2023-2322.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2"
 			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2023-31122",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-31122"
-				}
+			"content": {
+				"id": "CVE-2023-31122",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-31122"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2"
 			]
 		},
 		{
-			"id": "CVE-2023-43622",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-43622"
-				}
+			"content": {
+				"id": "CVE-2023-43622",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-43622"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2"
 			]
 		},
 		{
-			"id": "CVE-2023-45802",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-45802"
-				}
+			"content": {
+				"id": "CVE-2023-45802",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-45802"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2"
 			]
 		}
 	],

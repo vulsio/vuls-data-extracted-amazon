@@ -2,49 +2,64 @@
 	"id": "ALAS2LIVEPATCH-2021-032",
 	"advisories": [
 		{
-			"id": "ALAS2LIVEPATCH-2021-032",
-			"title": "Amazon Linux 2 - Livepatch 2.0 - ALAS2LIVEPATCH-2021-032: important priority package update for kernel-livepatch-4.14.203-156.332",
-			"description": "Package updates are available for Amazon Linux 2 - Livepatch that fix the following vulnerabilities:\nCVE-2020-29661:\n\tA locking vulnerability was found in the tty subsystem of the Linux kernel in drivers/tty/tty_jobctrl.c. This flaw allows a local attacker to possibly corrupt memory or escalate privileges. The highest threat from this vulnerability is to confidentiality, integrity, as well as system availability.\n1906525: CVE-2020-29661 kernel: locking issue in drivers/tty/tty_jobctrl.c can lead to an use-after-free\n\nCVE-2020-29660:\n\tA locking inconsistency issue was discovered in the tty subsystem of the Linux kernel through 5.9.13. drivers/tty/tty_io.c and drivers/tty/tty_jobctrl.c may allow a read-after-free attack against TIOCGSID, aka CID-c8bcd9c5be24.\n1906522: CVE-2020-29660 kernel: locking inconsistency in drivers/tty/tty_io.c and drivers/tty/tty_jobctrl.c can lead to a read-after-free\n",
-			"severity": [
-				{
-					"type": "vendor",
-					"source": "linux-security@amazon.com",
-					"vendor": "important"
-				}
-			],
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-29660"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-29661"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "https://alas.aws.amazon.com/AL2/ALASLIVEPATCH-2021-032.html"
-				}
+			"content": {
+				"id": "ALAS2LIVEPATCH-2021-032",
+				"title": "Amazon Linux 2 - Livepatch 2.0 - ALAS2LIVEPATCH-2021-032: important priority package update for kernel-livepatch-4.14.203-156.332",
+				"description": "Package updates are available for Amazon Linux 2 - Livepatch that fix the following vulnerabilities:\nCVE-2020-29661:\n\tA locking vulnerability was found in the tty subsystem of the Linux kernel in drivers/tty/tty_jobctrl.c. This flaw allows a local attacker to possibly corrupt memory or escalate privileges. The highest threat from this vulnerability is to confidentiality, integrity, as well as system availability.\n1906525: CVE-2020-29661 kernel: locking issue in drivers/tty/tty_jobctrl.c can lead to an use-after-free\n\nCVE-2020-29660:\n\tA locking inconsistency issue was discovered in the tty subsystem of the Linux kernel through 5.9.13. drivers/tty/tty_io.c and drivers/tty/tty_jobctrl.c may allow a read-after-free attack against TIOCGSID, aka CID-c8bcd9c5be24.\n1906522: CVE-2020-29660 kernel: locking inconsistency in drivers/tty/tty_io.c and drivers/tty/tty_jobctrl.c can lead to a read-after-free\n",
+				"severity": [
+					{
+						"type": "vendor",
+						"source": "linux-security@amazon.com",
+						"vendor": "important"
+					}
+				],
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-29660"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-29661"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "https://alas.aws.amazon.com/AL2/ALASLIVEPATCH-2021-032.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2"
 			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2020-29660",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-29660"
-				}
+			"content": {
+				"id": "CVE-2020-29660",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-29660"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2"
 			]
 		},
 		{
-			"id": "CVE-2020-29661",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-29661"
-				}
+			"content": {
+				"id": "CVE-2020-29661",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-29661"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2"
 			]
 		}
 	],

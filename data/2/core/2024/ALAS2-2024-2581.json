@@ -2,179 +2,244 @@
 	"id": "ALAS2-2024-2581",
 	"advisories": [
 		{
-			"id": "ALAS2-2024-2581",
-			"title": "Amazon Linux 2 2017.12 - ALAS2-2024-2581: important priority package update for kernel",
-			"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2024-36959:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\npinctrl: devicetree: fix refcount leak in pinctrl_dt_to_map()\n\nCVE-2024-36954:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\ntipc: fix a possible memleak in tipc_buf_append\n\nCVE-2024-36940:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\npinctrl: core: delete incorrect free in pinctrl_enable()\n\nCVE-2024-36905:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\ntcp: defer shutdown(SEND_SHUTDOWN) for TCP_SYN_RECV sockets\n\nCVE-2024-36902:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nipv6: fib6_rules: avoid possible NULL dereference in fib6_rule_action()\n\nCVE-2024-36886:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\ntipc: fix UAF in error path\n\nCVE-2024-36883:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nnet: fix out-of-bounds access in ops_init\n\nCVE-2024-36017:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nrtnetlink: Correct nested IFLA_VF_VLAN_LIST attribute validation\n\nCVE-2024-35947:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\ndyndbg: fix old BUG_ON in >control parser\n\nCVE-2024-26923:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\naf_unix: Fix garbage collector racing against connect()\n\nCVE-2023-52578:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nnet: bridge: use DEV_STATS_INC()\n\nCVE-2023-30456:\n\tAn issue was discovered in arch/x86/kvm/vmx/nested.c in the Linux kernel before 6.2.8. nVMX on x86_64 lacks consistency checks for CR0 and CR4.\n",
-			"severity": [
-				{
-					"type": "vendor",
-					"source": "linux-security@amazon.com",
-					"vendor": "important"
-				}
-			],
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-30456"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52578"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26923"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35947"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36017"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36883"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36886"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36902"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36905"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36940"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36954"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36959"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "https://alas.aws.amazon.com/AL2/ALAS-2024-2581.html"
-				}
+			"content": {
+				"id": "ALAS2-2024-2581",
+				"title": "Amazon Linux 2 2017.12 - ALAS2-2024-2581: important priority package update for kernel",
+				"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2024-36959:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\npinctrl: devicetree: fix refcount leak in pinctrl_dt_to_map()\n\nCVE-2024-36954:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\ntipc: fix a possible memleak in tipc_buf_append\n\nCVE-2024-36940:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\npinctrl: core: delete incorrect free in pinctrl_enable()\n\nCVE-2024-36905:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\ntcp: defer shutdown(SEND_SHUTDOWN) for TCP_SYN_RECV sockets\n\nCVE-2024-36902:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nipv6: fib6_rules: avoid possible NULL dereference in fib6_rule_action()\n\nCVE-2024-36886:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\ntipc: fix UAF in error path\n\nCVE-2024-36883:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nnet: fix out-of-bounds access in ops_init\n\nCVE-2024-36017:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nrtnetlink: Correct nested IFLA_VF_VLAN_LIST attribute validation\n\nCVE-2024-35947:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\ndyndbg: fix old BUG_ON in >control parser\n\nCVE-2024-26923:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\naf_unix: Fix garbage collector racing against connect()\n\nCVE-2023-52578:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nnet: bridge: use DEV_STATS_INC()\n\nCVE-2023-30456:\n\tAn issue was discovered in arch/x86/kvm/vmx/nested.c in the Linux kernel before 6.2.8. nVMX on x86_64 lacks consistency checks for CR0 and CR4.\n",
+				"severity": [
+					{
+						"type": "vendor",
+						"source": "linux-security@amazon.com",
+						"vendor": "important"
+					}
+				],
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-30456"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52578"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26923"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35947"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36017"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36883"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36886"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36902"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36905"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36940"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36954"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36959"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "https://alas.aws.amazon.com/AL2/ALAS-2024-2581.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2"
 			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2023-30456",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-30456"
-				}
+			"content": {
+				"id": "CVE-2023-30456",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-30456"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2"
 			]
 		},
 		{
-			"id": "CVE-2023-52578",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52578"
-				}
+			"content": {
+				"id": "CVE-2023-52578",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52578"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2"
 			]
 		},
 		{
-			"id": "CVE-2024-26923",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26923"
-				}
+			"content": {
+				"id": "CVE-2024-26923",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26923"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2"
 			]
 		},
 		{
-			"id": "CVE-2024-35947",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35947"
-				}
+			"content": {
+				"id": "CVE-2024-35947",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35947"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2"
 			]
 		},
 		{
-			"id": "CVE-2024-36017",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36017"
-				}
+			"content": {
+				"id": "CVE-2024-36017",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36017"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2"
 			]
 		},
 		{
-			"id": "CVE-2024-36883",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36883"
-				}
+			"content": {
+				"id": "CVE-2024-36883",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36883"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2"
 			]
 		},
 		{
-			"id": "CVE-2024-36886",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36886"
-				}
+			"content": {
+				"id": "CVE-2024-36886",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36886"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2"
 			]
 		},
 		{
-			"id": "CVE-2024-36902",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36902"
-				}
+			"content": {
+				"id": "CVE-2024-36902",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36902"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2"
 			]
 		},
 		{
-			"id": "CVE-2024-36905",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36905"
-				}
+			"content": {
+				"id": "CVE-2024-36905",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36905"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2"
 			]
 		},
 		{
-			"id": "CVE-2024-36940",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36940"
-				}
+			"content": {
+				"id": "CVE-2024-36940",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36940"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2"
 			]
 		},
 		{
-			"id": "CVE-2024-36954",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36954"
-				}
+			"content": {
+				"id": "CVE-2024-36954",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36954"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2"
 			]
 		},
 		{
-			"id": "CVE-2024-36959",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36959"
-				}
+			"content": {
+				"id": "CVE-2024-36959",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36959"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2"
 			]
 		}
 	],

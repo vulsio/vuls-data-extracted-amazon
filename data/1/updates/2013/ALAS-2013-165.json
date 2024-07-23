@@ -2,40 +2,50 @@
 	"id": "ALAS-2013-165",
 	"advisories": [
 		{
-			"id": "ALAS-2013-165",
-			"title": "Amazon Linux AMI 2012.09 - ALAS-2013-165: medium priority package update for openssh",
-			"description": "Package updates are available for Amazon Linux AMI that fix the following vulnerabilities:\nCVE-2012-5536:\n\tDue to the way the pam_ssh_agent_auth PAM module was built in Red Hat Enterprise Linux 6, the glibc's error() function was called rather than the intended error() function in pam_ssh_agent_auth to report errors. As these two functions expect different arguments, it was possible for an attacker to cause an application using pam_ssh_agent_auth to crash, disclose portions of its memory or, potentially, execute arbitrary code.\n",
-			"severity": [
-				{
-					"type": "vendor",
-					"source": "linux-security@amazon.com",
-					"vendor": "medium"
-				}
-			],
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-5536"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "https://alas.aws.amazon.com/ALAS-2013-165.html"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "https://rhn.redhat.com/errata/RHSA-2013:0519.html"
-				}
+			"content": {
+				"id": "ALAS-2013-165",
+				"title": "Amazon Linux AMI 2012.09 - ALAS-2013-165: medium priority package update for openssh",
+				"description": "Package updates are available for Amazon Linux AMI that fix the following vulnerabilities:\nCVE-2012-5536:\n\tDue to the way the pam_ssh_agent_auth PAM module was built in Red Hat Enterprise Linux 6, the glibc's error() function was called rather than the intended error() function in pam_ssh_agent_auth to report errors. As these two functions expect different arguments, it was possible for an attacker to cause an application using pam_ssh_agent_auth to crash, disclose portions of its memory or, potentially, execute arbitrary code.\n",
+				"severity": [
+					{
+						"type": "vendor",
+						"source": "linux-security@amazon.com",
+						"vendor": "medium"
+					}
+				],
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-5536"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "https://alas.aws.amazon.com/ALAS-2013-165.html"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "https://rhn.redhat.com/errata/RHSA-2013:0519.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:1"
 			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2012-5536",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-5536"
-				}
+			"content": {
+				"id": "CVE-2012-5536",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-5536"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:1"
 			]
 		}
 	],

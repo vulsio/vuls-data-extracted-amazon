@@ -2,196 +2,266 @@
 	"id": "ALAS-2014-383",
 	"advisories": [
 		{
-			"id": "ALAS-2014-383",
-			"title": "Amazon Linux AMI 2012.09 - ALAS-2014-383: critical priority package update for java-1.7.0-openjdk",
-			"description": "Package updates are available for Amazon Linux AMI that fix the following vulnerabilities:\nCVE-2014-4266:\n\tMultiple flaws were discovered in the JMX, Libraries, Security, and Serviceability components in OpenJDK. An untrusted Java application or applet could use these flaws to bypass certain Java sandbox restrictions.\n\nCVE-2014-4263:\n\tThe Diffie-Hellman (DH) key exchange algorithm implementation in the Security component in OpenJDK failed to validate public DH parameters properly. This could cause OpenJDK to accept and use weak parameters, allowing an attacker to recover the negotiated key.\n\nCVE-2014-4262:\n\tMultiple improper permission check issues were discovered in the Libraries component in OpenJDK. An untrusted Java application or applet could use these flaws to bypass Java sandbox restrictions.\n\nCVE-2014-4252:\n\tMultiple flaws were discovered in the JMX, Libraries, Security, and Serviceability components in OpenJDK. An untrusted Java application or applet could use these flaws to bypass certain Java sandbox restrictions.\n\nCVE-2014-4244:\n\tIt was discovered that the RSA algorithm in the Security component in OpenJDK did not sufficiently perform blinding while performing operations that were using private keys. An attacker able to measure timing differences of those operations could possibly leak information about the used keys.\n\nCVE-2014-4223:\n\tMultiple improper permission check issues were discovered in the Libraries component in OpenJDK. An untrusted Java application or applet could use these flaws to bypass Java sandbox restrictions.\n\nCVE-2014-4221:\n\tMultiple flaws were discovered in the JMX, Libraries, Security, and Serviceability components in OpenJDK. An untrusted Java application or applet could use these flaws to bypass certain Java sandbox restrictions.\n\nCVE-2014-4219:\n\tIt was discovered that the Hotspot component in OpenJDK did not properly verify bytecode from the class files. An untrusted Java application or applet could possibly use these flaws to bypass Java sandbox restrictions.\n\nCVE-2014-4218:\n\tMultiple flaws were discovered in the JMX, Libraries, Security, and Serviceability components in OpenJDK. An untrusted Java application or applet could use these flaws to bypass certain Java sandbox restrictions.\n\nCVE-2014-4216:\n\tIt was discovered that the Hotspot component in OpenJDK did not properly verify bytecode from the class files. An untrusted Java application or applet could possibly use these flaws to bypass Java sandbox restrictions.\n\nCVE-2014-4209:\n\tMultiple flaws were discovered in the JMX, Libraries, Security, and Serviceability components in OpenJDK. An untrusted Java application or applet could use these flaws to bypass certain Java sandbox restrictions.\n\nCVE-2014-2490:\n\tA format string flaw was discovered in the Hotspot component event logger in OpenJDK. An untrusted Java application or applet could use this flaw to crash the Java Virtual Machine or, potentially, execute arbitrary code with the privileges of the Java Virtual Machine.\n\nCVE-2014-2483:\n\tMultiple improper permission check issues were discovered in the Libraries component in OpenJDK. An untrusted Java application or applet could use these flaws to bypass Java sandbox restrictions.\n",
-			"severity": [
-				{
-					"type": "vendor",
-					"source": "linux-security@amazon.com",
-					"vendor": "critical"
-				}
-			],
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-2483"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-2490"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-4209"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-4216"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-4218"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-4219"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-4221"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-4223"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-4244"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-4252"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-4262"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-4263"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-4266"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "https://alas.aws.amazon.com/ALAS-2014-383.html"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "https://rhn.redhat.com/errata/RHSA-2014:0889.html"
-				}
+			"content": {
+				"id": "ALAS-2014-383",
+				"title": "Amazon Linux AMI 2012.09 - ALAS-2014-383: critical priority package update for java-1.7.0-openjdk",
+				"description": "Package updates are available for Amazon Linux AMI that fix the following vulnerabilities:\nCVE-2014-4266:\n\tMultiple flaws were discovered in the JMX, Libraries, Security, and Serviceability components in OpenJDK. An untrusted Java application or applet could use these flaws to bypass certain Java sandbox restrictions.\n\nCVE-2014-4263:\n\tThe Diffie-Hellman (DH) key exchange algorithm implementation in the Security component in OpenJDK failed to validate public DH parameters properly. This could cause OpenJDK to accept and use weak parameters, allowing an attacker to recover the negotiated key.\n\nCVE-2014-4262:\n\tMultiple improper permission check issues were discovered in the Libraries component in OpenJDK. An untrusted Java application or applet could use these flaws to bypass Java sandbox restrictions.\n\nCVE-2014-4252:\n\tMultiple flaws were discovered in the JMX, Libraries, Security, and Serviceability components in OpenJDK. An untrusted Java application or applet could use these flaws to bypass certain Java sandbox restrictions.\n\nCVE-2014-4244:\n\tIt was discovered that the RSA algorithm in the Security component in OpenJDK did not sufficiently perform blinding while performing operations that were using private keys. An attacker able to measure timing differences of those operations could possibly leak information about the used keys.\n\nCVE-2014-4223:\n\tMultiple improper permission check issues were discovered in the Libraries component in OpenJDK. An untrusted Java application or applet could use these flaws to bypass Java sandbox restrictions.\n\nCVE-2014-4221:\n\tMultiple flaws were discovered in the JMX, Libraries, Security, and Serviceability components in OpenJDK. An untrusted Java application or applet could use these flaws to bypass certain Java sandbox restrictions.\n\nCVE-2014-4219:\n\tIt was discovered that the Hotspot component in OpenJDK did not properly verify bytecode from the class files. An untrusted Java application or applet could possibly use these flaws to bypass Java sandbox restrictions.\n\nCVE-2014-4218:\n\tMultiple flaws were discovered in the JMX, Libraries, Security, and Serviceability components in OpenJDK. An untrusted Java application or applet could use these flaws to bypass certain Java sandbox restrictions.\n\nCVE-2014-4216:\n\tIt was discovered that the Hotspot component in OpenJDK did not properly verify bytecode from the class files. An untrusted Java application or applet could possibly use these flaws to bypass Java sandbox restrictions.\n\nCVE-2014-4209:\n\tMultiple flaws were discovered in the JMX, Libraries, Security, and Serviceability components in OpenJDK. An untrusted Java application or applet could use these flaws to bypass certain Java sandbox restrictions.\n\nCVE-2014-2490:\n\tA format string flaw was discovered in the Hotspot component event logger in OpenJDK. An untrusted Java application or applet could use this flaw to crash the Java Virtual Machine or, potentially, execute arbitrary code with the privileges of the Java Virtual Machine.\n\nCVE-2014-2483:\n\tMultiple improper permission check issues were discovered in the Libraries component in OpenJDK. An untrusted Java application or applet could use these flaws to bypass Java sandbox restrictions.\n",
+				"severity": [
+					{
+						"type": "vendor",
+						"source": "linux-security@amazon.com",
+						"vendor": "critical"
+					}
+				],
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-2483"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-2490"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-4209"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-4216"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-4218"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-4219"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-4221"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-4223"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-4244"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-4252"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-4262"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-4263"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-4266"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "https://alas.aws.amazon.com/ALAS-2014-383.html"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "https://rhn.redhat.com/errata/RHSA-2014:0889.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:1"
 			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2014-2483",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-2483"
-				}
+			"content": {
+				"id": "CVE-2014-2483",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-2483"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:1"
 			]
 		},
 		{
-			"id": "CVE-2014-2490",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-2490"
-				}
+			"content": {
+				"id": "CVE-2014-2490",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-2490"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:1"
 			]
 		},
 		{
-			"id": "CVE-2014-4209",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-4209"
-				}
+			"content": {
+				"id": "CVE-2014-4209",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-4209"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:1"
 			]
 		},
 		{
-			"id": "CVE-2014-4216",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-4216"
-				}
+			"content": {
+				"id": "CVE-2014-4216",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-4216"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:1"
 			]
 		},
 		{
-			"id": "CVE-2014-4218",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-4218"
-				}
+			"content": {
+				"id": "CVE-2014-4218",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-4218"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:1"
 			]
 		},
 		{
-			"id": "CVE-2014-4219",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-4219"
-				}
+			"content": {
+				"id": "CVE-2014-4219",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-4219"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:1"
 			]
 		},
 		{
-			"id": "CVE-2014-4221",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-4221"
-				}
+			"content": {
+				"id": "CVE-2014-4221",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-4221"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:1"
 			]
 		},
 		{
-			"id": "CVE-2014-4223",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-4223"
-				}
+			"content": {
+				"id": "CVE-2014-4223",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-4223"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:1"
 			]
 		},
 		{
-			"id": "CVE-2014-4244",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-4244"
-				}
+			"content": {
+				"id": "CVE-2014-4244",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-4244"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:1"
 			]
 		},
 		{
-			"id": "CVE-2014-4252",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-4252"
-				}
+			"content": {
+				"id": "CVE-2014-4252",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-4252"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:1"
 			]
 		},
 		{
-			"id": "CVE-2014-4262",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-4262"
-				}
+			"content": {
+				"id": "CVE-2014-4262",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-4262"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:1"
 			]
 		},
 		{
-			"id": "CVE-2014-4263",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-4263"
-				}
+			"content": {
+				"id": "CVE-2014-4263",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-4263"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:1"
 			]
 		},
 		{
-			"id": "CVE-2014-4266",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-4266"
-				}
+			"content": {
+				"id": "CVE-2014-4266",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-4266"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:1"
 			]
 		}
 	],

@@ -2,36 +2,46 @@
 	"id": "ALAS2022-2022-159",
 	"advisories": [
 		{
-			"id": "ALAS2022-2022-159",
-			"title": "Amazon Linux 2022 - ALAS2022-2022-159: Important priority package update for zlib",
-			"description": "Package updates are available for Amazon Linux 2022 that fix the following vulnerabilities:\nCVE-2018-25032:\n\tAn out-of-bounds access flaw was found in zlib, which allows memory corruption when deflating (ex: when compressing) if the input has many distant matches. For some rare inputs with a large number of distant matches (crafted payloads), the buffer into which the compressed or deflated data is written can overwrite the distance symbol table which it overlays. This issue results in corrupted output due to invalid distances, which leads to out-of-bound access, corrupting the memory and potentially crashing the application.\n",
-			"severity": [
-				{
-					"type": "vendor",
-					"source": "linux-security@amazon.com",
-					"vendor": "Important"
-				}
-			],
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-25032"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "https://alas.aws.amazon.com/AL2022/ALAS-2022-159.html"
-				}
+			"content": {
+				"id": "ALAS2022-2022-159",
+				"title": "Amazon Linux 2022 - ALAS2022-2022-159: Important priority package update for zlib",
+				"description": "Package updates are available for Amazon Linux 2022 that fix the following vulnerabilities:\nCVE-2018-25032:\n\tAn out-of-bounds access flaw was found in zlib, which allows memory corruption when deflating (ex: when compressing) if the input has many distant matches. For some rare inputs with a large number of distant matches (crafted payloads), the buffer into which the compressed or deflated data is written can overwrite the distance symbol table which it overlays. This issue results in corrupted output due to invalid distances, which leads to out-of-bound access, corrupting the memory and potentially crashing the application.\n",
+				"severity": [
+					{
+						"type": "vendor",
+						"source": "linux-security@amazon.com",
+						"vendor": "Important"
+					}
+				],
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-25032"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "https://alas.aws.amazon.com/AL2022/ALAS-2022-159.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2022"
 			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2018-25032",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-25032"
-				}
+			"content": {
+				"id": "CVE-2018-25032",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-25032"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2022"
 			]
 		}
 	],

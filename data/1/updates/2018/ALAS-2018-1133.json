@@ -2,62 +2,82 @@
 	"id": "ALAS-2018-1133",
 	"advisories": [
 		{
-			"id": "ALAS-2018-1133",
-			"title": "Amazon Linux AMI 2014.03 - ALAS-2018-1133: medium priority package update for kernel",
-			"description": "Package updates are available for Amazon Linux AMI that fix the following vulnerabilities:\nCVE-2018-19407:\n\tA NULL pointer dereference security flaw was found in the Linux kernel in the vcpu_scan_ioapic() function in arch/x86/kvm/x86.c. This allows local users with certain privileges to cause a denial of service via a crafted system call to the KVM subsystem.\n1652656: \nCVE-2018-19407 kernel: kvm: NULL pointer dereference in vcpu_scan_ioapic in arch/x86/kvm/x86.c\n\nCVE-2018-18710:\n\tAn issue was discovered in the Linux kernel through 4.19. An information leak in cdrom_ioctl_select_disc in drivers/cdrom/cdrom.c could be used by local attackers to read kernel memory because a cast from unsigned long to int interferes with bounds checking.\n1645140: \nCVE-2018-18710 kernel: Information leak in cdrom_ioctl_select_disc in drivers/cdrom/cdrom.c\n\nCVE-2018-16862:\n\tA security flaw was found in the Linux kernel in a way that the cleancache subsystem clears an inode after the final file truncation (removal). The new file created with the same inode may contain leftover pages from cleancache and the old file data instead of the new one.\n1649017: \nCVE-2018-16862 kernel: cleancache: Infoleak of deleted files after reuse of old inodes\n",
-			"severity": [
-				{
-					"type": "vendor",
-					"source": "linux-security@amazon.com",
-					"vendor": "medium"
-				}
-			],
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-16862"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-18710"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-19407"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "https://alas.aws.amazon.com/ALAS-2018-1133.html"
-				}
+			"content": {
+				"id": "ALAS-2018-1133",
+				"title": "Amazon Linux AMI 2014.03 - ALAS-2018-1133: medium priority package update for kernel",
+				"description": "Package updates are available for Amazon Linux AMI that fix the following vulnerabilities:\nCVE-2018-19407:\n\tA NULL pointer dereference security flaw was found in the Linux kernel in the vcpu_scan_ioapic() function in arch/x86/kvm/x86.c. This allows local users with certain privileges to cause a denial of service via a crafted system call to the KVM subsystem.\n1652656: \nCVE-2018-19407 kernel: kvm: NULL pointer dereference in vcpu_scan_ioapic in arch/x86/kvm/x86.c\n\nCVE-2018-18710:\n\tAn issue was discovered in the Linux kernel through 4.19. An information leak in cdrom_ioctl_select_disc in drivers/cdrom/cdrom.c could be used by local attackers to read kernel memory because a cast from unsigned long to int interferes with bounds checking.\n1645140: \nCVE-2018-18710 kernel: Information leak in cdrom_ioctl_select_disc in drivers/cdrom/cdrom.c\n\nCVE-2018-16862:\n\tA security flaw was found in the Linux kernel in a way that the cleancache subsystem clears an inode after the final file truncation (removal). The new file created with the same inode may contain leftover pages from cleancache and the old file data instead of the new one.\n1649017: \nCVE-2018-16862 kernel: cleancache: Infoleak of deleted files after reuse of old inodes\n",
+				"severity": [
+					{
+						"type": "vendor",
+						"source": "linux-security@amazon.com",
+						"vendor": "medium"
+					}
+				],
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-16862"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-18710"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-19407"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "https://alas.aws.amazon.com/ALAS-2018-1133.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:1"
 			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2018-16862",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-16862"
-				}
+			"content": {
+				"id": "CVE-2018-16862",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-16862"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:1"
 			]
 		},
 		{
-			"id": "CVE-2018-18710",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-18710"
-				}
+			"content": {
+				"id": "CVE-2018-18710",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-18710"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:1"
 			]
 		},
 		{
-			"id": "CVE-2018-19407",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-19407"
-				}
+			"content": {
+				"id": "CVE-2018-19407",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-19407"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:1"
 			]
 		}
 	],

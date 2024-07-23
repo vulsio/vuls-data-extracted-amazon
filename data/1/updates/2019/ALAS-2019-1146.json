@@ -2,88 +2,118 @@
 	"id": "ALAS-2019-1146",
 	"advisories": [
 		{
-			"id": "ALAS-2019-1146",
-			"title": "Amazon Linux AMI 2014.03 - ALAS-2019-1146: low priority package update for clamav",
-			"description": "Package updates are available for Amazon Linux AMI that fix the following vulnerabilities:\nCVE-2018-15378:\n\t\n\nCVE-2018-14682:\n\tAn issue was discovered in mspack/chmd.c in libmspack before 0.7alpha. There is an off-by-one error in the TOLOWER() macro for CHM decompression.\n1610941: \nCVE-2018-14682 libmspack: off-by-one error in the TOLOWER() macro for CHM decompression\n\nCVE-2018-14681:\n\tAn issue was discovered in kwajd_read_headers in mspack/kwajd.c in libmspack before 0.7alpha. Bad KWAJ file header extensions could cause a one or two byte overwrite.\n1610896: \nCVE-2018-14681 libmspack: out-of-bounds write in kwajd_read_headers in mspack/kwajd.c\n\nCVE-2018-14680:\n\tAn issue was discovered in mspack/chmd.c in libmspack before 0.7alpha. It does not reject blank CHM filenames.\n1610934: \nCVE-2018-14680 libmspack: off-by-one error in the CHM chunk number validity checks\n\nCVE-2018-14679:\n\tAn issue was discovered in mspack/chmd.c in libmspack before 0.7alpha. There is an off-by-one error in the CHM PMGI/PMGL chunk number validity checks, which could lead to denial of service (uninitialized data dereference and application crash).\n1610890: \nCVE-2018-14679 libmspack: off-by-one error in the CHM PMGI/PMGL chunk number validity checks\n",
-			"severity": [
-				{
-					"type": "vendor",
-					"source": "linux-security@amazon.com",
-					"vendor": "low"
-				}
-			],
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14679"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14680"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14681"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14682"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-15378"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "https://alas.aws.amazon.com/ALAS-2019-1146.html"
-				}
+			"content": {
+				"id": "ALAS-2019-1146",
+				"title": "Amazon Linux AMI 2014.03 - ALAS-2019-1146: low priority package update for clamav",
+				"description": "Package updates are available for Amazon Linux AMI that fix the following vulnerabilities:\nCVE-2018-15378:\n\t\n\nCVE-2018-14682:\n\tAn issue was discovered in mspack/chmd.c in libmspack before 0.7alpha. There is an off-by-one error in the TOLOWER() macro for CHM decompression.\n1610941: \nCVE-2018-14682 libmspack: off-by-one error in the TOLOWER() macro for CHM decompression\n\nCVE-2018-14681:\n\tAn issue was discovered in kwajd_read_headers in mspack/kwajd.c in libmspack before 0.7alpha. Bad KWAJ file header extensions could cause a one or two byte overwrite.\n1610896: \nCVE-2018-14681 libmspack: out-of-bounds write in kwajd_read_headers in mspack/kwajd.c\n\nCVE-2018-14680:\n\tAn issue was discovered in mspack/chmd.c in libmspack before 0.7alpha. It does not reject blank CHM filenames.\n1610934: \nCVE-2018-14680 libmspack: off-by-one error in the CHM chunk number validity checks\n\nCVE-2018-14679:\n\tAn issue was discovered in mspack/chmd.c in libmspack before 0.7alpha. There is an off-by-one error in the CHM PMGI/PMGL chunk number validity checks, which could lead to denial of service (uninitialized data dereference and application crash).\n1610890: \nCVE-2018-14679 libmspack: off-by-one error in the CHM PMGI/PMGL chunk number validity checks\n",
+				"severity": [
+					{
+						"type": "vendor",
+						"source": "linux-security@amazon.com",
+						"vendor": "low"
+					}
+				],
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14679"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14680"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14681"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14682"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-15378"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "https://alas.aws.amazon.com/ALAS-2019-1146.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:1"
 			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2018-14679",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14679"
-				}
+			"content": {
+				"id": "CVE-2018-14679",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14679"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:1"
 			]
 		},
 		{
-			"id": "CVE-2018-14680",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14680"
-				}
+			"content": {
+				"id": "CVE-2018-14680",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14680"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:1"
 			]
 		},
 		{
-			"id": "CVE-2018-14681",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14681"
-				}
+			"content": {
+				"id": "CVE-2018-14681",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14681"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:1"
 			]
 		},
 		{
-			"id": "CVE-2018-14682",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14682"
-				}
+			"content": {
+				"id": "CVE-2018-14682",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14682"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:1"
 			]
 		},
 		{
-			"id": "CVE-2018-15378",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-15378"
-				}
+			"content": {
+				"id": "CVE-2018-15378",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-15378"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:1"
 			]
 		}
 	],

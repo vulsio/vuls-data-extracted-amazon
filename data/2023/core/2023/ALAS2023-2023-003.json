@@ -2,49 +2,64 @@
 	"id": "ALAS2023-2023-003",
 	"advisories": [
 		{
-			"id": "ALAS2023-2023-003",
-			"title": "Amazon Linux 2023 - ALAS2023-2023-003: Important priority package update for zlib",
-			"description": "Package updates are available for Amazon Linux 2023 that fix the following vulnerabilities:\nCVE-2022-37434:\n\tA security vulnerability was found in zlib. The flaw triggered a heap-based buffer in inflate in the inflate.c function via a large gzip header extra field. This flaw is only applicable in the call inflateGetHeader.\n\nCVE-2018-25032:\n\tAn out-of-bounds access flaw was found in zlib, which allows memory corruption when deflating (ex: when compressing) if the input has many distant matches. For some rare inputs with a large number of distant matches (crafted payloads), the buffer into which the compressed or deflated data is written can overwrite the distance symbol table which it overlays. This issue results in corrupted output due to invalid distances, which leads to out-of-bound access, corrupting the memory and potentially crashing the application.\n",
-			"severity": [
-				{
-					"type": "vendor",
-					"source": "linux-security@amazon.com",
-					"vendor": "Important"
-				}
-			],
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-25032"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-37434"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "https://alas.aws.amazon.com/AL2023/ALAS-2023-003.html"
-				}
+			"content": {
+				"id": "ALAS2023-2023-003",
+				"title": "Amazon Linux 2023 - ALAS2023-2023-003: Important priority package update for zlib",
+				"description": "Package updates are available for Amazon Linux 2023 that fix the following vulnerabilities:\nCVE-2022-37434:\n\tA security vulnerability was found in zlib. The flaw triggered a heap-based buffer in inflate in the inflate.c function via a large gzip header extra field. This flaw is only applicable in the call inflateGetHeader.\n\nCVE-2018-25032:\n\tAn out-of-bounds access flaw was found in zlib, which allows memory corruption when deflating (ex: when compressing) if the input has many distant matches. For some rare inputs with a large number of distant matches (crafted payloads), the buffer into which the compressed or deflated data is written can overwrite the distance symbol table which it overlays. This issue results in corrupted output due to invalid distances, which leads to out-of-bound access, corrupting the memory and potentially crashing the application.\n",
+				"severity": [
+					{
+						"type": "vendor",
+						"source": "linux-security@amazon.com",
+						"vendor": "Important"
+					}
+				],
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-25032"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-37434"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "https://alas.aws.amazon.com/AL2023/ALAS-2023-003.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2023"
 			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2018-25032",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-25032"
-				}
+			"content": {
+				"id": "CVE-2018-25032",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-25032"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2023"
 			]
 		},
 		{
-			"id": "CVE-2022-37434",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-37434"
-				}
+			"content": {
+				"id": "CVE-2022-37434",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-37434"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2023"
 			]
 		}
 	],

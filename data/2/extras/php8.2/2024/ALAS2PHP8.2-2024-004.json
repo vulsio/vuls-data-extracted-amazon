@@ -2,49 +2,64 @@
 	"id": "ALAS2PHP8.2-2024-004",
 	"advisories": [
 		{
-			"id": "ALAS2PHP8.2-2024-004",
-			"title": "Amazon Linux 2 - Php8.2 2.0 - ALAS2PHP8.2-2024-004: important priority package update for php",
-			"description": "Package updates are available for Amazon Linux 2 - Php8.2 that fix the following vulnerabilities:\nCVE-2024-3096:\n\tThe vulnerability allows a remote attacker to bypass authentication process.\n\nThe vulnerability exists due to an error in within the password_verify() function, which can erroneously return true. A remote attacker can bypass implemented authentication based on the vulnerable function and gain unauthorized access to the web application.\n\nCVE-2024-2756:\n\tThe vulnerability allows a remote attacker to bypass implemented security restrictions.\n\nThe vulnerability exists due to the way PHP handles HTTP variable names. A remote attacker can set a standard insecure cookie in the victim's browser which is treated as a `__Host-` or `__Secure-` cookie by PHP applications.\n\nNote, the vulnerability exists due to incomplete fix for #VU67756 (CVE-2022-31629).\n",
-			"severity": [
-				{
-					"type": "vendor",
-					"source": "linux-security@amazon.com",
-					"vendor": "important"
-				}
-			],
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-2756"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-3096"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "https://alas.aws.amazon.com/AL2/ALASPHP8.2-2024-004.html"
-				}
+			"content": {
+				"id": "ALAS2PHP8.2-2024-004",
+				"title": "Amazon Linux 2 - Php8.2 2.0 - ALAS2PHP8.2-2024-004: important priority package update for php",
+				"description": "Package updates are available for Amazon Linux 2 - Php8.2 that fix the following vulnerabilities:\nCVE-2024-3096:\n\tThe vulnerability allows a remote attacker to bypass authentication process.\n\nThe vulnerability exists due to an error in within the password_verify() function, which can erroneously return true. A remote attacker can bypass implemented authentication based on the vulnerable function and gain unauthorized access to the web application.\n\nCVE-2024-2756:\n\tThe vulnerability allows a remote attacker to bypass implemented security restrictions.\n\nThe vulnerability exists due to the way PHP handles HTTP variable names. A remote attacker can set a standard insecure cookie in the victim's browser which is treated as a `__Host-` or `__Secure-` cookie by PHP applications.\n\nNote, the vulnerability exists due to incomplete fix for #VU67756 (CVE-2022-31629).\n",
+				"severity": [
+					{
+						"type": "vendor",
+						"source": "linux-security@amazon.com",
+						"vendor": "important"
+					}
+				],
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-2756"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-3096"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "https://alas.aws.amazon.com/AL2/ALASPHP8.2-2024-004.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2"
 			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2024-2756",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-2756"
-				}
+			"content": {
+				"id": "CVE-2024-2756",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-2756"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2"
 			]
 		},
 		{
-			"id": "CVE-2024-3096",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-3096"
-				}
+			"content": {
+				"id": "CVE-2024-3096",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-3096"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2"
 			]
 		}
 	],

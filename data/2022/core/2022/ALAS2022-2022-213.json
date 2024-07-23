@@ -2,88 +2,118 @@
 	"id": "ALAS2022-2022-213",
 	"advisories": [
 		{
-			"id": "ALAS2022-2022-213",
-			"title": "Amazon Linux 2022 - ALAS2022-2022-213: Important priority package update for samba",
-			"description": "Package updates are available for Amazon Linux 2022 that fix the following vulnerabilities:\nCVE-2022-32746:\n\tA flaw was found in the Samba AD LDAP server. The AD DC database audit logging module can access LDAP message values freed by a preceding database module, resulting in a use-after-free issue. This issue is only possible when modifying certain privileged attributes, such as userAccountControl.\n\nCVE-2022-32745:\n\tA flaw was found in Samba. Samba AD users can cause the server to access uninitialized data with an LDAP add or modify the request, usually resulting in a segmentation fault.\n\nCVE-2022-32744:\n\tA flaw was found in Samba. The KDC accepts kpasswd requests encrypted with any key known to it. By encrypting forged kpasswd requests with its own key, a user can change other users' passwords, enabling full domain takeover.\n\nCVE-2022-32742:\n\tA flaw was found in Samba. Some SMB1 write requests were not correctly range-checked to ensure the client had sent enough data to fulfill the write, allowing server memory contents to be written into the file (or printer) instead of client-supplied data. The client cannot control the area of the server memory written to the file (or printer).\n\nCVE-2020-17049:\n\tIt was found that the Kerberos Key Distribution Center (KDC) delegation feature, Service for User (S4U), did not sufficiently protect the tickets it's providing from tempering. A malicious, authenticated service principal allowed to delegate could use this flaw to impersonate a non-forwardable user.\n",
-			"severity": [
-				{
-					"type": "vendor",
-					"source": "linux-security@amazon.com",
-					"vendor": "Important"
-				}
-			],
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-17049"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-32742"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-32744"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-32745"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-32746"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "https://alas.aws.amazon.com/AL2022/ALAS-2022-213.html"
-				}
+			"content": {
+				"id": "ALAS2022-2022-213",
+				"title": "Amazon Linux 2022 - ALAS2022-2022-213: Important priority package update for samba",
+				"description": "Package updates are available for Amazon Linux 2022 that fix the following vulnerabilities:\nCVE-2022-32746:\n\tA flaw was found in the Samba AD LDAP server. The AD DC database audit logging module can access LDAP message values freed by a preceding database module, resulting in a use-after-free issue. This issue is only possible when modifying certain privileged attributes, such as userAccountControl.\n\nCVE-2022-32745:\n\tA flaw was found in Samba. Samba AD users can cause the server to access uninitialized data with an LDAP add or modify the request, usually resulting in a segmentation fault.\n\nCVE-2022-32744:\n\tA flaw was found in Samba. The KDC accepts kpasswd requests encrypted with any key known to it. By encrypting forged kpasswd requests with its own key, a user can change other users' passwords, enabling full domain takeover.\n\nCVE-2022-32742:\n\tA flaw was found in Samba. Some SMB1 write requests were not correctly range-checked to ensure the client had sent enough data to fulfill the write, allowing server memory contents to be written into the file (or printer) instead of client-supplied data. The client cannot control the area of the server memory written to the file (or printer).\n\nCVE-2020-17049:\n\tIt was found that the Kerberos Key Distribution Center (KDC) delegation feature, Service for User (S4U), did not sufficiently protect the tickets it's providing from tempering. A malicious, authenticated service principal allowed to delegate could use this flaw to impersonate a non-forwardable user.\n",
+				"severity": [
+					{
+						"type": "vendor",
+						"source": "linux-security@amazon.com",
+						"vendor": "Important"
+					}
+				],
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-17049"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-32742"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-32744"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-32745"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-32746"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "https://alas.aws.amazon.com/AL2022/ALAS-2022-213.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2022"
 			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2020-17049",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-17049"
-				}
+			"content": {
+				"id": "CVE-2020-17049",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-17049"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2022"
 			]
 		},
 		{
-			"id": "CVE-2022-32742",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-32742"
-				}
+			"content": {
+				"id": "CVE-2022-32742",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-32742"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2022"
 			]
 		},
 		{
-			"id": "CVE-2022-32744",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-32744"
-				}
+			"content": {
+				"id": "CVE-2022-32744",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-32744"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2022"
 			]
 		},
 		{
-			"id": "CVE-2022-32745",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-32745"
-				}
+			"content": {
+				"id": "CVE-2022-32745",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-32745"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2022"
 			]
 		},
 		{
-			"id": "CVE-2022-32746",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-32746"
-				}
+			"content": {
+				"id": "CVE-2022-32746",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-32746"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2022"
 			]
 		}
 	],

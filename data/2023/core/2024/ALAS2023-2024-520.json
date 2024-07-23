@@ -2,49 +2,64 @@
 	"id": "ALAS2023-2024-520",
 	"advisories": [
 		{
-			"id": "ALAS2023-2024-520",
-			"title": "Amazon Linux 2023 - ALAS2023-2024-520: Medium priority package update for openssl",
-			"description": "Package updates are available for Amazon Linux 2023 that fix the following vulnerabilities:\nCVE-2024-0727:\n\tProcessing a maliciously formatted PKCS12 file may lead OpenSSL to crash leading to a potential Denial of Service attack\n\nThe package openssl098e is provided purely for binary compatibility with older Amazon Linux versions. It does not receive security updates.\n\nCVE-2023-6237:\n\tA flaw was found in OpenSSL. When the EVP_PKEY_public_check() function is called in RSA public keys, a computation is done to confirm that the RSA modulus, n, is composite. For valid RSA keys, n is a product of two or more large primes and this computation completes quickly. However, if n is a large prime, this computation takes a long time. An application that calls EVP_PKEY_public_check() and supplies an RSA key obtained from an untrusted source could be vulnerable to a Denial of Service attack.\n",
-			"severity": [
-				{
-					"type": "vendor",
-					"source": "linux-security@amazon.com",
-					"vendor": "Medium"
-				}
-			],
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-6237"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-0727"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "https://alas.aws.amazon.com/AL2023/ALAS-2024-520.html"
-				}
+			"content": {
+				"id": "ALAS2023-2024-520",
+				"title": "Amazon Linux 2023 - ALAS2023-2024-520: Medium priority package update for openssl",
+				"description": "Package updates are available for Amazon Linux 2023 that fix the following vulnerabilities:\nCVE-2024-0727:\n\tProcessing a maliciously formatted PKCS12 file may lead OpenSSL to crash leading to a potential Denial of Service attack\n\nThe package openssl098e is provided purely for binary compatibility with older Amazon Linux versions. It does not receive security updates.\n\nCVE-2023-6237:\n\tA flaw was found in OpenSSL. When the EVP_PKEY_public_check() function is called in RSA public keys, a computation is done to confirm that the RSA modulus, n, is composite. For valid RSA keys, n is a product of two or more large primes and this computation completes quickly. However, if n is a large prime, this computation takes a long time. An application that calls EVP_PKEY_public_check() and supplies an RSA key obtained from an untrusted source could be vulnerable to a Denial of Service attack.\n",
+				"severity": [
+					{
+						"type": "vendor",
+						"source": "linux-security@amazon.com",
+						"vendor": "Medium"
+					}
+				],
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-6237"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-0727"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "https://alas.aws.amazon.com/AL2023/ALAS-2024-520.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2023"
 			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2023-6237",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-6237"
-				}
+			"content": {
+				"id": "CVE-2023-6237",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-6237"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2023"
 			]
 		},
 		{
-			"id": "CVE-2024-0727",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-0727"
-				}
+			"content": {
+				"id": "CVE-2024-0727",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-0727"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2023"
 			]
 		}
 	],

@@ -2,62 +2,82 @@
 	"id": "ALAS-2016-774",
 	"advisories": [
 		{
-			"id": "ALAS-2016-774",
-			"title": "Amazon Linux AMI 2014.03 - ALAS-2016-774: medium priority package update for nss-util nss nss-softokn",
-			"description": "Package updates are available for Amazon Linux AMI that fix the following vulnerabilities:\nCVE-2016-8635:\n\tIt was found that Diffie Hellman Client key exchange handling in NSS was vulnerable to small subgroup confinement attack. An attacker could use this flaw to recover private keys by confining the client DH key to small subgroup of the desired group.\n1391818: \nCVE-2016-8635 nss: small-subgroups attack flaw\n\nCVE-2016-5285:\n\tA NULL pointer dereference flaw was found in the way NSS handled invalid Diffie-Hellman keys. A remote client could use this flaw to crash a TLS/SSL server using NSS.\n1383883: \nCVE-2016-5285 nss: Missing NULL check in PK11_SignWithSymKey / ssl3_ComputeRecordMACConstantTime causes server crash\n\nCVE-2016-2834:\n\tMultiple buffer handling flaws were found in the way NSS handled cryptographic data from the network. A remote attacker could use these flaws to crash an application using NSS or, possibly, execute arbitrary code with the permission of the user running the application.\n1347908: \nCVE-2016-2834 nss: Multiple security flaws (MFSA 2016-61)\n",
-			"severity": [
-				{
-					"type": "vendor",
-					"source": "linux-security@amazon.com",
-					"vendor": "medium"
-				}
-			],
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-2834"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-5285"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-8635"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "https://alas.aws.amazon.com/ALAS-2016-774.html"
-				}
+			"content": {
+				"id": "ALAS-2016-774",
+				"title": "Amazon Linux AMI 2014.03 - ALAS-2016-774: medium priority package update for nss-util nss nss-softokn",
+				"description": "Package updates are available for Amazon Linux AMI that fix the following vulnerabilities:\nCVE-2016-8635:\n\tIt was found that Diffie Hellman Client key exchange handling in NSS was vulnerable to small subgroup confinement attack. An attacker could use this flaw to recover private keys by confining the client DH key to small subgroup of the desired group.\n1391818: \nCVE-2016-8635 nss: small-subgroups attack flaw\n\nCVE-2016-5285:\n\tA NULL pointer dereference flaw was found in the way NSS handled invalid Diffie-Hellman keys. A remote client could use this flaw to crash a TLS/SSL server using NSS.\n1383883: \nCVE-2016-5285 nss: Missing NULL check in PK11_SignWithSymKey / ssl3_ComputeRecordMACConstantTime causes server crash\n\nCVE-2016-2834:\n\tMultiple buffer handling flaws were found in the way NSS handled cryptographic data from the network. A remote attacker could use these flaws to crash an application using NSS or, possibly, execute arbitrary code with the permission of the user running the application.\n1347908: \nCVE-2016-2834 nss: Multiple security flaws (MFSA 2016-61)\n",
+				"severity": [
+					{
+						"type": "vendor",
+						"source": "linux-security@amazon.com",
+						"vendor": "medium"
+					}
+				],
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-2834"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-5285"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-8635"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "https://alas.aws.amazon.com/ALAS-2016-774.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:1"
 			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2016-2834",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-2834"
-				}
+			"content": {
+				"id": "CVE-2016-2834",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-2834"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:1"
 			]
 		},
 		{
-			"id": "CVE-2016-5285",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-5285"
-				}
+			"content": {
+				"id": "CVE-2016-5285",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-5285"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:1"
 			]
 		},
 		{
-			"id": "CVE-2016-8635",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-8635"
-				}
+			"content": {
+				"id": "CVE-2016-8635",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-8635"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:1"
 			]
 		}
 	],

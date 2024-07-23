@@ -2,36 +2,46 @@
 	"id": "ALAS2022-2022-259",
 	"advisories": [
 		{
-			"id": "ALAS2022-2022-259",
-			"title": "Amazon Linux 2022 - ALAS2022-2022-259: Important priority package update for expat",
-			"description": "Package updates are available for Amazon Linux 2022 that fix the following vulnerabilities:\nCVE-2022-40674:\n\tA vulnerability was found in expat. With this flaw, it is possible to create a situation in which parsing is suspended while substituting in an internal entity so that XML_ResumeParser directly uses the internalEntityProcessor as its processor. If the subsequent parse includes some unclosed tags, this will return without calling storeRawNames to ensure that the raw versions of the tag names are stored in memory other than the parse buffer itself. Issues occur if the parse buffer is changed or reallocated (for example, if processing a file line by line), problems occur. Using this vulnerability in the doContent function allows an attacker to triage a denial of service or potentially arbitrary code execution.\n",
-			"severity": [
-				{
-					"type": "vendor",
-					"source": "linux-security@amazon.com",
-					"vendor": "Important"
-				}
-			],
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-40674"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "https://alas.aws.amazon.com/AL2022/ALAS-2022-259.html"
-				}
+			"content": {
+				"id": "ALAS2022-2022-259",
+				"title": "Amazon Linux 2022 - ALAS2022-2022-259: Important priority package update for expat",
+				"description": "Package updates are available for Amazon Linux 2022 that fix the following vulnerabilities:\nCVE-2022-40674:\n\tA vulnerability was found in expat. With this flaw, it is possible to create a situation in which parsing is suspended while substituting in an internal entity so that XML_ResumeParser directly uses the internalEntityProcessor as its processor. If the subsequent parse includes some unclosed tags, this will return without calling storeRawNames to ensure that the raw versions of the tag names are stored in memory other than the parse buffer itself. Issues occur if the parse buffer is changed or reallocated (for example, if processing a file line by line), problems occur. Using this vulnerability in the doContent function allows an attacker to triage a denial of service or potentially arbitrary code execution.\n",
+				"severity": [
+					{
+						"type": "vendor",
+						"source": "linux-security@amazon.com",
+						"vendor": "Important"
+					}
+				],
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-40674"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "https://alas.aws.amazon.com/AL2022/ALAS-2022-259.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2022"
 			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2022-40674",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-40674"
-				}
+			"content": {
+				"id": "CVE-2022-40674",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-40674"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2022"
 			]
 		}
 	],

@@ -2,49 +2,64 @@
 	"id": "ALAS-2017-811",
 	"advisories": [
 		{
-			"id": "ALAS-2017-811",
-			"title": "Amazon Linux AMI 2014.03 - ALAS-2017-811: important priority package update for kernel",
-			"description": "Package updates are available for Amazon Linux AMI that fix the following vulnerabilities:\nCVE-2017-7184:\n\t\n\nCVE-2017-6347:\n\tThe skbs processed by ip_cmsg_recv() are not guaranteed to be linear (e.g. when sending UDP packets over loopback with MSGMORE). Using csum_partial() on potentially the whole skb len is dangerous; instead be on the safe side and use skb_checksum().  This may lead to an infoleak as the kernel memory may be checksummed and sent as part of the packet.\n1427984: \nCVE-2017-6347 kernel: ipv4: Incorrect IP_CHECKSUM handling\n",
-			"severity": [
-				{
-					"type": "vendor",
-					"source": "linux-security@amazon.com",
-					"vendor": "important"
-				}
-			],
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-6347"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-7184"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "https://alas.aws.amazon.com/ALAS-2017-811.html"
-				}
+			"content": {
+				"id": "ALAS-2017-811",
+				"title": "Amazon Linux AMI 2014.03 - ALAS-2017-811: important priority package update for kernel",
+				"description": "Package updates are available for Amazon Linux AMI that fix the following vulnerabilities:\nCVE-2017-7184:\n\t\n\nCVE-2017-6347:\n\tThe skbs processed by ip_cmsg_recv() are not guaranteed to be linear (e.g. when sending UDP packets over loopback with MSGMORE). Using csum_partial() on potentially the whole skb len is dangerous; instead be on the safe side and use skb_checksum().  This may lead to an infoleak as the kernel memory may be checksummed and sent as part of the packet.\n1427984: \nCVE-2017-6347 kernel: ipv4: Incorrect IP_CHECKSUM handling\n",
+				"severity": [
+					{
+						"type": "vendor",
+						"source": "linux-security@amazon.com",
+						"vendor": "important"
+					}
+				],
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-6347"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-7184"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "https://alas.aws.amazon.com/ALAS-2017-811.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:1"
 			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2017-6347",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-6347"
-				}
+			"content": {
+				"id": "CVE-2017-6347",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-6347"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:1"
 			]
 		},
 		{
-			"id": "CVE-2017-7184",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-7184"
-				}
+			"content": {
+				"id": "CVE-2017-7184",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-7184"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:1"
 			]
 		}
 	],

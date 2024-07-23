@@ -2,101 +2,136 @@
 	"id": "ALAS2KERNEL-5.4-2022-034",
 	"advisories": [
 		{
-			"id": "ALAS2KERNEL-5.4-2022-034",
-			"title": "Amazon Linux 2 - Kernel-5.4 2.0 - ALAS2KERNEL-5.4-2022-034: important priority package update for kernel",
-			"description": "Package updates are available for Amazon Linux 2 - Kernel-5.4 that fix the following vulnerabilities:\nCVE-2023-2177:\n\tA NULL pointer dereference issue was found in the SCTP network protocol in net/sctp/stream_sched.c in the Linux kernel. If stream_in allocation fails, stream_out is freed, which would be accessed further. This flaw allows a local user to crash the system or potentially cause a denial of service.\n\nCVE-2022-36946:\n\tA memory corruption flaw was found in the Linux kernel's Netfilter subsystem in the way a local user uses the libnetfilter_queue when analyzing a corrupted network packet. This flaw allows a local user to crash the system or a remote user to crash the system when the libnetfilter_queue is used by a local user.\n\nCVE-2022-36879:\n\tAn issue was discovered in the Linux kernel through 5.18.14. xfrm_expand_policies in net/xfrm/xfrm_policy.c can cause a refcount to be dropped twice.\n\nCVE-2022-34918:\n\tA heap buffer overflow flaw was found in the Linux kernel's Netfilter subsystem in the way a user provides incorrect input of the NFT_DATA_VERDICT type. This flaw allows a local user to crash or potentially escalate their privileges on the system.\n\nCVE-2022-21505:\n\tA bug in the IMA subsystem was discovered which would incorrectly allow kexec to be used when kernel lockdown was enabled\n\nCVE-2021-33655:\n\tAn out-of-bounds write flaw was found in the Linux kernel&rsquo;s framebuffer-based console driver functionality in the way a user triggers ioctl FBIOPUT_VSCREENINFO with malicious data. This flaw allows a local user to crash or potentially escalate their privileges on the system.\n",
-			"severity": [
-				{
-					"type": "vendor",
-					"source": "linux-security@amazon.com",
-					"vendor": "important"
-				}
-			],
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-33655"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-21505"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-34918"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-36879"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-36946"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-2177"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "https://alas.aws.amazon.com/AL2/ALASKERNEL-5.4-2022-034.html"
-				}
+			"content": {
+				"id": "ALAS2KERNEL-5.4-2022-034",
+				"title": "Amazon Linux 2 - Kernel-5.4 2.0 - ALAS2KERNEL-5.4-2022-034: important priority package update for kernel",
+				"description": "Package updates are available for Amazon Linux 2 - Kernel-5.4 that fix the following vulnerabilities:\nCVE-2023-2177:\n\tA NULL pointer dereference issue was found in the SCTP network protocol in net/sctp/stream_sched.c in the Linux kernel. If stream_in allocation fails, stream_out is freed, which would be accessed further. This flaw allows a local user to crash the system or potentially cause a denial of service.\n\nCVE-2022-36946:\n\tA memory corruption flaw was found in the Linux kernel's Netfilter subsystem in the way a local user uses the libnetfilter_queue when analyzing a corrupted network packet. This flaw allows a local user to crash the system or a remote user to crash the system when the libnetfilter_queue is used by a local user.\n\nCVE-2022-36879:\n\tAn issue was discovered in the Linux kernel through 5.18.14. xfrm_expand_policies in net/xfrm/xfrm_policy.c can cause a refcount to be dropped twice.\n\nCVE-2022-34918:\n\tA heap buffer overflow flaw was found in the Linux kernel's Netfilter subsystem in the way a user provides incorrect input of the NFT_DATA_VERDICT type. This flaw allows a local user to crash or potentially escalate their privileges on the system.\n\nCVE-2022-21505:\n\tA bug in the IMA subsystem was discovered which would incorrectly allow kexec to be used when kernel lockdown was enabled\n\nCVE-2021-33655:\n\tAn out-of-bounds write flaw was found in the Linux kernel&rsquo;s framebuffer-based console driver functionality in the way a user triggers ioctl FBIOPUT_VSCREENINFO with malicious data. This flaw allows a local user to crash or potentially escalate their privileges on the system.\n",
+				"severity": [
+					{
+						"type": "vendor",
+						"source": "linux-security@amazon.com",
+						"vendor": "important"
+					}
+				],
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-33655"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-21505"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-34918"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-36879"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-36946"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-2177"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "https://alas.aws.amazon.com/AL2/ALASKERNEL-5.4-2022-034.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2"
 			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2021-33655",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-33655"
-				}
+			"content": {
+				"id": "CVE-2021-33655",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-33655"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2"
 			]
 		},
 		{
-			"id": "CVE-2022-21505",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-21505"
-				}
+			"content": {
+				"id": "CVE-2022-21505",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-21505"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2"
 			]
 		},
 		{
-			"id": "CVE-2022-34918",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-34918"
-				}
+			"content": {
+				"id": "CVE-2022-34918",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-34918"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2"
 			]
 		},
 		{
-			"id": "CVE-2022-36879",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-36879"
-				}
+			"content": {
+				"id": "CVE-2022-36879",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-36879"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2"
 			]
 		},
 		{
-			"id": "CVE-2022-36946",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-36946"
-				}
+			"content": {
+				"id": "CVE-2022-36946",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-36946"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2"
 			]
 		},
 		{
-			"id": "CVE-2023-2177",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-2177"
-				}
+			"content": {
+				"id": "CVE-2023-2177",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-2177"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2"
 			]
 		}
 	],

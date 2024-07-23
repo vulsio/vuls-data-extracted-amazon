@@ -2,179 +2,244 @@
 	"id": "ALAS2022-2022-022",
 	"advisories": [
 		{
-			"id": "ALAS2022-2022-022",
-			"title": "Amazon Linux 2022 - ALAS2022-2022-022: Critical priority package update for samba",
-			"description": "Package updates are available for Amazon Linux 2022 that fix the following vulnerabilities:\nCVE-2022-0336:\n\tSamba AD users with permission to write to an account can impersonate arbitrary services\n\nCVE-2021-44142:\n\tOut-of-bounds heap read/write vulnerability in VFS module vfs_fruit allows code execution\n\nCVE-2021-44141:\n\tInformation leak via symlinks of existance of files or directories outside of the exported share\n\nCVE-2021-3738:\n\tUse after free in Samba AD DC RPC server\n\nCVE-2021-23192:\n\tA flaw was found in the way samba implemented DCE/RPC. If a client to a Samba server sent a very large DCE/RPC request, and chose to fragment it, an attacker could replace later fragments with             their own data, bypassing the signature requirements.\n\nCVE-2021-20316:\n\tA flaw was found in the way Samba handled file/directory metadata. This flaw allows an authenticated attacker with permissions to read or modify share metadata, to perform this operation outside of the share.\n\nCVE-2020-25722:\n\tMultiple flaws were found in the way samba AD DC implemented access and conformance checking of stored data. An attacker could use this flaw to cause total domain compromise.\n\nCVE-2020-25721:\n\tKerberos acceptors need easy access to stableAD identifiers (eg objectSid)\n\nCVE-2020-25719:\n\tA flaw was found in the way Samba, as an Active Directory Domain Controller, implemented Kerberos name-based authentication.   The Samba AD DC, could become confused about the user a ticket represents if it did not strictly require a Kerberos PAC and always use the SIDs found within. The result could include total domain compromise.\n\nCVE-2020-25718:\n\tA flaw was found in the way samba, as an Active Directory Domain Controller, is able to support an RODC (read-only domain controller). This would allow an RODC to print administrator tickets.\n\nCVE-2020-25717:\n\tA flaw was found in the way Samba maps domain users to local users. An authenticated attacker could use this flaw to cause possible privilege escalation.\n\nCVE-2016-2124:\n\tA flaw was found in the way samba implemented SMB1 authentication. An attacker could use this flaw to retrieve the plaintext password sent over the wire even if Kerberos authentication was required.\n",
-			"severity": [
-				{
-					"type": "vendor",
-					"source": "linux-security@amazon.com",
-					"vendor": "Critical"
-				}
-			],
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-2124"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-25717"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-25718"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-25719"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-25721"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-25722"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-20316"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-23192"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3738"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-44141"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-44142"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-0336"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "https://alas.aws.amazon.com/AL2022/ALAS-2022-022.html"
-				}
+			"content": {
+				"id": "ALAS2022-2022-022",
+				"title": "Amazon Linux 2022 - ALAS2022-2022-022: Critical priority package update for samba",
+				"description": "Package updates are available for Amazon Linux 2022 that fix the following vulnerabilities:\nCVE-2022-0336:\n\tSamba AD users with permission to write to an account can impersonate arbitrary services\n\nCVE-2021-44142:\n\tOut-of-bounds heap read/write vulnerability in VFS module vfs_fruit allows code execution\n\nCVE-2021-44141:\n\tInformation leak via symlinks of existance of files or directories outside of the exported share\n\nCVE-2021-3738:\n\tUse after free in Samba AD DC RPC server\n\nCVE-2021-23192:\n\tA flaw was found in the way samba implemented DCE/RPC. If a client to a Samba server sent a very large DCE/RPC request, and chose to fragment it, an attacker could replace later fragments with             their own data, bypassing the signature requirements.\n\nCVE-2021-20316:\n\tA flaw was found in the way Samba handled file/directory metadata. This flaw allows an authenticated attacker with permissions to read or modify share metadata, to perform this operation outside of the share.\n\nCVE-2020-25722:\n\tMultiple flaws were found in the way samba AD DC implemented access and conformance checking of stored data. An attacker could use this flaw to cause total domain compromise.\n\nCVE-2020-25721:\n\tKerberos acceptors need easy access to stableAD identifiers (eg objectSid)\n\nCVE-2020-25719:\n\tA flaw was found in the way Samba, as an Active Directory Domain Controller, implemented Kerberos name-based authentication.   The Samba AD DC, could become confused about the user a ticket represents if it did not strictly require a Kerberos PAC and always use the SIDs found within. The result could include total domain compromise.\n\nCVE-2020-25718:\n\tA flaw was found in the way samba, as an Active Directory Domain Controller, is able to support an RODC (read-only domain controller). This would allow an RODC to print administrator tickets.\n\nCVE-2020-25717:\n\tA flaw was found in the way Samba maps domain users to local users. An authenticated attacker could use this flaw to cause possible privilege escalation.\n\nCVE-2016-2124:\n\tA flaw was found in the way samba implemented SMB1 authentication. An attacker could use this flaw to retrieve the plaintext password sent over the wire even if Kerberos authentication was required.\n",
+				"severity": [
+					{
+						"type": "vendor",
+						"source": "linux-security@amazon.com",
+						"vendor": "Critical"
+					}
+				],
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-2124"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-25717"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-25718"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-25719"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-25721"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-25722"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-20316"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-23192"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3738"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-44141"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-44142"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-0336"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "https://alas.aws.amazon.com/AL2022/ALAS-2022-022.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2022"
 			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2016-2124",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-2124"
-				}
+			"content": {
+				"id": "CVE-2016-2124",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-2124"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2022"
 			]
 		},
 		{
-			"id": "CVE-2020-25717",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-25717"
-				}
+			"content": {
+				"id": "CVE-2020-25717",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-25717"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2022"
 			]
 		},
 		{
-			"id": "CVE-2020-25718",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-25718"
-				}
+			"content": {
+				"id": "CVE-2020-25718",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-25718"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2022"
 			]
 		},
 		{
-			"id": "CVE-2020-25719",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-25719"
-				}
+			"content": {
+				"id": "CVE-2020-25719",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-25719"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2022"
 			]
 		},
 		{
-			"id": "CVE-2020-25721",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-25721"
-				}
+			"content": {
+				"id": "CVE-2020-25721",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-25721"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2022"
 			]
 		},
 		{
-			"id": "CVE-2020-25722",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-25722"
-				}
+			"content": {
+				"id": "CVE-2020-25722",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-25722"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2022"
 			]
 		},
 		{
-			"id": "CVE-2021-20316",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-20316"
-				}
+			"content": {
+				"id": "CVE-2021-20316",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-20316"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2022"
 			]
 		},
 		{
-			"id": "CVE-2021-23192",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-23192"
-				}
+			"content": {
+				"id": "CVE-2021-23192",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-23192"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2022"
 			]
 		},
 		{
-			"id": "CVE-2021-3738",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3738"
-				}
+			"content": {
+				"id": "CVE-2021-3738",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3738"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2022"
 			]
 		},
 		{
-			"id": "CVE-2021-44141",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-44141"
-				}
+			"content": {
+				"id": "CVE-2021-44141",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-44141"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2022"
 			]
 		},
 		{
-			"id": "CVE-2021-44142",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-44142"
-				}
+			"content": {
+				"id": "CVE-2021-44142",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-44142"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2022"
 			]
 		},
 		{
-			"id": "CVE-2022-0336",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-0336"
-				}
+			"content": {
+				"id": "CVE-2022-0336",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-0336"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2022"
 			]
 		}
 	],

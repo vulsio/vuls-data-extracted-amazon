@@ -2,49 +2,64 @@
 	"id": "ALAS2-2020-1426",
 	"advisories": [
 		{
-			"id": "ALAS2-2020-1426",
-			"title": "Amazon Linux 2 2017.12 - ALAS2-2020-1426: important priority package update for bind",
-			"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2020-8617:\n\tAn assertion failure was found in BIND, which checks the validity of messages containing TSIG resource records. This flaw allows an attacker that knows or successfully guesses the name of the TSIG key used by the server to use a specially-crafted message, potentially causing a BIND server to reach an inconsistent state or cause a denial of service. A majority of BIND servers have an internally-generated TSIG session key whose name is trivially guessable, and that key exposes the vulnerability unless specifically disabled.\n1836124: CVE-2020-8617 bind: A logic error in code which checks TSIG validity can be used to trigger an assertion failure in tsig.c\n\nCVE-2020-8616:\n\tA flaw was found in BIND, where it does not sufficiently limit the number of fetches that can be performed while processing a referral response. This flaw allows an attacker to cause a denial of service attack. The attacker can also exploit this behavior to use the recursing server as a reflector in a reflection attack with a high amplification factor.\n1836118: CVE-2020-8616 bind: BIND does not sufficiently limit the number of fetches performed when processing referrals\n",
-			"severity": [
-				{
-					"type": "vendor",
-					"source": "linux-security@amazon.com",
-					"vendor": "important"
-				}
-			],
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-8616"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-8617"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "https://alas.aws.amazon.com/AL2/ALAS-2020-1426.html"
-				}
+			"content": {
+				"id": "ALAS2-2020-1426",
+				"title": "Amazon Linux 2 2017.12 - ALAS2-2020-1426: important priority package update for bind",
+				"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2020-8617:\n\tAn assertion failure was found in BIND, which checks the validity of messages containing TSIG resource records. This flaw allows an attacker that knows or successfully guesses the name of the TSIG key used by the server to use a specially-crafted message, potentially causing a BIND server to reach an inconsistent state or cause a denial of service. A majority of BIND servers have an internally-generated TSIG session key whose name is trivially guessable, and that key exposes the vulnerability unless specifically disabled.\n1836124: CVE-2020-8617 bind: A logic error in code which checks TSIG validity can be used to trigger an assertion failure in tsig.c\n\nCVE-2020-8616:\n\tA flaw was found in BIND, where it does not sufficiently limit the number of fetches that can be performed while processing a referral response. This flaw allows an attacker to cause a denial of service attack. The attacker can also exploit this behavior to use the recursing server as a reflector in a reflection attack with a high amplification factor.\n1836118: CVE-2020-8616 bind: BIND does not sufficiently limit the number of fetches performed when processing referrals\n",
+				"severity": [
+					{
+						"type": "vendor",
+						"source": "linux-security@amazon.com",
+						"vendor": "important"
+					}
+				],
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-8616"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-8617"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "https://alas.aws.amazon.com/AL2/ALAS-2020-1426.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2"
 			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2020-8616",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-8616"
-				}
+			"content": {
+				"id": "CVE-2020-8616",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-8616"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2"
 			]
 		},
 		{
-			"id": "CVE-2020-8617",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-8617"
-				}
+			"content": {
+				"id": "CVE-2020-8617",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-8617"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2"
 			]
 		}
 	],

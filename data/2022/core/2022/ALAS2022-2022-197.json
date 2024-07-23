@@ -2,36 +2,46 @@
 	"id": "ALAS2022-2022-197",
 	"advisories": [
 		{
-			"id": "ALAS2022-2022-197",
-			"title": "Amazon Linux 2022 - ALAS2022-2022-197: Medium priority package update for glibc",
-			"description": "Package updates are available for Amazon Linux 2022 that fix the following vulnerabilities:\nCVE-2022-23219:\n\tA stack based buffer-overflow vulnerability was found in the deprecated compatibility function clnt_create() in the sunrpc's clnt_gen.c module of the GNU C Library (aka glibc) through 2.34. This vulnerability copies its hostname argument onto the stack without validating its length, which may result in a buffer overflow, potentially resulting in a denial of service or (if an application is not built with a stack protector enabled) lead to arbitrary code execution.\n",
-			"severity": [
-				{
-					"type": "vendor",
-					"source": "linux-security@amazon.com",
-					"vendor": "Medium"
-				}
-			],
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-23219"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "https://alas.aws.amazon.com/AL2022/ALAS-2022-197.html"
-				}
+			"content": {
+				"id": "ALAS2022-2022-197",
+				"title": "Amazon Linux 2022 - ALAS2022-2022-197: Medium priority package update for glibc",
+				"description": "Package updates are available for Amazon Linux 2022 that fix the following vulnerabilities:\nCVE-2022-23219:\n\tA stack based buffer-overflow vulnerability was found in the deprecated compatibility function clnt_create() in the sunrpc's clnt_gen.c module of the GNU C Library (aka glibc) through 2.34. This vulnerability copies its hostname argument onto the stack without validating its length, which may result in a buffer overflow, potentially resulting in a denial of service or (if an application is not built with a stack protector enabled) lead to arbitrary code execution.\n",
+				"severity": [
+					{
+						"type": "vendor",
+						"source": "linux-security@amazon.com",
+						"vendor": "Medium"
+					}
+				],
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-23219"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "https://alas.aws.amazon.com/AL2022/ALAS-2022-197.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2022"
 			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2022-23219",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-23219"
-				}
+			"content": {
+				"id": "CVE-2022-23219",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-23219"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2022"
 			]
 		}
 	],

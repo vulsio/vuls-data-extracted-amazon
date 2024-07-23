@@ -2,49 +2,64 @@
 	"id": "ALAS2022-2022-050",
 	"advisories": [
 		{
-			"id": "ALAS2022-2022-050",
-			"title": "Amazon Linux 2022 - ALAS2022-2022-050: Important priority package update for qemu",
-			"description": "Package updates are available for Amazon Linux 2022 that fix the following vulnerabilities:\nCVE-2022-0358:\n\tA flaw was found in the QEMU virtio-fs shared file system daemon (virtiofsd) implementation. This flaw is strictly related to CVE-2018-13405. A local guest user can create files in the directories shared by virtio-fs with unintended group ownership in a scenario where a directory is SGID to a certain group and is writable by a user who is not a member of the group. This could allow a malicious unprivileged user inside the guest to gain access to resources accessible to the root group, potentially escalating their privileges within the guest. A malicious local user in the host might also leverage this unexpected executable file created by the guest to escalate their privileges on the host system.\n\nCVE-2018-13405:\n\tA vulnerability was found in the fs/inode.c:inode_init_owner() function logic of the LInux kernel that allows local users to create files with an unintended group ownership and with group execution and SGID permission bits set, in a scenario where a directory is SGID and belongs to a certain group and is writable by a user who is not a member of this group. This can lead to excessive permissions granted in case when they should not.\n",
-			"severity": [
-				{
-					"type": "vendor",
-					"source": "linux-security@amazon.com",
-					"vendor": "Important"
-				}
-			],
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-13405"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-0358"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "https://alas.aws.amazon.com/AL2022/ALAS-2022-050.html"
-				}
+			"content": {
+				"id": "ALAS2022-2022-050",
+				"title": "Amazon Linux 2022 - ALAS2022-2022-050: Important priority package update for qemu",
+				"description": "Package updates are available for Amazon Linux 2022 that fix the following vulnerabilities:\nCVE-2022-0358:\n\tA flaw was found in the QEMU virtio-fs shared file system daemon (virtiofsd) implementation. This flaw is strictly related to CVE-2018-13405. A local guest user can create files in the directories shared by virtio-fs with unintended group ownership in a scenario where a directory is SGID to a certain group and is writable by a user who is not a member of the group. This could allow a malicious unprivileged user inside the guest to gain access to resources accessible to the root group, potentially escalating their privileges within the guest. A malicious local user in the host might also leverage this unexpected executable file created by the guest to escalate their privileges on the host system.\n\nCVE-2018-13405:\n\tA vulnerability was found in the fs/inode.c:inode_init_owner() function logic of the LInux kernel that allows local users to create files with an unintended group ownership and with group execution and SGID permission bits set, in a scenario where a directory is SGID and belongs to a certain group and is writable by a user who is not a member of this group. This can lead to excessive permissions granted in case when they should not.\n",
+				"severity": [
+					{
+						"type": "vendor",
+						"source": "linux-security@amazon.com",
+						"vendor": "Important"
+					}
+				],
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-13405"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-0358"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "https://alas.aws.amazon.com/AL2022/ALAS-2022-050.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2022"
 			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2018-13405",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-13405"
-				}
+			"content": {
+				"id": "CVE-2018-13405",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-13405"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2022"
 			]
 		},
 		{
-			"id": "CVE-2022-0358",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-0358"
-				}
+			"content": {
+				"id": "CVE-2022-0358",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-0358"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2022"
 			]
 		}
 	],

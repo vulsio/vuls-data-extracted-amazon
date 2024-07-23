@@ -2,49 +2,64 @@
 	"id": "ALAS2RUBY2.6-2023-006",
 	"advisories": [
 		{
-			"id": "ALAS2RUBY2.6-2023-006",
-			"title": "Amazon Linux 2 - Ruby2.6 2.0 - ALAS2RUBY2.6-2023-006: medium priority package update for ruby",
-			"description": "Package updates are available for Amazon Linux 2 - Ruby2.6 that fix the following vulnerabilities:\nCVE-2021-28965:\n\tA flaw was found in the way the Ruby REXML library parsed XML documents. Parsing a specially crafted XML document using REXML and writing parsed data back to a new XML document results in creating a document with a different structure. This issue could affect the integrity of processed data in applications using REXML that parse XML documents, write data back to XML, and re-parse them again.\n\nCVE-2020-25613:\n\tAn issue was discovered in Ruby through 2.5.8, 2.6.x through 2.6.6, and 2.7.x through 2.7.1. WEBrick, a simple HTTP server bundled with Ruby, had not checked the transfer-encoding header value rigorously. An attacker may potentially exploit this issue to bypass a reverse proxy (which also has a poor header check), which may lead to an HTTP Request Smuggling attack.\n",
-			"severity": [
-				{
-					"type": "vendor",
-					"source": "linux-security@amazon.com",
-					"vendor": "medium"
-				}
-			],
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-25613"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-28965"
-				},
-				{
-					"source": "linux-security@amazon.com",
-					"url": "https://alas.aws.amazon.com/AL2/ALASRUBY2.6-2023-006.html"
-				}
+			"content": {
+				"id": "ALAS2RUBY2.6-2023-006",
+				"title": "Amazon Linux 2 - Ruby2.6 2.0 - ALAS2RUBY2.6-2023-006: medium priority package update for ruby",
+				"description": "Package updates are available for Amazon Linux 2 - Ruby2.6 that fix the following vulnerabilities:\nCVE-2021-28965:\n\tA flaw was found in the way the Ruby REXML library parsed XML documents. Parsing a specially crafted XML document using REXML and writing parsed data back to a new XML document results in creating a document with a different structure. This issue could affect the integrity of processed data in applications using REXML that parse XML documents, write data back to XML, and re-parse them again.\n\nCVE-2020-25613:\n\tAn issue was discovered in Ruby through 2.5.8, 2.6.x through 2.6.6, and 2.7.x through 2.7.1. WEBrick, a simple HTTP server bundled with Ruby, had not checked the transfer-encoding header value rigorously. An attacker may potentially exploit this issue to bypass a reverse proxy (which also has a poor header check), which may lead to an HTTP Request Smuggling attack.\n",
+				"severity": [
+					{
+						"type": "vendor",
+						"source": "linux-security@amazon.com",
+						"vendor": "medium"
+					}
+				],
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-25613"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-28965"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "https://alas.aws.amazon.com/AL2/ALASRUBY2.6-2023-006.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2"
 			]
 		}
 	],
 	"vulnerabilities": [
 		{
-			"id": "CVE-2020-25613",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-25613"
-				}
+			"content": {
+				"id": "CVE-2020-25613",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-25613"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2"
 			]
 		},
 		{
-			"id": "CVE-2021-28965",
-			"references": [
-				{
-					"source": "linux-security@amazon.com",
-					"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-28965"
-				}
+			"content": {
+				"id": "CVE-2021-28965",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-28965"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2"
 			]
 		}
 	],
