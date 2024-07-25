@@ -1,0 +1,353 @@
+{
+	"id": "ALAS-2024-1944",
+	"advisories": [
+		{
+			"content": {
+				"id": "ALAS-2024-1944",
+				"title": "Amazon Linux AMI 2014.03 - ALAS-2024-1944: important priority package update for httpd24",
+				"description": "Package updates are available for Amazon Linux AMI that fix the following vulnerabilities:\nCVE-2024-38477:\n\tnull pointer dereference in mod_proxy in Apache HTTP Server 2.4.59 and earlier allows an attacker to crash the server via a malicious request.\nUsers are recommended to upgrade to version 2.4.60, which fixes this issue.\n\nCVE-2024-38476:\n\tVulnerability in core of Apache HTTP Server 2.4.59 and earlier are vulnerably to information disclosure, SSRF or local script execution via backend applications whose response headers are malicious or exploitable.\n\nUsers are recommended to upgrade to version 2.4.60, which fixes this issue.\n\nCVE-2024-38475:\n\tImproper escaping of output in mod_rewrite in Apache HTTP Server 2.4.59 and earlier allows an attacker to map URLs to filesystem locations that are permitted to be served by the server but are not intentionally/directly reachable by any URL, resulting in code execution or source code disclosure. \n\nSubstitutions in server context that use a backreferences or variables as the first segment of the substitution are affected.  Some unsafe RewiteRules will be broken by this change and the rewrite flag \"UnsafePrefixStat\" can be used to opt back in once ensuring the substitution is appropriately constrained.\n\nCVE-2024-38474:\n\tSubstitution encoding issue in mod_rewrite in Apache HTTP Server 2.4.59 and earlier allows attacker to execute scripts in\ndirectories permitted by the configuration but not directly reachable by any URL or source disclosure of scripts meant to only to be executed as CGI.\n\nUsers are recommended to upgrade to version 2.4.60, which fixes this issue.\n\nSome RewriteRules that capture and substitute unsafely will now fail unless rewrite flag \"UnsafeAllow3F\" is specified.\n",
+				"severity": [
+					{
+						"type": "vendor",
+						"source": "linux-security@amazon.com",
+						"vendor": "important"
+					}
+				],
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38474"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38475"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38476"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38477"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "https://alas.aws.amazon.com/ALAS-2024-1944.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:1"
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2024-38474",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38474"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:1"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-38475",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38475"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:1"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-38476",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38476"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:1"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-38477",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38477"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:1"
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:1",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "httpd24",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.4.61-1.103.amzn1"
+								}
+							],
+							"fixed": [
+								"0:2.4.61-1.103.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "httpd24-debuginfo",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.4.61-1.103.amzn1"
+								}
+							],
+							"fixed": [
+								"0:2.4.61-1.103.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "httpd24-devel",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.4.61-1.103.amzn1"
+								}
+							],
+							"fixed": [
+								"0:2.4.61-1.103.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "httpd24-manual",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.4.61-1.103.amzn1"
+								}
+							],
+							"fixed": [
+								"0:2.4.61-1.103.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "httpd24-tools",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.4.61-1.103.amzn1"
+								}
+							],
+							"fixed": [
+								"0:2.4.61-1.103.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mod24_ldap",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.4.61-1.103.amzn1"
+								}
+							],
+							"fixed": [
+								"0:2.4.61-1.103.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mod24_md",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.4.61-1.103.amzn1"
+								}
+							],
+							"fixed": [
+								"0:2.4.61-1.103.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mod24_proxy_html",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:2.4.61-1.103.amzn1"
+								}
+							],
+							"fixed": [
+								"1:2.4.61-1.103.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mod24_session",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.4.61-1.103.amzn1"
+								}
+							],
+							"fixed": [
+								"0:2.4.61-1.103.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "mod24_ssl",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:2.4.61-1.103.amzn1"
+								}
+							],
+							"fixed": [
+								"1:2.4.61-1.103.amzn1"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}
