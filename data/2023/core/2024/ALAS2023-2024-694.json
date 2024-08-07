@@ -1,0 +1,325 @@
+{
+	"id": "ALAS2023-2024-694",
+	"advisories": [
+		{
+			"content": {
+				"id": "ALAS2023-2024-694",
+				"title": "Amazon Linux 2023 - ALAS2023-2024-694: Medium priority package update for nodejs",
+				"description": "Package updates are available for Amazon Linux 2023 that fix the following vulnerabilities:\nCVE-2024-30261:\n\tUndici is an HTTP/1.1 client, written from scratch for Node.js. An attacker can alter the `integrity` option passed to `fetch()`, allowing `fetch()` to accept requests as valid even if they have been tampered. This vulnerability was patched in version(s) 5.28.4 and 6.11.1.\n\nCVE-2024-30260:\n\tUndici is an HTTP/1.1 client, written from scratch for Node.js. Undici cleared Authorization and Proxy-Authorization headers for `fetch()`, but did not clear them for `undici.request()`. This vulnerability was patched in version(s) 5.28.4 and 6.11.1.\n\nCVE-2024-27982:\n\tNOTE: https://nodejs.org/en/blog/vulnerability/april-2024-security-releases/\n",
+				"severity": [
+					{
+						"type": "vendor",
+						"source": "linux-security@amazon.com",
+						"vendor": "Medium"
+					}
+				],
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27982"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-30260"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-30261"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "https://alas.aws.amazon.com/AL2023/ALAS-2024-694.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2023"
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2024-27982",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27982"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2023"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-30260",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-30260"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2023"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-30261",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-30261"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2023"
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2023",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "nodejs",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:18.20.2-1.amzn2023.0.1"
+								}
+							],
+							"fixed": [
+								"1:18.20.2-1.amzn2023.0.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "nodejs-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:18.20.2-1.amzn2023.0.1"
+								}
+							],
+							"fixed": [
+								"1:18.20.2-1.amzn2023.0.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "nodejs-debugsource",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:18.20.2-1.amzn2023.0.1"
+								}
+							],
+							"fixed": [
+								"1:18.20.2-1.amzn2023.0.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "nodejs-devel",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:18.20.2-1.amzn2023.0.1"
+								}
+							],
+							"fixed": [
+								"1:18.20.2-1.amzn2023.0.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "nodejs-docs",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:18.20.2-1.amzn2023.0.1"
+								}
+							],
+							"fixed": [
+								"1:18.20.2-1.amzn2023.0.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "nodejs-full-i18n",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:18.20.2-1.amzn2023.0.1"
+								}
+							],
+							"fixed": [
+								"1:18.20.2-1.amzn2023.0.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "nodejs-libs",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:18.20.2-1.amzn2023.0.1"
+								}
+							],
+							"fixed": [
+								"1:18.20.2-1.amzn2023.0.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "nodejs-libs-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:18.20.2-1.amzn2023.0.1"
+								}
+							],
+							"fixed": [
+								"1:18.20.2-1.amzn2023.0.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "nodejs-npm",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:10.5.0-1.18.20.2.1.amzn2023.0.1"
+								}
+							],
+							"fixed": [
+								"1:10.5.0-1.18.20.2.1.amzn2023.0.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "v8-10.2-devel",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "3:10.2.154.26-1.18.20.2.1.amzn2023.0.1"
+								}
+							],
+							"fixed": [
+								"3:10.2.154.26-1.18.20.2.1.amzn2023.0.1"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

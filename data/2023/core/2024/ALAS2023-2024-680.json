@@ -1,11 +1,11 @@
 {
-	"id": "ALAS2023-2023-127",
+	"id": "ALAS2023-2024-680",
 	"advisories": [
 		{
 			"content": {
-				"id": "ALAS2023-2023-127",
-				"title": "Amazon Linux 2023 - ALAS2023-2023-127: Important priority package update for kernel",
-				"description": "Package updates are available for Amazon Linux 2023 that fix the following vulnerabilities:\nCVE-2023-52707:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nsched/psi: Fix use-after-free in ep_remove_wait_queue()\n\nCVE-2023-52646:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\naio: fix mremap after fork null-deref\n\nCVE-2023-26545:\n\tIn the Linux kernel before 6.1.13, there is a double free in net/mpls/af_mpls.c upon an allocation failure (for registering the sysctl table under a new location) during the renaming of a device.\n\nCVE-2023-1281:\n\tUse After Free vulnerability in Linux kernel traffic control index filter (tcindex) allows Privilege Escalation. The imperfect hash area can be updated while packets are traversing, which will cause a use-after-free when 'tcf_exts_exec()' is called with the destroyed tcf_ext. A local attacker user can use this vulnerability to elevate its privileges to root.\nThis issue affects Linux Kernel: from 4.14 before git commit ee059170b1f7e94e55fa6cadee544e176a6e59c2.\n\nCVE-2023-0458:\n\tDetected a few exploitable gadgets that could leak secret memory through a side-channel such as MDS as well as insufficient hardening of the usercopy functions against spectre-v1.\n\nCVE-2022-2196:\n\tA regression exists in the Linux Kernel within KVM: nVMX that allowed for speculative execution attacks. L2 can carry out Spectre v2 attacks on L1 due to L1 thinking it doesn't need retpolines or IBPB after running L2 due to KVM (L0) advertising eIBRS support to L1. An attacker at L2 with code execution can execute code on an indirect branch on the host machine. We recommend upgrading to Kernel 6.2 or past commit 2e7eab81425a\n",
+				"id": "ALAS2023-2024-680",
+				"title": "Amazon Linux 2023 - ALAS2023-2024-680: Important priority package update for bind",
+				"description": "Package updates are available for Amazon Linux 2023 that fix the following vulnerabilities:\nCVE-2024-4076:\n\tClient queries that trigger serving stale data and that also require lookups in local authoritative zone data may result in an assertion failure.\nThis issue affects BIND 9 versions 9.16.13 through 9.16.50, 9.18.0 through 9.18.27, 9.19.0 through 9.19.24, 9.11.33-S1 through 9.11.37-S1, 9.16.13-S1 through 9.16.50-S1, and 9.18.11-S1 through 9.18.27-S1.\n\nCVE-2024-1975:\n\tIf a server hosts a zone containing a \"KEY\" Resource Record, or a resolver DNSSEC-validates a \"KEY\" Resource Record from a DNSSEC-signed domain in cache, a client can exhaust resolver CPU resources by sending a stream of SIG(0) signed requests.\nThis issue affects BIND 9 versions 9.0.0 through 9.11.37, 9.16.0 through 9.16.50, 9.18.0 through 9.18.27, 9.19.0 through 9.19.24, 9.9.3-S1 through 9.11.37-S1, 9.16.8-S1 through 9.16.49-S1, and 9.18.11-S1 through 9.18.27-S1.\n\nCVE-2024-1737:\n\tResolver caches and authoritative zone databases that hold significant numbers of RRs for the same hostname (of any RTYPE) can suffer from degraded performance as content is being added or updated, and also when handling client queries for this name.\nThis issue affects BIND 9 versions 9.11.0 through 9.11.37, 9.16.0 through 9.16.50, 9.18.0 through 9.18.27, 9.19.0 through 9.19.24, 9.11.4-S1 through 9.11.37-S1, 9.16.8-S1 through 9.16.50-S1, and 9.18.11-S1 through 9.18.27-S1.\n",
 				"severity": [
 					{
 						"type": "vendor",
@@ -16,31 +16,19 @@
 				"references": [
 					{
 						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-2196"
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-1737"
 					},
 					{
 						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-0458"
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-1975"
 					},
 					{
 						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-1281"
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-4076"
 					},
 					{
 						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-26545"
-					},
-					{
-						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52646"
-					},
-					{
-						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52707"
-					},
-					{
-						"source": "linux-security@amazon.com",
-						"url": "https://alas.aws.amazon.com/AL2023/ALAS-2023-127.html"
+						"url": "https://alas.aws.amazon.com/AL2023/ALAS-2024-680.html"
 					}
 				]
 			},
@@ -52,11 +40,11 @@
 	"vulnerabilities": [
 		{
 			"content": {
-				"id": "CVE-2022-2196",
+				"id": "CVE-2024-1737",
 				"references": [
 					{
 						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-2196"
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-1737"
 					}
 				]
 			},
@@ -66,11 +54,11 @@
 		},
 		{
 			"content": {
-				"id": "CVE-2023-0458",
+				"id": "CVE-2024-1975",
 				"references": [
 					{
 						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-0458"
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-1975"
 					}
 				]
 			},
@@ -80,53 +68,11 @@
 		},
 		{
 			"content": {
-				"id": "CVE-2023-1281",
+				"id": "CVE-2024-4076",
 				"references": [
 					{
 						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-1281"
-					}
-				]
-			},
-			"ecosystems": [
-				"amazon:2023"
-			]
-		},
-		{
-			"content": {
-				"id": "CVE-2023-26545",
-				"references": [
-					{
-						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-26545"
-					}
-				]
-			},
-			"ecosystems": [
-				"amazon:2023"
-			]
-		},
-		{
-			"content": {
-				"id": "CVE-2023-52646",
-				"references": [
-					{
-						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52646"
-					}
-				]
-			},
-			"ecosystems": [
-				"amazon:2023"
-			]
-		},
-		{
-			"content": {
-				"id": "CVE-2023-52707",
-				"references": [
-					{
-						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52707"
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-4076"
 					}
 				]
 			},
@@ -144,7 +90,7 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "bpftool",
+							"name": "bind",
 							"architectures": [
 								"aarch64"
 							],
@@ -156,18 +102,18 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:6.1.15-28.43.amzn2023"
+									"lt": "32:9.18.28-1.amzn2023.0.1"
 								}
 							],
 							"fixed": [
-								"0:6.1.15-28.43.amzn2023"
+								"32:9.18.28-1.amzn2023.0.1"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "bpftool-debuginfo",
+							"name": "bind-chroot",
 							"architectures": [
 								"aarch64"
 							],
@@ -179,18 +125,18 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:6.1.15-28.43.amzn2023"
+									"lt": "32:9.18.28-1.amzn2023.0.1"
 								}
 							],
 							"fixed": [
-								"0:6.1.15-28.43.amzn2023"
+								"32:9.18.28-1.amzn2023.0.1"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "kernel",
+							"name": "bind-debuginfo",
 							"architectures": [
 								"aarch64"
 							],
@@ -202,18 +148,18 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:6.1.15-28.43.amzn2023"
+									"lt": "32:9.18.28-1.amzn2023.0.1"
 								}
 							],
 							"fixed": [
-								"0:6.1.15-28.43.amzn2023"
+								"32:9.18.28-1.amzn2023.0.1"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "kernel-debuginfo",
+							"name": "bind-debugsource",
 							"architectures": [
 								"aarch64"
 							],
@@ -225,18 +171,18 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:6.1.15-28.43.amzn2023"
+									"lt": "32:9.18.28-1.amzn2023.0.1"
 								}
 							],
 							"fixed": [
-								"0:6.1.15-28.43.amzn2023"
+								"32:9.18.28-1.amzn2023.0.1"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "kernel-debuginfo-common-aarch64",
+							"name": "bind-devel",
 							"architectures": [
 								"aarch64"
 							],
@@ -248,41 +194,18 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:6.1.15-28.43.amzn2023"
+									"lt": "32:9.18.28-1.amzn2023.0.1"
 								}
 							],
 							"fixed": [
-								"0:6.1.15-28.43.amzn2023"
+								"32:9.18.28-1.amzn2023.0.1"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "kernel-debuginfo-common-x86_64",
-							"architectures": [
-								"x86_64"
-							],
-							"repositories": [
-								"amazonlinux"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:6.1.15-28.43.amzn2023"
-								}
-							],
-							"fixed": [
-								"0:6.1.15-28.43.amzn2023"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "kernel-devel",
+							"name": "bind-dlz-filesystem",
 							"architectures": [
 								"aarch64"
 							],
@@ -294,18 +217,18 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:6.1.15-28.43.amzn2023"
+									"lt": "32:9.18.28-1.amzn2023.0.1"
 								}
 							],
 							"fixed": [
-								"0:6.1.15-28.43.amzn2023"
+								"32:9.18.28-1.amzn2023.0.1"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "kernel-headers",
+							"name": "bind-dlz-filesystem-debuginfo",
 							"architectures": [
 								"aarch64"
 							],
@@ -317,18 +240,18 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:6.1.15-28.43.amzn2023"
+									"lt": "32:9.18.28-1.amzn2023.0.1"
 								}
 							],
 							"fixed": [
-								"0:6.1.15-28.43.amzn2023"
+								"32:9.18.28-1.amzn2023.0.1"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "kernel-libbpf",
+							"name": "bind-dlz-ldap",
 							"architectures": [
 								"aarch64"
 							],
@@ -340,18 +263,18 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:6.1.15-28.43.amzn2023"
+									"lt": "32:9.18.28-1.amzn2023.0.1"
 								}
 							],
 							"fixed": [
-								"0:6.1.15-28.43.amzn2023"
+								"32:9.18.28-1.amzn2023.0.1"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "kernel-libbpf-devel",
+							"name": "bind-dlz-ldap-debuginfo",
 							"architectures": [
 								"aarch64"
 							],
@@ -363,18 +286,18 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:6.1.15-28.43.amzn2023"
+									"lt": "32:9.18.28-1.amzn2023.0.1"
 								}
 							],
 							"fixed": [
-								"0:6.1.15-28.43.amzn2023"
+								"32:9.18.28-1.amzn2023.0.1"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "kernel-libbpf-static",
+							"name": "bind-dlz-mysql",
 							"architectures": [
 								"aarch64"
 							],
@@ -386,18 +309,18 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:6.1.15-28.43.amzn2023"
+									"lt": "32:9.18.28-1.amzn2023.0.1"
 								}
 							],
 							"fixed": [
-								"0:6.1.15-28.43.amzn2023"
+								"32:9.18.28-1.amzn2023.0.1"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "kernel-livepatch-6.1.15-28.43",
+							"name": "bind-dlz-mysql-debuginfo",
 							"architectures": [
 								"aarch64"
 							],
@@ -409,18 +332,18 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:1.0-0.amzn2023"
+									"lt": "32:9.18.28-1.amzn2023.0.1"
 								}
 							],
 							"fixed": [
-								"0:1.0-0.amzn2023"
+								"32:9.18.28-1.amzn2023.0.1"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "kernel-tools",
+							"name": "bind-dlz-sqlite3",
 							"architectures": [
 								"aarch64"
 							],
@@ -432,18 +355,18 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:6.1.15-28.43.amzn2023"
+									"lt": "32:9.18.28-1.amzn2023.0.1"
 								}
 							],
 							"fixed": [
-								"0:6.1.15-28.43.amzn2023"
+								"32:9.18.28-1.amzn2023.0.1"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "kernel-tools-debuginfo",
+							"name": "bind-dlz-sqlite3-debuginfo",
 							"architectures": [
 								"aarch64"
 							],
@@ -455,18 +378,18 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:6.1.15-28.43.amzn2023"
+									"lt": "32:9.18.28-1.amzn2023.0.1"
 								}
 							],
 							"fixed": [
-								"0:6.1.15-28.43.amzn2023"
+								"32:9.18.28-1.amzn2023.0.1"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "kernel-tools-devel",
+							"name": "bind-dnssec-utils",
 							"architectures": [
 								"aarch64"
 							],
@@ -478,18 +401,18 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:6.1.15-28.43.amzn2023"
+									"lt": "32:9.18.28-1.amzn2023.0.1"
 								}
 							],
 							"fixed": [
-								"0:6.1.15-28.43.amzn2023"
+								"32:9.18.28-1.amzn2023.0.1"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "perf",
+							"name": "bind-dnssec-utils-debuginfo",
 							"architectures": [
 								"aarch64"
 							],
@@ -501,18 +424,41 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:6.1.15-28.43.amzn2023"
+									"lt": "32:9.18.28-1.amzn2023.0.1"
 								}
 							],
 							"fixed": [
-								"0:6.1.15-28.43.amzn2023"
+								"32:9.18.28-1.amzn2023.0.1"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "perf-debuginfo",
+							"name": "bind-doc",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "32:9.18.28-1.amzn2023.0.1"
+								}
+							],
+							"fixed": [
+								"32:9.18.28-1.amzn2023.0.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "bind-libs",
 							"architectures": [
 								"aarch64"
 							],
@@ -524,18 +470,18 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:6.1.15-28.43.amzn2023"
+									"lt": "32:9.18.28-1.amzn2023.0.1"
 								}
 							],
 							"fixed": [
-								"0:6.1.15-28.43.amzn2023"
+								"32:9.18.28-1.amzn2023.0.1"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "python3-perf",
+							"name": "bind-libs-debuginfo",
 							"architectures": [
 								"aarch64"
 							],
@@ -547,18 +493,41 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:6.1.15-28.43.amzn2023"
+									"lt": "32:9.18.28-1.amzn2023.0.1"
 								}
 							],
 							"fixed": [
-								"0:6.1.15-28.43.amzn2023"
+								"32:9.18.28-1.amzn2023.0.1"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "python3-perf-debuginfo",
+							"name": "bind-license",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "32:9.18.28-1.amzn2023.0.1"
+								}
+							],
+							"fixed": [
+								"32:9.18.28-1.amzn2023.0.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "bind-utils",
 							"architectures": [
 								"aarch64"
 							],
@@ -570,11 +539,34 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:6.1.15-28.43.amzn2023"
+									"lt": "32:9.18.28-1.amzn2023.0.1"
 								}
 							],
 							"fixed": [
-								"0:6.1.15-28.43.amzn2023"
+								"32:9.18.28-1.amzn2023.0.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "bind-utils-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "32:9.18.28-1.amzn2023.0.1"
+								}
+							],
+							"fixed": [
+								"32:9.18.28-1.amzn2023.0.1"
 							]
 						}
 					}

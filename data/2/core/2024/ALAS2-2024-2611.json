@@ -1,11 +1,11 @@
 {
-	"id": "ALAS2-2024-2589",
+	"id": "ALAS2-2024-2611",
 	"advisories": [
 		{
 			"content": {
-				"id": "ALAS2-2024-2589",
-				"title": "Amazon Linux 2 2017.12 - ALAS2-2024-2589: important priority package update for kernel",
-				"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2021-47112:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nx86/kvm: Teardown PV features on boot CPU as well\n\nCVE-2021-47110:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nx86/kvm: Disable kvmclock on all CPUs on shutdown\n",
+				"id": "ALAS2-2024-2611",
+				"title": "Amazon Linux 2 2017.12 - ALAS2-2024-2611: important priority package update for freeradius",
+				"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2024-3596:\n\tRADIUS Protocol under RFC 2865 is susceptible to forgery attacks by a local attacker who can modify any valid Response (Access-Accept, Access-Reject, or Access-Challenge) to any other response using a chosen-prefix collision attack against MD5 Response Authenticator signature.\n",
 				"severity": [
 					{
 						"type": "vendor",
@@ -16,15 +16,11 @@
 				"references": [
 					{
 						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-47110"
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-3596"
 					},
 					{
 						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-47112"
-					},
-					{
-						"source": "linux-security@amazon.com",
-						"url": "https://alas.aws.amazon.com/AL2/ALAS-2024-2589.html"
+						"url": "https://alas.aws.amazon.com/AL2/ALAS-2024-2611.html"
 					}
 				]
 			},
@@ -36,25 +32,11 @@
 	"vulnerabilities": [
 		{
 			"content": {
-				"id": "CVE-2021-47110",
+				"id": "CVE-2024-3596",
 				"references": [
 					{
 						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-47110"
-					}
-				]
-			},
-			"ecosystems": [
-				"amazon:2"
-			]
-		},
-		{
-			"content": {
-				"id": "CVE-2021-47112",
-				"references": [
-					{
-						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-47112"
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-3596"
 					}
 				]
 			},
@@ -72,7 +54,7 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "kernel",
+							"name": "freeradius",
 							"architectures": [
 								"aarch64"
 							],
@@ -84,18 +66,18 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:4.14.348-265.565.amzn2"
+									"lt": "0:3.0.27-1.amzn2.0.1"
 								}
 							],
 							"fixed": [
-								"0:4.14.348-265.565.amzn2"
+								"0:3.0.27-1.amzn2.0.1"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "kernel-debuginfo",
+							"name": "freeradius-debuginfo",
 							"architectures": [
 								"aarch64"
 							],
@@ -107,18 +89,18 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:4.14.348-265.565.amzn2"
+									"lt": "0:3.0.27-1.amzn2.0.1"
 								}
 							],
 							"fixed": [
-								"0:4.14.348-265.565.amzn2"
+								"0:3.0.27-1.amzn2.0.1"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "kernel-debuginfo-common-aarch64",
+							"name": "freeradius-devel",
 							"architectures": [
 								"aarch64"
 							],
@@ -130,41 +112,18 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:4.14.348-265.565.amzn2"
+									"lt": "0:3.0.27-1.amzn2.0.1"
 								}
 							],
 							"fixed": [
-								"0:4.14.348-265.565.amzn2"
+								"0:3.0.27-1.amzn2.0.1"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "kernel-debuginfo-common-x86_64",
-							"architectures": [
-								"x86_64"
-							],
-							"repositories": [
-								"amzn2-core"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:4.14.348-265.565.amzn2"
-								}
-							],
-							"fixed": [
-								"0:4.14.348-265.565.amzn2"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "kernel-devel",
+							"name": "freeradius-doc",
 							"architectures": [
 								"aarch64"
 							],
@@ -176,18 +135,18 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:4.14.348-265.565.amzn2"
+									"lt": "0:3.0.27-1.amzn2.0.1"
 								}
 							],
 							"fixed": [
-								"0:4.14.348-265.565.amzn2"
+								"0:3.0.27-1.amzn2.0.1"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "kernel-headers",
+							"name": "freeradius-krb5",
 							"architectures": [
 								"aarch64"
 							],
@@ -199,41 +158,18 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:4.14.348-265.565.amzn2"
+									"lt": "0:3.0.27-1.amzn2.0.1"
 								}
 							],
 							"fixed": [
-								"0:4.14.348-265.565.amzn2"
+								"0:3.0.27-1.amzn2.0.1"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "kernel-livepatch-4.14.348-265.565",
-							"architectures": [
-								"x86_64"
-							],
-							"repositories": [
-								"amzn2-core"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:1.0-0.amzn2"
-								}
-							],
-							"fixed": [
-								"0:1.0-0.amzn2"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "kernel-tools",
+							"name": "freeradius-ldap",
 							"architectures": [
 								"aarch64"
 							],
@@ -245,18 +181,18 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:4.14.348-265.565.amzn2"
+									"lt": "0:3.0.27-1.amzn2.0.1"
 								}
 							],
 							"fixed": [
-								"0:4.14.348-265.565.amzn2"
+								"0:3.0.27-1.amzn2.0.1"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "kernel-tools-debuginfo",
+							"name": "freeradius-mysql",
 							"architectures": [
 								"aarch64"
 							],
@@ -268,18 +204,18 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:4.14.348-265.565.amzn2"
+									"lt": "0:3.0.27-1.amzn2.0.1"
 								}
 							],
 							"fixed": [
-								"0:4.14.348-265.565.amzn2"
+								"0:3.0.27-1.amzn2.0.1"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "kernel-tools-devel",
+							"name": "freeradius-perl",
 							"architectures": [
 								"aarch64"
 							],
@@ -291,18 +227,18 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:4.14.348-265.565.amzn2"
+									"lt": "0:3.0.27-1.amzn2.0.1"
 								}
 							],
 							"fixed": [
-								"0:4.14.348-265.565.amzn2"
+								"0:3.0.27-1.amzn2.0.1"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "perf",
+							"name": "freeradius-postgresql",
 							"architectures": [
 								"aarch64"
 							],
@@ -314,18 +250,18 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:4.14.348-265.565.amzn2"
+									"lt": "0:3.0.27-1.amzn2.0.1"
 								}
 							],
 							"fixed": [
-								"0:4.14.348-265.565.amzn2"
+								"0:3.0.27-1.amzn2.0.1"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "perf-debuginfo",
+							"name": "freeradius-python",
 							"architectures": [
 								"aarch64"
 							],
@@ -337,18 +273,18 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:4.14.348-265.565.amzn2"
+									"lt": "0:3.0.27-1.amzn2.0.1"
 								}
 							],
 							"fixed": [
-								"0:4.14.348-265.565.amzn2"
+								"0:3.0.27-1.amzn2.0.1"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "python-perf",
+							"name": "freeradius-sqlite",
 							"architectures": [
 								"aarch64"
 							],
@@ -360,18 +296,18 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:4.14.348-265.565.amzn2"
+									"lt": "0:3.0.27-1.amzn2.0.1"
 								}
 							],
 							"fixed": [
-								"0:4.14.348-265.565.amzn2"
+								"0:3.0.27-1.amzn2.0.1"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "python-perf-debuginfo",
+							"name": "freeradius-unixODBC",
 							"architectures": [
 								"aarch64"
 							],
@@ -383,11 +319,34 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:4.14.348-265.565.amzn2"
+									"lt": "0:3.0.27-1.amzn2.0.1"
 								}
 							],
 							"fixed": [
-								"0:4.14.348-265.565.amzn2"
+								"0:3.0.27-1.amzn2.0.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "freeradius-utils",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:3.0.27-1.amzn2.0.1"
+								}
+							],
+							"fixed": [
+								"0:3.0.27-1.amzn2.0.1"
 							]
 						}
 					}

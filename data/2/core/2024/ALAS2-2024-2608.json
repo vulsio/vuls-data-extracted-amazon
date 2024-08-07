@@ -1,0 +1,297 @@
+{
+	"id": "ALAS2-2024-2608",
+	"advisories": [
+		{
+			"content": {
+				"id": "ALAS2-2024-2608",
+				"title": "Amazon Linux 2 2017.12 - ALAS2-2024-2608: important priority package update for emacs",
+				"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2024-39331:\n\tIn Emacs before 29.4, org-link-expand-abbrev in lisp/ol.el expands a %(...) link abbrev even when it specifies an unsafe function, such as shell-command-to-string. This affects Org Mode before 9.7.5.\n\nCVE-2024-30205:\n\tIn Emacs before 29.3, Org mode considers contents of remote files to be trusted. This affects Org Mode before 9.6.23.\n\nCVE-2024-30204:\n\tIn Emacs before 29.3, LaTeX preview is enabled by default for e-mail attachments.\n\nCVE-2024-30203:\n\tIn Emacs before 29.3, Gnus treats inline MIME contents as trusted.\n",
+				"severity": [
+					{
+						"type": "vendor",
+						"source": "linux-security@amazon.com",
+						"vendor": "important"
+					}
+				],
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-30203"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-30204"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-30205"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39331"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "https://alas.aws.amazon.com/AL2/ALAS-2024-2608.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2"
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2024-30203",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-30203"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-30204",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-30204"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-30205",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-30205"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-39331",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39331"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2"
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "emacs",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:27.2-4.amzn2.0.5"
+								}
+							],
+							"fixed": [
+								"1:27.2-4.amzn2.0.5"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "emacs-common",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:27.2-4.amzn2.0.5"
+								}
+							],
+							"fixed": [
+								"1:27.2-4.amzn2.0.5"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "emacs-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:27.2-4.amzn2.0.5"
+								}
+							],
+							"fixed": [
+								"1:27.2-4.amzn2.0.5"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "emacs-devel",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:27.2-4.amzn2.0.5"
+								}
+							],
+							"fixed": [
+								"1:27.2-4.amzn2.0.5"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "emacs-filesystem",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:27.2-4.amzn2.0.5"
+								}
+							],
+							"fixed": [
+								"1:27.2-4.amzn2.0.5"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "emacs-lucid",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:27.2-4.amzn2.0.5"
+								}
+							],
+							"fixed": [
+								"1:27.2-4.amzn2.0.5"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "emacs-nox",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:27.2-4.amzn2.0.5"
+								}
+							],
+							"fixed": [
+								"1:27.2-4.amzn2.0.5"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "emacs-terminal",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:27.2-4.amzn2.0.5"
+								}
+							],
+							"fixed": [
+								"1:27.2-4.amzn2.0.5"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

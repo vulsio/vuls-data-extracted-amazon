@@ -1,0 +1,82 @@
+{
+	"id": "ALAS2023-2024-690",
+	"advisories": [
+		{
+			"content": {
+				"id": "ALAS2023-2024-690",
+				"title": "Amazon Linux 2023 - ALAS2023-2024-690: Medium priority package update for python-tqdm",
+				"description": "Package updates are available for Amazon Linux 2023 that fix the following vulnerabilities:\nCVE-2024-34062:\n\ttqdm is an open source progress bar for Python and CLI. Any optional non-boolean CLI arguments (e.g. `--delim`, `--buf-size`, `--manpath`) are passed through python's `eval`, allowing arbitrary code execution. This issue is only locally exploitable and had been addressed in release version 4.66.3. All users are advised to upgrade. There are no known workarounds for this vulnerability.\n",
+				"severity": [
+					{
+						"type": "vendor",
+						"source": "linux-security@amazon.com",
+						"vendor": "Medium"
+					}
+				],
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-34062"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "https://alas.aws.amazon.com/AL2023/ALAS-2024-690.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2023"
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2024-34062",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-34062"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2023"
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2023",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "python3-tqdm",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:4.61.1-1.amzn2023.0.3"
+								}
+							],
+							"fixed": [
+								"0:4.61.1-1.amzn2023.0.3"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}

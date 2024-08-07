@@ -1,393 +1,375 @@
 {
-	"id": "ALAS2-2024-2589",
+	"id": "ALAS2023-2024-675",
 	"advisories": [
 		{
 			"content": {
-				"id": "ALAS2-2024-2589",
-				"title": "Amazon Linux 2 2017.12 - ALAS2-2024-2589: important priority package update for kernel",
-				"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2021-47112:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nx86/kvm: Teardown PV features on boot CPU as well\n\nCVE-2021-47110:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nx86/kvm: Disable kvmclock on all CPUs on shutdown\n",
+				"id": "ALAS2023-2024-675",
+				"title": "Amazon Linux 2023 - ALAS2023-2024-675: Important priority package update for gtk3",
+				"description": "Package updates are available for Amazon Linux 2023 that fix the following vulnerabilities:\nCVE-2024-6655:\n\tgtk3: gtk2: Library injection from CWD\n",
 				"severity": [
 					{
 						"type": "vendor",
 						"source": "linux-security@amazon.com",
-						"vendor": "important"
+						"vendor": "Important"
 					}
 				],
 				"references": [
 					{
 						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-47110"
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-6655"
 					},
 					{
 						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-47112"
-					},
-					{
-						"source": "linux-security@amazon.com",
-						"url": "https://alas.aws.amazon.com/AL2/ALAS-2024-2589.html"
+						"url": "https://alas.aws.amazon.com/AL2023/ALAS-2024-675.html"
 					}
 				]
 			},
 			"ecosystems": [
-				"amazon:2"
+				"amazon:2023"
 			]
 		}
 	],
 	"vulnerabilities": [
 		{
 			"content": {
-				"id": "CVE-2021-47110",
+				"id": "CVE-2024-6655",
 				"references": [
 					{
 						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-47110"
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-6655"
 					}
 				]
 			},
 			"ecosystems": [
-				"amazon:2"
-			]
-		},
-		{
-			"content": {
-				"id": "CVE-2021-47112",
-				"references": [
-					{
-						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-47112"
-					}
-				]
-			},
-			"ecosystems": [
-				"amazon:2"
+				"amazon:2023"
 			]
 		}
 	],
 	"detection": [
 		{
-			"ecosystem": "amazon:2",
+			"ecosystem": "amazon:2023",
 			"criteria": {
 				"operator": "OR",
 				"criterions": [
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "kernel",
+							"name": "gtk-update-icon-cache",
 							"architectures": [
 								"aarch64"
 							],
 							"repositories": [
-								"amzn2-core"
+								"amazonlinux"
 							]
 						},
 						"affected": {
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:4.14.348-265.565.amzn2"
+									"lt": "0:3.24.43-1.amzn2023.0.1"
 								}
 							],
 							"fixed": [
-								"0:4.14.348-265.565.amzn2"
+								"0:3.24.43-1.amzn2023.0.1"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "kernel-debuginfo",
+							"name": "gtk-update-icon-cache-debuginfo",
 							"architectures": [
 								"aarch64"
 							],
 							"repositories": [
-								"amzn2-core"
+								"amazonlinux"
 							]
 						},
 						"affected": {
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:4.14.348-265.565.amzn2"
+									"lt": "0:3.24.43-1.amzn2023.0.1"
 								}
 							],
 							"fixed": [
-								"0:4.14.348-265.565.amzn2"
+								"0:3.24.43-1.amzn2023.0.1"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "kernel-debuginfo-common-aarch64",
+							"name": "gtk3",
 							"architectures": [
 								"aarch64"
 							],
 							"repositories": [
-								"amzn2-core"
+								"amazonlinux"
 							]
 						},
 						"affected": {
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:4.14.348-265.565.amzn2"
+									"lt": "0:3.24.43-1.amzn2023.0.1"
 								}
 							],
 							"fixed": [
-								"0:4.14.348-265.565.amzn2"
+								"0:3.24.43-1.amzn2023.0.1"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "kernel-debuginfo-common-x86_64",
-							"architectures": [
-								"x86_64"
-							],
-							"repositories": [
-								"amzn2-core"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:4.14.348-265.565.amzn2"
-								}
-							],
-							"fixed": [
-								"0:4.14.348-265.565.amzn2"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "kernel-devel",
+							"name": "gtk3-debuginfo",
 							"architectures": [
 								"aarch64"
 							],
 							"repositories": [
-								"amzn2-core"
+								"amazonlinux"
 							]
 						},
 						"affected": {
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:4.14.348-265.565.amzn2"
+									"lt": "0:3.24.43-1.amzn2023.0.1"
 								}
 							],
 							"fixed": [
-								"0:4.14.348-265.565.amzn2"
+								"0:3.24.43-1.amzn2023.0.1"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "kernel-headers",
+							"name": "gtk3-debugsource",
 							"architectures": [
 								"aarch64"
 							],
 							"repositories": [
-								"amzn2-core"
+								"amazonlinux"
 							]
 						},
 						"affected": {
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:4.14.348-265.565.amzn2"
+									"lt": "0:3.24.43-1.amzn2023.0.1"
 								}
 							],
 							"fixed": [
-								"0:4.14.348-265.565.amzn2"
+								"0:3.24.43-1.amzn2023.0.1"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "kernel-livepatch-4.14.348-265.565",
-							"architectures": [
-								"x86_64"
-							],
-							"repositories": [
-								"amzn2-core"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:1.0-0.amzn2"
-								}
-							],
-							"fixed": [
-								"0:1.0-0.amzn2"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "kernel-tools",
+							"name": "gtk3-devel",
 							"architectures": [
 								"aarch64"
 							],
 							"repositories": [
-								"amzn2-core"
+								"amazonlinux"
 							]
 						},
 						"affected": {
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:4.14.348-265.565.amzn2"
+									"lt": "0:3.24.43-1.amzn2023.0.1"
 								}
 							],
 							"fixed": [
-								"0:4.14.348-265.565.amzn2"
+								"0:3.24.43-1.amzn2023.0.1"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "kernel-tools-debuginfo",
+							"name": "gtk3-devel-debuginfo",
 							"architectures": [
 								"aarch64"
 							],
 							"repositories": [
-								"amzn2-core"
+								"amazonlinux"
 							]
 						},
 						"affected": {
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:4.14.348-265.565.amzn2"
+									"lt": "0:3.24.43-1.amzn2023.0.1"
 								}
 							],
 							"fixed": [
-								"0:4.14.348-265.565.amzn2"
+								"0:3.24.43-1.amzn2023.0.1"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "kernel-tools-devel",
+							"name": "gtk3-devel-docs",
 							"architectures": [
 								"aarch64"
 							],
 							"repositories": [
-								"amzn2-core"
+								"amazonlinux"
 							]
 						},
 						"affected": {
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:4.14.348-265.565.amzn2"
+									"lt": "0:3.24.43-1.amzn2023.0.1"
 								}
 							],
 							"fixed": [
-								"0:4.14.348-265.565.amzn2"
+								"0:3.24.43-1.amzn2023.0.1"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "perf",
+							"name": "gtk3-immodule-xim",
 							"architectures": [
 								"aarch64"
 							],
 							"repositories": [
-								"amzn2-core"
+								"amazonlinux"
 							]
 						},
 						"affected": {
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:4.14.348-265.565.amzn2"
+									"lt": "0:3.24.43-1.amzn2023.0.1"
 								}
 							],
 							"fixed": [
-								"0:4.14.348-265.565.amzn2"
+								"0:3.24.43-1.amzn2023.0.1"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "perf-debuginfo",
+							"name": "gtk3-immodule-xim-debuginfo",
 							"architectures": [
 								"aarch64"
 							],
 							"repositories": [
-								"amzn2-core"
+								"amazonlinux"
 							]
 						},
 						"affected": {
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:4.14.348-265.565.amzn2"
+									"lt": "0:3.24.43-1.amzn2023.0.1"
 								}
 							],
 							"fixed": [
-								"0:4.14.348-265.565.amzn2"
+								"0:3.24.43-1.amzn2023.0.1"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "python-perf",
+							"name": "gtk3-immodules",
 							"architectures": [
 								"aarch64"
 							],
 							"repositories": [
-								"amzn2-core"
+								"amazonlinux"
 							]
 						},
 						"affected": {
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:4.14.348-265.565.amzn2"
+									"lt": "0:3.24.43-1.amzn2023.0.1"
 								}
 							],
 							"fixed": [
-								"0:4.14.348-265.565.amzn2"
+								"0:3.24.43-1.amzn2023.0.1"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "python-perf-debuginfo",
+							"name": "gtk3-immodules-debuginfo",
 							"architectures": [
 								"aarch64"
 							],
 							"repositories": [
-								"amzn2-core"
+								"amazonlinux"
 							]
 						},
 						"affected": {
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:4.14.348-265.565.amzn2"
+									"lt": "0:3.24.43-1.amzn2023.0.1"
 								}
 							],
 							"fixed": [
-								"0:4.14.348-265.565.amzn2"
+								"0:3.24.43-1.amzn2023.0.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "gtk3-tests",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:3.24.43-1.amzn2023.0.1"
+								}
+							],
+							"fixed": [
+								"0:3.24.43-1.amzn2023.0.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "gtk3-tests-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:3.24.43-1.amzn2023.0.1"
+								}
+							],
+							"fixed": [
+								"0:3.24.43-1.amzn2023.0.1"
 							]
 						}
 					}
