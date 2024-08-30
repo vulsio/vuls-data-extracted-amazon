@@ -1,0 +1,123 @@
+{
+	"id": "ALAS2NITRO-ENCLAVES-2024-046",
+	"advisories": [
+		{
+			"content": {
+				"id": "ALAS2NITRO-ENCLAVES-2024-046",
+				"title": "Amazon Linux 2 - Nitro-enclaves 2.0 - ALAS2NITRO-ENCLAVES-2024-046: medium priority package update for docker",
+				"description": "Package updates are available for Amazon Linux 2 - Nitro-enclaves that fix the following vulnerabilities:\nCVE-2024-24790:\n\tThe various Is methods (IsPrivate, IsLoopback, etc) did not work as expected for IPv4-mapped IPv6 addresses, returning false for addresses which would return true in their traditional IPv4 forms.\n\nCVE-2023-45289:\n\tWhen following an HTTP redirect to a domain which is not a subdomain match or exact match of the initial domain, an http.Client does not forward sensitive headers such as \"Authorization\" or \"Cookie\". For example, a redirect from foo.com to www.foo.com will forward the Authorization header, but a redirect to bar.com will not. A maliciously crafted HTTP redirect could cause sensitive headers to be unexpectedly forwarded.\n",
+				"severity": [
+					{
+						"type": "vendor",
+						"source": "linux-security@amazon.com",
+						"vendor": "medium"
+					}
+				],
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-45289"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-24790"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "https://alas.aws.amazon.com/AL2/ALASNITRO-ENCLAVES-2024-046.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2"
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2023-45289",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-45289"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-24790",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-24790"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2"
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "docker",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2extra-nitro-enclaves"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:25.0.3-1.amzn2.0.2"
+								}
+							],
+							"fixed": [
+								"0:25.0.3-1.amzn2.0.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "docker-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2extra-nitro-enclaves"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:25.0.3-1.amzn2.0.2"
+								}
+							],
+							"fixed": [
+								"0:25.0.3-1.amzn2.0.2"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": "amazon"
+}
