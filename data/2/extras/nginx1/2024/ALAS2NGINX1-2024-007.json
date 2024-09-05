@@ -1,0 +1,340 @@
+{
+	"id": "ALAS2NGINX1-2024-007",
+	"advisories": [
+		{
+			"content": {
+				"id": "ALAS2NGINX1-2024-007",
+				"title": "Amazon Linux 2 - Nginx1 2.0 - ALAS2NGINX1-2024-007: medium priority package update for nginx",
+				"description": "Package updates are available for Amazon Linux 2 - Nginx1 that fix the following vulnerabilities:\nCVE-2024-7347:\n\tNGINX Open Source and NGINX Plus have a vulnerability in the ngx_http_mp4_module, which might allow an attacker to over-read NGINX worker memory resulting in its termination, using a specially crafted mp4 file. The issue only affects NGINX if it is built with the ngx_http_mp4_module and the mp4 directive is used in the configuration file. Additionally, the attack is possible only if an attacker can trigger the processing of a specially crafted mp4 file with the ngx_http_mp4_module.  Note: Software versions which have reached End of Technical Support (EoTS) are not evaluated.\n",
+				"severity": [
+					{
+						"type": "vendor",
+						"source": "linux-security@amazon.com",
+						"vendor": "medium"
+					}
+				],
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-7347"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "https://alas.aws.amazon.com/AL2/ALASNGINX1-2024-007.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2"
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2024-7347",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-7347"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2"
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "nginx",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2extra-nginx1"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:1.22.1-1.amzn2.0.4"
+								}
+							],
+							"fixed": [
+								"1:1.22.1-1.amzn2.0.4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "nginx-all-modules",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn2extra-nginx1"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:1.22.1-1.amzn2.0.4"
+								}
+							],
+							"fixed": [
+								"1:1.22.1-1.amzn2.0.4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "nginx-core",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2extra-nginx1"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:1.22.1-1.amzn2.0.4"
+								}
+							],
+							"fixed": [
+								"1:1.22.1-1.amzn2.0.4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "nginx-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2extra-nginx1"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:1.22.1-1.amzn2.0.4"
+								}
+							],
+							"fixed": [
+								"1:1.22.1-1.amzn2.0.4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "nginx-filesystem",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amzn2extra-nginx1"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:1.22.1-1.amzn2.0.4"
+								}
+							],
+							"fixed": [
+								"1:1.22.1-1.amzn2.0.4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "nginx-mod-devel",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2extra-nginx1"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:1.22.1-1.amzn2.0.4"
+								}
+							],
+							"fixed": [
+								"1:1.22.1-1.amzn2.0.4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "nginx-mod-http-geoip",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2extra-nginx1"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:1.22.1-1.amzn2.0.4"
+								}
+							],
+							"fixed": [
+								"1:1.22.1-1.amzn2.0.4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "nginx-mod-http-image-filter",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2extra-nginx1"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:1.22.1-1.amzn2.0.4"
+								}
+							],
+							"fixed": [
+								"1:1.22.1-1.amzn2.0.4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "nginx-mod-http-perl",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2extra-nginx1"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:1.22.1-1.amzn2.0.4"
+								}
+							],
+							"fixed": [
+								"1:1.22.1-1.amzn2.0.4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "nginx-mod-http-xslt-filter",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2extra-nginx1"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:1.22.1-1.amzn2.0.4"
+								}
+							],
+							"fixed": [
+								"1:1.22.1-1.amzn2.0.4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "nginx-mod-mail",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2extra-nginx1"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:1.22.1-1.amzn2.0.4"
+								}
+							],
+							"fixed": [
+								"1:1.22.1-1.amzn2.0.4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "nginx-mod-stream",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2extra-nginx1"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:1.22.1-1.amzn2.0.4"
+								}
+							],
+							"fixed": [
+								"1:1.22.1-1.amzn2.0.4"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": {
+		"id": "amazon",
+		"raws": [
+			"vuls-data-raw-amazon/2/extras/nginx1/2024/ALAS2NGINX1-2024-007.json"
+		]
+	}
+}

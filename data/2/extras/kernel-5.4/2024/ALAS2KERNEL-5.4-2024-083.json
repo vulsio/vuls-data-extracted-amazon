@@ -1,34 +1,34 @@
 {
-	"id": "ALAS2POSTGRESQL12-2023-002",
+	"id": "ALAS2KERNEL-5.4-2024-083",
 	"advisories": [
 		{
 			"content": {
-				"id": "ALAS2POSTGRESQL12-2023-002",
-				"title": "Amazon Linux 2 - Postgresql12 2.0 - ALAS2POSTGRESQL12-2023-002: important priority package update for postgresql",
-				"description": "Package updates are available for Amazon Linux 2 - Postgresql12 that fix the following vulnerabilities:\nCVE-2022-1552:\n\tA flaw was found in PostgreSQL. There is an issue with incomplete efforts to operate safely when a privileged user is maintaining another user's objects. The Autovacuum, REINDEX, CREATE INDEX, REFRESH MATERIALIZED VIEW, CLUSTER, and pg_amcheck commands activated relevant protections too late or not at all during the process. This flaw allows an attacker with permission to create non-temporary objects in at least one schema to execute arbitrary SQL functions under a superuser identity.\n\nCVE-2021-3677:\n\tA flaw was found in postgresql. A purpose-crafted query can read arbitrary bytes of server memory. In the default configuration, any authenticated database user can complete this attack at will. The attack does not require the ability to create objects. If server settings include max_worker_processes=0, the known versions of this attack are infeasible. However, undiscovered variants of the attack may be independent of that setting.\n\nCVE-2021-23222:\n\tA man-in-the-middle attacker can inject false responses to the client's first few queries, despite the use of SSL certificate verification and encryption.\n",
+				"id": "ALAS2KERNEL-5.4-2024-083",
+				"title": "Amazon Linux 2 - Kernel-5.4 2.0 - ALAS2KERNEL-5.4-2024-083: medium priority package update for kernel",
+				"description": "Package updates are available for Amazon Linux 2 - Kernel-5.4 that fix the following vulnerabilities:\nCVE-2024-43880:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nmlxsw: spectrum_acl_erp: Fix object nesting warning\n\nCVE-2024-43871:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\ndevres: Fix memory leakage caused by driver API devm_free_percpu()\n\nCVE-2024-27397:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nnetfilter: nf_tables: use timestamp to check for set element timeout\n",
 				"severity": [
 					{
 						"type": "vendor",
 						"source": "linux-security@amazon.com",
-						"vendor": "important"
+						"vendor": "medium"
 					}
 				],
 				"references": [
 					{
 						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-23222"
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27397"
 					},
 					{
 						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3677"
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43871"
 					},
 					{
 						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-1552"
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43880"
 					},
 					{
 						"source": "linux-security@amazon.com",
-						"url": "https://alas.aws.amazon.com/AL2/ALASPOSTGRESQL12-2023-002.html"
+						"url": "https://alas.aws.amazon.com/AL2/ALASKERNEL-5.4-2024-083.html"
 					}
 				]
 			},
@@ -40,11 +40,11 @@
 	"vulnerabilities": [
 		{
 			"content": {
-				"id": "CVE-2021-23222",
+				"id": "CVE-2024-27397",
 				"references": [
 					{
 						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-23222"
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27397"
 					}
 				]
 			},
@@ -54,11 +54,11 @@
 		},
 		{
 			"content": {
-				"id": "CVE-2021-3677",
+				"id": "CVE-2024-43871",
 				"references": [
 					{
 						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3677"
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43871"
 					}
 				]
 			},
@@ -68,11 +68,11 @@
 		},
 		{
 			"content": {
-				"id": "CVE-2022-1552",
+				"id": "CVE-2024-43880",
 				"references": [
 					{
 						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-1552"
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43880"
 					}
 				]
 			},
@@ -90,368 +90,345 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "postgresql",
+							"name": "bpftool",
 							"architectures": [
-								"i686"
+								"aarch64"
 							],
 							"repositories": [
-								"amzn2extra-postgresql12"
+								"amzn2extra-kernel-5.4"
 							]
 						},
 						"affected": {
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:12.11-3.amzn2.0.2"
+									"lt": "0:5.4.282-194.378.amzn2"
 								}
 							],
 							"fixed": [
-								"0:12.11-3.amzn2.0.2"
+								"0:5.4.282-194.378.amzn2"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "postgresql-contrib",
+							"name": "bpftool-debuginfo",
 							"architectures": [
-								"i686"
+								"aarch64"
 							],
 							"repositories": [
-								"amzn2extra-postgresql12"
+								"amzn2extra-kernel-5.4"
 							]
 						},
 						"affected": {
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:12.11-3.amzn2.0.2"
+									"lt": "0:5.4.282-194.378.amzn2"
 								}
 							],
 							"fixed": [
-								"0:12.11-3.amzn2.0.2"
+								"0:5.4.282-194.378.amzn2"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "postgresql-debuginfo",
+							"name": "kernel",
 							"architectures": [
-								"i686"
+								"aarch64"
 							],
 							"repositories": [
-								"amzn2extra-postgresql12"
+								"amzn2extra-kernel-5.4"
 							]
 						},
 						"affected": {
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:12.11-3.amzn2.0.2"
+									"lt": "0:5.4.282-194.378.amzn2"
 								}
 							],
 							"fixed": [
-								"0:12.11-3.amzn2.0.2"
+								"0:5.4.282-194.378.amzn2"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "postgresql-docs",
+							"name": "kernel-debuginfo",
 							"architectures": [
-								"i686"
+								"aarch64"
 							],
 							"repositories": [
-								"amzn2extra-postgresql12"
+								"amzn2extra-kernel-5.4"
 							]
 						},
 						"affected": {
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:12.11-3.amzn2.0.2"
+									"lt": "0:5.4.282-194.378.amzn2"
 								}
 							],
 							"fixed": [
-								"0:12.11-3.amzn2.0.2"
+								"0:5.4.282-194.378.amzn2"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "postgresql-llvmjit",
+							"name": "kernel-debuginfo-common-aarch64",
 							"architectures": [
-								"i686"
+								"aarch64"
 							],
 							"repositories": [
-								"amzn2extra-postgresql12"
+								"amzn2extra-kernel-5.4"
 							]
 						},
 						"affected": {
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:12.11-3.amzn2.0.2"
+									"lt": "0:5.4.282-194.378.amzn2"
 								}
 							],
 							"fixed": [
-								"0:12.11-3.amzn2.0.2"
+								"0:5.4.282-194.378.amzn2"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "postgresql-plperl",
+							"name": "kernel-debuginfo-common-x86_64",
 							"architectures": [
-								"i686"
+								"x86_64"
 							],
 							"repositories": [
-								"amzn2extra-postgresql12"
+								"amzn2extra-kernel-5.4"
 							]
 						},
 						"affected": {
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:12.11-3.amzn2.0.2"
+									"lt": "0:5.4.282-194.378.amzn2"
 								}
 							],
 							"fixed": [
-								"0:12.11-3.amzn2.0.2"
+								"0:5.4.282-194.378.amzn2"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "postgresql-plpython2",
+							"name": "kernel-devel",
 							"architectures": [
-								"i686"
+								"aarch64"
 							],
 							"repositories": [
-								"amzn2extra-postgresql12"
+								"amzn2extra-kernel-5.4"
 							]
 						},
 						"affected": {
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:12.11-3.amzn2.0.2"
+									"lt": "0:5.4.282-194.378.amzn2"
 								}
 							],
 							"fixed": [
-								"0:12.11-3.amzn2.0.2"
+								"0:5.4.282-194.378.amzn2"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "postgresql-plpython3",
+							"name": "kernel-headers",
 							"architectures": [
-								"i686"
+								"aarch64"
 							],
 							"repositories": [
-								"amzn2extra-postgresql12"
+								"amzn2extra-kernel-5.4"
 							]
 						},
 						"affected": {
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:12.11-3.amzn2.0.2"
+									"lt": "0:5.4.282-194.378.amzn2"
 								}
 							],
 							"fixed": [
-								"0:12.11-3.amzn2.0.2"
+								"0:5.4.282-194.378.amzn2"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "postgresql-pltcl",
+							"name": "kernel-tools",
 							"architectures": [
-								"i686"
+								"aarch64"
 							],
 							"repositories": [
-								"amzn2extra-postgresql12"
+								"amzn2extra-kernel-5.4"
 							]
 						},
 						"affected": {
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:12.11-3.amzn2.0.2"
+									"lt": "0:5.4.282-194.378.amzn2"
 								}
 							],
 							"fixed": [
-								"0:12.11-3.amzn2.0.2"
+								"0:5.4.282-194.378.amzn2"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "postgresql-server",
+							"name": "kernel-tools-debuginfo",
 							"architectures": [
-								"i686"
+								"aarch64"
 							],
 							"repositories": [
-								"amzn2extra-postgresql12"
+								"amzn2extra-kernel-5.4"
 							]
 						},
 						"affected": {
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:12.11-3.amzn2.0.2"
+									"lt": "0:5.4.282-194.378.amzn2"
 								}
 							],
 							"fixed": [
-								"0:12.11-3.amzn2.0.2"
+								"0:5.4.282-194.378.amzn2"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "postgresql-server-devel",
+							"name": "kernel-tools-devel",
 							"architectures": [
-								"i686"
+								"aarch64"
 							],
 							"repositories": [
-								"amzn2extra-postgresql12"
+								"amzn2extra-kernel-5.4"
 							]
 						},
 						"affected": {
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:12.11-3.amzn2.0.2"
+									"lt": "0:5.4.282-194.378.amzn2"
 								}
 							],
 							"fixed": [
-								"0:12.11-3.amzn2.0.2"
+								"0:5.4.282-194.378.amzn2"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "postgresql-static",
+							"name": "perf",
 							"architectures": [
-								"i686"
+								"aarch64"
 							],
 							"repositories": [
-								"amzn2extra-postgresql12"
+								"amzn2extra-kernel-5.4"
 							]
 						},
 						"affected": {
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:12.11-3.amzn2.0.2"
+									"lt": "0:5.4.282-194.378.amzn2"
 								}
 							],
 							"fixed": [
-								"0:12.11-3.amzn2.0.2"
+								"0:5.4.282-194.378.amzn2"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "postgresql-test",
+							"name": "perf-debuginfo",
 							"architectures": [
-								"i686"
+								"aarch64"
 							],
 							"repositories": [
-								"amzn2extra-postgresql12"
+								"amzn2extra-kernel-5.4"
 							]
 						},
 						"affected": {
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:12.11-3.amzn2.0.2"
+									"lt": "0:5.4.282-194.378.amzn2"
 								}
 							],
 							"fixed": [
-								"0:12.11-3.amzn2.0.2"
+								"0:5.4.282-194.378.amzn2"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "postgresql-test-rpm-macros",
+							"name": "python-perf",
 							"architectures": [
-								"noarch"
+								"aarch64"
 							],
 							"repositories": [
-								"amzn2extra-postgresql12"
+								"amzn2extra-kernel-5.4"
 							]
 						},
 						"affected": {
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:12.11-3.amzn2.0.2"
+									"lt": "0:5.4.282-194.378.amzn2"
 								}
 							],
 							"fixed": [
-								"0:12.11-3.amzn2.0.2"
+								"0:5.4.282-194.378.amzn2"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "postgresql-upgrade",
+							"name": "python-perf-debuginfo",
 							"architectures": [
-								"i686"
+								"aarch64"
 							],
 							"repositories": [
-								"amzn2extra-postgresql12"
+								"amzn2extra-kernel-5.4"
 							]
 						},
 						"affected": {
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:12.11-3.amzn2.0.2"
+									"lt": "0:5.4.282-194.378.amzn2"
 								}
 							],
 							"fixed": [
-								"0:12.11-3.amzn2.0.2"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "postgresql-upgrade-devel",
-							"architectures": [
-								"i686"
-							],
-							"repositories": [
-								"amzn2extra-postgresql12"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:12.11-3.amzn2.0.2"
-								}
-							],
-							"fixed": [
-								"0:12.11-3.amzn2.0.2"
+								"0:5.4.282-194.378.amzn2"
 							]
 						}
 					}
@@ -462,7 +439,7 @@
 	"data_source": {
 		"id": "amazon",
 		"raws": [
-			"vuls-data-raw-amazon/2/extras/postgresql12/2023/ALAS2POSTGRESQL12-2023-002.json"
+			"vuls-data-raw-amazon/2/extras/kernel-5.4/2024/ALAS2KERNEL-5.4-2024-083.json"
 		]
 	}
 }

@@ -1,439 +1,467 @@
 {
-	"id": "ALAS2KERNEL-5.10-2024-064",
+	"id": "ALAS2023-2024-707",
 	"advisories": [
 		{
 			"content": {
-				"id": "ALAS2KERNEL-5.10-2024-064",
-				"title": "Amazon Linux 2 - Kernel-5.10 2.0 - ALAS2KERNEL-5.10-2024-064: medium priority package update for kernel",
-				"description": "Package updates are available for Amazon Linux 2 - Kernel-5.10 that fix the following vulnerabilities:\nCVE-2024-26629:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nnfsd: fix RELEASE_LOCKOWNER\n\nCVE-2022-48829:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nNFSD: Fix NFSv3 SETATTR/CREATE's handling of large file sizes\n",
+				"id": "ALAS2023-2024-707",
+				"title": "Amazon Linux 2023 - ALAS2023-2024-707: Medium priority package update for nginx",
+				"description": "Package updates are available for Amazon Linux 2023 that fix the following vulnerabilities:\nCVE-2024-7347:\n\tNGINX Open Source and NGINX Plus have a vulnerability in the ngx_http_mp4_module, which might allow an attacker to over-read NGINX worker memory resulting in its termination, using a specially crafted mp4 file. The issue only affects NGINX if it is built with the ngx_http_mp4_module and the mp4 directive is used in the configuration file. Additionally, the attack is possible only if an attacker can trigger the processing of a specially crafted mp4 file with the ngx_http_mp4_module.  Note: Software versions which have reached End of Technical Support (EoTS) are not evaluated.\n",
 				"severity": [
 					{
 						"type": "vendor",
 						"source": "linux-security@amazon.com",
-						"vendor": "medium"
+						"vendor": "Medium"
 					}
 				],
 				"references": [
 					{
 						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-48829"
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-7347"
 					},
 					{
 						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26629"
-					},
-					{
-						"source": "linux-security@amazon.com",
-						"url": "https://alas.aws.amazon.com/AL2/ALASKERNEL-5.10-2024-064.html"
+						"url": "https://alas.aws.amazon.com/AL2023/ALAS-2024-707.html"
 					}
 				]
 			},
 			"ecosystems": [
-				"amazon:2"
+				"amazon:2023"
 			]
 		}
 	],
 	"vulnerabilities": [
 		{
 			"content": {
-				"id": "CVE-2022-48829",
+				"id": "CVE-2024-7347",
 				"references": [
 					{
 						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-48829"
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-7347"
 					}
 				]
 			},
 			"ecosystems": [
-				"amazon:2"
-			]
-		},
-		{
-			"content": {
-				"id": "CVE-2024-26629",
-				"references": [
-					{
-						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26629"
-					}
-				]
-			},
-			"ecosystems": [
-				"amazon:2"
+				"amazon:2023"
 			]
 		}
 	],
 	"detection": [
 		{
-			"ecosystem": "amazon:2",
+			"ecosystem": "amazon:2023",
 			"criteria": {
 				"operator": "OR",
 				"criterions": [
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "bpftool",
+							"name": "nginx",
 							"architectures": [
 								"aarch64"
 							],
 							"repositories": [
-								"amzn2extra-kernel-5.10"
+								"amazonlinux"
 							]
 						},
 						"affected": {
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:5.10.220-209.867.amzn2"
+									"lt": "1:1.24.0-1.amzn2023.0.3"
 								}
 							],
 							"fixed": [
-								"0:5.10.220-209.867.amzn2"
+								"1:1.24.0-1.amzn2023.0.3"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "bpftool-debuginfo",
+							"name": "nginx-all-modules",
 							"architectures": [
-								"aarch64"
+								"noarch"
 							],
 							"repositories": [
-								"amzn2extra-kernel-5.10"
+								"amazonlinux"
 							]
 						},
 						"affected": {
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:5.10.220-209.867.amzn2"
+									"lt": "1:1.24.0-1.amzn2023.0.3"
 								}
 							],
 							"fixed": [
-								"0:5.10.220-209.867.amzn2"
+								"1:1.24.0-1.amzn2023.0.3"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "kernel",
+							"name": "nginx-core",
 							"architectures": [
 								"aarch64"
 							],
 							"repositories": [
-								"amzn2extra-kernel-5.10"
+								"amazonlinux"
 							]
 						},
 						"affected": {
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:5.10.220-209.867.amzn2"
+									"lt": "1:1.24.0-1.amzn2023.0.3"
 								}
 							],
 							"fixed": [
-								"0:5.10.220-209.867.amzn2"
+								"1:1.24.0-1.amzn2023.0.3"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "kernel-debuginfo",
+							"name": "nginx-core-debuginfo",
 							"architectures": [
 								"aarch64"
 							],
 							"repositories": [
-								"amzn2extra-kernel-5.10"
+								"amazonlinux"
 							]
 						},
 						"affected": {
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:5.10.220-209.867.amzn2"
+									"lt": "1:1.24.0-1.amzn2023.0.3"
 								}
 							],
 							"fixed": [
-								"0:5.10.220-209.867.amzn2"
+								"1:1.24.0-1.amzn2023.0.3"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "kernel-debuginfo-common-aarch64",
+							"name": "nginx-debuginfo",
 							"architectures": [
 								"aarch64"
 							],
 							"repositories": [
-								"amzn2extra-kernel-5.10"
+								"amazonlinux"
 							]
 						},
 						"affected": {
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:5.10.220-209.867.amzn2"
+									"lt": "1:1.24.0-1.amzn2023.0.3"
 								}
 							],
 							"fixed": [
-								"0:5.10.220-209.867.amzn2"
+								"1:1.24.0-1.amzn2023.0.3"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "kernel-debuginfo-common-x86_64",
+							"name": "nginx-debugsource",
 							"architectures": [
-								"x86_64"
+								"aarch64"
 							],
 							"repositories": [
-								"amzn2extra-kernel-5.10"
+								"amazonlinux"
 							]
 						},
 						"affected": {
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:5.10.220-209.867.amzn2"
+									"lt": "1:1.24.0-1.amzn2023.0.3"
 								}
 							],
 							"fixed": [
-								"0:5.10.220-209.867.amzn2"
+								"1:1.24.0-1.amzn2023.0.3"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "kernel-devel",
+							"name": "nginx-filesystem",
 							"architectures": [
-								"aarch64"
+								"noarch"
 							],
 							"repositories": [
-								"amzn2extra-kernel-5.10"
+								"amazonlinux"
 							]
 						},
 						"affected": {
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:5.10.220-209.867.amzn2"
+									"lt": "1:1.24.0-1.amzn2023.0.3"
 								}
 							],
 							"fixed": [
-								"0:5.10.220-209.867.amzn2"
+								"1:1.24.0-1.amzn2023.0.3"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "kernel-headers",
+							"name": "nginx-mod-devel",
 							"architectures": [
 								"aarch64"
 							],
 							"repositories": [
-								"amzn2extra-kernel-5.10"
+								"amazonlinux"
 							]
 						},
 						"affected": {
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:5.10.220-209.867.amzn2"
+									"lt": "1:1.24.0-1.amzn2023.0.3"
 								}
 							],
 							"fixed": [
-								"0:5.10.220-209.867.amzn2"
+								"1:1.24.0-1.amzn2023.0.3"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "kernel-livepatch-5.10.220-209.867",
+							"name": "nginx-mod-http-image-filter",
 							"architectures": [
 								"aarch64"
 							],
 							"repositories": [
-								"amzn2extra-kernel-5.10"
+								"amazonlinux"
 							]
 						},
 						"affected": {
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:1.0-0.amzn2"
+									"lt": "1:1.24.0-1.amzn2023.0.3"
 								}
 							],
 							"fixed": [
-								"0:1.0-0.amzn2"
+								"1:1.24.0-1.amzn2023.0.3"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "kernel-tools",
+							"name": "nginx-mod-http-image-filter-debuginfo",
 							"architectures": [
 								"aarch64"
 							],
 							"repositories": [
-								"amzn2extra-kernel-5.10"
+								"amazonlinux"
 							]
 						},
 						"affected": {
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:5.10.220-209.867.amzn2"
+									"lt": "1:1.24.0-1.amzn2023.0.3"
 								}
 							],
 							"fixed": [
-								"0:5.10.220-209.867.amzn2"
+								"1:1.24.0-1.amzn2023.0.3"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "kernel-tools-debuginfo",
+							"name": "nginx-mod-http-perl",
 							"architectures": [
 								"aarch64"
 							],
 							"repositories": [
-								"amzn2extra-kernel-5.10"
+								"amazonlinux"
 							]
 						},
 						"affected": {
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:5.10.220-209.867.amzn2"
+									"lt": "1:1.24.0-1.amzn2023.0.3"
 								}
 							],
 							"fixed": [
-								"0:5.10.220-209.867.amzn2"
+								"1:1.24.0-1.amzn2023.0.3"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "kernel-tools-devel",
+							"name": "nginx-mod-http-perl-debuginfo",
 							"architectures": [
 								"aarch64"
 							],
 							"repositories": [
-								"amzn2extra-kernel-5.10"
+								"amazonlinux"
 							]
 						},
 						"affected": {
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:5.10.220-209.867.amzn2"
+									"lt": "1:1.24.0-1.amzn2023.0.3"
 								}
 							],
 							"fixed": [
-								"0:5.10.220-209.867.amzn2"
+								"1:1.24.0-1.amzn2023.0.3"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "perf",
+							"name": "nginx-mod-http-xslt-filter",
 							"architectures": [
 								"aarch64"
 							],
 							"repositories": [
-								"amzn2extra-kernel-5.10"
+								"amazonlinux"
 							]
 						},
 						"affected": {
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:5.10.220-209.867.amzn2"
+									"lt": "1:1.24.0-1.amzn2023.0.3"
 								}
 							],
 							"fixed": [
-								"0:5.10.220-209.867.amzn2"
+								"1:1.24.0-1.amzn2023.0.3"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "perf-debuginfo",
+							"name": "nginx-mod-http-xslt-filter-debuginfo",
 							"architectures": [
 								"aarch64"
 							],
 							"repositories": [
-								"amzn2extra-kernel-5.10"
+								"amazonlinux"
 							]
 						},
 						"affected": {
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:5.10.220-209.867.amzn2"
+									"lt": "1:1.24.0-1.amzn2023.0.3"
 								}
 							],
 							"fixed": [
-								"0:5.10.220-209.867.amzn2"
+								"1:1.24.0-1.amzn2023.0.3"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "python-perf",
+							"name": "nginx-mod-mail",
 							"architectures": [
 								"aarch64"
 							],
 							"repositories": [
-								"amzn2extra-kernel-5.10"
+								"amazonlinux"
 							]
 						},
 						"affected": {
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:5.10.220-209.867.amzn2"
+									"lt": "1:1.24.0-1.amzn2023.0.3"
 								}
 							],
 							"fixed": [
-								"0:5.10.220-209.867.amzn2"
+								"1:1.24.0-1.amzn2023.0.3"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "python-perf-debuginfo",
+							"name": "nginx-mod-mail-debuginfo",
 							"architectures": [
 								"aarch64"
 							],
 							"repositories": [
-								"amzn2extra-kernel-5.10"
+								"amazonlinux"
 							]
 						},
 						"affected": {
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:5.10.220-209.867.amzn2"
+									"lt": "1:1.24.0-1.amzn2023.0.3"
 								}
 							],
 							"fixed": [
-								"0:5.10.220-209.867.amzn2"
+								"1:1.24.0-1.amzn2023.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "nginx-mod-stream",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:1.24.0-1.amzn2023.0.3"
+								}
+							],
+							"fixed": [
+								"1:1.24.0-1.amzn2023.0.3"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "nginx-mod-stream-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:1.24.0-1.amzn2023.0.3"
+								}
+							],
+							"fixed": [
+								"1:1.24.0-1.amzn2023.0.3"
 							]
 						}
 					}
@@ -444,7 +472,7 @@
 	"data_source": {
 		"id": "amazon",
 		"raws": [
-			"vuls-data-raw-amazon/2/extras/kernel-5.10/2024/ALAS2KERNEL-5.10-2024-064.json"
+			"vuls-data-raw-amazon/2023/core/2024/ALAS2023-2024-707.json"
 		]
 	}
 }

@@ -1,0 +1,110 @@
+{
+	"id": "ALAS2MATE-DESKTOP1.X-2024-009",
+	"advisories": [
+		{
+			"content": {
+				"id": "ALAS2MATE-DESKTOP1.X-2024-009",
+				"title": "Amazon Linux 2 - Mate-desktop1.x 2.0 - ALAS2MATE-DESKTOP1.X-2024-009: medium priority package update for fdupes",
+				"description": "Package updates are available for Amazon Linux 2 - Mate-desktop1.x that fix the following vulnerabilities:\nCVE-2022-48682:\n\tIn deletefiles in FDUPES before 2.2.0, a TOCTOU race condition allows arbitrary file deletion via a symlink.\n",
+				"severity": [
+					{
+						"type": "vendor",
+						"source": "linux-security@amazon.com",
+						"vendor": "medium"
+					}
+				],
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-48682"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "https://alas.aws.amazon.com/AL2/ALASMATE-DESKTOP1.X-2024-009.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2"
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2022-48682",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-48682"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2"
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "fdupes",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2extra-mate-desktop1.x"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:2.3.0-1.amzn2"
+								}
+							],
+							"fixed": [
+								"1:2.3.0-1.amzn2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "fdupes-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2extra-mate-desktop1.x"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:2.3.0-1.amzn2"
+								}
+							],
+							"fixed": [
+								"1:2.3.0-1.amzn2"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": {
+		"id": "amazon",
+		"raws": [
+			"vuls-data-raw-amazon/2/extras/mate-desktop1.x/2024/ALAS2MATE-DESKTOP1.X-2024-009.json"
+		]
+	}
+}
