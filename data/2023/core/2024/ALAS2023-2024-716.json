@@ -1,0 +1,87 @@
+{
+	"id": "ALAS2023-2024-716",
+	"advisories": [
+		{
+			"content": {
+				"id": "ALAS2023-2024-716",
+				"title": "Amazon Linux 2023 - ALAS2023-2024-716: Important priority package update for microcode_ctl",
+				"description": "Package updates are available for Amazon Linux 2023 that fix the following vulnerabilities:\nCVE-2023-49141:\n\tImproper isolation in some Intel(R) Processors stream cache mechanism may allow an authenticated user to potentially enable escalation of privilege via local access.\n",
+				"severity": [
+					{
+						"type": "vendor",
+						"source": "linux-security@amazon.com",
+						"vendor": "Important"
+					}
+				],
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-49141"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "https://alas.aws.amazon.com/AL2023/ALAS-2024-716.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2023"
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2023-49141",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-49141"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2023"
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2023",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "microcode_ctl",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "2:2.1-53.amzn2023.0.7"
+								}
+							],
+							"fixed": [
+								"2:2.1-53.amzn2023.0.7"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": {
+		"id": "amazon",
+		"raws": [
+			"vuls-data-raw-amazon/2023/core/2024/ALAS2023-2024-716.json"
+		]
+	}
+}
