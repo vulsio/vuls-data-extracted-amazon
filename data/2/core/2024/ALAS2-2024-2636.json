@@ -1,0 +1,317 @@
+{
+	"id": "ALAS2-2024-2636",
+	"advisories": [
+		{
+			"content": {
+				"id": "ALAS2-2024-2636",
+				"title": "Amazon Linux 2 2017.12 - ALAS2-2024-2636: low priority package update for systemd",
+				"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2023-31439:\n\tAn issue was discovered in systemd 253. An attacker can modify the contents of past events in a sealed log file and then adjust the file such that checking the integrity shows no error, despite modifications. NOTE: the vendor reportedly sent \"a reply denying that any of the finding was a security vulnerability.\"\n",
+				"severity": [
+					{
+						"type": "vendor",
+						"source": "linux-security@amazon.com",
+						"vendor": "low"
+					}
+				],
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-31439"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "https://alas.aws.amazon.com/AL2/ALAS-2024-2636.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2"
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2023-31439",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-31439"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2"
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libgudev1",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:219-78.amzn2.0.24"
+								}
+							],
+							"fixed": [
+								"0:219-78.amzn2.0.24"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libgudev1-devel",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:219-78.amzn2.0.24"
+								}
+							],
+							"fixed": [
+								"0:219-78.amzn2.0.24"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "systemd",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:219-78.amzn2.0.24"
+								}
+							],
+							"fixed": [
+								"0:219-78.amzn2.0.24"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "systemd-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:219-78.amzn2.0.24"
+								}
+							],
+							"fixed": [
+								"0:219-78.amzn2.0.24"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "systemd-devel",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:219-78.amzn2.0.24"
+								}
+							],
+							"fixed": [
+								"0:219-78.amzn2.0.24"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "systemd-journal-gateway",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:219-78.amzn2.0.24"
+								}
+							],
+							"fixed": [
+								"0:219-78.amzn2.0.24"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "systemd-libs",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:219-78.amzn2.0.24"
+								}
+							],
+							"fixed": [
+								"0:219-78.amzn2.0.24"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "systemd-networkd",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:219-78.amzn2.0.24"
+								}
+							],
+							"fixed": [
+								"0:219-78.amzn2.0.24"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "systemd-python",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:219-78.amzn2.0.24"
+								}
+							],
+							"fixed": [
+								"0:219-78.amzn2.0.24"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "systemd-resolved",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:219-78.amzn2.0.24"
+								}
+							],
+							"fixed": [
+								"0:219-78.amzn2.0.24"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "systemd-sysv",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:219-78.amzn2.0.24"
+								}
+							],
+							"fixed": [
+								"0:219-78.amzn2.0.24"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": {
+		"id": "amazon",
+		"raws": [
+			"vuls-data-raw-amazon/2/core/2024/ALAS2-2024-2636.json"
+		]
+	}
+}

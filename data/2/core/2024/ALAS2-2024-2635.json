@@ -1,0 +1,110 @@
+{
+	"id": "ALAS2-2024-2635",
+	"advisories": [
+		{
+			"content": {
+				"id": "ALAS2-2024-2635",
+				"title": "Amazon Linux 2 2017.12 - ALAS2-2024-2635: important priority package update for microcode_ctl",
+				"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2023-49141:\n\tImproper isolation in some Intel(R) Processors stream cache mechanism may allow an authenticated user to potentially enable escalation of privilege via local access.\n",
+				"severity": [
+					{
+						"type": "vendor",
+						"source": "linux-security@amazon.com",
+						"vendor": "important"
+					}
+				],
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-49141"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "https://alas.aws.amazon.com/AL2/ALAS-2024-2635.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2"
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2023-49141",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-49141"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2"
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "microcode_ctl",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "2:2.1-47.amzn2.4.19"
+								}
+							],
+							"fixed": [
+								"2:2.1-47.amzn2.4.19"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "microcode_ctl-debuginfo",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "2:2.1-47.amzn2.4.19"
+								}
+							],
+							"fixed": [
+								"2:2.1-47.amzn2.4.19"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": {
+		"id": "amazon",
+		"raws": [
+			"vuls-data-raw-amazon/2/core/2024/ALAS2-2024-2635.json"
+		]
+	}
+}

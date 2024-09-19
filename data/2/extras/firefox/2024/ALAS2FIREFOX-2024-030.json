@@ -1,0 +1,254 @@
+{
+	"id": "ALAS2FIREFOX-2024-030",
+	"advisories": [
+		{
+			"content": {
+				"id": "ALAS2FIREFOX-2024-030",
+				"title": "Amazon Linux 2 - Firefox 2.0 - ALAS2FIREFOX-2024-030: important priority package update for firefox",
+				"description": "Package updates are available for Amazon Linux 2 - Firefox that fix the following vulnerabilities:\nCVE-2024-7531:\n\tCalling `PK11_Encrypt()` in NSS using CKM_CHACHA20 and the same buffer for input and output can result in plaintext on an Intel Sandy Bridge processor. In Firefox this only affects the QUIC header protection feature when the connection is using the ChaCha20-Poly1305 cipher suite. The most likely outcome is connection failure, but if the connection persists despite the high packet loss it could be possible for a network observer to identify packets as coming from the same source despite a network path change. This vulnerability affects Firefox < 129, Firefox ESR < 115.14, and Firefox ESR < 128.1.\n\nCVE-2024-7529:\n\tThe date picker could partially obscure security prompts. This could be used by a malicious site to trick a user into granting permissions. This vulnerability affects Firefox < 129, Firefox ESR < 115.14, Firefox ESR < 128.1, Thunderbird < 128.1, and Thunderbird < 115.14.\n\nCVE-2024-7527:\n\tUnexpected marking work at the start of sweeping could have led to a use-after-free. This vulnerability affects Firefox < 129, Firefox ESR < 115.14, Firefox ESR < 128.1, Thunderbird < 128.1, and Thunderbird < 115.14.\n\nCVE-2024-7526:\n\tANGLE failed to initialize parameters which led to reading from uninitialized memory. This could be leveraged to leak sensitive data from memory. This vulnerability affects Firefox < 129, Firefox ESR < 115.14, Firefox ESR < 128.1, Thunderbird < 128.1, and Thunderbird < 115.14.\n\nCVE-2024-7525:\n\tIt was possible for a web extension with minimal permissions to create a `StreamFilter` which could be used to read and modify the response body of requests on any site. This vulnerability affects Firefox < 129, Firefox ESR < 115.14, Firefox ESR < 128.1, Thunderbird < 128.1, and Thunderbird < 115.14.\n\nCVE-2024-7524:\n\tFirefox adds web-compatibility shims in place of some tracking scripts blocked by Enhanced Tracking Protection.  On a site protected by Content Security Policy in \"strict-dynamic\" mode, an attacker able to inject an HTML element could have used a DOM Clobbering attack on some of the shims and achieved XSS, bypassing the CSP strict-dynamic protection. This vulnerability affects Firefox < 129, Firefox ESR < 115.14, and Firefox ESR < 128.1.\n\nCVE-2024-7522:\n\tEditor code failed to check an attribute value. This could have led to an out-of-bounds read. This vulnerability affects Firefox < 129, Firefox ESR < 115.14, Firefox ESR < 128.1, Thunderbird < 128.1, and Thunderbird < 115.14.\n\nCVE-2024-7521:\n\tIncomplete WebAssembly exception handing could have led to a use-after-free. This vulnerability affects Firefox < 129, Firefox ESR < 115.14, and Firefox ESR < 128.1.\n\nCVE-2024-7519:\n\tInsufficient checks when processing graphics shared memory could have led to memory corruption. This could be leveraged by an attacker to perform a sandbox escape. This vulnerability affects Firefox < 129, Firefox ESR < 115.14, Firefox ESR < 128.1, Thunderbird < 128.1, and Thunderbird < 115.14.\n",
+				"severity": [
+					{
+						"type": "vendor",
+						"source": "linux-security@amazon.com",
+						"vendor": "important"
+					}
+				],
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-7519"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-7521"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-7522"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-7524"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-7525"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-7526"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-7527"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-7529"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-7531"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "https://alas.aws.amazon.com/AL2/ALASFIREFOX-2024-030.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2"
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2024-7519",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-7519"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-7521",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-7521"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-7522",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-7522"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-7524",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-7524"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-7525",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-7525"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-7526",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-7526"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-7527",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-7527"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-7529",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-7529"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-7531",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-7531"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2"
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "firefox",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2extra-firefox"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:115.14.0-1.amzn2.0.1"
+								}
+							],
+							"fixed": [
+								"0:115.14.0-1.amzn2.0.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "firefox-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2extra-firefox"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:115.14.0-1.amzn2.0.1"
+								}
+							],
+							"fixed": [
+								"0:115.14.0-1.amzn2.0.1"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": {
+		"id": "amazon",
+		"raws": [
+			"vuls-data-raw-amazon/2/extras/firefox/2024/ALAS2FIREFOX-2024-030.json"
+		]
+	}
+}

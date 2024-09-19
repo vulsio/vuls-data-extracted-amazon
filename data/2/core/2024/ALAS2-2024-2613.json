@@ -5,7 +5,7 @@
 			"content": {
 				"id": "ALAS2-2024-2613",
 				"title": "Amazon Linux 2 2017.12 - ALAS2-2024-2613: important priority package update for kernel",
-				"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2024-39480:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nkdb: Fix buffer overflow during tab-complete\n\nCVE-2024-37356:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\ntcp: Fix shift-out-of-bounds in dctcp_update_alpha().\n\nCVE-2024-37353:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nvirtio: delete vq in vp_find_vqs_msix() when request_irq() fails\n\nCVE-2024-36286:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nnetfilter: nfnetlink_queue: acquire rcu_read_lock() in instance_destroy_rcu()\n\nCVE-2024-33621:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nipvlan: Dont Use skb->sk in ipvlan_process_v{4,6}_outbound\n\nCVE-2023-52803:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nSUNRPC: Fix RPC client cleaned up the freed pipefs dentries\n",
+				"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2024-39480:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nkdb: Fix buffer overflow during tab-complete\n\nCVE-2024-37356:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\ntcp: Fix shift-out-of-bounds in dctcp_update_alpha().\n\nCVE-2024-37353:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nvirtio: delete vq in vp_find_vqs_msix() when request_irq() fails\n\nCVE-2024-36286:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nnetfilter: nfnetlink_queue: acquire rcu_read_lock() in instance_destroy_rcu()\n\nCVE-2024-33621:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nipvlan: Dont Use skb->sk in ipvlan_process_v{4,6}_outbound\n\nCVE-2023-52803:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nSUNRPC: Fix RPC client cleaned up the freed pipefs dentries\n\nCVE-2023-52796:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nipvlan: add ipvlan_route_v6_outbound() helper\n",
 				"severity": [
 					{
 						"type": "vendor",
@@ -14,6 +14,10 @@
 					}
 				],
 				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52796"
+					},
 					{
 						"source": "linux-security@amazon.com",
 						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52803"
@@ -50,6 +54,20 @@
 		}
 	],
 	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2023-52796",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52796"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2"
+			]
+		},
 		{
 			"content": {
 				"id": "CVE-2023-52803",
