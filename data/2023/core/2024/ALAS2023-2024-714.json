@@ -5,7 +5,7 @@
 			"content": {
 				"id": "ALAS2023-2024-714",
 				"title": "Amazon Linux 2023 - ALAS2023-2024-714: Important priority package update for kernel",
-				"description": "Package updates are available for Amazon Linux 2023 that fix the following vulnerabilities:\nCVE-2024-41087:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nata: libata-core: Fix double free on error\n",
+				"description": "Package updates are available for Amazon Linux 2023 that fix the following vulnerabilities:\nCVE-2024-42096:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nx86: stop playing stack games in profile_pc()\n\nCVE-2024-42090:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\npinctrl: fix deadlock in create_pinctrl() when handling -EPROBE_DEFER\n\nCVE-2024-42070:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nnetfilter: nf_tables: fully validate NFT_DATA_VALUE on store to data registers\n\nCVE-2024-42068:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nbpf: Take return from set_memory_ro() into account with bpf_prog_lock_ro()\n\nCVE-2024-42063:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nbpf: Mark bpf prog stack with kmsan_unposion_memory in interpreter mode\n\nCVE-2024-41092:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\ndrm/i915/gt: Fix potential UAF by revoke of fence registers\n\nCVE-2024-41087:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nata: libata-core: Fix double free on error\n\nCVE-2024-41009:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nbpf: Fix overrunning reservations in ringbuf\n\nCVE-2024-27397:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nnetfilter: nf_tables: use timestamp to check for set element timeout\n",
 				"severity": [
 					{
 						"type": "vendor",
@@ -16,7 +16,39 @@
 				"references": [
 					{
 						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27397"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41009"
+					},
+					{
+						"source": "linux-security@amazon.com",
 						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41087"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41092"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42063"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42068"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42070"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42090"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42096"
 					},
 					{
 						"source": "linux-security@amazon.com",
@@ -32,11 +64,123 @@
 	"vulnerabilities": [
 		{
 			"content": {
+				"id": "CVE-2024-27397",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27397"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2023"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-41009",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41009"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2023"
+			]
+		},
+		{
+			"content": {
 				"id": "CVE-2024-41087",
 				"references": [
 					{
 						"source": "linux-security@amazon.com",
 						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41087"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2023"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-41092",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41092"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2023"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-42063",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42063"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2023"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-42068",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42068"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2023"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-42070",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42070"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2023"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-42090",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42090"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2023"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-42096",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42096"
 					}
 				]
 			},
