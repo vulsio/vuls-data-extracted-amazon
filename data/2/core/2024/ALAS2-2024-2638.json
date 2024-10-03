@@ -1,11 +1,11 @@
 {
-	"id": "ALAS2FIREFOX-2024-029",
+	"id": "ALAS2-2024-2638",
 	"advisories": [
 		{
 			"content": {
-				"id": "ALAS2FIREFOX-2024-029",
-				"title": "Amazon Linux 2 - Firefox 2.0 - ALAS2FIREFOX-2024-029: important priority package update for firefox",
-				"description": "Package updates are available for Amazon Linux 2 - Firefox that fix the following vulnerabilities:\nCVE-2024-8384:\n\tThe JavaScript garbage collector could mis-color cross-compartment objects if OOM conditions were detected at the right point between two passes. This could have led to memory corruption. This vulnerability affects Firefox < 130, Firefox ESR < 128.2, and Firefox ESR < 115.15.\n\nCVE-2024-8383:\n\tThe Mozilla Foundation's Security Advisory reveals that Firefox didn't prompt for confirmation when handling Usenet schemes like news: and snews:, which could allow malicious programs to register as handlers. This oversight could enable a website to launch these programs without user consent.\n\nCVE-2024-8382:\n\tInternal browser event interfaces were exposed to web content when privileged EventHandler listener callbacks ran for those events. Web content that tried to use those interfaces would not be able to use them with elevated privileges, but their presence would indicate certain browser features had been used, such as when a user opened the Dev Tools console. This vulnerability affects Firefox < 130, Firefox ESR < 128.2, and Firefox ESR < 115.15.\n\nCVE-2024-8381:\n\tA potentially exploitable type confusion could be triggered when looking up a property name on an object being used as the `with` environment. This vulnerability affects Firefox < 130, Firefox ESR < 128.2, and Firefox ESR < 115.15.\n\nCVE-2024-7652:\n\tAn error in the ECMA-262 specification relating to Async Generators could have resulted in a type confusion, potentially leading to memory corruption and an exploitable crash. This vulnerability affects Firefox < 128, Firefox ESR < 115.13, Thunderbird < 115.13, and Thunderbird < 128.\n",
+				"id": "ALAS2-2024-2638",
+				"title": "Amazon Linux 2 2017.12 - ALAS2-2024-2638: important priority package update for thunderbird",
+				"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2024-8384:\n\tThe JavaScript garbage collector could mis-color cross-compartment objects if OOM conditions were detected at the right point between two passes. This could have led to memory corruption. This vulnerability affects Firefox < 130, Firefox ESR < 128.2, and Firefox ESR < 115.15.\n\nCVE-2024-8382:\n\tInternal browser event interfaces were exposed to web content when privileged EventHandler listener callbacks ran for those events. Web content that tried to use those interfaces would not be able to use them with elevated privileges, but their presence would indicate certain browser features had been used, such as when a user opened the Dev Tools console. This vulnerability affects Firefox < 130, Firefox ESR < 128.2, and Firefox ESR < 115.15.\n\nCVE-2024-8381:\n\tA potentially exploitable type confusion could be triggered when looking up a property name on an object being used as the `with` environment. This vulnerability affects Firefox < 130, Firefox ESR < 128.2, and Firefox ESR < 115.15.\n\nCVE-2024-7652:\n\tAn error in the ECMA-262 specification relating to Async Generators could have resulted in a type confusion, potentially leading to memory corruption and an exploitable crash. This vulnerability affects Firefox < 128, Firefox ESR < 115.13, Thunderbird < 115.13, and Thunderbird < 128.\n",
 				"severity": [
 					{
 						"type": "vendor",
@@ -28,15 +28,11 @@
 					},
 					{
 						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-8383"
-					},
-					{
-						"source": "linux-security@amazon.com",
 						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-8384"
 					},
 					{
 						"source": "linux-security@amazon.com",
-						"url": "https://alas.aws.amazon.com/AL2/ALASFIREFOX-2024-029.html"
+						"url": "https://alas.aws.amazon.com/AL2/ALAS-2024-2638.html"
 					}
 				]
 			},
@@ -90,20 +86,6 @@
 		},
 		{
 			"content": {
-				"id": "CVE-2024-8383",
-				"references": [
-					{
-						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-8383"
-					}
-				]
-			},
-			"ecosystems": [
-				"amazon:2"
-			]
-		},
-		{
-			"content": {
 				"id": "CVE-2024-8384",
 				"references": [
 					{
@@ -126,12 +108,12 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "firefox",
+							"name": "thunderbird",
 							"architectures": [
 								"aarch64"
 							],
 							"repositories": [
-								"amzn2extra-firefox"
+								"amzn2-core"
 							]
 						},
 						"affected": {
@@ -149,12 +131,12 @@
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "firefox-debuginfo",
+							"name": "thunderbird-debuginfo",
 							"architectures": [
 								"aarch64"
 							],
 							"repositories": [
-								"amzn2extra-firefox"
+								"amzn2-core"
 							]
 						},
 						"affected": {
@@ -176,7 +158,7 @@
 	"data_source": {
 		"id": "amazon",
 		"raws": [
-			"vuls-data-raw-amazon/2/extras/firefox/2024/ALAS2FIREFOX-2024-029.json"
+			"vuls-data-raw-amazon/2/core/2024/ALAS2-2024-2638.json"
 		]
 	}
 }
