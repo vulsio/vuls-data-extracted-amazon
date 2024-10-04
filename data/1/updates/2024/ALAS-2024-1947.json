@@ -1,0 +1,328 @@
+{
+	"id": "ALAS-2024-1947",
+	"advisories": [
+		{
+			"content": {
+				"id": "ALAS-2024-1947",
+				"title": "Amazon Linux AMI 2014.03 - ALAS-2024-1947: important priority package update for kernel",
+				"description": "Package updates are available for Amazon Linux AMI that fix the following vulnerabilities:\nCVE-2024-39494:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nima: Fix use-after-free on a dentry's dname.name\n",
+				"severity": [
+					{
+						"type": "vendor",
+						"source": "linux-security@amazon.com",
+						"vendor": "important"
+					}
+				],
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39494"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "https://alas.aws.amazon.com/ALAS-2024-1947.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:1"
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2024-39494",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39494"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:1"
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:1",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "kernel",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:4.14.352-190.568.amzn1"
+								}
+							],
+							"fixed": [
+								"0:4.14.352-190.568.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "kernel-debuginfo",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:4.14.352-190.568.amzn1"
+								}
+							],
+							"fixed": [
+								"0:4.14.352-190.568.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "kernel-debuginfo-common-i686",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:4.14.352-190.568.amzn1"
+								}
+							],
+							"fixed": [
+								"0:4.14.352-190.568.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "kernel-debuginfo-common-x86_64",
+							"architectures": [
+								"x86_64"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:4.14.352-190.568.amzn1"
+								}
+							],
+							"fixed": [
+								"0:4.14.352-190.568.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "kernel-devel",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:4.14.352-190.568.amzn1"
+								}
+							],
+							"fixed": [
+								"0:4.14.352-190.568.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "kernel-headers",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:4.14.352-190.568.amzn1"
+								}
+							],
+							"fixed": [
+								"0:4.14.352-190.568.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "kernel-tools",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:4.14.352-190.568.amzn1"
+								}
+							],
+							"fixed": [
+								"0:4.14.352-190.568.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "kernel-tools-debuginfo",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:4.14.352-190.568.amzn1"
+								}
+							],
+							"fixed": [
+								"0:4.14.352-190.568.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "kernel-tools-devel",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:4.14.352-190.568.amzn1"
+								}
+							],
+							"fixed": [
+								"0:4.14.352-190.568.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "perf",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:4.14.352-190.568.amzn1"
+								}
+							],
+							"fixed": [
+								"0:4.14.352-190.568.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "perf-debuginfo",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:4.14.352-190.568.amzn1"
+								}
+							],
+							"fixed": [
+								"0:4.14.352-190.568.amzn1"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": {
+		"id": "amazon",
+		"raws": [
+			"vuls-data-raw-amazon/1/updates/2024/ALAS-2024-1947.json"
+		]
+	}
+}
