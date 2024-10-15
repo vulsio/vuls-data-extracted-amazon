@@ -1,0 +1,179 @@
+{
+	"id": "ALAS2023-2024-736",
+	"advisories": [
+		{
+			"content": {
+				"id": "ALAS2023-2024-736",
+				"title": "Amazon Linux 2023 - ALAS2023-2024-736: Medium priority package update for libgcrypt",
+				"description": "Package updates are available for Amazon Linux 2023 that fix the following vulnerabilities:\nCVE-2024-2236:\n\tA timing-based side-channel flaw was found in libgcrypt's RSA implementation. This issue may allow a remote attacker to initiate a Bleichenbacher-style attack, which can lead to the decryption of RSA ciphertexts.\n",
+				"severity": [
+					{
+						"type": "vendor",
+						"source": "linux-security@amazon.com",
+						"vendor": "Medium"
+					}
+				],
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-2236"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "https://alas.aws.amazon.com/AL2023/ALAS-2024-736.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2023"
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2024-2236",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-2236"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2023"
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2023",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libgcrypt",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.10.2-1.amzn2023.0.2"
+								}
+							],
+							"fixed": [
+								"0:1.10.2-1.amzn2023.0.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libgcrypt-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.10.2-1.amzn2023.0.2"
+								}
+							],
+							"fixed": [
+								"0:1.10.2-1.amzn2023.0.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libgcrypt-debugsource",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.10.2-1.amzn2023.0.2"
+								}
+							],
+							"fixed": [
+								"0:1.10.2-1.amzn2023.0.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libgcrypt-devel",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.10.2-1.amzn2023.0.2"
+								}
+							],
+							"fixed": [
+								"0:1.10.2-1.amzn2023.0.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libgcrypt-devel-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:1.10.2-1.amzn2023.0.2"
+								}
+							],
+							"fixed": [
+								"0:1.10.2-1.amzn2023.0.2"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": {
+		"id": "amazon",
+		"raws": [
+			"vuls-data-raw-amazon/2023/core/2024/ALAS2023-2024-736.json"
+		]
+	}
+}

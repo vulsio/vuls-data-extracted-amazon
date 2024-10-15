@@ -1,0 +1,271 @@
+{
+	"id": "ALAS2023-2024-721",
+	"advisories": [
+		{
+			"content": {
+				"id": "ALAS2023-2024-721",
+				"title": "Amazon Linux 2023 - ALAS2023-2024-721: Medium priority package update for openssl",
+				"description": "Package updates are available for Amazon Linux 2023 that fix the following vulnerabilities:\nCVE-2024-6119:\n\tIssue summary: Applications performing certificate name checks (e.g., TLS\nclients checking server certificates) may attempt to read an invalid memory\naddress resulting in abnormal termination of the application process.\n\nImpact summary: Abnormal termination of an application can a cause a denial of\nservice.\n\nApplications performing certificate name checks (e.g., TLS clients checking\nserver certificates) may attempt to read an invalid memory address when\ncomparing the expected name with an `otherName` subject alternative name of an\nX.509 certificate. This may result in an exception that terminates the\napplication program.\n\nNote that basic certificate chain validation (signatures, dates, ...) is not\naffected, the denial of service can occur only when the application also\nspecifies an expected DNS name, Email address or IP address.\n\nTLS servers rarely solicit client certificates, and even when they do, they\ngenerally don't perform a name check against a reference identifier (expected\nidentity), but rather extract the presented identity after checking the\ncertificate chain.  So TLS servers are generally not affected and the severity\nof the issue is Moderate.\n\nThe FIPS modules in 3.3, 3.2, 3.1 and 3.0 are not affected by this issue.\n",
+				"severity": [
+					{
+						"type": "vendor",
+						"source": "linux-security@amazon.com",
+						"vendor": "Medium"
+					}
+				],
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-6119"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "https://alas.aws.amazon.com/AL2023/ALAS-2024-721.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2023"
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2024-6119",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-6119"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2023"
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2023",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "openssl",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:3.0.8-1.amzn2023.0.15"
+								}
+							],
+							"fixed": [
+								"1:3.0.8-1.amzn2023.0.15"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "openssl-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:3.0.8-1.amzn2023.0.15"
+								}
+							],
+							"fixed": [
+								"1:3.0.8-1.amzn2023.0.15"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "openssl-debugsource",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:3.0.8-1.amzn2023.0.15"
+								}
+							],
+							"fixed": [
+								"1:3.0.8-1.amzn2023.0.15"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "openssl-devel",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:3.0.8-1.amzn2023.0.15"
+								}
+							],
+							"fixed": [
+								"1:3.0.8-1.amzn2023.0.15"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "openssl-libs",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:3.0.8-1.amzn2023.0.15"
+								}
+							],
+							"fixed": [
+								"1:3.0.8-1.amzn2023.0.15"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "openssl-libs-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:3.0.8-1.amzn2023.0.15"
+								}
+							],
+							"fixed": [
+								"1:3.0.8-1.amzn2023.0.15"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "openssl-perl",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:3.0.8-1.amzn2023.0.15"
+								}
+							],
+							"fixed": [
+								"1:3.0.8-1.amzn2023.0.15"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "openssl-snapsafe-libs",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:3.0.8-1.amzn2023.0.15"
+								}
+							],
+							"fixed": [
+								"1:3.0.8-1.amzn2023.0.15"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "openssl-snapsafe-libs-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "1:3.0.8-1.amzn2023.0.15"
+								}
+							],
+							"fixed": [
+								"1:3.0.8-1.amzn2023.0.15"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": {
+		"id": "amazon",
+		"raws": [
+			"vuls-data-raw-amazon/2023/core/2024/ALAS2023-2024-721.json"
+		]
+	}
+}

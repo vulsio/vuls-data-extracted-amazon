@@ -1,0 +1,225 @@
+{
+	"id": "ALAS2023-2024-720",
+	"advisories": [
+		{
+			"content": {
+				"id": "ALAS2023-2024-720",
+				"title": "Amazon Linux 2023 - ALAS2023-2024-720: Medium priority package update for libtiff",
+				"description": "Package updates are available for Amazon Linux 2023 that fix the following vulnerabilities:\nCVE-2024-7006:\n\tlibtiff: NULL pointer dereference in tif_dirinfo.c\n",
+				"severity": [
+					{
+						"type": "vendor",
+						"source": "linux-security@amazon.com",
+						"vendor": "Medium"
+					}
+				],
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-7006"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "https://alas.aws.amazon.com/AL2023/ALAS-2024-720.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2023"
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2024-7006",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-7006"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2023"
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2023",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libtiff",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:4.4.0-4.amzn2023.0.19"
+								}
+							],
+							"fixed": [
+								"0:4.4.0-4.amzn2023.0.19"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libtiff-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:4.4.0-4.amzn2023.0.19"
+								}
+							],
+							"fixed": [
+								"0:4.4.0-4.amzn2023.0.19"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libtiff-debugsource",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:4.4.0-4.amzn2023.0.19"
+								}
+							],
+							"fixed": [
+								"0:4.4.0-4.amzn2023.0.19"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libtiff-devel",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:4.4.0-4.amzn2023.0.19"
+								}
+							],
+							"fixed": [
+								"0:4.4.0-4.amzn2023.0.19"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libtiff-static",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:4.4.0-4.amzn2023.0.19"
+								}
+							],
+							"fixed": [
+								"0:4.4.0-4.amzn2023.0.19"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libtiff-tools",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:4.4.0-4.amzn2023.0.19"
+								}
+							],
+							"fixed": [
+								"0:4.4.0-4.amzn2023.0.19"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "libtiff-tools-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:4.4.0-4.amzn2023.0.19"
+								}
+							],
+							"fixed": [
+								"0:4.4.0-4.amzn2023.0.19"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": {
+		"id": "amazon",
+		"raws": [
+			"vuls-data-raw-amazon/2023/core/2024/ALAS2023-2024-720.json"
+		]
+	}
+}
