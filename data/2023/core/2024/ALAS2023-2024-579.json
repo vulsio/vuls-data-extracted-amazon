@@ -5,7 +5,7 @@
 			"content": {
 				"id": "ALAS2023-2024-579",
 				"title": "Amazon Linux 2023 - ALAS2023-2024-579: Medium priority package update for libdwarf",
-				"description": "Package updates are available for Amazon Linux 2023 that fix the following vulnerabilities:\nCVE-2024-2002:\n\tIn a multiply-corrupted DWARF object libdwarf may try to dealloc(free) an allocation twice.\nResults are unpredictable and various. This has been a possibility since we added code to prevent leaks when generating 'unattached' Dwarf_Error records (where there is no Dwarf_Debug available at the point of error).\nThe problem was introduced in libdwarf-0.1.0 in 2021.\n",
+				"description": "Package updates are available for Amazon Linux 2023 that fix the following vulnerabilities:\nCVE-2024-31745:\n\tLibdwarf v0.9.1 was discovered to contain a heap use-after-free via the dw_empty_errlist_item function at /libdwarf/dwarf_alloc.c.\n\nCVE-2024-2002:\n\tIn a multiply-corrupted DWARF object libdwarf may try to dealloc(free) an allocation twice.\nResults are unpredictable and various. This has been a possibility since we added code to prevent leaks when generating 'unattached' Dwarf_Error records (where there is no Dwarf_Debug available at the point of error).\nThe problem was introduced in libdwarf-0.1.0 in 2021.\n",
 				"severity": [
 					{
 						"type": "vendor",
@@ -17,6 +17,10 @@
 					{
 						"source": "linux-security@amazon.com",
 						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-2002"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-31745"
 					},
 					{
 						"source": "linux-security@amazon.com",
@@ -37,6 +41,20 @@
 					{
 						"source": "linux-security@amazon.com",
 						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-2002"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2023"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-31745",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-31745"
 					}
 				]
 			},
