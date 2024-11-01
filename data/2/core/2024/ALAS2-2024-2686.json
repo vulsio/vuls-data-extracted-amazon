@@ -1,272 +1,237 @@
 {
-	"id": "ALAS-2020-1418",
+	"id": "ALAS2-2024-2686",
 	"advisories": [
 		{
 			"content": {
-				"id": "ALAS-2020-1418",
-				"title": "Amazon Linux AMI 2014.03 - ALAS-2020-1418: low priority package update for httpd24",
+				"id": "ALAS2-2024-2686",
+				"title": "Amazon Linux 2 2017.12 - ALAS2-2024-2686: medium priority package update for python",
+				"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2023-27043:\n\tThe email module of Python through 3.11.3 incorrectly parses e-mail addresses that contain a special character. The wrong portion of an RFC2822 header is identified as the value of the addr-spec. In some applications, an attacker can bypass a protection mechanism in which application access is granted only after verifying receipt of e-mail to a specific domain (e.g., only @company.example.com addresses may be used for signup). This occurs in email/_parseaddr.py in recent versions of Python.\n",
 				"severity": [
 					{
 						"type": "vendor",
 						"source": "linux-security@amazon.com",
-						"vendor": "low"
+						"vendor": "medium"
 					}
 				],
 				"references": [
 					{
 						"source": "linux-security@amazon.com",
-						"url": "https://alas.aws.amazon.com/ALAS-2020-1418.html"
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-27043"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "https://alas.aws.amazon.com/AL2/ALAS-2024-2686.html"
 					}
 				]
 			},
 			"ecosystems": [
-				"amazon:1"
+				"amazon:2"
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2023-27043",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-27043"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2"
 			]
 		}
 	],
 	"detection": [
 		{
-			"ecosystem": "amazon:1",
+			"ecosystem": "amazon:2",
 			"criteria": {
 				"operator": "OR",
 				"criterions": [
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "httpd24",
+							"name": "python",
 							"architectures": [
-								"i686"
+								"aarch64"
 							],
 							"repositories": [
-								"amzn-main",
-								"amzn-updates"
+								"amzn2-core"
 							]
 						},
 						"affected": {
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:2.4.46-1.90.amzn1"
+									"lt": "0:2.7.18-1.amzn2.0.9"
 								}
 							],
 							"fixed": [
-								"0:2.4.46-1.90.amzn1"
+								"0:2.7.18-1.amzn2.0.9"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "httpd24-debuginfo",
+							"name": "python-debug",
 							"architectures": [
-								"i686"
+								"aarch64"
 							],
 							"repositories": [
-								"amzn-main",
-								"amzn-updates"
+								"amzn2-core"
 							]
 						},
 						"affected": {
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:2.4.46-1.90.amzn1"
+									"lt": "0:2.7.18-1.amzn2.0.9"
 								}
 							],
 							"fixed": [
-								"0:2.4.46-1.90.amzn1"
+								"0:2.7.18-1.amzn2.0.9"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "httpd24-devel",
+							"name": "python-debuginfo",
 							"architectures": [
-								"i686"
+								"aarch64"
 							],
 							"repositories": [
-								"amzn-main",
-								"amzn-updates"
+								"amzn2-core"
 							]
 						},
 						"affected": {
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:2.4.46-1.90.amzn1"
+									"lt": "0:2.7.18-1.amzn2.0.9"
 								}
 							],
 							"fixed": [
-								"0:2.4.46-1.90.amzn1"
+								"0:2.7.18-1.amzn2.0.9"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "httpd24-manual",
+							"name": "python-devel",
 							"architectures": [
-								"noarch"
+								"aarch64"
 							],
 							"repositories": [
-								"amzn-main",
-								"amzn-updates"
+								"amzn2-core"
 							]
 						},
 						"affected": {
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:2.4.46-1.90.amzn1"
+									"lt": "0:2.7.18-1.amzn2.0.9"
 								}
 							],
 							"fixed": [
-								"0:2.4.46-1.90.amzn1"
+								"0:2.7.18-1.amzn2.0.9"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "httpd24-tools",
+							"name": "python-libs",
 							"architectures": [
-								"i686"
+								"aarch64"
 							],
 							"repositories": [
-								"amzn-main",
-								"amzn-updates"
+								"amzn2-core"
 							]
 						},
 						"affected": {
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:2.4.46-1.90.amzn1"
+									"lt": "0:2.7.18-1.amzn2.0.9"
 								}
 							],
 							"fixed": [
-								"0:2.4.46-1.90.amzn1"
+								"0:2.7.18-1.amzn2.0.9"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "mod24_ldap",
+							"name": "python-test",
 							"architectures": [
-								"i686"
+								"aarch64"
 							],
 							"repositories": [
-								"amzn-main",
-								"amzn-updates"
+								"amzn2-core"
 							]
 						},
 						"affected": {
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:2.4.46-1.90.amzn1"
+									"lt": "0:2.7.18-1.amzn2.0.9"
 								}
 							],
 							"fixed": [
-								"0:2.4.46-1.90.amzn1"
+								"0:2.7.18-1.amzn2.0.9"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "mod24_md",
+							"name": "python-tools",
 							"architectures": [
-								"i686"
+								"aarch64"
 							],
 							"repositories": [
-								"amzn-main",
-								"amzn-updates"
+								"amzn2-core"
 							]
 						},
 						"affected": {
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:2.4.46-1.90.amzn1"
+									"lt": "0:2.7.18-1.amzn2.0.9"
 								}
 							],
 							"fixed": [
-								"0:2.4.46-1.90.amzn1"
+								"0:2.7.18-1.amzn2.0.9"
 							]
 						}
 					},
 					{
 						"vulnerable": true,
 						"package": {
-							"name": "mod24_proxy_html",
+							"name": "tkinter",
 							"architectures": [
-								"i686"
+								"aarch64"
 							],
 							"repositories": [
-								"amzn-main",
-								"amzn-updates"
+								"amzn2-core"
 							]
 						},
 						"affected": {
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "1:2.4.46-1.90.amzn1"
+									"lt": "0:2.7.18-1.amzn2.0.9"
 								}
 							],
 							"fixed": [
-								"1:2.4.46-1.90.amzn1"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "mod24_session",
-							"architectures": [
-								"i686"
-							],
-							"repositories": [
-								"amzn-main",
-								"amzn-updates"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:2.4.46-1.90.amzn1"
-								}
-							],
-							"fixed": [
-								"0:2.4.46-1.90.amzn1"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"package": {
-							"name": "mod24_ssl",
-							"architectures": [
-								"i686"
-							],
-							"repositories": [
-								"amzn-main",
-								"amzn-updates"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "1:2.4.46-1.90.amzn1"
-								}
-							],
-							"fixed": [
-								"1:2.4.46-1.90.amzn1"
+								"0:2.7.18-1.amzn2.0.9"
 							]
 						}
 					}
@@ -277,7 +242,7 @@
 	"data_source": {
 		"id": "amazon",
 		"raws": [
-			"vuls-data-raw-amazon/1/updates/2020/ALAS-2020-1418.json"
+			"vuls-data-raw-amazon/2/core/2024/ALAS2-2024-2686.json"
 		]
 	}
 }

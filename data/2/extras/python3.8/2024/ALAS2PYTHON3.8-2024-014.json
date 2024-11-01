@@ -1,0 +1,248 @@
+{
+	"id": "ALAS2PYTHON3.8-2024-014",
+	"advisories": [
+		{
+			"content": {
+				"id": "ALAS2PYTHON3.8-2024-014",
+				"title": "Amazon Linux 2 - Python3.8 2.0 - ALAS2PYTHON3.8-2024-014: medium priority package update for python38",
+				"description": "Package updates are available for Amazon Linux 2 - Python3.8 that fix the following vulnerabilities:\nCVE-2023-27043:\n\tThe email module of Python through 3.11.3 incorrectly parses e-mail addresses that contain a special character. The wrong portion of an RFC2822 header is identified as the value of the addr-spec. In some applications, an attacker can bypass a protection mechanism in which application access is granted only after verifying receipt of e-mail to a specific domain (e.g., only @company.example.com addresses may be used for signup). This occurs in email/_parseaddr.py in recent versions of Python.\n",
+				"severity": [
+					{
+						"type": "vendor",
+						"source": "linux-security@amazon.com",
+						"vendor": "medium"
+					}
+				],
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-27043"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "https://alas.aws.amazon.com/AL2/ALASPYTHON3.8-2024-014.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2"
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2023-27043",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-27043"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2"
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "python38",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2extra-python3.8"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:3.8.16-1.amzn2.0.7"
+								}
+							],
+							"fixed": [
+								"0:3.8.16-1.amzn2.0.7"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "python38-debug",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2extra-python3.8"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:3.8.16-1.amzn2.0.7"
+								}
+							],
+							"fixed": [
+								"0:3.8.16-1.amzn2.0.7"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "python38-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2extra-python3.8"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:3.8.16-1.amzn2.0.7"
+								}
+							],
+							"fixed": [
+								"0:3.8.16-1.amzn2.0.7"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "python38-devel",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2extra-python3.8"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:3.8.16-1.amzn2.0.7"
+								}
+							],
+							"fixed": [
+								"0:3.8.16-1.amzn2.0.7"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "python38-libs",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2extra-python3.8"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:3.8.16-1.amzn2.0.7"
+								}
+							],
+							"fixed": [
+								"0:3.8.16-1.amzn2.0.7"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "python38-test",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2extra-python3.8"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:3.8.16-1.amzn2.0.7"
+								}
+							],
+							"fixed": [
+								"0:3.8.16-1.amzn2.0.7"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "python38-tkinter",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2extra-python3.8"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:3.8.16-1.amzn2.0.7"
+								}
+							],
+							"fixed": [
+								"0:3.8.16-1.amzn2.0.7"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "python38-tools",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2extra-python3.8"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:3.8.16-1.amzn2.0.7"
+								}
+							],
+							"fixed": [
+								"0:3.8.16-1.amzn2.0.7"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": {
+		"id": "amazon",
+		"raws": [
+			"vuls-data-raw-amazon/2/extras/python3.8/2024/ALAS2PYTHON3.8-2024-014.json"
+		]
+	}
+}

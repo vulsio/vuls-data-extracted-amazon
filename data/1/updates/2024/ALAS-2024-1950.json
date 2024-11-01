@@ -1,0 +1,166 @@
+{
+	"id": "ALAS-2024-1950",
+	"advisories": [
+		{
+			"content": {
+				"id": "ALAS-2024-1950",
+				"title": "Amazon Linux AMI 2014.03 - ALAS-2024-1950: important priority package update for microcode_ctl",
+				"description": "Package updates are available for Amazon Linux AMI that fix the following vulnerabilities:\nCVE-2024-24980:\n\tProtection mechanism failure in some 3rd, 4th, and 5th Generation Intel(R) Xeon(R) Processors may allow a privileged user to potentially enable escalation of privilege via local access.\n\nCVE-2024-24968:\n\tNOTE: https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-01097.html\nNOTE: https://github.com/intel/Intel-Linux-Processor-Microcode-Data-Files/releases/tag/microcode-20240910\nDEBIANBUG: [1081363]\n\nCVE-2024-24853:\n\tIncorrect behavior order in transition between executive monitor and SMI transfer monitor (STM) in some Intel(R) Processor may allow a privileged user to potentially enable escalation of privilege via local access.\n\nCVE-2024-23984:\n\tNOTE: https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-01103.html\nNOTE: https://github.com/intel/Intel-Linux-Processor-Microcode-Data-Files/releases/tag/microcode-20240910\nDEBIANBUG: [1081363]\n",
+				"severity": [
+					{
+						"type": "vendor",
+						"source": "linux-security@amazon.com",
+						"vendor": "important"
+					}
+				],
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-23984"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-24853"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-24968"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-24980"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "https://alas.aws.amazon.com/ALAS-2024-1950.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:1"
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2024-23984",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-23984"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:1"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-24853",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-24853"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:1"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-24968",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-24968"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:1"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-24980",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-24980"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:1"
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:1",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "microcode_ctl",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "2:2.1-47.44.amzn1"
+								}
+							],
+							"fixed": [
+								"2:2.1-47.44.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"package": {
+							"name": "microcode_ctl-debuginfo",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "2:2.1-47.44.amzn1"
+								}
+							],
+							"fixed": [
+								"2:2.1-47.44.amzn1"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": {
+		"id": "amazon",
+		"raws": [
+			"vuls-data-raw-amazon/1/updates/2024/ALAS-2024-1950.json"
+		]
+	}
+}

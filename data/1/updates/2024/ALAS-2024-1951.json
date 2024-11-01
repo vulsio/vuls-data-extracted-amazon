@@ -1,21 +1,78 @@
 {
-	"id": "ALAS-2020-1418",
+	"id": "ALAS-2024-1951",
 	"advisories": [
 		{
 			"content": {
-				"id": "ALAS-2020-1418",
-				"title": "Amazon Linux AMI 2014.03 - ALAS-2020-1418: low priority package update for httpd24",
+				"id": "ALAS-2024-1951",
+				"title": "Amazon Linux AMI 2014.03 - ALAS-2024-1951: important priority package update for httpd24",
+				"description": "Package updates are available for Amazon Linux AMI that fix the following vulnerabilities:\nCVE-2020-9490:\n\tA flaw was found in Apache httpd in versions prior to 2.4.46. A specially crafted Cache-Digest header triggers negative argument to memmove() that could lead to a crash and denial of service. The highest threat from this vulnerability is to system availability.\n\nCVE-2020-11993:\n\tA flaw was found in Apache httpd in versions 2.4.20 to 2.4.43. Logging using the wrong pool by mod_http2 at debug/trace log level may lead to potential crashes and denial of service. The highest threat from this vulnerability is to system availability.\n\nCVE-2020-11984:\n\tA flaw was found in Apache httpd in versions 2.4.32 to 2.4.46. The uwsgi protocol does not serialize more than 16K of HTTP header leading to resource exhaustion and denial of service. The highest threat from this vulnerability is to data confidentiality and integrity as well as system availability.\n",
 				"severity": [
 					{
 						"type": "vendor",
 						"source": "linux-security@amazon.com",
-						"vendor": "low"
+						"vendor": "important"
 					}
 				],
 				"references": [
 					{
 						"source": "linux-security@amazon.com",
-						"url": "https://alas.aws.amazon.com/ALAS-2020-1418.html"
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-11984"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-11993"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-9490"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "https://alas.aws.amazon.com/ALAS-2024-1951.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:1"
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2020-11984",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-11984"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:1"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2020-11993",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-11993"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:1"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2020-9490",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-9490"
 					}
 				]
 			},
@@ -277,7 +334,7 @@
 	"data_source": {
 		"id": "amazon",
 		"raws": [
-			"vuls-data-raw-amazon/1/updates/2020/ALAS-2020-1418.json"
+			"vuls-data-raw-amazon/1/updates/2024/ALAS-2024-1951.json"
 		]
 	}
 }
