@@ -4,27 +4,23 @@
 		{
 			"content": {
 				"id": "ALAS-2024-1951",
-				"title": "Amazon Linux AMI 2014.03 - ALAS-2024-1951: important priority package update for httpd24",
-				"description": "Package updates are available for Amazon Linux AMI that fix the following vulnerabilities:\nCVE-2020-9490:\n\tA flaw was found in Apache httpd in versions prior to 2.4.46. A specially crafted Cache-Digest header triggers negative argument to memmove() that could lead to a crash and denial of service. The highest threat from this vulnerability is to system availability.\n\nCVE-2020-11993:\n\tA flaw was found in Apache httpd in versions 2.4.20 to 2.4.43. Logging using the wrong pool by mod_http2 at debug/trace log level may lead to potential crashes and denial of service. The highest threat from this vulnerability is to system availability.\n\nCVE-2020-11984:\n\tA flaw was found in Apache httpd in versions 2.4.32 to 2.4.46. The uwsgi protocol does not serialize more than 16K of HTTP header leading to resource exhaustion and denial of service. The highest threat from this vulnerability is to data confidentiality and integrity as well as system availability.\n",
+				"title": "Amazon Linux AMI 2014.03 - ALAS-2024-1951: medium priority package update for kernel",
+				"description": "Package updates are available for Amazon Linux AMI that fix the following vulnerabilities:\nCVE-2022-3567:\n\tA vulnerability has been found in Linux Kernel and classified as problematic. This vulnerability affects the function inet6_stream_ops/inet6_dgram_ops of the component IPv6 Handler. The manipulation leads to race condition. It is recommended to apply a patch to fix this issue. VDB-211090 is the identifier assigned to this vulnerability.\n\nCVE-2022-3566:\n\tA vulnerability, which was classified as problematic, was found in Linux Kernel. This affects the function tcp_getsockopt/tcp_setsockopt of the component TCP Handler. The manipulation leads to race condition. It is recommended to apply a patch to fix this issue. The identifier VDB-211089 was assigned to this vulnerability.\n",
 				"severity": [
 					{
 						"type": "vendor",
 						"source": "linux-security@amazon.com",
-						"vendor": "important"
+						"vendor": "medium"
 					}
 				],
 				"references": [
 					{
 						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-11984"
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3566"
 					},
 					{
 						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-11993"
-					},
-					{
-						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-9490"
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3567"
 					},
 					{
 						"source": "linux-security@amazon.com",
@@ -40,11 +36,11 @@
 	"vulnerabilities": [
 		{
 			"content": {
-				"id": "CVE-2020-11984",
+				"id": "CVE-2022-3566",
 				"references": [
 					{
 						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-11984"
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3566"
 					}
 				]
 			},
@@ -54,25 +50,11 @@
 		},
 		{
 			"content": {
-				"id": "CVE-2020-11993",
+				"id": "CVE-2022-3567",
 				"references": [
 					{
 						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-11993"
-					}
-				]
-			},
-			"ecosystems": [
-				"amazon:1"
-			]
-		},
-		{
-			"content": {
-				"id": "CVE-2020-9490",
-				"references": [
-					{
-						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-9490"
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3567"
 					}
 				]
 			},
@@ -93,7 +75,7 @@
 							"class": "fixed"
 						},
 						"package": {
-							"name": "httpd24",
+							"name": "kernel",
 							"architectures": [
 								"i686"
 							],
@@ -106,11 +88,11 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:2.4.46-1.90.amzn1"
+									"lt": "0:4.14.350-188.564.amzn1"
 								}
 							],
 							"fixed": [
-								"0:2.4.46-1.90.amzn1"
+								"0:4.14.350-188.564.amzn1"
 							]
 						}
 					},
@@ -120,7 +102,7 @@
 							"class": "fixed"
 						},
 						"package": {
-							"name": "httpd24-debuginfo",
+							"name": "kernel-debuginfo",
 							"architectures": [
 								"i686"
 							],
@@ -133,11 +115,11 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:2.4.46-1.90.amzn1"
+									"lt": "0:4.14.350-188.564.amzn1"
 								}
 							],
 							"fixed": [
-								"0:2.4.46-1.90.amzn1"
+								"0:4.14.350-188.564.amzn1"
 							]
 						}
 					},
@@ -147,7 +129,7 @@
 							"class": "fixed"
 						},
 						"package": {
-							"name": "httpd24-devel",
+							"name": "kernel-debuginfo-common-i686",
 							"architectures": [
 								"i686"
 							],
@@ -160,11 +142,11 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:2.4.46-1.90.amzn1"
+									"lt": "0:4.14.350-188.564.amzn1"
 								}
 							],
 							"fixed": [
-								"0:2.4.46-1.90.amzn1"
+								"0:4.14.350-188.564.amzn1"
 							]
 						}
 					},
@@ -174,9 +156,9 @@
 							"class": "fixed"
 						},
 						"package": {
-							"name": "httpd24-manual",
+							"name": "kernel-debuginfo-common-x86_64",
 							"architectures": [
-								"noarch"
+								"x86_64"
 							],
 							"repositories": [
 								"amzn-main",
@@ -187,11 +169,11 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:2.4.46-1.90.amzn1"
+									"lt": "0:4.14.350-188.564.amzn1"
 								}
 							],
 							"fixed": [
-								"0:2.4.46-1.90.amzn1"
+								"0:4.14.350-188.564.amzn1"
 							]
 						}
 					},
@@ -201,34 +183,7 @@
 							"class": "fixed"
 						},
 						"package": {
-							"name": "httpd24-tools",
-							"architectures": [
-								"i686"
-							],
-							"repositories": [
-								"amzn-main",
-								"amzn-updates"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:2.4.46-1.90.amzn1"
-								}
-							],
-							"fixed": [
-								"0:2.4.46-1.90.amzn1"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "mod24_ldap",
+							"name": "kernel-devel",
 							"architectures": [
 								"i686"
 							],
@@ -241,11 +196,11 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:2.4.46-1.90.amzn1"
+									"lt": "0:4.14.350-188.564.amzn1"
 								}
 							],
 							"fixed": [
-								"0:2.4.46-1.90.amzn1"
+								"0:4.14.350-188.564.amzn1"
 							]
 						}
 					},
@@ -255,7 +210,7 @@
 							"class": "fixed"
 						},
 						"package": {
-							"name": "mod24_md",
+							"name": "kernel-headers",
 							"architectures": [
 								"i686"
 							],
@@ -268,11 +223,11 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:2.4.46-1.90.amzn1"
+									"lt": "0:4.14.350-188.564.amzn1"
 								}
 							],
 							"fixed": [
-								"0:2.4.46-1.90.amzn1"
+								"0:4.14.350-188.564.amzn1"
 							]
 						}
 					},
@@ -282,7 +237,7 @@
 							"class": "fixed"
 						},
 						"package": {
-							"name": "mod24_proxy_html",
+							"name": "kernel-tools",
 							"architectures": [
 								"i686"
 							],
@@ -295,11 +250,11 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "1:2.4.46-1.90.amzn1"
+									"lt": "0:4.14.350-188.564.amzn1"
 								}
 							],
 							"fixed": [
-								"1:2.4.46-1.90.amzn1"
+								"0:4.14.350-188.564.amzn1"
 							]
 						}
 					},
@@ -309,7 +264,7 @@
 							"class": "fixed"
 						},
 						"package": {
-							"name": "mod24_session",
+							"name": "kernel-tools-debuginfo",
 							"architectures": [
 								"i686"
 							],
@@ -322,11 +277,11 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:2.4.46-1.90.amzn1"
+									"lt": "0:4.14.350-188.564.amzn1"
 								}
 							],
 							"fixed": [
-								"0:2.4.46-1.90.amzn1"
+								"0:4.14.350-188.564.amzn1"
 							]
 						}
 					},
@@ -336,7 +291,7 @@
 							"class": "fixed"
 						},
 						"package": {
-							"name": "mod24_ssl",
+							"name": "kernel-tools-devel",
 							"architectures": [
 								"i686"
 							],
@@ -349,11 +304,65 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "1:2.4.46-1.90.amzn1"
+									"lt": "0:4.14.350-188.564.amzn1"
 								}
 							],
 							"fixed": [
-								"1:2.4.46-1.90.amzn1"
+								"0:4.14.350-188.564.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "fixed"
+						},
+						"package": {
+							"name": "perf",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:4.14.350-188.564.amzn1"
+								}
+							],
+							"fixed": [
+								"0:4.14.350-188.564.amzn1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "fixed"
+						},
+						"package": {
+							"name": "perf-debuginfo",
+							"architectures": [
+								"i686"
+							],
+							"repositories": [
+								"amzn-main",
+								"amzn-updates"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:4.14.350-188.564.amzn1"
+								}
+							],
+							"fixed": [
+								"0:4.14.350-188.564.amzn1"
 							]
 						}
 					}
