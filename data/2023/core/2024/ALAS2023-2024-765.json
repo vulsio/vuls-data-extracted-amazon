@@ -1,11 +1,11 @@
 {
-	"id": "ALAS2023-2024-709",
+	"id": "ALAS2023-2024-765",
 	"advisories": [
 		{
 			"content": {
-				"id": "ALAS2023-2024-709",
-				"title": "Amazon Linux 2023 - ALAS2023-2024-709: Medium priority package update for kernel",
-				"description": "Package updates are available for Amazon Linux 2023 that fix the following vulnerabilities:\nCVE-2024-44944:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nnetfilter: ctnetlink: use helper function to calculate expect ID\n\nCVE-2024-44934:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nnet: bridge: mcast: wait for previous gc cycles when removing port\n\nCVE-2024-43873:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nvhost/vsock: always initialize seqpacket_allow\n\nCVE-2024-43871:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\ndevres: Fix memory leakage caused by driver API devm_free_percpu()\n\nCVE-2024-43870:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nperf: Fix event leak upon exit\n\nCVE-2024-43869:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nperf: Fix event leak upon exec and file release\n\nCVE-2024-43823:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nPCI: keystone: Fix NULL pointer dereference in case of DT error in ks_pcie_setup_rc_app_regs()\n\nCVE-2024-42302:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nPCI/DPC: Fix use-after-free on concurrent DPC and hot-removal\n\nCVE-2024-42268:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nnet/mlx5: Fix missing lock on sync reset reload\n\nCVE-2024-42259:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\ndrm/i915/gem: Fix Virtual Memory mapping boundaries calculation\n\nCVE-2024-42258:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nmm: huge_memory: use !CONFIG_64BIT to relax huge page alignment on 32 bit machines\n\nCVE-2024-42159:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nscsi: mpi3mr: Sanitise num_phys\n",
+				"id": "ALAS2023-2024-765",
+				"title": "Amazon Linux 2023 - ALAS2023-2024-765: Medium priority package update for kernel",
+				"description": "Package updates are available for Amazon Linux 2023 that fix the following vulnerabilities:\nCVE-2024-47685:\n\tsyzbot reported that nf_reject_ip6_tcphdr_put() was possibly sending garbage on the four reserved tcp bits (th->res1)\n\nUse skb_put_zero() to clear the whole TCP header, as done in nf_reject_ip_tcphdr_put()\n\nCVE-2024-46695:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nselinux,smack: don't bypass permissions check in inode_setsecctx hook\n\nCVE-2024-38632:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nvfio/pci: fix potential memory leak in vfio_intx_enable()\n\nCVE-2024-35963:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nBluetooth: hci_sock: Fix not validating setsockopt user input\n",
 				"severity": [
 					{
 						"type": "vendor",
@@ -16,55 +16,23 @@
 				"references": [
 					{
 						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42159"
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35963"
 					},
 					{
 						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42258"
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38632"
 					},
 					{
 						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42259"
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46695"
 					},
 					{
 						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42268"
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-47685"
 					},
 					{
 						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42302"
-					},
-					{
-						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43823"
-					},
-					{
-						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43869"
-					},
-					{
-						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43870"
-					},
-					{
-						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43871"
-					},
-					{
-						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43873"
-					},
-					{
-						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-44934"
-					},
-					{
-						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-44944"
-					},
-					{
-						"source": "linux-security@amazon.com",
-						"url": "https://alas.aws.amazon.com/AL2023/ALAS-2024-709.html"
+						"url": "https://alas.aws.amazon.com/AL2023/ALAS-2024-765.html"
 					}
 				]
 			},
@@ -76,11 +44,11 @@
 	"vulnerabilities": [
 		{
 			"content": {
-				"id": "CVE-2024-42159",
+				"id": "CVE-2024-35963",
 				"references": [
 					{
 						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42159"
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35963"
 					}
 				]
 			},
@@ -90,11 +58,11 @@
 		},
 		{
 			"content": {
-				"id": "CVE-2024-42258",
+				"id": "CVE-2024-38632",
 				"references": [
 					{
 						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42258"
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38632"
 					}
 				]
 			},
@@ -104,11 +72,11 @@
 		},
 		{
 			"content": {
-				"id": "CVE-2024-42259",
+				"id": "CVE-2024-46695",
 				"references": [
 					{
 						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42259"
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46695"
 					}
 				]
 			},
@@ -118,123 +86,11 @@
 		},
 		{
 			"content": {
-				"id": "CVE-2024-42268",
+				"id": "CVE-2024-47685",
 				"references": [
 					{
 						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42268"
-					}
-				]
-			},
-			"ecosystems": [
-				"amazon:2023"
-			]
-		},
-		{
-			"content": {
-				"id": "CVE-2024-42302",
-				"references": [
-					{
-						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42302"
-					}
-				]
-			},
-			"ecosystems": [
-				"amazon:2023"
-			]
-		},
-		{
-			"content": {
-				"id": "CVE-2024-43823",
-				"references": [
-					{
-						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43823"
-					}
-				]
-			},
-			"ecosystems": [
-				"amazon:2023"
-			]
-		},
-		{
-			"content": {
-				"id": "CVE-2024-43869",
-				"references": [
-					{
-						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43869"
-					}
-				]
-			},
-			"ecosystems": [
-				"amazon:2023"
-			]
-		},
-		{
-			"content": {
-				"id": "CVE-2024-43870",
-				"references": [
-					{
-						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43870"
-					}
-				]
-			},
-			"ecosystems": [
-				"amazon:2023"
-			]
-		},
-		{
-			"content": {
-				"id": "CVE-2024-43871",
-				"references": [
-					{
-						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43871"
-					}
-				]
-			},
-			"ecosystems": [
-				"amazon:2023"
-			]
-		},
-		{
-			"content": {
-				"id": "CVE-2024-43873",
-				"references": [
-					{
-						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43873"
-					}
-				]
-			},
-			"ecosystems": [
-				"amazon:2023"
-			]
-		},
-		{
-			"content": {
-				"id": "CVE-2024-44934",
-				"references": [
-					{
-						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-44934"
-					}
-				]
-			},
-			"ecosystems": [
-				"amazon:2023"
-			]
-		},
-		{
-			"content": {
-				"id": "CVE-2024-44944",
-				"references": [
-					{
-						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-44944"
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-47685"
 					}
 				]
 			},
@@ -267,11 +123,11 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:6.1.106-116.188.amzn2023"
+									"lt": "0:6.1.115-126.197.amzn2023"
 								}
 							],
 							"fixed": [
-								"0:6.1.106-116.188.amzn2023"
+								"0:6.1.115-126.197.amzn2023"
 							]
 						}
 					},
@@ -293,11 +149,11 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:6.1.106-116.188.amzn2023"
+									"lt": "0:6.1.115-126.197.amzn2023"
 								}
 							],
 							"fixed": [
-								"0:6.1.106-116.188.amzn2023"
+								"0:6.1.115-126.197.amzn2023"
 							]
 						}
 					},
@@ -319,11 +175,11 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:6.1.106-116.188.amzn2023"
+									"lt": "0:6.1.115-126.197.amzn2023"
 								}
 							],
 							"fixed": [
-								"0:6.1.106-116.188.amzn2023"
+								"0:6.1.115-126.197.amzn2023"
 							]
 						}
 					},
@@ -345,11 +201,11 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:6.1.106-116.188.amzn2023"
+									"lt": "0:6.1.115-126.197.amzn2023"
 								}
 							],
 							"fixed": [
-								"0:6.1.106-116.188.amzn2023"
+								"0:6.1.115-126.197.amzn2023"
 							]
 						}
 					},
@@ -371,11 +227,11 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:6.1.106-116.188.amzn2023"
+									"lt": "0:6.1.115-126.197.amzn2023"
 								}
 							],
 							"fixed": [
-								"0:6.1.106-116.188.amzn2023"
+								"0:6.1.115-126.197.amzn2023"
 							]
 						}
 					},
@@ -397,11 +253,11 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:6.1.106-116.188.amzn2023"
+									"lt": "0:6.1.115-126.197.amzn2023"
 								}
 							],
 							"fixed": [
-								"0:6.1.106-116.188.amzn2023"
+								"0:6.1.115-126.197.amzn2023"
 							]
 						}
 					},
@@ -423,11 +279,11 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:6.1.106-116.188.amzn2023"
+									"lt": "0:6.1.115-126.197.amzn2023"
 								}
 							],
 							"fixed": [
-								"0:6.1.106-116.188.amzn2023"
+								"0:6.1.115-126.197.amzn2023"
 							]
 						}
 					},
@@ -449,11 +305,11 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:6.1.106-116.188.amzn2023"
+									"lt": "0:6.1.115-126.197.amzn2023"
 								}
 							],
 							"fixed": [
-								"0:6.1.106-116.188.amzn2023"
+								"0:6.1.115-126.197.amzn2023"
 							]
 						}
 					},
@@ -475,11 +331,11 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:6.1.106-116.188.amzn2023"
+									"lt": "0:6.1.115-126.197.amzn2023"
 								}
 							],
 							"fixed": [
-								"0:6.1.106-116.188.amzn2023"
+								"0:6.1.115-126.197.amzn2023"
 							]
 						}
 					},
@@ -501,11 +357,11 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:6.1.106-116.188.amzn2023"
+									"lt": "0:6.1.115-126.197.amzn2023"
 								}
 							],
 							"fixed": [
-								"0:6.1.106-116.188.amzn2023"
+								"0:6.1.115-126.197.amzn2023"
 							]
 						}
 					},
@@ -527,11 +383,11 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:6.1.106-116.188.amzn2023"
+									"lt": "0:6.1.115-126.197.amzn2023"
 								}
 							],
 							"fixed": [
-								"0:6.1.106-116.188.amzn2023"
+								"0:6.1.115-126.197.amzn2023"
 							]
 						}
 					},
@@ -541,7 +397,7 @@
 							"class": "fixed"
 						},
 						"package": {
-							"name": "kernel-livepatch-6.1.106-116.188",
+							"name": "kernel-livepatch-6.1.115-126.197",
 							"architectures": [
 								"aarch64"
 							],
@@ -579,11 +435,11 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:6.1.106-116.188.amzn2023"
+									"lt": "0:6.1.115-126.197.amzn2023"
 								}
 							],
 							"fixed": [
-								"0:6.1.106-116.188.amzn2023"
+								"0:6.1.115-126.197.amzn2023"
 							]
 						}
 					},
@@ -605,11 +461,11 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:6.1.106-116.188.amzn2023"
+									"lt": "0:6.1.115-126.197.amzn2023"
 								}
 							],
 							"fixed": [
-								"0:6.1.106-116.188.amzn2023"
+								"0:6.1.115-126.197.amzn2023"
 							]
 						}
 					},
@@ -631,11 +487,11 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:6.1.106-116.188.amzn2023"
+									"lt": "0:6.1.115-126.197.amzn2023"
 								}
 							],
 							"fixed": [
-								"0:6.1.106-116.188.amzn2023"
+								"0:6.1.115-126.197.amzn2023"
 							]
 						}
 					},
@@ -657,11 +513,11 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:6.1.106-116.188.amzn2023"
+									"lt": "0:6.1.115-126.197.amzn2023"
 								}
 							],
 							"fixed": [
-								"0:6.1.106-116.188.amzn2023"
+								"0:6.1.115-126.197.amzn2023"
 							]
 						}
 					},
@@ -683,11 +539,11 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:6.1.106-116.188.amzn2023"
+									"lt": "0:6.1.115-126.197.amzn2023"
 								}
 							],
 							"fixed": [
-								"0:6.1.106-116.188.amzn2023"
+								"0:6.1.115-126.197.amzn2023"
 							]
 						}
 					},
@@ -709,11 +565,11 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:6.1.106-116.188.amzn2023"
+									"lt": "0:6.1.115-126.197.amzn2023"
 								}
 							],
 							"fixed": [
-								"0:6.1.106-116.188.amzn2023"
+								"0:6.1.115-126.197.amzn2023"
 							]
 						}
 					},
@@ -735,11 +591,11 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:6.1.106-116.188.amzn2023"
+									"lt": "0:6.1.115-126.197.amzn2023"
 								}
 							],
 							"fixed": [
-								"0:6.1.106-116.188.amzn2023"
+								"0:6.1.115-126.197.amzn2023"
 							]
 						}
 					},
@@ -761,11 +617,11 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:6.1.106-116.188.amzn2023"
+									"lt": "0:6.1.115-126.197.amzn2023"
 								}
 							],
 							"fixed": [
-								"0:6.1.106-116.188.amzn2023"
+								"0:6.1.115-126.197.amzn2023"
 							]
 						}
 					},
@@ -787,11 +643,11 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:6.1.106-116.188.amzn2023"
+									"lt": "0:6.1.115-126.197.amzn2023"
 								}
 							],
 							"fixed": [
-								"0:6.1.106-116.188.amzn2023"
+								"0:6.1.115-126.197.amzn2023"
 							]
 						}
 					}
@@ -802,7 +658,7 @@
 	"data_source": {
 		"id": "amazon",
 		"raws": [
-			"vuls-data-raw-amazon/2023/core/2024/ALAS2023-2024-709.json"
+			"vuls-data-raw-amazon/2023/core/2024/ALAS2023-2024-765.json"
 		]
 	}
 }

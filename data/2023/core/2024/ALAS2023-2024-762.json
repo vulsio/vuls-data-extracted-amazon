@@ -1,0 +1,116 @@
+{
+	"id": "ALAS2023-2024-762",
+	"advisories": [
+		{
+			"content": {
+				"id": "ALAS2023-2024-762",
+				"title": "Amazon Linux 2023 - ALAS2023-2024-762: Medium priority package update for python3.11-pip",
+				"description": "Package updates are available for Amazon Linux 2023 that fix the following vulnerabilities:\nCVE-2024-3651:\n\tpython-idna: potential DoS via resource consumption via specially crafted inputs to idna.encode()\n",
+				"severity": [
+					{
+						"type": "vendor",
+						"source": "linux-security@amazon.com",
+						"vendor": "Medium"
+					}
+				],
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-3651"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "https://alas.aws.amazon.com/AL2023/ALAS-2024-762.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2023"
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2024-3651",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-3651"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2023"
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2023",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "fixed"
+						},
+						"package": {
+							"name": "python3.11-pip",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:22.3.1-2.amzn2023.0.4"
+								}
+							],
+							"fixed": [
+								"0:22.3.1-2.amzn2023.0.4"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "fixed"
+						},
+						"package": {
+							"name": "python3.11-pip-wheel",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:22.3.1-2.amzn2023.0.4"
+								}
+							],
+							"fixed": [
+								"0:22.3.1-2.amzn2023.0.4"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": {
+		"id": "amazon",
+		"raws": [
+			"vuls-data-raw-amazon/2023/core/2024/ALAS2023-2024-762.json"
+		]
+	}
+}

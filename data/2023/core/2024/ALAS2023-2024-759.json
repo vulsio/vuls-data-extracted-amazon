@@ -1,0 +1,212 @@
+{
+	"id": "ALAS2023-2024-759",
+	"advisories": [
+		{
+			"content": {
+				"id": "ALAS2023-2024-759",
+				"title": "Amazon Linux 2023 - ALAS2023-2024-759: Important priority package update for expat",
+				"description": "Package updates are available for Amazon Linux 2023 that fix the following vulnerabilities:\nCVE-2024-45490:\n\tAn issue was discovered in libexpat before 2.6.3. xmlparse.c does not reject a negative length for XML_ParseBuffer.\n\nCVE-2023-52425:\n\tlibexpat through 2.5.0 allows a denial of service (resource consumption) because many full reparsings are required in the case of a large token for which multiple buffer fills are needed.\n\nConsidering the tradeoff between the stability of Amazon Linux and the impact of CVE-2023-52425 a fix will not be provided for firefox and thunderbird in Amazon Linux 2 at this time.\n",
+				"severity": [
+					{
+						"type": "vendor",
+						"source": "linux-security@amazon.com",
+						"vendor": "Important"
+					}
+				],
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52425"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-45490"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "https://alas.aws.amazon.com/AL2023/ALAS-2024-759.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2023"
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2023-52425",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52425"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2023"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-45490",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-45490"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2023"
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2023",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "fixed"
+						},
+						"package": {
+							"name": "expat",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.6.3-1.amzn2023.0.1"
+								}
+							],
+							"fixed": [
+								"0:2.6.3-1.amzn2023.0.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "fixed"
+						},
+						"package": {
+							"name": "expat-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.6.3-1.amzn2023.0.1"
+								}
+							],
+							"fixed": [
+								"0:2.6.3-1.amzn2023.0.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "fixed"
+						},
+						"package": {
+							"name": "expat-debugsource",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.6.3-1.amzn2023.0.1"
+								}
+							],
+							"fixed": [
+								"0:2.6.3-1.amzn2023.0.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "fixed"
+						},
+						"package": {
+							"name": "expat-devel",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.6.3-1.amzn2023.0.1"
+								}
+							],
+							"fixed": [
+								"0:2.6.3-1.amzn2023.0.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "fixed"
+						},
+						"package": {
+							"name": "expat-static",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.6.3-1.amzn2023.0.1"
+								}
+							],
+							"fixed": [
+								"0:2.6.3-1.amzn2023.0.1"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": {
+		"id": "amazon",
+		"raws": [
+			"vuls-data-raw-amazon/2023/core/2024/ALAS2023-2024-759.json"
+		]
+	}
+}

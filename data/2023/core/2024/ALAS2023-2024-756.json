@@ -1,0 +1,402 @@
+{
+	"id": "ALAS2023-2024-756",
+	"advisories": [
+		{
+			"content": {
+				"id": "ALAS2023-2024-756",
+				"title": "Amazon Linux 2023 - ALAS2023-2024-756: Important priority package update for xorg-x11-server",
+				"description": "Package updates are available for Amazon Linux 2023 that fix the following vulnerabilities:\nCVE-2024-9632:\n\tA flaw was found in the X.org server. Due to improperly tracked allocation size in _XkbSetCompatMap, a local attacker may be able to trigger a buffer overflow condition via a specially crafted payload, leading to denial of service or local privilege escalation in distributions where the X.org server is run with root privileges.\n",
+				"severity": [
+					{
+						"type": "vendor",
+						"source": "linux-security@amazon.com",
+						"vendor": "Important"
+					}
+				],
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-9632"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "https://alas.aws.amazon.com/AL2023/ALAS-2024-756.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2023"
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2024-9632",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-9632"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2023"
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2023",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "fixed"
+						},
+						"package": {
+							"name": "xorg-x11-server-Xephyr",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:21.1.13-5.amzn2023.0.2"
+								}
+							],
+							"fixed": [
+								"0:21.1.13-5.amzn2023.0.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "fixed"
+						},
+						"package": {
+							"name": "xorg-x11-server-Xephyr-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:21.1.13-5.amzn2023.0.2"
+								}
+							],
+							"fixed": [
+								"0:21.1.13-5.amzn2023.0.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "fixed"
+						},
+						"package": {
+							"name": "xorg-x11-server-Xnest",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:21.1.13-5.amzn2023.0.2"
+								}
+							],
+							"fixed": [
+								"0:21.1.13-5.amzn2023.0.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "fixed"
+						},
+						"package": {
+							"name": "xorg-x11-server-Xnest-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:21.1.13-5.amzn2023.0.2"
+								}
+							],
+							"fixed": [
+								"0:21.1.13-5.amzn2023.0.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "fixed"
+						},
+						"package": {
+							"name": "xorg-x11-server-Xorg",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:21.1.13-5.amzn2023.0.2"
+								}
+							],
+							"fixed": [
+								"0:21.1.13-5.amzn2023.0.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "fixed"
+						},
+						"package": {
+							"name": "xorg-x11-server-Xorg-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:21.1.13-5.amzn2023.0.2"
+								}
+							],
+							"fixed": [
+								"0:21.1.13-5.amzn2023.0.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "fixed"
+						},
+						"package": {
+							"name": "xorg-x11-server-Xvfb",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:21.1.13-5.amzn2023.0.2"
+								}
+							],
+							"fixed": [
+								"0:21.1.13-5.amzn2023.0.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "fixed"
+						},
+						"package": {
+							"name": "xorg-x11-server-Xvfb-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:21.1.13-5.amzn2023.0.2"
+								}
+							],
+							"fixed": [
+								"0:21.1.13-5.amzn2023.0.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "fixed"
+						},
+						"package": {
+							"name": "xorg-x11-server-common",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:21.1.13-5.amzn2023.0.2"
+								}
+							],
+							"fixed": [
+								"0:21.1.13-5.amzn2023.0.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "fixed"
+						},
+						"package": {
+							"name": "xorg-x11-server-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:21.1.13-5.amzn2023.0.2"
+								}
+							],
+							"fixed": [
+								"0:21.1.13-5.amzn2023.0.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "fixed"
+						},
+						"package": {
+							"name": "xorg-x11-server-debugsource",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:21.1.13-5.amzn2023.0.2"
+								}
+							],
+							"fixed": [
+								"0:21.1.13-5.amzn2023.0.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "fixed"
+						},
+						"package": {
+							"name": "xorg-x11-server-devel",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:21.1.13-5.amzn2023.0.2"
+								}
+							],
+							"fixed": [
+								"0:21.1.13-5.amzn2023.0.2"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "fixed"
+						},
+						"package": {
+							"name": "xorg-x11-server-source",
+							"architectures": [
+								"noarch"
+							],
+							"repositories": [
+								"amazonlinux"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:21.1.13-5.amzn2023.0.2"
+								}
+							],
+							"fixed": [
+								"0:21.1.13-5.amzn2023.0.2"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": {
+		"id": "amazon",
+		"raws": [
+			"vuls-data-raw-amazon/2023/core/2024/ALAS2023-2024-756.json"
+		]
+	}
+}
