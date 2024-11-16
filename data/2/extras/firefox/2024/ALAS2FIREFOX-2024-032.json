@@ -1,0 +1,152 @@
+{
+	"id": "ALAS2FIREFOX-2024-032",
+	"advisories": [
+		{
+			"content": {
+				"id": "ALAS2FIREFOX-2024-032",
+				"title": "Amazon Linux 2 - Firefox 2.0 - ALAS2FIREFOX-2024-032: important priority package update for firefox",
+				"description": "Package updates are available for Amazon Linux 2 - Firefox that fix the following vulnerabilities:\nCVE-2024-10463:\n\tVideo frames could have been leaked between origins in some situations. This vulnerability affects Firefox < 132, Firefox ESR < 128.4, Firefox ESR < 115.17, Thunderbird < 128.4, and Thunderbird < 132.\n\nCVE-2024-10459:\n\tAn attacker could have caused a use-after-free when accessibility was enabled, leading to a potentially exploitable crash. This vulnerability affects Firefox < 132, Firefox ESR < 128.4, Firefox ESR < 115.17, Thunderbird < 128.4, and Thunderbird < 132.\n\nCVE-2024-10458:\n\tA permission leak could have occurred from a trusted site to an untrusted site via `embed` or `object` elements. This vulnerability affects Firefox < 132, Firefox ESR < 128.4, Firefox ESR < 115.17, Thunderbird < 128.4, and Thunderbird < 132.\n",
+				"severity": [
+					{
+						"type": "vendor",
+						"source": "linux-security@amazon.com",
+						"vendor": "important"
+					}
+				],
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-10458"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-10459"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-10463"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "https://alas.aws.amazon.com/AL2/ALASFIREFOX-2024-032.html"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2"
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2024-10458",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-10458"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-10459",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-10459"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2"
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-10463",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-10463"
+					}
+				]
+			},
+			"ecosystems": [
+				"amazon:2"
+			]
+		}
+	],
+	"detection": [
+		{
+			"ecosystem": "amazon:2",
+			"criteria": {
+				"operator": "OR",
+				"criterions": [
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "fixed"
+						},
+						"package": {
+							"name": "firefox",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2extra-firefox"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:115.17.0-1.amzn2.0.1"
+								}
+							],
+							"fixed": [
+								"0:115.17.0-1.amzn2.0.1"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "fixed"
+						},
+						"package": {
+							"name": "firefox-debuginfo",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2extra-firefox"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:115.17.0-1.amzn2.0.1"
+								}
+							],
+							"fixed": [
+								"0:115.17.0-1.amzn2.0.1"
+							]
+						}
+					}
+				]
+			}
+		}
+	],
+	"data_source": {
+		"id": "amazon",
+		"raws": [
+			"vuls-data-raw-amazon/2/extras/firefox/2024/ALAS2FIREFOX-2024-032.json"
+		]
+	}
+}

@@ -1,46 +1,26 @@
 {
-	"id": "ALAS2-2024-2622",
+	"id": "ALAS2-2024-2693",
 	"advisories": [
 		{
 			"content": {
-				"id": "ALAS2-2024-2622",
-				"title": "Amazon Linux 2 2017.12 - ALAS2-2024-2622: medium priority package update for kernel",
-				"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2024-42090:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\npinctrl: fix deadlock in create_pinctrl() when handling -EPROBE_DEFER\n\nCVE-2024-42070:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nnetfilter: nf_tables: fully validate NFT_DATA_VALUE on store to data registers\n\nCVE-2024-38619:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nusb-storage: alauda: Check whether the media is initialized\n\nCVE-2024-36971:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nnet: fix __dst_negative_advice() race\n\nCVE-2022-3567:\n\tA vulnerability has been found in Linux Kernel and classified as problematic. This vulnerability affects the function inet6_stream_ops/inet6_dgram_ops of the component IPv6 Handler. The manipulation leads to race condition. It is recommended to apply a patch to fix this issue. VDB-211090 is the identifier assigned to this vulnerability.\n\nCVE-2022-3566:\n\tA vulnerability, which was classified as problematic, was found in Linux Kernel. This affects the function tcp_getsockopt/tcp_setsockopt of the component TCP Handler. The manipulation leads to race condition. It is recommended to apply a patch to fix this issue. The identifier VDB-211089 was assigned to this vulnerability.\n",
+				"id": "ALAS2-2024-2693",
+				"title": "Amazon Linux 2 2017.12 - ALAS2-2024-2693: important priority package update for protobuf",
+				"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2024-7254:\n\tAny project that parses untrusted Protocol Buffers data containing an arbitrary number of nested groups / series of SGROUP tags can corrupted by exceeding the stack limit i.e. StackOverflow. Parsing nested groups as unknown fields with DiscardUnknownFieldsParser or Java Protobuf Lite parser, or against Protobuf map fields, creates unbounded recursions that can be abused by an attacker.\n",
 				"severity": [
 					{
 						"type": "vendor",
 						"source": "linux-security@amazon.com",
-						"vendor": "medium"
+						"vendor": "important"
 					}
 				],
 				"references": [
 					{
 						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3566"
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-7254"
 					},
 					{
 						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3567"
-					},
-					{
-						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36971"
-					},
-					{
-						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38619"
-					},
-					{
-						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42070"
-					},
-					{
-						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42090"
-					},
-					{
-						"source": "linux-security@amazon.com",
-						"url": "https://alas.aws.amazon.com/AL2/ALAS-2024-2622.html"
+						"url": "https://alas.aws.amazon.com/AL2/ALAS-2024-2693.html"
 					}
 				]
 			},
@@ -52,81 +32,11 @@
 	"vulnerabilities": [
 		{
 			"content": {
-				"id": "CVE-2022-3566",
+				"id": "CVE-2024-7254",
 				"references": [
 					{
 						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3566"
-					}
-				]
-			},
-			"ecosystems": [
-				"amazon:2"
-			]
-		},
-		{
-			"content": {
-				"id": "CVE-2022-3567",
-				"references": [
-					{
-						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3567"
-					}
-				]
-			},
-			"ecosystems": [
-				"amazon:2"
-			]
-		},
-		{
-			"content": {
-				"id": "CVE-2024-36971",
-				"references": [
-					{
-						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36971"
-					}
-				]
-			},
-			"ecosystems": [
-				"amazon:2"
-			]
-		},
-		{
-			"content": {
-				"id": "CVE-2024-38619",
-				"references": [
-					{
-						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38619"
-					}
-				]
-			},
-			"ecosystems": [
-				"amazon:2"
-			]
-		},
-		{
-			"content": {
-				"id": "CVE-2024-42070",
-				"references": [
-					{
-						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42070"
-					}
-				]
-			},
-			"ecosystems": [
-				"amazon:2"
-			]
-		},
-		{
-			"content": {
-				"id": "CVE-2024-42090",
-				"references": [
-					{
-						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42090"
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-7254"
 					}
 				]
 			},
@@ -147,7 +57,7 @@
 							"class": "fixed"
 						},
 						"package": {
-							"name": "kernel",
+							"name": "protobuf",
 							"architectures": [
 								"aarch64"
 							],
@@ -159,11 +69,11 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:4.14.350-266.564.amzn2"
+									"lt": "0:2.5.0-8.amzn2.0.5"
 								}
 							],
 							"fixed": [
-								"0:4.14.350-266.564.amzn2"
+								"0:2.5.0-8.amzn2.0.5"
 							]
 						}
 					},
@@ -173,7 +83,7 @@
 							"class": "fixed"
 						},
 						"package": {
-							"name": "kernel-debuginfo",
+							"name": "protobuf-compiler",
 							"architectures": [
 								"aarch64"
 							],
@@ -185,11 +95,11 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:4.14.350-266.564.amzn2"
+									"lt": "0:2.5.0-8.amzn2.0.5"
 								}
 							],
 							"fixed": [
-								"0:4.14.350-266.564.amzn2"
+								"0:2.5.0-8.amzn2.0.5"
 							]
 						}
 					},
@@ -199,7 +109,7 @@
 							"class": "fixed"
 						},
 						"package": {
-							"name": "kernel-debuginfo-common-aarch64",
+							"name": "protobuf-debuginfo",
 							"architectures": [
 								"aarch64"
 							],
@@ -211,11 +121,11 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:4.14.350-266.564.amzn2"
+									"lt": "0:2.5.0-8.amzn2.0.5"
 								}
 							],
 							"fixed": [
-								"0:4.14.350-266.564.amzn2"
+								"0:2.5.0-8.amzn2.0.5"
 							]
 						}
 					},
@@ -225,33 +135,7 @@
 							"class": "fixed"
 						},
 						"package": {
-							"name": "kernel-debuginfo-common-x86_64",
-							"architectures": [
-								"x86_64"
-							],
-							"repositories": [
-								"amzn2-core"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:4.14.350-266.564.amzn2"
-								}
-							],
-							"fixed": [
-								"0:4.14.350-266.564.amzn2"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "kernel-devel",
+							"name": "protobuf-devel",
 							"architectures": [
 								"aarch64"
 							],
@@ -263,11 +147,11 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:4.14.350-266.564.amzn2"
+									"lt": "0:2.5.0-8.amzn2.0.5"
 								}
 							],
 							"fixed": [
-								"0:4.14.350-266.564.amzn2"
+								"0:2.5.0-8.amzn2.0.5"
 							]
 						}
 					},
@@ -277,7 +161,7 @@
 							"class": "fixed"
 						},
 						"package": {
-							"name": "kernel-headers",
+							"name": "protobuf-emacs",
 							"architectures": [
 								"aarch64"
 							],
@@ -289,11 +173,11 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:4.14.350-266.564.amzn2"
+									"lt": "0:2.5.0-8.amzn2.0.5"
 								}
 							],
 							"fixed": [
-								"0:4.14.350-266.564.amzn2"
+								"0:2.5.0-8.amzn2.0.5"
 							]
 						}
 					},
@@ -303,33 +187,7 @@
 							"class": "fixed"
 						},
 						"package": {
-							"name": "kernel-livepatch-4.14.350-266.564",
-							"architectures": [
-								"x86_64"
-							],
-							"repositories": [
-								"amzn2-core"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:1.0-0.amzn2"
-								}
-							],
-							"fixed": [
-								"0:1.0-0.amzn2"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "kernel-tools",
+							"name": "protobuf-emacs-el",
 							"architectures": [
 								"aarch64"
 							],
@@ -341,11 +199,11 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:4.14.350-266.564.amzn2"
+									"lt": "0:2.5.0-8.amzn2.0.5"
 								}
 							],
 							"fixed": [
-								"0:4.14.350-266.564.amzn2"
+								"0:2.5.0-8.amzn2.0.5"
 							]
 						}
 					},
@@ -355,7 +213,7 @@
 							"class": "fixed"
 						},
 						"package": {
-							"name": "kernel-tools-debuginfo",
+							"name": "protobuf-java",
 							"architectures": [
 								"aarch64"
 							],
@@ -367,11 +225,11 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:4.14.350-266.564.amzn2"
+									"lt": "0:2.5.0-8.amzn2.0.5"
 								}
 							],
 							"fixed": [
-								"0:4.14.350-266.564.amzn2"
+								"0:2.5.0-8.amzn2.0.5"
 							]
 						}
 					},
@@ -381,7 +239,7 @@
 							"class": "fixed"
 						},
 						"package": {
-							"name": "kernel-tools-devel",
+							"name": "protobuf-javadoc",
 							"architectures": [
 								"aarch64"
 							],
@@ -393,11 +251,11 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:4.14.350-266.564.amzn2"
+									"lt": "0:2.5.0-8.amzn2.0.5"
 								}
 							],
 							"fixed": [
-								"0:4.14.350-266.564.amzn2"
+								"0:2.5.0-8.amzn2.0.5"
 							]
 						}
 					},
@@ -407,7 +265,7 @@
 							"class": "fixed"
 						},
 						"package": {
-							"name": "perf",
+							"name": "protobuf-lite",
 							"architectures": [
 								"aarch64"
 							],
@@ -419,11 +277,11 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:4.14.350-266.564.amzn2"
+									"lt": "0:2.5.0-8.amzn2.0.5"
 								}
 							],
 							"fixed": [
-								"0:4.14.350-266.564.amzn2"
+								"0:2.5.0-8.amzn2.0.5"
 							]
 						}
 					},
@@ -433,7 +291,7 @@
 							"class": "fixed"
 						},
 						"package": {
-							"name": "perf-debuginfo",
+							"name": "protobuf-lite-devel",
 							"architectures": [
 								"aarch64"
 							],
@@ -445,11 +303,11 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:4.14.350-266.564.amzn2"
+									"lt": "0:2.5.0-8.amzn2.0.5"
 								}
 							],
 							"fixed": [
-								"0:4.14.350-266.564.amzn2"
+								"0:2.5.0-8.amzn2.0.5"
 							]
 						}
 					},
@@ -459,7 +317,7 @@
 							"class": "fixed"
 						},
 						"package": {
-							"name": "python-perf",
+							"name": "protobuf-lite-static",
 							"architectures": [
 								"aarch64"
 							],
@@ -471,11 +329,11 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:4.14.350-266.564.amzn2"
+									"lt": "0:2.5.0-8.amzn2.0.5"
 								}
 							],
 							"fixed": [
-								"0:4.14.350-266.564.amzn2"
+								"0:2.5.0-8.amzn2.0.5"
 							]
 						}
 					},
@@ -485,7 +343,7 @@
 							"class": "fixed"
 						},
 						"package": {
-							"name": "python-perf-debuginfo",
+							"name": "protobuf-python",
 							"architectures": [
 								"aarch64"
 							],
@@ -497,11 +355,63 @@
 							"type": "rpm",
 							"range": [
 								{
-									"lt": "0:4.14.350-266.564.amzn2"
+									"lt": "0:2.5.0-8.amzn2.0.5"
 								}
 							],
 							"fixed": [
-								"0:4.14.350-266.564.amzn2"
+								"0:2.5.0-8.amzn2.0.5"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "fixed"
+						},
+						"package": {
+							"name": "protobuf-static",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.5.0-8.amzn2.0.5"
+								}
+							],
+							"fixed": [
+								"0:2.5.0-8.amzn2.0.5"
+							]
+						}
+					},
+					{
+						"vulnerable": true,
+						"fix_status": {
+							"class": "fixed"
+						},
+						"package": {
+							"name": "protobuf-vim",
+							"architectures": [
+								"aarch64"
+							],
+							"repositories": [
+								"amzn2-core"
+							]
+						},
+						"affected": {
+							"type": "rpm",
+							"range": [
+								{
+									"lt": "0:2.5.0-8.amzn2.0.5"
+								}
+							],
+							"fixed": [
+								"0:2.5.0-8.amzn2.0.5"
 							]
 						}
 					}
@@ -512,7 +422,7 @@
 	"data_source": {
 		"id": "amazon",
 		"raws": [
-			"vuls-data-raw-amazon/2/core/2024/ALAS2-2024-2622.json"
+			"vuls-data-raw-amazon/2/core/2024/ALAS2-2024-2693.json"
 		]
 	}
 }
