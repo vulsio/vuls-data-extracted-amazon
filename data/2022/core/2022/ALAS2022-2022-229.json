@@ -40,8 +40,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"amazon:2022"
+			"segments": [
+				{
+					"ecosystem": "amazon:2022"
+				}
 			]
 		}
 	],
@@ -56,8 +58,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"amazon:2022"
+			"segments": [
+				{
+					"ecosystem": "amazon:2022"
+				}
 			]
 		},
 		{
@@ -70,8 +74,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"amazon:2022"
+			"segments": [
+				{
+					"ecosystem": "amazon:2022"
+				}
 			]
 		},
 		{
@@ -84,8 +90,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"amazon:2022"
+			"segments": [
+				{
+					"ecosystem": "amazon:2022"
+				}
 			]
 		},
 		{
@@ -98,8 +106,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"amazon:2022"
+			"segments": [
+				{
+					"ecosystem": "amazon:2022"
+				}
 			]
 		},
 		{
@@ -112,383 +122,389 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"amazon:2022"
+			"segments": [
+				{
+					"ecosystem": "amazon:2022"
+				}
 			]
 		}
 	],
-	"detection": [
+	"detections": [
 		{
 			"ecosystem": "amazon:2022",
-			"criteria": {
-				"operator": "OR",
-				"criterions": [
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "clamav",
-							"architectures": [
-								"aarch64"
-							],
-							"repositories": [
-								"amazonlinux"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:0.103.7-1.amzn2022.0.2"
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "clamav",
+									"architectures": [
+										"aarch64"
+									],
+									"repositories": [
+										"amazonlinux"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "0:0.103.7-1.amzn2022.0.2"
+										}
+									],
+									"fixed": [
+										"0:0.103.7-1.amzn2022.0.2"
+									]
 								}
-							],
-							"fixed": [
-								"0:0.103.7-1.amzn2022.0.2"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "clamav-data",
-							"architectures": [
-								"noarch"
-							],
-							"repositories": [
-								"amazonlinux"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:0.103.7-1.amzn2022.0.2"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "clamav-data",
+									"architectures": [
+										"noarch"
+									],
+									"repositories": [
+										"amazonlinux"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "0:0.103.7-1.amzn2022.0.2"
+										}
+									],
+									"fixed": [
+										"0:0.103.7-1.amzn2022.0.2"
+									]
 								}
-							],
-							"fixed": [
-								"0:0.103.7-1.amzn2022.0.2"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "clamav-debuginfo",
-							"architectures": [
-								"aarch64"
-							],
-							"repositories": [
-								"amazonlinux"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:0.103.7-1.amzn2022.0.2"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "clamav-debuginfo",
+									"architectures": [
+										"aarch64"
+									],
+									"repositories": [
+										"amazonlinux"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "0:0.103.7-1.amzn2022.0.2"
+										}
+									],
+									"fixed": [
+										"0:0.103.7-1.amzn2022.0.2"
+									]
 								}
-							],
-							"fixed": [
-								"0:0.103.7-1.amzn2022.0.2"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "clamav-debugsource",
-							"architectures": [
-								"aarch64"
-							],
-							"repositories": [
-								"amazonlinux"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:0.103.7-1.amzn2022.0.2"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "clamav-debugsource",
+									"architectures": [
+										"aarch64"
+									],
+									"repositories": [
+										"amazonlinux"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "0:0.103.7-1.amzn2022.0.2"
+										}
+									],
+									"fixed": [
+										"0:0.103.7-1.amzn2022.0.2"
+									]
 								}
-							],
-							"fixed": [
-								"0:0.103.7-1.amzn2022.0.2"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "clamav-devel",
-							"architectures": [
-								"aarch64"
-							],
-							"repositories": [
-								"amazonlinux"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:0.103.7-1.amzn2022.0.2"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "clamav-devel",
+									"architectures": [
+										"aarch64"
+									],
+									"repositories": [
+										"amazonlinux"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "0:0.103.7-1.amzn2022.0.2"
+										}
+									],
+									"fixed": [
+										"0:0.103.7-1.amzn2022.0.2"
+									]
 								}
-							],
-							"fixed": [
-								"0:0.103.7-1.amzn2022.0.2"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "clamav-filesystem",
-							"architectures": [
-								"noarch"
-							],
-							"repositories": [
-								"amazonlinux"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:0.103.7-1.amzn2022.0.2"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "clamav-filesystem",
+									"architectures": [
+										"noarch"
+									],
+									"repositories": [
+										"amazonlinux"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "0:0.103.7-1.amzn2022.0.2"
+										}
+									],
+									"fixed": [
+										"0:0.103.7-1.amzn2022.0.2"
+									]
 								}
-							],
-							"fixed": [
-								"0:0.103.7-1.amzn2022.0.2"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "clamav-lib",
-							"architectures": [
-								"aarch64"
-							],
-							"repositories": [
-								"amazonlinux"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:0.103.7-1.amzn2022.0.2"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "clamav-lib",
+									"architectures": [
+										"aarch64"
+									],
+									"repositories": [
+										"amazonlinux"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "0:0.103.7-1.amzn2022.0.2"
+										}
+									],
+									"fixed": [
+										"0:0.103.7-1.amzn2022.0.2"
+									]
 								}
-							],
-							"fixed": [
-								"0:0.103.7-1.amzn2022.0.2"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "clamav-lib-debuginfo",
-							"architectures": [
-								"aarch64"
-							],
-							"repositories": [
-								"amazonlinux"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:0.103.7-1.amzn2022.0.2"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "clamav-lib-debuginfo",
+									"architectures": [
+										"aarch64"
+									],
+									"repositories": [
+										"amazonlinux"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "0:0.103.7-1.amzn2022.0.2"
+										}
+									],
+									"fixed": [
+										"0:0.103.7-1.amzn2022.0.2"
+									]
 								}
-							],
-							"fixed": [
-								"0:0.103.7-1.amzn2022.0.2"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "clamav-milter",
-							"architectures": [
-								"aarch64"
-							],
-							"repositories": [
-								"amazonlinux"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:0.103.7-1.amzn2022.0.2"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "clamav-milter",
+									"architectures": [
+										"aarch64"
+									],
+									"repositories": [
+										"amazonlinux"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "0:0.103.7-1.amzn2022.0.2"
+										}
+									],
+									"fixed": [
+										"0:0.103.7-1.amzn2022.0.2"
+									]
 								}
-							],
-							"fixed": [
-								"0:0.103.7-1.amzn2022.0.2"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "clamav-milter-debuginfo",
-							"architectures": [
-								"aarch64"
-							],
-							"repositories": [
-								"amazonlinux"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:0.103.7-1.amzn2022.0.2"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "clamav-milter-debuginfo",
+									"architectures": [
+										"aarch64"
+									],
+									"repositories": [
+										"amazonlinux"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "0:0.103.7-1.amzn2022.0.2"
+										}
+									],
+									"fixed": [
+										"0:0.103.7-1.amzn2022.0.2"
+									]
 								}
-							],
-							"fixed": [
-								"0:0.103.7-1.amzn2022.0.2"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "clamav-update",
-							"architectures": [
-								"aarch64"
-							],
-							"repositories": [
-								"amazonlinux"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:0.103.7-1.amzn2022.0.2"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "clamav-update",
+									"architectures": [
+										"aarch64"
+									],
+									"repositories": [
+										"amazonlinux"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "0:0.103.7-1.amzn2022.0.2"
+										}
+									],
+									"fixed": [
+										"0:0.103.7-1.amzn2022.0.2"
+									]
 								}
-							],
-							"fixed": [
-								"0:0.103.7-1.amzn2022.0.2"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "clamav-update-debuginfo",
-							"architectures": [
-								"aarch64"
-							],
-							"repositories": [
-								"amazonlinux"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:0.103.7-1.amzn2022.0.2"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "clamav-update-debuginfo",
+									"architectures": [
+										"aarch64"
+									],
+									"repositories": [
+										"amazonlinux"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "0:0.103.7-1.amzn2022.0.2"
+										}
+									],
+									"fixed": [
+										"0:0.103.7-1.amzn2022.0.2"
+									]
 								}
-							],
-							"fixed": [
-								"0:0.103.7-1.amzn2022.0.2"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "clamd",
-							"architectures": [
-								"aarch64"
-							],
-							"repositories": [
-								"amazonlinux"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:0.103.7-1.amzn2022.0.2"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "clamd",
+									"architectures": [
+										"aarch64"
+									],
+									"repositories": [
+										"amazonlinux"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "0:0.103.7-1.amzn2022.0.2"
+										}
+									],
+									"fixed": [
+										"0:0.103.7-1.amzn2022.0.2"
+									]
 								}
-							],
-							"fixed": [
-								"0:0.103.7-1.amzn2022.0.2"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "clamd-debuginfo",
-							"architectures": [
-								"aarch64"
-							],
-							"repositories": [
-								"amazonlinux"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:0.103.7-1.amzn2022.0.2"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "clamd-debuginfo",
+									"architectures": [
+										"aarch64"
+									],
+									"repositories": [
+										"amazonlinux"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "0:0.103.7-1.amzn2022.0.2"
+										}
+									],
+									"fixed": [
+										"0:0.103.7-1.amzn2022.0.2"
+									]
 								}
-							],
-							"fixed": [
-								"0:0.103.7-1.amzn2022.0.2"
-							]
-						}
+							}
+						]
 					}
-				]
-			}
+				}
+			]
 		}
 	],
 	"data_source": {

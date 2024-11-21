@@ -24,8 +24,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"amazon:1"
+			"segments": [
+				{
+					"ecosystem": "amazon:1"
+				}
 			]
 		}
 	],
@@ -40,208 +42,214 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"amazon:1"
+			"segments": [
+				{
+					"ecosystem": "amazon:1"
+				}
 			]
 		}
 	],
-	"detection": [
+	"detections": [
 		{
 			"ecosystem": "amazon:1",
-			"criteria": {
-				"operator": "OR",
-				"criterions": [
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "ganglia",
-							"architectures": [
-								"i686"
-							],
-							"repositories": [
-								"amzn-main",
-								"amzn-updates"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:3.7.2-2.19.amzn1"
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "ganglia",
+									"architectures": [
+										"i686"
+									],
+									"repositories": [
+										"amzn-main",
+										"amzn-updates"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "0:3.7.2-2.19.amzn1"
+										}
+									],
+									"fixed": [
+										"0:3.7.2-2.19.amzn1"
+									]
 								}
-							],
-							"fixed": [
-								"0:3.7.2-2.19.amzn1"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "ganglia-debuginfo",
-							"architectures": [
-								"i686"
-							],
-							"repositories": [
-								"amzn-main",
-								"amzn-updates"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:3.7.2-2.19.amzn1"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "ganglia-debuginfo",
+									"architectures": [
+										"i686"
+									],
+									"repositories": [
+										"amzn-main",
+										"amzn-updates"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "0:3.7.2-2.19.amzn1"
+										}
+									],
+									"fixed": [
+										"0:3.7.2-2.19.amzn1"
+									]
 								}
-							],
-							"fixed": [
-								"0:3.7.2-2.19.amzn1"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "ganglia-devel",
-							"architectures": [
-								"i686"
-							],
-							"repositories": [
-								"amzn-main",
-								"amzn-updates"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:3.7.2-2.19.amzn1"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "ganglia-devel",
+									"architectures": [
+										"i686"
+									],
+									"repositories": [
+										"amzn-main",
+										"amzn-updates"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "0:3.7.2-2.19.amzn1"
+										}
+									],
+									"fixed": [
+										"0:3.7.2-2.19.amzn1"
+									]
 								}
-							],
-							"fixed": [
-								"0:3.7.2-2.19.amzn1"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "ganglia-gmetad",
-							"architectures": [
-								"i686"
-							],
-							"repositories": [
-								"amzn-main",
-								"amzn-updates"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:3.7.2-2.19.amzn1"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "ganglia-gmetad",
+									"architectures": [
+										"i686"
+									],
+									"repositories": [
+										"amzn-main",
+										"amzn-updates"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "0:3.7.2-2.19.amzn1"
+										}
+									],
+									"fixed": [
+										"0:3.7.2-2.19.amzn1"
+									]
 								}
-							],
-							"fixed": [
-								"0:3.7.2-2.19.amzn1"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "ganglia-gmond",
-							"architectures": [
-								"i686"
-							],
-							"repositories": [
-								"amzn-main",
-								"amzn-updates"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:3.7.2-2.19.amzn1"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "ganglia-gmond",
+									"architectures": [
+										"i686"
+									],
+									"repositories": [
+										"amzn-main",
+										"amzn-updates"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "0:3.7.2-2.19.amzn1"
+										}
+									],
+									"fixed": [
+										"0:3.7.2-2.19.amzn1"
+									]
 								}
-							],
-							"fixed": [
-								"0:3.7.2-2.19.amzn1"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "ganglia-gmond-python",
-							"architectures": [
-								"i686"
-							],
-							"repositories": [
-								"amzn-main",
-								"amzn-updates"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:3.7.2-2.19.amzn1"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "ganglia-gmond-python",
+									"architectures": [
+										"i686"
+									],
+									"repositories": [
+										"amzn-main",
+										"amzn-updates"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "0:3.7.2-2.19.amzn1"
+										}
+									],
+									"fixed": [
+										"0:3.7.2-2.19.amzn1"
+									]
 								}
-							],
-							"fixed": [
-								"0:3.7.2-2.19.amzn1"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "ganglia-web",
-							"architectures": [
-								"i686"
-							],
-							"repositories": [
-								"amzn-main",
-								"amzn-updates"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:3.7.1-2.19.amzn1"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "ganglia-web",
+									"architectures": [
+										"i686"
+									],
+									"repositories": [
+										"amzn-main",
+										"amzn-updates"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "0:3.7.1-2.19.amzn1"
+										}
+									],
+									"fixed": [
+										"0:3.7.1-2.19.amzn1"
+									]
 								}
-							],
-							"fixed": [
-								"0:3.7.1-2.19.amzn1"
-							]
-						}
+							}
+						]
 					}
-				]
-			}
+				}
+			]
 		}
 	],
 	"data_source": {

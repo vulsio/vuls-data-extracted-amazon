@@ -24,8 +24,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"amazon:2023"
+			"segments": [
+				{
+					"ecosystem": "amazon:2023"
+				}
 			]
 		}
 	],
@@ -40,435 +42,441 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"amazon:2023"
+			"segments": [
+				{
+					"ecosystem": "amazon:2023"
+				}
 			]
 		}
 	],
-	"detection": [
+	"detections": [
 		{
 			"ecosystem": "amazon:2023",
-			"criteria": {
-				"operator": "OR",
-				"criterions": [
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "dbus",
-							"architectures": [
-								"aarch64"
-							],
-							"repositories": [
-								"amazonlinux"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "1:1.12.28-1.amzn2023.0.1"
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "dbus",
+									"architectures": [
+										"aarch64"
+									],
+									"repositories": [
+										"amazonlinux"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "1:1.12.28-1.amzn2023.0.1"
+										}
+									],
+									"fixed": [
+										"1:1.12.28-1.amzn2023.0.1"
+									]
 								}
-							],
-							"fixed": [
-								"1:1.12.28-1.amzn2023.0.1"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "dbus-common",
-							"architectures": [
-								"noarch"
-							],
-							"repositories": [
-								"amazonlinux"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "1:1.12.28-1.amzn2023.0.1"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "dbus-common",
+									"architectures": [
+										"noarch"
+									],
+									"repositories": [
+										"amazonlinux"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "1:1.12.28-1.amzn2023.0.1"
+										}
+									],
+									"fixed": [
+										"1:1.12.28-1.amzn2023.0.1"
+									]
 								}
-							],
-							"fixed": [
-								"1:1.12.28-1.amzn2023.0.1"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "dbus-daemon",
-							"architectures": [
-								"aarch64"
-							],
-							"repositories": [
-								"amazonlinux"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "1:1.12.28-1.amzn2023.0.1"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "dbus-daemon",
+									"architectures": [
+										"aarch64"
+									],
+									"repositories": [
+										"amazonlinux"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "1:1.12.28-1.amzn2023.0.1"
+										}
+									],
+									"fixed": [
+										"1:1.12.28-1.amzn2023.0.1"
+									]
 								}
-							],
-							"fixed": [
-								"1:1.12.28-1.amzn2023.0.1"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "dbus-daemon-debuginfo",
-							"architectures": [
-								"aarch64"
-							],
-							"repositories": [
-								"amazonlinux"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "1:1.12.28-1.amzn2023.0.1"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "dbus-daemon-debuginfo",
+									"architectures": [
+										"aarch64"
+									],
+									"repositories": [
+										"amazonlinux"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "1:1.12.28-1.amzn2023.0.1"
+										}
+									],
+									"fixed": [
+										"1:1.12.28-1.amzn2023.0.1"
+									]
 								}
-							],
-							"fixed": [
-								"1:1.12.28-1.amzn2023.0.1"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "dbus-debuginfo",
-							"architectures": [
-								"aarch64"
-							],
-							"repositories": [
-								"amazonlinux"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "1:1.12.28-1.amzn2023.0.1"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "dbus-debuginfo",
+									"architectures": [
+										"aarch64"
+									],
+									"repositories": [
+										"amazonlinux"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "1:1.12.28-1.amzn2023.0.1"
+										}
+									],
+									"fixed": [
+										"1:1.12.28-1.amzn2023.0.1"
+									]
 								}
-							],
-							"fixed": [
-								"1:1.12.28-1.amzn2023.0.1"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "dbus-debugsource",
-							"architectures": [
-								"aarch64"
-							],
-							"repositories": [
-								"amazonlinux"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "1:1.12.28-1.amzn2023.0.1"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "dbus-debugsource",
+									"architectures": [
+										"aarch64"
+									],
+									"repositories": [
+										"amazonlinux"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "1:1.12.28-1.amzn2023.0.1"
+										}
+									],
+									"fixed": [
+										"1:1.12.28-1.amzn2023.0.1"
+									]
 								}
-							],
-							"fixed": [
-								"1:1.12.28-1.amzn2023.0.1"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "dbus-devel",
-							"architectures": [
-								"aarch64"
-							],
-							"repositories": [
-								"amazonlinux"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "1:1.12.28-1.amzn2023.0.1"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "dbus-devel",
+									"architectures": [
+										"aarch64"
+									],
+									"repositories": [
+										"amazonlinux"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "1:1.12.28-1.amzn2023.0.1"
+										}
+									],
+									"fixed": [
+										"1:1.12.28-1.amzn2023.0.1"
+									]
 								}
-							],
-							"fixed": [
-								"1:1.12.28-1.amzn2023.0.1"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "dbus-doc",
-							"architectures": [
-								"noarch"
-							],
-							"repositories": [
-								"amazonlinux"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "1:1.12.28-1.amzn2023.0.1"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "dbus-doc",
+									"architectures": [
+										"noarch"
+									],
+									"repositories": [
+										"amazonlinux"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "1:1.12.28-1.amzn2023.0.1"
+										}
+									],
+									"fixed": [
+										"1:1.12.28-1.amzn2023.0.1"
+									]
 								}
-							],
-							"fixed": [
-								"1:1.12.28-1.amzn2023.0.1"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "dbus-libs",
-							"architectures": [
-								"aarch64"
-							],
-							"repositories": [
-								"amazonlinux"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "1:1.12.28-1.amzn2023.0.1"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "dbus-libs",
+									"architectures": [
+										"aarch64"
+									],
+									"repositories": [
+										"amazonlinux"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "1:1.12.28-1.amzn2023.0.1"
+										}
+									],
+									"fixed": [
+										"1:1.12.28-1.amzn2023.0.1"
+									]
 								}
-							],
-							"fixed": [
-								"1:1.12.28-1.amzn2023.0.1"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "dbus-libs-debuginfo",
-							"architectures": [
-								"aarch64"
-							],
-							"repositories": [
-								"amazonlinux"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "1:1.12.28-1.amzn2023.0.1"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "dbus-libs-debuginfo",
+									"architectures": [
+										"aarch64"
+									],
+									"repositories": [
+										"amazonlinux"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "1:1.12.28-1.amzn2023.0.1"
+										}
+									],
+									"fixed": [
+										"1:1.12.28-1.amzn2023.0.1"
+									]
 								}
-							],
-							"fixed": [
-								"1:1.12.28-1.amzn2023.0.1"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "dbus-tests",
-							"architectures": [
-								"aarch64"
-							],
-							"repositories": [
-								"amazonlinux"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "1:1.12.28-1.amzn2023.0.1"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "dbus-tests",
+									"architectures": [
+										"aarch64"
+									],
+									"repositories": [
+										"amazonlinux"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "1:1.12.28-1.amzn2023.0.1"
+										}
+									],
+									"fixed": [
+										"1:1.12.28-1.amzn2023.0.1"
+									]
 								}
-							],
-							"fixed": [
-								"1:1.12.28-1.amzn2023.0.1"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "dbus-tests-debuginfo",
-							"architectures": [
-								"aarch64"
-							],
-							"repositories": [
-								"amazonlinux"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "1:1.12.28-1.amzn2023.0.1"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "dbus-tests-debuginfo",
+									"architectures": [
+										"aarch64"
+									],
+									"repositories": [
+										"amazonlinux"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "1:1.12.28-1.amzn2023.0.1"
+										}
+									],
+									"fixed": [
+										"1:1.12.28-1.amzn2023.0.1"
+									]
 								}
-							],
-							"fixed": [
-								"1:1.12.28-1.amzn2023.0.1"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "dbus-tools",
-							"architectures": [
-								"aarch64"
-							],
-							"repositories": [
-								"amazonlinux"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "1:1.12.28-1.amzn2023.0.1"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "dbus-tools",
+									"architectures": [
+										"aarch64"
+									],
+									"repositories": [
+										"amazonlinux"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "1:1.12.28-1.amzn2023.0.1"
+										}
+									],
+									"fixed": [
+										"1:1.12.28-1.amzn2023.0.1"
+									]
 								}
-							],
-							"fixed": [
-								"1:1.12.28-1.amzn2023.0.1"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "dbus-tools-debuginfo",
-							"architectures": [
-								"aarch64"
-							],
-							"repositories": [
-								"amazonlinux"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "1:1.12.28-1.amzn2023.0.1"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "dbus-tools-debuginfo",
+									"architectures": [
+										"aarch64"
+									],
+									"repositories": [
+										"amazonlinux"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "1:1.12.28-1.amzn2023.0.1"
+										}
+									],
+									"fixed": [
+										"1:1.12.28-1.amzn2023.0.1"
+									]
 								}
-							],
-							"fixed": [
-								"1:1.12.28-1.amzn2023.0.1"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "dbus-x11",
-							"architectures": [
-								"aarch64"
-							],
-							"repositories": [
-								"amazonlinux"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "1:1.12.28-1.amzn2023.0.1"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "dbus-x11",
+									"architectures": [
+										"aarch64"
+									],
+									"repositories": [
+										"amazonlinux"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "1:1.12.28-1.amzn2023.0.1"
+										}
+									],
+									"fixed": [
+										"1:1.12.28-1.amzn2023.0.1"
+									]
 								}
-							],
-							"fixed": [
-								"1:1.12.28-1.amzn2023.0.1"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "dbus-x11-debuginfo",
-							"architectures": [
-								"aarch64"
-							],
-							"repositories": [
-								"amazonlinux"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "1:1.12.28-1.amzn2023.0.1"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "dbus-x11-debuginfo",
+									"architectures": [
+										"aarch64"
+									],
+									"repositories": [
+										"amazonlinux"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "1:1.12.28-1.amzn2023.0.1"
+										}
+									],
+									"fixed": [
+										"1:1.12.28-1.amzn2023.0.1"
+									]
 								}
-							],
-							"fixed": [
-								"1:1.12.28-1.amzn2023.0.1"
-							]
-						}
+							}
+						]
 					}
-				]
-			}
+				}
+			]
 		}
 	],
 	"data_source": {

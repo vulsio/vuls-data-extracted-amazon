@@ -24,8 +24,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"amazon:2"
+			"segments": [
+				{
+					"ecosystem": "amazon:2"
+				}
 			]
 		}
 	],
@@ -40,45 +42,51 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"amazon:2"
+			"segments": [
+				{
+					"ecosystem": "amazon:2"
+				}
 			]
 		}
 	],
-	"detection": [
+	"detections": [
 		{
 			"ecosystem": "amazon:2",
-			"criteria": {
-				"operator": "OR",
-				"criterions": [
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "php-pear",
-							"architectures": [
-								"noarch"
-							],
-							"repositories": [
-								"amzn2-core"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "1:1.10.12-9.amzn2"
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "php-pear",
+									"architectures": [
+										"noarch"
+									],
+									"repositories": [
+										"amzn2-core"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "1:1.10.12-9.amzn2"
+										}
+									],
+									"fixed": [
+										"1:1.10.12-9.amzn2"
+									]
 								}
-							],
-							"fixed": [
-								"1:1.10.12-9.amzn2"
-							]
-						}
+							}
+						]
 					}
-				]
-			}
+				}
+			]
 		}
 	],
 	"data_source": {

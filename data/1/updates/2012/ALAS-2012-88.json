@@ -52,8 +52,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"amazon:1"
+			"segments": [
+				{
+					"ecosystem": "amazon:1"
+				}
 			]
 		}
 	],
@@ -68,8 +70,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"amazon:1"
+			"segments": [
+				{
+					"ecosystem": "amazon:1"
+				}
 			]
 		},
 		{
@@ -82,8 +86,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"amazon:1"
+			"segments": [
+				{
+					"ecosystem": "amazon:1"
+				}
 			]
 		},
 		{
@@ -96,8 +102,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"amazon:1"
+			"segments": [
+				{
+					"ecosystem": "amazon:1"
+				}
 			]
 		},
 		{
@@ -110,8 +118,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"amazon:1"
+			"segments": [
+				{
+					"ecosystem": "amazon:1"
+				}
 			]
 		},
 		{
@@ -124,8 +134,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"amazon:1"
+			"segments": [
+				{
+					"ecosystem": "amazon:1"
+				}
 			]
 		},
 		{
@@ -138,8 +150,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"amazon:1"
+			"segments": [
+				{
+					"ecosystem": "amazon:1"
+				}
 			]
 		},
 		{
@@ -152,181 +166,187 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"amazon:1"
+			"segments": [
+				{
+					"ecosystem": "amazon:1"
+				}
 			]
 		}
 	],
-	"detection": [
+	"detections": [
 		{
 			"ecosystem": "amazon:1",
-			"criteria": {
-				"operator": "OR",
-				"criterions": [
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "java-1.6.0-openjdk",
-							"architectures": [
-								"x86_64"
-							],
-							"repositories": [
-								"amzn-main",
-								"amzn-updates"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "1:1.6.0.0-52.1.11.3.45.amzn1"
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "java-1.6.0-openjdk",
+									"architectures": [
+										"x86_64"
+									],
+									"repositories": [
+										"amzn-main",
+										"amzn-updates"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "1:1.6.0.0-52.1.11.3.45.amzn1"
+										}
+									],
+									"fixed": [
+										"1:1.6.0.0-52.1.11.3.45.amzn1"
+									]
 								}
-							],
-							"fixed": [
-								"1:1.6.0.0-52.1.11.3.45.amzn1"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "java-1.6.0-openjdk-debuginfo",
-							"architectures": [
-								"x86_64"
-							],
-							"repositories": [
-								"amzn-main",
-								"amzn-updates"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "1:1.6.0.0-52.1.11.3.45.amzn1"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "java-1.6.0-openjdk-debuginfo",
+									"architectures": [
+										"x86_64"
+									],
+									"repositories": [
+										"amzn-main",
+										"amzn-updates"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "1:1.6.0.0-52.1.11.3.45.amzn1"
+										}
+									],
+									"fixed": [
+										"1:1.6.0.0-52.1.11.3.45.amzn1"
+									]
 								}
-							],
-							"fixed": [
-								"1:1.6.0.0-52.1.11.3.45.amzn1"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "java-1.6.0-openjdk-demo",
-							"architectures": [
-								"x86_64"
-							],
-							"repositories": [
-								"amzn-main",
-								"amzn-updates"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "1:1.6.0.0-52.1.11.3.45.amzn1"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "java-1.6.0-openjdk-demo",
+									"architectures": [
+										"x86_64"
+									],
+									"repositories": [
+										"amzn-main",
+										"amzn-updates"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "1:1.6.0.0-52.1.11.3.45.amzn1"
+										}
+									],
+									"fixed": [
+										"1:1.6.0.0-52.1.11.3.45.amzn1"
+									]
 								}
-							],
-							"fixed": [
-								"1:1.6.0.0-52.1.11.3.45.amzn1"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "java-1.6.0-openjdk-devel",
-							"architectures": [
-								"x86_64"
-							],
-							"repositories": [
-								"amzn-main",
-								"amzn-updates"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "1:1.6.0.0-52.1.11.3.45.amzn1"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "java-1.6.0-openjdk-devel",
+									"architectures": [
+										"x86_64"
+									],
+									"repositories": [
+										"amzn-main",
+										"amzn-updates"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "1:1.6.0.0-52.1.11.3.45.amzn1"
+										}
+									],
+									"fixed": [
+										"1:1.6.0.0-52.1.11.3.45.amzn1"
+									]
 								}
-							],
-							"fixed": [
-								"1:1.6.0.0-52.1.11.3.45.amzn1"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "java-1.6.0-openjdk-javadoc",
-							"architectures": [
-								"x86_64"
-							],
-							"repositories": [
-								"amzn-main",
-								"amzn-updates"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "1:1.6.0.0-52.1.11.3.45.amzn1"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "java-1.6.0-openjdk-javadoc",
+									"architectures": [
+										"x86_64"
+									],
+									"repositories": [
+										"amzn-main",
+										"amzn-updates"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "1:1.6.0.0-52.1.11.3.45.amzn1"
+										}
+									],
+									"fixed": [
+										"1:1.6.0.0-52.1.11.3.45.amzn1"
+									]
 								}
-							],
-							"fixed": [
-								"1:1.6.0.0-52.1.11.3.45.amzn1"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "java-1.6.0-openjdk-src",
-							"architectures": [
-								"x86_64"
-							],
-							"repositories": [
-								"amzn-main",
-								"amzn-updates"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "1:1.6.0.0-52.1.11.3.45.amzn1"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "java-1.6.0-openjdk-src",
+									"architectures": [
+										"x86_64"
+									],
+									"repositories": [
+										"amzn-main",
+										"amzn-updates"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "1:1.6.0.0-52.1.11.3.45.amzn1"
+										}
+									],
+									"fixed": [
+										"1:1.6.0.0-52.1.11.3.45.amzn1"
+									]
 								}
-							],
-							"fixed": [
-								"1:1.6.0.0-52.1.11.3.45.amzn1"
-							]
-						}
+							}
+						]
 					}
-				]
-			}
+				}
+			]
 		}
 	],
 	"data_source": {

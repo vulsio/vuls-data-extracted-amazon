@@ -28,8 +28,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"amazon:1"
+			"segments": [
+				{
+					"ecosystem": "amazon:1"
+				}
 			]
 		}
 	],
@@ -44,73 +46,79 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"amazon:1"
+			"segments": [
+				{
+					"ecosystem": "amazon:1"
+				}
 			]
 		}
 	],
-	"detection": [
+	"detections": [
 		{
 			"ecosystem": "amazon:1",
-			"criteria": {
-				"operator": "OR",
-				"criterions": [
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "mutt",
-							"architectures": [
-								"i686"
-							],
-							"repositories": [
-								"amzn-main",
-								"amzn-updates"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "5:1.5.20-4.20091214hg736b6a.7.amzn1"
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "mutt",
+									"architectures": [
+										"i686"
+									],
+									"repositories": [
+										"amzn-main",
+										"amzn-updates"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "5:1.5.20-4.20091214hg736b6a.7.amzn1"
+										}
+									],
+									"fixed": [
+										"5:1.5.20-4.20091214hg736b6a.7.amzn1"
+									]
 								}
-							],
-							"fixed": [
-								"5:1.5.20-4.20091214hg736b6a.7.amzn1"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "mutt-debuginfo",
-							"architectures": [
-								"i686"
-							],
-							"repositories": [
-								"amzn-main",
-								"amzn-updates"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "5:1.5.20-4.20091214hg736b6a.7.amzn1"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "mutt-debuginfo",
+									"architectures": [
+										"i686"
+									],
+									"repositories": [
+										"amzn-main",
+										"amzn-updates"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "5:1.5.20-4.20091214hg736b6a.7.amzn1"
+										}
+									],
+									"fixed": [
+										"5:1.5.20-4.20091214hg736b6a.7.amzn1"
+									]
 								}
-							],
-							"fixed": [
-								"5:1.5.20-4.20091214hg736b6a.7.amzn1"
-							]
-						}
+							}
+						]
 					}
-				]
-			}
+				}
+			]
 		}
 	],
 	"data_source": {

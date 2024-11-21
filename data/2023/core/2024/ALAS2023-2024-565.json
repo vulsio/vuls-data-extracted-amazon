@@ -28,8 +28,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"amazon:2023"
+			"segments": [
+				{
+					"ecosystem": "amazon:2023"
+				}
 			]
 		}
 	],
@@ -44,8 +46,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"amazon:2023"
+			"segments": [
+				{
+					"ecosystem": "amazon:2023"
+				}
 			]
 		},
 		{
@@ -58,149 +62,155 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"amazon:2023"
+			"segments": [
+				{
+					"ecosystem": "amazon:2023"
+				}
 			]
 		}
 	],
-	"detection": [
+	"detections": [
 		{
 			"ecosystem": "amazon:2023",
-			"criteria": {
-				"operator": "OR",
-				"criterions": [
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "fontforge",
-							"architectures": [
-								"aarch64"
-							],
-							"repositories": [
-								"amazonlinux"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:20201107-3.amzn2023.0.3"
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "fontforge",
+									"architectures": [
+										"aarch64"
+									],
+									"repositories": [
+										"amazonlinux"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "0:20201107-3.amzn2023.0.3"
+										}
+									],
+									"fixed": [
+										"0:20201107-3.amzn2023.0.3"
+									]
 								}
-							],
-							"fixed": [
-								"0:20201107-3.amzn2023.0.3"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "fontforge-debuginfo",
-							"architectures": [
-								"aarch64"
-							],
-							"repositories": [
-								"amazonlinux"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:20201107-3.amzn2023.0.3"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "fontforge-debuginfo",
+									"architectures": [
+										"aarch64"
+									],
+									"repositories": [
+										"amazonlinux"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "0:20201107-3.amzn2023.0.3"
+										}
+									],
+									"fixed": [
+										"0:20201107-3.amzn2023.0.3"
+									]
 								}
-							],
-							"fixed": [
-								"0:20201107-3.amzn2023.0.3"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "fontforge-debugsource",
-							"architectures": [
-								"aarch64"
-							],
-							"repositories": [
-								"amazonlinux"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:20201107-3.amzn2023.0.3"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "fontforge-debugsource",
+									"architectures": [
+										"aarch64"
+									],
+									"repositories": [
+										"amazonlinux"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "0:20201107-3.amzn2023.0.3"
+										}
+									],
+									"fixed": [
+										"0:20201107-3.amzn2023.0.3"
+									]
 								}
-							],
-							"fixed": [
-								"0:20201107-3.amzn2023.0.3"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "fontforge-devel",
-							"architectures": [
-								"aarch64"
-							],
-							"repositories": [
-								"amazonlinux"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:20201107-3.amzn2023.0.3"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "fontforge-devel",
+									"architectures": [
+										"aarch64"
+									],
+									"repositories": [
+										"amazonlinux"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "0:20201107-3.amzn2023.0.3"
+										}
+									],
+									"fixed": [
+										"0:20201107-3.amzn2023.0.3"
+									]
 								}
-							],
-							"fixed": [
-								"0:20201107-3.amzn2023.0.3"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "fontforge-doc",
-							"architectures": [
-								"noarch"
-							],
-							"repositories": [
-								"amazonlinux"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:20201107-3.amzn2023.0.3"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "fontforge-doc",
+									"architectures": [
+										"noarch"
+									],
+									"repositories": [
+										"amazonlinux"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "0:20201107-3.amzn2023.0.3"
+										}
+									],
+									"fixed": [
+										"0:20201107-3.amzn2023.0.3"
+									]
 								}
-							],
-							"fixed": [
-								"0:20201107-3.amzn2023.0.3"
-							]
-						}
+							}
+						]
 					}
-				]
-			}
+				}
+			]
 		}
 	],
 	"data_source": {

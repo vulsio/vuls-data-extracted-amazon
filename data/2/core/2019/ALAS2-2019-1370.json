@@ -24,8 +24,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"amazon:2"
+			"segments": [
+				{
+					"ecosystem": "amazon:2"
+				}
 			]
 		}
 	],
@@ -40,175 +42,181 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"amazon:2"
+			"segments": [
+				{
+					"ecosystem": "amazon:2"
+				}
 			]
 		}
 	],
-	"detection": [
+	"detections": [
 		{
 			"ecosystem": "amazon:2",
-			"criteria": {
-				"operator": "OR",
-				"criterions": [
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "file",
-							"architectures": [
-								"i686"
-							],
-							"repositories": [
-								"amzn2-core"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:5.11-35.amzn2.0.2"
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "file",
+									"architectures": [
+										"i686"
+									],
+									"repositories": [
+										"amzn2-core"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "0:5.11-35.amzn2.0.2"
+										}
+									],
+									"fixed": [
+										"0:5.11-35.amzn2.0.2"
+									]
 								}
-							],
-							"fixed": [
-								"0:5.11-35.amzn2.0.2"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "file-debuginfo",
-							"architectures": [
-								"i686"
-							],
-							"repositories": [
-								"amzn2-core"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:5.11-35.amzn2.0.2"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "file-debuginfo",
+									"architectures": [
+										"i686"
+									],
+									"repositories": [
+										"amzn2-core"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "0:5.11-35.amzn2.0.2"
+										}
+									],
+									"fixed": [
+										"0:5.11-35.amzn2.0.2"
+									]
 								}
-							],
-							"fixed": [
-								"0:5.11-35.amzn2.0.2"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "file-devel",
-							"architectures": [
-								"i686"
-							],
-							"repositories": [
-								"amzn2-core"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:5.11-35.amzn2.0.2"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "file-devel",
+									"architectures": [
+										"i686"
+									],
+									"repositories": [
+										"amzn2-core"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "0:5.11-35.amzn2.0.2"
+										}
+									],
+									"fixed": [
+										"0:5.11-35.amzn2.0.2"
+									]
 								}
-							],
-							"fixed": [
-								"0:5.11-35.amzn2.0.2"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "file-libs",
-							"architectures": [
-								"i686"
-							],
-							"repositories": [
-								"amzn2-core"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:5.11-35.amzn2.0.2"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "file-libs",
+									"architectures": [
+										"i686"
+									],
+									"repositories": [
+										"amzn2-core"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "0:5.11-35.amzn2.0.2"
+										}
+									],
+									"fixed": [
+										"0:5.11-35.amzn2.0.2"
+									]
 								}
-							],
-							"fixed": [
-								"0:5.11-35.amzn2.0.2"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "file-static",
-							"architectures": [
-								"i686"
-							],
-							"repositories": [
-								"amzn2-core"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:5.11-35.amzn2.0.2"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "file-static",
+									"architectures": [
+										"i686"
+									],
+									"repositories": [
+										"amzn2-core"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "0:5.11-35.amzn2.0.2"
+										}
+									],
+									"fixed": [
+										"0:5.11-35.amzn2.0.2"
+									]
 								}
-							],
-							"fixed": [
-								"0:5.11-35.amzn2.0.2"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "python-magic",
-							"architectures": [
-								"noarch"
-							],
-							"repositories": [
-								"amzn2-core"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:5.11-35.amzn2.0.2"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "python-magic",
+									"architectures": [
+										"noarch"
+									],
+									"repositories": [
+										"amzn2-core"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "0:5.11-35.amzn2.0.2"
+										}
+									],
+									"fixed": [
+										"0:5.11-35.amzn2.0.2"
+									]
 								}
-							],
-							"fixed": [
-								"0:5.11-35.amzn2.0.2"
-							]
-						}
+							}
+						]
 					}
-				]
-			}
+				}
+			]
 		}
 	],
 	"data_source": {

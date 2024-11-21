@@ -28,8 +28,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"amazon:2023"
+			"segments": [
+				{
+					"ecosystem": "amazon:2023"
+				}
 			]
 		}
 	],
@@ -44,8 +46,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"amazon:2023"
+			"segments": [
+				{
+					"ecosystem": "amazon:2023"
+				}
 			]
 		},
 		{
@@ -58,201 +62,207 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"amazon:2023"
+			"segments": [
+				{
+					"ecosystem": "amazon:2023"
+				}
 			]
 		}
 	],
-	"detection": [
+	"detections": [
 		{
 			"ecosystem": "amazon:2023",
-			"criteria": {
-				"operator": "OR",
-				"criterions": [
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "golang",
-							"architectures": [
-								"aarch64"
-							],
-							"repositories": [
-								"amazonlinux"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:1.22.4-1.amzn2023.0.1"
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "golang",
+									"architectures": [
+										"aarch64"
+									],
+									"repositories": [
+										"amazonlinux"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "0:1.22.4-1.amzn2023.0.1"
+										}
+									],
+									"fixed": [
+										"0:1.22.4-1.amzn2023.0.1"
+									]
 								}
-							],
-							"fixed": [
-								"0:1.22.4-1.amzn2023.0.1"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "golang-bin",
-							"architectures": [
-								"aarch64"
-							],
-							"repositories": [
-								"amazonlinux"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:1.22.4-1.amzn2023.0.1"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "golang-bin",
+									"architectures": [
+										"aarch64"
+									],
+									"repositories": [
+										"amazonlinux"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "0:1.22.4-1.amzn2023.0.1"
+										}
+									],
+									"fixed": [
+										"0:1.22.4-1.amzn2023.0.1"
+									]
 								}
-							],
-							"fixed": [
-								"0:1.22.4-1.amzn2023.0.1"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "golang-docs",
-							"architectures": [
-								"noarch"
-							],
-							"repositories": [
-								"amazonlinux"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:1.22.4-1.amzn2023.0.1"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "golang-docs",
+									"architectures": [
+										"noarch"
+									],
+									"repositories": [
+										"amazonlinux"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "0:1.22.4-1.amzn2023.0.1"
+										}
+									],
+									"fixed": [
+										"0:1.22.4-1.amzn2023.0.1"
+									]
 								}
-							],
-							"fixed": [
-								"0:1.22.4-1.amzn2023.0.1"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "golang-misc",
-							"architectures": [
-								"noarch"
-							],
-							"repositories": [
-								"amazonlinux"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:1.22.4-1.amzn2023.0.1"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "golang-misc",
+									"architectures": [
+										"noarch"
+									],
+									"repositories": [
+										"amazonlinux"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "0:1.22.4-1.amzn2023.0.1"
+										}
+									],
+									"fixed": [
+										"0:1.22.4-1.amzn2023.0.1"
+									]
 								}
-							],
-							"fixed": [
-								"0:1.22.4-1.amzn2023.0.1"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "golang-shared",
-							"architectures": [
-								"aarch64"
-							],
-							"repositories": [
-								"amazonlinux"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:1.22.4-1.amzn2023.0.1"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "golang-shared",
+									"architectures": [
+										"aarch64"
+									],
+									"repositories": [
+										"amazonlinux"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "0:1.22.4-1.amzn2023.0.1"
+										}
+									],
+									"fixed": [
+										"0:1.22.4-1.amzn2023.0.1"
+									]
 								}
-							],
-							"fixed": [
-								"0:1.22.4-1.amzn2023.0.1"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "golang-src",
-							"architectures": [
-								"noarch"
-							],
-							"repositories": [
-								"amazonlinux"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:1.22.4-1.amzn2023.0.1"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "golang-src",
+									"architectures": [
+										"noarch"
+									],
+									"repositories": [
+										"amazonlinux"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "0:1.22.4-1.amzn2023.0.1"
+										}
+									],
+									"fixed": [
+										"0:1.22.4-1.amzn2023.0.1"
+									]
 								}
-							],
-							"fixed": [
-								"0:1.22.4-1.amzn2023.0.1"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "golang-tests",
-							"architectures": [
-								"noarch"
-							],
-							"repositories": [
-								"amazonlinux"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:1.22.4-1.amzn2023.0.1"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "golang-tests",
+									"architectures": [
+										"noarch"
+									],
+									"repositories": [
+										"amazonlinux"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "0:1.22.4-1.amzn2023.0.1"
+										}
+									],
+									"fixed": [
+										"0:1.22.4-1.amzn2023.0.1"
+									]
 								}
-							],
-							"fixed": [
-								"0:1.22.4-1.amzn2023.0.1"
-							]
-						}
+							}
+						]
 					}
-				]
-			}
+				}
+			]
 		}
 	],
 	"data_source": {

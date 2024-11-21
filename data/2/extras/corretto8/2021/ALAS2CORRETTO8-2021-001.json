@@ -28,8 +28,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"amazon:2"
+			"segments": [
+				{
+					"ecosystem": "amazon:2"
+				}
 			]
 		}
 	],
@@ -44,8 +46,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"amazon:2"
+			"segments": [
+				{
+					"ecosystem": "amazon:2"
+				}
 			]
 		},
 		{
@@ -58,71 +62,77 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"amazon:2"
+			"segments": [
+				{
+					"ecosystem": "amazon:2"
+				}
 			]
 		}
 	],
-	"detection": [
+	"detections": [
 		{
 			"ecosystem": "amazon:2",
-			"criteria": {
-				"operator": "OR",
-				"criterions": [
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "java-1.8.0-amazon-corretto",
-							"architectures": [
-								"x86_64"
-							],
-							"repositories": [
-								"amzn2extra-corretto8"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "1:1.8.0_312.b07-2.amzn2"
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "java-1.8.0-amazon-corretto",
+									"architectures": [
+										"x86_64"
+									],
+									"repositories": [
+										"amzn2extra-corretto8"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "1:1.8.0_312.b07-2.amzn2"
+										}
+									],
+									"fixed": [
+										"1:1.8.0_312.b07-2.amzn2"
+									]
 								}
-							],
-							"fixed": [
-								"1:1.8.0_312.b07-2.amzn2"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "java-1.8.0-amazon-corretto-devel",
-							"architectures": [
-								"x86_64"
-							],
-							"repositories": [
-								"amzn2extra-corretto8"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "1:1.8.0_312.b07-2.amzn2"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "java-1.8.0-amazon-corretto-devel",
+									"architectures": [
+										"x86_64"
+									],
+									"repositories": [
+										"amzn2extra-corretto8"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "1:1.8.0_312.b07-2.amzn2"
+										}
+									],
+									"fixed": [
+										"1:1.8.0_312.b07-2.amzn2"
+									]
 								}
-							],
-							"fixed": [
-								"1:1.8.0_312.b07-2.amzn2"
-							]
-						}
+							}
+						]
 					}
-				]
-			}
+				}
+			]
 		}
 	],
 	"data_source": {

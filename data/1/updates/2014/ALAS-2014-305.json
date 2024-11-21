@@ -52,8 +52,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"amazon:1"
+			"segments": [
+				{
+					"ecosystem": "amazon:1"
+				}
 			]
 		}
 	],
@@ -68,8 +70,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"amazon:1"
+			"segments": [
+				{
+					"ecosystem": "amazon:1"
+				}
 			]
 		},
 		{
@@ -82,8 +86,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"amazon:1"
+			"segments": [
+				{
+					"ecosystem": "amazon:1"
+				}
 			]
 		},
 		{
@@ -96,8 +102,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"amazon:1"
+			"segments": [
+				{
+					"ecosystem": "amazon:1"
+				}
 			]
 		},
 		{
@@ -110,8 +118,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"amazon:1"
+			"segments": [
+				{
+					"ecosystem": "amazon:1"
+				}
 			]
 		},
 		{
@@ -124,8 +134,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"amazon:1"
+			"segments": [
+				{
+					"ecosystem": "amazon:1"
+				}
 			]
 		},
 		{
@@ -138,8 +150,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"amazon:1"
+			"segments": [
+				{
+					"ecosystem": "amazon:1"
+				}
 			]
 		},
 		{
@@ -152,316 +166,322 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"amazon:1"
+			"segments": [
+				{
+					"ecosystem": "amazon:1"
+				}
 			]
 		}
 	],
-	"detection": [
+	"detections": [
 		{
 			"ecosystem": "amazon:1",
-			"criteria": {
-				"operator": "OR",
-				"criterions": [
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "postgresql8",
-							"architectures": [
-								"i686"
-							],
-							"repositories": [
-								"amzn-main",
-								"amzn-updates"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:8.4.20-1.44.amzn1"
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "postgresql8",
+									"architectures": [
+										"i686"
+									],
+									"repositories": [
+										"amzn-main",
+										"amzn-updates"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "0:8.4.20-1.44.amzn1"
+										}
+									],
+									"fixed": [
+										"0:8.4.20-1.44.amzn1"
+									]
 								}
-							],
-							"fixed": [
-								"0:8.4.20-1.44.amzn1"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "postgresql8-contrib",
-							"architectures": [
-								"i686"
-							],
-							"repositories": [
-								"amzn-main",
-								"amzn-updates"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:8.4.20-1.44.amzn1"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "postgresql8-contrib",
+									"architectures": [
+										"i686"
+									],
+									"repositories": [
+										"amzn-main",
+										"amzn-updates"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "0:8.4.20-1.44.amzn1"
+										}
+									],
+									"fixed": [
+										"0:8.4.20-1.44.amzn1"
+									]
 								}
-							],
-							"fixed": [
-								"0:8.4.20-1.44.amzn1"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "postgresql8-debuginfo",
-							"architectures": [
-								"i686"
-							],
-							"repositories": [
-								"amzn-main",
-								"amzn-updates"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:8.4.20-1.44.amzn1"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "postgresql8-debuginfo",
+									"architectures": [
+										"i686"
+									],
+									"repositories": [
+										"amzn-main",
+										"amzn-updates"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "0:8.4.20-1.44.amzn1"
+										}
+									],
+									"fixed": [
+										"0:8.4.20-1.44.amzn1"
+									]
 								}
-							],
-							"fixed": [
-								"0:8.4.20-1.44.amzn1"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "postgresql8-devel",
-							"architectures": [
-								"i686"
-							],
-							"repositories": [
-								"amzn-main",
-								"amzn-updates"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:8.4.20-1.44.amzn1"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "postgresql8-devel",
+									"architectures": [
+										"i686"
+									],
+									"repositories": [
+										"amzn-main",
+										"amzn-updates"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "0:8.4.20-1.44.amzn1"
+										}
+									],
+									"fixed": [
+										"0:8.4.20-1.44.amzn1"
+									]
 								}
-							],
-							"fixed": [
-								"0:8.4.20-1.44.amzn1"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "postgresql8-docs",
-							"architectures": [
-								"i686"
-							],
-							"repositories": [
-								"amzn-main",
-								"amzn-updates"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:8.4.20-1.44.amzn1"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "postgresql8-docs",
+									"architectures": [
+										"i686"
+									],
+									"repositories": [
+										"amzn-main",
+										"amzn-updates"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "0:8.4.20-1.44.amzn1"
+										}
+									],
+									"fixed": [
+										"0:8.4.20-1.44.amzn1"
+									]
 								}
-							],
-							"fixed": [
-								"0:8.4.20-1.44.amzn1"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "postgresql8-libs",
-							"architectures": [
-								"i686"
-							],
-							"repositories": [
-								"amzn-main",
-								"amzn-updates"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:8.4.20-1.44.amzn1"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "postgresql8-libs",
+									"architectures": [
+										"i686"
+									],
+									"repositories": [
+										"amzn-main",
+										"amzn-updates"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "0:8.4.20-1.44.amzn1"
+										}
+									],
+									"fixed": [
+										"0:8.4.20-1.44.amzn1"
+									]
 								}
-							],
-							"fixed": [
-								"0:8.4.20-1.44.amzn1"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "postgresql8-plperl",
-							"architectures": [
-								"i686"
-							],
-							"repositories": [
-								"amzn-main",
-								"amzn-updates"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:8.4.20-1.44.amzn1"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "postgresql8-plperl",
+									"architectures": [
+										"i686"
+									],
+									"repositories": [
+										"amzn-main",
+										"amzn-updates"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "0:8.4.20-1.44.amzn1"
+										}
+									],
+									"fixed": [
+										"0:8.4.20-1.44.amzn1"
+									]
 								}
-							],
-							"fixed": [
-								"0:8.4.20-1.44.amzn1"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "postgresql8-plpython",
-							"architectures": [
-								"i686"
-							],
-							"repositories": [
-								"amzn-main",
-								"amzn-updates"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:8.4.20-1.44.amzn1"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "postgresql8-plpython",
+									"architectures": [
+										"i686"
+									],
+									"repositories": [
+										"amzn-main",
+										"amzn-updates"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "0:8.4.20-1.44.amzn1"
+										}
+									],
+									"fixed": [
+										"0:8.4.20-1.44.amzn1"
+									]
 								}
-							],
-							"fixed": [
-								"0:8.4.20-1.44.amzn1"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "postgresql8-pltcl",
-							"architectures": [
-								"i686"
-							],
-							"repositories": [
-								"amzn-main",
-								"amzn-updates"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:8.4.20-1.44.amzn1"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "postgresql8-pltcl",
+									"architectures": [
+										"i686"
+									],
+									"repositories": [
+										"amzn-main",
+										"amzn-updates"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "0:8.4.20-1.44.amzn1"
+										}
+									],
+									"fixed": [
+										"0:8.4.20-1.44.amzn1"
+									]
 								}
-							],
-							"fixed": [
-								"0:8.4.20-1.44.amzn1"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "postgresql8-server",
-							"architectures": [
-								"i686"
-							],
-							"repositories": [
-								"amzn-main",
-								"amzn-updates"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:8.4.20-1.44.amzn1"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "postgresql8-server",
+									"architectures": [
+										"i686"
+									],
+									"repositories": [
+										"amzn-main",
+										"amzn-updates"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "0:8.4.20-1.44.amzn1"
+										}
+									],
+									"fixed": [
+										"0:8.4.20-1.44.amzn1"
+									]
 								}
-							],
-							"fixed": [
-								"0:8.4.20-1.44.amzn1"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "postgresql8-test",
-							"architectures": [
-								"i686"
-							],
-							"repositories": [
-								"amzn-main",
-								"amzn-updates"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:8.4.20-1.44.amzn1"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "postgresql8-test",
+									"architectures": [
+										"i686"
+									],
+									"repositories": [
+										"amzn-main",
+										"amzn-updates"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "0:8.4.20-1.44.amzn1"
+										}
+									],
+									"fixed": [
+										"0:8.4.20-1.44.amzn1"
+									]
 								}
-							],
-							"fixed": [
-								"0:8.4.20-1.44.amzn1"
-							]
-						}
+							}
+						]
 					}
-				]
-			}
+				}
+			]
 		}
 	],
 	"data_source": {

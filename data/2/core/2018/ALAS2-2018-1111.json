@@ -44,8 +44,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"amazon:2"
+			"segments": [
+				{
+					"ecosystem": "amazon:2"
+				}
 			]
 		}
 	],
@@ -60,8 +62,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"amazon:2"
+			"segments": [
+				{
+					"ecosystem": "amazon:2"
+				}
 			]
 		},
 		{
@@ -74,8 +78,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"amazon:2"
+			"segments": [
+				{
+					"ecosystem": "amazon:2"
+				}
 			]
 		},
 		{
@@ -88,8 +94,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"amazon:2"
+			"segments": [
+				{
+					"ecosystem": "amazon:2"
+				}
 			]
 		},
 		{
@@ -102,8 +110,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"amazon:2"
+			"segments": [
+				{
+					"ecosystem": "amazon:2"
+				}
 			]
 		},
 		{
@@ -116,8 +126,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"amazon:2"
+			"segments": [
+				{
+					"ecosystem": "amazon:2"
+				}
 			]
 		},
 		{
@@ -130,227 +142,233 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"amazon:2"
+			"segments": [
+				{
+					"ecosystem": "amazon:2"
+				}
 			]
 		}
 	],
-	"detection": [
+	"detections": [
 		{
 			"ecosystem": "amazon:2",
-			"criteria": {
-				"operator": "OR",
-				"criterions": [
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "java-1.7.0-openjdk",
-							"architectures": [
-								"i686"
-							],
-							"repositories": [
-								"amzn2-core"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "1:1.7.0.201-2.6.16.1.amzn2.0.1"
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "java-1.7.0-openjdk",
+									"architectures": [
+										"i686"
+									],
+									"repositories": [
+										"amzn2-core"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "1:1.7.0.201-2.6.16.1.amzn2.0.1"
+										}
+									],
+									"fixed": [
+										"1:1.7.0.201-2.6.16.1.amzn2.0.1"
+									]
 								}
-							],
-							"fixed": [
-								"1:1.7.0.201-2.6.16.1.amzn2.0.1"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "java-1.7.0-openjdk-accessibility",
-							"architectures": [
-								"i686"
-							],
-							"repositories": [
-								"amzn2-core"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "1:1.7.0.201-2.6.16.1.amzn2.0.1"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "java-1.7.0-openjdk-accessibility",
+									"architectures": [
+										"i686"
+									],
+									"repositories": [
+										"amzn2-core"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "1:1.7.0.201-2.6.16.1.amzn2.0.1"
+										}
+									],
+									"fixed": [
+										"1:1.7.0.201-2.6.16.1.amzn2.0.1"
+									]
 								}
-							],
-							"fixed": [
-								"1:1.7.0.201-2.6.16.1.amzn2.0.1"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "java-1.7.0-openjdk-debuginfo",
-							"architectures": [
-								"i686"
-							],
-							"repositories": [
-								"amzn2-core"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "1:1.7.0.201-2.6.16.1.amzn2.0.1"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "java-1.7.0-openjdk-debuginfo",
+									"architectures": [
+										"i686"
+									],
+									"repositories": [
+										"amzn2-core"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "1:1.7.0.201-2.6.16.1.amzn2.0.1"
+										}
+									],
+									"fixed": [
+										"1:1.7.0.201-2.6.16.1.amzn2.0.1"
+									]
 								}
-							],
-							"fixed": [
-								"1:1.7.0.201-2.6.16.1.amzn2.0.1"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "java-1.7.0-openjdk-demo",
-							"architectures": [
-								"i686"
-							],
-							"repositories": [
-								"amzn2-core"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "1:1.7.0.201-2.6.16.1.amzn2.0.1"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "java-1.7.0-openjdk-demo",
+									"architectures": [
+										"i686"
+									],
+									"repositories": [
+										"amzn2-core"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "1:1.7.0.201-2.6.16.1.amzn2.0.1"
+										}
+									],
+									"fixed": [
+										"1:1.7.0.201-2.6.16.1.amzn2.0.1"
+									]
 								}
-							],
-							"fixed": [
-								"1:1.7.0.201-2.6.16.1.amzn2.0.1"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "java-1.7.0-openjdk-devel",
-							"architectures": [
-								"i686"
-							],
-							"repositories": [
-								"amzn2-core"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "1:1.7.0.201-2.6.16.1.amzn2.0.1"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "java-1.7.0-openjdk-devel",
+									"architectures": [
+										"i686"
+									],
+									"repositories": [
+										"amzn2-core"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "1:1.7.0.201-2.6.16.1.amzn2.0.1"
+										}
+									],
+									"fixed": [
+										"1:1.7.0.201-2.6.16.1.amzn2.0.1"
+									]
 								}
-							],
-							"fixed": [
-								"1:1.7.0.201-2.6.16.1.amzn2.0.1"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "java-1.7.0-openjdk-headless",
-							"architectures": [
-								"i686"
-							],
-							"repositories": [
-								"amzn2-core"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "1:1.7.0.201-2.6.16.1.amzn2.0.1"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "java-1.7.0-openjdk-headless",
+									"architectures": [
+										"i686"
+									],
+									"repositories": [
+										"amzn2-core"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "1:1.7.0.201-2.6.16.1.amzn2.0.1"
+										}
+									],
+									"fixed": [
+										"1:1.7.0.201-2.6.16.1.amzn2.0.1"
+									]
 								}
-							],
-							"fixed": [
-								"1:1.7.0.201-2.6.16.1.amzn2.0.1"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "java-1.7.0-openjdk-javadoc",
-							"architectures": [
-								"noarch"
-							],
-							"repositories": [
-								"amzn2-core"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "1:1.7.0.201-2.6.16.1.amzn2.0.1"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "java-1.7.0-openjdk-javadoc",
+									"architectures": [
+										"noarch"
+									],
+									"repositories": [
+										"amzn2-core"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "1:1.7.0.201-2.6.16.1.amzn2.0.1"
+										}
+									],
+									"fixed": [
+										"1:1.7.0.201-2.6.16.1.amzn2.0.1"
+									]
 								}
-							],
-							"fixed": [
-								"1:1.7.0.201-2.6.16.1.amzn2.0.1"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "java-1.7.0-openjdk-src",
-							"architectures": [
-								"i686"
-							],
-							"repositories": [
-								"amzn2-core"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "1:1.7.0.201-2.6.16.1.amzn2.0.1"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "java-1.7.0-openjdk-src",
+									"architectures": [
+										"i686"
+									],
+									"repositories": [
+										"amzn2-core"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "1:1.7.0.201-2.6.16.1.amzn2.0.1"
+										}
+									],
+									"fixed": [
+										"1:1.7.0.201-2.6.16.1.amzn2.0.1"
+									]
 								}
-							],
-							"fixed": [
-								"1:1.7.0.201-2.6.16.1.amzn2.0.1"
-							]
-						}
+							}
+						]
 					}
-				]
-			}
+				}
+			]
 		}
 	],
 	"data_source": {

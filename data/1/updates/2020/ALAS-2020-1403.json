@@ -48,8 +48,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"amazon:1"
+			"segments": [
+				{
+					"ecosystem": "amazon:1"
+				}
 			]
 		}
 	],
@@ -64,8 +66,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"amazon:1"
+			"segments": [
+				{
+					"ecosystem": "amazon:1"
+				}
 			]
 		},
 		{
@@ -78,8 +82,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"amazon:1"
+			"segments": [
+				{
+					"ecosystem": "amazon:1"
+				}
 			]
 		},
 		{
@@ -92,8 +98,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"amazon:1"
+			"segments": [
+				{
+					"ecosystem": "amazon:1"
+				}
 			]
 		},
 		{
@@ -106,8 +114,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"amazon:1"
+			"segments": [
+				{
+					"ecosystem": "amazon:1"
+				}
 			]
 		},
 		{
@@ -120,8 +130,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"amazon:1"
+			"segments": [
+				{
+					"ecosystem": "amazon:1"
+				}
 			]
 		},
 		{
@@ -134,8 +146,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"amazon:1"
+			"segments": [
+				{
+					"ecosystem": "amazon:1"
+				}
 			]
 		},
 		{
@@ -148,289 +162,295 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"amazon:1"
+			"segments": [
+				{
+					"ecosystem": "amazon:1"
+				}
 			]
 		}
 	],
-	"detection": [
+	"detections": [
 		{
 			"ecosystem": "amazon:1",
-			"criteria": {
-				"operator": "OR",
-				"criterions": [
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "mysql57",
-							"architectures": [
-								"i686"
-							],
-							"repositories": [
-								"amzn-main",
-								"amzn-updates"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:5.7.30-1.15.amzn1"
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "mysql57",
+									"architectures": [
+										"i686"
+									],
+									"repositories": [
+										"amzn-main",
+										"amzn-updates"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "0:5.7.30-1.15.amzn1"
+										}
+									],
+									"fixed": [
+										"0:5.7.30-1.15.amzn1"
+									]
 								}
-							],
-							"fixed": [
-								"0:5.7.30-1.15.amzn1"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "mysql57-common",
-							"architectures": [
-								"i686"
-							],
-							"repositories": [
-								"amzn-main",
-								"amzn-updates"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:5.7.30-1.15.amzn1"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "mysql57-common",
+									"architectures": [
+										"i686"
+									],
+									"repositories": [
+										"amzn-main",
+										"amzn-updates"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "0:5.7.30-1.15.amzn1"
+										}
+									],
+									"fixed": [
+										"0:5.7.30-1.15.amzn1"
+									]
 								}
-							],
-							"fixed": [
-								"0:5.7.30-1.15.amzn1"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "mysql57-debuginfo",
-							"architectures": [
-								"i686"
-							],
-							"repositories": [
-								"amzn-main",
-								"amzn-updates"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:5.7.30-1.15.amzn1"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "mysql57-debuginfo",
+									"architectures": [
+										"i686"
+									],
+									"repositories": [
+										"amzn-main",
+										"amzn-updates"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "0:5.7.30-1.15.amzn1"
+										}
+									],
+									"fixed": [
+										"0:5.7.30-1.15.amzn1"
+									]
 								}
-							],
-							"fixed": [
-								"0:5.7.30-1.15.amzn1"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "mysql57-devel",
-							"architectures": [
-								"i686"
-							],
-							"repositories": [
-								"amzn-main",
-								"amzn-updates"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:5.7.30-1.15.amzn1"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "mysql57-devel",
+									"architectures": [
+										"i686"
+									],
+									"repositories": [
+										"amzn-main",
+										"amzn-updates"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "0:5.7.30-1.15.amzn1"
+										}
+									],
+									"fixed": [
+										"0:5.7.30-1.15.amzn1"
+									]
 								}
-							],
-							"fixed": [
-								"0:5.7.30-1.15.amzn1"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "mysql57-embedded",
-							"architectures": [
-								"i686"
-							],
-							"repositories": [
-								"amzn-main",
-								"amzn-updates"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:5.7.30-1.15.amzn1"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "mysql57-embedded",
+									"architectures": [
+										"i686"
+									],
+									"repositories": [
+										"amzn-main",
+										"amzn-updates"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "0:5.7.30-1.15.amzn1"
+										}
+									],
+									"fixed": [
+										"0:5.7.30-1.15.amzn1"
+									]
 								}
-							],
-							"fixed": [
-								"0:5.7.30-1.15.amzn1"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "mysql57-embedded-devel",
-							"architectures": [
-								"i686"
-							],
-							"repositories": [
-								"amzn-main",
-								"amzn-updates"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:5.7.30-1.15.amzn1"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "mysql57-embedded-devel",
+									"architectures": [
+										"i686"
+									],
+									"repositories": [
+										"amzn-main",
+										"amzn-updates"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "0:5.7.30-1.15.amzn1"
+										}
+									],
+									"fixed": [
+										"0:5.7.30-1.15.amzn1"
+									]
 								}
-							],
-							"fixed": [
-								"0:5.7.30-1.15.amzn1"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "mysql57-errmsg",
-							"architectures": [
-								"i686"
-							],
-							"repositories": [
-								"amzn-main",
-								"amzn-updates"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:5.7.30-1.15.amzn1"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "mysql57-errmsg",
+									"architectures": [
+										"i686"
+									],
+									"repositories": [
+										"amzn-main",
+										"amzn-updates"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "0:5.7.30-1.15.amzn1"
+										}
+									],
+									"fixed": [
+										"0:5.7.30-1.15.amzn1"
+									]
 								}
-							],
-							"fixed": [
-								"0:5.7.30-1.15.amzn1"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "mysql57-libs",
-							"architectures": [
-								"i686"
-							],
-							"repositories": [
-								"amzn-main",
-								"amzn-updates"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:5.7.30-1.15.amzn1"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "mysql57-libs",
+									"architectures": [
+										"i686"
+									],
+									"repositories": [
+										"amzn-main",
+										"amzn-updates"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "0:5.7.30-1.15.amzn1"
+										}
+									],
+									"fixed": [
+										"0:5.7.30-1.15.amzn1"
+									]
 								}
-							],
-							"fixed": [
-								"0:5.7.30-1.15.amzn1"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "mysql57-server",
-							"architectures": [
-								"i686"
-							],
-							"repositories": [
-								"amzn-main",
-								"amzn-updates"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:5.7.30-1.15.amzn1"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "mysql57-server",
+									"architectures": [
+										"i686"
+									],
+									"repositories": [
+										"amzn-main",
+										"amzn-updates"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "0:5.7.30-1.15.amzn1"
+										}
+									],
+									"fixed": [
+										"0:5.7.30-1.15.amzn1"
+									]
 								}
-							],
-							"fixed": [
-								"0:5.7.30-1.15.amzn1"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "mysql57-test",
-							"architectures": [
-								"i686"
-							],
-							"repositories": [
-								"amzn-main",
-								"amzn-updates"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:5.7.30-1.15.amzn1"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "mysql57-test",
+									"architectures": [
+										"i686"
+									],
+									"repositories": [
+										"amzn-main",
+										"amzn-updates"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "0:5.7.30-1.15.amzn1"
+										}
+									],
+									"fixed": [
+										"0:5.7.30-1.15.amzn1"
+									]
 								}
-							],
-							"fixed": [
-								"0:5.7.30-1.15.amzn1"
-							]
-						}
+							}
+						]
 					}
-				]
-			}
+				}
+			]
 		}
 	],
 	"data_source": {

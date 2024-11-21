@@ -36,8 +36,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"amazon:2022"
+			"segments": [
+				{
+					"ecosystem": "amazon:2022"
+				}
 			]
 		}
 	],
@@ -52,8 +54,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"amazon:2022"
+			"segments": [
+				{
+					"ecosystem": "amazon:2022"
+				}
 			]
 		},
 		{
@@ -66,8 +70,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"amazon:2022"
+			"segments": [
+				{
+					"ecosystem": "amazon:2022"
+				}
 			]
 		},
 		{
@@ -80,8 +86,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"amazon:2022"
+			"segments": [
+				{
+					"ecosystem": "amazon:2022"
+				}
 			]
 		},
 		{
@@ -94,279 +102,285 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"amazon:2022"
+			"segments": [
+				{
+					"ecosystem": "amazon:2022"
+				}
 			]
 		}
 	],
-	"detection": [
+	"detections": [
 		{
 			"ecosystem": "amazon:2022",
-			"criteria": {
-				"operator": "OR",
-				"criterions": [
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "nodejs",
-							"architectures": [
-								"aarch64"
-							],
-							"repositories": [
-								"amazonlinux"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "1:16.13.2-3.amzn2022"
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "nodejs",
+									"architectures": [
+										"aarch64"
+									],
+									"repositories": [
+										"amazonlinux"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "1:16.13.2-3.amzn2022"
+										}
+									],
+									"fixed": [
+										"1:16.13.2-3.amzn2022"
+									]
 								}
-							],
-							"fixed": [
-								"1:16.13.2-3.amzn2022"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "nodejs-debuginfo",
-							"architectures": [
-								"aarch64"
-							],
-							"repositories": [
-								"amazonlinux"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "1:16.13.2-3.amzn2022"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "nodejs-debuginfo",
+									"architectures": [
+										"aarch64"
+									],
+									"repositories": [
+										"amazonlinux"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "1:16.13.2-3.amzn2022"
+										}
+									],
+									"fixed": [
+										"1:16.13.2-3.amzn2022"
+									]
 								}
-							],
-							"fixed": [
-								"1:16.13.2-3.amzn2022"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "nodejs-debugsource",
-							"architectures": [
-								"aarch64"
-							],
-							"repositories": [
-								"amazonlinux"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "1:16.13.2-3.amzn2022"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "nodejs-debugsource",
+									"architectures": [
+										"aarch64"
+									],
+									"repositories": [
+										"amazonlinux"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "1:16.13.2-3.amzn2022"
+										}
+									],
+									"fixed": [
+										"1:16.13.2-3.amzn2022"
+									]
 								}
-							],
-							"fixed": [
-								"1:16.13.2-3.amzn2022"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "nodejs-devel",
-							"architectures": [
-								"aarch64"
-							],
-							"repositories": [
-								"amazonlinux"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "1:16.13.2-3.amzn2022"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "nodejs-devel",
+									"architectures": [
+										"aarch64"
+									],
+									"repositories": [
+										"amazonlinux"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "1:16.13.2-3.amzn2022"
+										}
+									],
+									"fixed": [
+										"1:16.13.2-3.amzn2022"
+									]
 								}
-							],
-							"fixed": [
-								"1:16.13.2-3.amzn2022"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "nodejs-docs",
-							"architectures": [
-								"noarch"
-							],
-							"repositories": [
-								"amazonlinux"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "1:16.13.2-3.amzn2022"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "nodejs-docs",
+									"architectures": [
+										"noarch"
+									],
+									"repositories": [
+										"amazonlinux"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "1:16.13.2-3.amzn2022"
+										}
+									],
+									"fixed": [
+										"1:16.13.2-3.amzn2022"
+									]
 								}
-							],
-							"fixed": [
-								"1:16.13.2-3.amzn2022"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "nodejs-full-i18n",
-							"architectures": [
-								"aarch64"
-							],
-							"repositories": [
-								"amazonlinux"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "1:16.13.2-3.amzn2022"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "nodejs-full-i18n",
+									"architectures": [
+										"aarch64"
+									],
+									"repositories": [
+										"amazonlinux"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "1:16.13.2-3.amzn2022"
+										}
+									],
+									"fixed": [
+										"1:16.13.2-3.amzn2022"
+									]
 								}
-							],
-							"fixed": [
-								"1:16.13.2-3.amzn2022"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "nodejs-libs",
-							"architectures": [
-								"aarch64"
-							],
-							"repositories": [
-								"amazonlinux"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "1:16.13.2-3.amzn2022"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "nodejs-libs",
+									"architectures": [
+										"aarch64"
+									],
+									"repositories": [
+										"amazonlinux"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "1:16.13.2-3.amzn2022"
+										}
+									],
+									"fixed": [
+										"1:16.13.2-3.amzn2022"
+									]
 								}
-							],
-							"fixed": [
-								"1:16.13.2-3.amzn2022"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "nodejs-libs-debuginfo",
-							"architectures": [
-								"aarch64"
-							],
-							"repositories": [
-								"amazonlinux"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "1:16.13.2-3.amzn2022"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "nodejs-libs-debuginfo",
+									"architectures": [
+										"aarch64"
+									],
+									"repositories": [
+										"amazonlinux"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "1:16.13.2-3.amzn2022"
+										}
+									],
+									"fixed": [
+										"1:16.13.2-3.amzn2022"
+									]
 								}
-							],
-							"fixed": [
-								"1:16.13.2-3.amzn2022"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "npm",
-							"architectures": [
-								"aarch64"
-							],
-							"repositories": [
-								"amazonlinux"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "1:8.1.2-1.16.13.2.3.amzn2022"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "npm",
+									"architectures": [
+										"aarch64"
+									],
+									"repositories": [
+										"amazonlinux"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "1:8.1.2-1.16.13.2.3.amzn2022"
+										}
+									],
+									"fixed": [
+										"1:8.1.2-1.16.13.2.3.amzn2022"
+									]
 								}
-							],
-							"fixed": [
-								"1:8.1.2-1.16.13.2.3.amzn2022"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "v8-devel",
-							"architectures": [
-								"aarch64"
-							],
-							"repositories": [
-								"amazonlinux"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "2:9.4.146.24-1.16.13.2.3.amzn2022"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "v8-devel",
+									"architectures": [
+										"aarch64"
+									],
+									"repositories": [
+										"amazonlinux"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "2:9.4.146.24-1.16.13.2.3.amzn2022"
+										}
+									],
+									"fixed": [
+										"2:9.4.146.24-1.16.13.2.3.amzn2022"
+									]
 								}
-							],
-							"fixed": [
-								"2:9.4.146.24-1.16.13.2.3.amzn2022"
-							]
-						}
+							}
+						]
 					}
-				]
-			}
+				}
+			]
 		}
 	],
 	"data_source": {

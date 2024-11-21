@@ -32,8 +32,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"amazon:2"
+			"segments": [
+				{
+					"ecosystem": "amazon:2"
+				}
 			]
 		}
 	],
@@ -48,8 +50,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"amazon:2"
+			"segments": [
+				{
+					"ecosystem": "amazon:2"
+				}
 			]
 		},
 		{
@@ -62,8 +66,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"amazon:2"
+			"segments": [
+				{
+					"ecosystem": "amazon:2"
+				}
 			]
 		},
 		{
@@ -76,227 +82,233 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"amazon:2"
+			"segments": [
+				{
+					"ecosystem": "amazon:2"
+				}
 			]
 		}
 	],
-	"detection": [
+	"detections": [
 		{
 			"ecosystem": "amazon:2",
-			"criteria": {
-				"operator": "OR",
-				"criterions": [
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "emacs",
-							"architectures": [
-								"aarch64"
-							],
-							"repositories": [
-								"amzn2-core"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "1:27.2-4.amzn2.0.3"
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "emacs",
+									"architectures": [
+										"aarch64"
+									],
+									"repositories": [
+										"amzn2-core"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "1:27.2-4.amzn2.0.3"
+										}
+									],
+									"fixed": [
+										"1:27.2-4.amzn2.0.3"
+									]
 								}
-							],
-							"fixed": [
-								"1:27.2-4.amzn2.0.3"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "emacs-common",
-							"architectures": [
-								"aarch64"
-							],
-							"repositories": [
-								"amzn2-core"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "1:27.2-4.amzn2.0.3"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "emacs-common",
+									"architectures": [
+										"aarch64"
+									],
+									"repositories": [
+										"amzn2-core"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "1:27.2-4.amzn2.0.3"
+										}
+									],
+									"fixed": [
+										"1:27.2-4.amzn2.0.3"
+									]
 								}
-							],
-							"fixed": [
-								"1:27.2-4.amzn2.0.3"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "emacs-debuginfo",
-							"architectures": [
-								"aarch64"
-							],
-							"repositories": [
-								"amzn2-core"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "1:27.2-4.amzn2.0.3"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "emacs-debuginfo",
+									"architectures": [
+										"aarch64"
+									],
+									"repositories": [
+										"amzn2-core"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "1:27.2-4.amzn2.0.3"
+										}
+									],
+									"fixed": [
+										"1:27.2-4.amzn2.0.3"
+									]
 								}
-							],
-							"fixed": [
-								"1:27.2-4.amzn2.0.3"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "emacs-devel",
-							"architectures": [
-								"aarch64"
-							],
-							"repositories": [
-								"amzn2-core"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "1:27.2-4.amzn2.0.3"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "emacs-devel",
+									"architectures": [
+										"aarch64"
+									],
+									"repositories": [
+										"amzn2-core"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "1:27.2-4.amzn2.0.3"
+										}
+									],
+									"fixed": [
+										"1:27.2-4.amzn2.0.3"
+									]
 								}
-							],
-							"fixed": [
-								"1:27.2-4.amzn2.0.3"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "emacs-filesystem",
-							"architectures": [
-								"noarch"
-							],
-							"repositories": [
-								"amzn2-core"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "1:27.2-4.amzn2.0.3"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "emacs-filesystem",
+									"architectures": [
+										"noarch"
+									],
+									"repositories": [
+										"amzn2-core"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "1:27.2-4.amzn2.0.3"
+										}
+									],
+									"fixed": [
+										"1:27.2-4.amzn2.0.3"
+									]
 								}
-							],
-							"fixed": [
-								"1:27.2-4.amzn2.0.3"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "emacs-lucid",
-							"architectures": [
-								"aarch64"
-							],
-							"repositories": [
-								"amzn2-core"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "1:27.2-4.amzn2.0.3"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "emacs-lucid",
+									"architectures": [
+										"aarch64"
+									],
+									"repositories": [
+										"amzn2-core"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "1:27.2-4.amzn2.0.3"
+										}
+									],
+									"fixed": [
+										"1:27.2-4.amzn2.0.3"
+									]
 								}
-							],
-							"fixed": [
-								"1:27.2-4.amzn2.0.3"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "emacs-nox",
-							"architectures": [
-								"aarch64"
-							],
-							"repositories": [
-								"amzn2-core"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "1:27.2-4.amzn2.0.3"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "emacs-nox",
+									"architectures": [
+										"aarch64"
+									],
+									"repositories": [
+										"amzn2-core"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "1:27.2-4.amzn2.0.3"
+										}
+									],
+									"fixed": [
+										"1:27.2-4.amzn2.0.3"
+									]
 								}
-							],
-							"fixed": [
-								"1:27.2-4.amzn2.0.3"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "emacs-terminal",
-							"architectures": [
-								"noarch"
-							],
-							"repositories": [
-								"amzn2-core"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "1:27.2-4.amzn2.0.3"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "emacs-terminal",
+									"architectures": [
+										"noarch"
+									],
+									"repositories": [
+										"amzn2-core"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "1:27.2-4.amzn2.0.3"
+										}
+									],
+									"fixed": [
+										"1:27.2-4.amzn2.0.3"
+									]
 								}
-							],
-							"fixed": [
-								"1:27.2-4.amzn2.0.3"
-							]
-						}
+							}
+						]
 					}
-				]
-			}
+				}
+			]
 		}
 	],
 	"data_source": {

@@ -60,8 +60,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"amazon:2022"
+			"segments": [
+				{
+					"ecosystem": "amazon:2022"
+				}
 			]
 		}
 	],
@@ -76,8 +78,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"amazon:2022"
+			"segments": [
+				{
+					"ecosystem": "amazon:2022"
+				}
 			]
 		},
 		{
@@ -90,8 +94,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"amazon:2022"
+			"segments": [
+				{
+					"ecosystem": "amazon:2022"
+				}
 			]
 		},
 		{
@@ -104,8 +110,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"amazon:2022"
+			"segments": [
+				{
+					"ecosystem": "amazon:2022"
+				}
 			]
 		},
 		{
@@ -118,8 +126,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"amazon:2022"
+			"segments": [
+				{
+					"ecosystem": "amazon:2022"
+				}
 			]
 		},
 		{
@@ -132,8 +142,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"amazon:2022"
+			"segments": [
+				{
+					"ecosystem": "amazon:2022"
+				}
 			]
 		},
 		{
@@ -146,8 +158,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"amazon:2022"
+			"segments": [
+				{
+					"ecosystem": "amazon:2022"
+				}
 			]
 		},
 		{
@@ -160,8 +174,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"amazon:2022"
+			"segments": [
+				{
+					"ecosystem": "amazon:2022"
+				}
 			]
 		},
 		{
@@ -174,8 +190,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"amazon:2022"
+			"segments": [
+				{
+					"ecosystem": "amazon:2022"
+				}
 			]
 		},
 		{
@@ -188,8 +206,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"amazon:2022"
+			"segments": [
+				{
+					"ecosystem": "amazon:2022"
+				}
 			]
 		},
 		{
@@ -202,149 +222,155 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"amazon:2022"
+			"segments": [
+				{
+					"ecosystem": "amazon:2022"
+				}
 			]
 		}
 	],
-	"detection": [
+	"detections": [
 		{
 			"ecosystem": "amazon:2022",
-			"criteria": {
-				"operator": "OR",
-				"criterions": [
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "java-17-amazon-corretto",
-							"architectures": [
-								"x86_64"
-							],
-							"repositories": [
-								"amazonlinux"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "1:17.0.5+8-1.amzn2022.1"
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "java-17-amazon-corretto",
+									"architectures": [
+										"x86_64"
+									],
+									"repositories": [
+										"amazonlinux"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "1:17.0.5+8-1.amzn2022.1"
+										}
+									],
+									"fixed": [
+										"1:17.0.5+8-1.amzn2022.1"
+									]
 								}
-							],
-							"fixed": [
-								"1:17.0.5+8-1.amzn2022.1"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "java-17-amazon-corretto-devel",
-							"architectures": [
-								"x86_64"
-							],
-							"repositories": [
-								"amazonlinux"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "1:17.0.5+8-1.amzn2022.1"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "java-17-amazon-corretto-devel",
+									"architectures": [
+										"x86_64"
+									],
+									"repositories": [
+										"amazonlinux"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "1:17.0.5+8-1.amzn2022.1"
+										}
+									],
+									"fixed": [
+										"1:17.0.5+8-1.amzn2022.1"
+									]
 								}
-							],
-							"fixed": [
-								"1:17.0.5+8-1.amzn2022.1"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "java-17-amazon-corretto-headless",
-							"architectures": [
-								"x86_64"
-							],
-							"repositories": [
-								"amazonlinux"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "1:17.0.5+8-1.amzn2022.1"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "java-17-amazon-corretto-headless",
+									"architectures": [
+										"x86_64"
+									],
+									"repositories": [
+										"amazonlinux"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "1:17.0.5+8-1.amzn2022.1"
+										}
+									],
+									"fixed": [
+										"1:17.0.5+8-1.amzn2022.1"
+									]
 								}
-							],
-							"fixed": [
-								"1:17.0.5+8-1.amzn2022.1"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "java-17-amazon-corretto-javadoc",
-							"architectures": [
-								"x86_64"
-							],
-							"repositories": [
-								"amazonlinux"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "1:17.0.5+8-1.amzn2022.1"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "java-17-amazon-corretto-javadoc",
+									"architectures": [
+										"x86_64"
+									],
+									"repositories": [
+										"amazonlinux"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "1:17.0.5+8-1.amzn2022.1"
+										}
+									],
+									"fixed": [
+										"1:17.0.5+8-1.amzn2022.1"
+									]
 								}
-							],
-							"fixed": [
-								"1:17.0.5+8-1.amzn2022.1"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "java-17-amazon-corretto-jmods",
-							"architectures": [
-								"x86_64"
-							],
-							"repositories": [
-								"amazonlinux"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "1:17.0.5+8-1.amzn2022.1"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "java-17-amazon-corretto-jmods",
+									"architectures": [
+										"x86_64"
+									],
+									"repositories": [
+										"amazonlinux"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "1:17.0.5+8-1.amzn2022.1"
+										}
+									],
+									"fixed": [
+										"1:17.0.5+8-1.amzn2022.1"
+									]
 								}
-							],
-							"fixed": [
-								"1:17.0.5+8-1.amzn2022.1"
-							]
-						}
+							}
+						]
 					}
-				]
-			}
+				}
+			]
 		}
 	],
 	"data_source": {

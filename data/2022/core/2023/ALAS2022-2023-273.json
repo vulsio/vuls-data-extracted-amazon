@@ -28,8 +28,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"amazon:2022"
+			"segments": [
+				{
+					"ecosystem": "amazon:2022"
+				}
 			]
 		}
 	],
@@ -44,8 +46,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"amazon:2022"
+			"segments": [
+				{
+					"ecosystem": "amazon:2022"
+				}
 			]
 		},
 		{
@@ -58,279 +62,285 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"amazon:2022"
+			"segments": [
+				{
+					"ecosystem": "amazon:2022"
+				}
 			]
 		}
 	],
-	"detection": [
+	"detections": [
 		{
 			"ecosystem": "amazon:2022",
-			"criteria": {
-				"operator": "OR",
-				"criterions": [
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "python-unversioned-command",
-							"architectures": [
-								"noarch"
-							],
-							"repositories": [
-								"amazonlinux"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:3.9.16-1.amzn2022.0.1"
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "python-unversioned-command",
+									"architectures": [
+										"noarch"
+									],
+									"repositories": [
+										"amazonlinux"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "0:3.9.16-1.amzn2022.0.1"
+										}
+									],
+									"fixed": [
+										"0:3.9.16-1.amzn2022.0.1"
+									]
 								}
-							],
-							"fixed": [
-								"0:3.9.16-1.amzn2022.0.1"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "python3",
-							"architectures": [
-								"aarch64"
-							],
-							"repositories": [
-								"amazonlinux"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:3.9.16-1.amzn2022.0.1"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "python3",
+									"architectures": [
+										"aarch64"
+									],
+									"repositories": [
+										"amazonlinux"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "0:3.9.16-1.amzn2022.0.1"
+										}
+									],
+									"fixed": [
+										"0:3.9.16-1.amzn2022.0.1"
+									]
 								}
-							],
-							"fixed": [
-								"0:3.9.16-1.amzn2022.0.1"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "python3-debug",
-							"architectures": [
-								"aarch64"
-							],
-							"repositories": [
-								"amazonlinux"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:3.9.16-1.amzn2022.0.1"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "python3-debug",
+									"architectures": [
+										"aarch64"
+									],
+									"repositories": [
+										"amazonlinux"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "0:3.9.16-1.amzn2022.0.1"
+										}
+									],
+									"fixed": [
+										"0:3.9.16-1.amzn2022.0.1"
+									]
 								}
-							],
-							"fixed": [
-								"0:3.9.16-1.amzn2022.0.1"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "python3-devel",
-							"architectures": [
-								"aarch64"
-							],
-							"repositories": [
-								"amazonlinux"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:3.9.16-1.amzn2022.0.1"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "python3-devel",
+									"architectures": [
+										"aarch64"
+									],
+									"repositories": [
+										"amazonlinux"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "0:3.9.16-1.amzn2022.0.1"
+										}
+									],
+									"fixed": [
+										"0:3.9.16-1.amzn2022.0.1"
+									]
 								}
-							],
-							"fixed": [
-								"0:3.9.16-1.amzn2022.0.1"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "python3-idle",
-							"architectures": [
-								"aarch64"
-							],
-							"repositories": [
-								"amazonlinux"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:3.9.16-1.amzn2022.0.1"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "python3-idle",
+									"architectures": [
+										"aarch64"
+									],
+									"repositories": [
+										"amazonlinux"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "0:3.9.16-1.amzn2022.0.1"
+										}
+									],
+									"fixed": [
+										"0:3.9.16-1.amzn2022.0.1"
+									]
 								}
-							],
-							"fixed": [
-								"0:3.9.16-1.amzn2022.0.1"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "python3-libs",
-							"architectures": [
-								"aarch64"
-							],
-							"repositories": [
-								"amazonlinux"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:3.9.16-1.amzn2022.0.1"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "python3-libs",
+									"architectures": [
+										"aarch64"
+									],
+									"repositories": [
+										"amazonlinux"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "0:3.9.16-1.amzn2022.0.1"
+										}
+									],
+									"fixed": [
+										"0:3.9.16-1.amzn2022.0.1"
+									]
 								}
-							],
-							"fixed": [
-								"0:3.9.16-1.amzn2022.0.1"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "python3-test",
-							"architectures": [
-								"aarch64"
-							],
-							"repositories": [
-								"amazonlinux"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:3.9.16-1.amzn2022.0.1"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "python3-test",
+									"architectures": [
+										"aarch64"
+									],
+									"repositories": [
+										"amazonlinux"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "0:3.9.16-1.amzn2022.0.1"
+										}
+									],
+									"fixed": [
+										"0:3.9.16-1.amzn2022.0.1"
+									]
 								}
-							],
-							"fixed": [
-								"0:3.9.16-1.amzn2022.0.1"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "python3-tkinter",
-							"architectures": [
-								"aarch64"
-							],
-							"repositories": [
-								"amazonlinux"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:3.9.16-1.amzn2022.0.1"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "python3-tkinter",
+									"architectures": [
+										"aarch64"
+									],
+									"repositories": [
+										"amazonlinux"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "0:3.9.16-1.amzn2022.0.1"
+										}
+									],
+									"fixed": [
+										"0:3.9.16-1.amzn2022.0.1"
+									]
 								}
-							],
-							"fixed": [
-								"0:3.9.16-1.amzn2022.0.1"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "python3.9-debuginfo",
-							"architectures": [
-								"aarch64"
-							],
-							"repositories": [
-								"amazonlinux"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:3.9.16-1.amzn2022.0.1"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "python3.9-debuginfo",
+									"architectures": [
+										"aarch64"
+									],
+									"repositories": [
+										"amazonlinux"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "0:3.9.16-1.amzn2022.0.1"
+										}
+									],
+									"fixed": [
+										"0:3.9.16-1.amzn2022.0.1"
+									]
 								}
-							],
-							"fixed": [
-								"0:3.9.16-1.amzn2022.0.1"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "python3.9-debugsource",
-							"architectures": [
-								"aarch64"
-							],
-							"repositories": [
-								"amazonlinux"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:3.9.16-1.amzn2022.0.1"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "python3.9-debugsource",
+									"architectures": [
+										"aarch64"
+									],
+									"repositories": [
+										"amazonlinux"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "0:3.9.16-1.amzn2022.0.1"
+										}
+									],
+									"fixed": [
+										"0:3.9.16-1.amzn2022.0.1"
+									]
 								}
-							],
-							"fixed": [
-								"0:3.9.16-1.amzn2022.0.1"
-							]
-						}
+							}
+						]
 					}
-				]
-			}
+				}
+			]
 		}
 	],
 	"data_source": {

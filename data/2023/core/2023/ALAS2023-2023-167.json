@@ -48,8 +48,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"amazon:2023"
+			"segments": [
+				{
+					"ecosystem": "amazon:2023"
+				}
 			]
 		}
 	],
@@ -64,8 +66,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"amazon:2023"
+			"segments": [
+				{
+					"ecosystem": "amazon:2023"
+				}
 			]
 		},
 		{
@@ -78,8 +82,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"amazon:2023"
+			"segments": [
+				{
+					"ecosystem": "amazon:2023"
+				}
 			]
 		},
 		{
@@ -92,8 +98,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"amazon:2023"
+			"segments": [
+				{
+					"ecosystem": "amazon:2023"
+				}
 			]
 		},
 		{
@@ -106,8 +114,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"amazon:2023"
+			"segments": [
+				{
+					"ecosystem": "amazon:2023"
+				}
 			]
 		},
 		{
@@ -120,8 +130,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"amazon:2023"
+			"segments": [
+				{
+					"ecosystem": "amazon:2023"
+				}
 			]
 		},
 		{
@@ -134,8 +146,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"amazon:2023"
+			"segments": [
+				{
+					"ecosystem": "amazon:2023"
+				}
 			]
 		},
 		{
@@ -148,149 +162,155 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"amazon:2023"
+			"segments": [
+				{
+					"ecosystem": "amazon:2023"
+				}
 			]
 		}
 	],
-	"detection": [
+	"detections": [
 		{
 			"ecosystem": "amazon:2023",
-			"criteria": {
-				"operator": "OR",
-				"criterions": [
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "java-11-amazon-corretto",
-							"architectures": [
-								"aarch64"
-							],
-							"repositories": [
-								"amazonlinux"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "1:11.0.19+7-1.amzn2023"
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "java-11-amazon-corretto",
+									"architectures": [
+										"aarch64"
+									],
+									"repositories": [
+										"amazonlinux"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "1:11.0.19+7-1.amzn2023"
+										}
+									],
+									"fixed": [
+										"1:11.0.19+7-1.amzn2023"
+									]
 								}
-							],
-							"fixed": [
-								"1:11.0.19+7-1.amzn2023"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "java-11-amazon-corretto-devel",
-							"architectures": [
-								"x86_64"
-							],
-							"repositories": [
-								"amazonlinux"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "1:11.0.19+7-1.amzn2023"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "java-11-amazon-corretto-devel",
+									"architectures": [
+										"x86_64"
+									],
+									"repositories": [
+										"amazonlinux"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "1:11.0.19+7-1.amzn2023"
+										}
+									],
+									"fixed": [
+										"1:11.0.19+7-1.amzn2023"
+									]
 								}
-							],
-							"fixed": [
-								"1:11.0.19+7-1.amzn2023"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "java-11-amazon-corretto-headless",
-							"architectures": [
-								"x86_64"
-							],
-							"repositories": [
-								"amazonlinux"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "1:11.0.19+7-1.amzn2023"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "java-11-amazon-corretto-headless",
+									"architectures": [
+										"x86_64"
+									],
+									"repositories": [
+										"amazonlinux"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "1:11.0.19+7-1.amzn2023"
+										}
+									],
+									"fixed": [
+										"1:11.0.19+7-1.amzn2023"
+									]
 								}
-							],
-							"fixed": [
-								"1:11.0.19+7-1.amzn2023"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "java-11-amazon-corretto-javadoc",
-							"architectures": [
-								"x86_64"
-							],
-							"repositories": [
-								"amazonlinux"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "1:11.0.19+7-1.amzn2023"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "java-11-amazon-corretto-javadoc",
+									"architectures": [
+										"x86_64"
+									],
+									"repositories": [
+										"amazonlinux"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "1:11.0.19+7-1.amzn2023"
+										}
+									],
+									"fixed": [
+										"1:11.0.19+7-1.amzn2023"
+									]
 								}
-							],
-							"fixed": [
-								"1:11.0.19+7-1.amzn2023"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "java-11-amazon-corretto-jmods",
-							"architectures": [
-								"x86_64"
-							],
-							"repositories": [
-								"amazonlinux"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "1:11.0.19+7-1.amzn2023"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "java-11-amazon-corretto-jmods",
+									"architectures": [
+										"x86_64"
+									],
+									"repositories": [
+										"amazonlinux"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "1:11.0.19+7-1.amzn2023"
+										}
+									],
+									"fixed": [
+										"1:11.0.19+7-1.amzn2023"
+									]
 								}
-							],
-							"fixed": [
-								"1:11.0.19+7-1.amzn2023"
-							]
-						}
+							}
+						]
 					}
-				]
-			}
+				}
+			]
 		}
 	],
 	"data_source": {

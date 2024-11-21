@@ -32,8 +32,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"amazon:2"
+			"segments": [
+				{
+					"ecosystem": "amazon:2"
+				}
 			]
 		}
 	],
@@ -48,8 +50,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"amazon:2"
+			"segments": [
+				{
+					"ecosystem": "amazon:2"
+				}
 			]
 		},
 		{
@@ -62,8 +66,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"amazon:2"
+			"segments": [
+				{
+					"ecosystem": "amazon:2"
+				}
 			]
 		},
 		{
@@ -76,123 +82,129 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"amazon:2"
+			"segments": [
+				{
+					"ecosystem": "amazon:2"
+				}
 			]
 		}
 	],
-	"detection": [
+	"detections": [
 		{
 			"ecosystem": "amazon:2",
-			"criteria": {
-				"operator": "OR",
-				"criterions": [
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "squid",
-							"architectures": [
-								"i686"
-							],
-							"repositories": [
-								"amzn2-core"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "7:3.5.20-17.amzn2.4.1"
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "squid",
+									"architectures": [
+										"i686"
+									],
+									"repositories": [
+										"amzn2-core"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "7:3.5.20-17.amzn2.4.1"
+										}
+									],
+									"fixed": [
+										"7:3.5.20-17.amzn2.4.1"
+									]
 								}
-							],
-							"fixed": [
-								"7:3.5.20-17.amzn2.4.1"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "squid-debuginfo",
-							"architectures": [
-								"i686"
-							],
-							"repositories": [
-								"amzn2-core"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "7:3.5.20-17.amzn2.4.1"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "squid-debuginfo",
+									"architectures": [
+										"i686"
+									],
+									"repositories": [
+										"amzn2-core"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "7:3.5.20-17.amzn2.4.1"
+										}
+									],
+									"fixed": [
+										"7:3.5.20-17.amzn2.4.1"
+									]
 								}
-							],
-							"fixed": [
-								"7:3.5.20-17.amzn2.4.1"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "squid-migration-script",
-							"architectures": [
-								"i686"
-							],
-							"repositories": [
-								"amzn2-core"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "7:3.5.20-17.amzn2.4.1"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "squid-migration-script",
+									"architectures": [
+										"i686"
+									],
+									"repositories": [
+										"amzn2-core"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "7:3.5.20-17.amzn2.4.1"
+										}
+									],
+									"fixed": [
+										"7:3.5.20-17.amzn2.4.1"
+									]
 								}
-							],
-							"fixed": [
-								"7:3.5.20-17.amzn2.4.1"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "squid-sysvinit",
-							"architectures": [
-								"i686"
-							],
-							"repositories": [
-								"amzn2-core"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "7:3.5.20-17.amzn2.4.1"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "squid-sysvinit",
+									"architectures": [
+										"i686"
+									],
+									"repositories": [
+										"amzn2-core"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "7:3.5.20-17.amzn2.4.1"
+										}
+									],
+									"fixed": [
+										"7:3.5.20-17.amzn2.4.1"
+									]
 								}
-							],
-							"fixed": [
-								"7:3.5.20-17.amzn2.4.1"
-							]
-						}
+							}
+						]
 					}
-				]
-			}
+				}
+			]
 		}
 	],
 	"data_source": {

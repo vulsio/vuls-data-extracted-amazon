@@ -36,8 +36,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"amazon:2"
+			"segments": [
+				{
+					"ecosystem": "amazon:2"
+				}
 			]
 		}
 	],
@@ -52,8 +54,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"amazon:2"
+			"segments": [
+				{
+					"ecosystem": "amazon:2"
+				}
 			]
 		},
 		{
@@ -66,8 +70,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"amazon:2"
+			"segments": [
+				{
+					"ecosystem": "amazon:2"
+				}
 			]
 		},
 		{
@@ -80,8 +86,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"amazon:2"
+			"segments": [
+				{
+					"ecosystem": "amazon:2"
+				}
 			]
 		},
 		{
@@ -94,123 +102,129 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"amazon:2"
+			"segments": [
+				{
+					"ecosystem": "amazon:2"
+				}
 			]
 		}
 	],
-	"detection": [
+	"detections": [
 		{
 			"ecosystem": "amazon:2",
-			"criteria": {
-				"operator": "OR",
-				"criterions": [
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "redis",
-							"architectures": [
-								"aarch64"
-							],
-							"repositories": [
-								"amzn2extra-redis6"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:6.2.11-1.amzn2"
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "redis",
+									"architectures": [
+										"aarch64"
+									],
+									"repositories": [
+										"amzn2extra-redis6"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "0:6.2.11-1.amzn2"
+										}
+									],
+									"fixed": [
+										"0:6.2.11-1.amzn2"
+									]
 								}
-							],
-							"fixed": [
-								"0:6.2.11-1.amzn2"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "redis-debuginfo",
-							"architectures": [
-								"aarch64"
-							],
-							"repositories": [
-								"amzn2extra-redis6"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:6.2.11-1.amzn2"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "redis-debuginfo",
+									"architectures": [
+										"aarch64"
+									],
+									"repositories": [
+										"amzn2extra-redis6"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "0:6.2.11-1.amzn2"
+										}
+									],
+									"fixed": [
+										"0:6.2.11-1.amzn2"
+									]
 								}
-							],
-							"fixed": [
-								"0:6.2.11-1.amzn2"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "redis-devel",
-							"architectures": [
-								"aarch64"
-							],
-							"repositories": [
-								"amzn2extra-redis6"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:6.2.11-1.amzn2"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "redis-devel",
+									"architectures": [
+										"aarch64"
+									],
+									"repositories": [
+										"amzn2extra-redis6"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "0:6.2.11-1.amzn2"
+										}
+									],
+									"fixed": [
+										"0:6.2.11-1.amzn2"
+									]
 								}
-							],
-							"fixed": [
-								"0:6.2.11-1.amzn2"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "redis-doc",
-							"architectures": [
-								"noarch"
-							],
-							"repositories": [
-								"amzn2extra-redis6"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:6.2.11-1.amzn2"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "redis-doc",
+									"architectures": [
+										"noarch"
+									],
+									"repositories": [
+										"amzn2extra-redis6"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "0:6.2.11-1.amzn2"
+										}
+									],
+									"fixed": [
+										"0:6.2.11-1.amzn2"
+									]
 								}
-							],
-							"fixed": [
-								"0:6.2.11-1.amzn2"
-							]
-						}
+							}
+						]
 					}
-				]
-			}
+				}
+			]
 		}
 	],
 	"data_source": {

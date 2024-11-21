@@ -24,8 +24,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"amazon:2023"
+			"segments": [
+				{
+					"ecosystem": "amazon:2023"
+				}
 			]
 		}
 	],
@@ -40,487 +42,493 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"amazon:2023"
+			"segments": [
+				{
+					"ecosystem": "amazon:2023"
+				}
 			]
 		}
 	],
-	"detection": [
+	"detections": [
 		{
 			"ecosystem": "amazon:2023",
-			"criteria": {
-				"operator": "OR",
-				"criterions": [
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "postfix",
-							"architectures": [
-								"aarch64"
-							],
-							"repositories": [
-								"amazonlinux"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "2:3.7.2-4.amzn2023.0.5"
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "postfix",
+									"architectures": [
+										"aarch64"
+									],
+									"repositories": [
+										"amazonlinux"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "2:3.7.2-4.amzn2023.0.5"
+										}
+									],
+									"fixed": [
+										"2:3.7.2-4.amzn2023.0.5"
+									]
 								}
-							],
-							"fixed": [
-								"2:3.7.2-4.amzn2023.0.5"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "postfix-cdb",
-							"architectures": [
-								"aarch64"
-							],
-							"repositories": [
-								"amazonlinux"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "2:3.7.2-4.amzn2023.0.5"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "postfix-cdb",
+									"architectures": [
+										"aarch64"
+									],
+									"repositories": [
+										"amazonlinux"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "2:3.7.2-4.amzn2023.0.5"
+										}
+									],
+									"fixed": [
+										"2:3.7.2-4.amzn2023.0.5"
+									]
 								}
-							],
-							"fixed": [
-								"2:3.7.2-4.amzn2023.0.5"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "postfix-cdb-debuginfo",
-							"architectures": [
-								"aarch64"
-							],
-							"repositories": [
-								"amazonlinux"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "2:3.7.2-4.amzn2023.0.5"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "postfix-cdb-debuginfo",
+									"architectures": [
+										"aarch64"
+									],
+									"repositories": [
+										"amazonlinux"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "2:3.7.2-4.amzn2023.0.5"
+										}
+									],
+									"fixed": [
+										"2:3.7.2-4.amzn2023.0.5"
+									]
 								}
-							],
-							"fixed": [
-								"2:3.7.2-4.amzn2023.0.5"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "postfix-debuginfo",
-							"architectures": [
-								"aarch64"
-							],
-							"repositories": [
-								"amazonlinux"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "2:3.7.2-4.amzn2023.0.5"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "postfix-debuginfo",
+									"architectures": [
+										"aarch64"
+									],
+									"repositories": [
+										"amazonlinux"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "2:3.7.2-4.amzn2023.0.5"
+										}
+									],
+									"fixed": [
+										"2:3.7.2-4.amzn2023.0.5"
+									]
 								}
-							],
-							"fixed": [
-								"2:3.7.2-4.amzn2023.0.5"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "postfix-debugsource",
-							"architectures": [
-								"aarch64"
-							],
-							"repositories": [
-								"amazonlinux"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "2:3.7.2-4.amzn2023.0.5"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "postfix-debugsource",
+									"architectures": [
+										"aarch64"
+									],
+									"repositories": [
+										"amazonlinux"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "2:3.7.2-4.amzn2023.0.5"
+										}
+									],
+									"fixed": [
+										"2:3.7.2-4.amzn2023.0.5"
+									]
 								}
-							],
-							"fixed": [
-								"2:3.7.2-4.amzn2023.0.5"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "postfix-ldap",
-							"architectures": [
-								"aarch64"
-							],
-							"repositories": [
-								"amazonlinux"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "2:3.7.2-4.amzn2023.0.5"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "postfix-ldap",
+									"architectures": [
+										"aarch64"
+									],
+									"repositories": [
+										"amazonlinux"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "2:3.7.2-4.amzn2023.0.5"
+										}
+									],
+									"fixed": [
+										"2:3.7.2-4.amzn2023.0.5"
+									]
 								}
-							],
-							"fixed": [
-								"2:3.7.2-4.amzn2023.0.5"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "postfix-ldap-debuginfo",
-							"architectures": [
-								"aarch64"
-							],
-							"repositories": [
-								"amazonlinux"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "2:3.7.2-4.amzn2023.0.5"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "postfix-ldap-debuginfo",
+									"architectures": [
+										"aarch64"
+									],
+									"repositories": [
+										"amazonlinux"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "2:3.7.2-4.amzn2023.0.5"
+										}
+									],
+									"fixed": [
+										"2:3.7.2-4.amzn2023.0.5"
+									]
 								}
-							],
-							"fixed": [
-								"2:3.7.2-4.amzn2023.0.5"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "postfix-lmdb",
-							"architectures": [
-								"aarch64"
-							],
-							"repositories": [
-								"amazonlinux"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "2:3.7.2-4.amzn2023.0.5"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "postfix-lmdb",
+									"architectures": [
+										"aarch64"
+									],
+									"repositories": [
+										"amazonlinux"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "2:3.7.2-4.amzn2023.0.5"
+										}
+									],
+									"fixed": [
+										"2:3.7.2-4.amzn2023.0.5"
+									]
 								}
-							],
-							"fixed": [
-								"2:3.7.2-4.amzn2023.0.5"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "postfix-lmdb-debuginfo",
-							"architectures": [
-								"aarch64"
-							],
-							"repositories": [
-								"amazonlinux"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "2:3.7.2-4.amzn2023.0.5"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "postfix-lmdb-debuginfo",
+									"architectures": [
+										"aarch64"
+									],
+									"repositories": [
+										"amazonlinux"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "2:3.7.2-4.amzn2023.0.5"
+										}
+									],
+									"fixed": [
+										"2:3.7.2-4.amzn2023.0.5"
+									]
 								}
-							],
-							"fixed": [
-								"2:3.7.2-4.amzn2023.0.5"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "postfix-mysql",
-							"architectures": [
-								"aarch64"
-							],
-							"repositories": [
-								"amazonlinux"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "2:3.7.2-4.amzn2023.0.5"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "postfix-mysql",
+									"architectures": [
+										"aarch64"
+									],
+									"repositories": [
+										"amazonlinux"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "2:3.7.2-4.amzn2023.0.5"
+										}
+									],
+									"fixed": [
+										"2:3.7.2-4.amzn2023.0.5"
+									]
 								}
-							],
-							"fixed": [
-								"2:3.7.2-4.amzn2023.0.5"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "postfix-mysql-debuginfo",
-							"architectures": [
-								"aarch64"
-							],
-							"repositories": [
-								"amazonlinux"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "2:3.7.2-4.amzn2023.0.5"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "postfix-mysql-debuginfo",
+									"architectures": [
+										"aarch64"
+									],
+									"repositories": [
+										"amazonlinux"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "2:3.7.2-4.amzn2023.0.5"
+										}
+									],
+									"fixed": [
+										"2:3.7.2-4.amzn2023.0.5"
+									]
 								}
-							],
-							"fixed": [
-								"2:3.7.2-4.amzn2023.0.5"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "postfix-pcre",
-							"architectures": [
-								"aarch64"
-							],
-							"repositories": [
-								"amazonlinux"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "2:3.7.2-4.amzn2023.0.5"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "postfix-pcre",
+									"architectures": [
+										"aarch64"
+									],
+									"repositories": [
+										"amazonlinux"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "2:3.7.2-4.amzn2023.0.5"
+										}
+									],
+									"fixed": [
+										"2:3.7.2-4.amzn2023.0.5"
+									]
 								}
-							],
-							"fixed": [
-								"2:3.7.2-4.amzn2023.0.5"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "postfix-pcre-debuginfo",
-							"architectures": [
-								"aarch64"
-							],
-							"repositories": [
-								"amazonlinux"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "2:3.7.2-4.amzn2023.0.5"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "postfix-pcre-debuginfo",
+									"architectures": [
+										"aarch64"
+									],
+									"repositories": [
+										"amazonlinux"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "2:3.7.2-4.amzn2023.0.5"
+										}
+									],
+									"fixed": [
+										"2:3.7.2-4.amzn2023.0.5"
+									]
 								}
-							],
-							"fixed": [
-								"2:3.7.2-4.amzn2023.0.5"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "postfix-perl-scripts",
-							"architectures": [
-								"aarch64"
-							],
-							"repositories": [
-								"amazonlinux"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "2:3.7.2-4.amzn2023.0.5"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "postfix-perl-scripts",
+									"architectures": [
+										"aarch64"
+									],
+									"repositories": [
+										"amazonlinux"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "2:3.7.2-4.amzn2023.0.5"
+										}
+									],
+									"fixed": [
+										"2:3.7.2-4.amzn2023.0.5"
+									]
 								}
-							],
-							"fixed": [
-								"2:3.7.2-4.amzn2023.0.5"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "postfix-pgsql",
-							"architectures": [
-								"aarch64"
-							],
-							"repositories": [
-								"amazonlinux"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "2:3.7.2-4.amzn2023.0.5"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "postfix-pgsql",
+									"architectures": [
+										"aarch64"
+									],
+									"repositories": [
+										"amazonlinux"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "2:3.7.2-4.amzn2023.0.5"
+										}
+									],
+									"fixed": [
+										"2:3.7.2-4.amzn2023.0.5"
+									]
 								}
-							],
-							"fixed": [
-								"2:3.7.2-4.amzn2023.0.5"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "postfix-pgsql-debuginfo",
-							"architectures": [
-								"aarch64"
-							],
-							"repositories": [
-								"amazonlinux"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "2:3.7.2-4.amzn2023.0.5"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "postfix-pgsql-debuginfo",
+									"architectures": [
+										"aarch64"
+									],
+									"repositories": [
+										"amazonlinux"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "2:3.7.2-4.amzn2023.0.5"
+										}
+									],
+									"fixed": [
+										"2:3.7.2-4.amzn2023.0.5"
+									]
 								}
-							],
-							"fixed": [
-								"2:3.7.2-4.amzn2023.0.5"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "postfix-sqlite",
-							"architectures": [
-								"aarch64"
-							],
-							"repositories": [
-								"amazonlinux"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "2:3.7.2-4.amzn2023.0.5"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "postfix-sqlite",
+									"architectures": [
+										"aarch64"
+									],
+									"repositories": [
+										"amazonlinux"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "2:3.7.2-4.amzn2023.0.5"
+										}
+									],
+									"fixed": [
+										"2:3.7.2-4.amzn2023.0.5"
+									]
 								}
-							],
-							"fixed": [
-								"2:3.7.2-4.amzn2023.0.5"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "postfix-sqlite-debuginfo",
-							"architectures": [
-								"aarch64"
-							],
-							"repositories": [
-								"amazonlinux"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "2:3.7.2-4.amzn2023.0.5"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "postfix-sqlite-debuginfo",
+									"architectures": [
+										"aarch64"
+									],
+									"repositories": [
+										"amazonlinux"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "2:3.7.2-4.amzn2023.0.5"
+										}
+									],
+									"fixed": [
+										"2:3.7.2-4.amzn2023.0.5"
+									]
 								}
-							],
-							"fixed": [
-								"2:3.7.2-4.amzn2023.0.5"
-							]
-						}
+							}
+						]
 					}
-				]
-			}
+				}
+			]
 		}
 	],
 	"data_source": {

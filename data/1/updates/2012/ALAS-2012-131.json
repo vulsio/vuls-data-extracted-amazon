@@ -28,8 +28,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"amazon:1"
+			"segments": [
+				{
+					"ecosystem": "amazon:1"
+				}
 			]
 		}
 	],
@@ -44,289 +46,295 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"amazon:1"
+			"segments": [
+				{
+					"ecosystem": "amazon:1"
+				}
 			]
 		}
 	],
-	"detection": [
+	"detections": [
 		{
 			"ecosystem": "amazon:1",
-			"criteria": {
-				"operator": "OR",
-				"criterions": [
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "freeradius",
-							"architectures": [
-								"x86_64"
-							],
-							"repositories": [
-								"amzn-main",
-								"amzn-updates"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:2.1.12-4.11.amzn1"
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "freeradius",
+									"architectures": [
+										"x86_64"
+									],
+									"repositories": [
+										"amzn-main",
+										"amzn-updates"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "0:2.1.12-4.11.amzn1"
+										}
+									],
+									"fixed": [
+										"0:2.1.12-4.11.amzn1"
+									]
 								}
-							],
-							"fixed": [
-								"0:2.1.12-4.11.amzn1"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "freeradius-debuginfo",
-							"architectures": [
-								"x86_64"
-							],
-							"repositories": [
-								"amzn-main",
-								"amzn-updates"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:2.1.12-4.11.amzn1"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "freeradius-debuginfo",
+									"architectures": [
+										"x86_64"
+									],
+									"repositories": [
+										"amzn-main",
+										"amzn-updates"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "0:2.1.12-4.11.amzn1"
+										}
+									],
+									"fixed": [
+										"0:2.1.12-4.11.amzn1"
+									]
 								}
-							],
-							"fixed": [
-								"0:2.1.12-4.11.amzn1"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "freeradius-krb5",
-							"architectures": [
-								"x86_64"
-							],
-							"repositories": [
-								"amzn-main",
-								"amzn-updates"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:2.1.12-4.11.amzn1"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "freeradius-krb5",
+									"architectures": [
+										"x86_64"
+									],
+									"repositories": [
+										"amzn-main",
+										"amzn-updates"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "0:2.1.12-4.11.amzn1"
+										}
+									],
+									"fixed": [
+										"0:2.1.12-4.11.amzn1"
+									]
 								}
-							],
-							"fixed": [
-								"0:2.1.12-4.11.amzn1"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "freeradius-ldap",
-							"architectures": [
-								"x86_64"
-							],
-							"repositories": [
-								"amzn-main",
-								"amzn-updates"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:2.1.12-4.11.amzn1"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "freeradius-ldap",
+									"architectures": [
+										"x86_64"
+									],
+									"repositories": [
+										"amzn-main",
+										"amzn-updates"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "0:2.1.12-4.11.amzn1"
+										}
+									],
+									"fixed": [
+										"0:2.1.12-4.11.amzn1"
+									]
 								}
-							],
-							"fixed": [
-								"0:2.1.12-4.11.amzn1"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "freeradius-mysql",
-							"architectures": [
-								"x86_64"
-							],
-							"repositories": [
-								"amzn-main",
-								"amzn-updates"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:2.1.12-4.11.amzn1"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "freeradius-mysql",
+									"architectures": [
+										"x86_64"
+									],
+									"repositories": [
+										"amzn-main",
+										"amzn-updates"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "0:2.1.12-4.11.amzn1"
+										}
+									],
+									"fixed": [
+										"0:2.1.12-4.11.amzn1"
+									]
 								}
-							],
-							"fixed": [
-								"0:2.1.12-4.11.amzn1"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "freeradius-perl",
-							"architectures": [
-								"x86_64"
-							],
-							"repositories": [
-								"amzn-main",
-								"amzn-updates"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:2.1.12-4.11.amzn1"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "freeradius-perl",
+									"architectures": [
+										"x86_64"
+									],
+									"repositories": [
+										"amzn-main",
+										"amzn-updates"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "0:2.1.12-4.11.amzn1"
+										}
+									],
+									"fixed": [
+										"0:2.1.12-4.11.amzn1"
+									]
 								}
-							],
-							"fixed": [
-								"0:2.1.12-4.11.amzn1"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "freeradius-postgresql",
-							"architectures": [
-								"x86_64"
-							],
-							"repositories": [
-								"amzn-main",
-								"amzn-updates"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:2.1.12-4.11.amzn1"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "freeradius-postgresql",
+									"architectures": [
+										"x86_64"
+									],
+									"repositories": [
+										"amzn-main",
+										"amzn-updates"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "0:2.1.12-4.11.amzn1"
+										}
+									],
+									"fixed": [
+										"0:2.1.12-4.11.amzn1"
+									]
 								}
-							],
-							"fixed": [
-								"0:2.1.12-4.11.amzn1"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "freeradius-python",
-							"architectures": [
-								"x86_64"
-							],
-							"repositories": [
-								"amzn-main",
-								"amzn-updates"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:2.1.12-4.11.amzn1"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "freeradius-python",
+									"architectures": [
+										"x86_64"
+									],
+									"repositories": [
+										"amzn-main",
+										"amzn-updates"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "0:2.1.12-4.11.amzn1"
+										}
+									],
+									"fixed": [
+										"0:2.1.12-4.11.amzn1"
+									]
 								}
-							],
-							"fixed": [
-								"0:2.1.12-4.11.amzn1"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "freeradius-unixODBC",
-							"architectures": [
-								"x86_64"
-							],
-							"repositories": [
-								"amzn-main",
-								"amzn-updates"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:2.1.12-4.11.amzn1"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "freeradius-unixODBC",
+									"architectures": [
+										"x86_64"
+									],
+									"repositories": [
+										"amzn-main",
+										"amzn-updates"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "0:2.1.12-4.11.amzn1"
+										}
+									],
+									"fixed": [
+										"0:2.1.12-4.11.amzn1"
+									]
 								}
-							],
-							"fixed": [
-								"0:2.1.12-4.11.amzn1"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "freeradius-utils",
-							"architectures": [
-								"x86_64"
-							],
-							"repositories": [
-								"amzn-main",
-								"amzn-updates"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:2.1.12-4.11.amzn1"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "freeradius-utils",
+									"architectures": [
+										"x86_64"
+									],
+									"repositories": [
+										"amzn-main",
+										"amzn-updates"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "0:2.1.12-4.11.amzn1"
+										}
+									],
+									"fixed": [
+										"0:2.1.12-4.11.amzn1"
+									]
 								}
-							],
-							"fixed": [
-								"0:2.1.12-4.11.amzn1"
-							]
-						}
+							}
+						]
 					}
-				]
-			}
+				}
+			]
 		}
 	],
 	"data_source": {

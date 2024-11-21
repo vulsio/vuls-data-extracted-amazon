@@ -28,8 +28,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"amazon:2"
+			"segments": [
+				{
+					"ecosystem": "amazon:2"
+				}
 			]
 		}
 	],
@@ -44,8 +46,10 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"amazon:2"
+			"segments": [
+				{
+					"ecosystem": "amazon:2"
+				}
 			]
 		},
 		{
@@ -58,97 +62,103 @@
 					}
 				]
 			},
-			"ecosystems": [
-				"amazon:2"
+			"segments": [
+				{
+					"ecosystem": "amazon:2"
+				}
 			]
 		}
 	],
-	"detection": [
+	"detections": [
 		{
 			"ecosystem": "amazon:2",
-			"criteria": {
-				"operator": "OR",
-				"criterions": [
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "containerd",
-							"architectures": [
-								"aarch64"
-							],
-							"repositories": [
-								"amzn2extra-docker"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:1.7.11-1.amzn2.0.1"
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "containerd",
+									"architectures": [
+										"aarch64"
+									],
+									"repositories": [
+										"amzn2extra-docker"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "0:1.7.11-1.amzn2.0.1"
+										}
+									],
+									"fixed": [
+										"0:1.7.11-1.amzn2.0.1"
+									]
 								}
-							],
-							"fixed": [
-								"0:1.7.11-1.amzn2.0.1"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "containerd-debuginfo",
-							"architectures": [
-								"aarch64"
-							],
-							"repositories": [
-								"amzn2extra-docker"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:1.7.11-1.amzn2.0.1"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "containerd-debuginfo",
+									"architectures": [
+										"aarch64"
+									],
+									"repositories": [
+										"amzn2extra-docker"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "0:1.7.11-1.amzn2.0.1"
+										}
+									],
+									"fixed": [
+										"0:1.7.11-1.amzn2.0.1"
+									]
 								}
-							],
-							"fixed": [
-								"0:1.7.11-1.amzn2.0.1"
-							]
-						}
-					},
-					{
-						"vulnerable": true,
-						"fix_status": {
-							"class": "fixed"
-						},
-						"package": {
-							"name": "containerd-stress",
-							"architectures": [
-								"aarch64"
-							],
-							"repositories": [
-								"amzn2extra-docker"
-							]
-						},
-						"affected": {
-							"type": "rpm",
-							"range": [
-								{
-									"lt": "0:1.7.11-1.amzn2.0.1"
+							},
+							{
+								"vulnerable": true,
+								"fix_status": {
+									"class": "fixed"
+								},
+								"package": {
+									"name": "containerd-stress",
+									"architectures": [
+										"aarch64"
+									],
+									"repositories": [
+										"amzn2extra-docker"
+									]
+								},
+								"affected": {
+									"type": "rpm",
+									"range": [
+										{
+											"lt": "0:1.7.11-1.amzn2.0.1"
+										}
+									],
+									"fixed": [
+										"0:1.7.11-1.amzn2.0.1"
+									]
 								}
-							],
-							"fixed": [
-								"0:1.7.11-1.amzn2.0.1"
-							]
-						}
+							}
+						]
 					}
-				]
-			}
+				}
+			]
 		}
 	],
 	"data_source": {
