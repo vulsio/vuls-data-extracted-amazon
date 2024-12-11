@@ -1,0 +1,261 @@
+{
+	"id": "ALAS2023-2024-772",
+	"advisories": [
+		{
+			"content": {
+				"id": "ALAS2023-2024-772",
+				"title": "Amazon Linux 2023 - ALAS2023-2024-772: Important priority package update for libsoup",
+				"description": "Package updates are available for Amazon Linux 2023 that fix the following vulnerabilities:\nCVE-2024-52532:\n\tGNOME libsoup before 3.6.1 has an infinite loop, and memory consumption. during the reading of certain patterns of WebSocket data from clients.\n\nCVE-2024-52531:\n\tGNOME libsoup before 3.6.1 allows a buffer overflow in applications that perform conversion to UTF-8 in soup_header_parse_param_list_strict. Input received over the network cannot trigger this.\n\nCVE-2024-52530:\n\tGNOME libsoup before 3.6.0 allows HTTP request smuggling in some configurations because '\\0' characters at the end of header names are ignored, i.e., a \"Transfer-Encoding\\0: chunked\" header is treated the same as a \"Transfer-Encoding: chunked\" header.\n",
+				"severity": [
+					{
+						"type": "vendor",
+						"source": "linux-security@amazon.com",
+						"vendor": "Important"
+					}
+				],
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-52530"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-52531"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-52532"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "https://alas.aws.amazon.com/AL2023/ALAS-2024-772.html"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "amazon:2023"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2024-52530",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-52530"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "amazon:2023"
+				}
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-52531",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-52531"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "amazon:2023"
+				}
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-52532",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-52532"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "amazon:2023"
+				}
+			]
+		}
+	],
+	"detections": [
+		{
+			"ecosystem": "amazon:2023",
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"name": "libsoup",
+										"architectures": [
+											"aarch64",
+											"x86_64"
+										],
+										"repositories": [
+											"amazonlinux"
+										]
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:2.72.0-6.amzn2023.0.3"
+											}
+										],
+										"fixed": [
+											"0:2.72.0-6.amzn2023.0.3"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"name": "libsoup-debuginfo",
+										"architectures": [
+											"aarch64",
+											"x86_64"
+										],
+										"repositories": [
+											"amazonlinux"
+										]
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:2.72.0-6.amzn2023.0.3"
+											}
+										],
+										"fixed": [
+											"0:2.72.0-6.amzn2023.0.3"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"name": "libsoup-debugsource",
+										"architectures": [
+											"aarch64",
+											"x86_64"
+										],
+										"repositories": [
+											"amazonlinux"
+										]
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:2.72.0-6.amzn2023.0.3"
+											}
+										],
+										"fixed": [
+											"0:2.72.0-6.amzn2023.0.3"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"name": "libsoup-devel",
+										"architectures": [
+											"aarch64",
+											"x86_64"
+										],
+										"repositories": [
+											"amazonlinux"
+										]
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:2.72.0-6.amzn2023.0.3"
+											}
+										],
+										"fixed": [
+											"0:2.72.0-6.amzn2023.0.3"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"name": "libsoup-doc",
+										"architectures": [
+											"noarch"
+										],
+										"repositories": [
+											"amazonlinux"
+										]
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:2.72.0-6.amzn2023.0.3"
+											}
+										],
+										"fixed": [
+											"0:2.72.0-6.amzn2023.0.3"
+										]
+									}
+								}
+							}
+						]
+					}
+				}
+			]
+		}
+	],
+	"data_source": {
+		"id": "amazon",
+		"raws": [
+			"vuls-data-raw-amazon/2023/core/2024/ALAS2023-2024-772.json"
+		]
+	}
+}

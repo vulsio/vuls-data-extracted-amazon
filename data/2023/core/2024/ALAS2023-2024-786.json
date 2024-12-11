@@ -1,0 +1,1031 @@
+{
+	"id": "ALAS2023-2024-786",
+	"advisories": [
+		{
+			"content": {
+				"id": "ALAS2023-2024-786",
+				"title": "Amazon Linux 2023 - ALAS2023-2024-786: Important priority package update for postgresql16",
+				"description": "Package updates are available for Amazon Linux 2023 that fix the following vulnerabilities:\nCVE-2024-10979:\n\tIncorrect control of environment variables in PostgreSQL PL/Perl allows an unprivileged database user to change sensitive process environment variables (e.g. PATH).  That often suffices to enable arbitrary code execution, even if the attacker lacks a database server operating system user.  Versions before PostgreSQL 17.1, 16.5, 15.9, 14.14, 13.17, and 12.21 are affected.\n\nCVE-2024-10978:\n\tIncorrect privilege assignment in PostgreSQL allows a less-privileged application user to view or change different rows from those intended.  An attack requires the application to use SET ROLE, SET SESSION AUTHORIZATION, or an equivalent feature.  The problem arises when an application query uses parameters from the attacker or conveys query results to the attacker.  If that query reacts to current_setting('role') or the current user ID, it may modify or return data as though the session had not used SET ROLE or SET SESSION AUTHORIZATION.  The attacker does not control which incorrect user ID applies.  Query text from less-privileged sources is not a concern here, because SET ROLE and SET SESSION AUTHORIZATION are not sandboxes for unvetted queries.  Versions before PostgreSQL 17.1, 16.5, 15.9, 14.14, 13.17, and 12.21 are affected.\n\nCVE-2024-10977:\n\tClient use of server error message in PostgreSQL allows a server not trusted under current SSL or GSS settings to furnish arbitrary non-NUL bytes to the libpq application. For example, a man-in-the-middle attacker could send a long error message that a human or screen-scraper user of psql mistakes for valid query results. This is probably not a concern for clients where the user interface unambiguously indicates the boundary between one error message and other text. Versions before PostgreSQL 17.1, 16.5, 15.9, 14.14, 13.17, and 12.21 are affected.\n\nCVE-2024-10976:\n\tIncomplete tracking in PostgreSQL of tables with row security allows a reused query to view or change different rows from those intended.  CVE-2023-2455 and CVE-2016-2193 fixed most interaction between row security and user ID changes.  They missed cases where a subquery, WITH query, security invoker view, or SQL-language function references a table with a row-level security policy.  This has the same consequences as the two earlier CVEs.  That is to say, it leads to potentially incorrect policies being applied in cases where role-specific policies are used and a given query is planned under one role and then executed under other roles.  This scenario can happen under security definer functions or when a common user and query is planned initially and then re-used across multiple SET ROLEs.  Applying an incorrect policy may permit a user to complete otherwise-forbidden reads and modifications.  This affects only databases that have used CREATE POLICY to define a row security policy.  An attacker must tailor an attack to a particular application's pattern of query plan reuse, user ID changes, and role-specific row security policies.  Versions before PostgreSQL 17.1, 16.5, 15.9, 14.14, 13.17, and 12.21 are affected.\n",
+				"severity": [
+					{
+						"type": "vendor",
+						"source": "linux-security@amazon.com",
+						"vendor": "Important"
+					}
+				],
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-10976"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-10977"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-10978"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-10979"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "https://alas.aws.amazon.com/AL2023/ALAS-2024-786.html"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "amazon:2023"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2024-10976",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-10976"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "amazon:2023"
+				}
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-10977",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-10977"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "amazon:2023"
+				}
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-10978",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-10978"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "amazon:2023"
+				}
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-10979",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-10979"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "amazon:2023"
+				}
+			]
+		}
+	],
+	"detections": [
+		{
+			"ecosystem": "amazon:2023",
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"name": "postgresql16",
+										"architectures": [
+											"aarch64",
+											"x86_64"
+										],
+										"repositories": [
+											"amazonlinux"
+										]
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:16.5-1.amzn2023.0.1"
+											}
+										],
+										"fixed": [
+											"0:16.5-1.amzn2023.0.1"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"name": "postgresql16-contrib",
+										"architectures": [
+											"aarch64",
+											"x86_64"
+										],
+										"repositories": [
+											"amazonlinux"
+										]
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:16.5-1.amzn2023.0.1"
+											}
+										],
+										"fixed": [
+											"0:16.5-1.amzn2023.0.1"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"name": "postgresql16-contrib-debuginfo",
+										"architectures": [
+											"aarch64",
+											"x86_64"
+										],
+										"repositories": [
+											"amazonlinux"
+										]
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:16.5-1.amzn2023.0.1"
+											}
+										],
+										"fixed": [
+											"0:16.5-1.amzn2023.0.1"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"name": "postgresql16-debuginfo",
+										"architectures": [
+											"aarch64",
+											"x86_64"
+										],
+										"repositories": [
+											"amazonlinux"
+										]
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:16.5-1.amzn2023.0.1"
+											}
+										],
+										"fixed": [
+											"0:16.5-1.amzn2023.0.1"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"name": "postgresql16-debugsource",
+										"architectures": [
+											"aarch64",
+											"x86_64"
+										],
+										"repositories": [
+											"amazonlinux"
+										]
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:16.5-1.amzn2023.0.1"
+											}
+										],
+										"fixed": [
+											"0:16.5-1.amzn2023.0.1"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"name": "postgresql16-docs",
+										"architectures": [
+											"aarch64",
+											"x86_64"
+										],
+										"repositories": [
+											"amazonlinux"
+										]
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:16.5-1.amzn2023.0.1"
+											}
+										],
+										"fixed": [
+											"0:16.5-1.amzn2023.0.1"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"name": "postgresql16-docs-debuginfo",
+										"architectures": [
+											"aarch64",
+											"x86_64"
+										],
+										"repositories": [
+											"amazonlinux"
+										]
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:16.5-1.amzn2023.0.1"
+											}
+										],
+										"fixed": [
+											"0:16.5-1.amzn2023.0.1"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"name": "postgresql16-llvmjit",
+										"architectures": [
+											"aarch64",
+											"x86_64"
+										],
+										"repositories": [
+											"amazonlinux"
+										]
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:16.5-1.amzn2023.0.1"
+											}
+										],
+										"fixed": [
+											"0:16.5-1.amzn2023.0.1"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"name": "postgresql16-llvmjit-debuginfo",
+										"architectures": [
+											"aarch64",
+											"x86_64"
+										],
+										"repositories": [
+											"amazonlinux"
+										]
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:16.5-1.amzn2023.0.1"
+											}
+										],
+										"fixed": [
+											"0:16.5-1.amzn2023.0.1"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"name": "postgresql16-plperl",
+										"architectures": [
+											"aarch64",
+											"x86_64"
+										],
+										"repositories": [
+											"amazonlinux"
+										]
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:16.5-1.amzn2023.0.1"
+											}
+										],
+										"fixed": [
+											"0:16.5-1.amzn2023.0.1"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"name": "postgresql16-plperl-debuginfo",
+										"architectures": [
+											"aarch64",
+											"x86_64"
+										],
+										"repositories": [
+											"amazonlinux"
+										]
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:16.5-1.amzn2023.0.1"
+											}
+										],
+										"fixed": [
+											"0:16.5-1.amzn2023.0.1"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"name": "postgresql16-plpython3",
+										"architectures": [
+											"aarch64",
+											"x86_64"
+										],
+										"repositories": [
+											"amazonlinux"
+										]
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:16.5-1.amzn2023.0.1"
+											}
+										],
+										"fixed": [
+											"0:16.5-1.amzn2023.0.1"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"name": "postgresql16-plpython3-debuginfo",
+										"architectures": [
+											"aarch64",
+											"x86_64"
+										],
+										"repositories": [
+											"amazonlinux"
+										]
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:16.5-1.amzn2023.0.1"
+											}
+										],
+										"fixed": [
+											"0:16.5-1.amzn2023.0.1"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"name": "postgresql16-pltcl",
+										"architectures": [
+											"aarch64",
+											"x86_64"
+										],
+										"repositories": [
+											"amazonlinux"
+										]
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:16.5-1.amzn2023.0.1"
+											}
+										],
+										"fixed": [
+											"0:16.5-1.amzn2023.0.1"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"name": "postgresql16-pltcl-debuginfo",
+										"architectures": [
+											"aarch64",
+											"x86_64"
+										],
+										"repositories": [
+											"amazonlinux"
+										]
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:16.5-1.amzn2023.0.1"
+											}
+										],
+										"fixed": [
+											"0:16.5-1.amzn2023.0.1"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"name": "postgresql16-private-devel",
+										"architectures": [
+											"aarch64",
+											"x86_64"
+										],
+										"repositories": [
+											"amazonlinux"
+										]
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:16.5-1.amzn2023.0.1"
+											}
+										],
+										"fixed": [
+											"0:16.5-1.amzn2023.0.1"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"name": "postgresql16-private-libs",
+										"architectures": [
+											"aarch64",
+											"x86_64"
+										],
+										"repositories": [
+											"amazonlinux"
+										]
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:16.5-1.amzn2023.0.1"
+											}
+										],
+										"fixed": [
+											"0:16.5-1.amzn2023.0.1"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"name": "postgresql16-private-libs-debuginfo",
+										"architectures": [
+											"aarch64",
+											"x86_64"
+										],
+										"repositories": [
+											"amazonlinux"
+										]
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:16.5-1.amzn2023.0.1"
+											}
+										],
+										"fixed": [
+											"0:16.5-1.amzn2023.0.1"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"name": "postgresql16-server",
+										"architectures": [
+											"aarch64",
+											"x86_64"
+										],
+										"repositories": [
+											"amazonlinux"
+										]
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:16.5-1.amzn2023.0.1"
+											}
+										],
+										"fixed": [
+											"0:16.5-1.amzn2023.0.1"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"name": "postgresql16-server-debuginfo",
+										"architectures": [
+											"aarch64",
+											"x86_64"
+										],
+										"repositories": [
+											"amazonlinux"
+										]
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:16.5-1.amzn2023.0.1"
+											}
+										],
+										"fixed": [
+											"0:16.5-1.amzn2023.0.1"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"name": "postgresql16-server-devel",
+										"architectures": [
+											"aarch64",
+											"x86_64"
+										],
+										"repositories": [
+											"amazonlinux"
+										]
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:16.5-1.amzn2023.0.1"
+											}
+										],
+										"fixed": [
+											"0:16.5-1.amzn2023.0.1"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"name": "postgresql16-server-devel-debuginfo",
+										"architectures": [
+											"aarch64",
+											"x86_64"
+										],
+										"repositories": [
+											"amazonlinux"
+										]
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:16.5-1.amzn2023.0.1"
+											}
+										],
+										"fixed": [
+											"0:16.5-1.amzn2023.0.1"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"name": "postgresql16-static",
+										"architectures": [
+											"aarch64",
+											"x86_64"
+										],
+										"repositories": [
+											"amazonlinux"
+										]
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:16.5-1.amzn2023.0.1"
+											}
+										],
+										"fixed": [
+											"0:16.5-1.amzn2023.0.1"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"name": "postgresql16-test",
+										"architectures": [
+											"aarch64",
+											"x86_64"
+										],
+										"repositories": [
+											"amazonlinux"
+										]
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:16.5-1.amzn2023.0.1"
+											}
+										],
+										"fixed": [
+											"0:16.5-1.amzn2023.0.1"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"name": "postgresql16-test-debuginfo",
+										"architectures": [
+											"aarch64",
+											"x86_64"
+										],
+										"repositories": [
+											"amazonlinux"
+										]
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:16.5-1.amzn2023.0.1"
+											}
+										],
+										"fixed": [
+											"0:16.5-1.amzn2023.0.1"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"name": "postgresql16-test-rpm-macros",
+										"architectures": [
+											"noarch"
+										],
+										"repositories": [
+											"amazonlinux"
+										]
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:16.5-1.amzn2023.0.1"
+											}
+										],
+										"fixed": [
+											"0:16.5-1.amzn2023.0.1"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"name": "postgresql16-upgrade",
+										"architectures": [
+											"aarch64",
+											"x86_64"
+										],
+										"repositories": [
+											"amazonlinux"
+										]
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:16.5-1.amzn2023.0.1"
+											}
+										],
+										"fixed": [
+											"0:16.5-1.amzn2023.0.1"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"name": "postgresql16-upgrade-debuginfo",
+										"architectures": [
+											"aarch64",
+											"x86_64"
+										],
+										"repositories": [
+											"amazonlinux"
+										]
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:16.5-1.amzn2023.0.1"
+											}
+										],
+										"fixed": [
+											"0:16.5-1.amzn2023.0.1"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"name": "postgresql16-upgrade-devel",
+										"architectures": [
+											"aarch64",
+											"x86_64"
+										],
+										"repositories": [
+											"amazonlinux"
+										]
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:16.5-1.amzn2023.0.1"
+											}
+										],
+										"fixed": [
+											"0:16.5-1.amzn2023.0.1"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"name": "postgresql16-upgrade-devel-debuginfo",
+										"architectures": [
+											"aarch64",
+											"x86_64"
+										],
+										"repositories": [
+											"amazonlinux"
+										]
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:16.5-1.amzn2023.0.1"
+											}
+										],
+										"fixed": [
+											"0:16.5-1.amzn2023.0.1"
+										]
+									}
+								}
+							}
+						]
+					}
+				}
+			]
+		}
+	],
+	"data_source": {
+		"id": "amazon",
+		"raws": [
+			"vuls-data-raw-amazon/2023/core/2024/ALAS2023-2024-786.json"
+		]
+	}
+}

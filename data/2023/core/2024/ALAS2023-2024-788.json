@@ -1,0 +1,382 @@
+{
+	"id": "ALAS2023-2024-788",
+	"advisories": [
+		{
+			"content": {
+				"id": "ALAS2023-2024-788",
+				"title": "Amazon Linux 2023 - ALAS2023-2024-788: Medium priority package update for python3.11",
+				"description": "Package updates are available for Amazon Linux 2023 that fix the following vulnerabilities:\nCVE-2024-8088:\n\tThere is a severity vulnerability affecting the CPython \"zipfile\"\nmodule.\n\nWhen iterating over names of entries in a zip archive (for example, methods\nof \"zipfile.ZipFile\" like \"namelist()\", \"iterdir()\", \"extractall()\", etc)\nthe process can be put into an infinite loop with a maliciously crafted\nzip archive. This defect applies when reading only metadata or extracting\nthe contents of the zip archive. Programs that are not handling\nuser-controlled zip archives are not affected.\n\nCVE-2024-0397:\n\tA defect was discovered in the Python \"ssl\" module where there is a memory\nrace condition with the ssl.SSLContext methods \"cert_store_stats()\" and\n\"get_ca_certs()\". The race condition can be triggered if the methods are\ncalled at the same time as certificates are loaded into the SSLContext,\nsuch as during the TLS handshake with a certificate directory configured.\nThis issue is fixed in CPython 3.10.14, 3.11.9, 3.12.3, and 3.13.0a5.\n\nCVE-2023-27043:\n\tThe email module of Python through 3.11.3 incorrectly parses e-mail addresses that contain a special character. The wrong portion of an RFC2822 header is identified as the value of the addr-spec. In some applications, an attacker can bypass a protection mechanism in which application access is granted only after verifying receipt of e-mail to a specific domain (e.g., only @company.example.com addresses may be used for signup). This occurs in email/_parseaddr.py in recent versions of Python.\n",
+				"severity": [
+					{
+						"type": "vendor",
+						"source": "linux-security@amazon.com",
+						"vendor": "Medium"
+					}
+				],
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-27043"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-0397"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-8088"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "https://alas.aws.amazon.com/AL2023/ALAS-2024-788.html"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "amazon:2023"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2023-27043",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-27043"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "amazon:2023"
+				}
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-0397",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-0397"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "amazon:2023"
+				}
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-8088",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-8088"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "amazon:2023"
+				}
+			]
+		}
+	],
+	"detections": [
+		{
+			"ecosystem": "amazon:2023",
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"name": "python3.11",
+										"architectures": [
+											"aarch64",
+											"x86_64"
+										],
+										"repositories": [
+											"amazonlinux"
+										]
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:3.11.6-1.amzn2023.0.5"
+											}
+										],
+										"fixed": [
+											"0:3.11.6-1.amzn2023.0.5"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"name": "python3.11-debug",
+										"architectures": [
+											"aarch64",
+											"x86_64"
+										],
+										"repositories": [
+											"amazonlinux"
+										]
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:3.11.6-1.amzn2023.0.5"
+											}
+										],
+										"fixed": [
+											"0:3.11.6-1.amzn2023.0.5"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"name": "python3.11-debuginfo",
+										"architectures": [
+											"aarch64",
+											"x86_64"
+										],
+										"repositories": [
+											"amazonlinux"
+										]
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:3.11.6-1.amzn2023.0.5"
+											}
+										],
+										"fixed": [
+											"0:3.11.6-1.amzn2023.0.5"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"name": "python3.11-debugsource",
+										"architectures": [
+											"aarch64",
+											"x86_64"
+										],
+										"repositories": [
+											"amazonlinux"
+										]
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:3.11.6-1.amzn2023.0.5"
+											}
+										],
+										"fixed": [
+											"0:3.11.6-1.amzn2023.0.5"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"name": "python3.11-devel",
+										"architectures": [
+											"aarch64",
+											"x86_64"
+										],
+										"repositories": [
+											"amazonlinux"
+										]
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:3.11.6-1.amzn2023.0.5"
+											}
+										],
+										"fixed": [
+											"0:3.11.6-1.amzn2023.0.5"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"name": "python3.11-idle",
+										"architectures": [
+											"aarch64",
+											"x86_64"
+										],
+										"repositories": [
+											"amazonlinux"
+										]
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:3.11.6-1.amzn2023.0.5"
+											}
+										],
+										"fixed": [
+											"0:3.11.6-1.amzn2023.0.5"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"name": "python3.11-libs",
+										"architectures": [
+											"aarch64",
+											"x86_64"
+										],
+										"repositories": [
+											"amazonlinux"
+										]
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:3.11.6-1.amzn2023.0.5"
+											}
+										],
+										"fixed": [
+											"0:3.11.6-1.amzn2023.0.5"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"name": "python3.11-test",
+										"architectures": [
+											"aarch64",
+											"x86_64"
+										],
+										"repositories": [
+											"amazonlinux"
+										]
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:3.11.6-1.amzn2023.0.5"
+											}
+										],
+										"fixed": [
+											"0:3.11.6-1.amzn2023.0.5"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"name": "python3.11-tkinter",
+										"architectures": [
+											"aarch64",
+											"x86_64"
+										],
+										"repositories": [
+											"amazonlinux"
+										]
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:3.11.6-1.amzn2023.0.5"
+											}
+										],
+										"fixed": [
+											"0:3.11.6-1.amzn2023.0.5"
+										]
+									}
+								}
+							}
+						]
+					}
+				}
+			]
+		}
+	],
+	"data_source": {
+		"id": "amazon",
+		"raws": [
+			"vuls-data-raw-amazon/2023/core/2024/ALAS2023-2024-788.json"
+		]
+	}
+}

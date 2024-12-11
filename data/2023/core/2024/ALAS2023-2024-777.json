@@ -1,11 +1,11 @@
 {
-	"id": "ALAS2023-2023-132",
+	"id": "ALAS2023-2024-777",
 	"advisories": [
 		{
 			"content": {
-				"id": "ALAS2023-2023-132",
-				"title": "Amazon Linux 2023 - ALAS2023-2023-132: Important priority package update for kernel",
-				"description": "Package updates are available for Amazon Linux 2023 that fix the following vulnerabilities:\nCVE-2023-52746:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nxfrm/compat: prevent potential spectre v1 gadget in xfrm_xlate32_attr()\n\nCVE-2023-52741:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\ncifs: Fix use-after-free in rdata->read_into_pages()\n\nCVE-2023-52739:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nFix page corruption caused by racy check in __free_pages\n\nCVE-2023-3567:\n\tA use-after-free flaw was found in vcs_read in drivers/tty/vt/vc_screen.c in vc_screen in the Linux Kernel. In this flaw an attacker with local user access may lead to a system crash or a leak of internal kernel information.\n\nCVE-2023-3359:\n\tbrcm_nvram_parse in drivers/nvmem/brcm_nvram.c lacks check of the return value of kzalloc() and will cause the NULL Pointer Dereference\n\nCVE-2023-3161:\n\tA flaw was found in the Framebuffer Console (fbcon) in the Linux Kernel. When providing a font->width and font->height greater than 32 to the fbcon_set_font, since there are no checks in place, a shift-out-of-bounds occurs, leading to undefined behavior and possible denial of service.\n\nCVE-2023-1078:\n\tThe upstream bug report describes this issue as follows:\n\nA flaw found in the Linux Kernel in RDS (Reliable Datagram Sockets) protocol. The rds_rm_zerocopy_callback() uses list_entry() on the head of a list causing a type confusion. Local user can trigger this with rds_message_put(). Type confusion leads to `struct rds_msg_zcopy_info *info` actually points to something else that is potentially controlled by local user. It is known how to trigger this, which causes an OOB access, and a lock corruption.\n\nCVE-2022-27672:\n\tIt has been discovered that on some AMD CPUs, the RAS (Return Address Stack, also called RAP - Return Address Predictor - in some AMD documentation, and RSB - Return Stack Buffer - in Intel terminology) is dynamically partitioned between non-idle threads.  This allows an attacker to control speculative execution on the adjacent thread.\n",
+				"id": "ALAS2023-2024-777",
+				"title": "Amazon Linux 2023 - ALAS2023-2024-777: Important priority package update for dotnet8.0",
+				"description": "Package updates are available for Amazon Linux 2023 that fix the following vulnerabilities:\nCVE-2024-43485:\n\t.NET and Visual Studio Denial of Service Vulnerability\n\nCVE-2024-43484:\n\t.NET, .NET Framework, and Visual Studio Denial of Service Vulnerability\n\nCVE-2024-43483:\n\t.NET, .NET Framework, and Visual Studio Denial of Service Vulnerability\n\nCVE-2024-38229:\n\t.NET and Visual Studio Remote Code Execution Vulnerability\n",
 				"severity": [
 					{
 						"type": "vendor",
@@ -16,39 +16,23 @@
 				"references": [
 					{
 						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-27672"
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38229"
 					},
 					{
 						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-1078"
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43483"
 					},
 					{
 						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-3161"
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43484"
 					},
 					{
 						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-3359"
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43485"
 					},
 					{
 						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-3567"
-					},
-					{
-						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52739"
-					},
-					{
-						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52741"
-					},
-					{
-						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52746"
-					},
-					{
-						"source": "linux-security@amazon.com",
-						"url": "https://alas.aws.amazon.com/AL2023/ALAS-2023-132.html"
+						"url": "https://alas.aws.amazon.com/AL2023/ALAS-2024-777.html"
 					}
 				]
 			},
@@ -62,11 +46,11 @@
 	"vulnerabilities": [
 		{
 			"content": {
-				"id": "CVE-2022-27672",
+				"id": "CVE-2024-38229",
 				"references": [
 					{
 						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-27672"
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-38229"
 					}
 				]
 			},
@@ -78,11 +62,11 @@
 		},
 		{
 			"content": {
-				"id": "CVE-2023-1078",
+				"id": "CVE-2024-43483",
 				"references": [
 					{
 						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-1078"
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43483"
 					}
 				]
 			},
@@ -94,11 +78,11 @@
 		},
 		{
 			"content": {
-				"id": "CVE-2023-3161",
+				"id": "CVE-2024-43484",
 				"references": [
 					{
 						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-3161"
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43484"
 					}
 				]
 			},
@@ -110,75 +94,11 @@
 		},
 		{
 			"content": {
-				"id": "CVE-2023-3359",
+				"id": "CVE-2024-43485",
 				"references": [
 					{
 						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-3359"
-					}
-				]
-			},
-			"segments": [
-				{
-					"ecosystem": "amazon:2023"
-				}
-			]
-		},
-		{
-			"content": {
-				"id": "CVE-2023-3567",
-				"references": [
-					{
-						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-3567"
-					}
-				]
-			},
-			"segments": [
-				{
-					"ecosystem": "amazon:2023"
-				}
-			]
-		},
-		{
-			"content": {
-				"id": "CVE-2023-52739",
-				"references": [
-					{
-						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52739"
-					}
-				]
-			},
-			"segments": [
-				{
-					"ecosystem": "amazon:2023"
-				}
-			]
-		},
-		{
-			"content": {
-				"id": "CVE-2023-52741",
-				"references": [
-					{
-						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52741"
-					}
-				]
-			},
-			"segments": [
-				{
-					"ecosystem": "amazon:2023"
-				}
-			]
-		},
-		{
-			"content": {
-				"id": "CVE-2023-52746",
-				"references": [
-					{
-						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52746"
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-43485"
 					}
 				]
 			},
@@ -205,7 +125,7 @@
 										"class": "fixed"
 									},
 									"package": {
-										"name": "bpftool",
+										"name": "aspnetcore-runtime-8.0",
 										"architectures": [
 											"aarch64",
 											"x86_64"
@@ -218,11 +138,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:6.1.12-17.42.amzn2023"
+												"lt": "0:8.0.11-1.amzn2023"
 											}
 										],
 										"fixed": [
-											"0:6.1.12-17.42.amzn2023"
+											"0:8.0.11-1.amzn2023"
 										]
 									}
 								}
@@ -235,7 +155,7 @@
 										"class": "fixed"
 									},
 									"package": {
-										"name": "bpftool-debuginfo",
+										"name": "aspnetcore-runtime-dbg-8.0",
 										"architectures": [
 											"aarch64",
 											"x86_64"
@@ -248,11 +168,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:6.1.12-17.42.amzn2023"
+												"lt": "0:8.0.11-1.amzn2023"
 											}
 										],
 										"fixed": [
-											"0:6.1.12-17.42.amzn2023"
+											"0:8.0.11-1.amzn2023"
 										]
 									}
 								}
@@ -265,7 +185,7 @@
 										"class": "fixed"
 									},
 									"package": {
-										"name": "kernel",
+										"name": "aspnetcore-targeting-pack-8.0",
 										"architectures": [
 											"aarch64",
 											"x86_64"
@@ -278,11 +198,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:6.1.12-17.42.amzn2023"
+												"lt": "0:8.0.11-1.amzn2023"
 											}
 										],
 										"fixed": [
-											"0:6.1.12-17.42.amzn2023"
+											"0:8.0.11-1.amzn2023"
 										]
 									}
 								}
@@ -295,7 +215,7 @@
 										"class": "fixed"
 									},
 									"package": {
-										"name": "kernel-debuginfo",
+										"name": "dotnet",
 										"architectures": [
 											"aarch64",
 											"x86_64"
@@ -308,11 +228,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:6.1.12-17.42.amzn2023"
+												"lt": "0:8.0.111-1.amzn2023"
 											}
 										],
 										"fixed": [
-											"0:6.1.12-17.42.amzn2023"
+											"0:8.0.111-1.amzn2023"
 										]
 									}
 								}
@@ -325,65 +245,7 @@
 										"class": "fixed"
 									},
 									"package": {
-										"name": "kernel-debuginfo-common-aarch64",
-										"architectures": [
-											"aarch64"
-										],
-										"repositories": [
-											"amazonlinux"
-										]
-									},
-									"affected": {
-										"type": "rpm",
-										"range": [
-											{
-												"lt": "0:6.1.12-17.42.amzn2023"
-											}
-										],
-										"fixed": [
-											"0:6.1.12-17.42.amzn2023"
-										]
-									}
-								}
-							},
-							{
-								"type": "version",
-								"version": {
-									"vulnerable": true,
-									"fix_status": {
-										"class": "fixed"
-									},
-									"package": {
-										"name": "kernel-debuginfo-common-x86_64",
-										"architectures": [
-											"x86_64"
-										],
-										"repositories": [
-											"amazonlinux"
-										]
-									},
-									"affected": {
-										"type": "rpm",
-										"range": [
-											{
-												"lt": "0:6.1.12-17.42.amzn2023"
-											}
-										],
-										"fixed": [
-											"0:6.1.12-17.42.amzn2023"
-										]
-									}
-								}
-							},
-							{
-								"type": "version",
-								"version": {
-									"vulnerable": true,
-									"fix_status": {
-										"class": "fixed"
-									},
-									"package": {
-										"name": "kernel-devel",
+										"name": "dotnet-apphost-pack-8.0",
 										"architectures": [
 											"aarch64",
 											"x86_64"
@@ -396,11 +258,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:6.1.12-17.42.amzn2023"
+												"lt": "0:8.0.11-1.amzn2023"
 											}
 										],
 										"fixed": [
-											"0:6.1.12-17.42.amzn2023"
+											"0:8.0.11-1.amzn2023"
 										]
 									}
 								}
@@ -413,10 +275,9 @@
 										"class": "fixed"
 									},
 									"package": {
-										"name": "kernel-headers",
+										"name": "dotnet-apphost-pack-8.0-debuginfo",
 										"architectures": [
 											"aarch64",
-											"i686",
 											"x86_64"
 										],
 										"repositories": [
@@ -427,11 +288,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:6.1.12-17.42.amzn2023"
+												"lt": "0:8.0.11-1.amzn2023"
 											}
 										],
 										"fixed": [
-											"0:6.1.12-17.42.amzn2023"
+											"0:8.0.11-1.amzn2023"
 										]
 									}
 								}
@@ -444,7 +305,7 @@
 										"class": "fixed"
 									},
 									"package": {
-										"name": "kernel-libbpf",
+										"name": "dotnet-host",
 										"architectures": [
 											"aarch64",
 											"x86_64"
@@ -457,11 +318,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:6.1.12-17.42.amzn2023"
+												"lt": "0:8.0.11-1.amzn2023"
 											}
 										],
 										"fixed": [
-											"0:6.1.12-17.42.amzn2023"
+											"0:8.0.11-1.amzn2023"
 										]
 									}
 								}
@@ -474,7 +335,7 @@
 										"class": "fixed"
 									},
 									"package": {
-										"name": "kernel-libbpf-devel",
+										"name": "dotnet-host-debuginfo",
 										"architectures": [
 											"aarch64",
 											"x86_64"
@@ -487,11 +348,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:6.1.12-17.42.amzn2023"
+												"lt": "0:8.0.11-1.amzn2023"
 											}
 										],
 										"fixed": [
-											"0:6.1.12-17.42.amzn2023"
+											"0:8.0.11-1.amzn2023"
 										]
 									}
 								}
@@ -504,7 +365,7 @@
 										"class": "fixed"
 									},
 									"package": {
-										"name": "kernel-libbpf-static",
+										"name": "dotnet-hostfxr-8.0",
 										"architectures": [
 											"aarch64",
 											"x86_64"
@@ -517,11 +378,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:6.1.12-17.42.amzn2023"
+												"lt": "0:8.0.11-1.amzn2023"
 											}
 										],
 										"fixed": [
-											"0:6.1.12-17.42.amzn2023"
+											"0:8.0.11-1.amzn2023"
 										]
 									}
 								}
@@ -534,7 +395,7 @@
 										"class": "fixed"
 									},
 									"package": {
-										"name": "kernel-livepatch-6.1.12-17.42",
+										"name": "dotnet-hostfxr-8.0-debuginfo",
 										"architectures": [
 											"aarch64",
 											"x86_64"
@@ -547,11 +408,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:1.0-0.amzn2023"
+												"lt": "0:8.0.11-1.amzn2023"
 											}
 										],
 										"fixed": [
-											"0:1.0-0.amzn2023"
+											"0:8.0.11-1.amzn2023"
 										]
 									}
 								}
@@ -564,7 +425,7 @@
 										"class": "fixed"
 									},
 									"package": {
-										"name": "kernel-tools",
+										"name": "dotnet-runtime-8.0",
 										"architectures": [
 											"aarch64",
 											"x86_64"
@@ -577,11 +438,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:6.1.12-17.42.amzn2023"
+												"lt": "0:8.0.11-1.amzn2023"
 											}
 										],
 										"fixed": [
-											"0:6.1.12-17.42.amzn2023"
+											"0:8.0.11-1.amzn2023"
 										]
 									}
 								}
@@ -594,7 +455,7 @@
 										"class": "fixed"
 									},
 									"package": {
-										"name": "kernel-tools-debuginfo",
+										"name": "dotnet-runtime-8.0-debuginfo",
 										"architectures": [
 											"aarch64",
 											"x86_64"
@@ -607,11 +468,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:6.1.12-17.42.amzn2023"
+												"lt": "0:8.0.11-1.amzn2023"
 											}
 										],
 										"fixed": [
-											"0:6.1.12-17.42.amzn2023"
+											"0:8.0.11-1.amzn2023"
 										]
 									}
 								}
@@ -624,7 +485,7 @@
 										"class": "fixed"
 									},
 									"package": {
-										"name": "kernel-tools-devel",
+										"name": "dotnet-runtime-dbg-8.0",
 										"architectures": [
 											"aarch64",
 											"x86_64"
@@ -637,11 +498,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:6.1.12-17.42.amzn2023"
+												"lt": "0:8.0.11-1.amzn2023"
 											}
 										],
 										"fixed": [
-											"0:6.1.12-17.42.amzn2023"
+											"0:8.0.11-1.amzn2023"
 										]
 									}
 								}
@@ -654,7 +515,7 @@
 										"class": "fixed"
 									},
 									"package": {
-										"name": "perf",
+										"name": "dotnet-sdk-8.0",
 										"architectures": [
 											"aarch64",
 											"x86_64"
@@ -667,11 +528,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:6.1.12-17.42.amzn2023"
+												"lt": "0:8.0.111-1.amzn2023"
 											}
 										],
 										"fixed": [
-											"0:6.1.12-17.42.amzn2023"
+											"0:8.0.111-1.amzn2023"
 										]
 									}
 								}
@@ -684,7 +545,7 @@
 										"class": "fixed"
 									},
 									"package": {
-										"name": "perf-debuginfo",
+										"name": "dotnet-sdk-8.0-debuginfo",
 										"architectures": [
 											"aarch64",
 											"x86_64"
@@ -697,11 +558,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:6.1.12-17.42.amzn2023"
+												"lt": "0:8.0.111-1.amzn2023"
 											}
 										],
 										"fixed": [
-											"0:6.1.12-17.42.amzn2023"
+											"0:8.0.111-1.amzn2023"
 										]
 									}
 								}
@@ -714,7 +575,7 @@
 										"class": "fixed"
 									},
 									"package": {
-										"name": "python3-perf",
+										"name": "dotnet-sdk-8.0-source-built-artifacts",
 										"architectures": [
 											"aarch64",
 											"x86_64"
@@ -727,11 +588,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:6.1.12-17.42.amzn2023"
+												"lt": "0:8.0.111-1.amzn2023"
 											}
 										],
 										"fixed": [
-											"0:6.1.12-17.42.amzn2023"
+											"0:8.0.111-1.amzn2023"
 										]
 									}
 								}
@@ -744,7 +605,7 @@
 										"class": "fixed"
 									},
 									"package": {
-										"name": "python3-perf-debuginfo",
+										"name": "dotnet-sdk-dbg-8.0",
 										"architectures": [
 											"aarch64",
 											"x86_64"
@@ -757,11 +618,161 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:6.1.12-17.42.amzn2023"
+												"lt": "0:8.0.111-1.amzn2023"
 											}
 										],
 										"fixed": [
-											"0:6.1.12-17.42.amzn2023"
+											"0:8.0.111-1.amzn2023"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"name": "dotnet-targeting-pack-8.0",
+										"architectures": [
+											"aarch64",
+											"x86_64"
+										],
+										"repositories": [
+											"amazonlinux"
+										]
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:8.0.11-1.amzn2023"
+											}
+										],
+										"fixed": [
+											"0:8.0.11-1.amzn2023"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"name": "dotnet-templates-8.0",
+										"architectures": [
+											"aarch64",
+											"x86_64"
+										],
+										"repositories": [
+											"amazonlinux"
+										]
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:8.0.111-1.amzn2023"
+											}
+										],
+										"fixed": [
+											"0:8.0.111-1.amzn2023"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"name": "dotnet8.0-debuginfo",
+										"architectures": [
+											"aarch64",
+											"x86_64"
+										],
+										"repositories": [
+											"amazonlinux"
+										]
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:8.0.111-1.amzn2023"
+											}
+										],
+										"fixed": [
+											"0:8.0.111-1.amzn2023"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"name": "dotnet8.0-debugsource",
+										"architectures": [
+											"aarch64",
+											"x86_64"
+										],
+										"repositories": [
+											"amazonlinux"
+										]
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:8.0.111-1.amzn2023"
+											}
+										],
+										"fixed": [
+											"0:8.0.111-1.amzn2023"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"name": "netstandard-targeting-pack-2.1",
+										"architectures": [
+											"aarch64",
+											"x86_64"
+										],
+										"repositories": [
+											"amazonlinux"
+										]
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:8.0.111-1.amzn2023"
+											}
+										],
+										"fixed": [
+											"0:8.0.111-1.amzn2023"
 										]
 									}
 								}
@@ -775,7 +786,7 @@
 	"data_source": {
 		"id": "amazon",
 		"raws": [
-			"vuls-data-raw-amazon/2023/core/2023/ALAS2023-2023-132.json"
+			"vuls-data-raw-amazon/2023/core/2024/ALAS2023-2024-777.json"
 		]
 	}
 }

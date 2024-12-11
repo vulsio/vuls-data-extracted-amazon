@@ -1,30 +1,38 @@
 {
-	"id": "ALAS2023-2024-731",
+	"id": "ALAS2023-2024-774",
 	"advisories": [
 		{
 			"content": {
-				"id": "ALAS2023-2024-731",
-				"title": "Amazon Linux 2023 - ALAS2023-2024-731: Medium priority package update for kernel",
-				"description": "Package updates are available for Amazon Linux 2023 that fix the following vulnerabilities:\nCVE-2024-35870:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nsmb: client: fix UAF in smb2_reconnect_server()\n\nCVE-2024-27017:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nnetfilter: nft_set_pipapo: walk over current view on netlink dump\n",
+				"id": "ALAS2023-2024-774",
+				"title": "Amazon Linux 2023 - ALAS2023-2024-774: Important priority package update for ghostscript",
+				"description": "Package updates are available for Amazon Linux 2023 that fix the following vulnerabilities:\nCVE-2024-46956:\n\tPostScript interpreter - fix buffer length check\n\nNOTE: https://bugs.ghostscript.com/show_bug.cgi?id=707895\nNOTE: https://cgit.ghostscript.com/cgi-bin/cgit.cgi/ghostpdl.git/commit/?id=f4151f12db32cd3ed26c24327de714bf2c3ed6ca\nNOTE: https://cgit.ghostscript.com/cgi-bin/cgit.cgi/ghostpdl.git/commit/?id=ea69a1388245ad959d31c272b5ba66d40cebba2c (ghostpdl-10.04.0)\n\nCVE-2024-46953:\n\tCheck for overflow validating format string\n\nNOTE: https://bugs.ghostscript.com/show_bug.cgi?id=707793\nNOTE: https://cgit.ghostscript.com/cgi-bin/cgit.cgi/ghostpdl.git/commit/?id=1f21a45df0fa3abec4cff12951022b192dda3c00\nNOTE: https://cgit.ghostscript.com/cgi-bin/cgit.cgi/ghostpdl.git/commit/?id=294a3755e33f453dd92e2a7c4cfceb087ac09d6a (ghostpdl-10.04.0)\n\nCVE-2024-46952:\n\tPDF interpreter - sanitise W array values in Xref streams\n\nNOTE: https://bugs.ghostscript.com/show_bug.cgi?id=708001\nNOTE: https://cgit.ghostscript.com/cgi-bin/cgit.cgi/ghostpdl.git/commit/?id=b1f0827c30f59a2dcbc8a39e42cace7a1de35f7f\nNOTE: https://cgit.ghostscript.com/cgi-bin/cgit.cgi/ghostpdl.git/commit/?id=1fb76aaddac34530242dfbb9579d9997dae41264 (ghostpdl-10.04.0)\n\nCVE-2024-46951:\n\tPS interpreter - check the type of the Pattern Implementation\n\nNOTE: https://bugs.ghostscript.com/show_bug.cgi?id=707991\nNOTE: https://cgit.ghostscript.com/cgi-bin/cgit.cgi/ghostpdl.git/commit/?id=f49812186baa7d1362880673408a6fbe8719b4f8\nNOTE: https://cgit.ghostscript.com/cgi-bin/cgit.cgi/ghostpdl.git/commit/?id=ada21374f0c90cc3acf7ce0e96302394560c7aee (ghostpdl-10.04.0)\n",
 				"severity": [
 					{
 						"type": "vendor",
 						"source": "linux-security@amazon.com",
-						"vendor": "Medium"
+						"vendor": "Important"
 					}
 				],
 				"references": [
 					{
 						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27017"
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46951"
 					},
 					{
 						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35870"
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46952"
 					},
 					{
 						"source": "linux-security@amazon.com",
-						"url": "https://alas.aws.amazon.com/AL2023/ALAS-2024-731.html"
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46953"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46956"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "https://alas.aws.amazon.com/AL2023/ALAS-2024-774.html"
 					}
 				]
 			},
@@ -38,11 +46,11 @@
 	"vulnerabilities": [
 		{
 			"content": {
-				"id": "CVE-2024-27017",
+				"id": "CVE-2024-46951",
 				"references": [
 					{
 						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27017"
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46951"
 					}
 				]
 			},
@@ -54,11 +62,43 @@
 		},
 		{
 			"content": {
-				"id": "CVE-2024-35870",
+				"id": "CVE-2024-46952",
 				"references": [
 					{
 						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35870"
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46952"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "amazon:2023"
+				}
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-46953",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46953"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "amazon:2023"
+				}
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-46956",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-46956"
 					}
 				]
 			},
@@ -85,7 +125,7 @@
 										"class": "fixed"
 									},
 									"package": {
-										"name": "bpftool",
+										"name": "ghostscript",
 										"architectures": [
 											"aarch64",
 											"x86_64"
@@ -98,11 +138,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:6.1.112-122.189.amzn2023"
+												"lt": "0:9.56.1-7.amzn2023.0.11"
 											}
 										],
 										"fixed": [
-											"0:6.1.112-122.189.amzn2023"
+											"0:9.56.1-7.amzn2023.0.11"
 										]
 									}
 								}
@@ -115,7 +155,7 @@
 										"class": "fixed"
 									},
 									"package": {
-										"name": "bpftool-debuginfo",
+										"name": "ghostscript-debuginfo",
 										"architectures": [
 											"aarch64",
 											"x86_64"
@@ -128,11 +168,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:6.1.112-122.189.amzn2023"
+												"lt": "0:9.56.1-7.amzn2023.0.11"
 											}
 										],
 										"fixed": [
-											"0:6.1.112-122.189.amzn2023"
+											"0:9.56.1-7.amzn2023.0.11"
 										]
 									}
 								}
@@ -145,7 +185,7 @@
 										"class": "fixed"
 									},
 									"package": {
-										"name": "kernel",
+										"name": "ghostscript-debugsource",
 										"architectures": [
 											"aarch64",
 											"x86_64"
@@ -158,11 +198,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:6.1.112-122.189.amzn2023"
+												"lt": "0:9.56.1-7.amzn2023.0.11"
 											}
 										],
 										"fixed": [
-											"0:6.1.112-122.189.amzn2023"
+											"0:9.56.1-7.amzn2023.0.11"
 										]
 									}
 								}
@@ -175,7 +215,36 @@
 										"class": "fixed"
 									},
 									"package": {
-										"name": "kernel-debuginfo",
+										"name": "ghostscript-doc",
+										"architectures": [
+											"noarch"
+										],
+										"repositories": [
+											"amazonlinux"
+										]
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:9.56.1-7.amzn2023.0.11"
+											}
+										],
+										"fixed": [
+											"0:9.56.1-7.amzn2023.0.11"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"name": "ghostscript-gtk",
 										"architectures": [
 											"aarch64",
 											"x86_64"
@@ -188,11 +257,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:6.1.112-122.189.amzn2023"
+												"lt": "0:9.56.1-7.amzn2023.0.11"
 											}
 										],
 										"fixed": [
-											"0:6.1.112-122.189.amzn2023"
+											"0:9.56.1-7.amzn2023.0.11"
 										]
 									}
 								}
@@ -205,65 +274,7 @@
 										"class": "fixed"
 									},
 									"package": {
-										"name": "kernel-debuginfo-common-aarch64",
-										"architectures": [
-											"aarch64"
-										],
-										"repositories": [
-											"amazonlinux"
-										]
-									},
-									"affected": {
-										"type": "rpm",
-										"range": [
-											{
-												"lt": "0:6.1.112-122.189.amzn2023"
-											}
-										],
-										"fixed": [
-											"0:6.1.112-122.189.amzn2023"
-										]
-									}
-								}
-							},
-							{
-								"type": "version",
-								"version": {
-									"vulnerable": true,
-									"fix_status": {
-										"class": "fixed"
-									},
-									"package": {
-										"name": "kernel-debuginfo-common-x86_64",
-										"architectures": [
-											"x86_64"
-										],
-										"repositories": [
-											"amazonlinux"
-										]
-									},
-									"affected": {
-										"type": "rpm",
-										"range": [
-											{
-												"lt": "0:6.1.112-122.189.amzn2023"
-											}
-										],
-										"fixed": [
-											"0:6.1.112-122.189.amzn2023"
-										]
-									}
-								}
-							},
-							{
-								"type": "version",
-								"version": {
-									"vulnerable": true,
-									"fix_status": {
-										"class": "fixed"
-									},
-									"package": {
-										"name": "kernel-devel",
+										"name": "ghostscript-gtk-debuginfo",
 										"architectures": [
 											"aarch64",
 											"x86_64"
@@ -276,11 +287,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:6.1.112-122.189.amzn2023"
+												"lt": "0:9.56.1-7.amzn2023.0.11"
 											}
 										],
 										"fixed": [
-											"0:6.1.112-122.189.amzn2023"
+											"0:9.56.1-7.amzn2023.0.11"
 										]
 									}
 								}
@@ -293,7 +304,7 @@
 										"class": "fixed"
 									},
 									"package": {
-										"name": "kernel-headers",
+										"name": "ghostscript-tools-dvipdf",
 										"architectures": [
 											"aarch64",
 											"x86_64"
@@ -306,11 +317,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:6.1.112-122.189.amzn2023"
+												"lt": "0:9.56.1-7.amzn2023.0.11"
 											}
 										],
 										"fixed": [
-											"0:6.1.112-122.189.amzn2023"
+											"0:9.56.1-7.amzn2023.0.11"
 										]
 									}
 								}
@@ -323,7 +334,7 @@
 										"class": "fixed"
 									},
 									"package": {
-										"name": "kernel-libbpf",
+										"name": "ghostscript-tools-fonts",
 										"architectures": [
 											"aarch64",
 											"x86_64"
@@ -336,11 +347,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:6.1.112-122.189.amzn2023"
+												"lt": "0:9.56.1-7.amzn2023.0.11"
 											}
 										],
 										"fixed": [
-											"0:6.1.112-122.189.amzn2023"
+											"0:9.56.1-7.amzn2023.0.11"
 										]
 									}
 								}
@@ -353,7 +364,7 @@
 										"class": "fixed"
 									},
 									"package": {
-										"name": "kernel-libbpf-devel",
+										"name": "ghostscript-tools-printing",
 										"architectures": [
 											"aarch64",
 											"x86_64"
@@ -366,11 +377,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:6.1.112-122.189.amzn2023"
+												"lt": "0:9.56.1-7.amzn2023.0.11"
 											}
 										],
 										"fixed": [
-											"0:6.1.112-122.189.amzn2023"
+											"0:9.56.1-7.amzn2023.0.11"
 										]
 									}
 								}
@@ -383,7 +394,7 @@
 										"class": "fixed"
 									},
 									"package": {
-										"name": "kernel-libbpf-static",
+										"name": "ghostscript-x11",
 										"architectures": [
 											"aarch64",
 											"x86_64"
@@ -396,11 +407,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:6.1.112-122.189.amzn2023"
+												"lt": "0:9.56.1-7.amzn2023.0.11"
 											}
 										],
 										"fixed": [
-											"0:6.1.112-122.189.amzn2023"
+											"0:9.56.1-7.amzn2023.0.11"
 										]
 									}
 								}
@@ -413,7 +424,7 @@
 										"class": "fixed"
 									},
 									"package": {
-										"name": "kernel-livepatch-6.1.112-122.189",
+										"name": "ghostscript-x11-debuginfo",
 										"architectures": [
 											"aarch64",
 											"x86_64"
@@ -426,11 +437,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:1.0-0.amzn2023"
+												"lt": "0:9.56.1-7.amzn2023.0.11"
 											}
 										],
 										"fixed": [
-											"0:1.0-0.amzn2023"
+											"0:9.56.1-7.amzn2023.0.11"
 										]
 									}
 								}
@@ -443,7 +454,7 @@
 										"class": "fixed"
 									},
 									"package": {
-										"name": "kernel-modules-extra",
+										"name": "libgs",
 										"architectures": [
 											"aarch64",
 											"x86_64"
@@ -456,11 +467,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:6.1.112-122.189.amzn2023"
+												"lt": "0:9.56.1-7.amzn2023.0.11"
 											}
 										],
 										"fixed": [
-											"0:6.1.112-122.189.amzn2023"
+											"0:9.56.1-7.amzn2023.0.11"
 										]
 									}
 								}
@@ -473,7 +484,7 @@
 										"class": "fixed"
 									},
 									"package": {
-										"name": "kernel-modules-extra-common",
+										"name": "libgs-debuginfo",
 										"architectures": [
 											"aarch64",
 											"x86_64"
@@ -486,11 +497,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:6.1.112-122.189.amzn2023"
+												"lt": "0:9.56.1-7.amzn2023.0.11"
 											}
 										],
 										"fixed": [
-											"0:6.1.112-122.189.amzn2023"
+											"0:9.56.1-7.amzn2023.0.11"
 										]
 									}
 								}
@@ -503,7 +514,7 @@
 										"class": "fixed"
 									},
 									"package": {
-										"name": "kernel-tools",
+										"name": "libgs-devel",
 										"architectures": [
 											"aarch64",
 											"x86_64"
@@ -516,191 +527,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:6.1.112-122.189.amzn2023"
+												"lt": "0:9.56.1-7.amzn2023.0.11"
 											}
 										],
 										"fixed": [
-											"0:6.1.112-122.189.amzn2023"
-										]
-									}
-								}
-							},
-							{
-								"type": "version",
-								"version": {
-									"vulnerable": true,
-									"fix_status": {
-										"class": "fixed"
-									},
-									"package": {
-										"name": "kernel-tools-debuginfo",
-										"architectures": [
-											"aarch64",
-											"x86_64"
-										],
-										"repositories": [
-											"amazonlinux"
-										]
-									},
-									"affected": {
-										"type": "rpm",
-										"range": [
-											{
-												"lt": "0:6.1.112-122.189.amzn2023"
-											}
-										],
-										"fixed": [
-											"0:6.1.112-122.189.amzn2023"
-										]
-									}
-								}
-							},
-							{
-								"type": "version",
-								"version": {
-									"vulnerable": true,
-									"fix_status": {
-										"class": "fixed"
-									},
-									"package": {
-										"name": "kernel-tools-devel",
-										"architectures": [
-											"aarch64",
-											"x86_64"
-										],
-										"repositories": [
-											"amazonlinux"
-										]
-									},
-									"affected": {
-										"type": "rpm",
-										"range": [
-											{
-												"lt": "0:6.1.112-122.189.amzn2023"
-											}
-										],
-										"fixed": [
-											"0:6.1.112-122.189.amzn2023"
-										]
-									}
-								}
-							},
-							{
-								"type": "version",
-								"version": {
-									"vulnerable": true,
-									"fix_status": {
-										"class": "fixed"
-									},
-									"package": {
-										"name": "perf",
-										"architectures": [
-											"aarch64",
-											"x86_64"
-										],
-										"repositories": [
-											"amazonlinux"
-										]
-									},
-									"affected": {
-										"type": "rpm",
-										"range": [
-											{
-												"lt": "0:6.1.112-122.189.amzn2023"
-											}
-										],
-										"fixed": [
-											"0:6.1.112-122.189.amzn2023"
-										]
-									}
-								}
-							},
-							{
-								"type": "version",
-								"version": {
-									"vulnerable": true,
-									"fix_status": {
-										"class": "fixed"
-									},
-									"package": {
-										"name": "perf-debuginfo",
-										"architectures": [
-											"aarch64",
-											"x86_64"
-										],
-										"repositories": [
-											"amazonlinux"
-										]
-									},
-									"affected": {
-										"type": "rpm",
-										"range": [
-											{
-												"lt": "0:6.1.112-122.189.amzn2023"
-											}
-										],
-										"fixed": [
-											"0:6.1.112-122.189.amzn2023"
-										]
-									}
-								}
-							},
-							{
-								"type": "version",
-								"version": {
-									"vulnerable": true,
-									"fix_status": {
-										"class": "fixed"
-									},
-									"package": {
-										"name": "python3-perf",
-										"architectures": [
-											"aarch64",
-											"x86_64"
-										],
-										"repositories": [
-											"amazonlinux"
-										]
-									},
-									"affected": {
-										"type": "rpm",
-										"range": [
-											{
-												"lt": "0:6.1.112-122.189.amzn2023"
-											}
-										],
-										"fixed": [
-											"0:6.1.112-122.189.amzn2023"
-										]
-									}
-								}
-							},
-							{
-								"type": "version",
-								"version": {
-									"vulnerable": true,
-									"fix_status": {
-										"class": "fixed"
-									},
-									"package": {
-										"name": "python3-perf-debuginfo",
-										"architectures": [
-											"aarch64",
-											"x86_64"
-										],
-										"repositories": [
-											"amazonlinux"
-										]
-									},
-									"affected": {
-										"type": "rpm",
-										"range": [
-											{
-												"lt": "0:6.1.112-122.189.amzn2023"
-											}
-										],
-										"fixed": [
-											"0:6.1.112-122.189.amzn2023"
+											"0:9.56.1-7.amzn2023.0.11"
 										]
 									}
 								}
@@ -714,7 +545,7 @@
 	"data_source": {
 		"id": "amazon",
 		"raws": [
-			"vuls-data-raw-amazon/2023/core/2024/ALAS2023-2024-731.json"
+			"vuls-data-raw-amazon/2023/core/2024/ALAS2023-2024-774.json"
 		]
 	}
 }
