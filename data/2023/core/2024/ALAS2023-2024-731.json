@@ -5,7 +5,7 @@
 			"content": {
 				"id": "ALAS2023-2024-731",
 				"title": "Amazon Linux 2023 - ALAS2023-2024-731: Medium priority package update for kernel",
-				"description": "Package updates are available for Amazon Linux 2023 that fix the following vulnerabilities:\nCVE-2024-35870:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nsmb: client: fix UAF in smb2_reconnect_server()\n",
+				"description": "Package updates are available for Amazon Linux 2023 that fix the following vulnerabilities:\nCVE-2024-35870:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nsmb: client: fix UAF in smb2_reconnect_server()\n\nCVE-2024-27017:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nnetfilter: nft_set_pipapo: walk over current view on netlink dump\n",
 				"severity": [
 					{
 						"type": "vendor",
@@ -14,6 +14,10 @@
 					}
 				],
 				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27017"
+					},
 					{
 						"source": "linux-security@amazon.com",
 						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35870"
@@ -32,6 +36,22 @@
 		}
 	],
 	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2024-27017",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27017"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "amazon:2023"
+				}
+			]
+		},
 		{
 			"content": {
 				"id": "CVE-2024-35870",

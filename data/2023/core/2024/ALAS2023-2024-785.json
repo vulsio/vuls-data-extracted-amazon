@@ -1,0 +1,422 @@
+{
+	"id": "ALAS2023-2024-785",
+	"advisories": [
+		{
+			"content": {
+				"id": "ALAS2023-2024-785",
+				"title": "Amazon Linux 2023 - ALAS2023-2024-785: Medium priority package update for dovecot",
+				"description": "Package updates are available for Amazon Linux 2023 that fix the following vulnerabilities:\nCVE-2024-23185:\n\tDovecot reports: A DoS is possible with a large number of address headers or abnormally large email headers.\n\nCVE-2024-23184:\n\tDovecot reports: A DoS is possible with a large number of address headers or abnormally large email headers.\n",
+				"severity": [
+					{
+						"type": "vendor",
+						"source": "linux-security@amazon.com",
+						"vendor": "Medium"
+					}
+				],
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-23184"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-23185"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "https://alas.aws.amazon.com/AL2023/ALAS-2024-785.html"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "amazon:2023"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2024-23184",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-23184"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "amazon:2023"
+				}
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-23185",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-23185"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "amazon:2023"
+				}
+			]
+		}
+	],
+	"detections": [
+		{
+			"ecosystem": "amazon:2023",
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "dovecot",
+											"architectures": [
+												"aarch64",
+												"x86_64"
+											],
+											"repositories": [
+												"amazonlinux"
+											]
+										}
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "1:2.3.20-1.amzn2023.0.2"
+											}
+										],
+										"fixed": [
+											"1:2.3.20-1.amzn2023.0.2"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "dovecot-debuginfo",
+											"architectures": [
+												"aarch64",
+												"x86_64"
+											],
+											"repositories": [
+												"amazonlinux"
+											]
+										}
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "1:2.3.20-1.amzn2023.0.2"
+											}
+										],
+										"fixed": [
+											"1:2.3.20-1.amzn2023.0.2"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "dovecot-debugsource",
+											"architectures": [
+												"aarch64",
+												"x86_64"
+											],
+											"repositories": [
+												"amazonlinux"
+											]
+										}
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "1:2.3.20-1.amzn2023.0.2"
+											}
+										],
+										"fixed": [
+											"1:2.3.20-1.amzn2023.0.2"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "dovecot-devel",
+											"architectures": [
+												"aarch64",
+												"x86_64"
+											],
+											"repositories": [
+												"amazonlinux"
+											]
+										}
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "1:2.3.20-1.amzn2023.0.2"
+											}
+										],
+										"fixed": [
+											"1:2.3.20-1.amzn2023.0.2"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "dovecot-mysql",
+											"architectures": [
+												"aarch64",
+												"x86_64"
+											],
+											"repositories": [
+												"amazonlinux"
+											]
+										}
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "1:2.3.20-1.amzn2023.0.2"
+											}
+										],
+										"fixed": [
+											"1:2.3.20-1.amzn2023.0.2"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "dovecot-mysql-debuginfo",
+											"architectures": [
+												"aarch64",
+												"x86_64"
+											],
+											"repositories": [
+												"amazonlinux"
+											]
+										}
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "1:2.3.20-1.amzn2023.0.2"
+											}
+										],
+										"fixed": [
+											"1:2.3.20-1.amzn2023.0.2"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "dovecot-pgsql",
+											"architectures": [
+												"aarch64",
+												"x86_64"
+											],
+											"repositories": [
+												"amazonlinux"
+											]
+										}
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "1:2.3.20-1.amzn2023.0.2"
+											}
+										],
+										"fixed": [
+											"1:2.3.20-1.amzn2023.0.2"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "dovecot-pgsql-debuginfo",
+											"architectures": [
+												"aarch64",
+												"x86_64"
+											],
+											"repositories": [
+												"amazonlinux"
+											]
+										}
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "1:2.3.20-1.amzn2023.0.2"
+											}
+										],
+										"fixed": [
+											"1:2.3.20-1.amzn2023.0.2"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "dovecot-pigeonhole",
+											"architectures": [
+												"aarch64",
+												"x86_64"
+											],
+											"repositories": [
+												"amazonlinux"
+											]
+										}
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "1:2.3.20-1.amzn2023.0.2"
+											}
+										],
+										"fixed": [
+											"1:2.3.20-1.amzn2023.0.2"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "dovecot-pigeonhole-debuginfo",
+											"architectures": [
+												"aarch64",
+												"x86_64"
+											],
+											"repositories": [
+												"amazonlinux"
+											]
+										}
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "1:2.3.20-1.amzn2023.0.2"
+											}
+										],
+										"fixed": [
+											"1:2.3.20-1.amzn2023.0.2"
+										]
+									}
+								}
+							}
+						]
+					}
+				}
+			]
+		}
+	],
+	"data_source": {
+		"id": "amazon",
+		"raws": [
+			"vuls-data-raw-amazon/2023/core/2024/ALAS2023-2024-785.json"
+		]
+	}
+}
