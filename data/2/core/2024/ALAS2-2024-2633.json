@@ -5,7 +5,7 @@
 			"content": {
 				"id": "ALAS2-2024-2633",
 				"title": "Amazon Linux 2 2017.12 - ALAS2-2024-2633: medium priority package update for kernel",
-				"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2024-35807:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\next4: fix corruption during on-line resize\n",
+				"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2024-35807:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\next4: fix corruption during on-line resize\n\nCVE-2024-26687:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nxen/events: close evtchn after mapping cleanup\n",
 				"severity": [
 					{
 						"type": "vendor",
@@ -14,6 +14,10 @@
 					}
 				],
 				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26687"
+					},
 					{
 						"source": "linux-security@amazon.com",
 						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35807"
@@ -32,6 +36,22 @@
 		}
 	],
 	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2024-26687",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26687"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "amazon:2"
+				}
+			]
+		},
 		{
 			"content": {
 				"id": "CVE-2024-35807",

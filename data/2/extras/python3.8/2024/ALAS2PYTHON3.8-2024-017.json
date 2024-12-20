@@ -1,0 +1,104 @@
+{
+	"id": "ALAS2PYTHON3.8-2024-017",
+	"advisories": [
+		{
+			"content": {
+				"id": "ALAS2PYTHON3.8-2024-017",
+				"title": "Amazon Linux 2 - Python3.8 2.0 - ALAS2PYTHON3.8-2024-017: medium priority package update for python38-pip",
+				"description": "Package updates are available for Amazon Linux 2 - Python3.8 that fix the following vulnerabilities:\nCVE-2024-35195:\n\tRequests is a HTTP library. Prior to 2.32.0, when making requests through a Requests `Session`, if the first request is made with `verify=False` to disable cert verification, all subsequent requests to the same host will continue to ignore cert verification regardless of changes to the value of `verify`. This behavior will continue for the lifecycle of the connection in the connection pool. This vulnerability is fixed in 2.32.0.\n",
+				"severity": [
+					{
+						"type": "vendor",
+						"source": "linux-security@amazon.com",
+						"vendor": "medium"
+					}
+				],
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35195"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "https://alas.aws.amazon.com/AL2/ALASPYTHON3.8-2024-017.html"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "amazon:2"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2024-35195",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-35195"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "amazon:2"
+				}
+			]
+		}
+	],
+	"detections": [
+		{
+			"ecosystem": "amazon:2",
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "python38-pip",
+											"architectures": [
+												"noarch"
+											],
+											"repositories": [
+												"amzn2extra-python3.8"
+											]
+										}
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:21.0.1-4.amzn2.0.4"
+											}
+										],
+										"fixed": [
+											"0:21.0.1-4.amzn2.0.4"
+										]
+									}
+								}
+							}
+						]
+					}
+				}
+			]
+		}
+	],
+	"data_source": {
+		"id": "amazon",
+		"raws": [
+			"vuls-data-raw-amazon/2/extras/python3.8/2024/ALAS2PYTHON3.8-2024-017.json"
+		]
+	}
+}

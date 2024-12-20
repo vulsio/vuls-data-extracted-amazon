@@ -1,0 +1,174 @@
+{
+	"id": "ALAS2-2024-2721",
+	"advisories": [
+		{
+			"content": {
+				"id": "ALAS2-2024-2721",
+				"title": "Amazon Linux 2 2017.12 - ALAS2-2024-2721: medium priority package update for apr",
+				"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2023-49582:\n\tLax permissions set by the Apache Portable Runtime library on Unix platforms would allow local users read access to named shared memory segments, potentially revealing sensitive application data. \n\nThis issue does not affect non-Unix platforms, or builds with APR_USE_SHMEM_SHMGET=1 (apr.h)\n\nUsers are recommended to upgrade to APR version 1.7.5, which fixes this issue.\n",
+				"severity": [
+					{
+						"type": "vendor",
+						"source": "linux-security@amazon.com",
+						"vendor": "medium"
+					}
+				],
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-49582"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "https://alas.aws.amazon.com/AL2/ALAS-2024-2721.html"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "amazon:2"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2023-49582",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-49582"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "amazon:2"
+				}
+			]
+		}
+	],
+	"detections": [
+		{
+			"ecosystem": "amazon:2",
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "apr",
+											"architectures": [
+												"aarch64",
+												"i686",
+												"x86_64"
+											],
+											"repositories": [
+												"amzn2-core"
+											]
+										}
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:1.7.2-1.amzn2.0.1"
+											}
+										],
+										"fixed": [
+											"0:1.7.2-1.amzn2.0.1"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "apr-debuginfo",
+											"architectures": [
+												"aarch64",
+												"i686",
+												"x86_64"
+											],
+											"repositories": [
+												"amzn2-core"
+											]
+										}
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:1.7.2-1.amzn2.0.1"
+											}
+										],
+										"fixed": [
+											"0:1.7.2-1.amzn2.0.1"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "apr-devel",
+											"architectures": [
+												"aarch64",
+												"i686",
+												"x86_64"
+											],
+											"repositories": [
+												"amzn2-core"
+											]
+										}
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:1.7.2-1.amzn2.0.1"
+											}
+										],
+										"fixed": [
+											"0:1.7.2-1.amzn2.0.1"
+										]
+									}
+								}
+							}
+						]
+					}
+				}
+			]
+		}
+	],
+	"data_source": {
+		"id": "amazon",
+		"raws": [
+			"vuls-data-raw-amazon/2/core/2024/ALAS2-2024-2721.json"
+		]
+	}
+}

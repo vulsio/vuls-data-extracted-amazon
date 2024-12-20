@@ -1,0 +1,276 @@
+{
+	"id": "ALAS2-2024-2719",
+	"advisories": [
+		{
+			"content": {
+				"id": "ALAS2-2024-2719",
+				"title": "Amazon Linux 2 2017.12 - ALAS2-2024-2719: medium priority package update for dovecot",
+				"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2024-23185:\n\tDovecot reports: A DoS is possible with a large number of address headers or abnormally large email headers.\n",
+				"severity": [
+					{
+						"type": "vendor",
+						"source": "linux-security@amazon.com",
+						"vendor": "medium"
+					}
+				],
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-23185"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "https://alas.aws.amazon.com/AL2/ALAS-2024-2719.html"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "amazon:2"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2024-23185",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-23185"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "amazon:2"
+				}
+			]
+		}
+	],
+	"detections": [
+		{
+			"ecosystem": "amazon:2",
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "dovecot",
+											"architectures": [
+												"aarch64",
+												"i686",
+												"x86_64"
+											],
+											"repositories": [
+												"amzn2-core"
+											]
+										}
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "1:2.2.36-6.amzn2.1.2"
+											}
+										],
+										"fixed": [
+											"1:2.2.36-6.amzn2.1.2"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "dovecot-debuginfo",
+											"architectures": [
+												"aarch64",
+												"i686",
+												"x86_64"
+											],
+											"repositories": [
+												"amzn2-core"
+											]
+										}
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "1:2.2.36-6.amzn2.1.2"
+											}
+										],
+										"fixed": [
+											"1:2.2.36-6.amzn2.1.2"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "dovecot-devel",
+											"architectures": [
+												"aarch64",
+												"i686",
+												"x86_64"
+											],
+											"repositories": [
+												"amzn2-core"
+											]
+										}
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "1:2.2.36-6.amzn2.1.2"
+											}
+										],
+										"fixed": [
+											"1:2.2.36-6.amzn2.1.2"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "dovecot-mysql",
+											"architectures": [
+												"aarch64",
+												"i686",
+												"x86_64"
+											],
+											"repositories": [
+												"amzn2-core"
+											]
+										}
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "1:2.2.36-6.amzn2.1.2"
+											}
+										],
+										"fixed": [
+											"1:2.2.36-6.amzn2.1.2"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "dovecot-pgsql",
+											"architectures": [
+												"aarch64",
+												"i686",
+												"x86_64"
+											],
+											"repositories": [
+												"amzn2-core"
+											]
+										}
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "1:2.2.36-6.amzn2.1.2"
+											}
+										],
+										"fixed": [
+											"1:2.2.36-6.amzn2.1.2"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "dovecot-pigeonhole",
+											"architectures": [
+												"aarch64",
+												"i686",
+												"x86_64"
+											],
+											"repositories": [
+												"amzn2-core"
+											]
+										}
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "1:2.2.36-6.amzn2.1.2"
+											}
+										],
+										"fixed": [
+											"1:2.2.36-6.amzn2.1.2"
+										]
+									}
+								}
+							}
+						]
+					}
+				}
+			]
+		}
+	],
+	"data_source": {
+		"id": "amazon",
+		"raws": [
+			"vuls-data-raw-amazon/2/core/2024/ALAS2-2024-2719.json"
+		]
+	}
+}
