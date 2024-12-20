@@ -5,7 +5,7 @@
 			"content": {
 				"id": "ALAS2-2024-2698",
 				"title": "Amazon Linux 2 2017.12 - ALAS2-2024-2698: medium priority package update for kernel",
-				"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2024-41059:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nhfsplus: fix uninit-value in copy_name\n\nCVE-2024-41035:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nUSB: core: Fix duplicate endpoint bug by clearing reserved bits in the descriptor\n\nCVE-2024-41020:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nfilelock: Fix fcntl/close race recovery compat path\n\nCVE-2024-36484:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nnet: relax socket state check at accept time.\n",
+				"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2024-41097:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nusb: atm: cxacru: fix endpoint checking in cxacru_bind()\n\nCVE-2024-41059:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nhfsplus: fix uninit-value in copy_name\n\nCVE-2024-41035:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nUSB: core: Fix duplicate endpoint bug by clearing reserved bits in the descriptor\n\nCVE-2024-41034:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nnilfs2: fix kernel bug on rename operation of broken directory\n\nCVE-2024-41020:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nfilelock: Fix fcntl/close race recovery compat path\n\nCVE-2024-40988:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\ndrm/radeon: fix UBSAN warning in kv_dpm.c\n\nCVE-2024-40984:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nACPICA: Revert \"ACPICA: avoid Info: mapping multiple BARs. Your kernel is fine.\"\n\nCVE-2024-36484:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nnet: relax socket state check at accept time.\n",
 				"severity": [
 					{
 						"type": "vendor",
@@ -20,7 +20,19 @@
 					},
 					{
 						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40984"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40988"
+					},
+					{
+						"source": "linux-security@amazon.com",
 						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41020"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41034"
 					},
 					{
 						"source": "linux-security@amazon.com",
@@ -29,6 +41,10 @@
 					{
 						"source": "linux-security@amazon.com",
 						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41059"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41097"
 					},
 					{
 						"source": "linux-security@amazon.com",
@@ -62,11 +78,59 @@
 		},
 		{
 			"content": {
+				"id": "CVE-2024-40984",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40984"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "amazon:2"
+				}
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-40988",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40988"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "amazon:2"
+				}
+			]
+		},
+		{
+			"content": {
 				"id": "CVE-2024-41020",
 				"references": [
 					{
 						"source": "linux-security@amazon.com",
 						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41020"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "amazon:2"
+				}
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-41034",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41034"
 					}
 				]
 			},
@@ -99,6 +163,22 @@
 					{
 						"source": "linux-security@amazon.com",
 						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41059"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "amazon:2"
+				}
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-41097",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41097"
 					}
 				]
 			},

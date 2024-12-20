@@ -5,7 +5,7 @@
 			"content": {
 				"id": "ALAS2KERNEL-5.10-2024-064",
 				"title": "Amazon Linux 2 - Kernel-5.10 2.0 - ALAS2KERNEL-5.10-2024-064: medium priority package update for kernel",
-				"description": "Package updates are available for Amazon Linux 2 - Kernel-5.10 that fix the following vulnerabilities:\nCVE-2024-26629:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nnfsd: fix RELEASE_LOCKOWNER\n\nCVE-2022-48829:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nNFSD: Fix NFSv3 SETATTR/CREATE's handling of large file sizes\n",
+				"description": "Package updates are available for Amazon Linux 2 - Kernel-5.10 that fix the following vulnerabilities:\nCVE-2024-26629:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nnfsd: fix RELEASE_LOCKOWNER\n\nCVE-2022-48829:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nNFSD: Fix NFSv3 SETATTR/CREATE's handling of large file sizes\n\nCVE-2022-48828:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nNFSD: Fix ia_size underflow\n\nCVE-2022-48827:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nNFSD: Fix the behavior of READ near OFFSET_MAX\n",
 				"severity": [
 					{
 						"type": "vendor",
@@ -14,6 +14,14 @@
 					}
 				],
 				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-48827"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-48828"
+					},
 					{
 						"source": "linux-security@amazon.com",
 						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-48829"
@@ -36,6 +44,38 @@
 		}
 	],
 	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2022-48827",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-48827"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "amazon:2"
+				}
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2022-48828",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-48828"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "amazon:2"
+				}
+			]
+		},
 		{
 			"content": {
 				"id": "CVE-2022-48829",

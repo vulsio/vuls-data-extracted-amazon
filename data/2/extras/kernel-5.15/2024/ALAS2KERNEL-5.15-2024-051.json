@@ -5,7 +5,7 @@
 			"content": {
 				"id": "ALAS2KERNEL-5.15-2024-051",
 				"title": "Amazon Linux 2 - Kernel-5.15 2.0 - ALAS2KERNEL-5.15-2024-051: medium priority package update for kernel",
-				"description": "Package updates are available for Amazon Linux 2 - Kernel-5.15 that fix the following vulnerabilities:\nCVE-2024-44944:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nnetfilter: ctnetlink: use helper function to calculate expect ID\n\nCVE-2024-44934:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nnet: bridge: mcast: wait for previous gc cycles when removing port\n\nCVE-2024-43873:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nvhost/vsock: always initialize seqpacket_allow\n\nCVE-2024-43871:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\ndevres: Fix memory leakage caused by driver API devm_free_percpu()\n\nCVE-2024-43870:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nperf: Fix event leak upon exit\n\nCVE-2024-43869:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nperf: Fix event leak upon exec and file release\n\nCVE-2024-42302:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nPCI/DPC: Fix use-after-free on concurrent DPC and hot-removal\n\nCVE-2024-42259:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\ndrm/i915/gem: Fix Virtual Memory mapping boundaries calculation\n\nCVE-2024-27397:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nnetfilter: nf_tables: use timestamp to check for set element timeout\n\nCVE-2024-26585:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\ntls: fix race between tx work scheduling and socket close\n\nSimilarly to previous commit, the submitting thread (recvmsg/sendmsg)\nmay exit as soon as the async crypto handler calls complete().\nReorder scheduling the work before calling complete().\nThis seems more logical in the first place, as it's\nthe inverse order of what the submitting thread will do.\n",
+				"description": "Package updates are available for Amazon Linux 2 - Kernel-5.15 that fix the following vulnerabilities:\nCVE-2024-44944:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nnetfilter: ctnetlink: use helper function to calculate expect ID\n\nCVE-2024-44934:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nnet: bridge: mcast: wait for previous gc cycles when removing port\n\nCVE-2024-43873:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nvhost/vsock: always initialize seqpacket_allow\n\nCVE-2024-43871:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\ndevres: Fix memory leakage caused by driver API devm_free_percpu()\n\nCVE-2024-43870:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nperf: Fix event leak upon exit\n\nCVE-2024-43869:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nperf: Fix event leak upon exec and file release\n\nCVE-2024-42302:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nPCI/DPC: Fix use-after-free on concurrent DPC and hot-removal\n\nCVE-2024-42259:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\ndrm/i915/gem: Fix Virtual Memory mapping boundaries calculation\n\nCVE-2024-41042:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nnetfilter: nf_tables: prefer nft_chain_validate\n\nCVE-2024-27397:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nnetfilter: nf_tables: use timestamp to check for set element timeout\n\nCVE-2024-26585:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\ntls: fix race between tx work scheduling and socket close\n\nSimilarly to previous commit, the submitting thread (recvmsg/sendmsg)\nmay exit as soon as the async crypto handler calls complete().\nReorder scheduling the work before calling complete().\nThis seems more logical in the first place, as it's\nthe inverse order of what the submitting thread will do.\n",
 				"severity": [
 					{
 						"type": "vendor",
@@ -21,6 +21,10 @@
 					{
 						"source": "linux-security@amazon.com",
 						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27397"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41042"
 					},
 					{
 						"source": "linux-security@amazon.com",
@@ -91,6 +95,22 @@
 					{
 						"source": "linux-security@amazon.com",
 						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27397"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "amazon:2"
+				}
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-41042",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-41042"
 					}
 				]
 			},
