@@ -1,44 +1,32 @@
 {
-	"id": "ALAS-2024-1952",
+	"id": "ALAS2023-2025-796",
 	"advisories": [
 		{
 			"content": {
-				"id": "ALAS-2024-1952",
-				"title": "Amazon Linux AMI 2014.03 - ALAS-2024-1952: important priority package update for kernel",
-				"description": "Package updates are available for Amazon Linux AMI that fix the following vulnerabilities:\nCVE-2021-46992:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nnetfilter: nftables: avoid overflows in nft_hash_buckets()\n\nCVE-2021-46938:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\ndm rq: fix double free of blk_mq_tag_set in dev remove after table load fails\n\nCVE-2021-33200:\n\tA flaw was found in kernel/bpf/verifier.c in BPF in the Linux kernel. An incorrect limit is enforced for pointer arithmetic operations which can be abused to perform out-of-bounds reads and writes in kernel memory, leading to local privilege escalation. The highest threat from this vulnerability is to data confidentiality and integrity as well as system availability.\n\nCVE-2021-29650:\n\tA denial-of-service (DoS) flaw was identified  in the Linux kernel due to an incorrect memory barrier in xt_replace_table in net/netfilter/x_tables.c in the netfilter subsystem.\n",
+				"id": "ALAS2023-2025-796",
+				"title": "Amazon Linux 2023 - ALAS2023-2025-796: Medium priority package update for nodejs",
+				"description": "Package updates are available for Amazon Linux 2023 that fix the following vulnerabilities:\nCVE-2024-21538:\n\tVersions of the package cross-spawn before 7.0.5 are vulnerable to Regular Expression Denial of Service (ReDoS) due to improper input sanitization. An attacker can increase the CPU usage and crash the program by crafting a very large and well crafted string.\n",
 				"severity": [
 					{
 						"type": "vendor",
 						"source": "linux-security@amazon.com",
-						"vendor": "important"
+						"vendor": "Medium"
 					}
 				],
 				"references": [
 					{
 						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-29650"
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-21538"
 					},
 					{
 						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-33200"
-					},
-					{
-						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-46938"
-					},
-					{
-						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-46992"
-					},
-					{
-						"source": "linux-security@amazon.com",
-						"url": "https://alas.aws.amazon.com/ALAS-2024-1952.html"
+						"url": "https://alas.aws.amazon.com/AL2023/ALAS-2025-796.html"
 					}
 				]
 			},
 			"segments": [
 				{
-					"ecosystem": "amazon:1"
+					"ecosystem": "amazon:2023"
 				}
 			]
 		}
@@ -46,72 +34,24 @@
 	"vulnerabilities": [
 		{
 			"content": {
-				"id": "CVE-2021-29650",
+				"id": "CVE-2024-21538",
 				"references": [
 					{
 						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-29650"
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-21538"
 					}
 				]
 			},
 			"segments": [
 				{
-					"ecosystem": "amazon:1"
-				}
-			]
-		},
-		{
-			"content": {
-				"id": "CVE-2021-33200",
-				"references": [
-					{
-						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-33200"
-					}
-				]
-			},
-			"segments": [
-				{
-					"ecosystem": "amazon:1"
-				}
-			]
-		},
-		{
-			"content": {
-				"id": "CVE-2021-46938",
-				"references": [
-					{
-						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-46938"
-					}
-				]
-			},
-			"segments": [
-				{
-					"ecosystem": "amazon:1"
-				}
-			]
-		},
-		{
-			"content": {
-				"id": "CVE-2021-46992",
-				"references": [
-					{
-						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-46992"
-					}
-				]
-			},
-			"segments": [
-				{
-					"ecosystem": "amazon:1"
+					"ecosystem": "amazon:2023"
 				}
 			]
 		}
 	],
 	"detections": [
 		{
-			"ecosystem": "amazon:1",
+			"ecosystem": "amazon:2023",
 			"conditions": [
 				{
 					"criteria": {
@@ -127,14 +67,13 @@
 									"package": {
 										"type": "binary",
 										"binary": {
-											"name": "kernel",
+											"name": "nodejs",
 											"architectures": [
-												"i686",
+												"aarch64",
 												"x86_64"
 											],
 											"repositories": [
-												"amzn-main",
-												"amzn-updates"
+												"amazonlinux"
 											]
 										}
 									},
@@ -142,11 +81,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:4.14.238-125.421.amzn1"
+												"lt": "1:18.20.5-1.amzn2023.0.1"
 											}
 										],
 										"fixed": [
-											"0:4.14.238-125.421.amzn1"
+											"1:18.20.5-1.amzn2023.0.1"
 										]
 									}
 								}
@@ -161,14 +100,13 @@
 									"package": {
 										"type": "binary",
 										"binary": {
-											"name": "kernel-debuginfo",
+											"name": "nodejs-debuginfo",
 											"architectures": [
-												"i686",
+												"aarch64",
 												"x86_64"
 											],
 											"repositories": [
-												"amzn-main",
-												"amzn-updates"
+												"amazonlinux"
 											]
 										}
 									},
@@ -176,11 +114,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:4.14.238-125.421.amzn1"
+												"lt": "1:18.20.5-1.amzn2023.0.1"
 											}
 										],
 										"fixed": [
-											"0:4.14.238-125.421.amzn1"
+											"1:18.20.5-1.amzn2023.0.1"
 										]
 									}
 								}
@@ -195,13 +133,13 @@
 									"package": {
 										"type": "binary",
 										"binary": {
-											"name": "kernel-debuginfo-common-i686",
+											"name": "nodejs-debugsource",
 											"architectures": [
-												"i686"
+												"aarch64",
+												"x86_64"
 											],
 											"repositories": [
-												"amzn-main",
-												"amzn-updates"
+												"amazonlinux"
 											]
 										}
 									},
@@ -209,11 +147,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:4.14.238-125.421.amzn1"
+												"lt": "1:18.20.5-1.amzn2023.0.1"
 											}
 										],
 										"fixed": [
-											"0:4.14.238-125.421.amzn1"
+											"1:18.20.5-1.amzn2023.0.1"
 										]
 									}
 								}
@@ -228,13 +166,13 @@
 									"package": {
 										"type": "binary",
 										"binary": {
-											"name": "kernel-debuginfo-common-x86_64",
+											"name": "nodejs-devel",
 											"architectures": [
+												"aarch64",
 												"x86_64"
 											],
 											"repositories": [
-												"amzn-main",
-												"amzn-updates"
+												"amazonlinux"
 											]
 										}
 									},
@@ -242,11 +180,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:4.14.238-125.421.amzn1"
+												"lt": "1:18.20.5-1.amzn2023.0.1"
 											}
 										],
 										"fixed": [
-											"0:4.14.238-125.421.amzn1"
+											"1:18.20.5-1.amzn2023.0.1"
 										]
 									}
 								}
@@ -261,14 +199,12 @@
 									"package": {
 										"type": "binary",
 										"binary": {
-											"name": "kernel-devel",
+											"name": "nodejs-docs",
 											"architectures": [
-												"i686",
-												"x86_64"
+												"noarch"
 											],
 											"repositories": [
-												"amzn-main",
-												"amzn-updates"
+												"amazonlinux"
 											]
 										}
 									},
@@ -276,11 +212,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:4.14.238-125.421.amzn1"
+												"lt": "1:18.20.5-1.amzn2023.0.1"
 											}
 										],
 										"fixed": [
-											"0:4.14.238-125.421.amzn1"
+											"1:18.20.5-1.amzn2023.0.1"
 										]
 									}
 								}
@@ -295,14 +231,13 @@
 									"package": {
 										"type": "binary",
 										"binary": {
-											"name": "kernel-headers",
+											"name": "nodejs-full-i18n",
 											"architectures": [
-												"i686",
+												"aarch64",
 												"x86_64"
 											],
 											"repositories": [
-												"amzn-main",
-												"amzn-updates"
+												"amazonlinux"
 											]
 										}
 									},
@@ -310,11 +245,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:4.14.238-125.421.amzn1"
+												"lt": "1:18.20.5-1.amzn2023.0.1"
 											}
 										],
 										"fixed": [
-											"0:4.14.238-125.421.amzn1"
+											"1:18.20.5-1.amzn2023.0.1"
 										]
 									}
 								}
@@ -329,14 +264,13 @@
 									"package": {
 										"type": "binary",
 										"binary": {
-											"name": "kernel-tools",
+											"name": "nodejs-libs",
 											"architectures": [
-												"i686",
+												"aarch64",
 												"x86_64"
 											],
 											"repositories": [
-												"amzn-main",
-												"amzn-updates"
+												"amazonlinux"
 											]
 										}
 									},
@@ -344,11 +278,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:4.14.238-125.421.amzn1"
+												"lt": "1:18.20.5-1.amzn2023.0.1"
 											}
 										],
 										"fixed": [
-											"0:4.14.238-125.421.amzn1"
+											"1:18.20.5-1.amzn2023.0.1"
 										]
 									}
 								}
@@ -363,14 +297,13 @@
 									"package": {
 										"type": "binary",
 										"binary": {
-											"name": "kernel-tools-debuginfo",
+											"name": "nodejs-libs-debuginfo",
 											"architectures": [
-												"i686",
+												"aarch64",
 												"x86_64"
 											],
 											"repositories": [
-												"amzn-main",
-												"amzn-updates"
+												"amazonlinux"
 											]
 										}
 									},
@@ -378,11 +311,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:4.14.238-125.421.amzn1"
+												"lt": "1:18.20.5-1.amzn2023.0.1"
 											}
 										],
 										"fixed": [
-											"0:4.14.238-125.421.amzn1"
+											"1:18.20.5-1.amzn2023.0.1"
 										]
 									}
 								}
@@ -397,14 +330,13 @@
 									"package": {
 										"type": "binary",
 										"binary": {
-											"name": "kernel-tools-devel",
+											"name": "nodejs-npm",
 											"architectures": [
-												"i686",
+												"aarch64",
 												"x86_64"
 											],
 											"repositories": [
-												"amzn-main",
-												"amzn-updates"
+												"amazonlinux"
 											]
 										}
 									},
@@ -412,11 +344,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:4.14.238-125.421.amzn1"
+												"lt": "1:10.8.2-1.18.20.5.1.amzn2023.0.1"
 											}
 										],
 										"fixed": [
-											"0:4.14.238-125.421.amzn1"
+											"1:10.8.2-1.18.20.5.1.amzn2023.0.1"
 										]
 									}
 								}
@@ -431,14 +363,13 @@
 									"package": {
 										"type": "binary",
 										"binary": {
-											"name": "perf",
+											"name": "v8-10.2-devel",
 											"architectures": [
-												"i686",
+												"aarch64",
 												"x86_64"
 											],
 											"repositories": [
-												"amzn-main",
-												"amzn-updates"
+												"amazonlinux"
 											]
 										}
 									},
@@ -446,45 +377,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:4.14.238-125.421.amzn1"
+												"lt": "3:10.2.154.26-1.18.20.5.1.amzn2023.0.1"
 											}
 										],
 										"fixed": [
-											"0:4.14.238-125.421.amzn1"
-										]
-									}
-								}
-							},
-							{
-								"type": "version",
-								"version": {
-									"vulnerable": true,
-									"fix_status": {
-										"class": "fixed"
-									},
-									"package": {
-										"type": "binary",
-										"binary": {
-											"name": "perf-debuginfo",
-											"architectures": [
-												"i686",
-												"x86_64"
-											],
-											"repositories": [
-												"amzn-main",
-												"amzn-updates"
-											]
-										}
-									},
-									"affected": {
-										"type": "rpm",
-										"range": [
-											{
-												"lt": "0:4.14.238-125.421.amzn1"
-											}
-										],
-										"fixed": [
-											"0:4.14.238-125.421.amzn1"
+											"3:10.2.154.26-1.18.20.5.1.amzn2023.0.1"
 										]
 									}
 								}
@@ -498,7 +395,7 @@
 	"data_source": {
 		"id": "amazon",
 		"raws": [
-			"vuls-data-raw-amazon/1/updates/2024/ALAS-2024-1952.json"
+			"vuls-data-raw-amazon/2023/core/2025/ALAS2023-2025-796.json"
 		]
 	}
 }

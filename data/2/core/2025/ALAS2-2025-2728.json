@@ -1,34 +1,30 @@
 {
-	"id": "ALAS2-2024-2434",
+	"id": "ALAS2-2025-2728",
 	"advisories": [
 		{
 			"content": {
-				"id": "ALAS2-2024-2434",
-				"title": "Amazon Linux 2 2017.12 - ALAS2-2024-2434: important priority package update for webkitgtk4",
-				"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2024-44308:\n\tThe issue was addressed with improved checks. This issue is fixed in Safari 18.1.1, iOS 17.7.2 and iPadOS 17.7.2, macOS Sequoia 15.1.1, iOS 18.1.1 and iPadOS 18.1.1, visionOS 2.1.1. Processing maliciously crafted web content may lead to arbitrary code execution. Apple is aware of a report that this issue may have been actively exploited on Intel-based Mac systems.\n\nCVE-2024-23222:\n\tA type confusion issue was addressed with improved checks. This issue is fixed in tvOS 17.3, iOS 17.3 and iPadOS 17.3, macOS Sonoma 14.3, iOS 16.7.5 and iPadOS 16.7.5, Safari 17.3, macOS Ventura 13.6.4, macOS Monterey 12.7.3. Processing maliciously crafted web content may lead to arbitrary code execution. Apple is aware of a report that this issue may have been exploited.\n\nCVE-2023-42950:\n\tA use after free issue was addressed with improved memory management. This issue is fixed in Safari 17.2, iOS 17.2 and iPadOS 17.2, tvOS 17.2, watchOS 10.2, macOS Sonoma 14.2. Processing maliciously crafted web content may lead to arbitrary code execution.\n",
+				"id": "ALAS2-2025-2728",
+				"title": "Amazon Linux 2 2017.12 - ALAS2-2025-2728: medium priority package update for exiv2",
+				"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2024-25112:\n\tExiv2 is a command-line utility and C++ library for reading, writing, deleting, and modifying the metadata of image files. A denial-of-service was found in Exiv2 version v0.28.1: an unbounded recursion can cause Exiv2 to crash by exhausting the stack. The vulnerable function, `QuickTimeVideo::multipleEntriesDecoder`, was new in v0.28.0, so Exiv2 versions before v0.28 are _not_ affected. The denial-of-service is triggered when Exiv2 is used to read the metadata of a crafted video file. This bug is fixed in version v0.28.2. Users are advised to upgrade. There are no known workarounds for this vulnerability.\n\nCVE-2024-24826:\n\tExiv2 is a command-line utility and C++ library for reading, writing, deleting, and modifying the metadata of image files. An out-of-bounds read was found in Exiv2 version v0.28.1. The vulnerable function, `QuickTimeVideo::NikonTagsDecoder`, was new in v0.28.0, so Exiv2 versions before v0.28 are _not_ affected. The out-of-bounds read is triggered when Exiv2 is used to read the metadata of a crafted video file. In most cases this out of bounds read will result in a crash. This bug is fixed in version v0.28.2. Users are advised to upgrade. There are no known workarounds for this vulnerability.\n",
 				"severity": [
 					{
 						"type": "vendor",
 						"source": "linux-security@amazon.com",
-						"vendor": "important"
+						"vendor": "medium"
 					}
 				],
 				"references": [
 					{
 						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-42950"
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-24826"
 					},
 					{
 						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-23222"
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-25112"
 					},
 					{
 						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-44308"
-					},
-					{
-						"source": "linux-security@amazon.com",
-						"url": "https://alas.aws.amazon.com/AL2/ALAS-2024-2434.html"
+						"url": "https://alas.aws.amazon.com/AL2/ALAS-2025-2728.html"
 					}
 				]
 			},
@@ -42,11 +38,11 @@
 	"vulnerabilities": [
 		{
 			"content": {
-				"id": "CVE-2023-42950",
+				"id": "CVE-2024-24826",
 				"references": [
 					{
 						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-42950"
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-24826"
 					}
 				]
 			},
@@ -58,27 +54,11 @@
 		},
 		{
 			"content": {
-				"id": "CVE-2024-23222",
+				"id": "CVE-2024-25112",
 				"references": [
 					{
 						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-23222"
-					}
-				]
-			},
-			"segments": [
-				{
-					"ecosystem": "amazon:2"
-				}
-			]
-		},
-		{
-			"content": {
-				"id": "CVE-2024-44308",
-				"references": [
-					{
-						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-44308"
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-25112"
 					}
 				]
 			},
@@ -107,7 +87,7 @@
 									"package": {
 										"type": "binary",
 										"binary": {
-											"name": "webkitgtk4",
+											"name": "exiv2",
 											"architectures": [
 												"aarch64",
 												"i686",
@@ -122,11 +102,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:2.42.4-3.amzn2.0.2"
+												"lt": "0:0.27.0-4.amzn2.0.5"
 											}
 										],
 										"fixed": [
-											"0:2.42.4-3.amzn2.0.2"
+											"0:0.27.0-4.amzn2.0.5"
 										]
 									}
 								}
@@ -141,7 +121,7 @@
 									"package": {
 										"type": "binary",
 										"binary": {
-											"name": "webkitgtk4-debuginfo",
+											"name": "exiv2-debuginfo",
 											"architectures": [
 												"aarch64",
 												"i686",
@@ -156,11 +136,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:2.42.4-3.amzn2.0.2"
+												"lt": "0:0.27.0-4.amzn2.0.5"
 											}
 										],
 										"fixed": [
-											"0:2.42.4-3.amzn2.0.2"
+											"0:0.27.0-4.amzn2.0.5"
 										]
 									}
 								}
@@ -175,7 +155,7 @@
 									"package": {
 										"type": "binary",
 										"binary": {
-											"name": "webkitgtk4-devel",
+											"name": "exiv2-devel",
 											"architectures": [
 												"aarch64",
 												"i686",
@@ -190,11 +170,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:2.42.4-3.amzn2.0.2"
+												"lt": "0:0.27.0-4.amzn2.0.5"
 											}
 										],
 										"fixed": [
-											"0:2.42.4-3.amzn2.0.2"
+											"0:0.27.0-4.amzn2.0.5"
 										]
 									}
 								}
@@ -209,11 +189,9 @@
 									"package": {
 										"type": "binary",
 										"binary": {
-											"name": "webkitgtk4-jsc",
+											"name": "exiv2-doc",
 											"architectures": [
-												"aarch64",
-												"i686",
-												"x86_64"
+												"noarch"
 											],
 											"repositories": [
 												"amzn2-core"
@@ -224,11 +202,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:2.42.4-3.amzn2.0.2"
+												"lt": "0:0.27.0-4.amzn2.0.5"
 											}
 										],
 										"fixed": [
-											"0:2.42.4-3.amzn2.0.2"
+											"0:0.27.0-4.amzn2.0.5"
 										]
 									}
 								}
@@ -243,7 +221,7 @@
 									"package": {
 										"type": "binary",
 										"binary": {
-											"name": "webkitgtk4-jsc-devel",
+											"name": "exiv2-libs",
 											"architectures": [
 												"aarch64",
 												"i686",
@@ -258,11 +236,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:2.42.4-3.amzn2.0.2"
+												"lt": "0:0.27.0-4.amzn2.0.5"
 											}
 										],
 										"fixed": [
-											"0:2.42.4-3.amzn2.0.2"
+											"0:0.27.0-4.amzn2.0.5"
 										]
 									}
 								}
@@ -276,7 +254,7 @@
 	"data_source": {
 		"id": "amazon",
 		"raws": [
-			"vuls-data-raw-amazon/2/core/2024/ALAS2-2024-2434.json"
+			"vuls-data-raw-amazon/2/core/2025/ALAS2-2025-2728.json"
 		]
 	}
 }
