@@ -1,0 +1,104 @@
+{
+	"id": "ALAS2-2025-2726",
+	"advisories": [
+		{
+			"content": {
+				"id": "ALAS2-2025-2726",
+				"title": "Amazon Linux 2 2017.12 - ALAS2-2025-2726: medium priority package update for python-webob",
+				"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2024-42353:\n\tWebOb provides objects for HTTP requests and responses. When WebOb normalizes the HTTP Location header to include the request hostname, it does so by parsing the URL that the user is to be redirected to with Python's urlparse, and joining it to the base URL. `urlparse` however treats a `//` at the start of a string as a URI without a scheme, and then treats the next part as the hostname. `urljoin` will then use that hostname from the second part as the hostname replacing the original one from the request. This vulnerability is patched in WebOb version 1.8.8.\n",
+				"severity": [
+					{
+						"type": "vendor",
+						"source": "linux-security@amazon.com",
+						"vendor": "medium"
+					}
+				],
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42353"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "https://alas.aws.amazon.com/AL2/ALAS-2025-2726.html"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "amazon:2"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2024-42353",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-42353"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "amazon:2"
+				}
+			]
+		}
+	],
+	"detections": [
+		{
+			"ecosystem": "amazon:2",
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "python-webob",
+											"architectures": [
+												"noarch"
+											],
+											"repositories": [
+												"amzn2-core"
+											]
+										}
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:1.2.3-7.amzn2.0.1"
+											}
+										],
+										"fixed": [
+											"0:1.2.3-7.amzn2.0.1"
+										]
+									}
+								}
+							}
+						]
+					}
+				}
+			]
+		}
+	],
+	"data_source": {
+		"id": "amazon",
+		"raws": [
+			"vuls-data-raw-amazon/2/core/2025/ALAS2-2025-2726.json"
+		]
+	}
+}

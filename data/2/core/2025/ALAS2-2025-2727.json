@@ -1,34 +1,26 @@
 {
-	"id": "ALAS2-2024-2434",
+	"id": "ALAS2-2025-2727",
 	"advisories": [
 		{
 			"content": {
-				"id": "ALAS2-2024-2434",
-				"title": "Amazon Linux 2 2017.12 - ALAS2-2024-2434: important priority package update for webkitgtk4",
-				"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2024-44308:\n\tThe issue was addressed with improved checks. This issue is fixed in Safari 18.1.1, iOS 17.7.2 and iPadOS 17.7.2, macOS Sequoia 15.1.1, iOS 18.1.1 and iPadOS 18.1.1, visionOS 2.1.1. Processing maliciously crafted web content may lead to arbitrary code execution. Apple is aware of a report that this issue may have been actively exploited on Intel-based Mac systems.\n\nCVE-2024-23222:\n\tA type confusion issue was addressed with improved checks. This issue is fixed in tvOS 17.3, iOS 17.3 and iPadOS 17.3, macOS Sonoma 14.3, iOS 16.7.5 and iPadOS 16.7.5, Safari 17.3, macOS Ventura 13.6.4, macOS Monterey 12.7.3. Processing maliciously crafted web content may lead to arbitrary code execution. Apple is aware of a report that this issue may have been exploited.\n\nCVE-2023-42950:\n\tA use after free issue was addressed with improved memory management. This issue is fixed in Safari 17.2, iOS 17.2 and iPadOS 17.2, tvOS 17.2, watchOS 10.2, macOS Sonoma 14.2. Processing maliciously crafted web content may lead to arbitrary code execution.\n",
+				"id": "ALAS2-2025-2727",
+				"title": "Amazon Linux 2 2017.12 - ALAS2-2025-2727: medium priority package update for orc",
+				"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2024-40897:\n\tStack-based buffer overflow vulnerability exists in orcparse.c of ORC versions prior to 0.4.39. If a developer is tricked to process a specially crafted file with the affected ORC compiler, an arbitrary code may be executed on the developer's build environment.\n",
 				"severity": [
 					{
 						"type": "vendor",
 						"source": "linux-security@amazon.com",
-						"vendor": "important"
+						"vendor": "medium"
 					}
 				],
 				"references": [
 					{
 						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-42950"
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40897"
 					},
 					{
 						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-23222"
-					},
-					{
-						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-44308"
-					},
-					{
-						"source": "linux-security@amazon.com",
-						"url": "https://alas.aws.amazon.com/AL2/ALAS-2024-2434.html"
+						"url": "https://alas.aws.amazon.com/AL2/ALAS-2025-2727.html"
 					}
 				]
 			},
@@ -42,43 +34,11 @@
 	"vulnerabilities": [
 		{
 			"content": {
-				"id": "CVE-2023-42950",
+				"id": "CVE-2024-40897",
 				"references": [
 					{
 						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-42950"
-					}
-				]
-			},
-			"segments": [
-				{
-					"ecosystem": "amazon:2"
-				}
-			]
-		},
-		{
-			"content": {
-				"id": "CVE-2024-23222",
-				"references": [
-					{
-						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-23222"
-					}
-				]
-			},
-			"segments": [
-				{
-					"ecosystem": "amazon:2"
-				}
-			]
-		},
-		{
-			"content": {
-				"id": "CVE-2024-44308",
-				"references": [
-					{
-						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-44308"
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-40897"
 					}
 				]
 			},
@@ -107,7 +67,7 @@
 									"package": {
 										"type": "binary",
 										"binary": {
-											"name": "webkitgtk4",
+											"name": "orc",
 											"architectures": [
 												"aarch64",
 												"i686",
@@ -122,11 +82,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:2.42.4-3.amzn2.0.2"
+												"lt": "0:0.4.26-1.amzn2.0.3"
 											}
 										],
 										"fixed": [
-											"0:2.42.4-3.amzn2.0.2"
+											"0:0.4.26-1.amzn2.0.3"
 										]
 									}
 								}
@@ -141,7 +101,7 @@
 									"package": {
 										"type": "binary",
 										"binary": {
-											"name": "webkitgtk4-debuginfo",
+											"name": "orc-compiler",
 											"architectures": [
 												"aarch64",
 												"i686",
@@ -156,11 +116,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:2.42.4-3.amzn2.0.2"
+												"lt": "0:0.4.26-1.amzn2.0.3"
 											}
 										],
 										"fixed": [
-											"0:2.42.4-3.amzn2.0.2"
+											"0:0.4.26-1.amzn2.0.3"
 										]
 									}
 								}
@@ -175,7 +135,7 @@
 									"package": {
 										"type": "binary",
 										"binary": {
-											"name": "webkitgtk4-devel",
+											"name": "orc-debuginfo",
 											"architectures": [
 												"aarch64",
 												"i686",
@@ -190,11 +150,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:2.42.4-3.amzn2.0.2"
+												"lt": "0:0.4.26-1.amzn2.0.3"
 											}
 										],
 										"fixed": [
-											"0:2.42.4-3.amzn2.0.2"
+											"0:0.4.26-1.amzn2.0.3"
 										]
 									}
 								}
@@ -209,7 +169,7 @@
 									"package": {
 										"type": "binary",
 										"binary": {
-											"name": "webkitgtk4-jsc",
+											"name": "orc-devel",
 											"architectures": [
 												"aarch64",
 												"i686",
@@ -224,11 +184,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:2.42.4-3.amzn2.0.2"
+												"lt": "0:0.4.26-1.amzn2.0.3"
 											}
 										],
 										"fixed": [
-											"0:2.42.4-3.amzn2.0.2"
+											"0:0.4.26-1.amzn2.0.3"
 										]
 									}
 								}
@@ -243,11 +203,9 @@
 									"package": {
 										"type": "binary",
 										"binary": {
-											"name": "webkitgtk4-jsc-devel",
+											"name": "orc-doc",
 											"architectures": [
-												"aarch64",
-												"i686",
-												"x86_64"
+												"noarch"
 											],
 											"repositories": [
 												"amzn2-core"
@@ -258,11 +216,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:2.42.4-3.amzn2.0.2"
+												"lt": "0:0.4.26-1.amzn2.0.3"
 											}
 										],
 										"fixed": [
-											"0:2.42.4-3.amzn2.0.2"
+											"0:0.4.26-1.amzn2.0.3"
 										]
 									}
 								}
@@ -276,7 +234,7 @@
 	"data_source": {
 		"id": "amazon",
 		"raws": [
-			"vuls-data-raw-amazon/2/core/2024/ALAS2-2024-2434.json"
+			"vuls-data-raw-amazon/2/core/2025/ALAS2-2025-2727.json"
 		]
 	}
 }

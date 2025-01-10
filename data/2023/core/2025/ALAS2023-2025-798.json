@@ -1,0 +1,104 @@
+{
+	"id": "ALAS2023-2025-798",
+	"advisories": [
+		{
+			"content": {
+				"id": "ALAS2023-2025-798",
+				"title": "Amazon Linux 2023 - ALAS2023-2025-798: Important priority package update for jackson-databind",
+				"description": "Package updates are available for Amazon Linux 2023 that fix the following vulnerabilities:\nCVE-2022-42004:\n\tIn FasterXML jackson-databind before 2.13.4, resource exhaustion can occur because of a lack of a check in BeanDeserializer._deserializeFromArray to prevent use of deeply nested arrays. An application is vulnerable only with certain customized choices for deserialization.\n",
+				"severity": [
+					{
+						"type": "vendor",
+						"source": "linux-security@amazon.com",
+						"vendor": "Important"
+					}
+				],
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-42004"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "https://alas.aws.amazon.com/AL2023/ALAS-2025-798.html"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "amazon:2023"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2022-42004",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-42004"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "amazon:2023"
+				}
+			]
+		}
+	],
+	"detections": [
+		{
+			"ecosystem": "amazon:2023",
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "jackson-databind",
+											"architectures": [
+												"noarch"
+											],
+											"repositories": [
+												"amazonlinux"
+											]
+										}
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:2.11.4-6.amzn2023.0.3"
+											}
+										],
+										"fixed": [
+											"0:2.11.4-6.amzn2023.0.3"
+										]
+									}
+								}
+							}
+						]
+					}
+				}
+			]
+		}
+	],
+	"data_source": {
+		"id": "amazon",
+		"raws": [
+			"vuls-data-raw-amazon/2023/core/2025/ALAS2023-2025-798.json"
+		]
+	}
+}

@@ -1,26 +1,26 @@
 {
-	"id": "ALAS2023-2023-027",
+	"id": "ALAS2023-2025-794",
 	"advisories": [
 		{
 			"content": {
-				"id": "ALAS2023-2023-027",
-				"title": "Amazon Linux 2023 - ALAS2023-2023-027: Medium priority package update for cryptsetup",
-				"description": "Package updates are available for Amazon Linux 2023 that fix the following vulnerabilities:\nCVE-2021-4122:\n\tIt was found that a specially crafted LUKS header could trick cryptsetup into disabling encryption during the recovery of the device. An attacker with physical access to the medium, such as a flash disk, could use this flaw to force a user into permanently disabling the encryption layer of that medium.\n",
+				"id": "ALAS2023-2025-794",
+				"title": "Amazon Linux 2023 - ALAS2023-2025-794: Important priority package update for kernel",
+				"description": "Package updates are available for Amazon Linux 2023 that fix the following vulnerabilities:\nCVE-2024-50083:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\ntcp: fix mptcp DSS corruption due to large pmtu xmit\n",
 				"severity": [
 					{
 						"type": "vendor",
 						"source": "linux-security@amazon.com",
-						"vendor": "Medium"
+						"vendor": "Important"
 					}
 				],
 				"references": [
 					{
 						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-4122"
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-50083"
 					},
 					{
 						"source": "linux-security@amazon.com",
-						"url": "https://alas.aws.amazon.com/AL2023/ALAS-2023-027.html"
+						"url": "https://alas.aws.amazon.com/AL2023/ALAS-2025-794.html"
 					}
 				]
 			},
@@ -34,11 +34,11 @@
 	"vulnerabilities": [
 		{
 			"content": {
-				"id": "CVE-2021-4122",
+				"id": "CVE-2024-50083",
 				"references": [
 					{
 						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-4122"
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-50083"
 					}
 				]
 			},
@@ -67,10 +67,9 @@
 									"package": {
 										"type": "binary",
 										"binary": {
-											"name": "cryptsetup",
+											"name": "bpftool",
 											"architectures": [
 												"aarch64",
-												"i686",
 												"x86_64"
 											],
 											"repositories": [
@@ -82,11 +81,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:2.4.3-2.amzn2023.0.2"
+												"lt": "0:6.1.115-126.197.amzn2023"
 											}
 										],
 										"fixed": [
-											"0:2.4.3-2.amzn2023.0.2"
+											"0:6.1.115-126.197.amzn2023"
 										]
 									}
 								}
@@ -101,10 +100,9 @@
 									"package": {
 										"type": "binary",
 										"binary": {
-											"name": "cryptsetup-debuginfo",
+											"name": "bpftool-debuginfo",
 											"architectures": [
 												"aarch64",
-												"i686",
 												"x86_64"
 											],
 											"repositories": [
@@ -116,11 +114,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:2.4.3-2.amzn2023.0.2"
+												"lt": "0:6.1.115-126.197.amzn2023"
 											}
 										],
 										"fixed": [
-											"0:2.4.3-2.amzn2023.0.2"
+											"0:6.1.115-126.197.amzn2023"
 										]
 									}
 								}
@@ -135,10 +133,9 @@
 									"package": {
 										"type": "binary",
 										"binary": {
-											"name": "cryptsetup-debugsource",
+											"name": "kernel",
 											"architectures": [
 												"aarch64",
-												"i686",
 												"x86_64"
 											],
 											"repositories": [
@@ -150,11 +147,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:2.4.3-2.amzn2023.0.2"
+												"lt": "0:6.1.115-126.197.amzn2023"
 											}
 										],
 										"fixed": [
-											"0:2.4.3-2.amzn2023.0.2"
+											"0:6.1.115-126.197.amzn2023"
 										]
 									}
 								}
@@ -169,10 +166,9 @@
 									"package": {
 										"type": "binary",
 										"binary": {
-											"name": "cryptsetup-devel",
+											"name": "kernel-debuginfo",
 											"architectures": [
 												"aarch64",
-												"i686",
 												"x86_64"
 											],
 											"repositories": [
@@ -184,11 +180,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:2.4.3-2.amzn2023.0.2"
+												"lt": "0:6.1.115-126.197.amzn2023"
 											}
 										],
 										"fixed": [
-											"0:2.4.3-2.amzn2023.0.2"
+											"0:6.1.115-126.197.amzn2023"
 										]
 									}
 								}
@@ -203,11 +199,9 @@
 									"package": {
 										"type": "binary",
 										"binary": {
-											"name": "cryptsetup-libs",
+											"name": "kernel-debuginfo-common-aarch64",
 											"architectures": [
-												"aarch64",
-												"i686",
-												"x86_64"
+												"aarch64"
 											],
 											"repositories": [
 												"amazonlinux"
@@ -218,11 +212,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:2.4.3-2.amzn2023.0.2"
+												"lt": "0:6.1.115-126.197.amzn2023"
 											}
 										],
 										"fixed": [
-											"0:2.4.3-2.amzn2023.0.2"
+											"0:6.1.115-126.197.amzn2023"
 										]
 									}
 								}
@@ -237,10 +231,8 @@
 									"package": {
 										"type": "binary",
 										"binary": {
-											"name": "cryptsetup-libs-debuginfo",
+											"name": "kernel-debuginfo-common-x86_64",
 											"architectures": [
-												"aarch64",
-												"i686",
 												"x86_64"
 											],
 											"repositories": [
@@ -252,11 +244,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:2.4.3-2.amzn2023.0.2"
+												"lt": "0:6.1.115-126.197.amzn2023"
 											}
 										],
 										"fixed": [
-											"0:2.4.3-2.amzn2023.0.2"
+											"0:6.1.115-126.197.amzn2023"
 										]
 									}
 								}
@@ -271,10 +263,9 @@
 									"package": {
 										"type": "binary",
 										"binary": {
-											"name": "cryptsetup-reencrypt",
+											"name": "kernel-devel",
 											"architectures": [
 												"aarch64",
-												"i686",
 												"x86_64"
 											],
 											"repositories": [
@@ -286,11 +277,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:2.4.3-2.amzn2023.0.2"
+												"lt": "0:6.1.115-126.197.amzn2023"
 											}
 										],
 										"fixed": [
-											"0:2.4.3-2.amzn2023.0.2"
+											"0:6.1.115-126.197.amzn2023"
 										]
 									}
 								}
@@ -305,10 +296,9 @@
 									"package": {
 										"type": "binary",
 										"binary": {
-											"name": "cryptsetup-reencrypt-debuginfo",
+											"name": "kernel-headers",
 											"architectures": [
 												"aarch64",
-												"i686",
 												"x86_64"
 											],
 											"repositories": [
@@ -320,11 +310,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:2.4.3-2.amzn2023.0.2"
+												"lt": "0:6.1.115-126.197.amzn2023"
 											}
 										],
 										"fixed": [
-											"0:2.4.3-2.amzn2023.0.2"
+											"0:6.1.115-126.197.amzn2023"
 										]
 									}
 								}
@@ -339,10 +329,9 @@
 									"package": {
 										"type": "binary",
 										"binary": {
-											"name": "cryptsetup-ssh-token",
+											"name": "kernel-libbpf",
 											"architectures": [
 												"aarch64",
-												"i686",
 												"x86_64"
 											],
 											"repositories": [
@@ -354,11 +343,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:2.4.3-2.amzn2023.0.2"
+												"lt": "0:6.1.115-126.197.amzn2023"
 											}
 										],
 										"fixed": [
-											"0:2.4.3-2.amzn2023.0.2"
+											"0:6.1.115-126.197.amzn2023"
 										]
 									}
 								}
@@ -373,10 +362,9 @@
 									"package": {
 										"type": "binary",
 										"binary": {
-											"name": "cryptsetup-ssh-token-debuginfo",
+											"name": "kernel-libbpf-devel",
 											"architectures": [
 												"aarch64",
-												"i686",
 												"x86_64"
 											],
 											"repositories": [
@@ -388,11 +376,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:2.4.3-2.amzn2023.0.2"
+												"lt": "0:6.1.115-126.197.amzn2023"
 											}
 										],
 										"fixed": [
-											"0:2.4.3-2.amzn2023.0.2"
+											"0:6.1.115-126.197.amzn2023"
 										]
 									}
 								}
@@ -407,10 +395,9 @@
 									"package": {
 										"type": "binary",
 										"binary": {
-											"name": "integritysetup",
+											"name": "kernel-libbpf-static",
 											"architectures": [
 												"aarch64",
-												"i686",
 												"x86_64"
 											],
 											"repositories": [
@@ -422,11 +409,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:2.4.3-2.amzn2023.0.2"
+												"lt": "0:6.1.115-126.197.amzn2023"
 											}
 										],
 										"fixed": [
-											"0:2.4.3-2.amzn2023.0.2"
+											"0:6.1.115-126.197.amzn2023"
 										]
 									}
 								}
@@ -441,10 +428,9 @@
 									"package": {
 										"type": "binary",
 										"binary": {
-											"name": "integritysetup-debuginfo",
+											"name": "kernel-livepatch-6.1.115-126.197",
 											"architectures": [
 												"aarch64",
-												"i686",
 												"x86_64"
 											],
 											"repositories": [
@@ -456,11 +442,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:2.4.3-2.amzn2023.0.2"
+												"lt": "0:1.0-0.amzn2023"
 											}
 										],
 										"fixed": [
-											"0:2.4.3-2.amzn2023.0.2"
+											"0:1.0-0.amzn2023"
 										]
 									}
 								}
@@ -475,10 +461,9 @@
 									"package": {
 										"type": "binary",
 										"binary": {
-											"name": "veritysetup",
+											"name": "kernel-modules-extra",
 											"architectures": [
 												"aarch64",
-												"i686",
 												"x86_64"
 											],
 											"repositories": [
@@ -490,11 +475,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:2.4.3-2.amzn2023.0.2"
+												"lt": "0:6.1.115-126.197.amzn2023"
 											}
 										],
 										"fixed": [
-											"0:2.4.3-2.amzn2023.0.2"
+											"0:6.1.115-126.197.amzn2023"
 										]
 									}
 								}
@@ -509,10 +494,9 @@
 									"package": {
 										"type": "binary",
 										"binary": {
-											"name": "veritysetup-debuginfo",
+											"name": "kernel-modules-extra-common",
 											"architectures": [
 												"aarch64",
-												"i686",
 												"x86_64"
 											],
 											"repositories": [
@@ -524,11 +508,242 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:2.4.3-2.amzn2023.0.2"
+												"lt": "0:6.1.115-126.197.amzn2023"
 											}
 										],
 										"fixed": [
-											"0:2.4.3-2.amzn2023.0.2"
+											"0:6.1.115-126.197.amzn2023"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "kernel-tools",
+											"architectures": [
+												"aarch64",
+												"x86_64"
+											],
+											"repositories": [
+												"amazonlinux"
+											]
+										}
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:6.1.115-126.197.amzn2023"
+											}
+										],
+										"fixed": [
+											"0:6.1.115-126.197.amzn2023"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "kernel-tools-debuginfo",
+											"architectures": [
+												"aarch64",
+												"x86_64"
+											],
+											"repositories": [
+												"amazonlinux"
+											]
+										}
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:6.1.115-126.197.amzn2023"
+											}
+										],
+										"fixed": [
+											"0:6.1.115-126.197.amzn2023"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "kernel-tools-devel",
+											"architectures": [
+												"aarch64",
+												"x86_64"
+											],
+											"repositories": [
+												"amazonlinux"
+											]
+										}
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:6.1.115-126.197.amzn2023"
+											}
+										],
+										"fixed": [
+											"0:6.1.115-126.197.amzn2023"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "perf",
+											"architectures": [
+												"aarch64",
+												"x86_64"
+											],
+											"repositories": [
+												"amazonlinux"
+											]
+										}
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:6.1.115-126.197.amzn2023"
+											}
+										],
+										"fixed": [
+											"0:6.1.115-126.197.amzn2023"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "perf-debuginfo",
+											"architectures": [
+												"aarch64",
+												"x86_64"
+											],
+											"repositories": [
+												"amazonlinux"
+											]
+										}
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:6.1.115-126.197.amzn2023"
+											}
+										],
+										"fixed": [
+											"0:6.1.115-126.197.amzn2023"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "python3-perf",
+											"architectures": [
+												"aarch64",
+												"x86_64"
+											],
+											"repositories": [
+												"amazonlinux"
+											]
+										}
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:6.1.115-126.197.amzn2023"
+											}
+										],
+										"fixed": [
+											"0:6.1.115-126.197.amzn2023"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "python3-perf-debuginfo",
+											"architectures": [
+												"aarch64",
+												"x86_64"
+											],
+											"repositories": [
+												"amazonlinux"
+											]
+										}
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:6.1.115-126.197.amzn2023"
+											}
+										],
+										"fixed": [
+											"0:6.1.115-126.197.amzn2023"
 										]
 									}
 								}
@@ -542,7 +757,7 @@
 	"data_source": {
 		"id": "amazon",
 		"raws": [
-			"vuls-data-raw-amazon/2023/core/2023/ALAS2023-2023-027.json"
+			"vuls-data-raw-amazon/2023/core/2025/ALAS2023-2025-794.json"
 		]
 	}
 }
