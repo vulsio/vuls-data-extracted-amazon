@@ -5,7 +5,7 @@
 			"content": {
 				"id": "ALAS2KERNEL-5.4-2024-089",
 				"title": "Amazon Linux 2 - Kernel-5.4 2.0 - ALAS2KERNEL-5.4-2024-089: important priority package update for kernel",
-				"description": "Package updates are available for Amazon Linux 2 - Kernel-5.4 that fix the following vulnerabilities:\nCVE-2024-26852:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nnet/ipv6: avoid possible UAF in ip6_route_mpath_notify()\n",
+				"description": "Package updates are available for Amazon Linux 2 - Kernel-5.4 that fix the following vulnerabilities:\nCVE-2024-27024:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nnet/rds: fix WARNING in rds_conn_connect_if_down\n\nCVE-2024-26857:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\ngeneve: make sure to pull inner header in geneve_rx()\n\nCVE-2024-26852:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nnet/ipv6: avoid possible UAF in ip6_route_mpath_notify()\n\nCVE-2024-26851:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nnetfilter: nf_conntrack_h323: Add protection for bmp length out of range\n\nCVE-2024-26820:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nhv_netvsc: Register VF in netvsc_probe if NET_DEVICE_REGISTER missed\n",
 				"severity": [
 					{
 						"type": "vendor",
@@ -16,7 +16,23 @@
 				"references": [
 					{
 						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26820"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26851"
+					},
+					{
+						"source": "linux-security@amazon.com",
 						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26852"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26857"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27024"
 					},
 					{
 						"source": "linux-security@amazon.com",
@@ -34,11 +50,75 @@
 	"vulnerabilities": [
 		{
 			"content": {
+				"id": "CVE-2024-26820",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26820"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "amazon:2"
+				}
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-26851",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26851"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "amazon:2"
+				}
+			]
+		},
+		{
+			"content": {
 				"id": "CVE-2024-26852",
 				"references": [
 					{
 						"source": "linux-security@amazon.com",
 						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26852"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "amazon:2"
+				}
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-26857",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26857"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "amazon:2"
+				}
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-27024",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-27024"
 					}
 				]
 			},

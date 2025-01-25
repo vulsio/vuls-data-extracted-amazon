@@ -1,0 +1,104 @@
+{
+	"id": "ALAS2-2025-2738",
+	"advisories": [
+		{
+			"content": {
+				"id": "ALAS2-2025-2738",
+				"title": "Amazon Linux 2 2017.12 - ALAS2-2025-2738: medium priority package update for perl-Module-ScanDeps",
+				"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2024-10224:\n\tQualys discovered that if unsanitized input was used with the library Modules::ScanDeps, before version 1.36 a local attacker could possibly execute arbitrary shell commands by open()ing a \"pesky pipe\" (such as passing \"commands|\" as a filename) or by passing arbitrary strings to eval().\n",
+				"severity": [
+					{
+						"type": "vendor",
+						"source": "linux-security@amazon.com",
+						"vendor": "medium"
+					}
+				],
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-10224"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "https://alas.aws.amazon.com/AL2/ALAS-2025-2738.html"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "amazon:2"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2024-10224",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-10224"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "amazon:2"
+				}
+			]
+		}
+	],
+	"detections": [
+		{
+			"ecosystem": "amazon:2",
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "perl-Module-ScanDeps",
+											"architectures": [
+												"noarch"
+											],
+											"repositories": [
+												"amzn2-core"
+											]
+										}
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:1.10-3.amzn2.0.1"
+											}
+										],
+										"fixed": [
+											"0:1.10-3.amzn2.0.1"
+										]
+									}
+								}
+							}
+						]
+					}
+				}
+			]
+		}
+	],
+	"data_source": {
+		"id": "amazon",
+		"raws": [
+			"vuls-data-raw-amazon/2/core/2025/ALAS2-2025-2738.json"
+		]
+	}
+}

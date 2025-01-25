@@ -1,11 +1,11 @@
 {
-	"id": "ALAS2023-2024-500",
+	"id": "ALAS2023-2025-821",
 	"advisories": [
 		{
 			"content": {
-				"id": "ALAS2023-2024-500",
-				"title": "Amazon Linux 2023 - ALAS2023-2024-500: Medium priority package update for python3.11",
-				"description": "Package updates are available for Amazon Linux 2023 that fix the following vulnerabilities:\nCVE-2024-11168:\n\tThe urllib.parse.urlsplit() and urlparse() functions improperly validated bracketed hosts (`[]`), allowing hosts that weren't IPv6 or IPvFuture. This behavior was not conformant to RFC 3986 and potentially enabled SSRF if a URL is processed by more than one URL parser.\n\nCVE-2023-24329:\n\tAn issue in the urllib.parse component of Python before 3.11.4 allows attackers to bypass blocklisting methods by supplying a URL that starts with blank characters.\n",
+				"id": "ALAS2023-2025-821",
+				"title": "Amazon Linux 2023 - ALAS2023-2025-821: Medium priority package update for openjpeg2",
+				"description": "Package updates are available for Amazon Linux 2023 that fix the following vulnerabilities:\nCVE-2023-39328:\n\topenjpeg: denail of service via crafted image file\n",
 				"severity": [
 					{
 						"type": "vendor",
@@ -16,15 +16,11 @@
 				"references": [
 					{
 						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-24329"
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-39328"
 					},
 					{
 						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-11168"
-					},
-					{
-						"source": "linux-security@amazon.com",
-						"url": "https://alas.aws.amazon.com/AL2023/ALAS-2024-500.html"
+						"url": "https://alas.aws.amazon.com/AL2023/ALAS-2025-821.html"
 					}
 				]
 			},
@@ -38,27 +34,11 @@
 	"vulnerabilities": [
 		{
 			"content": {
-				"id": "CVE-2023-24329",
+				"id": "CVE-2023-39328",
 				"references": [
 					{
 						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-24329"
-					}
-				]
-			},
-			"segments": [
-				{
-					"ecosystem": "amazon:2023"
-				}
-			]
-		},
-		{
-			"content": {
-				"id": "CVE-2024-11168",
-				"references": [
-					{
-						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-11168"
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-39328"
 					}
 				]
 			},
@@ -87,7 +67,7 @@
 									"package": {
 										"type": "binary",
 										"binary": {
-											"name": "python3.11",
+											"name": "openjpeg2",
 											"architectures": [
 												"aarch64",
 												"x86_64"
@@ -101,11 +81,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:3.11.6-1.amzn2023.0.1"
+												"lt": "0:2.4.0-11.amzn2023.0.4"
 											}
 										],
 										"fixed": [
-											"0:3.11.6-1.amzn2023.0.1"
+											"0:2.4.0-11.amzn2023.0.4"
 										]
 									}
 								}
@@ -120,7 +100,7 @@
 									"package": {
 										"type": "binary",
 										"binary": {
-											"name": "python3.11-debug",
+											"name": "openjpeg2-debuginfo",
 											"architectures": [
 												"aarch64",
 												"x86_64"
@@ -134,11 +114,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:3.11.6-1.amzn2023.0.1"
+												"lt": "0:2.4.0-11.amzn2023.0.4"
 											}
 										],
 										"fixed": [
-											"0:3.11.6-1.amzn2023.0.1"
+											"0:2.4.0-11.amzn2023.0.4"
 										]
 									}
 								}
@@ -153,7 +133,7 @@
 									"package": {
 										"type": "binary",
 										"binary": {
-											"name": "python3.11-debuginfo",
+											"name": "openjpeg2-debugsource",
 											"architectures": [
 												"aarch64",
 												"x86_64"
@@ -167,11 +147,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:3.11.6-1.amzn2023.0.1"
+												"lt": "0:2.4.0-11.amzn2023.0.4"
 											}
 										],
 										"fixed": [
-											"0:3.11.6-1.amzn2023.0.1"
+											"0:2.4.0-11.amzn2023.0.4"
 										]
 									}
 								}
@@ -186,7 +166,7 @@
 									"package": {
 										"type": "binary",
 										"binary": {
-											"name": "python3.11-debugsource",
+											"name": "openjpeg2-devel",
 											"architectures": [
 												"aarch64",
 												"x86_64"
@@ -200,11 +180,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:3.11.6-1.amzn2023.0.1"
+												"lt": "0:2.4.0-11.amzn2023.0.4"
 											}
 										],
 										"fixed": [
-											"0:3.11.6-1.amzn2023.0.1"
+											"0:2.4.0-11.amzn2023.0.4"
 										]
 									}
 								}
@@ -219,10 +199,9 @@
 									"package": {
 										"type": "binary",
 										"binary": {
-											"name": "python3.11-devel",
+											"name": "openjpeg2-devel-docs",
 											"architectures": [
-												"aarch64",
-												"x86_64"
+												"noarch"
 											],
 											"repositories": [
 												"amazonlinux"
@@ -233,11 +212,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:3.11.6-1.amzn2023.0.1"
+												"lt": "0:2.4.0-11.amzn2023.0.4"
 											}
 										],
 										"fixed": [
-											"0:3.11.6-1.amzn2023.0.1"
+											"0:2.4.0-11.amzn2023.0.4"
 										]
 									}
 								}
@@ -252,7 +231,7 @@
 									"package": {
 										"type": "binary",
 										"binary": {
-											"name": "python3.11-idle",
+											"name": "openjpeg2-tools",
 											"architectures": [
 												"aarch64",
 												"x86_64"
@@ -266,11 +245,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:3.11.6-1.amzn2023.0.1"
+												"lt": "0:2.4.0-11.amzn2023.0.4"
 											}
 										],
 										"fixed": [
-											"0:3.11.6-1.amzn2023.0.1"
+											"0:2.4.0-11.amzn2023.0.4"
 										]
 									}
 								}
@@ -285,7 +264,7 @@
 									"package": {
 										"type": "binary",
 										"binary": {
-											"name": "python3.11-libs",
+											"name": "openjpeg2-tools-debuginfo",
 											"architectures": [
 												"aarch64",
 												"x86_64"
@@ -299,77 +278,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:3.11.6-1.amzn2023.0.1"
+												"lt": "0:2.4.0-11.amzn2023.0.4"
 											}
 										],
 										"fixed": [
-											"0:3.11.6-1.amzn2023.0.1"
-										]
-									}
-								}
-							},
-							{
-								"type": "version",
-								"version": {
-									"vulnerable": true,
-									"fix_status": {
-										"class": "fixed"
-									},
-									"package": {
-										"type": "binary",
-										"binary": {
-											"name": "python3.11-test",
-											"architectures": [
-												"aarch64",
-												"x86_64"
-											],
-											"repositories": [
-												"amazonlinux"
-											]
-										}
-									},
-									"affected": {
-										"type": "rpm",
-										"range": [
-											{
-												"lt": "0:3.11.6-1.amzn2023.0.1"
-											}
-										],
-										"fixed": [
-											"0:3.11.6-1.amzn2023.0.1"
-										]
-									}
-								}
-							},
-							{
-								"type": "version",
-								"version": {
-									"vulnerable": true,
-									"fix_status": {
-										"class": "fixed"
-									},
-									"package": {
-										"type": "binary",
-										"binary": {
-											"name": "python3.11-tkinter",
-											"architectures": [
-												"aarch64",
-												"x86_64"
-											],
-											"repositories": [
-												"amazonlinux"
-											]
-										}
-									},
-									"affected": {
-										"type": "rpm",
-										"range": [
-											{
-												"lt": "0:3.11.6-1.amzn2023.0.1"
-											}
-										],
-										"fixed": [
-											"0:3.11.6-1.amzn2023.0.1"
+											"0:2.4.0-11.amzn2023.0.4"
 										]
 									}
 								}
@@ -383,7 +296,7 @@
 	"data_source": {
 		"id": "amazon",
 		"raws": [
-			"vuls-data-raw-amazon/2023/core/2024/ALAS2023-2024-500.json"
+			"vuls-data-raw-amazon/2023/core/2025/ALAS2023-2025-821.json"
 		]
 	}
 }
