@@ -1,36 +1,40 @@
 {
-	"id": "ALAS2023-2024-500",
+	"id": "ALAS2TOMCAT9-2025-015",
 	"advisories": [
 		{
 			"content": {
-				"id": "ALAS2023-2024-500",
-				"title": "Amazon Linux 2023 - ALAS2023-2024-500: Medium priority package update for python3.11",
-				"description": "Package updates are available for Amazon Linux 2023 that fix the following vulnerabilities:\nCVE-2024-11168:\n\tThe urllib.parse.urlsplit() and urlparse() functions improperly validated bracketed hosts (`[]`), allowing hosts that weren't IPv6 or IPvFuture. This behavior was not conformant to RFC 3986 and potentially enabled SSRF if a URL is processed by more than one URL parser.\n\nCVE-2023-24329:\n\tAn issue in the urllib.parse component of Python before 3.11.4 allows attackers to bypass blocklisting methods by supplying a URL that starts with blank characters.\n",
+				"id": "ALAS2TOMCAT9-2025-015",
+				"title": "Amazon Linux 2 - Tomcat9 2.0 - ALAS2TOMCAT9-2025-015: important priority package update for tomcat",
+				"description": "Package updates are available for Amazon Linux 2 - Tomcat9 that fix the following vulnerabilities:\nCVE-2024-56337:\n\tTime-of-check Time-of-use (TOCTOU) Race Condition vulnerability in Apache Tomcat.\n\nThis issue affects Apache Tomcat: from 11.0.0-M1 through 11.0.1, from 10.1.0-M1 through 10.1.33, from 9.0.0.M1 through 9.0.97.\n\nThe mitigation for CVE-2024-50379 was incomplete.\n\nUsers running Tomcat on a case insensitive file system with the default servlet write enabled (readonly initialisation \nparameter set to the non-default value of false) may need additional configuration to fully mitigate CVE-2024-50379 depending on which version of Java they are using with Tomcat:\n- running on Java 8 or Java 11: the system property sun.io.useCanonCaches must be explicitly set to false (it defaults to true)\n- running on Java 17: the system property sun.io.useCanonCaches, if set, must be set to false (it defaults to false)\n- running on Java 21 onwards: no further configuration is required (the system property and the problematic cache have been removed)\n\nTomcat 11.0.3, 10.1.35 and 9.0.99 onwards will include checks that sun.io.useCanonCaches is set appropriately before allowing the default servlet to be write enabled on a case insensitive file system. Tomcat will also set sun.io.useCanonCaches to false by default where it can.\n\nCVE-2024-52316:\n\tUnchecked Error Condition vulnerability in Apache Tomcat. If Tomcat is configured to use a custom Jakarta Authentication (formerly JASPIC) ServerAuthContext component which may throw an exception during the authentication process without explicitly setting an HTTP status to indicate failure, the authentication may not fail, allowing the user to bypass the authentication process. There are no known Jakarta Authentication components that behave in this way.\n\nThis issue affects Apache Tomcat: from 11.0.0-M1 through 11.0.0-M26, from 10.1.0-M1 through 10.1.30, from 9.0.0-M1 through 9.0.95.\n\nUsers are recommended to upgrade to version 11.0.0, 10.1.31 or 9.0.96, which fix the issue.\n\nCVE-2024-50379:\n\tTime-of-check Time-of-use (TOCTOU) Race Condition vulnerability during JSP compilation in Apache Tomcat permits an RCE on case insensitive file systems when the default servlet is enabled for write (non-default configuration).\n\nThis issue affects Apache Tomcat: from 11.0.0-M1 through 11.0.1, from 10.1.0-M1 through 10.1.33, from 9.0.0.M1 through 9.0.97.\n\nUsers are recommended to upgrade to version 11.0.2, 10.1.34 or 9.0.98, which fixes the issue.\n",
 				"severity": [
 					{
 						"type": "vendor",
 						"source": "linux-security@amazon.com",
-						"vendor": "Medium"
+						"vendor": "important"
 					}
 				],
 				"references": [
 					{
 						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-24329"
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-50379"
 					},
 					{
 						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-11168"
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-52316"
 					},
 					{
 						"source": "linux-security@amazon.com",
-						"url": "https://alas.aws.amazon.com/AL2023/ALAS-2024-500.html"
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-56337"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "https://alas.aws.amazon.com/AL2/ALASTOMCAT9-2025-015.html"
 					}
 				]
 			},
 			"segments": [
 				{
-					"ecosystem": "amazon:2023"
+					"ecosystem": "amazon:2"
 				}
 			]
 		}
@@ -38,40 +42,56 @@
 	"vulnerabilities": [
 		{
 			"content": {
-				"id": "CVE-2023-24329",
+				"id": "CVE-2024-50379",
 				"references": [
 					{
 						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-24329"
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-50379"
 					}
 				]
 			},
 			"segments": [
 				{
-					"ecosystem": "amazon:2023"
+					"ecosystem": "amazon:2"
 				}
 			]
 		},
 		{
 			"content": {
-				"id": "CVE-2024-11168",
+				"id": "CVE-2024-52316",
 				"references": [
 					{
 						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-11168"
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-52316"
 					}
 				]
 			},
 			"segments": [
 				{
-					"ecosystem": "amazon:2023"
+					"ecosystem": "amazon:2"
+				}
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-56337",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-56337"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "amazon:2"
 				}
 			]
 		}
 	],
 	"detections": [
 		{
-			"ecosystem": "amazon:2023",
+			"ecosystem": "amazon:2",
 			"conditions": [
 				{
 					"criteria": {
@@ -87,13 +107,12 @@
 									"package": {
 										"type": "binary",
 										"binary": {
-											"name": "python3.11",
+											"name": "tomcat",
 											"architectures": [
-												"aarch64",
-												"x86_64"
+												"noarch"
 											],
 											"repositories": [
-												"amazonlinux"
+												"amzn2extra-tomcat9"
 											]
 										}
 									},
@@ -101,11 +120,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:3.11.6-1.amzn2023.0.1"
+												"lt": "0:9.0.98-1.amzn2.0.1"
 											}
 										],
 										"fixed": [
-											"0:3.11.6-1.amzn2023.0.1"
+											"0:9.0.98-1.amzn2.0.1"
 										]
 									}
 								}
@@ -120,13 +139,12 @@
 									"package": {
 										"type": "binary",
 										"binary": {
-											"name": "python3.11-debug",
+											"name": "tomcat-admin-webapps",
 											"architectures": [
-												"aarch64",
-												"x86_64"
+												"noarch"
 											],
 											"repositories": [
-												"amazonlinux"
+												"amzn2extra-tomcat9"
 											]
 										}
 									},
@@ -134,11 +152,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:3.11.6-1.amzn2023.0.1"
+												"lt": "0:9.0.98-1.amzn2.0.1"
 											}
 										],
 										"fixed": [
-											"0:3.11.6-1.amzn2023.0.1"
+											"0:9.0.98-1.amzn2.0.1"
 										]
 									}
 								}
@@ -153,13 +171,12 @@
 									"package": {
 										"type": "binary",
 										"binary": {
-											"name": "python3.11-debuginfo",
+											"name": "tomcat-docs-webapp",
 											"architectures": [
-												"aarch64",
-												"x86_64"
+												"noarch"
 											],
 											"repositories": [
-												"amazonlinux"
+												"amzn2extra-tomcat9"
 											]
 										}
 									},
@@ -167,11 +184,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:3.11.6-1.amzn2023.0.1"
+												"lt": "0:9.0.98-1.amzn2.0.1"
 											}
 										],
 										"fixed": [
-											"0:3.11.6-1.amzn2023.0.1"
+											"0:9.0.98-1.amzn2.0.1"
 										]
 									}
 								}
@@ -186,13 +203,12 @@
 									"package": {
 										"type": "binary",
 										"binary": {
-											"name": "python3.11-debugsource",
+											"name": "tomcat-el-3.0-api",
 											"architectures": [
-												"aarch64",
-												"x86_64"
+												"noarch"
 											],
 											"repositories": [
-												"amazonlinux"
+												"amzn2extra-tomcat9"
 											]
 										}
 									},
@@ -200,11 +216,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:3.11.6-1.amzn2023.0.1"
+												"lt": "0:9.0.98-1.amzn2.0.1"
 											}
 										],
 										"fixed": [
-											"0:3.11.6-1.amzn2023.0.1"
+											"0:9.0.98-1.amzn2.0.1"
 										]
 									}
 								}
@@ -219,13 +235,12 @@
 									"package": {
 										"type": "binary",
 										"binary": {
-											"name": "python3.11-devel",
+											"name": "tomcat-jsp-2.3-api",
 											"architectures": [
-												"aarch64",
-												"x86_64"
+												"noarch"
 											],
 											"repositories": [
-												"amazonlinux"
+												"amzn2extra-tomcat9"
 											]
 										}
 									},
@@ -233,11 +248,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:3.11.6-1.amzn2023.0.1"
+												"lt": "0:9.0.98-1.amzn2.0.1"
 											}
 										],
 										"fixed": [
-											"0:3.11.6-1.amzn2023.0.1"
+											"0:9.0.98-1.amzn2.0.1"
 										]
 									}
 								}
@@ -252,13 +267,12 @@
 									"package": {
 										"type": "binary",
 										"binary": {
-											"name": "python3.11-idle",
+											"name": "tomcat-jsvc",
 											"architectures": [
-												"aarch64",
-												"x86_64"
+												"noarch"
 											],
 											"repositories": [
-												"amazonlinux"
+												"amzn2extra-tomcat9"
 											]
 										}
 									},
@@ -266,11 +280,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:3.11.6-1.amzn2023.0.1"
+												"lt": "0:9.0.98-1.amzn2.0.1"
 											}
 										],
 										"fixed": [
-											"0:3.11.6-1.amzn2023.0.1"
+											"0:9.0.98-1.amzn2.0.1"
 										]
 									}
 								}
@@ -285,13 +299,12 @@
 									"package": {
 										"type": "binary",
 										"binary": {
-											"name": "python3.11-libs",
+											"name": "tomcat-lib",
 											"architectures": [
-												"aarch64",
-												"x86_64"
+												"noarch"
 											],
 											"repositories": [
-												"amazonlinux"
+												"amzn2extra-tomcat9"
 											]
 										}
 									},
@@ -299,11 +312,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:3.11.6-1.amzn2023.0.1"
+												"lt": "0:9.0.98-1.amzn2.0.1"
 											}
 										],
 										"fixed": [
-											"0:3.11.6-1.amzn2023.0.1"
+											"0:9.0.98-1.amzn2.0.1"
 										]
 									}
 								}
@@ -318,13 +331,12 @@
 									"package": {
 										"type": "binary",
 										"binary": {
-											"name": "python3.11-test",
+											"name": "tomcat-servlet-4.0-api",
 											"architectures": [
-												"aarch64",
-												"x86_64"
+												"noarch"
 											],
 											"repositories": [
-												"amazonlinux"
+												"amzn2extra-tomcat9"
 											]
 										}
 									},
@@ -332,11 +344,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:3.11.6-1.amzn2023.0.1"
+												"lt": "0:9.0.98-1.amzn2.0.1"
 											}
 										],
 										"fixed": [
-											"0:3.11.6-1.amzn2023.0.1"
+											"0:9.0.98-1.amzn2.0.1"
 										]
 									}
 								}
@@ -351,13 +363,12 @@
 									"package": {
 										"type": "binary",
 										"binary": {
-											"name": "python3.11-tkinter",
+											"name": "tomcat-webapps",
 											"architectures": [
-												"aarch64",
-												"x86_64"
+												"noarch"
 											],
 											"repositories": [
-												"amazonlinux"
+												"amzn2extra-tomcat9"
 											]
 										}
 									},
@@ -365,11 +376,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:3.11.6-1.amzn2023.0.1"
+												"lt": "0:9.0.98-1.amzn2.0.1"
 											}
 										],
 										"fixed": [
-											"0:3.11.6-1.amzn2023.0.1"
+											"0:9.0.98-1.amzn2.0.1"
 										]
 									}
 								}
@@ -383,7 +394,7 @@
 	"data_source": {
 		"id": "amazon",
 		"raws": [
-			"vuls-data-raw-amazon/2023/core/2024/ALAS2023-2024-500.json"
+			"vuls-data-raw-amazon/2/extras/tomcat9/2025/ALAS2TOMCAT9-2025-015.json"
 		]
 	}
 }

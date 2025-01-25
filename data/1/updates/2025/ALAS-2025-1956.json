@@ -1,36 +1,32 @@
 {
-	"id": "ALAS2023-2024-500",
+	"id": "ALAS-2025-1956",
 	"advisories": [
 		{
 			"content": {
-				"id": "ALAS2023-2024-500",
-				"title": "Amazon Linux 2023 - ALAS2023-2024-500: Medium priority package update for python3.11",
-				"description": "Package updates are available for Amazon Linux 2023 that fix the following vulnerabilities:\nCVE-2024-11168:\n\tThe urllib.parse.urlsplit() and urlparse() functions improperly validated bracketed hosts (`[]`), allowing hosts that weren't IPv6 or IPvFuture. This behavior was not conformant to RFC 3986 and potentially enabled SSRF if a URL is processed by more than one URL parser.\n\nCVE-2023-24329:\n\tAn issue in the urllib.parse component of Python before 3.11.4 allows attackers to bypass blocklisting methods by supplying a URL that starts with blank characters.\n",
+				"id": "ALAS-2025-1956",
+				"title": "Amazon Linux AMI 2014.03 - ALAS-2025-1956: important priority package update for rust",
+				"description": "Package updates are available for Amazon Linux AMI that fix the following vulnerabilities:\nCVE-2024-24577:\n\tlibgit2 is a portable C implementation of the Git core methods provided as a linkable library with a solid API, allowing to build Git functionality into your application. Using well-crafted inputs to `git_index_add` can cause heap corruption that could be leveraged for arbitrary code execution. There is an issue in the `has_dir_name` function in `src/libgit2/index.c`, which frees an entry that should not be freed. The freed entry is later used and overwritten with potentially bad actor-controlled data leading to controlled heap corruption. Depending on the application that uses libgit2, this could lead to arbitrary code execution. This issue has been patched in version 1.6.5 and 1.7.2.\n",
 				"severity": [
 					{
 						"type": "vendor",
 						"source": "linux-security@amazon.com",
-						"vendor": "Medium"
+						"vendor": "important"
 					}
 				],
 				"references": [
 					{
 						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-24329"
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-24577"
 					},
 					{
 						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-11168"
-					},
-					{
-						"source": "linux-security@amazon.com",
-						"url": "https://alas.aws.amazon.com/AL2023/ALAS-2024-500.html"
+						"url": "https://alas.aws.amazon.com/ALAS-2025-1956.html"
 					}
 				]
 			},
 			"segments": [
 				{
-					"ecosystem": "amazon:2023"
+					"ecosystem": "amazon:1"
 				}
 			]
 		}
@@ -38,40 +34,24 @@
 	"vulnerabilities": [
 		{
 			"content": {
-				"id": "CVE-2023-24329",
+				"id": "CVE-2024-24577",
 				"references": [
 					{
 						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-24329"
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-24577"
 					}
 				]
 			},
 			"segments": [
 				{
-					"ecosystem": "amazon:2023"
-				}
-			]
-		},
-		{
-			"content": {
-				"id": "CVE-2024-11168",
-				"references": [
-					{
-						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-11168"
-					}
-				]
-			},
-			"segments": [
-				{
-					"ecosystem": "amazon:2023"
+					"ecosystem": "amazon:1"
 				}
 			]
 		}
 	],
 	"detections": [
 		{
-			"ecosystem": "amazon:2023",
+			"ecosystem": "amazon:1",
 			"conditions": [
 				{
 					"criteria": {
@@ -87,13 +67,13 @@
 									"package": {
 										"type": "binary",
 										"binary": {
-											"name": "python3.11",
+											"name": "cargo",
 											"architectures": [
-												"aarch64",
 												"x86_64"
 											],
 											"repositories": [
-												"amazonlinux"
+												"amzn-main",
+												"amzn-updates"
 											]
 										}
 									},
@@ -101,11 +81,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:3.11.6-1.amzn2023.0.1"
+												"lt": "0:1.68.2-1.66.amzn1"
 											}
 										],
 										"fixed": [
-											"0:3.11.6-1.amzn2023.0.1"
+											"0:1.68.2-1.66.amzn1"
 										]
 									}
 								}
@@ -120,13 +100,13 @@
 									"package": {
 										"type": "binary",
 										"binary": {
-											"name": "python3.11-debug",
+											"name": "clippy",
 											"architectures": [
-												"aarch64",
 												"x86_64"
 											],
 											"repositories": [
-												"amazonlinux"
+												"amzn-main",
+												"amzn-updates"
 											]
 										}
 									},
@@ -134,11 +114,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:3.11.6-1.amzn2023.0.1"
+												"lt": "0:1.68.2-1.66.amzn1"
 											}
 										],
 										"fixed": [
-											"0:3.11.6-1.amzn2023.0.1"
+											"0:1.68.2-1.66.amzn1"
 										]
 									}
 								}
@@ -153,13 +133,13 @@
 									"package": {
 										"type": "binary",
 										"binary": {
-											"name": "python3.11-debuginfo",
+											"name": "rust",
 											"architectures": [
-												"aarch64",
 												"x86_64"
 											],
 											"repositories": [
-												"amazonlinux"
+												"amzn-main",
+												"amzn-updates"
 											]
 										}
 									},
@@ -167,11 +147,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:3.11.6-1.amzn2023.0.1"
+												"lt": "0:1.68.2-1.66.amzn1"
 											}
 										],
 										"fixed": [
-											"0:3.11.6-1.amzn2023.0.1"
+											"0:1.68.2-1.66.amzn1"
 										]
 									}
 								}
@@ -186,13 +166,13 @@
 									"package": {
 										"type": "binary",
 										"binary": {
-											"name": "python3.11-debugsource",
+											"name": "rust-analysis",
 											"architectures": [
-												"aarch64",
 												"x86_64"
 											],
 											"repositories": [
-												"amazonlinux"
+												"amzn-main",
+												"amzn-updates"
 											]
 										}
 									},
@@ -200,11 +180,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:3.11.6-1.amzn2023.0.1"
+												"lt": "0:1.68.2-1.66.amzn1"
 											}
 										],
 										"fixed": [
-											"0:3.11.6-1.amzn2023.0.1"
+											"0:1.68.2-1.66.amzn1"
 										]
 									}
 								}
@@ -219,13 +199,13 @@
 									"package": {
 										"type": "binary",
 										"binary": {
-											"name": "python3.11-devel",
+											"name": "rust-analyzer",
 											"architectures": [
-												"aarch64",
 												"x86_64"
 											],
 											"repositories": [
-												"amazonlinux"
+												"amzn-main",
+												"amzn-updates"
 											]
 										}
 									},
@@ -233,11 +213,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:3.11.6-1.amzn2023.0.1"
+												"lt": "0:1.68.2-1.66.amzn1"
 											}
 										],
 										"fixed": [
-											"0:3.11.6-1.amzn2023.0.1"
+											"0:1.68.2-1.66.amzn1"
 										]
 									}
 								}
@@ -252,13 +232,13 @@
 									"package": {
 										"type": "binary",
 										"binary": {
-											"name": "python3.11-idle",
+											"name": "rust-debugger-common",
 											"architectures": [
-												"aarch64",
-												"x86_64"
+												"noarch"
 											],
 											"repositories": [
-												"amazonlinux"
+												"amzn-main",
+												"amzn-updates"
 											]
 										}
 									},
@@ -266,11 +246,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:3.11.6-1.amzn2023.0.1"
+												"lt": "0:1.68.2-1.66.amzn1"
 											}
 										],
 										"fixed": [
-											"0:3.11.6-1.amzn2023.0.1"
+											"0:1.68.2-1.66.amzn1"
 										]
 									}
 								}
@@ -285,13 +265,13 @@
 									"package": {
 										"type": "binary",
 										"binary": {
-											"name": "python3.11-libs",
+											"name": "rust-doc",
 											"architectures": [
-												"aarch64",
 												"x86_64"
 											],
 											"repositories": [
-												"amazonlinux"
+												"amzn-main",
+												"amzn-updates"
 											]
 										}
 									},
@@ -299,11 +279,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:3.11.6-1.amzn2023.0.1"
+												"lt": "0:1.68.2-1.66.amzn1"
 											}
 										],
 										"fixed": [
-											"0:3.11.6-1.amzn2023.0.1"
+											"0:1.68.2-1.66.amzn1"
 										]
 									}
 								}
@@ -318,13 +298,13 @@
 									"package": {
 										"type": "binary",
 										"binary": {
-											"name": "python3.11-test",
+											"name": "rust-gdb",
 											"architectures": [
-												"aarch64",
-												"x86_64"
+												"noarch"
 											],
 											"repositories": [
-												"amazonlinux"
+												"amzn-main",
+												"amzn-updates"
 											]
 										}
 									},
@@ -332,11 +312,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:3.11.6-1.amzn2023.0.1"
+												"lt": "0:1.68.2-1.66.amzn1"
 											}
 										],
 										"fixed": [
-											"0:3.11.6-1.amzn2023.0.1"
+											"0:1.68.2-1.66.amzn1"
 										]
 									}
 								}
@@ -351,13 +331,13 @@
 									"package": {
 										"type": "binary",
 										"binary": {
-											"name": "python3.11-tkinter",
+											"name": "rust-lldb",
 											"architectures": [
-												"aarch64",
-												"x86_64"
+												"noarch"
 											],
 											"repositories": [
-												"amazonlinux"
+												"amzn-main",
+												"amzn-updates"
 											]
 										}
 									},
@@ -365,11 +345,110 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:3.11.6-1.amzn2023.0.1"
+												"lt": "0:1.68.2-1.66.amzn1"
 											}
 										],
 										"fixed": [
-											"0:3.11.6-1.amzn2023.0.1"
+											"0:1.68.2-1.66.amzn1"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "rust-src",
+											"architectures": [
+												"noarch"
+											],
+											"repositories": [
+												"amzn-main",
+												"amzn-updates"
+											]
+										}
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:1.68.2-1.66.amzn1"
+											}
+										],
+										"fixed": [
+											"0:1.68.2-1.66.amzn1"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "rust-std-static",
+											"architectures": [
+												"x86_64"
+											],
+											"repositories": [
+												"amzn-main",
+												"amzn-updates"
+											]
+										}
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:1.68.2-1.66.amzn1"
+											}
+										],
+										"fixed": [
+											"0:1.68.2-1.66.amzn1"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "rustfmt",
+											"architectures": [
+												"x86_64"
+											],
+											"repositories": [
+												"amzn-main",
+												"amzn-updates"
+											]
+										}
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:1.68.2-1.66.amzn1"
+											}
+										],
+										"fixed": [
+											"0:1.68.2-1.66.amzn1"
 										]
 									}
 								}
@@ -383,7 +462,7 @@
 	"data_source": {
 		"id": "amazon",
 		"raws": [
-			"vuls-data-raw-amazon/2023/core/2024/ALAS2023-2024-500.json"
+			"vuls-data-raw-amazon/1/updates/2025/ALAS-2025-1956.json"
 		]
 	}
 }

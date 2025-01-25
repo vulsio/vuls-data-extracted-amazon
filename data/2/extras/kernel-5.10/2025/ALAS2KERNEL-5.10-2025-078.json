@@ -1,11 +1,11 @@
 {
-	"id": "ALAS2KERNEL-5.4-2023-041",
+	"id": "ALAS2KERNEL-5.10-2025-078",
 	"advisories": [
 		{
 			"content": {
-				"id": "ALAS2KERNEL-5.4-2023-041",
-				"title": "Amazon Linux 2 - Kernel-5.4 2.0 - ALAS2KERNEL-5.4-2023-041: important priority package update for kernel",
-				"description": "Package updates are available for Amazon Linux 2 - Kernel-5.4 that fix the following vulnerabilities:\nCVE-2023-2166:\n\tA null pointer dereference issue was found in the can protocol in net/can/af_can.c in the Linux Kernel. ml_priv may not be initialized in the receive path of CAN frames. This issue could allow a local user to crash the system or cause a denial of service.\n\nCVE-2022-48991:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nmm/khugepaged: invoke MMU notifiers in shmem/file collapse paths\n\nCVE-2022-48988:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nmemcg: fix possible use-after-free in memcg_write_event_control()\n\nCVE-2022-48981:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\ndrm/shmem-helper: Remove errant put in error path\n\nCVE-2022-48956:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nipv6: avoid use-after-free in ip6_fragment()\n\nCVE-2022-42329:\n\tGuests can trigger deadlock in Linux netback driver T[his CNA information record relates to multiple CVEs; the text explains which aspects/vulnerabilities correspond to which CVE.] The patch for XSA-392 introduced another issue which might result in a deadlock when trying to free the SKB of a packet dropped due to the XSA-392 handling (CVE-2022-42328). Additionally when dropping packages for other reasons the same deadlock could occur in case of netpoll being active for the interface the xen-netback driver is connected to (CVE-2022-42329).\n\nCVE-2022-42328:\n\tGuests can trigger deadlock in Linux netback driver T[his CNA information record relates to multiple CVEs; the text explains which aspects/vulnerabilities correspond to which CVE.] The patch for XSA-392 introduced another issue which might result in a deadlock when trying to free the SKB of a packet dropped due to the XSA-392 handling (CVE-2022-42328). Additionally when dropping packages for other reasons the same deadlock could occur in case of netpoll being active for the interface the xen-netback driver is connected to (CVE-2022-42329).\n\nCVE-2022-3643:\n\tGuests can trigger NIC interface reset/abort/crash via netback It is possible for a guest to trigger a NIC interface reset/abort/crash in a Linux based network backend by sending certain kinds of packets. It appears to be an (unwritten?) assumption in the rest of the Linux network stack that packet protocol headers are all contained within the linear section of the SKB and some NICs behave badly if this is not the case. This has been reported to occur with Cisco (enic) and Broadcom NetXtrem II BCM5780 (bnx2x) though it may be an issue with other NICs/drivers as well. In case the frontend is sending requests with split headers, netback will forward those violating above mentioned assumption to the networking core, resulting in said misbehavior.\n\nCVE-2022-3623:\n\tA vulnerability was found in Linux Kernel. It has been declared as problematic. Affected by this vulnerability is the function follow_page_pte of the file mm/gup.c of the component BPF. The manipulation leads to race condition. The attack can be launched remotely. It is recommended to apply a patch to fix this issue. The identifier VDB-211921 was assigned to this vulnerability.\n",
+				"id": "ALAS2KERNEL-5.10-2025-078",
+				"title": "Amazon Linux 2 - Kernel-5.10 2.0 - ALAS2KERNEL-5.10-2025-078: important priority package update for kernel",
+				"description": "Package updates are available for Amazon Linux 2 - Kernel-5.10 that fix the following vulnerabilities:\nCVE-2024-50262:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nbpf: Fix out-of-bounds write in trie_get_next_key()\n\nCVE-2024-50230:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nnilfs2: fix kernel bug due to missing clearing of checked flag\n\nCVE-2024-50151:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nsmb: client: fix OOBs when building SMB2_IOCTL request\n\nCVE-2024-50150:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nusb: typec: altmode should keep reference to parent\n\nCVE-2024-50131:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\ntracing: Consider the NULL character when validating the event length\n\nCVE-2024-50127:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nnet: sched: fix use-after-free in taprio_change()\n\nCVE-2024-50036:\n\tIn the Linux kernel, the following vulnerability has been resolved:\n\nnet: do not delay dst_entries_add() in dst_release()\n",
 				"severity": [
 					{
 						"type": "vendor",
@@ -16,43 +16,35 @@
 				"references": [
 					{
 						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3623"
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-50036"
 					},
 					{
 						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3643"
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-50127"
 					},
 					{
 						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-42328"
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-50131"
 					},
 					{
 						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-42329"
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-50150"
 					},
 					{
 						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-48956"
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-50151"
 					},
 					{
 						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-48981"
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-50230"
 					},
 					{
 						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-48988"
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-50262"
 					},
 					{
 						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-48991"
-					},
-					{
-						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-2166"
-					},
-					{
-						"source": "linux-security@amazon.com",
-						"url": "https://alas.aws.amazon.com/AL2/ALASKERNEL-5.4-2023-041.html"
+						"url": "https://alas.aws.amazon.com/AL2/ALASKERNEL-5.10-2025-078.html"
 					}
 				]
 			},
@@ -66,11 +58,11 @@
 	"vulnerabilities": [
 		{
 			"content": {
-				"id": "CVE-2022-3623",
+				"id": "CVE-2024-50036",
 				"references": [
 					{
 						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3623"
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-50036"
 					}
 				]
 			},
@@ -82,11 +74,11 @@
 		},
 		{
 			"content": {
-				"id": "CVE-2022-3643",
+				"id": "CVE-2024-50127",
 				"references": [
 					{
 						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3643"
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-50127"
 					}
 				]
 			},
@@ -98,11 +90,11 @@
 		},
 		{
 			"content": {
-				"id": "CVE-2022-42328",
+				"id": "CVE-2024-50131",
 				"references": [
 					{
 						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-42328"
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-50131"
 					}
 				]
 			},
@@ -114,11 +106,11 @@
 		},
 		{
 			"content": {
-				"id": "CVE-2022-42329",
+				"id": "CVE-2024-50150",
 				"references": [
 					{
 						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-42329"
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-50150"
 					}
 				]
 			},
@@ -130,11 +122,11 @@
 		},
 		{
 			"content": {
-				"id": "CVE-2022-48956",
+				"id": "CVE-2024-50151",
 				"references": [
 					{
 						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-48956"
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-50151"
 					}
 				]
 			},
@@ -146,11 +138,11 @@
 		},
 		{
 			"content": {
-				"id": "CVE-2022-48981",
+				"id": "CVE-2024-50230",
 				"references": [
 					{
 						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-48981"
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-50230"
 					}
 				]
 			},
@@ -162,43 +154,11 @@
 		},
 		{
 			"content": {
-				"id": "CVE-2022-48988",
+				"id": "CVE-2024-50262",
 				"references": [
 					{
 						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-48988"
-					}
-				]
-			},
-			"segments": [
-				{
-					"ecosystem": "amazon:2"
-				}
-			]
-		},
-		{
-			"content": {
-				"id": "CVE-2022-48991",
-				"references": [
-					{
-						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-48991"
-					}
-				]
-			},
-			"segments": [
-				{
-					"ecosystem": "amazon:2"
-				}
-			]
-		},
-		{
-			"content": {
-				"id": "CVE-2023-2166",
-				"references": [
-					{
-						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-2166"
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-50262"
 					}
 				]
 			},
@@ -233,7 +193,7 @@
 												"x86_64"
 											],
 											"repositories": [
-												"amzn2extra-kernel-5.4"
+												"amzn2extra-kernel-5.10"
 											]
 										}
 									},
@@ -241,11 +201,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:5.4.228-131.415.amzn2"
+												"lt": "0:5.10.230-223.885.amzn2"
 											}
 										],
 										"fixed": [
-											"0:5.4.228-131.415.amzn2"
+											"0:5.10.230-223.885.amzn2"
 										]
 									}
 								}
@@ -266,7 +226,7 @@
 												"x86_64"
 											],
 											"repositories": [
-												"amzn2extra-kernel-5.4"
+												"amzn2extra-kernel-5.10"
 											]
 										}
 									},
@@ -274,11 +234,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:5.4.228-131.415.amzn2"
+												"lt": "0:5.10.230-223.885.amzn2"
 											}
 										],
 										"fixed": [
-											"0:5.4.228-131.415.amzn2"
+											"0:5.10.230-223.885.amzn2"
 										]
 									}
 								}
@@ -299,7 +259,7 @@
 												"x86_64"
 											],
 											"repositories": [
-												"amzn2extra-kernel-5.4"
+												"amzn2extra-kernel-5.10"
 											]
 										}
 									},
@@ -307,11 +267,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:5.4.228-131.415.amzn2"
+												"lt": "0:5.10.230-223.885.amzn2"
 											}
 										],
 										"fixed": [
-											"0:5.4.228-131.415.amzn2"
+											"0:5.10.230-223.885.amzn2"
 										]
 									}
 								}
@@ -332,7 +292,7 @@
 												"x86_64"
 											],
 											"repositories": [
-												"amzn2extra-kernel-5.4"
+												"amzn2extra-kernel-5.10"
 											]
 										}
 									},
@@ -340,11 +300,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:5.4.228-131.415.amzn2"
+												"lt": "0:5.10.230-223.885.amzn2"
 											}
 										],
 										"fixed": [
-											"0:5.4.228-131.415.amzn2"
+											"0:5.10.230-223.885.amzn2"
 										]
 									}
 								}
@@ -364,7 +324,7 @@
 												"aarch64"
 											],
 											"repositories": [
-												"amzn2extra-kernel-5.4"
+												"amzn2extra-kernel-5.10"
 											]
 										}
 									},
@@ -372,11 +332,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:5.4.228-131.415.amzn2"
+												"lt": "0:5.10.230-223.885.amzn2"
 											}
 										],
 										"fixed": [
-											"0:5.4.228-131.415.amzn2"
+											"0:5.10.230-223.885.amzn2"
 										]
 									}
 								}
@@ -396,7 +356,7 @@
 												"x86_64"
 											],
 											"repositories": [
-												"amzn2extra-kernel-5.4"
+												"amzn2extra-kernel-5.10"
 											]
 										}
 									},
@@ -404,11 +364,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:5.4.228-131.415.amzn2"
+												"lt": "0:5.10.230-223.885.amzn2"
 											}
 										],
 										"fixed": [
-											"0:5.4.228-131.415.amzn2"
+											"0:5.10.230-223.885.amzn2"
 										]
 									}
 								}
@@ -429,7 +389,7 @@
 												"x86_64"
 											],
 											"repositories": [
-												"amzn2extra-kernel-5.4"
+												"amzn2extra-kernel-5.10"
 											]
 										}
 									},
@@ -437,11 +397,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:5.4.228-131.415.amzn2"
+												"lt": "0:5.10.230-223.885.amzn2"
 											}
 										],
 										"fixed": [
-											"0:5.4.228-131.415.amzn2"
+											"0:5.10.230-223.885.amzn2"
 										]
 									}
 								}
@@ -463,7 +423,7 @@
 												"x86_64"
 											],
 											"repositories": [
-												"amzn2extra-kernel-5.4"
+												"amzn2extra-kernel-5.10"
 											]
 										}
 									},
@@ -471,11 +431,44 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:5.4.228-131.415.amzn2"
+												"lt": "0:5.10.230-223.885.amzn2"
 											}
 										],
 										"fixed": [
-											"0:5.4.228-131.415.amzn2"
+											"0:5.10.230-223.885.amzn2"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "kernel-livepatch-5.10.230-223.885",
+											"architectures": [
+												"aarch64",
+												"x86_64"
+											],
+											"repositories": [
+												"amzn2extra-kernel-5.10"
+											]
+										}
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:1.0-0.amzn2"
+											}
+										],
+										"fixed": [
+											"0:1.0-0.amzn2"
 										]
 									}
 								}
@@ -496,7 +489,7 @@
 												"x86_64"
 											],
 											"repositories": [
-												"amzn2extra-kernel-5.4"
+												"amzn2extra-kernel-5.10"
 											]
 										}
 									},
@@ -504,11 +497,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:5.4.228-131.415.amzn2"
+												"lt": "0:5.10.230-223.885.amzn2"
 											}
 										],
 										"fixed": [
-											"0:5.4.228-131.415.amzn2"
+											"0:5.10.230-223.885.amzn2"
 										]
 									}
 								}
@@ -529,7 +522,7 @@
 												"x86_64"
 											],
 											"repositories": [
-												"amzn2extra-kernel-5.4"
+												"amzn2extra-kernel-5.10"
 											]
 										}
 									},
@@ -537,11 +530,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:5.4.228-131.415.amzn2"
+												"lt": "0:5.10.230-223.885.amzn2"
 											}
 										],
 										"fixed": [
-											"0:5.4.228-131.415.amzn2"
+											"0:5.10.230-223.885.amzn2"
 										]
 									}
 								}
@@ -562,7 +555,7 @@
 												"x86_64"
 											],
 											"repositories": [
-												"amzn2extra-kernel-5.4"
+												"amzn2extra-kernel-5.10"
 											]
 										}
 									},
@@ -570,11 +563,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:5.4.228-131.415.amzn2"
+												"lt": "0:5.10.230-223.885.amzn2"
 											}
 										],
 										"fixed": [
-											"0:5.4.228-131.415.amzn2"
+											"0:5.10.230-223.885.amzn2"
 										]
 									}
 								}
@@ -595,7 +588,7 @@
 												"x86_64"
 											],
 											"repositories": [
-												"amzn2extra-kernel-5.4"
+												"amzn2extra-kernel-5.10"
 											]
 										}
 									},
@@ -603,11 +596,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:5.4.228-131.415.amzn2"
+												"lt": "0:5.10.230-223.885.amzn2"
 											}
 										],
 										"fixed": [
-											"0:5.4.228-131.415.amzn2"
+											"0:5.10.230-223.885.amzn2"
 										]
 									}
 								}
@@ -628,7 +621,7 @@
 												"x86_64"
 											],
 											"repositories": [
-												"amzn2extra-kernel-5.4"
+												"amzn2extra-kernel-5.10"
 											]
 										}
 									},
@@ -636,11 +629,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:5.4.228-131.415.amzn2"
+												"lt": "0:5.10.230-223.885.amzn2"
 											}
 										],
 										"fixed": [
-											"0:5.4.228-131.415.amzn2"
+											"0:5.10.230-223.885.amzn2"
 										]
 									}
 								}
@@ -661,7 +654,7 @@
 												"x86_64"
 											],
 											"repositories": [
-												"amzn2extra-kernel-5.4"
+												"amzn2extra-kernel-5.10"
 											]
 										}
 									},
@@ -669,11 +662,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:5.4.228-131.415.amzn2"
+												"lt": "0:5.10.230-223.885.amzn2"
 											}
 										],
 										"fixed": [
-											"0:5.4.228-131.415.amzn2"
+											"0:5.10.230-223.885.amzn2"
 										]
 									}
 								}
@@ -694,7 +687,7 @@
 												"x86_64"
 											],
 											"repositories": [
-												"amzn2extra-kernel-5.4"
+												"amzn2extra-kernel-5.10"
 											]
 										}
 									},
@@ -702,11 +695,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:5.4.228-131.415.amzn2"
+												"lt": "0:5.10.230-223.885.amzn2"
 											}
 										],
 										"fixed": [
-											"0:5.4.228-131.415.amzn2"
+											"0:5.10.230-223.885.amzn2"
 										]
 									}
 								}
@@ -720,7 +713,7 @@
 	"data_source": {
 		"id": "amazon",
 		"raws": [
-			"vuls-data-raw-amazon/2/extras/kernel-5.4/2023/ALAS2KERNEL-5.4-2023-041.json"
+			"vuls-data-raw-amazon/2/extras/kernel-5.10/2025/ALAS2KERNEL-5.10-2025-078.json"
 		]
 	}
 }

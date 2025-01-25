@@ -1,11 +1,11 @@
 {
-	"id": "ALAS2023-2024-500",
+	"id": "ALAS2023-2025-819",
 	"advisories": [
 		{
 			"content": {
-				"id": "ALAS2023-2024-500",
-				"title": "Amazon Linux 2023 - ALAS2023-2024-500: Medium priority package update for python3.11",
-				"description": "Package updates are available for Amazon Linux 2023 that fix the following vulnerabilities:\nCVE-2024-11168:\n\tThe urllib.parse.urlsplit() and urlparse() functions improperly validated bracketed hosts (`[]`), allowing hosts that weren't IPv6 or IPvFuture. This behavior was not conformant to RFC 3986 and potentially enabled SSRF if a URL is processed by more than one URL parser.\n\nCVE-2023-24329:\n\tAn issue in the urllib.parse component of Python before 3.11.4 allows attackers to bypass blocklisting methods by supplying a URL that starts with blank characters.\n",
+				"id": "ALAS2023-2025-819",
+				"title": "Amazon Linux 2023 - ALAS2023-2025-819: Medium priority package update for grpc",
+				"description": "Package updates are available for Amazon Linux 2023 that fix the following vulnerabilities:\nCVE-2024-11407:\n\tThere exists a denial of service through Data corruption in gRPC-C++ - gRPC-C++ servers with transmit zero copy enabled through the channel arg GRPC_ARG_TCP_TX_ZEROCOPY_ENABLED can experience data corruption issues. The data sent by the application may be corrupted before transmission over the network thus leading the receiver to receive an incorrect set of bytes causing RPC requests to fail. We recommend upgrading past commit e9046b2bbebc0cb7f5dc42008f807f6c7e98e791\n",
 				"severity": [
 					{
 						"type": "vendor",
@@ -16,15 +16,11 @@
 				"references": [
 					{
 						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-24329"
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-11407"
 					},
 					{
 						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-11168"
-					},
-					{
-						"source": "linux-security@amazon.com",
-						"url": "https://alas.aws.amazon.com/AL2023/ALAS-2024-500.html"
+						"url": "https://alas.aws.amazon.com/AL2023/ALAS-2025-819.html"
 					}
 				]
 			},
@@ -38,27 +34,11 @@
 	"vulnerabilities": [
 		{
 			"content": {
-				"id": "CVE-2023-24329",
+				"id": "CVE-2024-11407",
 				"references": [
 					{
 						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-24329"
-					}
-				]
-			},
-			"segments": [
-				{
-					"ecosystem": "amazon:2023"
-				}
-			]
-		},
-		{
-			"content": {
-				"id": "CVE-2024-11168",
-				"references": [
-					{
-						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-11168"
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-11407"
 					}
 				]
 			},
@@ -87,7 +67,7 @@
 									"package": {
 										"type": "binary",
 										"binary": {
-											"name": "python3.11",
+											"name": "grpc",
 											"architectures": [
 												"aarch64",
 												"x86_64"
@@ -101,11 +81,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:3.11.6-1.amzn2023.0.1"
+												"lt": "0:1.60.2-10.amzn2023.0.1"
 											}
 										],
 										"fixed": [
-											"0:3.11.6-1.amzn2023.0.1"
+											"0:1.60.2-10.amzn2023.0.1"
 										]
 									}
 								}
@@ -120,7 +100,7 @@
 									"package": {
 										"type": "binary",
 										"binary": {
-											"name": "python3.11-debug",
+											"name": "grpc-cpp",
 											"architectures": [
 												"aarch64",
 												"x86_64"
@@ -134,11 +114,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:3.11.6-1.amzn2023.0.1"
+												"lt": "0:1.60.2-10.amzn2023.0.1"
 											}
 										],
 										"fixed": [
-											"0:3.11.6-1.amzn2023.0.1"
+											"0:1.60.2-10.amzn2023.0.1"
 										]
 									}
 								}
@@ -153,7 +133,7 @@
 									"package": {
 										"type": "binary",
 										"binary": {
-											"name": "python3.11-debuginfo",
+											"name": "grpc-cpp-debuginfo",
 											"architectures": [
 												"aarch64",
 												"x86_64"
@@ -167,11 +147,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:3.11.6-1.amzn2023.0.1"
+												"lt": "0:1.60.2-10.amzn2023.0.1"
 											}
 										],
 										"fixed": [
-											"0:3.11.6-1.amzn2023.0.1"
+											"0:1.60.2-10.amzn2023.0.1"
 										]
 									}
 								}
@@ -186,10 +166,9 @@
 									"package": {
 										"type": "binary",
 										"binary": {
-											"name": "python3.11-debugsource",
+											"name": "grpc-data",
 											"architectures": [
-												"aarch64",
-												"x86_64"
+												"noarch"
 											],
 											"repositories": [
 												"amazonlinux"
@@ -200,11 +179,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:3.11.6-1.amzn2023.0.1"
+												"lt": "0:1.60.2-10.amzn2023.0.1"
 											}
 										],
 										"fixed": [
-											"0:3.11.6-1.amzn2023.0.1"
+											"0:1.60.2-10.amzn2023.0.1"
 										]
 									}
 								}
@@ -219,7 +198,7 @@
 									"package": {
 										"type": "binary",
 										"binary": {
-											"name": "python3.11-devel",
+											"name": "grpc-debuginfo",
 											"architectures": [
 												"aarch64",
 												"x86_64"
@@ -233,11 +212,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:3.11.6-1.amzn2023.0.1"
+												"lt": "0:1.60.2-10.amzn2023.0.1"
 											}
 										],
 										"fixed": [
-											"0:3.11.6-1.amzn2023.0.1"
+											"0:1.60.2-10.amzn2023.0.1"
 										]
 									}
 								}
@@ -252,7 +231,7 @@
 									"package": {
 										"type": "binary",
 										"binary": {
-											"name": "python3.11-idle",
+											"name": "grpc-debugsource",
 											"architectures": [
 												"aarch64",
 												"x86_64"
@@ -266,11 +245,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:3.11.6-1.amzn2023.0.1"
+												"lt": "0:1.60.2-10.amzn2023.0.1"
 											}
 										],
 										"fixed": [
-											"0:3.11.6-1.amzn2023.0.1"
+											"0:1.60.2-10.amzn2023.0.1"
 										]
 									}
 								}
@@ -285,7 +264,7 @@
 									"package": {
 										"type": "binary",
 										"binary": {
-											"name": "python3.11-libs",
+											"name": "grpc-devel",
 											"architectures": [
 												"aarch64",
 												"x86_64"
@@ -299,11 +278,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:3.11.6-1.amzn2023.0.1"
+												"lt": "0:1.60.2-10.amzn2023.0.1"
 											}
 										],
 										"fixed": [
-											"0:3.11.6-1.amzn2023.0.1"
+											"0:1.60.2-10.amzn2023.0.1"
 										]
 									}
 								}
@@ -318,10 +297,9 @@
 									"package": {
 										"type": "binary",
 										"binary": {
-											"name": "python3.11-test",
+											"name": "grpc-doc",
 											"architectures": [
-												"aarch64",
-												"x86_64"
+												"noarch"
 											],
 											"repositories": [
 												"amazonlinux"
@@ -332,11 +310,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:3.11.6-1.amzn2023.0.1"
+												"lt": "0:1.60.2-10.amzn2023.0.1"
 											}
 										],
 										"fixed": [
-											"0:3.11.6-1.amzn2023.0.1"
+											"0:1.60.2-10.amzn2023.0.1"
 										]
 									}
 								}
@@ -351,7 +329,7 @@
 									"package": {
 										"type": "binary",
 										"binary": {
-											"name": "python3.11-tkinter",
+											"name": "grpc-plugins",
 											"architectures": [
 												"aarch64",
 												"x86_64"
@@ -365,11 +343,44 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:3.11.6-1.amzn2023.0.1"
+												"lt": "0:1.60.2-10.amzn2023.0.1"
 											}
 										],
 										"fixed": [
-											"0:3.11.6-1.amzn2023.0.1"
+											"0:1.60.2-10.amzn2023.0.1"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "grpc-plugins-debuginfo",
+											"architectures": [
+												"aarch64",
+												"x86_64"
+											],
+											"repositories": [
+												"amazonlinux"
+											]
+										}
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:1.60.2-10.amzn2023.0.1"
+											}
+										],
+										"fixed": [
+											"0:1.60.2-10.amzn2023.0.1"
 										]
 									}
 								}
@@ -383,7 +394,7 @@
 	"data_source": {
 		"id": "amazon",
 		"raws": [
-			"vuls-data-raw-amazon/2023/core/2024/ALAS2023-2024-500.json"
+			"vuls-data-raw-amazon/2023/core/2025/ALAS2023-2025-819.json"
 		]
 	}
 }

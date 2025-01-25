@@ -1,30 +1,30 @@
 {
-	"id": "ALAS2023-2024-500",
+	"id": "ALAS2023-2025-808",
 	"advisories": [
 		{
 			"content": {
-				"id": "ALAS2023-2024-500",
-				"title": "Amazon Linux 2023 - ALAS2023-2024-500: Medium priority package update for python3.11",
-				"description": "Package updates are available for Amazon Linux 2023 that fix the following vulnerabilities:\nCVE-2024-11168:\n\tThe urllib.parse.urlsplit() and urlparse() functions improperly validated bracketed hosts (`[]`), allowing hosts that weren't IPv6 or IPvFuture. This behavior was not conformant to RFC 3986 and potentially enabled SSRF if a URL is processed by more than one URL parser.\n\nCVE-2023-24329:\n\tAn issue in the urllib.parse component of Python before 3.11.4 allows attackers to bypass blocklisting methods by supplying a URL that starts with blank characters.\n",
+				"id": "ALAS2023-2025-808",
+				"title": "Amazon Linux 2023 - ALAS2023-2025-808: Important priority package update for python3.12",
+				"description": "Package updates are available for Amazon Linux 2023 that fix the following vulnerabilities:\nCVE-2024-9287:\n\tA vulnerability has been found in the CPython `venv` module and CLI where path names provided when creating a virtual environment were not quoted properly, allowing the creator to inject commands into virtual environment \"activation\" scripts (ie \"source venv/bin/activate\"). This means that attacker-controlled virtual environments are able to run commands when the virtual environment is activated. Virtual environments which are not created by an attacker or which aren't activated before being used (ie \"./venv/bin/python\") are not affected.\n\nCVE-2024-12254:\n\tStarting in Python 3.12.0, the asyncio._SelectorSocketTransport.writelines()\n method would not \"pause\" writing and signal to the Protocol to drain \nthe buffer to the wire once the write buffer reached the \"high-water \nmark\". Because of this, Protocols would not periodically drain the write\n buffer potentially leading to memory exhaustion.\n\n\n\n\n\nThis\n vulnerability likely impacts a small number of users, you must be using\n Python 3.12.0 or later, on macOS or Linux, using the asyncio module \nwith protocols, and using .writelines() method which had new \nzero-copy-on-write behavior in Python 3.12.0 and later. If not all of \nthese factors are true then your usage of Python is unaffected.\n",
 				"severity": [
 					{
 						"type": "vendor",
 						"source": "linux-security@amazon.com",
-						"vendor": "Medium"
+						"vendor": "Important"
 					}
 				],
 				"references": [
 					{
 						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-24329"
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-12254"
 					},
 					{
 						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-11168"
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-9287"
 					},
 					{
 						"source": "linux-security@amazon.com",
-						"url": "https://alas.aws.amazon.com/AL2023/ALAS-2024-500.html"
+						"url": "https://alas.aws.amazon.com/AL2023/ALAS-2025-808.html"
 					}
 				]
 			},
@@ -38,11 +38,11 @@
 	"vulnerabilities": [
 		{
 			"content": {
-				"id": "CVE-2023-24329",
+				"id": "CVE-2024-12254",
 				"references": [
 					{
 						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-24329"
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-12254"
 					}
 				]
 			},
@@ -54,11 +54,11 @@
 		},
 		{
 			"content": {
-				"id": "CVE-2024-11168",
+				"id": "CVE-2024-9287",
 				"references": [
 					{
 						"source": "linux-security@amazon.com",
-						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-11168"
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-9287"
 					}
 				]
 			},
@@ -87,7 +87,7 @@
 									"package": {
 										"type": "binary",
 										"binary": {
-											"name": "python3.11",
+											"name": "python3.12",
 											"architectures": [
 												"aarch64",
 												"x86_64"
@@ -101,11 +101,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:3.11.6-1.amzn2023.0.1"
+												"lt": "0:3.12.8-1.amzn2023.0.1"
 											}
 										],
 										"fixed": [
-											"0:3.11.6-1.amzn2023.0.1"
+											"0:3.12.8-1.amzn2023.0.1"
 										]
 									}
 								}
@@ -120,7 +120,7 @@
 									"package": {
 										"type": "binary",
 										"binary": {
-											"name": "python3.11-debug",
+											"name": "python3.12-debug",
 											"architectures": [
 												"aarch64",
 												"x86_64"
@@ -134,11 +134,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:3.11.6-1.amzn2023.0.1"
+												"lt": "0:3.12.8-1.amzn2023.0.1"
 											}
 										],
 										"fixed": [
-											"0:3.11.6-1.amzn2023.0.1"
+											"0:3.12.8-1.amzn2023.0.1"
 										]
 									}
 								}
@@ -153,7 +153,7 @@
 									"package": {
 										"type": "binary",
 										"binary": {
-											"name": "python3.11-debuginfo",
+											"name": "python3.12-debuginfo",
 											"architectures": [
 												"aarch64",
 												"x86_64"
@@ -167,11 +167,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:3.11.6-1.amzn2023.0.1"
+												"lt": "0:3.12.8-1.amzn2023.0.1"
 											}
 										],
 										"fixed": [
-											"0:3.11.6-1.amzn2023.0.1"
+											"0:3.12.8-1.amzn2023.0.1"
 										]
 									}
 								}
@@ -186,7 +186,7 @@
 									"package": {
 										"type": "binary",
 										"binary": {
-											"name": "python3.11-debugsource",
+											"name": "python3.12-debugsource",
 											"architectures": [
 												"aarch64",
 												"x86_64"
@@ -200,11 +200,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:3.11.6-1.amzn2023.0.1"
+												"lt": "0:3.12.8-1.amzn2023.0.1"
 											}
 										],
 										"fixed": [
-											"0:3.11.6-1.amzn2023.0.1"
+											"0:3.12.8-1.amzn2023.0.1"
 										]
 									}
 								}
@@ -219,7 +219,7 @@
 									"package": {
 										"type": "binary",
 										"binary": {
-											"name": "python3.11-devel",
+											"name": "python3.12-devel",
 											"architectures": [
 												"aarch64",
 												"x86_64"
@@ -233,11 +233,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:3.11.6-1.amzn2023.0.1"
+												"lt": "0:3.12.8-1.amzn2023.0.1"
 											}
 										],
 										"fixed": [
-											"0:3.11.6-1.amzn2023.0.1"
+											"0:3.12.8-1.amzn2023.0.1"
 										]
 									}
 								}
@@ -252,7 +252,7 @@
 									"package": {
 										"type": "binary",
 										"binary": {
-											"name": "python3.11-idle",
+											"name": "python3.12-idle",
 											"architectures": [
 												"aarch64",
 												"x86_64"
@@ -266,11 +266,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:3.11.6-1.amzn2023.0.1"
+												"lt": "0:3.12.8-1.amzn2023.0.1"
 											}
 										],
 										"fixed": [
-											"0:3.11.6-1.amzn2023.0.1"
+											"0:3.12.8-1.amzn2023.0.1"
 										]
 									}
 								}
@@ -285,7 +285,7 @@
 									"package": {
 										"type": "binary",
 										"binary": {
-											"name": "python3.11-libs",
+											"name": "python3.12-libs",
 											"architectures": [
 												"aarch64",
 												"x86_64"
@@ -299,11 +299,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:3.11.6-1.amzn2023.0.1"
+												"lt": "0:3.12.8-1.amzn2023.0.1"
 											}
 										],
 										"fixed": [
-											"0:3.11.6-1.amzn2023.0.1"
+											"0:3.12.8-1.amzn2023.0.1"
 										]
 									}
 								}
@@ -318,7 +318,7 @@
 									"package": {
 										"type": "binary",
 										"binary": {
-											"name": "python3.11-test",
+											"name": "python3.12-test",
 											"architectures": [
 												"aarch64",
 												"x86_64"
@@ -332,11 +332,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:3.11.6-1.amzn2023.0.1"
+												"lt": "0:3.12.8-1.amzn2023.0.1"
 											}
 										],
 										"fixed": [
-											"0:3.11.6-1.amzn2023.0.1"
+											"0:3.12.8-1.amzn2023.0.1"
 										]
 									}
 								}
@@ -351,7 +351,7 @@
 									"package": {
 										"type": "binary",
 										"binary": {
-											"name": "python3.11-tkinter",
+											"name": "python3.12-tkinter",
 											"architectures": [
 												"aarch64",
 												"x86_64"
@@ -365,11 +365,11 @@
 										"type": "rpm",
 										"range": [
 											{
-												"lt": "0:3.11.6-1.amzn2023.0.1"
+												"lt": "0:3.12.8-1.amzn2023.0.1"
 											}
 										],
 										"fixed": [
-											"0:3.11.6-1.amzn2023.0.1"
+											"0:3.12.8-1.amzn2023.0.1"
 										]
 									}
 								}
@@ -383,7 +383,7 @@
 	"data_source": {
 		"id": "amazon",
 		"raws": [
-			"vuls-data-raw-amazon/2023/core/2024/ALAS2023-2024-500.json"
+			"vuls-data-raw-amazon/2023/core/2025/ALAS2023-2025-808.json"
 		]
 	}
 }
