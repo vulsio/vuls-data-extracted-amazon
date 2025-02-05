@@ -1,0 +1,268 @@
+{
+	"id": "ALAS2-2025-2747",
+	"advisories": [
+		{
+			"content": {
+				"id": "ALAS2-2025-2747",
+				"title": "Amazon Linux 2 2017.12 - ALAS2-2025-2747: important priority package update for gstreamer1-plugins-base",
+				"description": "Package updates are available for Amazon Linux 2 that fix the following vulnerabilities:\nCVE-2024-47615:\n\tGStreamer is a library for constructing graphs of media-handling components. An OOB-Write has been detected in the function gst_parse_vorbis_setup_packet within vorbis_parse.c. The integer size is read from the input file without proper validation. As a result, size can exceed the fixed size of the pad->vorbis_mode_sizes array (which size is 256). When this happens, the for loop overwrites the entire pad structure with 0s and 1s, affecting adjacent memory as well. This OOB-write can overwrite up to 380 bytes of memory beyond the boundaries of the pad->vorbis_mode_sizes array. This vulnerability is fixed in 1.24.10.\n\nCVE-2024-47607:\n\tGStreamer is a library for constructing graphs of media-handling components.  stack-buffer overflow has been detected in the gst_opus_dec_parse_header function within `gstopusdec.c'. The pos array is a stack-allocated buffer of size 64. If n_channels exceeds 64, the for loop will write beyond the boundaries of the pos array. The value written will always be GST_AUDIO_CHANNEL_POSITION_NONE. This bug allows to overwrite the EIP address allocated in the stack. This vulnerability is fixed in 1.24.10.\n\nCVE-2024-47538:\n\tGStreamer is a library for constructing graphs of media-handling components. A stack-buffer overflow has been detected in the `vorbis_handle_identification_packet` function within `gstvorbisdec.c`. The position array is a stack-allocated buffer of size 64. If vd->vi.channels exceeds 64, the for loop will write beyond the boundaries of the position array. The value written will always be `GST_AUDIO_CHANNEL_POSITION_NONE`. This vulnerability allows someone to overwrite the EIP address allocated in the stack. Additionally, this bug can overwrite the `GstAudioInfo` info structure. This vulnerability is fixed in 1.24.10.\n\nCVE-2024-4453:\n\tGStreamer EXIF Metadata Parsing Integer Overflow Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of GStreamer. Interaction with this library is required to exploit this vulnerability but attack vectors may vary depending on the implementation.\n\nThe specific flaw exists within the parsing of EXIF metadata. The issue results from the lack of proper validation of user-supplied data, which can result in an integer overflow before allocating a buffer. An attacker can leverage this vulnerability to execute code in the context of the current process.\n. Was ZDI-CAN-23896.\n",
+				"severity": [
+					{
+						"type": "vendor",
+						"source": "linux-security@amazon.com",
+						"vendor": "important"
+					}
+				],
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-4453"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-47538"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-47607"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-47615"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "https://alas.aws.amazon.com/AL2/ALAS-2025-2747.html"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "amazon:2"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2024-4453",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-4453"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "amazon:2"
+				}
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-47538",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-47538"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "amazon:2"
+				}
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-47607",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-47607"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "amazon:2"
+				}
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-47615",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-47615"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "amazon:2"
+				}
+			]
+		}
+	],
+	"detections": [
+		{
+			"ecosystem": "amazon:2",
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "gstreamer1-plugins-base",
+											"architectures": [
+												"aarch64",
+												"i686",
+												"x86_64"
+											],
+											"repositories": [
+												"amzn2-core"
+											]
+										}
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:1.18.4-5.amzn2.0.7"
+											}
+										],
+										"fixed": [
+											"0:1.18.4-5.amzn2.0.7"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "gstreamer1-plugins-base-debuginfo",
+											"architectures": [
+												"aarch64",
+												"i686",
+												"x86_64"
+											],
+											"repositories": [
+												"amzn2-core"
+											]
+										}
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:1.18.4-5.amzn2.0.7"
+											}
+										],
+										"fixed": [
+											"0:1.18.4-5.amzn2.0.7"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "gstreamer1-plugins-base-devel",
+											"architectures": [
+												"aarch64",
+												"i686",
+												"x86_64"
+											],
+											"repositories": [
+												"amzn2-core"
+											]
+										}
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:1.18.4-5.amzn2.0.7"
+											}
+										],
+										"fixed": [
+											"0:1.18.4-5.amzn2.0.7"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "gstreamer1-plugins-base-tools",
+											"architectures": [
+												"aarch64",
+												"i686",
+												"x86_64"
+											],
+											"repositories": [
+												"amzn2-core"
+											]
+										}
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:1.18.4-5.amzn2.0.7"
+											}
+										],
+										"fixed": [
+											"0:1.18.4-5.amzn2.0.7"
+										]
+									}
+								}
+							}
+						]
+					}
+				}
+			]
+		}
+	],
+	"data_source": {
+		"id": "amazon",
+		"raws": [
+			"vuls-data-raw-amazon/2/core/2025/ALAS2-2025-2747.json"
+		]
+	}
+}
