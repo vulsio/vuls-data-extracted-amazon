@@ -1,0 +1,534 @@
+{
+	"id": "ALAS-2025-1959",
+	"advisories": [
+		{
+			"content": {
+				"id": "ALAS-2025-1959",
+				"title": "Amazon Linux AMI 2014.03 - ALAS-2025-1959: important priority package update for postgresql92",
+				"description": "Package updates are available for Amazon Linux AMI that fix the following vulnerabilities:\nCVE-2024-7348:\n\tTime-of-check Time-of-use (TOCTOU) race condition in pg_dump in PostgreSQL allows an object creator to execute arbitrary SQL functions as the user running pg_dump, which is often a superuser. The attack involves replacing another relation type with a view or foreign table. The attack requires waiting for pg_dump to start, but winning the race condition is trivial if the attacker retains an open transaction. Versions before PostgreSQL 16.4, 15.8, 14.13, 13.16, and 12.20 are affected.\n\nCVE-2023-5869:\n\tWhile modifying certain SQL array values, missing overflow checks let authenticated database users write arbitrary bytes to a memory area that facilitates arbitrary code execution. Missing overflow checks also let authenticated database users read a wide area of server memory. The CVE-2021-32027 fix covered some attacks of this description, but it missed others.\n",
+				"severity": [
+					{
+						"type": "vendor",
+						"source": "linux-security@amazon.com",
+						"vendor": "important"
+					}
+				],
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-5869"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-7348"
+					},
+					{
+						"source": "linux-security@amazon.com",
+						"url": "https://alas.aws.amazon.com/ALAS-2025-1959.html"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "amazon:1"
+				}
+			]
+		}
+	],
+	"vulnerabilities": [
+		{
+			"content": {
+				"id": "CVE-2023-5869",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-5869"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "amazon:1"
+				}
+			]
+		},
+		{
+			"content": {
+				"id": "CVE-2024-7348",
+				"references": [
+					{
+						"source": "linux-security@amazon.com",
+						"url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-7348"
+					}
+				]
+			},
+			"segments": [
+				{
+					"ecosystem": "amazon:1"
+				}
+			]
+		}
+	],
+	"detections": [
+		{
+			"ecosystem": "amazon:1",
+			"conditions": [
+				{
+					"criteria": {
+						"operator": "OR",
+						"criterions": [
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "postgresql92",
+											"architectures": [
+												"i686",
+												"x86_64"
+											],
+											"repositories": [
+												"amzn-main",
+												"amzn-updates"
+											]
+										}
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:9.2.24-3.70.amzn1"
+											}
+										],
+										"fixed": [
+											"0:9.2.24-3.70.amzn1"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "postgresql92-contrib",
+											"architectures": [
+												"i686",
+												"x86_64"
+											],
+											"repositories": [
+												"amzn-main",
+												"amzn-updates"
+											]
+										}
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:9.2.24-3.70.amzn1"
+											}
+										],
+										"fixed": [
+											"0:9.2.24-3.70.amzn1"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "postgresql92-debuginfo",
+											"architectures": [
+												"i686",
+												"x86_64"
+											],
+											"repositories": [
+												"amzn-main",
+												"amzn-updates"
+											]
+										}
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:9.2.24-3.70.amzn1"
+											}
+										],
+										"fixed": [
+											"0:9.2.24-3.70.amzn1"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "postgresql92-devel",
+											"architectures": [
+												"i686",
+												"x86_64"
+											],
+											"repositories": [
+												"amzn-main",
+												"amzn-updates"
+											]
+										}
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:9.2.24-3.70.amzn1"
+											}
+										],
+										"fixed": [
+											"0:9.2.24-3.70.amzn1"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "postgresql92-docs",
+											"architectures": [
+												"i686",
+												"x86_64"
+											],
+											"repositories": [
+												"amzn-main",
+												"amzn-updates"
+											]
+										}
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:9.2.24-3.70.amzn1"
+											}
+										],
+										"fixed": [
+											"0:9.2.24-3.70.amzn1"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "postgresql92-libs",
+											"architectures": [
+												"i686",
+												"x86_64"
+											],
+											"repositories": [
+												"amzn-main",
+												"amzn-updates"
+											]
+										}
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:9.2.24-3.70.amzn1"
+											}
+										],
+										"fixed": [
+											"0:9.2.24-3.70.amzn1"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "postgresql92-plperl",
+											"architectures": [
+												"i686",
+												"x86_64"
+											],
+											"repositories": [
+												"amzn-main",
+												"amzn-updates"
+											]
+										}
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:9.2.24-3.70.amzn1"
+											}
+										],
+										"fixed": [
+											"0:9.2.24-3.70.amzn1"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "postgresql92-plpython26",
+											"architectures": [
+												"i686",
+												"x86_64"
+											],
+											"repositories": [
+												"amzn-main",
+												"amzn-updates"
+											]
+										}
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:9.2.24-3.70.amzn1"
+											}
+										],
+										"fixed": [
+											"0:9.2.24-3.70.amzn1"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "postgresql92-plpython27",
+											"architectures": [
+												"i686",
+												"x86_64"
+											],
+											"repositories": [
+												"amzn-main",
+												"amzn-updates"
+											]
+										}
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:9.2.24-3.70.amzn1"
+											}
+										],
+										"fixed": [
+											"0:9.2.24-3.70.amzn1"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "postgresql92-pltcl",
+											"architectures": [
+												"i686",
+												"x86_64"
+											],
+											"repositories": [
+												"amzn-main",
+												"amzn-updates"
+											]
+										}
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:9.2.24-3.70.amzn1"
+											}
+										],
+										"fixed": [
+											"0:9.2.24-3.70.amzn1"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "postgresql92-server",
+											"architectures": [
+												"i686",
+												"x86_64"
+											],
+											"repositories": [
+												"amzn-main",
+												"amzn-updates"
+											]
+										}
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:9.2.24-3.70.amzn1"
+											}
+										],
+										"fixed": [
+											"0:9.2.24-3.70.amzn1"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "postgresql92-server-compat",
+											"architectures": [
+												"i686",
+												"x86_64"
+											],
+											"repositories": [
+												"amzn-main",
+												"amzn-updates"
+											]
+										}
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:9.2.24-3.70.amzn1"
+											}
+										],
+										"fixed": [
+											"0:9.2.24-3.70.amzn1"
+										]
+									}
+								}
+							},
+							{
+								"type": "version",
+								"version": {
+									"vulnerable": true,
+									"fix_status": {
+										"class": "fixed"
+									},
+									"package": {
+										"type": "binary",
+										"binary": {
+											"name": "postgresql92-test",
+											"architectures": [
+												"i686",
+												"x86_64"
+											],
+											"repositories": [
+												"amzn-main",
+												"amzn-updates"
+											]
+										}
+									},
+									"affected": {
+										"type": "rpm",
+										"range": [
+											{
+												"lt": "0:9.2.24-3.70.amzn1"
+											}
+										],
+										"fixed": [
+											"0:9.2.24-3.70.amzn1"
+										]
+									}
+								}
+							}
+						]
+					}
+				}
+			]
+		}
+	],
+	"data_source": {
+		"id": "amazon",
+		"raws": [
+			"vuls-data-raw-amazon/1/updates/2025/ALAS-2025-1959.json"
+		]
+	}
+}
